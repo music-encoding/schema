@@ -5,7 +5,7 @@
          xmlns="http://relaxng.org/ns/structure/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2020-12-10T00:24:47Z. .
+Schema generated from ODD source 2020-12-10T14:00:45Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -19774,13 +19774,11 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
       <optional>
          <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                     name="meiversion"
-                    a:defaultValue="4.0.1">
+                    a:defaultValue="5.0.0-dev">
             <a:documentation>Specifies a generic MEI version label.</a:documentation>
             <choice>
-               <value>4.0.0</value>
-               <a:documentation>First release of MEI 4</a:documentation>
-               <value>4.0.1</value>
-               <a:documentation>Bugfix Release 4.0.1</a:documentation>
+               <value>5.0.0-dev</value>
+               <a:documentation>Development version of MEI 5.0.0</a:documentation>
             </choice>
          </attribute>
       </optional>
