@@ -18,7 +18,7 @@
 -->
 <?xml-model href="validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<!--canonicalized: 2020-12-11T09:46:27.055Z-->
+<!--canonicalized: 2020-12-11T23:51:36.664Z-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
@@ -522,14 +522,14 @@
                   <p>
                      <figure>
                         <head/>
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&amp;lt;!-- slur starting on timestamp 1, ending on timestamp 4 of the same measure --&amp;gt;
-&amp;lt;slur tstamp="1" tstamp2="0m+4"/&amp;gt;
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;!-- slur starting on timestamp 1, ending on timestamp 4 of the same measure --&gt;
+&lt;slur tstamp="1" tstamp2="0m+4"/&gt;
 
-&amp;lt;!-- slur ending on timestamp 1 of the following measure --&amp;gt;
-&amp;lt;slur tstamp="1" tstamp2="1m+1"/&amp;gt;
+&lt;!-- slur ending on timestamp 1 of the following measure --&gt;
+&lt;slur tstamp="1" tstamp2="1m+1"/&gt;
 
-&amp;lt;!-- slur ending on timestamp 2.5 in the second next measure --&amp;gt;
-&amp;lt;slur tstamp="1" tstamp2="2m+2.5"/&amp;gt;
+&lt;!-- slur ending on timestamp 2.5 in the second next measure --&gt;
+&lt;slur tstamp="1" tstamp2="2m+2.5"/&gt;
 </egXML>
                      </figure>
                   </p>
@@ -4502,17 +4502,17 @@
                   <p>
                      <figure>
                         <head/>
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&amp;lt;staffDef n="3" xml:id="cmn_staffDef1" /&amp;gt;
-&amp;lt;!-- later in the file: --&amp;gt;
-&amp;lt;staff def="#cmn_staffDef1"&amp;gt;
-&amp;lt;!-- @def refers to staffDef with this identifier --&amp;gt;
-&amp;lt;!-- staff content --&amp;gt;
-&amp;lt;/staff&amp;gt;
-&amp;lt;!-- or: --&amp;gt;
-&amp;lt;staff n="3"&amp;gt;
-&amp;lt;!-- @n refers to staffDef with this numeric label --&amp;gt;
-&amp;lt;!-- staff content --&amp;gt;
-&amp;lt;/staff&amp;gt;
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;staffDef n="3" xml:id="cmn_staffDef1" /&gt;
+&lt;!-- later in the file: --&gt;
+&lt;staff def="#cmn_staffDef1"&gt;
+&lt;!-- @def refers to staffDef with this identifier --&gt;
+&lt;!-- staff content --&gt;
+&lt;/staff&gt;
+&lt;!-- or: --&gt;
+&lt;staff n="3"&gt;
+&lt;!-- @n refers to staffDef with this numeric label --&gt;
+&lt;!-- staff content --&gt;
+&lt;/staff&gt;
 </egXML>
                      </figure>
                   </p>
@@ -5339,43 +5339,43 @@
                      </figure>
                      <figure>
                         <head/>
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&amp;lt;measure n="1"&amp;gt;
-&amp;lt;!-- staff 1 omitted --&amp;gt;
-&amp;lt;staff n="2"&amp;gt;
-&amp;lt;layer n="1"&amp;gt;
-&amp;lt;chord dur="16"&amp;gt;
-&amp;lt;note oct="2" pname="f" /&amp;gt;
-&amp;lt;note oct="1" pname="f" /&amp;gt;
-&amp;lt;/chord&amp;gt;
-&amp;lt;beam&amp;gt;
-&amp;lt;note oct="2" pname="f" tie="i" /&amp;gt;
-&amp;lt;note oct="2" pname="a" tie="i" /&amp;gt;
-&amp;lt;note oct="3" pname="c" tie="i" /&amp;gt;
-&amp;lt;/beam&amp;gt;
-&amp;lt;chord dur="4"&amp;gt;
-&amp;lt;note oct="3" pname="f" tie="i" /&amp;gt;
-&amp;lt;note oct="3" pname="c" tie="m" /&amp;gt;
-&amp;lt;note oct="2" pname="a" tie="m" /&amp;gt;
-&amp;lt;note oct="2" pname="f" tie="m" /&amp;gt;
-&amp;lt;/chord&amp;gt;
-&amp;lt;/layer&amp;gt;
-&amp;lt;/staff&amp;gt;
-&amp;lt;/measure&amp;gt;
-&amp;lt;measure n="2"&amp;gt;
-&amp;lt;!-- staff 1 omitted --&amp;gt;
-&amp;lt;staff n="2"&amp;gt;
-&amp;lt;layer n="1"&amp;gt;
-&amp;lt;chord dur="16"&amp;gt;
-&amp;lt;note oct="3" pname="f" tie="t" /&amp;gt;
-&amp;lt;note oct="3" pname="c" tie="t" /&amp;gt;
-&amp;lt;note oct="2" pname="a" tie="t" /&amp;gt;
-&amp;lt;note oct="2" pname="f" tie="t" /&amp;gt;
-&amp;lt;/chord&amp;gt;
-&amp;lt;!-- … --&amp;gt;
-&amp;lt;/layer&amp;gt;
-&amp;lt;/staff&amp;gt;
-&amp;lt;/measure&amp;gt;
-&amp;lt;!-- measures 3 and 4 omitted --&amp;gt;
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;measure n="1"&gt;
+&lt;!-- staff 1 omitted --&gt;
+    &lt;staff n="2"&gt;
+        &lt;layer n="1"&gt;
+            &lt;chord dur="16"&gt;
+                &lt;note oct="2" pname="f" /&gt;
+                &lt;note oct="1" pname="f" /&gt;
+            &lt;/chord&gt;
+            &lt;beam&gt;
+                &lt;note oct="2" pname="f" tie="i" /&gt;
+                &lt;note oct="2" pname="a" tie="i" /&gt;
+                &lt;note oct="3" pname="c" tie="i" /&gt;
+            &lt;/beam&gt;
+            &lt;chord dur="4"&gt;
+                &lt;note oct="3" pname="f" tie="i" /&gt;
+                &lt;note oct="3" pname="c" tie="m" /&gt;
+                &lt;note oct="2" pname="a" tie="m" /&gt;
+                &lt;note oct="2" pname="f" tie="m" /&gt;
+            &lt;/chord&gt;
+        &lt;/layer&gt;
+    &lt;/staff&gt;
+&lt;/measure&gt;
+&lt;measure n="2"&gt;
+&lt;!-- staff 1 omitted --&gt;
+    &lt;staff n="2"&gt;
+        &lt;layer n="1"&gt;
+            &lt;chord dur="16"&gt;
+                &lt;note oct="3" pname="f" tie="t" /&gt;
+                &lt;note oct="3" pname="c" tie="t" /&gt;
+                &lt;note oct="2" pname="a" tie="t" /&gt;
+                &lt;note oct="2" pname="f" tie="t" /&gt;
+            &lt;/chord&gt;
+            &lt;!-- … --&gt;
+        &lt;/layer&gt;
+    &lt;/staff&gt;
+&lt;/measure&gt;
+&lt;!-- measures 3 and 4 omitted --&gt;
 </egXML>
                      </figure>
                   </p>
@@ -5810,8 +5810,8 @@
                         </figure>
                         <figure>
                            <head/>
-                           <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve" valid="true">&amp;lt;arpeg xml:id="ex-0149852838" plist="#ex-0731379794 #ex-1553574041" /&amp;gt;
-&amp;lt;arpeg xml:id="ex-1483377242" plist="#ex-1474174387 #ex-0553655856" /&amp;gt;
+                           <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve" valid="true">&lt;arpeg xml:id="ex-0149852838" plist="#ex-0731379794 #ex-1553574041" /&gt;
+&lt;arpeg xml:id="ex-1483377242" plist="#ex-1474174387 #ex-0553655856" /&gt;
 </egXML>
                         </figure>
                      </p>
@@ -11084,99 +11084,99 @@
                      </figure>
                      <figure>
                         <head/>
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&amp;lt;measure n="6" xml:id="analysis.m_sc_62"&amp;gt;
-&amp;lt;staff n="1"&amp;gt;
-&amp;lt;layer n="1"&amp;gt;
-&amp;lt;note dur="4" oct="4" pname="g" xml:id="analysis.n_sc_63_3"/&amp;gt;
-&amp;lt;note dur="4" oct="4" pname="a" xml:id="analysis.n_sc_65_3"/&amp;gt;
-&amp;lt;note dur="4" fermata="above" oct="4" pname="b" xml:id="analysis.n_sc_67_3"/&amp;gt;
-&amp;lt;note dur="4" oct="4" pname="g" xml:id="analysis.n_sc_68_3"/&amp;gt;
-&amp;lt;/layer&amp;gt;
-&amp;lt;layer n="2"&amp;gt;
-&amp;lt;beam&amp;gt;
-&amp;lt;note dur="8" oct="4" pname="e" xml:id="analysis.n_sc_63_2"/&amp;gt;
-&amp;lt;note dur="8" oct="4" pname="g" xml:id="analysis.n_sc_64_2"/&amp;gt;
-&amp;lt;/beam&amp;gt;
-&amp;lt;beam&amp;gt;
-&amp;lt;note dur="8" oct="4" pname="f" xml:id="analysis.n_sc_65_2"/&amp;gt;
-&amp;lt;note dur="8" oct="4" pname="e" xml:id="analysis.n_sc_66_2"/&amp;gt;
-&amp;lt;/beam&amp;gt;
-&amp;lt;note accid="s" dur="4" next="#analysis.n_sc_68_2" oct="4" pname="d" xml:id="analysis.n_sc_67_2"/&amp;gt;
-&amp;lt;beam&amp;gt;
-&amp;lt;note dur="8" oct="4" pname="e" xml:id="analysis.n_sc_68_1"/&amp;gt;
-&amp;lt;note accid="n" dur="8" oct="4" pname="d" xml:id="analysis.n_sc_69_1"/&amp;gt;
-&amp;lt;/beam&amp;gt;
-&amp;lt;/layer&amp;gt;
-&amp;lt;/staff&amp;gt;
-&amp;lt;staff n="2"&amp;gt;
-&amp;lt;layer n="1"&amp;gt;
-&amp;lt;note dur="4" oct="3" pname="b" xml:id="analysis.n_sc_63_1"/&amp;gt;
-&amp;lt;note dur="4" oct="4" pname="c" xml:id="analysis.n_sc_65_1"/&amp;gt;
-&amp;lt;note dur="4" oct="3" pname="f" xml:id="analysis.n_sc_67_1"/&amp;gt;
-&amp;lt;note dur="4" oct="3" pname="b" xml:id="analysis.n_sc_68_2"/&amp;gt;
-&amp;lt;/layer&amp;gt;
-&amp;lt;layer n="1"&amp;gt;
-&amp;lt;beam&amp;gt;
-&amp;lt;note dur="8" oct="3" pname="e" xml:id="n_sc_63_0"/&amp;gt;
-&amp;lt;note dur="8" oct="3" pname="d" xml:id="n_sc_64_0"/&amp;gt;
-&amp;lt;/beam&amp;gt;
-&amp;lt;note dur="4" oct="3" pname="c" xml:id="n_sc_65_0"/&amp;gt;
-&amp;lt;note dur="4" fermata="below" oct="2" pname="b" xml:id="n_sc_67_0"/&amp;gt;
-&amp;lt;note dur="4" oct="3" pname="e" xml:id="n_sc_68_0"/&amp;gt;
-&amp;lt;/layer&amp;gt;
-&amp;lt;/staff&amp;gt;
-&amp;lt;/measure&amp;gt;
-&amp;lt;measure n="7" xml:id="m_sc_70"&amp;gt;
-&amp;lt;staff n="1"&amp;gt;
-&amp;lt;layer n="1"&amp;gt;
-&amp;lt;beam&amp;gt;
-&amp;lt;note dur="8" oct="4" pname="a" xml:id="analysis.n_sc_71_3"/&amp;gt;
-&amp;lt;note dur="8" oct="4" pname="b" xml:id="analysis.n_sc_72_3"/&amp;gt;
-&amp;lt;/beam&amp;gt;
-&amp;lt;note dur="4" oct="5" pname="c" xml:id="analysis.n_sc_73_3"/&amp;gt;
-&amp;lt;note dur="4" oct="4" pname="b" xml:id="analysis.n_sc_75_3"/&amp;gt;
-&amp;lt;beam&amp;gt;
-&amp;lt;note dur="8" oct="5" pname="c" xml:id="analysis.n_sc_76_3"/&amp;gt;
-&amp;lt;note dur="8" oct="4" pname="b" xml:id="analysis.n_sc_77_3"/&amp;gt;
-&amp;lt;/beam&amp;gt;
-&amp;lt;/layer&amp;gt;
-&amp;lt;layer n="2"&amp;gt;
-&amp;lt;space dur="4"/&amp;gt;
-&amp;lt;note dur="4" oct="4" pname="a" xml:id="analysis.n_sc_73_2"/&amp;gt;
-&amp;lt;note accid="s" dur="4" oct="4" pname="g" xml:id="analysis.n_sc_75_2"/&amp;gt;
-&amp;lt;note dur="4" oct="4" pname="a" xml:id="analysis.n_sc_76_2"/&amp;gt;
-&amp;lt;/layer&amp;gt;
-&amp;lt;layer n="3"&amp;gt;
-&amp;lt;beam&amp;gt;
-&amp;lt;note dur="8" oct="4" pname="c" xml:id="analysis.n_sc_71_1"/&amp;gt;
-&amp;lt;note dur="8" oct="4" pname="d" xml:id="analysis.n_sc_72_1"/&amp;gt;
-&amp;lt;/beam&amp;gt;
-&amp;lt;note dur="4" oct="4" pname="e" xml:id="analysis.n_sc_73_1"/&amp;gt;
-&amp;lt;note dur="4" oct="4" pname="e" xml:id="analysis.n_sc_75_1"/&amp;gt;
-&amp;lt;beam&amp;gt;
-&amp;lt;note dur="8" oct="4" pname="e" xml:id="analysis.n_sc_76_1"/&amp;gt;
-&amp;lt;note dur="8" oct="4" pname="d" xml:id="analysis.n_sc_77_1"/&amp;gt;
-&amp;lt;/beam&amp;gt;
-&amp;lt;/layer&amp;gt;
-&amp;lt;/staff&amp;gt;
-&amp;lt;staff n="2"&amp;gt;
-&amp;lt;layer n="1"&amp;gt;
-&amp;lt;note dur="4" next="#analysis.n_sc_73_2" oct="3" pname="a" xml:id="analysis.n_sc_71_2"/&amp;gt;
-&amp;lt;/layer&amp;gt;
-&amp;lt;layer n="2"&amp;gt;
-&amp;lt;note accid="n" dur="4" oct="3" pname="f" xml:id="n_sc_71_0"/&amp;gt;
-&amp;lt;beam&amp;gt;
-&amp;lt;note dur="8" oct="3" pname="c" xml:id="n_sc_73_0"/&amp;gt;
-&amp;lt;note dur="8" oct="3" pname="d" xml:id="n_sc_74_0"/&amp;gt;
-&amp;lt;/beam&amp;gt;
-&amp;lt;note dur="4" oct="3" pname="e" xml:id="n_sc_75_0"/&amp;gt;
-&amp;lt;beam&amp;gt;
-&amp;lt;note dur="8" oct="2" pname="a" xml:id="n_sc_76_0"/&amp;gt;
-&amp;lt;note dur="8" oct="2" pname="b" xml:id="n_sc_77_0"/&amp;gt;
-&amp;lt;/beam&amp;gt;
-&amp;lt;/layer&amp;gt;
-&amp;lt;/staff&amp;gt;
-&amp;lt;/measure&amp;gt;
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;measure n="6" xml:id="analysis.m_sc_62"&gt;
+    &lt;staff n="1"&gt;
+        &lt;layer n="1"&gt;
+            &lt;note dur="4" oct="4" pname="g" xml:id="analysis.n_sc_63_3"/&gt;
+            &lt;note dur="4" oct="4" pname="a" xml:id="analysis.n_sc_65_3"/&gt;
+            &lt;note dur="4" fermata="above" oct="4" pname="b" xml:id="analysis.n_sc_67_3"/&gt;
+            &lt;note dur="4" oct="4" pname="g" xml:id="analysis.n_sc_68_3"/&gt;
+        &lt;/layer&gt;
+        &lt;layer n="2"&gt;
+            &lt;beam&gt;
+                &lt;note dur="8" oct="4" pname="e" xml:id="analysis.n_sc_63_2"/&gt;
+                &lt;note dur="8" oct="4" pname="g" xml:id="analysis.n_sc_64_2"/&gt;
+            &lt;/beam&gt;
+            &lt;beam&gt;
+                &lt;note dur="8" oct="4" pname="f" xml:id="analysis.n_sc_65_2"/&gt;
+                &lt;note dur="8" oct="4" pname="e" xml:id="analysis.n_sc_66_2"/&gt;
+            &lt;/beam&gt;
+            &lt;note accid="s" dur="4" next="#analysis.n_sc_68_2" oct="4" pname="d" xml:id="analysis.n_sc_67_2"/&gt;
+            &lt;beam&gt;
+                &lt;note dur="8" oct="4" pname="e" xml:id="analysis.n_sc_68_1"/&gt;
+                &lt;note accid="n" dur="8" oct="4" pname="d" xml:id="analysis.n_sc_69_1"/&gt;
+            &lt;/beam&gt;
+        &lt;/layer&gt;
+    &lt;/staff&gt;
+    &lt;staff n="2"&gt;
+        &lt;layer n="1"&gt;
+            &lt;note dur="4" oct="3" pname="b" xml:id="analysis.n_sc_63_1"/&gt;
+            &lt;note dur="4" oct="4" pname="c" xml:id="analysis.n_sc_65_1"/&gt;
+            &lt;note dur="4" oct="3" pname="f" xml:id="analysis.n_sc_67_1"/&gt;
+            &lt;note dur="4" oct="3" pname="b" xml:id="analysis.n_sc_68_2"/&gt;
+        &lt;/layer&gt;
+        &lt;layer n="1"&gt;
+            &lt;beam&gt;
+              &lt;note dur="8" oct="3" pname="e" xml:id="n_sc_63_0"/&gt;
+              &lt;note dur="8" oct="3" pname="d" xml:id="n_sc_64_0"/&gt;
+            &lt;/beam&gt;
+            &lt;note dur="4" oct="3" pname="c" xml:id="n_sc_65_0"/&gt;
+            &lt;note dur="4" fermata="below" oct="2" pname="b" xml:id="n_sc_67_0"/&gt;
+            &lt;note dur="4" oct="3" pname="e" xml:id="n_sc_68_0"/&gt;
+        &lt;/layer&gt;
+    &lt;/staff&gt;
+&lt;/measure&gt;
+&lt;measure n="7" xml:id="m_sc_70"&gt;
+    &lt;staff n="1"&gt;
+        &lt;layer n="1"&gt;
+            &lt;beam&gt;
+                &lt;note dur="8" oct="4" pname="a" xml:id="analysis.n_sc_71_3"/&gt;
+                &lt;note dur="8" oct="4" pname="b" xml:id="analysis.n_sc_72_3"/&gt;
+            &lt;/beam&gt;
+                &lt;note dur="4" oct="5" pname="c" xml:id="analysis.n_sc_73_3"/&gt;
+                &lt;note dur="4" oct="4" pname="b" xml:id="analysis.n_sc_75_3"/&gt;
+            &lt;beam&gt;
+                &lt;note dur="8" oct="5" pname="c" xml:id="analysis.n_sc_76_3"/&gt;
+                &lt;note dur="8" oct="4" pname="b" xml:id="analysis.n_sc_77_3"/&gt;
+            &lt;/beam&gt;
+        &lt;/layer&gt;
+        &lt;layer n="2"&gt;
+            &lt;space dur="4"/&gt;
+            &lt;note dur="4" oct="4" pname="a" xml:id="analysis.n_sc_73_2"/&gt;
+            &lt;note accid="s" dur="4" oct="4" pname="g" xml:id="analysis.n_sc_75_2"/&gt;
+            &lt;note dur="4" oct="4" pname="a" xml:id="analysis.n_sc_76_2"/&gt;
+        &lt;/layer&gt;
+        &lt;layer n="3"&gt;
+            &lt;beam&gt;
+                &lt;note dur="8" oct="4" pname="c" xml:id="analysis.n_sc_71_1"/&gt;
+                &lt;note dur="8" oct="4" pname="d" xml:id="analysis.n_sc_72_1"/&gt;
+            &lt;/beam&gt;
+                &lt;note dur="4" oct="4" pname="e" xml:id="analysis.n_sc_73_1"/&gt;
+                &lt;note dur="4" oct="4" pname="e" xml:id="analysis.n_sc_75_1"/&gt;
+            &lt;beam&gt;
+                &lt;note dur="8" oct="4" pname="e" xml:id="analysis.n_sc_76_1"/&gt;
+                &lt;note dur="8" oct="4" pname="d" xml:id="analysis.n_sc_77_1"/&gt;
+            &lt;/beam&gt;
+        &lt;/layer&gt;
+    &lt;/staff&gt;
+    &lt;staff n="2"&gt;
+        &lt;layer n="1"&gt;
+            &lt;note dur="4" next="#analysis.n_sc_73_2" oct="3" pname="a" xml:id="analysis.n_sc_71_2"/&gt;
+        &lt;/layer&gt;
+        &lt;layer n="2"&gt;
+            &lt;note accid="n" dur="4" oct="3" pname="f" xml:id="n_sc_71_0"/&gt;
+            &lt;beam&gt;
+                &lt;note dur="8" oct="3" pname="c" xml:id="n_sc_73_0"/&gt;
+                &lt;note dur="8" oct="3" pname="d" xml:id="n_sc_74_0"/&gt;
+            &lt;/beam&gt;
+            &lt;note dur="4" oct="3" pname="e" xml:id="n_sc_75_0"/&gt;
+            &lt;beam&gt;
+                &lt;note dur="8" oct="2" pname="a" xml:id="n_sc_76_0"/&gt;
+                &lt;note dur="8" oct="2" pname="b" xml:id="n_sc_77_0"/&gt;
+            &lt;/beam&gt;
+        &lt;/layer&gt;
+    &lt;/staff&gt;
+&lt;/measure&gt;
 </egXML>
                      </figure>
                   </p>
