@@ -3581,6 +3581,7 @@
       <memberOf key="att.melodicFunction"/>
       <memberOf key="att.note.anl.cmn"/>
       
+      <memberOf key="att.fermataPresent"/>
       <memberOf key="att.pitchClass"/>
       <memberOf key="att.solfa"/>
     </classes>
@@ -4452,7 +4453,6 @@
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Analytical domain attributes in the CMN repertoire.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.beamPresent"/>
-      <memberOf key="att.fermataPresent"/>
       <memberOf key="att.glissPresent"/>
       <memberOf key="att.lvPresent"/>
       <memberOf key="att.ornamPresent"/>

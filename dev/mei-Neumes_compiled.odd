@@ -3445,6 +3445,7 @@
       <memberOf key="att.melodicFunction"/>
       
       
+      <memberOf key="att.fermataPresent"/>
       <memberOf key="att.pitchClass"/>
       <memberOf key="att.solfa"/>
     </classes>
@@ -10003,6 +10004,18 @@
             </sch:rule>
           </constraint>
         </constraintSpec>
+      </attDef>
+    </attList>
+  </classSpec><classSpec rend="add" ident="att.fermataPresent" module="MEI.shared" type="atts">
+    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Attributes indicating the attachment of a fermata to the feature.</desc>
+    <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <attDef ident="fermata" usage="opt">
+        <desc>Indicates the attachment of a fermata to this element. If visual information about the
+          fermata needs to be recorded, then a <gi scheme="MEI">fermata</gi> element should be
+          employed instead.</desc>
+        <datatype>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.STAFFREL.basic"/>
+        </datatype>
       </attDef>
     </attList>
   </classSpec><classSpec rend="add" ident="att.filing" module="MEI.shared" type="atts">

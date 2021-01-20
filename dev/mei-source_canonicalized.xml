@@ -18,7 +18,7 @@
 -->
 <?xml-model href="validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<!--canonicalized: 2021-01-20T15:05:56.947Z-->
+<!--canonicalized: 2021-01-20T20:50:40.18Z-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
@@ -17580,6 +17580,7 @@
       <memberOf key="att.melodicFunction"/>
       <memberOf key="att.note.anl.cmn"/>
       <memberOf key="att.note.anl.mensural"/>
+      <memberOf key="att.fermataPresent"/>
       <memberOf key="att.pitchClass"/>
       <memberOf key="att.solfa"/>
     </classes>
@@ -18561,7 +18562,6 @@
     <desc>Analytical domain attributes in the CMN repertoire.</desc>
     <classes>
       <memberOf key="att.beamPresent"/>
-      <memberOf key="att.fermataPresent"/>
       <memberOf key="att.glissPresent"/>
       <memberOf key="att.lvPresent"/>
       <memberOf key="att.ornamPresent"/>
@@ -27094,9 +27094,6 @@
   </classSpec>
   <classSpec ident="att.note.anl.mensural" module="MEI.mensural" type="atts">
     <desc>Analytical domain attributes in the Mensural repertoire.</desc>
-    <classes>
-      <memberOf key="att.fermataPresent"/>
-    </classes>
   </classSpec>
   <classSpec ident="att.note.ges.mensural" module="MEI.mensural" type="atts">
     <desc>Gestural domain attributes in the Mensural repertoire.</desc>

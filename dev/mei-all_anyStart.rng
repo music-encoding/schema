@@ -5,7 +5,7 @@
          xmlns="http://relaxng.org/ns/structure/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2021-01-20T15:05:20Z. .
+Schema generated from ODD source 2021-01-20T20:50:11Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -8574,6 +8574,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
       <ref name="mei_att.melodicFunction.attributes"/>
       <ref name="mei_att.note.anl.cmn.attributes"/>
       <ref name="mei_att.note.anl.mensural.attributes"/>
+      <ref name="mei_att.fermataPresent.attributes"/>
       <ref name="mei_att.pitchClass.attributes"/>
       <ref name="mei_att.solfa.attributes"/>
    </define>
@@ -9322,7 +9323,6 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
    </define>
    <define name="mei_att.note.anl.cmn.attributes">
       <ref name="mei_att.beamPresent.attributes"/>
-      <ref name="mei_att.fermataPresent.attributes"/>
       <ref name="mei_att.glissPresent.attributes"/>
       <ref name="mei_att.lvPresent.attributes"/>
       <ref name="mei_att.ornamPresent.attributes"/>
@@ -16535,7 +16535,7 @@ Suggested values include: 1] glue; 2] thread; 3] needle; 4] tape; 5] staple</a:d
       </sch:rule>
    </pattern>
    <define name="mei_att.note.anl.mensural.attributes">
-      <ref name="mei_att.fermataPresent.attributes"/>
+      <empty/>
    </define>
    <define name="mei_att.note.ges.mensural.attributes">
       <ref name="mei_att.duration.ratio.attributes"/>
