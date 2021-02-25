@@ -18,7 +18,7 @@
 -->
 <?xml-model href="validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<!--canonicalized: 2021-02-25T13:22:08.822Z-->
+<!--canonicalized: 2021-02-25T13:28:11.273Z-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
@@ -25418,6 +25418,7 @@
       <memberOf key="att.bibl"/>
       <memberOf key="att.lang"/>
       <memberOf key="att.mensur.log"/>
+      <memberOf key="att.mensur.vis"/>
       <memberOf key="model.workIdent"/>
     </classes>
     <content>

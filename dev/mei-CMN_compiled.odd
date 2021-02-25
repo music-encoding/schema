@@ -9060,6 +9060,7 @@
       <memberOf key="att.bibl"/>
       <memberOf key="att.lang"/>
       <memberOf key="att.mensur.log"/>
+      <memberOf key="att.mensur.vis"/>
       <memberOf key="model.workIdent"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <rng:text/>
@@ -13596,6 +13597,16 @@
           carrying this attribute are believed to have occurred.</desc>
         <datatype>
           <rng:data type="positiveInteger"/>
+        </datatype>
+      </attDef>
+    </attList>
+  </classSpec><classSpec rend="add" ident="att.slashCount" module="MEI.shared" type="atts">
+    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Attributes for recording the number of slashes that accompany a feature.</desc>
+    <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <attDef ident="slash" usage="opt">
+        <desc>Indicates the number of slashes present.</desc>
+        <datatype>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.SLASH"/>
         </datatype>
       </attDef>
     </attList>
@@ -18592,6 +18603,48 @@
       <memberOf key="att.barring"/>
       <memberOf key="att.width"/>
     </classes>
+  </classSpec><classSpec rend="add" ident="att.mensur.vis" module="MEI.visual" type="atts">
+    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Visual domain attributes. These attributes describe the physical appearance of the
+      mensuration sign/time signature of mensural notation.</desc>
+    <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <memberOf key="att.altSym"/>
+      <memberOf key="att.color"/>
+      <memberOf key="att.extSym"/>
+      <memberOf key="att.staffLoc"/>
+      <memberOf key="att.typography"/>
+      <memberOf key="att.slashCount"/>
+    </classes>
+    <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <attDef ident="dot" usage="opt">
+        <desc>Specifies whether a dot is to be added to the base symbol.</desc>
+        <datatype>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.BOOLEAN"/>
+        </datatype>
+      </attDef>
+      <attDef ident="form" usage="opt">
+        <desc>Indicates whether the base symbol is written vertically or horizontally.</desc>
+        <valList type="closed">
+          <valItem ident="horizontal">
+            <desc>Horizontally oriented.</desc>
+          </valItem>
+          <valItem ident="vertical">
+            <desc>Vertically oriented.</desc>
+          </valItem>
+        </valList>
+      </attDef>
+      <attDef ident="orient" usage="opt">
+        <desc>Describes the rotation or reflection of the base symbol.</desc>
+        <datatype>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.ORIENTATION"/>
+        </datatype>
+      </attDef>
+      <attDef ident="sign" usage="opt">
+        <desc>The base symbol in the mensuration sign/time signature of mensural notation.</desc>
+        <datatype>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.MENSURATIONSIGN"/>
+        </datatype>
+      </attDef>
+    </attList>
   </classSpec><classSpec rend="add" ident="att.meterSig.vis" module="MEI.visual" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Visual domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">

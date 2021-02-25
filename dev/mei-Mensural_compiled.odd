@@ -6710,6 +6710,7 @@
       <memberOf key="att.bibl"/>
       <memberOf key="att.lang"/>
       <memberOf key="att.mensur.log"/>
+      <memberOf key="att.mensur.vis"/>
       <memberOf key="model.workIdent"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <rng:text/>

@@ -5,7 +5,7 @@
          xmlns="http://relaxng.org/ns/structure/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2021-02-25T13:21:50Z. .
+Schema generated from ODD source 2021-02-25T13:27:55Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -6720,6 +6720,40 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Unaccented passing tone (7th added to the chord).</a:documentation>
       </choice>
    </define>
+   <define name="mei_data.MENSURATIONSIGN">
+      <choice>
+         <value>C</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sign for tempus imperfectum.</a:documentation>
+         <value>O</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sign for tempus perfectum.</a:documentation>
+         <value>t</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sign for divisio ternaria.</a:documentation>
+         <value>q</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sign for divisio quaternaria.</a:documentation>
+         <value>si</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sign for divisio senaria imperfecta.</a:documentation>
+         <value>i</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sign for divisio senaria imperfecta.</a:documentation>
+         <value>sg</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sign for divisio senaria gallica.</a:documentation>
+         <value>g</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sign for divisio senaria gallica.</a:documentation>
+         <value>sp</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sign for divisio senaria perfecta.</a:documentation>
+         <value>p</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sign for divisio senaria perfecta.</a:documentation>
+         <value>sy</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sign for divisio senaria ytalica.</a:documentation>
+         <value>y</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sign for divisio senaria ytalica.</a:documentation>
+         <value>n</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sign for divisio novenaria.</a:documentation>
+         <value>oc</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sign for divisio octonaria.</a:documentation>
+         <value>d</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sign for divisio duodenaria.</a:documentation>
+      </choice>
+   </define>
    <define name="mei_data.METERFORM">
       <choice>
          <value>num</value>
@@ -7308,6 +7342,11 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <param name="pattern">8|15|22</param>
       </data>
    </define>
+   <define name="mei_data.ORIENTATION">
+      <data type="token">
+         <param name="pattern">reversed|90CW|90CCW</param>
+      </data>
+   </define>
    <define name="mei_data.PAGE.PANELS">
       <data type="positiveInteger">
          <param name="minInclusive">1</param>
@@ -7391,6 +7430,12 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
    <define name="mei_data.SCALEDEGREE">
       <data type="token">
          <param name="pattern">(\^|v)?[1-7](\+|\-)?</param>
+      </data>
+   </define>
+   <define name="mei_data.SLASH">
+      <data type="positiveInteger">
+         <param name="minInclusive">1</param>
+         <param name="maxInclusive">6</param>
       </data>
    </define>
    <define name="mei_data.STAFFITEM">
@@ -11937,6 +11982,7 @@ Suggested values include: 1] plaineAndEasie; 2] humdrumKern; 3] parsons</a:docum
          <ref name="mei_att.bibl.attributes"/>
          <ref name="mei_att.lang.attributes"/>
          <ref name="mei_att.mensur.log.attributes"/>
+         <ref name="mei_att.mensur.vis.attributes"/>
          <empty/>
       </element>
    </define>
@@ -18444,6 +18490,17 @@ Suggested values include: 1] smufl</a:documentation>
          <attribute name="seq">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Used to assign a sequence number related to the order in which the encoded features carrying this attribute are believed to have occurred.</a:documentation>
             <data type="positiveInteger"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.slashCount.attributes">
+      <ref name="mei_att.slashCount.attribute.slash"/>
+   </define>
+   <define name="mei_att.slashCount.attribute.slash">
+      <optional>
+         <attribute name="slash">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates the number of slashes present.</a:documentation>
+            <ref name="mei_data.SLASH"/>
          </attribute>
       </optional>
    </define>
@@ -25480,6 +25537,55 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
    <define name="mei_att.lyrics.vis.attributes">
       <ref name="mei_att.placement.attributes"/>
       <ref name="mei_att.typography.attributes"/>
+   </define>
+   <define name="mei_att.mensur.vis.attributes">
+      <ref name="mei_att.altSym.attributes"/>
+      <ref name="mei_att.color.attributes"/>
+      <ref name="mei_att.extSym.attributes"/>
+      <ref name="mei_att.staffLoc.attributes"/>
+      <ref name="mei_att.typography.attributes"/>
+      <ref name="mei_att.slashCount.attributes"/>
+      <ref name="mei_att.mensur.vis.attribute.dot"/>
+      <ref name="mei_att.mensur.vis.attribute.form"/>
+      <ref name="mei_att.mensur.vis.attribute.orient"/>
+      <ref name="mei_att.mensur.vis.attribute.sign"/>
+   </define>
+   <define name="mei_att.mensur.vis.attribute.dot">
+      <optional>
+         <attribute name="dot">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Specifies whether a dot is to be added to the base symbol.</a:documentation>
+            <ref name="mei_data.BOOLEAN"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.mensur.vis.attribute.form">
+      <optional>
+         <attribute name="form">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates whether the base symbol is written vertically or horizontally.</a:documentation>
+            <choice>
+               <value>horizontal</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Horizontally oriented.</a:documentation>
+               <value>vertical</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Vertically oriented.</a:documentation>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.mensur.vis.attribute.orient">
+      <optional>
+         <attribute name="orient">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Describes the rotation or reflection of the base symbol.</a:documentation>
+            <ref name="mei_data.ORIENTATION"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.mensur.vis.attribute.sign">
+      <optional>
+         <attribute name="sign">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The base symbol in the mensuration sign/time signature of mensural notation.</a:documentation>
+            <ref name="mei_data.MENSURATIONSIGN"/>
+         </attribute>
+      </optional>
    </define>
    <define name="mei_att.meterSigDefault.vis.attributes">
       <ref name="mei_att.meterSigDefault.vis.attribute.meter.form"/>
