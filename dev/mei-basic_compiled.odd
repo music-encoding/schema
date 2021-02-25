@@ -10372,6 +10372,7 @@
       <memberOf key="att.typography"/>
       
       
+      
     </classes>
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="form" usage="opt">

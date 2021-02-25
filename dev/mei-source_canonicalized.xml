@@ -18,7 +18,7 @@
 -->
 <?xml-model href="validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<!--canonicalized: 2021-02-25T13:30:30.251Z-->
+<!--canonicalized: 2021-02-25T13:39:54.155Z-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
@@ -40624,6 +40624,7 @@
       <memberOf key="att.lineRend"/>
       <memberOf key="att.placement"/>
       <memberOf key="att.typography"/>
+      <memberOf key="att.verticalGroup"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.xy"/>
     </classes>
