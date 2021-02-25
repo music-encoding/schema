@@ -18,7 +18,7 @@
 -->
 <?xml-model href="validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<!--canonicalized: 2021-01-29T20:06:02.952Z-->
+<!--canonicalized: 2021-02-25T13:22:08.822Z-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
@@ -7210,126 +7210,12 @@
                      <graphic url="../images/modules/mensural/Motet_Fauvel_Fol22r_Triplum_Staves4-5.png"/>
                   </figure>
                </p>
-               <p>&lt;!--<figure>
-                     <head/>
-                     <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/4.0.1/mei-Mensural.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;&lt;?xml-model href="https://music-encoding.org/schema/4.0.1/mei-Mensural.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="4.0.1"&gt;
-   &lt;meiHead meiversion="4.0.1"&gt;
-      &lt;fileDesc&gt;
-         &lt;titleStmt&gt;
-            &lt;title&gt;Systems 4 to 5 of the Triplum of the Motet Inflammatis invidia / Sicut de ligno parvulus generatur / Victimae paschali laudes (Fauvel, fol. 22r)&lt;/title&gt;
-         &lt;/titleStmt&gt;
-         &lt;pubStmt&gt;
-            &lt;date&gt;2020-03-02&lt;/date&gt;
-         &lt;/pubStmt&gt;
-         &lt;notesStmt&gt;
-            &lt;annot&gt;Example of the encoding of the music content of a voice (including 2-breve and 3-breve rests).&lt;/annot&gt;
-         &lt;/notesStmt&gt;
-      &lt;/fileDesc&gt;
-   &lt;/meiHead&gt;
-   &lt;music meiversion="4.0.1"&gt;
-      &lt;body&gt;
-         &lt;mdiv&gt;
-            &lt;score&gt;
-               &lt;scoreDef&gt;
-                  &lt;staffGrp&gt;
-                     &lt;staffDef n="1"
-                               lines="5"
-                               label="Triplum"
-                               clef.shape="C"
-                               clef.line="3"
-                               notationtype="mensural.black"
-                               modusminor="3"
-                               tempus="3"/&gt;
-                  &lt;/staffGrp&gt;
-               &lt;/scoreDef&gt;
-               &lt;section&gt;
-                  &lt;staff n="1"&gt;
-                     &lt;layer n="1"&gt;
-                        &lt;note dur="longa" oct="4" pname="c"/&gt;
-                        &lt;note dur="semibrevis" oct="4" pname="c"/&gt;
-                        &lt;note dur="semibrevis" oct="4" pname="d"/&gt;
-                        &lt;note dur="semibrevis" oct="4" pname="e"/&gt;
-                        &lt;note dur="brevis" oct="4" pname="f"/&gt;
-                        &lt;note dur="semibrevis" oct="4" pname="f"/&gt;
-                        &lt;note dur="semibrevis" oct="4" pname="e"/&gt;
-                        &lt;note dur="semibrevis" oct="4" pname="d"/&gt;
-                        &lt;ligature&gt;
-                           &lt;note dur="semibrevis" oct="4" pname="c"/&gt;
-                           &lt;note dur="semibrevis" oct="4" pname="d"/&gt;
-                        &lt;/ligature&gt;
-                        &lt;note dur="longa" oct="4" pname="e"/&gt;
-                        &lt;note dur="brevis" oct="4" pname="d"/&gt;
-                        &lt;?edit-start?&gt;
-                        &lt;rest dur="2B"/&gt;
-                        &lt;ligature&gt;
-                           &lt;note dur="semibrevis" oct="4" pname="d"/&gt;
-                           &lt;note dur="semibrevis" oct="4" pname="c"/&gt;
-                        &lt;/ligature&gt;
-                        &lt;ligature&gt;
-                           &lt;note dur="semibrevis" oct="4" pname="d"/&gt;
-                           &lt;note dur="semibrevis" oct="4" pname="e"/&gt;
-                        &lt;/ligature&gt;
-                        &lt;ligature&gt;
-                           &lt;note dur="semibrevis" oct="4" pname="d"/&gt;
-                           &lt;note dur="semibrevis" oct="3" pname="a"/&gt;
-                        &lt;/ligature&gt;
-                        &lt;note dur="longa" oct="3" pname="b"/&gt;
-                        &lt;dot form="div"/&gt;
-                        &lt;ligature&gt;
-                           &lt;note dur="semibrevis" oct="4" pname="c"/&gt;
-                           &lt;note dur="semibrevis" oct="4" pname="d"/&gt;
-                        &lt;/ligature&gt;
-                        &lt;ligature&gt;
-                           &lt;note dur="semibrevis" oct="4" pname="c"/&gt;
-                           &lt;note dur="semibrevis" oct="3" pname="b"/&gt;
-                        &lt;/ligature&gt;
-                        &lt;ligature&gt;
-                           &lt;note dur="semibrevis" oct="3" pname="a"/&gt;
-                           &lt;note dur="semibrevis" oct="3" pname="g"/&gt;
-                        &lt;/ligature&gt;
-                        &lt;note dur="longa" oct="3" pname="a"/&gt;
-                        &lt;note dur="semibrevis" oct="4" pname="d"/&gt;
-                        &lt;note dur="semibrevis" oct="4" pname="e"/&gt;
-                        &lt;barLine form="invis"/&gt;
-                        &lt;note dur="longa" oct="4" pname="f"/&gt;
-                        &lt;note dur="brevis" oct="4" pname="e"/&gt;
-                        &lt;dot form="div"/&gt;
-                        &lt;note dur="brevis" oct="4" pname="d"/&gt;
-                        &lt;ligature&gt;
-                           &lt;note dur="semibrevis" oct="4" pname="c"/&gt;
-                           &lt;note dur="semibrevis" oct="3" pname="b"/&gt;
-                        &lt;/ligature&gt;
-                        &lt;ligature&gt;
-                           &lt;note dur="semibrevis" oct="4" pname="c"/&gt;
-                           &lt;note dur="semibrevis" oct="4" pname="d"/&gt;
-                        &lt;/ligature&gt;
-                        &lt;note dur="longa" oct="4" pname="e"/&gt;
-                        &lt;rest dur="3B"/&gt;
-                        &lt;?edit-end?&gt;
-                        &lt;note dur="semibrevis" oct="4" pname="e"/&gt;
-                        &lt;note dur="semibrevis" oct="4" pname="f"/&gt;
-                        &lt;dot form="div"/&gt;
-                        &lt;note dur="semibrevis" oct="4" pname="e"/&gt;
-                        &lt;note dur="semibrevis" oct="4" pname="d"/&gt;
-                        &lt;note dur="brevis" oct="4" pname="e"/&gt;
-                        &lt;note dur="longa" oct="4" pname="g" accid="s"/&gt;
-                        &lt;note dur="brevis" oct="4" pname="g" accid.ges="s"/&gt;
-                     &lt;/layer&gt;
-                  &lt;/staff&gt;
-               &lt;/section&gt;
-            &lt;/score&gt;
-         &lt;/mdiv&gt;
-      &lt;/body&gt;
-   &lt;/music&gt;
-&lt;/mei&gt;
-</egXML>
-                  </figure>--&gt;</p>
                <p>
                   <figure>
                      <head/>
                      <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;!--With @modusminor equal to "3" in the &lt;staffDef&gt; element--&gt;&lt;layer n="1"&gt;
     &lt;!--First system in the image--&gt;
-    ...
+    &lt;!-- ... --&gt;
     &lt;rest dur="2B"/&gt;
    &lt;ligature&gt;
       &lt;note dur="semibrevis" oct="4" pname="d"/&gt;
@@ -7375,7 +7261,7 @@
    &lt;/ligature&gt;
    &lt;note dur="longa" oct="4" pname="e"/&gt;
    &lt;rest dur="3B"/&gt;
-    ...
+   &lt;!-- ... --&gt;
 &lt;/layer&gt;
 </egXML>
                   </figure>
@@ -8081,12 +7967,33 @@
                <head>Mensuration</head>
                <p>Using the mensural module, mensuration signs can be indicated with the attributes available on the <gi scheme="MEI">scoreDef</gi> and <gi scheme="MEI">staffDef</gi> elements. Mensuration signs encoded using attributes on <gi scheme="MEI">scoreDef</gi> are regarded as default values which may be overridden by values attached to individual <gi scheme="MEI">staffDef</gi> elements.</p>
                <p>The division levels corresponding to <hi rend="italic">modus maior</hi>, <hi rend="italic">modus minor</hi>, <hi rend="italic">tempus</hi>, and <hi rend="italic">prolatio</hi> can be encoded in the <att>modusmaior</att>, <att>modusminor</att>, <att>tempus</att>, and <att>prolatio</att> attributes respectively. Their value must be 3 (perfect) or 2 (imperfect).</p>
+               <p>
+                  <specList>
+                     <specDesc key="att.mensural.shared" atts="modusmaior modusminor tempus prolatio"/>
+                  </specList>
+               </p>
                <p>The mensur signs themselves can be encoded in the <att>mensur.sign</att> attribute with a possible value of "C" or "O". Its orientation can be encoded in the <att>mensur.orient</att> attribute, for example, with the value "reversed" for a flipped C sign. The number of slashes (up to 6) can be given in the <att>mensur.slash</att> attribute. There is also a <att>mensur.dot</att> attribute for indicating the presence of a dot through the boolean values "true" or "false".</p>
+               <p>
+                  <specList>
+                     <specDesc key="att.mensural.vis" atts="mensur.sign mensur.dot mensur.slash mensur.orient"/>
+                  </specList>
+               </p>
                <p>
                   <gi scheme="MEI">mensur</gi> elements can also be used instead of <gi scheme="MEI">staffDef</gi> and its attributes. In <gi scheme="MEI">mensur</gi>, the division levels are encoded with the previously mentioned <att>modusmaior</att>, <att>modusminor</att>, <att>tempus</att>, and <att>prolatio</att> attributes, while the attributes to indicate the mensur signs are: <att>sign</att>, <att>orient</att>, <att>slash</att>, and <att>dot</att>. <gi scheme="MEI">mensur</gi> can be a child of the <gi scheme="MEI">staffDef</gi> and <gi scheme="MEI">layer</gi> elements.</p>
                <p>
                   <specList>
                      <specDesc key="mensur"/>
+                  </specList>
+               </p>
+               <p>
+                  <specList>
+                     <specDesc key="att.mensural.shared" atts="modusmaior modusminor tempus prolatio"/>
+                  </specList>
+               </p>
+               <p>
+                  <specList>
+                     <specDesc key="att.mensur.vis" atts="sign dot orient"/>
+                     <specDesc key="att.slashCount" atts="slash"/>
                   </specList>
                </p>
                <div xml:id="changeinmensuration" type="div3">
@@ -8268,8 +8175,12 @@
                <div xml:id="italianMensur" type="div3">
                   <head>Italian Divisiones</head>
                   <p>The division of the breve in Italian trecento notation can be encoded using the <att>divisio</att> attribute, which provides the values: ternaria, quaternaria, senariaimperf, senariaperf, octonaria, novenaria, duodenaria. The <att>divisio</att> attribute would usually replace the use of the <att>tempus</att> and <att>prolatio</att> set of attributes.</p>
-                  <p>&lt;!-- Later on (when approved in the schema) add the bracketed-and-percentage-expression: include desc atts="att.mensural.shared/divisio" --&gt;</p>
-                  <p>The signs for the Italian <hi rend="italic">divisiones</hi> can be encoded in the <att>sign</att> attribute, with the values: "t" for ternaria, "q" for quaternaria, "si" and "i" for senaria imperfecta, "sp" and "p" for senaria perfecta, "oc" for octonaria, "n" for novenaria, and "d" for duodenaria. And the additional values for senaria gallica, "sg" and "g", and senaria ytalica, "sy" and "y".</p>
+                  <p>
+                     <specList>
+                        <specDesc key="att.mensural.shared" atts="divisio"/>
+                     </specList>
+                  </p>
+                  <p>The signs for the Italian <hi rend="italic">divisiones</hi> can be encoded in the <att>sign</att> or <att>mensur.sign</att> attribute (to be used with <att>mensur</att> or <att>staffDef</att> respectively), with the values: "t" for ternaria, "q" for quaternaria, "si" and "i" for senaria imperfecta, "sp" and "p" for senaria perfecta, "oc" for octonaria, "n" for novenaria, and "d" for duodenaria. And the additional values for senaria gallica, "sg" and "g", and senaria ytalica, "sy" and "y".</p>
                </div>
             </div>
             <div xml:id="mensuralProportions" type="div2">
@@ -8384,11 +8295,38 @@
                   <p>The characteristics of a note's stem can be encoded within the <gi scheme="MEI">note</gi> element, using the attributes:</p>
                   <p>
                      <specList>
-                        <specDesc key="att.stems" atts="stem.dir stem.pos stem.len stem.x stem.y"/>
-                     </specList> &lt;!-- Add att.stems/stem.form as the third one later on when this change gets accepted in the Mensural MEI module --&gt;</p>
+                        <specDesc key="att.stems" atts="stem.dir stem.len stem.pos stem.x stem.y"/>
+                        <specDesc key="att.stems.mensural" atts="stem.form"/>
+                     </specList>
+                  </p>
                   <p>PLACE-HOLDER FOR EXAMPLE OF ONE NOTE WITH ONE STEM: IMAGE &amp; ITS ENCODING</p>
-                  <p>Sometimes notes have two stems. In this case, the <gi scheme="MEI">stem</gi> element can be used as a child of <gi scheme="MEI">note</gi> to define the individual characteristics of each stem.</p>
+                  <p>Sometimes notes have two stems. In this case, the <gi scheme="MEI">stem</gi> element can be used as a child of <gi scheme="MEI">note</gi> to define the individual characteristics of each stem with the following attributes:</p>
+                  <p>
+                     <specList>
+                        <specDesc key="stem"/>
+                     </specList>
+                  </p>
+                  <p>
+                     <specList>
+                        <specDesc key="att.stem.vis" atts="dir form len pos flag.form flag.pos"/>
+                        <specDesc key="att.xy" atts="x y"/>
+                     </specList>
+                  </p>
                   <p>PLACE-HOLDER FOR EXAMPLE OF A NOTE WITH TWO STEMS: IMAGE &amp; ITS ENCODING</p>
+               </div>
+               <div xml:id="plicas" type="div3">
+                  <head>Plicas</head>
+                  <p>Plicas can be encoded using the <gi scheme="MEI">plica</gi> element as a child of <gi scheme="MEI">note</gi>. The direction of the plica, as well as its length, can be encoded using the following visual-domain attributes:</p>
+                  <p>
+                     <specList>
+                        <specDesc key="plica"/>
+                     </specList>
+                  </p>
+                  <p>
+                     <specList>
+                        <specDesc key="att.plica.vis" atts="dir len"/>
+                     </specList>
+                  </p>
                </div>
             </div>
          </div>
