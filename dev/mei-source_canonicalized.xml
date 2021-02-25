@@ -18,7 +18,7 @@
 -->
 <?xml-model href="validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<!--canonicalized: 2021-02-25T13:28:11.273Z-->
+<!--canonicalized: 2021-02-25T13:30:30.251Z-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
@@ -26944,10 +26944,24 @@
           </sch:assert>
         </sch:rule>
       </constraint>
+      <constraint>
+        <sch:rule context="mei:space[@dur.quality='duplex']">
+          <sch:assert test="@dur='longa'">
+            Duplex quality can only be used with longas (in Ars antiqua).
+          </sch:assert>
+        </sch:rule>
+      </constraint>
     </constraintSpec>
     <constraintSpec ident="check_maiorminor_quality" scheme="isoschematron">
       <constraint>
         <sch:rule context="mei:note[@dur.quality='maior' or @dur.quality='minor']">
+          <sch:assert test="@dur='semibrevis'">
+            Maior / minor quality can only be used with semibreves (in Ars antiqua).
+          </sch:assert>
+        </sch:rule>
+      </constraint>
+      <constraint>
+        <sch:rule context="mei:space[@dur.quality='maior' or @dur.quality='minor']">
           <sch:assert test="@dur='semibrevis'">
             Maior / minor quality can only be used with semibreves (in Ars antiqua).
           </sch:assert>
@@ -37596,6 +37610,7 @@
     <classes>
       <memberOf key="att.common"/>
       <memberOf key="att.facsimile"/>
+      <memberOf key="att.duration.quality"/>
       <memberOf key="att.space.log"/>
       <memberOf key="att.space.vis"/>
       <memberOf key="att.space.ges"/>

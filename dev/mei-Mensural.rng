@@ -5,7 +5,7 @@
          xmlns="http://relaxng.org/ns/structure/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2021-02-25T13:27:50Z. .
+Schema generated from ODD source 2021-02-25T13:30:12Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -13195,12 +13195,36 @@ Suggested values include: 1] glue; 2] thread; 3] needle; 4] tape; 5] staple</a:d
       </sch:rule>
    </pattern>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-att.duration.quality-check_maiorminor_quality-constraint-rule-48">
+            id="mei-att.duration.quality-check_duplex_quality-constraint-rule-48">
+      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
+                xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                context="mei:space[@dur.quality='duplex']">
+         <sch:assert test="@dur='longa'">
+            Duplex quality can only be used with longas (in Ars antiqua).
+          </sch:assert>
+      </sch:rule>
+   </pattern>
+   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+            id="mei-att.duration.quality-check_maiorminor_quality-constraint-rule-49">
       <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 context="mei:note[@dur.quality='maior' or @dur.quality='minor']">
+         <sch:assert test="@dur='semibrevis'">
+            Maior / minor quality can only be used with semibreves (in Ars antiqua).
+          </sch:assert>
+      </sch:rule>
+   </pattern>
+   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+            id="mei-att.duration.quality-check_maiorminor_quality-constraint-rule-50">
+      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
+                xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                context="mei:space[@dur.quality='maior' or @dur.quality='minor']">
          <sch:assert test="@dur='semibrevis'">
             Maior / minor quality can only be used with semibreves (in Ars antiqua).
           </sch:assert>
@@ -13278,7 +13302,7 @@ Suggested values include: 1] glue; 2] thread; 3] needle; 4] tape; 5] staple</a:d
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-att.mensural.shared-mensuration_conflicting_attributes-constraint-rule-49">
+            id="mei-att.mensural.shared-mensuration_conflicting_attributes-constraint-rule-51">
       <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -13640,7 +13664,7 @@ Suggested values include: 1] glue; 2] thread; 3] needle; 4] tape; 5] staple</a:d
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Plica</a:documentation>
          <empty/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="mei-plica-Check_plica-constraint-rule-50">
+                  id="mei-plica-Check_plica-constraint-rule-52">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -13676,7 +13700,7 @@ Suggested values include: 1] glue; 2] thread; 3] needle; 4] tape; 5] staple</a:d
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A stem element.</a:documentation>
          <empty/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="mei-stem-Check_stem-constraint-rule-51">
+                  id="mei-stem-Check_stem-constraint-rule-53">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -13747,7 +13771,7 @@ Suggested values include: 1] glue; 2] thread; 3] needle; 4] tape; 5] staple</a:d
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-att.instrumentIdent-instr-check_instrTarget-constraint-rule-52">
+            id="mei-att.instrumentIdent-instr-check_instrTarget-constraint-rule-54">
       <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -13829,7 +13853,7 @@ Suggested values include: 1] glue; 2] thread; 3] needle; 4] tape; 5] staple</a:d
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-att.midiInstrument-One_of_instrname_or_instrnum-constraint-rule-53">
+            id="mei-att.midiInstrument-One_of_instrname_or_instrnum-constraint-rule-55">
       <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -13840,7 +13864,7 @@ Suggested values include: 1] glue; 2] thread; 3] needle; 4] tape; 5] staple</a:d
       </sch:rule>
    </pattern>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-att.midiInstrument-One_of_patchname_or_patchnum-constraint-rule-54">
+            id="mei-att.midiInstrument-One_of_patchname_or_patchnum-constraint-rule-56">
       <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -14178,7 +14202,7 @@ Suggested values include: 1] glue; 2] thread; 3] needle; 4] tape; 5] staple</a:d
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-att.componentType-comptype-checkComponentType-constraint-rule-55">
+            id="mei-att.componentType-comptype-checkComponentType-constraint-rule-57">
       <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -15650,7 +15674,7 @@ Suggested values include: 1] paper; 2] parch; 3] mixed</a:documentation>
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-att.alignment-check_whenTarget-constraint-rule-56">
+            id="mei-att.alignment-check_whenTarget-constraint-rule-58">
       <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -15671,7 +15695,7 @@ Suggested values include: 1] paper; 2] parch; 3] mixed</a:documentation>
             <ref name="mei_clip"/>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="mei-avFile-avFile_child_of_clip-constraint-rule-57">
+                  id="mei-avFile-avFile_child_of_clip-constraint-rule-59">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -15700,7 +15724,7 @@ Suggested values include: 1] paper; 2] parch; 3] mixed</a:documentation>
             <ref name="mei_when"/>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="mei-clip-betype_required_when_begin_or_end-constraint-rule-58">
+                  id="mei-clip-betype_required_when_begin_or_end-constraint-rule-60">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -15742,7 +15766,7 @@ Suggested values include: 1] paper; 2] parch; 3] mixed</a:documentation>
             <ref name="mei_clip"/>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="mei-recording-betype_required_when_begin_or_end-constraint-rule-59">
+                  id="mei-recording-betype_required_when_begin_or_end-constraint-rule-61">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -15765,7 +15789,7 @@ Suggested values include: 1] paper; 2] parch; 3] mixed</a:documentation>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates a point in time either absolutely (using the absolute attribute), or relative to another when element (using the since, interval and inttype attributes).</a:documentation>
          <empty/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="mei-when-check_when_interval-constraint-rule-60">
+                  id="mei-when-check_when_interval-constraint-rule-62">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -15794,7 +15818,7 @@ Suggested values include: 1] paper; 2] parch; 3] mixed</a:documentation>
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="mei-when-check_when_absolute-constraint-rule-63">
+                  id="mei-when-check_when_absolute-constraint-rule-65">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -15843,7 +15867,7 @@ Suggested values include: 1] paper; 2] parch; 3] mixed</a:documentation>
             </attribute>
          </optional>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="mei-when-since-check_sinceTarget-constraint-rule-64">
+                  id="mei-when-since-check_sinceTarget-constraint-rule-66">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -16087,7 +16111,7 @@ Suggested values include: 1] paper; 2] parch; 3] mixed</a:documentation>
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-att.barring-bar.method-check_barmethod-constraint-rule-65">
+            id="mei-att.barring-bar.method-check_barmethod-constraint-rule-67">
       <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -16184,7 +16208,7 @@ Suggested values include: 1] paper; 2] parch; 3] mixed</a:documentation>
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-att.classed-class-check_classURI-constraint-rule-66">
+            id="mei-att.classed-class-check_classURI-constraint-rule-68">
       <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -16248,7 +16272,7 @@ Suggested values include: 1] paper; 2] parch; 3] mixed</a:documentation>
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-att.cleffing.log-clef_shape_requires_clef_line-constraint-rule-67">
+            id="mei-att.cleffing.log-clef_shape_requires_clef_line-constraint-rule-69">
       <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -16281,7 +16305,7 @@ Suggested values include: 1] paper; 2] parch; 3] mixed</a:documentation>
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-att.clefShape-shape_requires_line-constraint-rule-69">
+            id="mei-att.clefShape-shape_requires_line-constraint-rule-71">
       <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -16471,7 +16495,7 @@ Suggested values include: 1] paper; 2] parch; 3] mixed</a:documentation>
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-att.custos.log-target-check_custosTarget-constraint-rule-70">
+            id="mei-att.custos.log-target-check_custosTarget-constraint-rule-72">
       <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -16547,7 +16571,7 @@ Suggested values include: 1] paper; 2] parch; 3] mixed</a:documentation>
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-att.dataPointing-data-check_dataTarget-constraint-rule-71">
+            id="mei-att.dataPointing-data-check_dataTarget-constraint-rule-73">
       <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -16579,7 +16603,7 @@ Suggested values include: 1] paper; 2] parch; 3] mixed</a:documentation>
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-att.metadataPointing-decls-check_declsTarget-constraint-rule-72">
+            id="mei-att.metadataPointing-decls-check_declsTarget-constraint-rule-74">
       <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -16825,7 +16849,7 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-att.extent-extent-check_extent-constraint-rule-73">
+            id="mei-att.extent-extent-check_extent-constraint-rule-75">
       <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -16890,7 +16914,7 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-att.handIdent-hand-check_handTarget-constraint-rule-75">
+            id="mei-att.handIdent-hand-check_handTarget-constraint-rule-77">
       <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -16963,7 +16987,7 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-att.joined-join-check_joinTarget-constraint-rule-76">
+            id="mei-att.joined-join-check_joinTarget-constraint-rule-78">
       <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -17055,7 +17079,7 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-att.layer.log-def-check_defTarget_layer-constraint-rule-77">
+            id="mei-att.layer.log-def-check_defTarget_layer-constraint-rule-79">
       <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -17169,7 +17193,7 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-att.lineRend.base-lsegs-check_lsegs-constraint-rule-78">
+            id="mei-att.lineRend.base-lsegs-check_lsegs-constraint-rule-80">
       <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -17206,7 +17230,7 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-att.linking-copyof-When_copyof_element_empty-constraint-rule-79">
+            id="mei-att.linking-copyof-When_copyof_element_empty-constraint-rule-81">
       <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -17218,7 +17242,7 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
       </sch:rule>
    </pattern>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-att.linking-copyof-check_copyofTarget-constraint-rule-80">
+            id="mei-att.linking-copyof-check_copyofTarget-constraint-rule-82">
       <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -17245,7 +17269,7 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-att.linking-corresp-check_correspTarget-constraint-rule-81">
+            id="mei-att.linking-corresp-check_correspTarget-constraint-rule-83">
       <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -17272,7 +17296,7 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-att.linking-follows-check_followsTarget-constraint-rule-82">
+            id="mei-att.linking-follows-check_followsTarget-constraint-rule-84">
       <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -17299,7 +17323,7 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-att.linking-next-check_nextTarget-constraint-rule-83">
+            id="mei-att.linking-next-check_nextTarget-constraint-rule-85">
       <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -17326,7 +17350,7 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-att.linking-precedes-check_precedesTarget-constraint-rule-84">
+            id="mei-att.linking-precedes-check_precedesTarget-constraint-rule-86">
       <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -17353,7 +17377,7 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-att.linking-prev-check_prevTarget-constraint-rule-85">
+            id="mei-att.linking-prev-check_prevTarget-constraint-rule-87">
       <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -17380,7 +17404,7 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-att.linking-sameas-check_sameasTarget-constraint-rule-86">
+            id="mei-att.linking-sameas-check_sameasTarget-constraint-rule-88">
       <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -17407,7 +17431,7 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-att.linking-synch-check_synchTarget-constraint-rule-87">
+            id="mei-att.linking-synch-check_synchTarget-constraint-rule-89">
       <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -17752,7 +17776,7 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-att.name-nymref-check_nymrefTarget-constraint-rule-88">
+            id="mei-att.name-nymref-check_nymrefTarget-constraint-rule-90">
       <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -17845,7 +17869,7 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-att.noteHeads-head.altsym-check_head.altsymTarget-constraint-rule-89">
+            id="mei-att.noteHeads-head.altsym-check_head.altsymTarget-constraint-rule-91">
       <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -17872,7 +17896,7 @@ Suggested values include: 1] smufl</a:documentation>
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-att.noteHeads-head.auth-check_head.auth-constraint-rule-90">
+            id="mei-att.noteHeads-head.auth-check_head.auth-constraint-rule-92">
       <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -17936,7 +17960,7 @@ Suggested values include: 1] smufl</a:documentation>
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-att.noteHeads-head.shape-check_headshape_num-constraint-rule-91">
+            id="mei-att.noteHeads-head.shape-check_headshape_num-constraint-rule-93">
       <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -18089,7 +18113,7 @@ Suggested values include: 1] smufl</a:documentation>
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-att.origin.timestamp.logical-origin.tstamp2-origin.tstamp2_requires_origin.tstamp-constraint-rule-92">
+            id="mei-att.origin.timestamp.logical-origin.tstamp2-origin.tstamp2_requires_origin.tstamp-constraint-rule-94">
       <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -18205,7 +18229,7 @@ Suggested values include: 1] smufl</a:documentation>
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-att.partIdent-part-check_part_attr_all-constraint-rule-93">
+            id="mei-att.partIdent-part-check_part_attr_all-constraint-rule-95">
       <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -18230,7 +18254,7 @@ Suggested values include: 1] smufl</a:documentation>
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-att.partIdent-partstaff-check_partstaff_attr_all-constraint-rule-94">
+            id="mei-att.partIdent-partstaff-check_partstaff_attr_all-constraint-rule-96">
       <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -18294,7 +18318,7 @@ Suggested values include: 1] smufl</a:documentation>
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-att.plist-plist-check_plistTarget-constraint-rule-95">
+            id="mei-att.plist-plist-check_plistTarget-constraint-rule-97">
       <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -18442,7 +18466,7 @@ Suggested values include: 1] smufl</a:documentation>
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-att.ranging-confidence-check_confidence-constraint-rule-96">
+            id="mei-att.ranging-confidence-check_confidence-constraint-rule-98">
       <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -18468,7 +18492,7 @@ Suggested values include: 1] smufl</a:documentation>
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-att.responsibility-resp-check_respTarget-constraint-rule-97">
+            id="mei-att.responsibility-resp-check_respTarget-constraint-rule-99">
       <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -18564,7 +18588,7 @@ Suggested values include: 1] smufl</a:documentation>
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-att.source-source-check_sourceTarget-constraint-rule-98">
+            id="mei-att.source-source-check_sourceTarget-constraint-rule-100">
       <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -18637,7 +18661,7 @@ Suggested values include: 1] smufl</a:documentation>
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-att.staff.log-def-check_defTarget_staff-constraint-rule-99">
+            id="mei-att.staff.log-def-check_defTarget_staff-constraint-rule-101">
       <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -18794,7 +18818,7 @@ Suggested values include: 1] smufl</a:documentation>
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-att.startEndId-endid-check_endidTarget-constraint-rule-100">
+            id="mei-att.startEndId-endid-check_endidTarget-constraint-rule-102">
       <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -18820,7 +18844,7 @@ Suggested values include: 1] smufl</a:documentation>
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-att.startId-startid-check_startidTarget-constraint-rule-101">
+            id="mei-att.startId-startid-check_startidTarget-constraint-rule-103">
       <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -18886,7 +18910,7 @@ Suggested values include: 1] smufl</a:documentation>
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-att.stems-stem.sameas-check_stem.sameasTarget-constraint-rule-102">
+            id="mei-att.stems-stem.sameas-check_stem.sameasTarget-constraint-rule-104">
       <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -21279,7 +21303,7 @@ Suggested values include: 1] smufl</a:documentation>
             </zeroOrMore>
          </choice>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="mei-annot-Check_annot_data-constraint-rule-103">
+                  id="mei-annot-Check_annot_data-constraint-rule-105">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -21404,7 +21428,7 @@ Suggested values include: 1] smufl</a:documentation>
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="mei-biblList-checkBiblLabels-constraint-rule-104">
+                  id="mei-biblList-checkBiblLabels-constraint-rule-106">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -21500,7 +21524,7 @@ Suggested values include: 1] smufl</a:documentation>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Break, pause, or interruption in the normal tempo of a composition. Typically indicated by "railroad tracks", i.e., two diagonal slashes.</a:documentation>
          <empty/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="mei-caesura-caesura_start-type_attributes_required-constraint-rule-105">
+                  id="mei-caesura-caesura_start-type_attributes_required-constraint-rule-107">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -21606,7 +21630,7 @@ Suggested values include: 1] smufl</a:documentation>
             <data type="positiveInteger"/>
          </attribute>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="mei-cb-n-check_cb-constraint-rule-106">
+                  id="mei-cb-n-check_cb-constraint-rule-108">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -21649,7 +21673,7 @@ Suggested values include: 1] smufl</a:documentation>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indication of the exact location of a particular note on the staff and, therefore, the other notes as well.</a:documentation>
          <empty/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="mei-clef-Clef_position_lines-constraint-rule-107">
+                  id="mei-clef-Clef_position_lines-constraint-rule-109">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -21661,7 +21685,7 @@ Suggested values include: 1] smufl</a:documentation>
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="mei-clef-Clef_position_nolines-constraint-rule-108">
+                  id="mei-clef-Clef_position_nolines-constraint-rule-110">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -21738,7 +21762,7 @@ Suggested values include: 1] smufl</a:documentation>
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="mei-contributor-check_contributor_role-constraint-rule-109">
+                  id="mei-contributor-check_contributor_role-constraint-rule-111">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -21828,7 +21852,7 @@ Suggested values include: 1] smufl</a:documentation>
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="mei-dedicatee-check_dedicatee-constraint-rule-110">
+                  id="mei-dedicatee-check_dedicatee-constraint-rule-112">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -21929,7 +21953,7 @@ Suggested values include: 1] alt; 2] angle; 3] circum; 4] depth; 5] diameter; 6]
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Information about the physical size of an entity; usually includes numerical data.</a:documentation>
          <ref name="mei_macro.struc-unstrucContent"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="mei-dimensions-check_dimensions-constraint-rule-111">
+                  id="mei-dimensions-check_dimensions-constraint-rule-113">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -21964,7 +21988,7 @@ Suggested values include: 1] alt; 2] angle; 3] circum; 4] depth; 5] diameter; 6]
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="mei-dir-dir_start-type_attributes_required-constraint-rule-112">
+                  id="mei-dir-dir_start-type_attributes_required-constraint-rule-114">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -22092,7 +22116,7 @@ Suggested values include: 1] abstract; 2] ack; 3] appendix; 4] bibliography; 5] 
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="mei-dynam-dynam_start-type_attributes_required-constraint-rule-113">
+                  id="mei-dynam-dynam_start-type_attributes_required-constraint-rule-115">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -22103,7 +22127,7 @@ Suggested values include: 1] abstract; 2] ack; 3] appendix; 4] bibliography; 5] 
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="mei-dynam-dynam_end-type_attributes-constraint-rule-114">
+                  id="mei-dynam-dynam_end-type_attributes-constraint-rule-116">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -22344,7 +22368,7 @@ Suggested values include: 1] abstract; 2] ack; 3] appendix; 4] bibliography; 5] 
             <ref name="mei_model.labelLike"/>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="mei-grpSym-check_grpSym_attributes_scoreDef-constraint-rule-115">
+                  id="mei-grpSym-check_grpSym_attributes_scoreDef-constraint-rule-117">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -22355,7 +22379,7 @@ Suggested values include: 1] abstract; 2] ack; 3] appendix; 4] bibliography; 5] 
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="mei-grpSym-check_grpSym_attributes_staffDef-constraint-rule-116">
+                  id="mei-grpSym-check_grpSym_attributes_staffDef-constraint-rule-118">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -22496,7 +22520,7 @@ Suggested values include: 1] abstract; 2] ack; 3] appendix; 4] bibliography; 5] 
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(key accidental) – Accidental in a key signature.</a:documentation>
          <empty/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="mei-keyAccid-Check_keyAccidPlacement-constraint-rule-117">
+                  id="mei-keyAccid-Check_keyAccidPlacement-constraint-rule-119">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -22536,7 +22560,7 @@ Suggested values include: 1] abstract; 2] ack; 3] appendix; 4] bibliography; 5] 
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="mei-keySig-check_keyAccid_oct-constraint-rule-118">
+                  id="mei-keySig-check_keyAccid_oct-constraint-rule-120">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -22548,7 +22572,7 @@ Suggested values include: 1] abstract; 2] ack; 3] appendix; 4] bibliography; 5] 
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="mei-keySig-check_keySig_editorial-constraint-rule-119">
+                  id="mei-keySig-check_keySig_editorial-constraint-rule-121">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -22761,7 +22785,7 @@ Suggested values include: 1] abstract; 2] ack; 3] appendix; 4] bibliography; 5] 
          <ref name="mei_meiHead"/>
          <ref name="mei_music"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="mei-mei-Check_staff-constraint-rule-120">
+                  id="mei-mei-Check_staff-constraint-rule-122">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -22878,7 +22902,7 @@ Suggested values include: 1] abstract; 2] ack; 3] appendix; 4] bibliography; 5] 
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="mei-name-nameParts-constraint-rule-121">
+                  id="mei-name-nameParts-constraint-rule-123">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -22985,7 +23009,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="mei-ornam-ornam_start-type_attributes_required-constraint-rule-122">
+                  id="mei-ornam-ornam_start-type_attributes_required-constraint-rule-124">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -23225,7 +23249,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
             <ref name="mei_curve"/>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="mei-phrase-phrase_start-_and_end-type_attributes_required-constraint-rule-123">
+                  id="mei-phrase-phrase_start-_and_end-type_attributes_required-constraint-rule-125">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -23238,7 +23262,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="mei-phrase-phrase_containing_curve-constraint-rule-124">
+                  id="mei-phrase-phrase_containing_curve-constraint-rule-126">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -23355,7 +23379,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Describes a relationship or linkage amongst entities.</a:documentation>
          <empty/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="mei-relation-FRBR_relation-constraint-rule-125">
+                  id="mei-relation-FRBR_relation-constraint-rule-127">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -23479,7 +23503,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="mei-respStmt-check_respStmt-constraint-rule-126">
+                  id="mei-respStmt-check_respStmt-constraint-rule-128">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -23508,7 +23532,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="mei-rest-Check_restline-constraint-rule-127">
+                  id="mei-rest-Check_restline-constraint-rule-129">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -23665,7 +23689,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="mei-section-Check_sectionexpansion-constraint-rule-128">
+                  id="mei-section-Check_sectionexpansion-constraint-rule-130">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -23717,6 +23741,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          <empty/>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.facsimile.attributes"/>
+         <ref name="mei_att.duration.quality.attributes"/>
          <ref name="mei_att.space.log.attributes"/>
          <ref name="mei_att.space.vis.attributes"/>
          <ref name="mei_att.space.ges.attributes"/>
@@ -23811,7 +23836,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="mei-staff-checkStaff_n-constraint-rule-129">
+                  id="mei-staff-checkStaff_n-constraint-rule-131">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -23854,7 +23879,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
             <ref name="mei_ambitus"/>
          </optional>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="mei-staffDef-Check_staffDefn-constraint-rule-130">
+                  id="mei-staffDef-Check_staffDefn-constraint-rule-132">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -23870,7 +23895,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="mei-staffDef-Check_ancestor_staff-constraint-rule-131">
+                  id="mei-staffDef-Check_ancestor_staff-constraint-rule-133">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -23882,7 +23907,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="mei-staffDef-Check_ancestor_staff_lines-constraint-rule-132">
+                  id="mei-staffDef-Check_ancestor_staff_lines-constraint-rule-134">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -23895,7 +23920,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="mei-staffDef-Check_clef_position_staffDef-constraint-rule-133">
+                  id="mei-staffDef-Check_clef_position_staffDef-constraint-rule-135">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -23906,7 +23931,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="mei-staffDef-Check_clef_position_staffDef_nolines-constraint-rule-134">
+                  id="mei-staffDef-Check_clef_position_staffDef_nolines-constraint-rule-136">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -23920,7 +23945,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="mei-staffDef-Check_tab_strings_lines-constraint-rule-135">
+                  id="mei-staffDef-Check_tab_strings_lines-constraint-rule-137">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -23933,7 +23958,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="mei-staffDef-Check_tab_strings_nolines-constraint-rule-136">
+                  id="mei-staffDef-Check_tab_strings_nolines-constraint-rule-138">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -24024,7 +24049,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
             <ref name="mei_grpSym"/>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="mei-staffGrp-Check_staffGrp_unique_staff_n_values-constraint-rule-141">
+                  id="mei-staffGrp-Check_staffGrp_unique_staff_n_values-constraint-rule-143">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -24073,7 +24098,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A reference to a previously defined symbol.</a:documentation>
          <empty/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="mei-symbol-symbolDef_symbol_attributes_required-constraint-rule-142">
+                  id="mei-symbol-symbolDef_symbol_attributes_required-constraint-rule-144">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -24108,7 +24133,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="mei-tempo-tempo_in_header_disallow_most_attrs-constraint-rule-143">
+                  id="mei-tempo-tempo_in_header_disallow_most_attrs-constraint-rule-145">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -24120,7 +24145,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="mei-tempo-tempo_start-type_attributes_required-constraint-rule-144">
+                  id="mei-tempo-tempo_start-type_attributes_required-constraint-rule-146">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -24151,7 +24176,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="mei-term-Check_term_dataTarget-constraint-rule-145">
+                  id="mei-term-Check_term_dataTarget-constraint-rule-147">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -24769,7 +24794,7 @@ Suggested values include: 1] alternative; 2] arrangement; 3] carrier; 4] date; 5
             <ref name="mei_li"/>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="mei-list-list_type_constraint-constraint-rule-146">
+                  id="mei-list-list_type_constraint-constraint-rule-148">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -24921,7 +24946,7 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-att.altSym-altsym-check_altsymTarget-constraint-rule-147">
+            id="mei-att.altSym-altsym-check_altsymTarget-constraint-rule-149">
       <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -25033,7 +25058,7 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A curved line that cannot be represented by a more specific element, such as a slur.</a:documentation>
          <empty/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="mei-curve-symbolDef_curve_attributes_required-constraint-rule-148">
+                  id="mei-curve-symbolDef_curve_attributes_required-constraint-rule-150">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -25066,7 +25091,7 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="mei-line-line_start-_and_end-type_attributes_required-constraint-rule-149">
+                  id="mei-line-line_start-_and_end-type_attributes_required-constraint-rule-151">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"

@@ -10134,10 +10134,24 @@
           </sch:assert>
         </sch:rule>
       </constraint>
+      <constraint>
+        <sch:rule context="mei:space[@dur.quality='duplex']">
+          <sch:assert test="@dur='longa'">
+            Duplex quality can only be used with longas (in Ars antiqua).
+          </sch:assert>
+        </sch:rule>
+      </constraint>
     </constraintSpec>
     <constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_maiorminor_quality" scheme="isoschematron">
       <constraint>
         <sch:rule context="mei:note[@dur.quality='maior' or @dur.quality='minor']">
+          <sch:assert test="@dur='semibrevis'">
+            Maior / minor quality can only be used with semibreves (in Ars antiqua).
+          </sch:assert>
+        </sch:rule>
+      </constraint>
+      <constraint>
+        <sch:rule context="mei:space[@dur.quality='maior' or @dur.quality='minor']">
           <sch:assert test="@dur='semibrevis'">
             Maior / minor quality can only be used with semibreves (in Ars antiqua).
           </sch:assert>
@@ -17792,6 +17806,7 @@
       combined duration of the events equals the number of beats in the measure.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       <memberOf key="att.facsimile"/>
+      <memberOf key="att.duration.quality"/>
       <memberOf key="att.space.log"/>
       <memberOf key="att.space.vis"/>
       <memberOf key="att.space.ges"/>
