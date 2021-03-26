@@ -10091,7 +10091,6 @@
     </content></elementSpec><elementSpec rend="add" ident="midi" module="MEI.midi"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Container for elements that contain information useful when generating MIDI output.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       <memberOf key="att.midi.log"/>
-      <memberOf key="att.midi.vis"/>
       <memberOf key="att.midi.ges"/>
       <memberOf key="att.midi.anl"/>
       <memberOf key="model.midiLike"/>
@@ -18684,8 +18683,6 @@
       </attDef>
     </attList>
   </classSpec><classSpec rend="add" ident="att.meterSigGrp.vis" module="MEI.visual" type="atts">
-    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Visual domain attributes.</desc>
-  </classSpec><classSpec rend="add" ident="att.midi.vis" module="MEI.visual" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Visual domain attributes.</desc>
   </classSpec><classSpec rend="add" ident="att.mordent.vis" module="MEI.visual" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Visual domain attributes.</desc>

@@ -5,7 +5,7 @@
          xmlns="http://relaxng.org/ns/structure/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2021-03-26T13:19:57Z. .
+Schema generated from ODD source 2021-03-26T13:23:17Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -16255,7 +16255,6 @@ Suggested values include: 1] glue; 2] thread; 3] needle; 4] tape; 5] staple</a:d
          </zeroOrMore>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.midi.log.attributes"/>
-         <ref name="mei_att.midi.vis.attributes"/>
          <ref name="mei_att.midi.ges.attributes"/>
          <ref name="mei_att.midi.anl.attributes"/>
          <empty/>
@@ -28300,9 +28299,6 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
       </optional>
    </define>
    <define name="mei_att.meterSigGrp.vis.attributes">
-      <empty/>
-   </define>
-   <define name="mei_att.midi.vis.attributes">
       <empty/>
    </define>
    <define name="mei_att.mordent.vis.attributes">

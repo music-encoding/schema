@@ -18,7 +18,7 @@
 -->
 <?xml-model href="validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<!--canonicalized: 2021-03-26T13:20:21.758Z-->
+<!--canonicalized: 2021-03-26T13:23:43.127Z-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
@@ -27723,7 +27723,6 @@
     <classes>
       <memberOf key="att.common"/>
       <memberOf key="att.midi.log"/>
-      <memberOf key="att.midi.vis"/>
       <memberOf key="att.midi.ges"/>
       <memberOf key="att.midi.anl"/>
       <memberOf key="model.midiLike"/>
@@ -40401,9 +40400,6 @@
     </attList>
   </classSpec>
   <classSpec ident="att.meterSigGrp.vis" module="MEI.visual" type="atts">
-    <desc>Visual domain attributes.</desc>
-  </classSpec>
-  <classSpec ident="att.midi.vis" module="MEI.visual" type="atts">
     <desc>Visual domain attributes.</desc>
   </classSpec>
   <classSpec ident="att.mordent.vis" module="MEI.visual" type="atts">
