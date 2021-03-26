@@ -5,7 +5,7 @@
          xmlns="http://relaxng.org/ns/structure/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2021-03-26T13:51:52Z. .
+Schema generated from ODD source 2021-03-26T14:01:38Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -5678,7 +5678,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
       <choice>
          <ref name="mei_data.ACCIDENTAL.WRITTEN.basic"/>
          <ref name="mei_data.ACCIDENTAL.WRITTEN.extended"/>
-         <ref name="mei_data.ACCIDENTAL.WRITTEN.aeu"/>
+         <ref name="mei_data.ACCIDENTAL.aeu"/>
       </choice>
    </define>
    <define name="mei_data.ACCIDENTAL.WRITTEN.basic">
@@ -5733,7 +5733,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">3/4-tone sharp accidental.</a:documentation>
       </choice>
    </define>
-   <define name="mei_data.ACCIDENTAL.WRITTEN.aeu">
+   <define name="mei_data.ACCIDENTAL.aeu">
       <choice>
          <value>bms</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Büyük mücenneb (sharp).</a:documentation>
@@ -5755,6 +5755,13 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
    </define>
    <define name="mei_data.ACCIDENTAL.GESTURAL">
       <choice>
+         <ref name="mei_data.ACCIDENTAL.GESTURAL.basic"/>
+         <ref name="mei_data.ACCIDENTAL.GESTURAL.extended"/>
+         <ref name="mei_data.ACCIDENTAL.aeu"/>
+      </choice>
+   </define>
+   <define name="mei_data.ACCIDENTAL.GESTURAL.basic">
+      <choice>
          <value>s</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sharp.</a:documentation>
          <value>f</value>
@@ -5765,6 +5772,10 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Double flat.</a:documentation>
          <value>n</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Natural.</a:documentation>
+      </choice>
+   </define>
+   <define name="mei_data.ACCIDENTAL.GESTURAL.extended">
+      <choice>
          <value>su</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Three quarter-tones sharp.</a:documentation>
          <value>sd</value>
