@@ -4083,7 +4083,7 @@
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Visual domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.color"/>
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.typography"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.xy"/>
@@ -6044,7 +6044,7 @@
   </classSpec><classSpec rend="add" ident="att.metaMark.vis" module="MEI.edittrans" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Visual domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
     </classes>
   </classSpec><classSpec rend="add" ident="att.reasonIdent" module="MEI.edittrans" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Attributes that identify the reason why an editorial feature is used.</desc>
@@ -13346,8 +13346,29 @@
       <memberOf key="att.pitch"/>
       <memberOf key="att.octave"/>
     </classes>
-  </classSpec><classSpec rend="add" ident="att.placement" module="MEI.shared" type="atts">
-    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Attributes capturing placement information.</desc>
+  </classSpec><classSpec rend="add" ident="att.placementOnStaff" module="MEI.shared" type="atts">
+    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Attributes capturing placement on a staff.</desc>
+    <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+       <attDef ident="onstaff" usage="opt">
+          <desc>Indicates the placement of the item within the staff. A value of 'true' means on the staff, and 'false' off the staff.</desc>
+          <datatype>
+             <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.BOOLEAN"/>
+          </datatype>
+       </attDef>
+    </attList>
+  </classSpec><classSpec rend="add" ident="att.placementRelEvent" module="MEI.shared" type="atts">
+    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Attributes capturing placement information with respect to an event.</desc>
+    <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+       <attDef ident="place" usage="opt">
+          <desc>Captures the placement of the item with respect to the event with which it is
+             associated.</desc>
+          <datatype>
+             <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.STAFFREL"/>
+          </datatype>
+       </attDef>
+    </attList>
+  </classSpec><classSpec rend="add" ident="att.placementRelStaff" module="MEI.shared" type="atts">
+    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Attributes capturing placement information with respect to the staff.</desc>
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="place" usage="opt">
         <desc>Captures the placement of the item with respect to the staff with which it is
@@ -17841,7 +17862,8 @@
       <memberOf key="att.color"/>
       <memberOf key="att.enclosingChars"/>
       <memberOf key="att.extSym"/>
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementOnStaff"/>
+      <memberOf key="att.placementRelEvent"/>
       <memberOf key="att.staffLoc"/>
       <memberOf key="att.staffLoc.pitched"/>
       <memberOf key="att.typography"/>
@@ -17930,7 +17952,8 @@
       <memberOf key="att.color"/>
       <memberOf key="att.enclosingChars"/>
       <memberOf key="att.extSym"/>
-      <memberOf key="att.placement"/>
+       <memberOf key="att.placementOnStaff"/>       
+      <memberOf key="att.placementRelEvent"/>
       <memberOf key="att.staffLoc"/>
       <memberOf key="att.staffLoc.pitched"/>
       <memberOf key="att.typography"/>
@@ -17941,7 +17964,7 @@
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Visual domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.extender"/>
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.verticalGroup"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.visualOffset2.ho"/>
@@ -18092,7 +18115,7 @@
       <memberOf key="att.altSym"/>
       <memberOf key="att.color"/>
       <memberOf key="att.extSym"/>
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.staffLoc"/>
       <memberOf key="att.staffLoc.pitched"/>
       <memberOf key="att.typography"/>
@@ -18110,7 +18133,7 @@
       <memberOf key="att.altSym"/>
       <memberOf key="att.color"/>
       <memberOf key="att.extSym"/>
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.staffLoc"/>
       <memberOf key="att.staffLoc.pitched"/>
       <memberOf key="att.typography"/>
@@ -18185,7 +18208,7 @@
       <memberOf key="att.color"/>
       <memberOf key="att.enclosingChars"/>
       <memberOf key="att.extSym"/>
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.typography"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.xy"/>
@@ -18216,7 +18239,7 @@
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Visual domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.extender"/>
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.verticalGroup"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.visualOffset2.ho"/>
@@ -18240,7 +18263,7 @@
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Visual domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.extender"/>
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.verticalGroup"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.visualOffset2.ho"/>
@@ -18257,7 +18280,7 @@
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.altSym"/>
       <memberOf key="att.extender"/>
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.xy"/>
     </classes>
@@ -18271,7 +18294,7 @@
       <memberOf key="att.altSym"/>
       <memberOf key="att.color"/>
       <memberOf key="att.extSym"/>
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.typography"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.xy"/>
@@ -18310,7 +18333,7 @@
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.altSym"/>
       <memberOf key="att.extender"/>
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.xy"/>
     </classes>
@@ -18323,7 +18346,7 @@
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.altSym"/>
       <memberOf key="att.extender"/>
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.xy"/>
     </classes>
@@ -18407,7 +18430,7 @@
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.color"/>
       <memberOf key="att.lineRend.base"/>
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.verticalGroup"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.visualOffset2"/>
@@ -18437,7 +18460,7 @@
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Visual domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.extender"/>
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.visualOffset2.ho"/>
       <memberOf key="att.visualOffset2.to"/>
@@ -18465,7 +18488,7 @@
       <memberOf key="att.altSym"/>
       <memberOf key="att.color"/>
       <memberOf key="att.extSym"/>
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.typography"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.xy"/>
@@ -18530,7 +18553,7 @@
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Attributes for describing the visual appearance of a line.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.color"/>
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.visualOffset2"/>
       <memberOf key="att.xy"/>
@@ -18597,7 +18620,7 @@
   </classSpec><classSpec rend="add" ident="att.lyrics.vis" module="MEI.visual" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Visual domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.typography"/>
     </classes>
   </classSpec><classSpec rend="add" ident="att.measure.vis" module="MEI.visual" type="atts">
@@ -18690,7 +18713,7 @@
       <memberOf key="att.altSym"/>
       <memberOf key="att.color"/>
       <memberOf key="att.extSym"/>
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.typography"/>
       <memberOf key="att.visualOffset"/>
     </classes>
@@ -18796,7 +18819,7 @@
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.altSym"/>
       <memberOf key="att.color"/>
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.visualOffset2.ho"/>
       <memberOf key="att.visualOffset2.to"/>
@@ -18835,7 +18858,7 @@
       <memberOf key="att.color"/>
       <memberOf key="att.extSym"/>
       <memberOf key="att.lineRend"/>
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.typography"/>
       <memberOf key="att.verticalGroup"/>
       <memberOf key="att.visualOffset"/>
@@ -18876,7 +18899,7 @@
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Visual domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.color"/>
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.typography"/>
       <memberOf key="att.visualOffset.to"/>
       <memberOf key="att.visualOffset.vo"/>
@@ -18887,7 +18910,7 @@
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Visual domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.color"/>
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.typography"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.xy"/>
@@ -18988,7 +19011,7 @@
   </classSpec><classSpec rend="add" ident="att.sp.vis" module="MEI.visual" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Visual domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.visualOffset2.ho"/>
       <memberOf key="att.visualOffset2.to"/>
@@ -19092,7 +19115,7 @@
   </classSpec><classSpec rend="add" ident="att.stageDir.vis" module="MEI.visual" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Visual domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.visualOffset2.ho"/>
       <memberOf key="att.visualOffset2.to"/>
@@ -19101,7 +19124,7 @@
   </classSpec><classSpec rend="add" ident="att.syl.vis" module="MEI.visual" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Visual domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.typography"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.xy"/>
@@ -19123,7 +19146,7 @@
   </classSpec><classSpec rend="add" ident="att.tempo.vis" module="MEI.visual" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Visual domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.verticalGroup"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.visualOffset2.ho"/>
@@ -19152,7 +19175,7 @@
       <memberOf key="att.altSym"/>
       <memberOf key="att.color"/>
       <memberOf key="att.extender"/>
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.extSym"/>
       <memberOf key="att.typography"/>
       <memberOf key="att.visualOffset"/>
@@ -19209,7 +19232,7 @@
       <memberOf key="att.altSym"/>
       <memberOf key="att.color"/>
       <memberOf key="att.extSym"/>
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.typography"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.xy"/>
@@ -19218,7 +19241,7 @@
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Visual domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.color"/>
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.typography"/>
       <memberOf key="att.visualOffset.to"/>
       <memberOf key="att.visualOffset.vo"/>

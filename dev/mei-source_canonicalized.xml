@@ -18,7 +18,7 @@
 -->
 <?xml-model href="validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<!--canonicalized: 2021-03-26T13:23:43.127Z-->
+<!--canonicalized: 2021-03-26T13:52:13.818Z-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
@@ -18105,7 +18105,7 @@
     <desc>Visual domain attributes.</desc>
     <classes>
       <memberOf key="att.color"/>
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.typography"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.xy"/>
@@ -20718,7 +20718,7 @@
   <classSpec ident="att.metaMark.vis" module="MEI.edittrans" type="atts">
     <desc>Visual domain attributes.</desc>
     <classes>
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
     </classes>
   </classSpec>
   <classSpec ident="att.reasonIdent" module="MEI.edittrans" type="atts">
@@ -32609,8 +32609,31 @@
       <memberOf key="att.octave"/>
     </classes>
   </classSpec>
-  <classSpec ident="att.placement" module="MEI.shared" type="atts">
-    <desc>Attributes capturing placement information.</desc>
+  <classSpec ident="att.placementOnStaff" module="MEI.shared" type="atts">
+    <desc>Attributes capturing placement on a staff.</desc>
+    <attList>
+       <attDef ident="onstaff" usage="opt">
+          <desc>Indicates the placement of the item within the staff. A value of 'true' means on the staff, and 'false' off the staff.</desc>
+          <datatype>
+             <rng:ref name="data.BOOLEAN"/>
+          </datatype>
+       </attDef>
+    </attList>
+  </classSpec>   
+  <classSpec ident="att.placementRelEvent" module="MEI.shared" type="atts">
+    <desc>Attributes capturing placement information with respect to an event.</desc>
+    <attList>
+       <attDef ident="place" usage="opt">
+          <desc>Captures the placement of the item with respect to the event with which it is
+             associated.</desc>
+          <datatype>
+             <rng:ref name="data.STAFFREL"/>
+          </datatype>
+       </attDef>
+    </attList>
+  </classSpec>
+  <classSpec ident="att.placementRelStaff" module="MEI.shared" type="atts">
+    <desc>Attributes capturing placement information with respect to the staff.</desc>
     <attList>
       <attDef ident="place" usage="opt">
         <desc>Captures the placement of the item with respect to the staff with which it is
@@ -39314,7 +39337,8 @@
       <memberOf key="att.color"/>
       <memberOf key="att.enclosingChars"/>
       <memberOf key="att.extSym"/>
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementOnStaff"/>
+      <memberOf key="att.placementRelEvent"/>
       <memberOf key="att.staffLoc"/>
       <memberOf key="att.staffLoc.pitched"/>
       <memberOf key="att.typography"/>
@@ -39407,7 +39431,8 @@
       <memberOf key="att.color"/>
       <memberOf key="att.enclosingChars"/>
       <memberOf key="att.extSym"/>
-      <memberOf key="att.placement"/>
+       <memberOf key="att.placementOnStaff"/>       
+      <memberOf key="att.placementRelEvent"/>
       <memberOf key="att.staffLoc"/>
       <memberOf key="att.staffLoc.pitched"/>
       <memberOf key="att.typography"/>
@@ -39419,7 +39444,7 @@
     <desc>Visual domain attributes.</desc>
     <classes>
       <memberOf key="att.extender"/>
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.verticalGroup"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.visualOffset2.ho"/>
@@ -39578,7 +39603,7 @@
       <memberOf key="att.altSym"/>
       <memberOf key="att.color"/>
       <memberOf key="att.extSym"/>
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.staffLoc"/>
       <memberOf key="att.staffLoc.pitched"/>
       <memberOf key="att.typography"/>
@@ -39598,7 +39623,7 @@
       <memberOf key="att.altSym"/>
       <memberOf key="att.color"/>
       <memberOf key="att.extSym"/>
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.staffLoc"/>
       <memberOf key="att.staffLoc.pitched"/>
       <memberOf key="att.typography"/>
@@ -39680,7 +39705,7 @@
       <memberOf key="att.color"/>
       <memberOf key="att.enclosingChars"/>
       <memberOf key="att.extSym"/>
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.typography"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.xy"/>
@@ -39715,7 +39740,7 @@
     <desc>Visual domain attributes.</desc>
     <classes>
       <memberOf key="att.extender"/>
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.verticalGroup"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.visualOffset2.ho"/>
@@ -39741,7 +39766,7 @@
     <desc>Visual domain attributes.</desc>
     <classes>
       <memberOf key="att.extender"/>
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.verticalGroup"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.visualOffset2.ho"/>
@@ -39794,7 +39819,7 @@
     <classes>
       <memberOf key="att.altSym"/>
       <memberOf key="att.extender"/>
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.xy"/>
     </classes>
@@ -39809,7 +39834,7 @@
       <memberOf key="att.altSym"/>
       <memberOf key="att.color"/>
       <memberOf key="att.extSym"/>
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.typography"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.xy"/>
@@ -39849,7 +39874,7 @@
     <classes>
       <memberOf key="att.altSym"/>
       <memberOf key="att.extender"/>
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.xy"/>
     </classes>
@@ -39863,7 +39888,7 @@
     <classes>
       <memberOf key="att.altSym"/>
       <memberOf key="att.extender"/>
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.xy"/>
     </classes>
@@ -39951,7 +39976,7 @@
     <classes>
       <memberOf key="att.color"/>
       <memberOf key="att.lineRend.base"/>
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.verticalGroup"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.visualOffset2"/>
@@ -39983,7 +40008,7 @@
     <desc>Visual domain attributes.</desc>
     <classes>
       <memberOf key="att.extender"/>
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.visualOffset2.ho"/>
       <memberOf key="att.visualOffset2.to"/>
@@ -40012,7 +40037,7 @@
       <memberOf key="att.altSym"/>
       <memberOf key="att.color"/>
       <memberOf key="att.extSym"/>
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.typography"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.xy"/>
@@ -40127,7 +40152,7 @@
     <desc>Attributes for describing the visual appearance of a line.</desc>
     <classes>
       <memberOf key="att.color"/>
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.visualOffset2"/>
       <memberOf key="att.xy"/>
@@ -40248,7 +40273,7 @@
   <classSpec ident="att.lyrics.vis" module="MEI.visual" type="atts">
     <desc>Visual domain attributes.</desc>
     <classes>
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.typography"/>
     </classes>
   </classSpec>
@@ -40408,7 +40433,7 @@
       <memberOf key="att.altSym"/>
       <memberOf key="att.color"/>
       <memberOf key="att.extSym"/>
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.typography"/>
       <memberOf key="att.visualOffset"/>
     </classes>
@@ -40576,7 +40601,7 @@
     <classes>
       <memberOf key="att.altSym"/>
       <memberOf key="att.color"/>
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.visualOffset2.ho"/>
       <memberOf key="att.visualOffset2.to"/>
@@ -40621,7 +40646,7 @@
       <memberOf key="att.color"/>
       <memberOf key="att.extSym"/>
       <memberOf key="att.lineRend"/>
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.typography"/>
       <memberOf key="att.verticalGroup"/>
       <memberOf key="att.visualOffset"/>
@@ -40700,7 +40725,7 @@
     <desc>Visual domain attributes.</desc>
     <classes>
       <memberOf key="att.color"/>
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.typography"/>
       <memberOf key="att.visualOffset.to"/>
       <memberOf key="att.visualOffset.vo"/>
@@ -40712,7 +40737,7 @@
     <desc>Visual domain attributes.</desc>
     <classes>
       <memberOf key="att.color"/>
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.typography"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.xy"/>
@@ -40843,7 +40868,7 @@
   <classSpec ident="att.sp.vis" module="MEI.visual" type="atts">
     <desc>Visual domain attributes.</desc>
     <classes>
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.visualOffset2.ho"/>
       <memberOf key="att.visualOffset2.to"/>
@@ -40952,7 +40977,7 @@
   <classSpec ident="att.stageDir.vis" module="MEI.visual" type="atts">
     <desc>Visual domain attributes.</desc>
     <classes>
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.visualOffset2.ho"/>
       <memberOf key="att.visualOffset2.to"/>
@@ -40976,7 +41001,7 @@
   <classSpec ident="att.syl.vis" module="MEI.visual" type="atts">
     <desc>Visual domain attributes.</desc>
     <classes>
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.typography"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.xy"/>
@@ -41012,7 +41037,7 @@
   <classSpec ident="att.tempo.vis" module="MEI.visual" type="atts">
     <desc>Visual domain attributes.</desc>
     <classes>
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.verticalGroup"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.visualOffset2.ho"/>
@@ -41043,7 +41068,7 @@
       <memberOf key="att.altSym"/>
       <memberOf key="att.color"/>
       <memberOf key="att.extender"/>
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.extSym"/>
       <memberOf key="att.typography"/>
       <memberOf key="att.visualOffset"/>
@@ -41103,7 +41128,7 @@
       <memberOf key="att.altSym"/>
       <memberOf key="att.color"/>
       <memberOf key="att.extSym"/>
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.typography"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.xy"/>
@@ -41113,7 +41138,7 @@
     <desc>Visual domain attributes.</desc>
     <classes>
       <memberOf key="att.color"/>
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.typography"/>
       <memberOf key="att.visualOffset.to"/>
       <memberOf key="att.visualOffset.vo"/>

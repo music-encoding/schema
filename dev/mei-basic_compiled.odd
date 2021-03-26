@@ -2580,7 +2580,7 @@
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Visual domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.typography"/>
       
       
@@ -3216,7 +3216,7 @@
       <choice xmlns="http://relaxng.org/ns/structure/1.0"><ref name="chord"/><ref name="note"/></choice>
     </content></elementSpec><elementSpec rend="add" ident="fermata" module="MEI.cmn"><desc rend="replace">An indication placed over a note or rest to indicate that it should be held longer than its
                         written value. May also occur over a bar line to indicate the end of a phrase or section.
-                        Sometimes called a 'hold' or 'pause'.</desc><classes><memberOf key="att.common"/><memberOf key="att.fermata.log"/><memberOf key="att.fermata.ges"/><memberOf key="model.controlEventLike.cmn"/><memberOf key="att.placement" mode="add"/></classes><content><rng:empty/></content><constraintSpec ident="fermata_start-type_attributes_required" scheme="isoschematron">
+                        Sometimes called a 'hold' or 'pause'.</desc><classes><memberOf key="att.common"/><memberOf key="att.fermata.log"/><memberOf key="att.fermata.ges"/><memberOf key="model.controlEventLike.cmn"/></classes><content><rng:empty/></content><constraintSpec ident="fermata_start-type_attributes_required" scheme="isoschematron">
                         <constraint>
                             <sch:rule context="mei:fermata">
                                 <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of
@@ -6705,8 +6705,29 @@
       <memberOf key="att.pitch"/>
       <memberOf key="att.octave"/>
     </classes>
-  </classSpec><classSpec rend="add" ident="att.placement" module="MEI.shared" type="atts">
-    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Attributes capturing placement information.</desc>
+  </classSpec><classSpec rend="add" ident="att.placementOnStaff" module="MEI.shared" type="atts">
+    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Attributes capturing placement on a staff.</desc>
+    <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+       <attDef ident="onstaff" usage="opt">
+          <desc>Indicates the placement of the item within the staff. A value of 'true' means on the staff, and 'false' off the staff.</desc>
+          <datatype>
+             <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.BOOLEAN"/>
+          </datatype>
+       </attDef>
+    </attList>
+  </classSpec><classSpec rend="add" ident="att.placementRelEvent" module="MEI.shared" type="atts">
+    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Attributes capturing placement information with respect to an event.</desc>
+    <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+       <attDef ident="place" usage="opt">
+          <desc>Captures the placement of the item with respect to the event with which it is
+             associated.</desc>
+          <datatype>
+             <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.STAFFREL"/>
+          </datatype>
+       </attDef>
+    </attList>
+  </classSpec><classSpec rend="add" ident="att.placementRelStaff" module="MEI.shared" type="atts">
+    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Attributes capturing placement information with respect to the staff.</desc>
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="place" usage="opt">
         <desc>Captures the placement of the item with respect to the staff with which it is
@@ -9978,7 +9999,8 @@
       
       
       
-      <memberOf key="att.placement"/>
+       <memberOf key="att.placementOnStaff"/>       
+      <memberOf key="att.placementRelEvent"/>
       
       
       <memberOf key="att.typography"/>
@@ -10020,7 +10042,7 @@
       
       
       
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       
       
       <memberOf key="att.typography"/>
@@ -10038,7 +10060,7 @@
       
       
       
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       
       
       <memberOf key="att.typography"/>
@@ -10065,7 +10087,7 @@
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Visual domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       
       
       
@@ -10089,7 +10111,7 @@
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Visual domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       
       
       
@@ -10106,7 +10128,7 @@
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       
       
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       
       
     </classes>
@@ -10119,7 +10141,7 @@
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       
       
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       
       
     </classes>
@@ -10162,7 +10184,7 @@
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       
       <memberOf key="att.lineRend.base"/>
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       
       
       
@@ -10194,7 +10216,7 @@
       
       
       
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.typography"/>
       
       
@@ -10241,7 +10263,7 @@
   </classSpec><classSpec rend="add" ident="att.lyrics.vis" module="MEI.visual" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Visual domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.typography"/>
     </classes>
   </classSpec><classSpec rend="add" ident="att.mordent.vis" module="MEI.visual" type="atts">
@@ -10250,7 +10272,7 @@
       
       
       
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.typography"/>
       
     </classes>
@@ -10340,7 +10362,7 @@
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       
       
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       
       
       
@@ -10371,7 +10393,7 @@
       
       
       <memberOf key="att.lineRend"/>
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.typography"/>
       
       
@@ -10410,7 +10432,7 @@
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Visual domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.typography"/>
       
       
@@ -10421,7 +10443,7 @@
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Visual domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.typography"/>
       
       
@@ -10510,7 +10532,7 @@
   </classSpec><classSpec rend="add" ident="att.syl.vis" module="MEI.visual" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Visual domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.typography"/>
       
       
@@ -10532,7 +10554,7 @@
   </classSpec><classSpec rend="add" ident="att.tempo.vis" module="MEI.visual" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Visual domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       
       
       
@@ -10561,7 +10583,7 @@
       
       
       
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       
       <memberOf key="att.typography"/>
       
@@ -10613,7 +10635,7 @@
       
       
       
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.typography"/>
       
       
@@ -10622,7 +10644,7 @@
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Visual domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       
-      <memberOf key="att.placement"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.typography"/>
       
       
