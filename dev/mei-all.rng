@@ -5,7 +5,7 @@
          xmlns="http://relaxng.org/ns/structure/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2021-04-29T12:18:50Z. .
+Schema generated from ODD source 2021-04-29T12:31:32Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -13466,7 +13466,6 @@ Suggested values include: 1] smufl</a:documentation>
    </define>
    <define name="mei_att.mRest.ges.attributes">
       <ref name="mei_att.duration.gestural.attributes"/>
-      <ref name="mei_att.instrumentIdent.attributes"/>
    </define>
    <define name="mei_att.mRpt.ges.attributes">
       <empty/>
@@ -13476,11 +13475,9 @@ Suggested values include: 1] smufl</a:documentation>
    </define>
    <define name="mei_att.mSpace.ges.attributes">
       <ref name="mei_att.duration.gestural.attributes"/>
-      <ref name="mei_att.instrumentIdent.attributes"/>
    </define>
    <define name="mei_att.multiRest.ges.attributes">
       <ref name="mei_att.duration.gestural.attributes"/>
-      <ref name="mei_att.instrumentIdent.attributes"/>
    </define>
    <define name="mei_att.multiRpt.ges.attributes">
       <empty/>
@@ -13637,7 +13634,6 @@ Suggested values include: 1] smufl</a:documentation>
    </define>
    <define name="mei_att.rest.ges.attributes">
       <ref name="mei_att.duration.gestural.attributes"/>
-      <ref name="mei_att.instrumentIdent.attributes"/>
       <ref name="mei_att.rest.ges.mensural.attributes"/>
    </define>
    <define name="mei_att.sb.ges.attributes">

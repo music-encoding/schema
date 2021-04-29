@@ -5408,7 +5408,6 @@
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Gestural domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.duration.gestural"/>
-      <memberOf key="att.instrumentIdent"/>
       <memberOf key="att.rest.ges.mensural"/>
     </classes>
   </classSpec><classSpec rend="add" ident="att.sb.ges" module="MEI.gestural" type="atts">
