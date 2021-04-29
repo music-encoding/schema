@@ -5,7 +5,7 @@
          xmlns="http://relaxng.org/ns/structure/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2021-04-29T12:41:31Z. .
+Schema generated from ODD source 2021-04-29T12:51:38Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -6330,6 +6330,10 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Parentheses: ( and ).</a:documentation>
          <value>brack</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Square brackets: [ and ].</a:documentation>
+         <value>box</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Box.</a:documentation>
+         <value>none</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">None.</a:documentation>
       </choice>
    </define>
    <define name="mei_data.FILL">
@@ -25421,6 +25425,7 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
    <define name="mei_att.clef.vis.attributes">
       <ref name="mei_att.altSym.attributes"/>
       <ref name="mei_att.color.attributes"/>
+      <ref name="mei_att.enclosingChars.attributes"/>
       <ref name="mei_att.extSym.attributes"/>
       <ref name="mei_att.typography.attributes"/>
       <ref name="mei_att.visibility.attributes"/>
@@ -25874,6 +25879,7 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
    <define name="mei_att.ornam.vis.attributes">
       <ref name="mei_att.altSym.attributes"/>
       <ref name="mei_att.color.attributes"/>
+      <ref name="mei_att.enclosingChars.attributes"/>
       <ref name="mei_att.placementRelStaff.attributes"/>
       <ref name="mei_att.visualOffset.attributes"/>
       <ref name="mei_att.visualOffset2.ho.attributes"/>

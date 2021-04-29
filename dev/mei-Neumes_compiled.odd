@@ -1039,7 +1039,7 @@
       <choice xmlns="http://relaxng.org/ns/structure/1.0"><ref name="data.DURATION.cmn"/><ref name="data.DURATION.mensural"/></choice>
     </content>
   </macroSpec><macroSpec rend="add" ident="data.ENCLOSURE" module="MEI" type="dt">
-    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Enclosures for editorial notes and accidentals.</desc>
+    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Enclosures for editorial notes, accidentals, articulations, etc.</desc>
     <content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <valList type="closed">
         <valItem ident="paren">
@@ -1047,6 +1047,12 @@
         </valItem>
         <valItem ident="brack">
           <desc>Square brackets: [ and ].</desc>
+        </valItem>
+        <valItem ident="box">
+          <desc>Box.</desc>
+        </valItem>
+        <valItem ident="none">
+          <desc>None.</desc>
         </valItem>
       </valList>
     </content>
@@ -15836,6 +15842,7 @@
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.altSym"/>
       <memberOf key="att.color"/>
+      <memberOf key="att.enclosingChars"/>
       <memberOf key="att.extSym"/>
       <memberOf key="att.typography"/>
       <memberOf key="att.visibility"/>
@@ -16322,6 +16329,7 @@
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.altSym"/>
       <memberOf key="att.color"/>
+      <memberOf key="att.enclosingChars"/>
       <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.visualOffset2.ho"/>

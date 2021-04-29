@@ -18,7 +18,7 @@
 -->
 <?xml-model href="validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<!--canonicalized: 2021-04-29T12:41:50.086Z-->
+<!--canonicalized: 2021-04-29T12:51:56.335Z-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
@@ -14883,7 +14883,7 @@
     </content>
   </macroSpec>
   <macroSpec ident="data.ENCLOSURE" module="MEI" type="dt">
-    <desc>Enclosures for editorial notes and accidentals.</desc>
+    <desc>Enclosures for editorial notes, accidentals, articulations, etc.</desc>
     <content>
       <valList type="closed">
         <valItem ident="paren">
@@ -14891,6 +14891,12 @@
         </valItem>
         <valItem ident="brack">
           <desc>Square brackets: [ and ].</desc>
+        </valItem>
+        <valItem ident="box">
+          <desc>Box.</desc>
+        </valItem>
+        <valItem ident="none">
+          <desc>None.</desc>
         </valItem>
       </valList>
     </content>
@@ -39994,6 +40000,7 @@
     <classes>
       <memberOf key="att.altSym"/>
       <memberOf key="att.color"/>
+      <memberOf key="att.enclosingChars"/>
       <memberOf key="att.extSym"/>
       <memberOf key="att.typography"/>
       <memberOf key="att.visibility"/>
@@ -40156,6 +40163,7 @@
     <classes>
       <memberOf key="att.altSym"/>
       <memberOf key="att.color"/>
+      <memberOf key="att.enclosingChars"/>
       <memberOf key="att.extSym"/>
       <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.typography"/>
@@ -40716,6 +40724,7 @@
     <classes>
       <memberOf key="att.altSym"/>
       <memberOf key="att.color"/>
+      <memberOf key="att.enclosingChars"/>
       <memberOf key="att.extSym"/>
       <memberOf key="att.typography"/>
     </classes>
@@ -40755,6 +40764,7 @@
     <classes>
       <memberOf key="att.altSym"/>
       <memberOf key="att.color"/>
+      <memberOf key="att.enclosingChars"/>
       <memberOf key="att.extSym"/>
       <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.typography"/>
@@ -40924,6 +40934,7 @@
     <classes>
       <memberOf key="att.altSym"/>
       <memberOf key="att.color"/>
+      <memberOf key="att.enclosingChars"/>
       <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.visualOffset2.ho"/>
@@ -41390,6 +41401,7 @@
     <classes>
       <memberOf key="att.altSym"/>
       <memberOf key="att.color"/>
+      <memberOf key="att.enclosingChars"/>
       <memberOf key="att.extender"/>
       <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.extSym"/>
@@ -41450,6 +41462,7 @@
     <classes>
       <memberOf key="att.altSym"/>
       <memberOf key="att.color"/>
+      <memberOf key="att.enclosingChars"/>
       <memberOf key="att.extSym"/>
       <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.typography"/>
