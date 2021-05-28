@@ -18,7 +18,7 @@
 -->
 <?xml-model href="validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<!--canonicalized: 2021-05-05T12:31:52.677Z-->
+<!--canonicalized: 2021-05-28T13:12:41.599Z-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
@@ -21043,7 +21043,7 @@
     <classes>
       <memberOf key="att.controlEvent"/>
       <memberOf key="att.startEndId"/>
-      <memberOf key="att.timestamp2.gestural"/>
+      <memberOf key="att.timestamp2.logical"/>
       <memberOf key="att.edit"/>
       <memberOf key="att.trans"/>
     </classes>

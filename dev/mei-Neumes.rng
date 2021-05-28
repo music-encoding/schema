@@ -5,7 +5,7 @@
          xmlns="http://relaxng.org/ns/structure/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2021-05-05T12:31:36Z. .
+Schema generated from ODD source 2021-05-28T13:12:24Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -8606,7 +8606,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
    <define name="mei_att.metaMark.log.attributes">
       <ref name="mei_att.controlEvent.attributes"/>
       <ref name="mei_att.startEndId.attributes"/>
-      <ref name="mei_att.timestamp2.gestural.attributes"/>
+      <ref name="mei_att.timestamp2.logical.attributes"/>
       <ref name="mei_att.edit.attributes"/>
       <ref name="mei_att.trans.attributes"/>
    </define>
