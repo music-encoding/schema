@@ -5,7 +5,7 @@
          xmlns="http://relaxng.org/ns/structure/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2021-06-02T18:17:02Z. .
+Schema generated from ODD source 2021-06-15T20:34:21Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -8917,6 +8917,22 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
       <ref name="mei_att.duration.additive.attributes"/>
       <ref name="mei_att.startEndId.attributes"/>
       <ref name="mei_att.timestamp2.logical.attributes"/>
+      <ref name="mei_att.bracketSpan.log.attribute.func"/>
+   </define>
+   <define name="mei_att.bracketSpan.log.attribute.func">
+      <attribute name="func">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Describes the function of the bracketed event sequence.
+Suggested values include: 1] coloration; 2] cross-rhythm; 3] ligature</a:documentation>
+         <choice>
+            <value>coloration</value>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Represents coloration in the mensural notation source material.</a:documentation>
+            <value>cross-rhythm</value>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Marks a sequence which does not match the current meter.</a:documentation>
+            <value>ligature</value>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Represents a ligature in the mensural notation source material.</a:documentation>
+            <data type="NMTOKENS"/>
+         </choice>
+      </attribute>
    </define>
    <define name="mei_att.breath.log.attributes">
       <ref name="mei_att.alignment.attributes"/>
@@ -10253,19 +10269,6 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
          <ref name="mei_att.bracketSpan.ges.attributes"/>
          <ref name="mei_att.bracketSpan.anl.attributes"/>
          <ref name="mei_att.facsimile.attributes"/>
-         <attribute name="func">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Describes the function of the bracketed event sequence.
-Suggested values include: 1] coloration; 2] cross-rhythm; 3] ligature</a:documentation>
-            <choice>
-               <value>coloration</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Represents coloration in the mensural notation source material.</a:documentation>
-               <value>cross-rhythm</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Marks a sequence which does not match the current meter.</a:documentation>
-               <value>ligature</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Represents a ligature in the mensural notation source material.</a:documentation>
-               <data type="NMTOKENS"/>
-            </choice>
-         </attribute>
          <empty/>
       </element>
    </define>
