@@ -5,7 +5,7 @@
          xmlns="http://relaxng.org/ns/structure/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2021-06-24T13:18:34Z. .
+Schema generated from ODD source 2021-06-24T13:48:58Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -6797,7 +6797,9 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
       </data>
    </define>
    <define name="mei_data.MIDIBPM">
-      <data type="positiveInteger"/>
+      <data type="decimal">
+         <param name="minExclusive">0</param>
+      </data>
    </define>
    <define name="mei_data.MIDIMSPB">
       <data type="positiveInteger"/>
@@ -17658,7 +17660,9 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
       <optional>
          <attribute name="meter.unit">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Contains the number indicating the beat unit, that is, the bottom number of the meter signature.</a:documentation>
-            <data type="decimal"/>
+            <data type="decimal">
+               <param name="minExclusive">0</param>
+            </data>
          </attribute>
       </optional>
    </define>
