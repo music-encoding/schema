@@ -37,7 +37,7 @@
     </content>
     <remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <p>
-        <graphic url="ExampleImages/accid-20100510.png" height="50%" width="50%"/>
+        <graphic url="../images/ExampleImages/accid-20100510.png" height="50%" width="50%"/>
       </p>
     </remarks>
   </macroSpec><macroSpec rend="add" ident="data.ACCIDENTAL.WRITTEN.basic" module="MEI" type="dt">
