@@ -18,7 +18,7 @@
 -->
 <?xml-model href="validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<!--canonicalized: 2021-07-01T11:00:15.94Z-->
+<!--canonicalized: 2021-07-30T12:13:04.008Z-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
@@ -13902,6 +13902,12 @@
         </valItem>
         <valItem ident="ff">
           <desc>Double flat.</desc>
+        </valItem>
+        <valItem ident="ts">
+          <desc>Triple sharp.</desc>
+        </valItem>
+        <valItem ident="tf">
+          <desc>Triple flat.</desc>
         </valItem>
         <valItem ident="n">
           <desc>Natural.</desc>

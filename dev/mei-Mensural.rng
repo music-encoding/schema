@@ -5,7 +5,7 @@
          xmlns="http://relaxng.org/ns/structure/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2021-07-01T10:59:56Z. .
+Schema generated from ODD source 2021-07-30T12:12:40Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -5770,6 +5770,10 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Double sharp.</a:documentation>
          <value>ff</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Double flat.</a:documentation>
+         <value>ts</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Triple sharp.</a:documentation>
+         <value>tf</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Triple flat.</a:documentation>
          <value>n</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Natural.</a:documentation>
       </choice>
