@@ -5,7 +5,7 @@
          xmlns="http://relaxng.org/ns/structure/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2021-07-30T12:12:16Z. .
+Schema generated from ODD source 2021-07-30T12:29:08Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -26781,7 +26781,10 @@ Suggested values include: 1] abstract; 2] ack; 3] appendix; 4] bibliography; 5] 
             <ref name="mei_model.labelLike"/>
          </zeroOrMore>
          <zeroOrMore>
-            <ref name="mei_model.instrDefLike"/>
+            <choice>
+               <ref name="mei_model.instrDefLike"/>
+               <ref name="mei_model.meterSigLike"/>
+            </choice>
          </zeroOrMore>
          <optional>
             <ref name="mei_ambitus"/>

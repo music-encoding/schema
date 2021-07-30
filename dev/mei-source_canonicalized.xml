@@ -18,7 +18,7 @@
 -->
 <?xml-model href="validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<!--canonicalized: 2021-07-30T12:13:04.008Z-->
+<!--canonicalized: 2021-07-30T12:29:55.868Z-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
@@ -4683,6 +4683,38 @@
                   <p>With the exception of <gi scheme="MEI">label</gi>, these elements may also occur within the flow of musical events captured in a <gi scheme="MEI">layer</gi>, since they are members of <ident type="class">model.eventLike</ident>. In the layer context they function as milestones and affect all following content assigned to the layer (even in subsequent measures) until their information is again overridden either by the same element bearing different information or a <gi scheme="MEI">staffDef</gi> or <gi scheme="MEI">scoreDef</gi>. In this context, it is also possible to combine them with the elements described in chapters <ptr target="#critApp"/> and <ptr target="#editTrans"/> of these Guidelines.</p>
                   <p>Such flexibility as this may require close inspection of an encoding to retrieve the correct definitions for a given staff. As a general rule, the closest preceding and most specific element provides this information: For example, a <gi scheme="MEI">keySig</gi> in the preceding measure is more relevant than a <gi scheme="MEI">staffDef</gi> at the beginning of the section, which is more relevant than a <gi scheme="MEI">scoreDef</gi> at the beginning of the score. However, a section-specific <gi scheme="MEI">scoreDef</gi> that provides only information about the meter does not override the more specific information about key signature gathered from a <gi scheme="MEI">staffDef</gi> for a transposing instrument.</p>
                   <p>Every <gi scheme="MEI">staffDef</gi> may contain a number of <gi scheme="MEI">layerDef</gi> elements, which may be used to establish default values for the distinct layers sharing one staff. MEI does not use the term ‘voice’ to describe these ‘musical threads’ because that term implies continuity across measure boundaries. Given the sometimes arbitrary relationships between these threads from measure to measure as well as across staves, MEI uses the more neutral term ‘layer’.</p>
+               </div>
+               <div xml:id="cmnDefsSepecial" type="div3">
+                  <head>Special cases in staff definitions</head>
+                  <p>Usually <gi scheme="MEI">clef</gi>, <gi scheme="MEI">key</gi>, and <gi scheme="MEI">meterSig</gi> apply to a whole staff.</p>
+                  <p>In some rare cases one can find different meters in different layers, as seen in Maurice Ravel's <hi rend="italic">Oiseaux tristes</hi>.</p>
+                  <p>
+                     <figure>
+                        <head>Different meters in different layers on the upper staff</head>
+                        <graphic url="../images/modules/cmn/Ravel-layerMeter.png"/>
+                     </figure>
+                  </p>
+                  <p>In these cases it is necessary to encode each <gi scheme="MEI">meterSig</gi> for the staff as child of the corresponding <gi scheme="MEI">layerDef</gi>:</p>
+                  <p>
+                     <figure>
+                        <head/>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve" valid="true">&lt;staffGrp bar.thru="true"&gt;
+   &lt;staffDef n="1"&gt;
+      &lt;layerDef n="1"&gt;
+         &lt;meterSig count="4" unit="4" sym="common" /&gt;
+      &lt;/layerDef&gt;
+      &lt;layerDef n="2"&gt;
+         &lt;meterSig count="12" unit="8" /&gt;
+      &lt;/layerDef&gt;
+   &lt;/staffDef&gt;
+   &lt;staffDef n="2" lines="5"&gt;
+      &lt;layerDef n="1"&gt;
+         &lt;meterSig count="4" unit="4" sym="common" /&gt;
+      &lt;/layerDef&gt;
+   &lt;/staffDef&gt;
+&lt;/staffGrp&gt;</egXML>
+                     </figure>
+                  </p>
                </div>
                <div xml:id="cmnReDef" type="div3">
                   <head>Redefinition of Score Parameters</head>
@@ -36579,12 +36611,13 @@
     </classes>
     <content>
       <rng:zeroOrMore>
-        <rng:choice>
-          <rng:ref name="model.labelLike"/>
-        </rng:choice>
+        <rng:ref name="model.labelLike"/>
       </rng:zeroOrMore>
       <rng:zeroOrMore>
-        <rng:ref name="model.instrDefLike"/>
+        <rng:choice>
+          <rng:ref name="model.instrDefLike"/>
+          <rng:ref name="model.meterSigLike"/>
+        </rng:choice>
       </rng:zeroOrMore>
       <rng:optional>
         <rng:ref name="ambitus"/>
@@ -38156,9 +38189,7 @@
     </classes>
     <content>
       <rng:zeroOrMore>
-        <rng:choice>
-          <rng:ref name="model.labelLike"/>
-        </rng:choice>
+        <rng:ref name="model.labelLike"/>
       </rng:zeroOrMore>
       <rng:zeroOrMore>
         <rng:choice>
@@ -38301,9 +38332,7 @@
         <rng:ref name="grpSym"/>
       </rng:zeroOrMore>
       <rng:zeroOrMore>
-        <rng:choice>
-          <rng:ref name="model.labelLike"/>
-        </rng:choice>
+        <rng:ref name="model.labelLike"/>
       </rng:zeroOrMore>
       <rng:zeroOrMore>
         <rng:ref name="model.instrDefLike"/>
