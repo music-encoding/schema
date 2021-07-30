@@ -5,7 +5,7 @@
          xmlns="http://relaxng.org/ns/structure/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2021-07-30T12:29:38Z. .
+Schema generated from ODD source 2021-07-30T12:43:25Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -5794,6 +5794,12 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
       <choice>
          <value>acc</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Accent (Unicode 1D17B).</a:documentation>
+         <value>acc-inv</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Inverted accent.</a:documentation>
+         <value>acc-long</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Long accent, used to indicate an elongated accent mark. It is the responsibility of the encoder to distinguish between accents and hairpins.</a:documentation>
+         <value>acc-soft</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Soft accent, see SMuFL Articulation supplement (U+ED40–U+ED4F).</a:documentation>
          <value>stacc</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Staccato (Unicode 1D17C).</a:documentation>
          <value>ten</value>
