@@ -5,7 +5,7 @@
          xmlns="http://relaxng.org/ns/structure/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2021-07-30T12:43:06Z. .
+Schema generated from ODD source 2021-08-26T14:45:21Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -29600,6 +29600,7 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
    <define name="mei_att.arpeg.vis.attributes">
       <ref name="mei_att.altSym.attributes"/>
       <ref name="mei_att.color.attributes"/>
+      <ref name="mei_att.enclosingChars.attributes"/>
       <ref name="mei_att.extSym.attributes"/>
       <ref name="mei_att.typography.attributes"/>
       <ref name="mei_att.visualOffset.attributes"/>
