@@ -16,10 +16,10 @@
 
   CONTACT: info@music-encoding.org
 -->
-<?xml-model href="validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<!--canonicalized: 2021-09-27T06:36:31.731Z-->
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<!--canonicalized: 2021-10-17T20:24:14.525Z-->
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -102,7 +102,7 @@
    </teiHeader>
    <text>
       <body>
-         <div xml:id="introduction" type="div1" xml:base="docs/01-introduction.xml">
+         <div xml:id="introduction" type="div1">
             <head>Introduction to MEI</head>
             <p>Welcome to the MEI Guidelines. They provide documentation for the Music Encoding
                Initiative's framework for describing music notation documents. This includes both a
@@ -650,7 +650,7 @@
                   with MEI instances in various contexts. These tools are available from the <ref target="https://music-encoding.org/resources/tools.html">https://music-encoding.org/resources/tools.html</ref> website.</p>
             </div>
          </div>
-         <div xml:id="shared" type="div1" xml:base="docs/02-shared.xml">
+         <div xml:id="shared" type="div1">
             <head>Shared Concepts in MEI</head>
             <p>This chapter describes basic principles and shared concepts of MEI. Besides giving a general understanding of the basic structures of an MEI file it tries to introduce elements, models, and attributes that are part of the MEI.shared module, describe their use or at least point to chapters of these guidelines or tutorials that describe their use and application.</p>
             <div xml:id="sharedStructuralElements" type="div2">
@@ -1971,7 +1971,7 @@
                </div>
             </div>
          </div>
-         <div xml:id="metadata" type="div1" xml:base="docs/03-metadata.xml">
+         <div xml:id="metadata" type="div1">
             <head>Metadata in MEI</head>
             <div xml:id="headerintro" type="div2">
                <head>Introduction</head>
@@ -4460,7 +4460,7 @@
                </div>
             </div>
          </div>
-         <div xml:id="cmn" type="div1" xml:base="docs/04-cmn.xml">
+         <div xml:id="cmn" type="div1">
             <head>Repertoire: Common Music Notation</head>
             <p>The module described in this chapter offers the means to describe music in so-called ‘Common Music Notation’ (CMN, sometimes referred to as ‘Common Western Music Notation’). For this purpose, it provides a number of special elements and adds several attribute classes to elements from the <ptr target="#shared"/> module.</p>
             <div xml:id="cmnintro" type="div2">
@@ -7128,7 +7128,7 @@
                </div>
             </div>
          </div>
-         <div xml:id="mensural" type="div1" xml:base="docs/05-mensural.xml">
+         <div xml:id="mensural" type="div1">
             <head>Repertoire: Mensural Notation</head>
             <p>This chapter describes the module for encoding mensural notation from the late 13th century to about 1600. Historically, mensural notation preceded the development of Common Music Notation (CMN) and it included a wide range of features that persist in CMN and that can be encoded in a standard manner in MEI. In mensural notation, pitches are notated as in CMN, leaving out here the major exception of <hi rend="italic">musica ficta</hi>. The pitch is given by the position of the note on the staff and the current clef as in CMN, and the mensural module introduces no modification to MEI regarding how pitches are encoded.</p>
             <p>There are a certain number of differences, however, regarding the representation of duration in mensural notation. The mensural module introduces specific attribute values for notes and rests for appropriately encoding mensural durations. One of the main particularities is that the actual duration of a note is not given only by its symbol but also by position and the context in which the symbol appears. The general context is given by one of the 16 mensural <hi rend="italic">species</hi> provide four levels of division: <hi rend="italic">modus major</hi>, <hi rend="italic">modus minor</hi>, <hi rend="italic">tempus</hi> and <hi rend="italic">prolatio</hi>. Depending on the context, certain rules must be applied in order to determine the duration of a note. In these cases, encoding both the sign and its actual duration is highy desirable.</p>
@@ -8362,7 +8362,7 @@
                </div>
             </div>
          </div>
-         <div xml:id="neumes" type="div1" xml:base="docs/06-neumes.xml">
+         <div xml:id="neumes" type="div1">
             <head>Repertoire: Neume Notation</head>
             <p>This chapter describes the elements, model classes, and attribute classes that are part of the MEI.neumes module.</p>
             <div xml:id="neumesRepertoire" type="div2">
@@ -9621,7 +9621,7 @@
                </div>
             </div>
          </div>
-         <div xml:id="tablature" type="div1" xml:base="docs/07-tablature.xml">
+         <div xml:id="tablature" type="div1">
             <head>Repertoire: String Tablature</head>
             <p>This chapter describes the attribute classes that are part of the MEI.tablature module.</p>
             <div xml:id="tablatureOverview" type="div2">
@@ -9675,7 +9675,7 @@
                </p>
             </div>
          </div>
-         <div xml:id="lyricsperfdir" type="div1" xml:base="docs/08-lyricsperfdir.xml">
+         <div xml:id="lyricsperfdir" type="div1">
             <head>Lyrics and Performance Directions</head>
             <p>This chapter describes how to encode words and syllables in vocal notation. This text is typically written under a staff to indicate the text to be vocally performed. As such, this text should not be confused with other text on the score, for which see chapter <ptr target="#textencoding"/>.</p>
             <div xml:id="lyricsDesc" type="div2">
@@ -9960,7 +9960,7 @@
                <p>This section is supposed to explain stage directions and speeches in MEI drama.</p>
             </div>
          </div>
-         <div xml:id="textencoding" type="div1" xml:base="docs/09-textencoding.xml">
+         <div xml:id="textencoding" type="div1">
             <head>Text Encoding</head>
             <p>This chapter describes methods for encoding textual content with MEI. It is divided into section: One part deals with <ptr target="#textstructures"/> in MEI, the other with <ptr target="#text"/>. While the first covers structures of textual documents such as front- and backmatter, the latter describes how to mark up features and various entities within a text, such as names, tables or quotes. These features may appear both within data (a <gi scheme="MEI">fig</gi>ure scribbled as marginal <gi scheme="MEI">annot</gi>ation into a score by a bored second violin…) and metadata (a number of <gi scheme="MEI">date</gi>s within a text about the <gi scheme="MEI">creation</gi> of a work). Accordingly, many of the elements and models explained in this chapter are used to encode <ptr target="#metadata"/>. However, they should not be confused with the elements from the <ptr target="#lyricsperfdir"/> chapter, which deals with <hi rend="italic">performed</hi> text in MEI.</p>
             <p>Most of the elements described here take inspiration from encoding formats that deal primarily with text, such as HTML and the Text Encoding Initiative (TEI). These elements are provided to encode relatively basic textual information. For deeper encoding of text, these Guidelines recommend consideration of other text-specific encoding formats with embedded MEI markup.</p>
@@ -10912,7 +10912,7 @@
                </div>
             </div>
          </div>
-         <div xml:id="analysisharm" type="div1" xml:base="docs/10-analysisharm.xml">
+         <div xml:id="analysisharm" type="div1">
             <head>Analysis Markup and Harmonies</head>
             <p>This chapter of the MEI Guidelines describes how the results of a musical analysis or harmonic information may be stored in MEI.</p>
             <div xml:id="analysis" type="div2">
@@ -11833,7 +11833,7 @@
                </div>
             </div>
          </div>
-         <div xml:id="scholarlyediting" type="div1" xml:base="docs/11-scholarlyediting.xml">
+         <div xml:id="scholarlyediting" type="div1">
             <head>Scholarly Editing with MEI</head>
             <p>This chapter introduces markup targeting at digital scholarly editions of music. In <ptr target="#critApp"/>, the alignment of multiple sources / witnesses of the same musical text is discussed. <ptr target="#editTrans"/> covers editorial observations in and interventions to the text. <ptr target="#genetic"/> finally deals with the special requirements and needs of genetic editions in music.</p>
             <div xml:id="critApp" type="div2">
@@ -12666,7 +12666,7 @@
                </div>
             </div>
          </div>
-         <div xml:id="facsimilesrecordings" type="div1" xml:base="docs/12-facsimilesrecordings.xml">
+         <div xml:id="facsimilesrecordings" type="div1">
             <head>Facsimiles and Recordings</head>
             <p>MEI can be used to connect an encoding of some sort – either a transcription of existing material, or the specification of some expected output in some form – with existing sources. This existing material may be in different formats – music notation in any combination of print and manuscript, or audio or video footage. The concepts for establishing such connections between encoded music and source material is described in the following chapters.</p>
             <div xml:id="facsimiles" type="div2">
@@ -13104,7 +13104,7 @@
                </div>
             </div>
          </div>
-         <div xml:id="linkingdata" type="div1" xml:base="docs/13-linkingdata.xml">
+         <div xml:id="linkingdata" type="div1">
             <head>Linking Data</head>
             <p>This chapter describes the use of elements in MEI for linking and referencing. This includes the elements, models, and attributes that are part of the 'MEI.ptrref' module. This module contains declarations, techniques and approaches to establish references within a single MEI document, or to link out from one MEI document to another or to other external sources. This chapter also addresses possibilities to link into an MEI document from external sources which makes MEI highly interoperable and serviceable in the context of Linked (Open) Data approaches.</p>
             <div xml:id="links" type="div2">
@@ -13430,7 +13430,7 @@
                <p>The linkAlign module has been deprecated in MEI v3.</p>
             </div>
          </div>
-         <div xml:id="integration" type="div1" xml:base="docs/14-integration.xml">
+         <div xml:id="integration" type="div1">
             <head>Integrating MEI with other Standards and Formats</head>
             <p>In this chapter, the combination of MEI with other relevant formats in the field is
                covered. Here, the MEI Guidelines try to serve as Best Practice Recommendations; they
@@ -13468,7 +13468,7 @@
                <p>
                   <figure>
                      <head/>
-                     <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code noBase noLang" xml:space="preserve"><moduleRef xmlns="" url="http://www.w3.org/Graphics/SVG/1.1/rng/svg11.rng" xml:base="../examples/svg/svg-moduleRef.xml" xml:lang="">
+                     <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code noBase noLang" xml:space="preserve"><moduleRef xmlns="" url="http://www.w3.org/Graphics/SVG/1.1/rng/svg11.rng">
   <content>
     <rng:define name="mei_model.graphicLike" combine="choice">
       <rng:ref name="svg"/>
@@ -13487,7 +13487,7 @@
                <p>
                   <figure>
                      <head/>
-                     <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code noBase noLang" xml:space="preserve"><surface xmlns="" lrx="3000" lry="2000" ulx="0" uly="0" xml:base="../examples/svg/svg-example.xml" xml:lang="">
+                     <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code noBase noLang" xml:space="preserve"><surface xmlns="" lrx="3000" lry="2000" ulx="0" uly="0">
   <graphic target="image1.jpg" width="3000px" height="2000px"/>
   <zone xml:id="rectangle" lrx="370" lry="410" ulx="300" uly="200"/>
   <svg:svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.tei-c.org/ns/Examples" version="1.1" width="3000px" height="2000px" viewBox="0 0 3000 2000">
@@ -13770,9 +13770,7 @@
       <back>
          <div>
             <schemaSpec xmlns:tei="http://www.tei-c.org/ns/1.0" ident="mei" ns="http://www.music-encoding.org/ns/mei" start="mei">
-               
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><specGrp xml:id="module.MEI" xml:base="modules/MEI.xml" xml:lang="">
+               <specGrp xml:id="module.MEI">
   <moduleSpec ident="MEI">
     <desc>Data type definitions.</desc>
   </moduleSpec>
@@ -17554,9 +17552,7 @@
     </attList>
   </classSpec>
 </specGrp>
-               
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><specGrp xml:id="module.MEI.analytical" xml:base="modules/MEI.analytical.xml" xml:lang="">
+               <specGrp xml:id="module.MEI.analytical">
   <moduleSpec ident="MEI.analytical">
     <desc>Analytical component declarations.</desc>
   </moduleSpec>
@@ -18074,9 +18070,7 @@
     <desc>Analytical domain attributes.</desc>
   </classSpec>
 </specGrp>
-               
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><specGrp xml:id="module.MEI.cmn" xml:base="modules/MEI.cmn.xml" xml:lang="">
+               <specGrp xml:id="module.MEI.cmn">
   <moduleSpec ident="MEI.cmn">
     <desc>Common Music Notation (CMN) repertoire component declarations.</desc>
   </moduleSpec>
@@ -20459,9 +20453,7 @@
     </remarks>
   </elementSpec>
 </specGrp>
-               
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><specGrp xml:id="module.MEI.cmnOrnaments" xml:base="modules/MEI.cmnOrnaments.xml" xml:lang="">
+               <specGrp xml:id="module.MEI.cmnOrnaments">
   <moduleSpec ident="MEI.cmnOrnaments">
     <desc>CMN ornament component declarations.</desc>
   </moduleSpec>
@@ -20680,9 +20672,7 @@
     </remarks>
   </elementSpec>
 </specGrp>
-               
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><specGrp xml:id="module.MEI.corpus" xml:base="modules/MEI.corpus.xml" xml:lang="">
+               <specGrp xml:id="module.MEI.corpus">
   <moduleSpec ident="MEI.corpus">
     <desc>Corpus component declarations.</desc>
   </moduleSpec>
@@ -20712,9 +20702,7 @@
     </remarks>
   </elementSpec>
 </specGrp>
-               
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><specGrp xml:id="module.MEI.critapp" xml:base="modules/MEI.critapp.xml" xml:lang="">
+               <specGrp xml:id="module.MEI.critapp">
   <moduleSpec ident="MEI.critapp">
     <desc>Critical apparatus component declarations.</desc>
   </moduleSpec>
@@ -20885,9 +20873,7 @@
     </remarks>
   </elementSpec>
 </specGrp>
-               
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><specGrp xml:id="module.MEI.drama" xml:base="modules/MEI.drama.xml" xml:lang="">
+               <specGrp xml:id="module.MEI.drama">
   <moduleSpec ident="MEI.drama">
     <desc>Dramatic text component declarations.</desc>
   </moduleSpec>
@@ -21040,9 +21026,7 @@
     </remarks>
   </elementSpec>
 </specGrp>
-               
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><specGrp xml:id="module.MEI.edittrans" xml:base="modules/MEI.edittrans.xml" xml:lang="">
+               <specGrp xml:id="module.MEI.edittrans">
   <moduleSpec ident="MEI.edittrans">
     <desc>Editorial and transcriptional component declarations.</desc>
   </moduleSpec>
@@ -22051,9 +22035,7 @@
     </remarks>
   </elementSpec>
 </specGrp>
-               
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><specGrp xml:id="module.MEI.externalsymbols" xml:base="modules/MEI.externalsymbols.xml" xml:lang="">
+               <specGrp xml:id="module.MEI.externalsymbols">
   <moduleSpec ident="MEI.externalsymbols">
     <desc>External symbols component declarations.</desc>
   </moduleSpec>
@@ -22111,9 +22093,7 @@
     </attList>
   </classSpec>
 </specGrp>
-               
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><specGrp xml:id="module.MEI.facsimile" xml:base="modules/MEI.facsimile.xml" xml:lang="">
+               <specGrp xml:id="module.MEI.facsimile">
   <moduleSpec ident="MEI.facsimile">
     <desc>Facsimile component declarations.</desc>
   </moduleSpec>
@@ -22222,9 +22202,7 @@
     </remarks>
   </elementSpec>
 </specGrp>
-               
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><specGrp xml:id="module.MEI.figtable" xml:base="modules/MEI.figtable.xml" xml:lang="">
+               <specGrp xml:id="module.MEI.figtable">
   <moduleSpec ident="MEI.figtable">
     <desc>Figures and tables component declarations.</desc>
   </moduleSpec>
@@ -22487,9 +22465,7 @@
     </remarks>
   </elementSpec>
 </specGrp>
-               
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><specGrp xml:id="module.MEI.fingering" xml:base="modules/MEI.fingering.xml" xml:lang="">
+               <specGrp xml:id="module.MEI.fingering">
   <moduleSpec ident="MEI.fingering">
     <desc>Fingering component declarations.</desc>
   </moduleSpec>
@@ -22617,9 +22593,7 @@
     </constraintSpec>
   </elementSpec>
 </specGrp>
-               
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><specGrp xml:id="module.MEI.frbr" xml:base="modules/MEI.frbr.xml" xml:lang="">
+               <specGrp xml:id="module.MEI.frbr">
   <moduleSpec ident="MEI.frbr">
     <desc>FRBR (Functional Requirements for Bibliographic Records) declarations.</desc>
   </moduleSpec>
@@ -23071,9 +23045,7 @@
     </content>
   </elementSpec>
 </specGrp>
-               
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><specGrp xml:id="module.MEI.genetic" xml:base="modules/MEI.genetic.xml" xml:lang="">
+               <specGrp xml:id="module.MEI.genetic">
   <moduleSpec ident="MEI.genetic">
     <desc>Genetic encoding component declarations.</desc>
   </moduleSpec>
@@ -23175,9 +23147,7 @@
     </remarks>
   </elementSpec>
 </specGrp>
-               
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><specGrp xml:id="module.MEI.gestural" xml:base="modules/MEI.gestural.xml" xml:lang="">
+               <specGrp xml:id="module.MEI.gestural">
   <moduleSpec ident="MEI.gestural">
     <desc>Gestural component declarations.</desc>
   </moduleSpec>
@@ -23978,9 +23948,7 @@
     <desc>Gestural domain attributes.</desc>
   </classSpec>
 </specGrp>
-               
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><specGrp xml:id="module.MEI.harmony" xml:base="modules/MEI.harmony.xml" xml:lang="">
+               <specGrp xml:id="module.MEI.harmony">
   <moduleSpec ident="MEI.harmony">
     <desc>Harmony component declarations.</desc>
   </moduleSpec>
@@ -24192,9 +24160,7 @@
     </constraintSpec>
   </elementSpec>
 </specGrp>
-               
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><specGrp xml:id="module.MEI.header" xml:base="modules/MEI.header.xml" xml:lang="">
+               <specGrp xml:id="module.MEI.header">
   <moduleSpec ident="MEI.header">
     <desc>Metadata header component declarations.</desc>
   </moduleSpec>
@@ -26992,9 +26958,7 @@
     </content>
   </elementSpec>
 </specGrp>
-               
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><specGrp xml:id="module.MEI.lyrics" xml:base="modules/MEI.lyrics.xml" xml:lang="">
+               <specGrp xml:id="module.MEI.lyrics">
   <moduleSpec ident="MEI.lyrics">
     <desc>Lyrics component declarations.</desc>
   </moduleSpec>
@@ -27148,9 +27112,7 @@
     </remarks>
   </elementSpec>
 </specGrp>
-               
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><specGrp xml:id="module.MEI.mensural" xml:base="modules/MEI.mensural.xml" xml:lang="">
+               <specGrp xml:id="module.MEI.mensural">
   <moduleSpec ident="MEI.mensural">
     <desc>Mensural repertoire component declarations.</desc>
   </moduleSpec>
@@ -27748,9 +27710,7 @@
     </remarks>
   </elementSpec>
 </specGrp>
-               
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><specGrp xml:id="module.MEI.midi" xml:base="modules/MEI.midi.xml" xml:lang="">
+               <specGrp xml:id="module.MEI.midi">
   <moduleSpec ident="MEI.midi">
     <desc>MIDI component declarations.</desc>
   </moduleSpec>
@@ -28231,9 +28191,7 @@
     </attList>
   </elementSpec>
 </specGrp>
-               
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><specGrp xml:id="module.MEI.msDesc" xml:base="modules/MEI.msDesc.xml" xml:lang="">
+               <specGrp xml:id="module.MEI.msDesc">
   <moduleSpec ident="MEI.msDesc">
     <desc>Manuscript description component declarations.</desc>
   </moduleSpec>
@@ -29090,9 +29048,7 @@
     </constraint>
   </constraintSpec>
 </specGrp>
-               
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><specGrp xml:id="module.MEI.namesdates" xml:base="modules/MEI.namesdates.xml" xml:lang="">
+               <specGrp xml:id="module.MEI.namesdates">
   <moduleSpec ident="MEI.namesdates">
     <desc>Names and dates component declarations.</desc>
   </moduleSpec>
@@ -29675,9 +29631,7 @@
     </remarks>
   </elementSpec>
 </specGrp>
-               
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><specGrp xml:id="module.MEI.neumes" xml:base="modules/MEI.neumes.xml" xml:lang="">
+               <specGrp xml:id="module.MEI.neumes">
   <moduleSpec ident="MEI.neumes">
     <desc>Neume repertoire component declarations.</desc>
   </moduleSpec>
@@ -30224,9 +30178,7 @@
     </attList>
   </elementSpec>
 </specGrp>
-               
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><specGrp xml:id="module.MEI.performance" xml:base="modules/MEI.performance.xml" xml:lang="">
+               <specGrp xml:id="module.MEI.performance">
   <moduleSpec ident="MEI.performance">
     <desc>Performance component declarations.</desc>
   </moduleSpec>
@@ -30461,9 +30413,7 @@
     </remarks>
   </elementSpec>
 </specGrp>
-               
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><specGrp xml:id="module.MEI.ptrref" xml:base="modules/MEI.ptrref.xml" xml:lang="">
+               <specGrp xml:id="module.MEI.ptrref">
   <moduleSpec ident="MEI.ptrref">
     <desc>Pointer and reference component declarations.</desc>
   </moduleSpec>
@@ -30526,9 +30476,7 @@
     </remarks>
   </elementSpec>
 </specGrp>
-               
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><specGrp xml:id="module.MEI.shared" xml:base="modules/MEI.shared.xml" xml:lang="">
+               <specGrp xml:id="module.MEI.shared">
   <moduleSpec ident="MEI.shared">
     <desc>Component declarations that are shared between two or more modules.</desc>
   </moduleSpec>
@@ -38801,9 +38749,7 @@
     </content>
   </elementSpec>
 </specGrp>
-               
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><specGrp xml:id="module.MEI.stringtab" xml:base="modules/MEI.stringtab.xml" xml:lang="">
+               <specGrp xml:id="module.MEI.stringtab">
   <moduleSpec ident="MEI.stringtab">
     <desc>Tablature component declarations.</desc>
   </moduleSpec>
@@ -38891,9 +38837,7 @@
     </remarks>
   </elementSpec>
 </specGrp>
-               
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><specGrp xml:id="module.MEI.text" xml:base="modules/MEI.text.xml" xml:lang="">
+               <specGrp xml:id="module.MEI.text">
   <moduleSpec ident="MEI.text">
     <desc>Text component declarations.</desc>
   </moduleSpec>
@@ -39346,9 +39290,7 @@
     </remarks>
   </elementSpec>
 </specGrp>
-               
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><specGrp xml:id="module.MEI.usersymbols" xml:base="modules/MEI.usersymbols.xml" xml:lang="">
+               <specGrp xml:id="module.MEI.usersymbols">
   <moduleSpec ident="MEI.usersymbols">
     <desc>User-defined symbols component declarations.</desc>
   </moduleSpec>
@@ -39702,9 +39644,7 @@
     </remarks>
   </elementSpec>
 </specGrp>
-               
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="../validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><specGrp xml:id="module.MEI.visual" xml:base="modules/MEI.visual.xml" xml:lang="">
+               <specGrp xml:id="module.MEI.visual">
   <moduleSpec ident="MEI.visual">
     <desc>Visual component declarations.</desc>
   </moduleSpec>
