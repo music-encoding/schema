@@ -8847,6 +8847,7 @@
       <memberOf key="att.visibility"/>
       <memberOf key="att.xy"/>
       <memberOf key="att.visualOffset.ho"/>
+      <memberOf key="model.eventLike.neumes"/>
     </classes><attList><attDef ident="form" usage="opt">
         <desc>Identifies the different kinds of division.</desc>
         <datatype maxOccurs="unbounded">
