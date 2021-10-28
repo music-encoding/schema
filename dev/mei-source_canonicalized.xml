@@ -18,7 +18,7 @@
 -->
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<!--canonicalized: 2021-10-28T14:25:21.255Z-->
+<!--canonicalized: 2021-10-28T14:27:11.549Z-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -1879,11 +1879,11 @@
                      </p>
                      <p>
                         <figure>
-                           <head>Use of glyphname and glyphnum attributes</head>
+                           <head>Use of glyph.name and glyph.num attributes</head>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve" valid="feasible">&lt;meterSig count="2"
           form="norm"
-          glyphname="timeSigCutCommon"
-          glyphnum="U+E08B"
+          glyph.name="timeSigCutCommon"
+          glyph.num="U+E08B"
           sym="cut"
           unit="4"/&gt;
 </egXML>
