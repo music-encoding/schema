@@ -5,7 +5,7 @@
          xmlns="http://relaxng.org/ns/structure/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2021-11-02T20:51:12Z. .
+Schema generated from ODD source 2022-01-12T09:04:41Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -275,7 +275,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <value>perc</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Drum clef (Unicode 1D125 or Unicode 1D126).</a:documentation>
          <value>TAB</value>
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Tablature "clef"; i.e. usually "TAB" rendered vertically.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Tablature "clef"; i.e., usually "TAB" rendered vertically.</a:documentation>
       </choice>
    </define>
    <define name="mei_data.CONFIDENCE">
@@ -854,9 +854,9 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
    <define name="mei_data.METERSIGN">
       <choice>
          <value>common</value>
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Common time; i.e. 4/4.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Common time; i.e., 4/4.</a:documentation>
          <value>cut</value>
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Cut time; i.e. 2/2.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Cut time; i.e., 2/2.</a:documentation>
          <value>open</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Open time signature, i.e., Senza misura. See Gould pp. 611–615.</a:documentation>
       </choice>
@@ -1019,15 +1019,15 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <value>fslash</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Struck through by '/' (forward slash).</a:documentation>
          <value>line-through</value>
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Struck through by '-'; may be qualified to indicate multiple parallel lines, e.g. line-through(2).</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Struck through by '-'; may be qualified to indicate multiple parallel lines, e.g., line-through(2).</a:documentation>
          <value>none</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Not rendered, invisible.</a:documentation>
          <value>overline</value>
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Line above the text; may be qualified to indicate multiple parallel lines, e.g. overline(3).</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Line above the text; may be qualified to indicate multiple parallel lines, e.g., overline(3).</a:documentation>
          <value>overstrike</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for deleted text fully or partially obscured by other text (such as 'XXXXX') or musical symbols (such as notes, rests, etc.).</a:documentation>
          <value>strike</value>
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Struck through by '-'; equivalent to line-through; may be qualified to indicate multiple parallel lines, e.g. strike(3).</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Struck through by '-'; equivalent to line-through; may be qualified to indicate multiple parallel lines, e.g., strike(3).</a:documentation>
          <value>sub</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Subscript.</a:documentation>
          <value>sup</value>
@@ -1035,9 +1035,9 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <value>superimpose</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for added text or musical symbols that fully or partially obscure text from an earlier writing stage.</a:documentation>
          <value>underline</value>
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Underlined; may be qualified to indicate multiple parallel lines, e.g. underline(2).</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Underlined; may be qualified to indicate multiple parallel lines, e.g., underline(2).</a:documentation>
          <value>x-through</value>
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Crossed-out; equivalent to 'bslash' (\) plus 'fslash' (/); that is, a hand-written 'X'; may be qualified to indicate multiple parallel lines, e.g. x-through(2).</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Crossed-out; equivalent to 'bslash' (\) plus 'fslash' (/); that is, a hand-written 'X'; may be qualified to indicate multiple parallel lines, e.g., x-through(2).</a:documentation>
          <value>ltr</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Left-to-right (BIDI embed).</a:documentation>
          <value>rtl</value>
@@ -2198,7 +2198,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    </define>
    <define name="mei_hairpin">
       <element name="hairpin">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates continuous dynamics expressed on the score as wedge-shaped graphics, e.g. &lt; and &gt;.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates continuous dynamics expressed on the score as wedge-shaped graphics, e.g., &lt; and &gt;.</a:documentation>
          <empty/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-hairpin-hairpin_start-_and_end-type_attributes_required-constraint-rule-12">
@@ -4048,7 +4048,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    </define>
    <define name="mei_binding">
       <element name="binding">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(binding) – Contains a description of one binding, i.e. type of covering, boards, etc. applied to an item.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(binding) – Contains a description of one binding, i.e., type of covering, boards, etc. applied to an item.</a:documentation>
          <zeroOrMore>
             <ref name="mei_head"/>
          </zeroOrMore>
@@ -6340,7 +6340,7 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
    <define name="mei_att.typography.attribute.fontsize">
       <optional>
          <attribute name="fontsize">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates the size of a font expressed in printers' points, i.e., 1/72nd of an inch, relative terms, e.g., "small", "larger", etc., or percentage values relative to "normal" size, e.g., "125%". </a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates the size of a font expressed in printers' points, i.e., 1/72nd of an inch, relative terms, e.g., "small", "larger", etc., or percentage values relative to "normal" size, e.g., "125%".</a:documentation>
             <ref name="mei_data.FONTSIZE"/>
          </attribute>
       </optional>
@@ -7685,7 +7685,7 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
    </define>
    <define name="mei_analytic">
       <element name="analytic">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(analytic level) – Contains bibliographic elements describing an item (e.g. an article or poem) published within a monograph or journal and not as an independent publication.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(analytic level) – Contains bibliographic elements describing an item (e.g., an article or poem) published within a monograph or journal and not as an independent publication.</a:documentation>
          <zeroOrMore>
             <choice>
                <ref name="mei_model.respLikePart"/>
@@ -8173,7 +8173,7 @@ Suggested values include: 1] alt; 2] angle; 3] circum; 4] depth; 5] diameter; 6]
                <value>diameter</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Length of a straight line passing through the center of a circle or sphere and meeting the circumference or surface at each end.</a:documentation>
                <value>elevation</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Distance to which something has been raised or uplifted above a level, e.g. a hill's elevation above the surrounding country.</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Distance to which something has been raised or uplifted above a level, e.g., a hill's elevation above the surrounding country.</a:documentation>
                <value>height</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Denotes extent upward (as from foot to head) as well as any measurable distance above a given level.</a:documentation>
                <value>length</value>
@@ -8306,7 +8306,7 @@ Suggested values include: 1] alt; 2] angle; 3] circum; 4] depth; 5] diameter; 6]
    </define>
    <define name="mei_edition">
       <element name="edition">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(edition designation) – A word or text phrase that indicates a difference in either content or form between the item being described and a related item previously issued by the same publisher/distributor (e.g. 2nd edition, version 2.0, etc.), or simultaneously issued by either the same publisher/distributor or another publisher/distributor (e.g. large print edition, British edition, etc.).</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(edition designation) – A word or text phrase that indicates a difference in either content or form between the item being described and a related item previously issued by the same publisher/distributor (e.g., 2nd edition, version 2.0, etc.), or simultaneously issued by either the same publisher/distributor or another publisher/distributor (e.g., large print edition, British edition, etc.).</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -8639,7 +8639,7 @@ Suggested values include: 1] alt; 2] angle; 3] circum; 4] depth; 5] diameter; 6]
    </define>
    <define name="mei_lg">
       <element name="lg">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(line group) – May be used for any section of text that is organized as a group of lines; however, it is most often used for a group of verse lines functioning as a formal unit, e.g. a stanza, refrain, verse paragraph, etc.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(line group) – May be used for any section of text that is organized as a group of lines; however, it is most often used for a group of verse lines functioning as a formal unit, e.g., a stanza, refrain, verse paragraph, etc.</a:documentation>
          <zeroOrMore>
             <ref name="mei_model.headLike"/>
          </zeroOrMore>
@@ -9845,7 +9845,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
                   <value>c</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Collection. A group of items that were not originally published, distributed, or produced together.</a:documentation>
                   <value>d</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Subunit of a collection, e.g. item, folder, box, archival series, subgroup, or subcollection.</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Subunit of a collection, e.g., item, folder, box, archival series, subgroup, or subcollection.</a:documentation>
                   <value>i</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Integrating resource, such as a continuously updated loose-leaf service or Web site.</a:documentation>
                   <value>m</value>
@@ -10261,7 +10261,7 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                         <value>spoken</value>
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Representation of speech.</a:documentation>
                         <value>thought</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Representation of thought, e.g. internal monologue.</a:documentation>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Representation of thought, e.g., internal monologue.</a:documentation>
                         <value>written</value>
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Quotation from a written source.</a:documentation>
                         <value>soCalled</value>

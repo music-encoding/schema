@@ -18,7 +18,7 @@
 -->
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<!--canonicalized: 2021-11-02T20:51:40.795Z-->
+<!--canonicalized: 2022-01-12T09:05:05.649Z-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -144,7 +144,7 @@
                         (Ian D. Bent, et al. "Notation." Grove Music Online. Oxford Music Online. 25
                         May 2010. <ref target="http://www.oxfordmusiconline.com/subscriber/article/grove/music/20114">http://www.oxfordmusiconline.com/subscriber/article/grove/music/20114</ref>.)
                         However, MEI's understanding is more inclusive than this restrictive
-                        definition, i.e. Braille certainly qualifies as music notation
+                        definition, <abbr>i.e.</abbr>, Braille certainly qualifies as music notation
                         documents.</p>
                      <p>The encoding scheme permits both the creation of new music notation
                         documents and the conversion of existing ones from print and other
@@ -658,7 +658,7 @@
                <p>Besides elements used by multiple other modules the MEI.shared module defines the main structural elements of an MEI file. Please be aware that there is also a <ref target="https://music-encoding.org/tutorials/100-structure.html">A short tutorial about the basics of XML &amp; MEI</ref> that helps understanding and learning the contents of this chapter.</p>
                <div xml:id="sharedDocumentElements" type="div3">
                   <head>Document Root Elements</head>
-                  <p>MEI defines four elements qualifying as root elements (i.e. the element containing everything else) of an MEI document; the most common of these are defined in the MEI.shared module:</p>
+                  <p>MEI defines four elements qualifying as root elements (<abbr>i.e.</abbr>, the element containing everything else) of an MEI document; the most common of these are defined in the MEI.shared module:</p>
                   <p>
                      <specList>
                         <specDesc key="mei"/>
@@ -686,7 +686,7 @@
                         <specDesc key="music"/>
                      </specList>
                   </p>
-                  <p>A document with <gi scheme="MEI">music</gi> as root element provides music notation markup without metadata, and could serve embedding MEI within other kinds of markup, e.g. TEI (see <ptr target="#tei"/>).</p>
+                  <p>A document with <gi scheme="MEI">music</gi> as root element provides music notation markup without metadata, and could serve embedding MEI within other kinds of markup, <abbr>e.g.</abbr>, TEI (see <ptr target="#tei"/>).</p>
                   <p>The below example shows the basic structure of an MEI file with <gi scheme="MEI">music</gi> as root element. Basically this already represents a valid MEI file, although without any contents:</p>
                   <p>
                      <figure>
@@ -778,7 +778,7 @@
                         <specDesc key="group"/>
                      </specList>
                   </p>
-                  <p>While <gi scheme="MEI">body</gi> holds the contents of a single musical text, <gi scheme="MEI">group</gi> allows the textual body to consists of a series of (subordinate) musical texts or other e.g. to represent a collection of independent musical texts which is to be regarded as a single unit for processing or other purposes. It is provided to simplify the encoding of collections, anthologies, and cyclic works. It can also be used to record the potentially complex internal structure of corpora, covered more fully in chapter <ptr target="#corpus"/>. Whether the musical text being encoded should be structured one way or the other is not to be decided here. For example, a collection of songs might be regarded as a single item in some circumstances, or as a number of distinct items in others. In such borderline cases, the encoder must choose whether to treat the text as unitary or composite; each option may have advantages and disadvantages.</p>
+                  <p>While <gi scheme="MEI">body</gi> holds the contents of a single musical text, <gi scheme="MEI">group</gi> allows the textual body to consists of a series of (subordinate) musical texts or other <abbr>e.g.</abbr>, to represent a collection of independent musical texts which is to be regarded as a single unit for processing or other purposes. It is provided to simplify the encoding of collections, anthologies, and cyclic works. It can also be used to record the potentially complex internal structure of corpora, covered more fully in chapter <ptr target="#corpus"/>. Whether the musical text being encoded should be structured one way or the other is not to be decided here. For example, a collection of songs might be regarded as a single item in some circumstances, or as a number of distinct items in others. In such borderline cases, the encoder must choose whether to treat the text as unitary or composite; each option may have advantages and disadvantages.</p>
                   <p>There are several more possible child elements of the <gi scheme="MEI">music</gi> element defined in other modules of MEI, such as <gi scheme="MEI">front</gi> and <gi scheme="MEI">back</gi> elements (defined in MEI.text module, cf. <ptr target="#text"/>), <gi scheme="MEI">performance</gi> (defined in MEI.performance module, cf. <ptr target="#performances"/>), <gi scheme="MEI">genDesc</gi> (defined in MEI.genetic module, cf. <ptr target="#genetic"/>), <gi scheme="MEI">facsimile</gi> (defined in MEI.facsimile module, cf. <ptr target="#facsimiles"/>).</p>
                   <p>Please be aware that the following examples still do not reflect valid MEI files as they are missing some required elements not defined in the MEI.shared module.</p>
                   <p>The basic structure of a unitary musical text:</p>
@@ -1001,7 +1001,7 @@
                         </specList>
                      </p>
                      <p>
-                        <gi scheme="MEI">section</gi> elements are often used as a scoping mechanism for clef signs, key and meter signatures, as well as metronome, tempo, and expression markings. Using <gi scheme="MEI">section</gi> elements can help to minimize the need for backward scanning to establish context when the starting point for access is not at the beginning of the score. <gi scheme="MEI">section</gi> elements may also be used for other user-defined, i.e., analytical or editorial, purposes and may therefore be arbitrarily nested to any desired level.</p>
+                        <gi scheme="MEI">section</gi> elements are often used as a scoping mechanism for clef signs, key and meter signatures, as well as metronome, tempo, and expression markings. Using <gi scheme="MEI">section</gi> elements can help to minimize the need for backward scanning to establish context when the starting point for access is not at the beginning of the score. <gi scheme="MEI">section</gi> elements may also be used for other user-defined, <abbr>i.e.</abbr>, analytical or editorial, purposes and may therefore be arbitrarily nested to any desired level.</p>
                      <p>The <gi scheme="MEI">ending</gi> element shares the same model as the <gi scheme="MEI">section</gi> element. Unlike <gi scheme="MEI">section</gi>, however, it may not be recursively nested.</p>
                      <p>
                         <specList>
@@ -1080,7 +1080,7 @@
                         <specDesc key="att.nNumberLike" atts="n"/>
                      </specList>
                   </p>
-                  <p>The <gi scheme="MEI">pb</gi> element can be used to mark page beginnings. When transcribing an existing document the <att>n</att> attribute should be used to record the page number displayed in the source. It need not be an integer, e.g., 'iv', or 'p17-3'. The logical page number can be calculated by counting previous <gi scheme="MEI">pb</gi> ancestor elements. When used in a score context, a page beginning implies an accompanying system beginning. This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+                  <p>The <gi scheme="MEI">pb</gi> element can be used to mark page beginnings. When transcribing an existing document the <att>n</att> attribute should be used to record the page number displayed in the source. It need not be an integer, <abbr>e.g.</abbr>, 'iv', or 'p17-3'. The logical page number can be calculated by counting previous <gi scheme="MEI">pb</gi> ancestor elements. When used in a score context, a page beginning implies an accompanying system beginning. This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
                   <p>
                      <specList>
                         <specDesc key="pgDesc"/>
@@ -1203,7 +1203,7 @@
                   </div>
                   <div xml:id="sharedBarlines" type="div4">
                      <head>Bar Lines and Custos Signs</head>
-                     <p>Measure separators, i.e., bar lines, and custos signs are also considered to be events.</p>
+                     <p>Measure separators, <abbr>i.e.</abbr>, bar lines, and custos signs are also considered to be events.</p>
                      <p>
                         <specList>
                            <specDesc key="barLine"/>
@@ -1427,7 +1427,7 @@
                   </div>
                   <div xml:id="sharedDynamics" type="div4">
                      <head>Dynamics</head>
-                     <p>Dynamics, or dynamic marks, are terms, abbreviations, and symbols that indicate the specific degrees of volume of a note, phrase, or section of music, e.g., "piano", "forte". Transitions from one volume level to another, e.g., "crescendo", "diminuendo", are also specified through dynamic marks.</p>
+                     <p>Dynamics, or dynamic marks, are terms, abbreviations, and symbols that indicate the specific degrees of volume of a note, phrase, or section of music, <abbr>e.g.</abbr>, "piano", "forte". Transitions from one volume level to another, <abbr>e.g.</abbr>, "crescendo", "diminuendo", are also specified through dynamic marks.</p>
                      <p>
                         <specList>
                            <specDesc key="dynam"/>
@@ -1455,14 +1455,14 @@
                         </specList>
                      </p>
                      <p>MEI provides a generic element for encoding an ornament symbol that is not a mordent, turn, or trill. For those common CMN ornaments, please refer to <ptr target="#cmnOrnaments"/>.</p>
-                     <p>Ornaments can be represented as textual strings (e.g. with a Unicode symbol) or with a user defined symbol (for the latter also see <ptr target="#userSymbols"/>).</p>
+                     <p>Ornaments can be represented as textual strings (<abbr>e.g.</abbr>, with a Unicode symbol) or with a user defined symbol (for the latter also see <ptr target="#userSymbols"/>).</p>
                      <p>Ornamentsmay also be encoded as so called control events (see also: <ptr target="#eventsControlevents"/>). That is, they be can linked via their attributes to other events. It is a semantic error not to specify a starting point attribute with either <att>tstamp</att> or <att>startid</att>.</p>
                   </div>
                </div>
             </div>
             <div xml:id="sharedCommonAttributes" type="div2">
                <head>Common Attributes</head>
-               <p>The following attributes, all of which are defined in separate attribute classes but are also provided through the <ident type="class">att.common</ident> attribute class, are available on nearly all elements in an MEI encoding. They provide e.g. the means to identify, label, or reference elements in MEI-encoded files.</p>
+               <p>The following attributes, all of which are defined in separate attribute classes but are also provided through the <ident type="class">att.common</ident> attribute class, are available on nearly all elements in an MEI encoding. They provide <abbr>e.g.</abbr>, the means to identify, label, or reference elements in MEI-encoded files.</p>
                <div xml:id="sharedXmlAttributes" type="div3">
                   <head>Attributes from the XML-namespace</head>
                   <p>The most general attributes that are very frequently encountered in MEI files are not even native MEI attributes but are coming from the basic definition of XML in the XML-namespace <ref target="http://www.w3.org/XML/1998/namespace">http://www.w3.org/XML/1998/namespace</ref>. MEI redefines some of them in the <ident type="class">att.basic</ident> class.</p>
@@ -1538,7 +1538,7 @@
                         <specDesc key="att.whitespace" atts="xml:space"/>
                      </specList>
                   </p>
-                  <p>While <att>xml:lang</att> attribute may be used to encode the language of an element's contents, the <att>xml:space</att> attribute lets you define the handling of whitespace, i.e. whitespace being important content (<att>xml:space="preserve"</att>) of negligible (<att>xml:space="default"</att>). With the latter also being the default value if no <hi rend="italic">xml:space</hi> attribute is present.</p>
+                  <p>While <att>xml:lang</att> attribute may be used to encode the language of an element's contents, the <att>xml:space</att> attribute lets you define the handling of whitespace, <abbr>i.e.</abbr>, whitespace being important content ("preserve") or negligible ("default"). With the latter also being the default value if no <hi rend="italic">xml:space</hi> attribute is present.</p>
                </div>
                <div xml:id="sharedLabellingAttributes" type="div3">
                   <head>Label Attributes</head> 
@@ -1909,7 +1909,7 @@
                      <p>If relative start coordinates (<att>ho</att>/<att>vo</att> or <att>startho</att>/<att>startvo</att>) are used, the origin of the coordinate system to be used for the start point is the first one found by the following search schema:</p>
                      <list rend="numbered">
                         <item>If <att>startid</att> is present, the origin of the referenced element;</item>
-                        <item>If the element is inside running text (e.g. inside <gi scheme="MEI">tempo</gi>), the end of the preceding text or element;</item>
+                        <item>If the element is inside running text (<abbr>e.g.</abbr>, inside <gi scheme="MEI">tempo</gi>), the end of the preceding text or element;</item>
                         <item>Otherwise, the origin of the containing element.</item>
                      </list>
                      <p>The start point is offset from this origin by the value of the start coordinates (<att>ho</att>/<att>vo</att> or <att>startho</att>/<att>startvo</att>), using staff units.</p>
@@ -1926,14 +1926,14 @@
                         <item>
                            <gi scheme="MEI">symbolDef</gi>: As symbol definitions aren't rendered directly, their coordinate system and origin are considered virtual.</item>
                      </list>
-                     <p>When they are referenced by <gi scheme="MEI">symbol</gi> or <att>altsym</att>, the origin of the context, i.e. the referencing symbol, is used. If neither absolute nor relative coordinates are specified, determining visually suitable start and end points for <att>line</att> and <att>curve</att> attributes is left to the rendering application. A value of 0 is not always assumed for absent relative coordinates. A typical example where a rendering application may not choose the origins of absent relative start and end coordinates to be the start point as well is the line connecting two notes in the above Schumann example.</p>
+                     <p>When they are referenced by <gi scheme="MEI">symbol</gi> or <att>altsym</att>, the origin of the context, <abbr>i.e.</abbr>, the referencing symbol, is used. If neither absolute nor relative coordinates are specified, determining visually suitable start and end points for <att>line</att> and <att>curve</att> attributes is left to the rendering application. A value of 0 is not always assumed for absent relative coordinates. A typical example where a rendering application may not choose the origins of absent relative start and end coordinates to be the start point as well is the line connecting two notes in the above Schumann example.</p>
                   </div>
                   <div xml:id="usersymbolsCurveShape" type="div4">
                      <head>Curve Shape</head>
                      <p>If neither a <att>bezier</att> nor <att>bulge</att> attribute is present, the renderer determines a suitable shape. However, if <att>curvedir</att> is present, the curve must respect the curvature direction specified there.</p>
                      <p>The attributes <att>bezier</att> and <att>bulge</att> define the shape of a curve in two different ways. If both are present, a rendering application may choose either one. They override <att>curvedir</att>.</p>
                      <p>
-                        <att>bezier</att> defines the inner control points of a cubic Bézier curve, i.e., a Bézier curve with two inner control points. The coordinates are given by a space separated list, first x and y offsets for the first control point, then x and y offsets for the second one. The x and y offsets are given in staff units (or inside the context of <gi scheme="MEI">symbolDef</gi> in abstract units). The offsets for the first inner control point are relative to the start point, the ones for the second inner control point are relative to the end point.</p>
+                        <att>bezier</att> defines the inner control points of a cubic Bézier curve, <abbr>i.e.</abbr>, a Bézier curve with two inner control points. The coordinates are given by a space separated list, first x and y offsets for the first control point, then x and y offsets for the second one. The x and y offsets are given in staff units (or inside the context of <gi scheme="MEI">symbolDef</gi> in abstract units). The offsets for the first inner control point are relative to the start point, the ones for the second inner control point are relative to the end point.</p>
                      <p>The <att>bulge</att> attribute allows specification of the curve shape by a number of interpolation points. The interpolation points are given by their distance from the line connecting the start and end point. The distance values are stored as a space separated list.</p>
                      <p>The interpolation points are calculated as follows: If <att>bulge</att> provides <hi rend="italic">n</hi> distance values, the connection line is divided into <hi rend="italic">n+1</hi> subsegments of equal length. The interpolation points are found by drawing a perpendicular line of the respective length at each subsegment joint. Positive distance values are drawn to the left of the connection line (left when traveling from start to end), negative ones to the right.</p>
                      <p>
@@ -1975,7 +1975,7 @@
             <head>Metadata in MEI</head>
             <div xml:id="headerintro" type="div2">
                <head>Introduction</head>
-               <p>Metadata means "data about data", i.e. information about various aspects of an encoding at hand. There are many different types of metadata, which MEI tries to order according to their respective scope or perspective, as described in <ptr target="#headerstructure"/>. MEI's approach to metadata is heavily influenced by other existing standards and models, such as TEI, MARC, and FRBR. It attempts to reflect both current library practice and common scholarly methods, for example in the field of source descriptions (see chapter <ptr target="#msdesc"/>).</p>
+               <p>Metadata means "data about data", <abbr>i.e.</abbr>, information about various aspects of an encoding at hand. There are many different types of metadata, which MEI tries to order according to their respective scope or perspective, as described in <ptr target="#headerstructure"/>. MEI's approach to metadata is heavily influenced by other existing standards and models, such as TEI, MARC, and FRBR. It attempts to reflect both current library practice and common scholarly methods, for example in the field of source descriptions (see chapter <ptr target="#msdesc"/>).</p>
                <p>This chapter thus addresses the description of an encoded item so that the musical text, as well as its sources, encoding, and revisions are all thoroughly documented. Such documentation is necessary for scholars using the texts, for software processing them, and for catalogers in libraries and archives. Together these descriptions and declarations provide an electronic analog to the title page attached to a printed work. They also constitute an equivalent for the content of the code books or introductory manuals customarily accompanying electronic data sets.</p>
             </div>
             <div xml:id="headerstructure" type="div2">
@@ -2055,7 +2055,7 @@
                   <p>The title of a <gi scheme="MEI">work</gi> is given by using the <gi scheme="MEI">title</gi> element directly, as many other child elements of <gi scheme="MEI">titleStmt</gi> are available on work directly.</p>
                </div>
                <div xml:id="headerrespstatement" type="div3">
-                  <head>Responsility Attribution</head>
+                  <head>Responsibility Attribution</head>
                   <p>In scholarly work, attribution of responsibility is crucial. For this purpose, MEI offers the <gi scheme="MEI">respStmt</gi> element, which is available in the following contexts:</p>
                   <p>
                      <specList>
@@ -2256,7 +2256,7 @@
                      </p>
                      <p>For printed texts, the term ‘edition’ applies to the set of all the identical copies of an item produced from one master copy and issued by a particular publishing agency or a group of such agencies. A change in the identity of the distributing body or bodies does not normally constitute a change of edition, while a change in the master copy does.</p>
                      <p>For electronic texts, the notion of a master copy is not entirely appropriate, since they are far more easily copied and modified than printed ones; nonetheless, the term edition may be used for a particular state of a machine-readable text at which substantive changes are made and fixed. Synonymous terms used in these Guidelines are version, level, and release. The words revision and update, by contrast, are used for minor changes to a file which do not amount to a new edition.</p>
-                     <p>No simple rule can specify how substantive changes have to be before they are regarded as producing a new edition, rather than a simple update. The general principle proposed here is that the production of a new edition entails a significant change in the intellectual content of the file, rather than its encoding or appearance. The addition of analytic coding to a text would thus constitute a new edition, while automatic conversion from one coded representation to another would not. Changes relating to the character code or physical storage details, corrections of misspellings, simple changes in the arrangement of the contents and changes in the output format do not normally constitute a new edition, whereas the addition of new information (e.g., annotations, sound or images, links to external data) almost always does.</p>
+                     <p>No simple rule can specify how substantive changes have to be before they are regarded as producing a new edition, rather than a simple update. The general principle proposed here is that the production of a new edition entails a significant change in the intellectual content of the file, rather than its encoding or appearance. The addition of analytic coding to a text would thus constitute a new edition, while automatic conversion from one coded representation to another would not. Changes relating to the character code or physical storage details, corrections of misspellings, simple changes in the arrangement of the contents and changes in the output format do not normally constitute a new edition, whereas the addition of new information (<abbr>e.g.</abbr>, annotations, sound or images, links to external data) almost always does.</p>
                      <p>Clearly, there will always be borderline cases and the matter is somewhat arbitrary. The simplest rule is: if you think that your file is a new edition, then call it such. An edition statement is optional for the first release of a computer file; it is mandatory for each later release, though this requirement cannot be enforced.</p>
                      <p>Note that all changes in a file, whether or not they are regarded as constituting a new edition or simply a revision, should be independently noted in the revision description section of the file header (see section <ptr target="#headerRevisionDescription"/>).</p>
                      <p>The edition element should contain phrases describing the edition or version, including the word 'edition', 'version', or an equivalent term, together with a number or date, or terms indicating difference from other editions such as 'new edition', 'revised edition', etc. Any dates that occur within the edition statement should be marked with the <gi scheme="MEI">date</gi> element. The <att>n</att> attribute of the edition element may be used as elsewhere to supply any formal identification (such as a version number) for the edition.</p>
@@ -2298,7 +2298,7 @@
                      <p>This is particularly true of information about file-type although library-oriented rules for cataloging often distinguish two types of computer file: ‘data’ and ‘programs’. This distinction is quite difficult to draw in some cases, for example, hypermedia or texts with built-in search and retrieval software.</p>
                      <p>Although it is equally system-dependent, some measure of the size of the computer file may be of use for cataloging and other practical purposes. Because the measurement and expression of file size is fraught with difficulties, only very general recommendations are possible; the element <gi scheme="MEI">extent</gi> should contain a phrase indicating the size or approximate size of the computer file in one of the following ways:</p>
                      <list rend="bulleted">
-                        <item>in bytes of a specified length (e.g. ‘4000 bytes’)</item>
+                        <item>in bytes of a specified length (<abbr>e.g.</abbr>, ‘4000 bytes’)</item>
                         <item>as falling within a range of values, for example:</item>
                         <item>less than 1 Mb</item>
                         <item>between 1 Mb and 5 Mb</item>
@@ -2413,7 +2413,7 @@
 </egXML>
                         </figure>
                      </p>
-                     <p>Give any other useful information (e.g., dates of collection of data) in an annotation within the notes statement, which is described below.</p>
+                     <p>Give any other useful information (<abbr>e.g.</abbr>, dates of collection of data) in an annotation within the notes statement, which is described below.</p>
                      <p>Here, as in the description of intellectual responsibility described above, the <gi scheme="MEI">respStmt</gi> element may be used to contain all statements of responsibility regarding publication and distribution when uniformity is desired regardless of the role of participants in the publication process:</p>
                      <p>
                         <figure>
@@ -2531,16 +2531,16 @@
                      <p>Some information found in the notes area in conventional bibliography has been assigned specific elements in these Guidelines; in particular the following items should be tagged as indicated, rather than as general notes:</p>
                      <list rend="bulleted">
                         <item>the nature, scope, artistic form, or purpose of the work; also the genre or other intellectual category to which it may belong. These should be formally described within the <gi scheme="MEI">workList</gi> element (section <ptr target="#headerWorkDescription"/>).</item>
-                        <item>bibliographic details relating to the source or sources of an electronic text: e.g., ‘Transcribed from a facsimile of the 1743 publication’. These should be formally described in the <gi scheme="MEI">sourceDesc</gi> element (section <ptr target="#headerSourceDescription"/>).</item>
+                        <item>bibliographic details relating to the source or sources of an electronic text: <abbr>e.g.</abbr>, ‘Transcribed from a facsimile of the 1743 publication’. These should be formally described in the <gi scheme="MEI">sourceDesc</gi> element (section <ptr target="#headerSourceDescription"/>).</item>
                         <item>further information relating to publication, distribution, or release of the text, including sources from which the text may be obtained, any restrictions on its use or formal terms on its availability. These should be placed in the appropriate division of the <gi scheme="MEI">pubStmt</gi> element (section <ptr target="#headerPublicationDistribution"/>).</item>
                         <item>publicly documented numbers associated <hi rend="italic">with the file</hi> should be placed in an <gi scheme="MEI">altId</gi> element within the <gi scheme="MEI">meiHead</gi> element. International Standard Serial Numbers (ISSN), International Standard Book Numbers (ISBN), and other internationally agreed upon standard numbers that uniquely identify an item, should be treated in the same way, rather than as specialized bibliographic notes. As described elsewhere, identifiers <hi rend="italic">for sources of the file</hi> should be recorded within the <gi scheme="MEI">sourceDesc</gi>.</item>
                      </list>
                      <p>Nevertheless, the <gi scheme="MEI">notesStmt</gi> element may be used to record potentially significant details about the file and its features, for example:</p>
                      <list rend="bulleted">
-                        <item>dates, when they are relevant to the content or condition of the computer file: e.g. ‘manual dated 2010’, ‘file validated Apr 2011’</item>
-                        <item>names of persons or bodies connected with the technical production, administration, or consulting functions of the effort which produced the file, if these are not named in statements of responsibility in the title or edition statements of the file description: e.g. ‘Historical commentary provided by members of the Big Symphony Orchestra’</item>
-                        <item>availability of the file in an additional medium or information not already recorded about the availability of documentation: e.g. ‘User manual is loose-leaf in eleven paginated sections’</item>
-                        <item>language of work and abstract, if not encoded in the <gi scheme="MEI">langUsage</gi> element, e.g. ‘Text in English with stage directions in French and German’</item>
+                        <item>dates, when they are relevant to the content or condition of the computer file: <abbr>e.g.</abbr>, ‘manual dated 2010’, ‘file validated Apr 2011’</item>
+                        <item>names of persons or bodies connected with the technical production, administration, or consulting functions of the effort which produced the file, if these are not named in statements of responsibility in the title or edition statements of the file description: <abbr>e.g.</abbr>, ‘Historical commentary provided by members of the Big Symphony Orchestra’</item>
+                        <item>availability of the file in an additional medium or information not already recorded about the availability of documentation: <abbr>e.g.</abbr>, ‘User manual is loose-leaf in eleven paginated sections’</item>
+                        <item>language of work and abstract, if not encoded in the <gi scheme="MEI">langUsage</gi> element, <abbr>e.g.</abbr>, ‘Text in English with stage directions in French and German’</item>
                      </list>
                      <p>Each such item of information may be tagged using the general-purpose <gi scheme="MEI">annot</gi> element. Groups of annotations are contained within the <gi scheme="MEI">notesStmt</gi> element, as in the following example:</p>
                      <p>
@@ -2870,7 +2870,7 @@
             </div>
             <div xml:id="FRBR" type="div2">
                <head>Functional Requirements for Bibliographic Records (FRBR)</head>
-               <p>MEI header information may refer to different levels of description of the encoded work: Some information may apply the work in all its various forms and realizations, e.g., the name of its composer. Other information may describe a certain version of the work, or a source such as the printed first edition, or only a single copy of that source. Core MEI limits the header information to two such levels of description: work and source, respectively.</p>
+               <p>MEI header information may refer to different levels of description of the encoded work: Some information may apply the work in all its various forms and realizations, <abbr>e.g.</abbr>, the name of its composer. Other information may describe a certain version of the work, or a source such as the printed first edition, or only a single copy of that source. Core MEI limits the header information to two such levels of description: work and source, respectively.</p>
                <p>However, when the FRBR module is available more detailed descriptions are possible. With certain limitations, mainly due to the musical nature of the works encoded in MEI, the FRBR module adapts the <ref target="http://www.ifla.org/publications/functional-requirements-for-bibliographic-records">Functional Requirements for Bibliographic Records (FRBR)</ref> as recommended by the International Federation of Library Associations and Institutions (IFLA).</p>
                <p>The IFLA’s FRBR model distinguishes four levels of abstraction, or entities:</p>
                <list type="gloss">
@@ -2881,7 +2881,7 @@
                   <label>Manifestation</label>
                   <item>A manifestation is defined as "the physical embodiment of an expression of a work", including, for instance, manuscripts, books, sound recordings, films, video recordings, CD-ROMs, multimedia kits, etc. The manifestation represents all the physical objects that bear the same characteristics, with respect to both intellectual content and physical form.</item>
                   <label>Item</label>
-                  <item>A single exemplar of a manifestation is called an item, e.g., a specific copy of a printed score. With manuscripts, item and manifestation levels are nearly identical. A manuscript may be regarded as a manifestation having only one item.</item>
+                  <item>A single exemplar of a manifestation is called an item, <abbr>e.g.</abbr>, a specific copy of a printed score. With manuscripts, item and manifestation levels are nearly identical. A manuscript may be regarded as a manifestation having only one item.</item>
                </list>
                <div xml:id="FRBRentities" type="div3">
                   <head>FRBR Entities in MEI</head>
@@ -3164,7 +3164,7 @@
 </egXML>
                      </figure>
                   </p>
-                  <p>Within the <gi scheme="MEI">componentList</gi> element, the order of child elements implicitly describes a hasSuccessor/isSuccessorOf relationship between components, i.e. it defines a certain sequence such as the movements of a work. In other cases, <gi scheme="MEI">relation</gi> elements may be needed to explicitly encode relationships not otherwise defined by encoding order or hierarchy. For instance, the hasReproduction/isReproductionOf relationship may be used to indicate that one source is a reprint of another.</p>
+                  <p>Within the <gi scheme="MEI">componentList</gi> element, the order of child elements implicitly describes a hasSuccessor/isSuccessorOf relationship between components, <abbr>i.e.</abbr>, it defines a certain sequence such as the movements of a work. In other cases, <gi scheme="MEI">relation</gi> elements may be needed to explicitly encode relationships not otherwise defined by encoding order or hierarchy. For instance, the hasReproduction/isReproductionOf relationship may be used to indicate that one source is a reprint of another.</p>
                   <p>
                      <figure>
                         <head/>
@@ -4174,7 +4174,7 @@
                            <specDesc key="cutout" atts="removed.by"/>
                         </specList>
                      </p>
-                     <p>The dimensions (<att>width</att>, <att>height</att>) of the parent element (e.g. <gi scheme="MEI">folium</gi>) indicate the size of the bounding box of the remaining part of the page. That is, if the complete lower half of a page has been cut, the <att>width</att> and <att>height</att> attributes describe the remaining upper half. If, in contrast, only the lower right quarter of the page has been cut, these attributes still indicate the size of the full page (assuming that the removed section was a regular rectangle).The dimensions (<att>width</att>, <att>heigh</att>) on cutout itself are only to be used when there is a "gap" in the manuscript that allows to specify the dimensions of that missing part. In this case, the bounding box dimensions are given, together with <att>x</att> and <att>y</att> to indicate the upper left point on the original page. If, however, the removed section is available by itself, then a corresponding <gi scheme="MEI">folium</gi> (or <gi scheme="MEI">bifolium</gi>) should be placed inside the cutout element, and should provide it's own dimensions using <att>width</att> and <att>height</att> there. In this case, <att>width</att> and <att>height</att> on cutout is expendable.</p>
+                     <p>The dimensions (<att>width</att>, <att>height</att>) of the parent element (<abbr>e.g.</abbr>, <gi scheme="MEI">folium</gi>) indicate the size of the bounding box of the remaining part of the page. That is, if the complete lower half of a page has been cut, the <att>width</att> and <att>height</att> attributes describe the remaining upper half. If, in contrast, only the lower right quarter of the page has been cut, these attributes still indicate the size of the full page (assuming that the removed section was a regular rectangle).The dimensions (<att>width</att>, <att>heigh</att>) on cutout itself are only to be used when there is a "gap" in the manuscript that allows to specify the dimensions of that missing part. In this case, the bounding box dimensions are given, together with <att>x</att> and <att>y</att> to indicate the upper left point on the original page. If, however, the removed section is available by itself, then a corresponding <gi scheme="MEI">folium</gi> (or <gi scheme="MEI">bifolium</gi>) should be placed inside the cutout element, and should provide it's own dimensions using <att>width</att> and <att>height</att> there. In this case, <att>width</att> and <att>height</att> on cutout is expendable.</p>
                      <p>The genetic aspect of applying patches or cutting out parts of a page is described in <ptr target="#genetic"/>.</p>
                   </div>
                </div>
@@ -4336,7 +4336,7 @@
                         <specDesc key="att.bibl" atts="analog"/>
                      </specList>
                   </p>
-                  <p>The encoding system to which fields are mapped must be specified in <att>analog</att>. When possible, subfields as well as fields should be specified, e.g., subfields within MARC fields.</p>
+                  <p>The encoding system to which fields are mapped must be specified in <att>analog</att>. When possible, subfields as well as fields should be specified, <abbr>e.g.</abbr>, subfields within MARC fields.</p>
                </div>
                <div xml:id="corpus" type="div3">
                   <head>Musical Corpora</head>
@@ -4465,7 +4465,7 @@
             <p>The module described in this chapter offers the means to describe music in so-called ‘Common Music Notation’ (CMN, sometimes referred to as ‘Common Western Music Notation’). For this purpose, it provides a number of special elements and adds several attribute classes to elements from the <ptr target="#shared"/> module.</p>
             <div xml:id="cmnintro" type="div2">
                <head>Introduction</head>
-               <p>This chapter is supposed to frame the repertoire target by the module, i.e. what is Common Music Notation?</p>
+               <p>This chapter is supposed to frame the repertoire target by the module, <abbr>i.e.</abbr>, what is Common Music Notation?</p>
             </div>
             <div xml:id="cmnBasics" type="div2">
                <head>Basic Elements of CMN</head>
@@ -4558,7 +4558,7 @@
                         <specDesc key="layerDef"/>
                      </specList>
                   </p>
-                  <p>A <gi scheme="MEI">scoreDef</gi> element is used to specify the common parameters of a score, e.g., key and meter. The most important attributes for this purpose are:</p>
+                  <p>A <gi scheme="MEI">scoreDef</gi> element is used to specify the common parameters of a score, <abbr>e.g.</abbr>, key and meter. The most important attributes for this purpose are:</p>
                   <p>
                      <specList>
                         <specDesc key="att.meterSigDefault.log" atts="meter.count meter.unit"/>
@@ -4752,7 +4752,7 @@
                            </figure>
                         </p>
                         <p>Because these attributes may not be required in all situations (such as <att>dur</att> for the notes of a chord), processing software should anticipate retrieving the information that would have been provided by missing attributes from a preceding note or <gi scheme="MEI">chord</gi> parent in the same <gi scheme="MEI">layer</gi>. Only information from <att>pname</att>, <att>oct</att> and <att>dur</att> attributes can be gathered in this fashion. No other attributes can be treated this way.</p>
-                        <p>The default values for <att>pname</att> and <att>oct</att> conform to the Acoustical Society of America representation for pitch name; that is, the letters A - G, albeit in lower case, and the numbers 0 - 9.</p>
+                        <p>The default values for <att>pname</att> and <att>oct</att> conform to the <ref target="https://en.wikipedia.org/wiki/Scientific_pitch_notation">Acoustical Society of America representation for pitch name</ref>; that is, the letters A - G, albeit in lower case, and the numbers 0 - 9. The value for <att>oct</att> changes between B and C.</p>
                         <p>The usual CMN-specific values for <att>dur</att> are:</p>
                         <list type="gloss">
                            <label>1</label>
@@ -4834,7 +4834,7 @@
                      <p>Often we find multiple notes that are not sounding in succession but sounding simultaneously. These chords in MEI are basically defined as a container of notes that are stemmed together.</p>
                      <div xml:id="cmnChordsBasic" type="div5">
                         <head>Chords in CMN</head>
-                        <p>A chord is any set of pitches consisting of multiple notes that are to be played simultaneously and are usually grouped together visually with a single stem. In MEI the <gi scheme="MEI">chord</gi> element functions as a container for all participating notes. Also it features many attributes that are allowed for notes, e.g. usually all notes in a chord have a common duration, so it can be applied to the whole chord within it's <att>dur</att> attribute.</p>
+                        <p>A chord is any set of pitches consisting of multiple notes that are to be played simultaneously and are usually grouped together visually with a single stem. In MEI the <gi scheme="MEI">chord</gi> element functions as a container for all participating notes. Also it features many attributes that are allowed for notes, <abbr>e.g.</abbr>, usually all notes in a chord have a common duration, so it can be applied to the whole chord within it's <att>dur</att> attribute.</p>
                         <p>Some notational features like articulations or lyrics are connected to a whole chord instead of a single note. Therefore elements like <gi scheme="MEI">artic</gi> or <gi scheme="MEI">verse</gi> are also allowed as children of <gi scheme="MEI">chord</gi> elements. In the follwing example from Sergei Rachmaninoff's <hi rend="italic">Prelude in C-sharp minor</hi>, Op. 3, No. 2 all chords carry an accent.</p>
                         <p>
                            <figure>
@@ -5338,7 +5338,7 @@
                      <label>beam.rests</label>
                      <item>Indicates whether automatically-drawn beams should include rests shorter than a quarter note duration.</item>
                   </list>
-                  <p>The <att>beam.group</att> attribute can be used to set a default beaming pattern to be used when no beaming is indicated at the layer level. It must contain a comma-separated list of time values that add up to a measure in the current meter, e.g., '4,4,4,4' in 4/4 time indicates that each quarter note worth of shorter notes should be beamed together. Parentheses can be used to indicate sub-groupings of secondary beams. For example, '(4.,4.,4.)' in 9/8 meter indicates one primary beam per measure with secondary beams broken at each dotted quarter duration, while '(4,4),(4,4)' in 4/4 will result in a measure of 16th notes being rendered with a primary beam covering all the notes and secondary beams for each group of four 16th notes.</p>
+                  <p>The <att>beam.group</att> attribute can be used to set a default beaming pattern to be used when no beaming is indicated at the layer level. It must contain a comma-separated list of time values that add up to a measure in the current meter, <abbr>e.g.</abbr>, '4,4,4,4' in 4/4 time indicates that each quarter note worth of shorter notes should be beamed together. Parentheses can be used to indicate sub-groupings of secondary beams. For example, '(4.,4.,4.)' in 9/8 meter indicates one primary beam per measure with secondary beams broken at each dotted quarter duration, while '(4,4),(4,4)' in 4/4 will result in a measure of 16th notes being rendered with a primary beam covering all the notes and secondary beams for each group of four 16th notes.</p>
                   <p>The <att>beam.group</att> attribute is available on <gi scheme="MEI">scoreDef</gi>, <gi scheme="MEI">staffDef</gi>, and <gi scheme="MEI">layerDef</gi> elements, making it possible to set different beaming patterns for each of these. Also, the beaming pattern can be changed anywhere score parameters may be changed, for example, at the start of sections. This beaming "directive" can be overridden by using <gi scheme="MEI">beam</gi>, <gi scheme="MEI">beamSpan</gi>, or <att>beam</att> attributes as described above. If none of these beaming specifications is used, then no beaming is implied. Default beaming can be explicitly 'turned off' by setting <att>beam.group</att> to an empty string.</p>
                </div>
                <div xml:id="cmnSlurTies" type="div3">
@@ -5758,7 +5758,7 @@
 </egXML>
                      </figure>
                   </p>
-                  <p>The duration of the entire tuplet may be encoded using the usual ‘power of 2’ values, e.g., 1, 2, 4, etc., in the <att>dur</att> attribute if necessary.</p>
+                  <p>The duration of the entire tuplet may be encoded using the usual ‘power of 2’ values, <abbr>e.g.</abbr>, 1, 2, 4, etc., in the <att>dur</att> attribute if necessary.</p>
                   <p>
                      <figure>
                         <head/>
@@ -5774,9 +5774,9 @@
                      </figure>
                   </p>
                   <p>Tuplets are often highlighted using brackets above or below the affected notes. The presence and position of these brackets can be encoded using the <att>bracket.place</att> (above / below) and <att>bracket.visible</att> (true / false) attributes.</p>
-                  <p>Usually, however, tuplets are rendered with a bracket (<att>bracket.visible</att>="true") and a single number (<att>num.format</att>="count" and <att>num.visible</att>="true"), as seen in the example above. However, the number-to-numbase ratio may be provided in addition to, or in some cases as a replacement for, the bracket. The <att>num.format</att> attribute indicates whether a plain number (the value of <att>num</att>) or a ratio (comprised of <att>num</att> and <att>numbase</att>, e.g., "3:2") should be displayed and <att>num.visible</att> indicates the general presence of such a number.</p>
+                  <p>Usually, however, tuplets are rendered with a bracket (<att>bracket.visible</att>="true") and a single number (<att>num.format</att>="count" and <att>num.visible</att>="true"), as seen in the example above. However, the number-to-numbase ratio may be provided in addition to, or in some cases as a replacement for, the bracket. The <att>num.format</att> attribute indicates whether a plain number (the value of <att>num</att>) or a ratio (comprised of <att>num</att> and <att>numbase</att>, <abbr>e.g.</abbr>, "3:2") should be displayed and <att>num.visible</att> indicates the general presence of such a number.</p>
                   <p>Further visual control comes with the <att>num.place</att> and <att>bracket.place</att> attributes, that allow specific placement of the number and the bracket "above" or "below" the staff.</p>
-                  <p>In addition to <gi scheme="MEI">note</gi> elements, <gi scheme="MEI">tuplet</gi> may contain other elements, such as <gi scheme="MEI">rest</gi> or <gi scheme="MEI">space</gi>, to match the content of a source document or an intended rendering. In particular, the <gi scheme="MEI">beam</gi> element is allowed so that custom beaming may be indicated, e.g., a septuplet may be divided into a group of three plus a group of four notes.</p>
+                  <p>In addition to <gi scheme="MEI">note</gi> elements, <gi scheme="MEI">tuplet</gi> may contain other elements, such as <gi scheme="MEI">rest</gi> or <gi scheme="MEI">space</gi>, to match the content of a source document or an intended rendering. In particular, the <gi scheme="MEI">beam</gi> element is allowed so that custom beaming may be indicated, <abbr>e.g.</abbr>, a septuplet may be divided into a group of three plus a group of four notes.</p>
                   <p>The <gi scheme="MEI">tuplet</gi> element may also be used for repetition of the same pitch; that is, a single note or chord may be the only content of the tuplet. In some cases, optical music recognition software may treat these instances as bowed tremolandi due to the knowledge of the complete semantics of the notation at the time of recognition. However, marking these as tuplets is the recommended practice.</p>
                   <p>In some situations, a tuplet is made up of events in different measures. As this raises the issue of non-concurrent hierarchies, it is not possible to encode such situations with the <gi scheme="MEI">tuplet</gi> element described above. Therefore, MEI offers the <gi scheme="MEI">tupletSpan</gi> element, which is member of the <ident type="class">model.controlEventLike</ident> class. It is nested inside of <gi scheme="MEI">measure</gi>, following all the measure's <gi scheme="MEI">staff</gi> children. It uses the same attributes as <gi scheme="MEI">tuplet</gi> to describe tuplets, but instead of nesting all affected notes inside itself, it references the <att>xml:id</att> values of all affected notes in its <att>plist</att> attribute and the initial and terminal notes of the tuplet using <att>startid</att> and <att>endid</att> attributes. This configuration allows tuplets to cross beams or measure boundaries. The following example demonstrates a typical example of such hierarchy-crossing tuplets:</p>
                   <p>
@@ -5927,7 +5927,7 @@
 </egXML>
                         </figure>
                      </p>
-                     <p>The <att>unitdur</att> attribute value indicates the exact note values in an aural rendition of a measured tremolo, i.e., quarters, 8ths, and so on. The <att>stem.mod</att> attribute must also be explicity set on the child <gi scheme="MEI">note</gi> or <gi scheme="MEI">chord</gi> element for a complete visual representation. The example above shows a short excerpt from the second movement of <ref target="https://en.wikipedia.org/wiki/Franz_Schubert">Franz Schubert's</ref>
+                     <p>The <att>unitdur</att> attribute value indicates the exact note values in an aural rendition of a measured tremolo, <abbr>i.e.</abbr>, quarters, 8ths, and so on. The <att>stem.mod</att> attribute must also be explicity set on the child <gi scheme="MEI">note</gi> or <gi scheme="MEI">chord</gi> element for a complete visual representation. The example above shows a short excerpt from the second movement of <ref target="https://en.wikipedia.org/wiki/Franz_Schubert">Franz Schubert's</ref>
                         <ref target="https://en.wikipedia.org/wiki/String_Quartet_No._15_(Schubert">String Quartet in G major, D. 887</ref>).</p>
                      <p>However, the number of slashes present on the note may disagree with the number of slashes that should be present according to the <att>unitdur</att> attribute, especially in music manuscripts.</p>
                      <p>
@@ -5973,7 +5973,7 @@
 </egXML>
                         </figure>
                      </p>
-                     <p>In the case of alternating pitches, MEI offers the <gi scheme="MEI">fTrem</gi> (fingered tremolo) element. While it mostly behaves the same as <gi scheme="MEI">bTrem</gi>, a fingered tremolo requires exactly two child elements, either being a <gi scheme="MEI">note</gi> or <gi scheme="MEI">chord</gi>. The <att>unitdur</att> attribute value indicates the exact note values in an aural rendition of a measured tremolo, i.e., 4ths, 8ths, 16ths, etc. The number of beams present in the source is captured by the <att>beams</att> attribute.</p>
+                     <p>In the case of alternating pitches, MEI offers the <gi scheme="MEI">fTrem</gi> (fingered tremolo) element. While it mostly behaves the same as <gi scheme="MEI">bTrem</gi>, a fingered tremolo requires exactly two child elements, either being a <gi scheme="MEI">note</gi> or <gi scheme="MEI">chord</gi>. The <att>unitdur</att> attribute value indicates the exact note values in an aural rendition of a measured tremolo, <abbr>i.e.</abbr>, 4ths, 8ths, 16ths, etc. The number of beams present in the source is captured by the <att>beams</att> attribute.</p>
                      <p>
                         <figure>
                            <head>Fingered tremolos</head>
@@ -7050,7 +7050,7 @@
                <div xml:id="cmnOrnamentsOther" type="div3">
                   <head>Other Ornaments</head>
                   <p>CMN ornaments that are not mordents, trills, or turns can be encoded with a generic <gi scheme="MEI">ornam</gi>.</p>
-                  <p>This element allows the encoder to represent ornaments as textual strings (e.g. with a Unicode symbol) or with a user defined symbol. Chromatic auxiliaries can be represented with <att>accidlower</att> and <att>accidupper</att>. The <gi scheme="MEI">ornam</gi> element can also be a control element. That is, it can be linked via its attributes to other events. The starting point of the directive may be indicated by either a tstamp, tstamp.ges, tstamp.real or startid attribute, while the ending point may be recorded by either a tstamp2, dur, dur.ges or endid attribute. It is a semantic error not to specify a starting point attribute.</p>
+                  <p>This element allows the encoder to represent ornaments as textual strings (<abbr>e.g.</abbr>, with a Unicode symbol) or with a user defined symbol. Chromatic auxiliaries can be represented with <att>accidlower</att> and <att>accidupper</att>. The <gi scheme="MEI">ornam</gi> element can also be a control element. That is, it can be linked via its attributes to other events. The starting point of the directive may be indicated by either a tstamp, tstamp.ges, tstamp.real or startid attribute, while the ending point may be recorded by either a tstamp2, dur, dur.ges or endid attribute. It is a semantic error not to specify a starting point attribute.</p>
                   <p>For example, Johann Sebastian Bach used non-standard ornaments in the <hi rend="italic">Klavierbüchlein für Wilhelm Friedemann Bach</hi>:</p>
                   <p>
                      <figure>
@@ -7647,7 +7647,7 @@
                   </p>
                   <p>
                      <hi rend="italic">Note:</hi> In <hi rend="italic">Ars Antiqua</hi>, only the <hi rend="italic">longa</hi> could be "perfecta" / "imperfecta" and the <hi rend="italic">brevis</hi> could have a regular value ("recta") or be "altera". In the <hi rend="italic">Ars nova</hi>, principles of imperfection and alteration were extended into the other note levels (<hi rend="italic">brevis</hi>-<hi rend="italic">semibrevis</hi> and <hi rend="italic">semibrevis</hi>-<hi rend="italic">minima</hi>). This means that the <hi rend="italic">breves</hi> in <hi rend="italic">Ars antiqua</hi> do not have a "perfecta" / "imperfecta" quality, and this is why there is no <att>dur.quality</att> attribute for the <hi rend="italic">breves</hi> in the previous example. However, the <hi rend="italic">brevis</hi> can have a ternary division (indicated by <hi rend="italic">tempus=”3”</hi>), being divided either into three (equal) <hi rend="italic">minor semibreves</hi> or into a <hi rend="italic">minor</hi>-<hi rend="italic">maior</hi> pair of <hi rend="italic">semibreves</hi>. The encoding also allows for the possibility of encoding a binary division of the breve in <hi rend="italic">Ars antiqua</hi> notations: the indication <hi rend="italic">tempus=”2”</hi> indicates the breve is divided into two equal <hi rend="italic">semibreves</hi>. This is why in this example with <hi rend="italic">tempus="3"</hi>, the <hi rend="italic">semibreves</hi> do have a <att>dur.quality</att> attribute (with values "minor" or "maior").</p>
-                  <p>An alternative encoding---removing the <att>dur.quality</att> attributes for notes which lengths are not modified from their default values (i.e., the perfect long and the minor <hi rend="italic">semibreves</hi>)---would be: <figure>
+                  <p>An alternative encoding---removing the <att>dur.quality</att> attributes for notes which lengths are not modified from their default values (<abbr>i.e.</abbr>, the perfect long and the minor <hi rend="italic">semibreves</hi>)---would be: <figure>
                         <head/>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;!--With @modusminor and @tempus equal to "3" in the &lt;staffDef&gt; element--&gt;&lt;layer&gt;
    &lt;note dur="longa"/&gt;
@@ -7663,11 +7663,11 @@
 </egXML>
                      </figure>
                   </p>
-                  <p>The conjunct use of the <att>dur</att> and <att>dur.quality</att> attributes is generally enough to encode the duration of a note—and, as indicated before, one could even remove <att>dur.quality</att> when its value is in agreement with the mensuration. However, there are cases (e.g., partial imperfection) where the values of <att>dur.quality</att> are not enough to provide the note's duration.</p>
+                  <p>The conjunct use of the <att>dur</att> and <att>dur.quality</att> attributes is generally enough to encode the duration of a note—and, as indicated before, one could even remove <att>dur.quality</att> when its value is in agreement with the mensuration. However, there are cases (<abbr>e.g.</abbr>, partial imperfection) where the values of <att>dur.quality</att> are not enough to provide the note's duration.</p>
                </div>
                <div xml:id="partialImp" type="div3">
                   <head>Partial Imperfection</head>
-                  <p>In opposition to regular imperfection, which is caused by a note of the next smaller degree (e.g., a perfect <hi rend="italic">brevis</hi> imperfected by a following/preceding <hi rend="italic">semibrevis</hi>), partial imperfection is caused by a note of two or even three orders apart. As an example, consider an imperfect <hi rend="italic">longa</hi> made up of two perfect <hi rend="italic">breves</hi>. This <hi rend="italic">longa</hi> can be "partially imperfected" by a following/preceding <hi rend="italic">semibrevis</hi>. This <hi rend="italic">semibrevis</hi> causes part of the <hi rend="italic">longa</hi>—one of its perfect <hi rend="italic">breves</hi>—to be imperfected, taking away one-third of one of its two halves. In this case, the <hi rend="italic">longa</hi>'s value changes from 6 <hi rend="italic">semibreves</hi> (two perfect <hi rend="italic">breves</hi>) into 5 <hi rend="italic">semibreves</hi>. Partial imperfection is not supported by the <att>dur.quality</att> attribute—because there can be many cases of partial imperfection, as will be seen in the following examples. To encode a partial imperfection, the <att>num</att> and <att>numbase</att> pair of attributes are used instead. Given the change in the <hi rend="italic">longa</hi>'s value from 6 <hi rend="italic">semibreves</hi> to 5 <hi rend="italic">semibreves</hi>, the corresponding attributes to encode this particular case of partial imperfection would be <hi rend="italic">num="6"</hi> and <hi rend="italic">numbase="5"</hi> as shown below in the code snippet and its rendering.</p>
+                  <p>In opposition to regular imperfection, which is caused by a note of the next smaller degree (<abbr>e.g.</abbr>, a perfect <hi rend="italic">brevis</hi> imperfected by a following/preceding <hi rend="italic">semibrevis</hi>), partial imperfection is caused by a note of two or even three orders apart. As an example, consider an imperfect <hi rend="italic">longa</hi> made up of two perfect <hi rend="italic">breves</hi>. This <hi rend="italic">longa</hi> can be "partially imperfected" by a following/preceding <hi rend="italic">semibrevis</hi>. This <hi rend="italic">semibrevis</hi> causes part of the <hi rend="italic">longa</hi>—one of its perfect <hi rend="italic">breves</hi>—to be imperfected, taking away one-third of one of its two halves. In this case, the <hi rend="italic">longa</hi>'s value changes from 6 <hi rend="italic">semibreves</hi> (two perfect <hi rend="italic">breves</hi>) into 5 <hi rend="italic">semibreves</hi>. Partial imperfection is not supported by the <att>dur.quality</att> attribute—because there can be many cases of partial imperfection, as will be seen in the following examples. To encode a partial imperfection, the <att>num</att> and <att>numbase</att> pair of attributes are used instead. Given the change in the <hi rend="italic">longa</hi>'s value from 6 <hi rend="italic">semibreves</hi> to 5 <hi rend="italic">semibreves</hi>, the corresponding attributes to encode this particular case of partial imperfection would be <hi rend="italic">num="6"</hi> and <hi rend="italic">numbase="5"</hi> as shown below in the code snippet and its rendering.</p>
                   <p>
                      <figure>
                         <head/>
@@ -8453,7 +8453,7 @@
             </div>
             <div xml:id="neumesNotation" type="div2">
                <head>Neume Notation and MEI</head>
-               <p>There are four main challenges in encoding Western European early music. The first relates to the fact that early notation was just a mnemonic aid that helped the readers to recall the music they already knew by heart and, as such, it conveys only partial musical information (Bain, Behrendt, &amp; Helsen 2014; Helsen, Behrendt, &amp; Bain 2017). Indeed, it is only with the invention of staff lines in the eleventh century that the system of musical transmission gradually changed, relying more on the written record rather than on orality. The second challenge refers to the existence of different regional styles of early notation; early-music manuscripts display a great graphical variety of musical signs, which include both neumes and other notational elements conveying further musical information (e.g., significative letters, Old Hispanic ticks, etc.). Thirdly, some of those regional notational styles occasionally share graphically similar shapes; these similar shapes within the different notational styles are understood by modern scholars to represent the same, a similar, or even a _different_ musical meaning. Finally, while on occasion the neume shapes appear to mirror graphically the musical characteristics of the sound being represented (e.g., pen-stroke going up = rising melody), in many instances it is generally understood that the meaning attached to the neumes (or the other notational elements) may not be so straight-forward, but instead was ruled by conventions shared by the people who knew orally the musical repertory being fixed in written form by means of notation.</p>
+               <p>There are four main challenges in encoding Western European early music. The first relates to the fact that early notation was just a mnemonic aid that helped the readers to recall the music they already knew by heart and, as such, it conveys only partial musical information (Bain, Behrendt, &amp; Helsen 2014; Helsen, Behrendt, &amp; Bain 2017). Indeed, it is only with the invention of staff lines in the eleventh century that the system of musical transmission gradually changed, relying more on the written record rather than on orality. The second challenge refers to the existence of different regional styles of early notation; early-music manuscripts display a great graphical variety of musical signs, which include both neumes and other notational elements conveying further musical information (<abbr>e.g.</abbr>, significative letters, Old Hispanic ticks, etc.). Thirdly, some of those regional notational styles occasionally share graphically similar shapes; these similar shapes within the different notational styles are understood by modern scholars to represent the same, a similar, or even a _different_ musical meaning. Finally, while on occasion the neume shapes appear to mirror graphically the musical characteristics of the sound being represented (<abbr>e.g.</abbr>, pen-stroke going up = rising melody), in many instances it is generally understood that the meaning attached to the neumes (or the other notational elements) may not be so straight-forward, but instead was ruled by conventions shared by the people who knew orally the musical repertory being fixed in written form by means of notation.</p>
                <p>_What do these challenges entail for modern encoders?_</p>
                <p>Firstly, sometimes we have to deal with written signs whose meaning is obscure to us and, while we can infer the meaning of some of those signs from the study of later manuscripts with the same melodies and a more precise notation, in other cases we need to turn to music palaeographers who examine the recurrence of those written signs and the context where they were used. By analysing scribal hands in particular manuscripts, palaeographers can often work out if a written sign is a meaningless scribal variant or a graphical feature conveying musical meaning to the medieval reader. Secondly, since a neume shape could either mirror on the page the aural event or bear some other musical meaning attached by convention, the encoding sometimes relies on the visual level or on the semantic level, and this distinction has to be made on a case-by-case basis. Moreover, since the same written sign could have multiple interpretations according to the style of notation where it was employed, it is crucial to be aware of the conventions of each regional notational alphabet in order to capture the musical information conveyed by that sign in the contexts where it is found.</p>
                <p>See two examples of shapes found in different regional styles that are not captured with the same encoding:</p>
@@ -8533,7 +8533,7 @@
 </egXML>
                   </figure>
                </p>
-               <p>A further complication is that while the music encoding aims to narrow down and capture the meaning of the neumes in a logical and coherent system, occasionally the significance of some neumes is under debate (e.g., <gi scheme="MEI">quilisma</gi>) and, despite its aim for accuracy, the encoding must remain open for future interpretations. From all these challenges has arisen the need for an early music encoding standardisation, that is, a set of rules that work for the description of any neume across all early notations regardless of the different methodologies applied to the study of individual notations and their idiosyncrasies.</p>
+               <p>A further complication is that while the music encoding aims to narrow down and capture the meaning of the neumes in a logical and coherent system, occasionally the significance of some neumes is under debate (<abbr>e.g.</abbr>, <gi scheme="MEI">quilisma</gi>) and, despite its aim for accuracy, the encoding must remain open for future interpretations. From all these challenges has arisen the need for an early music encoding standardisation, that is, a set of rules that work for the description of any neume across all early notations regardless of the different methodologies applied to the study of individual notations and their idiosyncrasies.</p>
                <p>Broadly speaking, Western early notations belong to two categories. On one side we have notations where two or more notes were represented by a single pen-stroke, while on the other side there are notations where the notes are graphically separated by means of discrete dots or short pen-strokes. These distinctions have been described even within single notational styles as interrupted neumes `&lt;ineume&gt;` or uninterrupted `&lt;uneume&gt;` (Morent &amp; Schräder 2008; Morent 2011; MEI Guidelines, 6: Neume Notation, version 3.0), and now as gapped or not gapped (Behrendt, Bain, &amp; Helsen 2017; MEI Guidelines, 6: Neume Notation, version 4.0). To date, the MEI Neumes Module has been tested mainly on stroke notations (St. Gall, Old Hispanic, etc.), but also on Aquitanian point-notation.</p>
             </div>
             <div xml:id="neumesExamples" type="div2">
@@ -9966,7 +9966,7 @@
             <p>Most of the elements described here take inspiration from encoding formats that deal primarily with text, such as HTML and the Text Encoding Initiative (TEI). These elements are provided to encode relatively basic textual information. For deeper encoding of text, these Guidelines recommend consideration of other text-specific encoding formats with embedded MEI markup.</p>
             <div xml:id="textstructures" type="div2">
                <head>Text Structures</head>
-               <p>This chapter focuses on the text that accompanies the score, i.e., paratext (prefatory material, back matter, appendices, etc.).</p>
+               <p>This chapter focuses on the text that accompanies the score, <abbr>i.e.</abbr>, paratext (prefatory material, back matter, appendices, etc.).</p>
                <div xml:id="textDivisions" type="div3">
                   <head>Organizing Text into Divisions</head>
                   <p>Text can be organized in different parts, for example in chapters or sections. The <gi scheme="MEI">div</gi> element is used to encode such structural divisions.</p>
@@ -9975,7 +9975,7 @@
                         <specDesc key="div"/>
                      </specList>
                   </p>
-                  <p>For example, printed scores, before the actual notation, can have text that can be organized in multiple sections (e.g. a preface, a critical report, performance instructions, etc. for which see the following sections); each of these sections should be identified by a different <gi scheme="MEI">div</gi> element. Text might also occur in between music sections (see <ptr target="#sharedMdivContent"/>), for example in a collection of romantic piano works, a few pieces might be preceded or followed by poetry. Such text should be encoded with the <gi scheme="MEI">div</gi> element, as demonstrated in the following example:</p>
+                  <p>For example, printed scores, before the actual notation, can have text that can be organized in multiple sections (<abbr>e.g.</abbr>, a preface, a critical report, performance instructions, etc. for which see the following sections); each of these sections should be identified by a different <gi scheme="MEI">div</gi> element. Text might also occur in between music sections (see <ptr target="#sharedMdivContent"/>), for example in a collection of romantic piano works, a few pieces might be preceded or followed by poetry. Such text should be encoded with the <gi scheme="MEI">div</gi> element, as demonstrated in the following example:</p>
                   <p>
                      <figure>
                         <head/>
@@ -10251,7 +10251,7 @@
 </egXML>
                      </figure>
                   </p>
-                  <p>Alternatively, paragraphs may be part of the document contents (and therefore encoded within <gi scheme="MEI">music</gi>), either as <ptr target="#textFrontBack"/> or within the music notation. In these cases, a paragraph will likely be contained by a <gi scheme="MEI">div</gi> or other elements containing prose (e.g. <gi scheme="MEI">annot</gi>, <gi scheme="MEI">figDesc</gi>, etc.).</p>
+                  <p>Alternatively, paragraphs may be part of the document contents (and therefore encoded within <gi scheme="MEI">music</gi>), either as <ptr target="#textFrontBack"/> or within the music notation. In these cases, a paragraph will likely be contained by a <gi scheme="MEI">div</gi> or other elements containing prose (<abbr>e.g.</abbr>, <gi scheme="MEI">annot</gi>, <gi scheme="MEI">figDesc</gi>, etc.).</p>
                   <p>The following example shows a paragraph in a preface section:</p>
                   <p>
                      <figure>
@@ -10451,7 +10451,7 @@
                </div>
                <div xml:id="figTableTables" type="div3">
                   <head>Tables</head>
-                  <p>The element <gi scheme="MEI">table</gi> contains text displayed in tabular form, i.e., in rows and columns. A table is the least ‘graphic’ of the elements discussed in this chapter. Almost any text structure can be presented as a series of rows and columns: one might, for example, choose to show a glossary or other form of list in tabular form, without necessarily regarding it as a table. When tabular presentation is regarded as of less intrinsic importance, it is correspondingly simpler to encode descriptive or functional information about the contents of the table, for example to identify one cell as containing a name and another as containing a date, though the two methods may be combined.</p>
+                  <p>The element <gi scheme="MEI">table</gi> contains text displayed in tabular form, <abbr>i.e.</abbr>, in rows and columns. A table is the least ‘graphic’ of the elements discussed in this chapter. Almost any text structure can be presented as a series of rows and columns: one might, for example, choose to show a glossary or other form of list in tabular form, without necessarily regarding it as a table. When tabular presentation is regarded as of less intrinsic importance, it is correspondingly simpler to encode descriptive or functional information about the contents of the table, for example to identify one cell as containing a name and another as containing a date, though the two methods may be combined.</p>
                   <p>The <gi scheme="MEI">table</gi> element may appear both within other components (such as paragraphs), or between them, provided that the module defined in this chapter has been enabled. It is to a large extent arbitrary whether a table should be regarded as a series of rows or as a series of columns. For compatibility with currently available systems, however, these Guidelines require a row-by-row description of a table.</p>
                   <p>While rows and columns are always encoded in top-to-bottom, left-to-right order, formatting properties such as those provided by CSS may be used to specify that they should be displayed differently.</p>
                   <div xml:id="figTableTableRows" type="div4">
@@ -10615,7 +10615,7 @@
                </div>
                <div xml:id="textQuote" type="div3">
                   <head>Quotation</head>
-                  <p>It is common, in many types of texts, to find quotations. A quotation is typically attributed to another text other than the one being encoded. Often, the quoted material is typographically distinct from the surrounding text; i.e., surrounded by so-called ‘quote marks’ or rendered as a separate block of text. The <gi scheme="MEI">quote</gi> element is used to mark this function:</p>
+                  <p>It is common, in many types of texts, to find quotations. A quotation is typically attributed to another text other than the one being encoded. Often, the quoted material is typographically distinct from the surrounding text; <abbr>i.e.</abbr>, surrounded by so-called ‘quote marks’ or rendered as a separate block of text. The <gi scheme="MEI">quote</gi> element is used to mark this function:</p>
                   <p>
                      <specList>
                         <specDesc key="quote"/>
@@ -11028,7 +11028,7 @@
 </egXML>
                      </figure>
                   </p>
-                  <p>While <att>copyof</att> signifies a duplicate copy of an element, the <att>sameas</att> indicates that the current element represents exactly the same entity as the one referenced in <att>sameas</att>. Use of <att>sameas</att> is used for describing the same entity from multiple perspectives, e.g., the same event in two layers.</p>
+                  <p>While <att>copyof</att> signifies a duplicate copy of an element, the <att>sameas</att> indicates that the current element represents exactly the same entity as the one referenced in <att>sameas</att>. Use of <att>sameas</att> is used for describing the same entity from multiple perspectives, <abbr>e.g.</abbr>, the same event in two layers.</p>
                   <p>While <att>copyof</att> and <att>sameas</att> have defined semantics, the <att>corresp</att> may be used to create user-defined relationships between elements. The example below demonstrates the encoding of a relationship between the third note and the fermata, even though the fermata is not placed directly above the note.</p>
                   <p>
                      <figure>
@@ -11365,7 +11365,7 @@
                   </div>
                   <div xml:id="analysisPitchClass" type="div4">
                      <head>Pitch Class</head>
-                     <p>The <att>pclass</att> attribute can be used to encode information about the pitch class to which a note belongs. The attribute's value must be an integer less than or equal to 11. It is only allowed on the <gi scheme="MEI">note</gi> element. The <att>pclass</att> attribute comes from "musical set theory" elaborated first by Howard Hanson and Allen Forte as a new method for organizing tones. It provides a concept for categorizing musical objects (notes) and describing their relationships. It is a kind of grouping and combining, mostly developed in connection with atonal music. However, the concept of set theory is general and can also be applied to tonal music. A pitch class means the summary of every pitch with specific characteristics that means a pitch class set is an unordered collection of pitches, e.g., every pitch with the name C.</p>
+                     <p>The <att>pclass</att> attribute can be used to encode information about the pitch class to which a note belongs. The attribute's value must be an integer less than or equal to 11. It is only allowed on the <gi scheme="MEI">note</gi> element. The <att>pclass</att> attribute comes from "musical set theory" elaborated first by Howard Hanson and Allen Forte as a new method for organizing tones. It provides a concept for categorizing musical objects (notes) and describing their relationships. It is a kind of grouping and combining, mostly developed in connection with atonal music. However, the concept of set theory is general and can also be applied to tonal music. A pitch class means the summary of every pitch with specific characteristics that means a pitch class set is an unordered collection of pitches, <abbr>e.g.</abbr>, every pitch with the name C.</p>
                      <p>A pitch class may contain a large number of pitches, because different octaves and enharmonic spellings of pitch make no difference. The notes C, E, and G would be 0, 4 and 7 in pitch class notation, for example, regardless of the octave in which they are performed. The example below contains the same pitch in four different enharmonic spellings, but all are part of the same pitch class.</p>
                      <p>
                         <figure>
@@ -11452,7 +11452,7 @@
             </div>
             <div xml:id="harmony" type="div2">
                <head>Harmony</head>
-               <p>This chapter describes the encoding of indications of harmony ocurring within a music text, e.g., chord names, tablature grids, figured bass, or signs for harmonic analysis, and the methods by which these indications can be connected with their interpretations. For encoder-supplied analysis of intervallic content, please see chapter <ptr target="#analysis"/>.</p>
+               <p>This chapter describes the encoding of indications of harmony ocurring within a music text, <abbr>e.g.</abbr>, chord names, tablature grids, figured bass, or signs for harmonic analysis, and the methods by which these indications can be connected with their interpretations. For encoder-supplied analysis of intervallic content, please see chapter <ptr target="#analysis"/>.</p>
                <div xml:id="harmonyDetails" type="div3">
                   <head>Indications of Harmony</head>
                   <p>On the most basic level, chords in the musical text can be encoded using the <gi scheme="MEI">chord</gi> element:</p>
@@ -12377,7 +12377,7 @@
                   </p>
                   <div xml:id="edittransOmission" type="div4">
                      <head>Omissions, Unclear Readings, Damage, and Supplied Readings</head>
-                     <p>Encoders may choose to omit parts of the source for reasons ranging from illegibility, (making transcription difficult or impossible), to editorial policy, e.g., systematic exclusion of poetry or prose from an encoding. The full details of the policy decisions concerned should be documented in the MEI header (see section <ptr target="#headerEncodingDescription"/>). Each place in the text at which omission has taken place should be marked with a <gi scheme="MEI">gap</gi> element, optionally with further information about the reason for the omission, its extent, and the person or agency responsible for it, as in the following examples:</p>
+                     <p>Encoders may choose to omit parts of the source for reasons ranging from illegibility, (making transcription difficult or impossible), to editorial policy, <abbr>e.g.</abbr>, systematic exclusion of poetry or prose from an encoding. The full details of the policy decisions concerned should be documented in the MEI header (see section <ptr target="#headerEncodingDescription"/>). Each place in the text at which omission has taken place should be marked with a <gi scheme="MEI">gap</gi> element, optionally with further information about the reason for the omission, its extent, and the person or agency responsible for it, as in the following examples:</p>
                      <p>
                         <figure>
                            <head/>
@@ -12427,7 +12427,7 @@
 </egXML>
                         </figure>
                      </p>
-                     <p>When the presumed loss of text arises from an identifiable cause, <att>agent</att> signifies the causative agent. When the presumed loss of text arises from action (partial deletion, etc.) assignable to an identifiable hand, the <att>hand</att> attribute signifies the hand responsible for the action. The <att>reason</att> attribute indicates why the text has to be supplied, e.g. 'overbinding', 'faded ink', 'lost folio', 'omitted in original', etc. The <att>source</att> attribute contains the source of the supplied text. The editor(s) responsible for supplied material may be recorded in the <att>resp</att> attribute. The value of <att>resp</att> must point to one or more identifiers declared in the document header. The <att>cert</att> attribute signifies the degree of certainty ascribed to the supplied material.</p>
+                     <p>When the presumed loss of text arises from an identifiable cause, <att>agent</att> signifies the causative agent. When the presumed loss of text arises from action (partial deletion, etc.) assignable to an identifiable hand, the <att>hand</att> attribute signifies the hand responsible for the action. The <att>reason</att> attribute indicates why the text has to be supplied, <abbr>e.g.</abbr>, 'overbinding', 'faded ink', 'lost folio', 'omitted in original', etc. The <att>source</att> attribute contains the source of the supplied text. The editor(s) responsible for supplied material may be recorded in the <att>resp</att> attribute. The value of <att>resp</att> must point to one or more identifiers declared in the document header. The <att>cert</att> attribute signifies the degree of certainty ascribed to the supplied material.</p>
                   </div>
                   <div xml:id="edittransAddDel" type="div4">
                      <head>Additions and Deletions</head>
@@ -12517,7 +12517,7 @@
                      </p>
                      <p>The <att>desc</att> attribute gives a prose description of the means of restoration. The <att>cert</att> attribute signifies the degree of certainty ascribed to the identification of the hand of the restoration. The <att>type</att> attribute may be used to indicate the action cancelled by the restoration. The <att>resp</att> attribute contains an ID reference to an element containing the name of the editor or transcriber responsible for identifying the hand of the restoration. The <att>hand</att> attribute signifies the hand of the agent which made the restoration.</p>
                      <p>MEI offers a <gi scheme="MEI">handShift</gi> milestone element that can be used to mark a change of scribe or scribal style.</p>
-                     <p>The <att>character</att> attribute describes characteristics of the hand, particularly those related to the quality of the writing, e.g., 'shaky', 'thick', regular'. A description of the tint or type of ink, e.g., 'brown' or the writing medium, e.g., 'pencil', may be placed in the <att>medium</att> attribute.</p>
+                     <p>The <att>character</att> attribute describes characteristics of the hand, particularly those related to the quality of the writing, <abbr>e.g.</abbr>, 'shaky', 'thick', regular'. A description of the tint or type of ink, <abbr>e.g.</abbr>, 'brown' or the writing medium, <abbr>e.g.</abbr>, 'pencil', may be placed in the <att>medium</att> attribute.</p>
                      <p>
                         <figure>
                            <head/>
@@ -12590,7 +12590,7 @@
 </egXML>
                      </figure>
                   </p>
-                  <p>In the example above, state X of the encoded work is established by the change from a C clef to a G clef. Other states preceding state X will read a C clef, while state X and succeeding states read a G clef. A genetic state of the work is constituted by performing all textual operations referencing that state, i.e. by carrying out all additions, deletions and restorations.</p>
+                  <p>In the example above, state X of the encoded work is established by the change from a C clef to a G clef. Other states preceding state X will read a C clef, while state X and succeeding states read a G clef. A genetic state of the work is constituted by performing all textual operations referencing that state, <abbr>i.e.</abbr>, by carrying out all additions, deletions and restorations.</p>
                   <p>The <att>instant</att> attribute on <gi scheme="MEI">del</gi> etc. allows to specify that corresponding modification has been carried out immediately after writing the original text, so that no separate genetic state has been established.</p>
                   <p>It is up to encoder to identify the appropriate level of granularity: In an ideal world, the writing or cancellation of a single note would constitute a new state. In practice, this level of detail isn't feasible, and the combination of multiple writing operations into larger logical operations seems inevitable. However, this may range from very large tasks (‘replacing the second movement of a symphony’) to very small ones (‘adding the slurs for the viola in measures 22 and 23’), depending on the intentions and scope of the encoding.</p>
                </div>
@@ -12606,7 +12606,7 @@
                   <p>A metaMark is provided as a ‘controlEvent’ (see <ptr target="#eventsControlevents"/>); as such, by convention, it should be encoded at the end of the <gi scheme="MEI">measure</gi> where it first occurs. It is highly recommended to specify the function of the metaMark using its <att>function</att> attribute, which may take the following values:</p>
                   <list>
                      <item>
-                        <hi rend="italic">confirmation</hi>: confirmation of a previous textual decision; i.e., cancellation of a deleted passage in a different writing medium.</item>
+                        <hi rend="italic">confirmation</hi>: confirmation of a previous textual decision; <abbr>i.e.</abbr>, cancellation of a deleted passage in a different writing medium.</item>
                      <item>
                         <hi rend="italic">addition</hi>: denoted material is to be inserted in the musical text.</item>
                      <item>
@@ -12741,7 +12741,7 @@
 </egXML>
                      </figure>
                   </p>
-                  <p>Within <gi scheme="MEI">surface</gi> elements, one may nest one or more <gi scheme="MEI">graphic</gi> elements, each providing a reference to an image file that represents the writing surface. Multiple <gi scheme="MEI">graphic</gi> elements are permitted in order to accommodate alternative versions (different resolutions or formats, for instance) of the surface image. In spite of changes in resolution or format, all images must contain the same content, i.e., the entire writing surface. A <gi scheme="MEI">graphic</gi> may refer to a single page within a multi-page document, which is – at least for Adobe PDF documents – available through a #page=X suffix to the <att>target</att> attribute.</p>
+                  <p>Within <gi scheme="MEI">surface</gi> elements, one may nest one or more <gi scheme="MEI">graphic</gi> elements, each providing a reference to an image file that represents the writing surface. Multiple <gi scheme="MEI">graphic</gi> elements are permitted in order to accommodate alternative versions (different resolutions or formats, for instance) of the surface image. In spite of changes in resolution or format, all images must contain the same content, <abbr>i.e.</abbr>, the entire writing surface. A <gi scheme="MEI">graphic</gi> may refer to a single page within a multi-page document, which is – at least for Adobe PDF documents – available through a #page=X suffix to the <att>target</att> attribute.</p>
                   <p>
                      <figure>
                         <head/>
@@ -13124,7 +13124,7 @@
                         </specList>
                     </p>
                     <p>
-                        The <gi scheme="MEI">ptr</gi> element is a traversible pointer to another location. It is an empty linking element that uses only attributes to describe its link destination. It cannot contain text or sub-elements to describe the referenced object. The next example shows the use of the <gi scheme="MEI">ptr</gi> element to target a certain identifier (here e.g. a page number, or more precisely, page break elements, <gi scheme="MEI">pb</gi>, bearing these identifiers) from within a <gi scheme="MEI">list</gi> of item descriptions:
+                        The <gi scheme="MEI">ptr</gi> element is a traversible pointer to another location. It is an empty linking element that uses only attributes to describe its link destination. It cannot contain text or sub-elements to describe the referenced object. The next example shows the use of the <gi scheme="MEI">ptr</gi> element to target a certain identifier (here <abbr>e.g.</abbr>, a page number, or more precisely, page break elements, <gi scheme="MEI">pb</gi>, bearing these identifiers) from within a <gi scheme="MEI">list</gi> of item descriptions:
                     </p>
                     <p>
                         <figure>
@@ -13273,7 +13273,7 @@
                     <div xml:id="ptrRefTargettype" type="div4">
                         <head>Define the type of a link element's target</head>
                         <p>
-                            The <att>targettype</att> attribute allows the target resource to be characterized using any convenient classification scheme or typology. This is often useful when the target requires special processing, e.g., for display purposes. The pointers in the examples below may be formatted differently, e.g., the bibliographic citation may result in special typography while the pointer to the audio file may be used to embed an audio player:
+                            The <att>targettype</att> attribute allows the target resource to be characterized using any convenient classification scheme or typology. This is often useful when the target requires special processing, <abbr>e.g.</abbr>, for display purposes. The pointers in the examples below may be formatted differently, <abbr>e.g.</abbr>, the bibliographic citation may result in special typography while the pointer to the audio file may be used to embed an audio player:
                         </p>
                         <p>
                             <figure>
@@ -13342,7 +13342,7 @@
                                 <label>‘onLoad’</label>
                                 <item>load the target resource(s) immediately</item>
                                 <label>‘onRequest’</label>
-                                <item>load the target resource(s) upon user request, e.g., after a mouse click</item>
+                                <item>load the target resource(s) upon user request, <abbr>e.g.</abbr>, after a mouse click</item>
                                 <label>‘none’</label>
                                 <item>do not permit loading of the target resource(s); no other markup is provided to determine appropriate behavior</item>
                                 <label>‘other’</label>
@@ -13479,7 +13479,7 @@
                </p>
                <p>With this addition, which can be added to any of the provided customizations of
                   MEI (see <ptr target="#meiprofiles"/>), the <ref target="https://www.w3.org/TR/SVG11/struct.html#SVGElement">&lt;svg&gt;</ref>
-                  element becomes available everywhere `model.graphicLike` (i.e. the <gi scheme="MEI">graphic</gi> element) is currently allowed, that is: inside of <gi scheme="MEI">fig</gi>, <gi scheme="MEI">incip</gi>, <gi scheme="MEI">surface</gi>, and <gi scheme="MEI">zone</gi>.</p>
+                  element becomes available everywhere `model.graphicLike` (<abbr>i.e.</abbr>, the <gi scheme="MEI">graphic</gi> element) is currently allowed, that is: inside of <gi scheme="MEI">fig</gi>, <gi scheme="MEI">incip</gi>, <gi scheme="MEI">surface</gi>, and <gi scheme="MEI">zone</gi>.</p>
                <p> In the following example, an <ref target="https://www.w3.org/TR/SVG11/paths.html#PathElement">&lt;svg:path&gt;</ref> element is inserted into a <gi scheme="MEI">surface</gi>. It would now be possible for measures or other music features to
                   point to the rectangular <gi scheme="MEI">zone</gi> in MEI namespace, or the fancy
                   shaped <ref target="https://www.w3.org/TR/SVG11/paths.html#PathElement">&lt;svg:path&gt;</ref> using their <att>facs</att> attribute (see <ptr target="#facsimileElements"/> for that mechanism). It's equally possible to use
@@ -14187,7 +14187,7 @@
     </content>
   </macroSpec>
   <macroSpec ident="data.BEAT" module="MEI" type="dt">
-    <desc>A beat location, i.e., [0-9]+(\.?[0-9]*)? The value must fall between 0 and the numerator
+    <desc>A beat location, <abbr>i.e.</abbr>, [0-9]+(\.?[0-9]*)? The value must fall between 0 and the numerator
       of the time signature + 1, where 0 represents the left bar line and the upper boundary
       represents the right bar line. For example, in 12/8 the value must be in the range from 0 to
       13.</desc>
@@ -14289,7 +14289,7 @@
           <desc>Drum clef (Unicode 1D125 or Unicode 1D126).</desc>
         </valItem>
         <valItem ident="TAB">
-          <desc>Tablature "clef"; i.e. usually "TAB" rendered vertically.</desc>
+          <desc>Tablature "clef"; <abbr>i.e.</abbr>, usually "TAB" rendered vertically.</desc>
         </valItem>
       </valList>
     </content>
@@ -15061,7 +15061,7 @@
     </content>
   </macroSpec>
   <macroSpec ident="data.FONTSIZENUMERIC" module="MEI" type="dt">
-    <desc>Font size expressed as numbers; i.e. points or virtual units.</desc>
+    <desc>Font size expressed as numbers; <abbr>i.e.</abbr>, points or virtual units.</desc>
     <content>
       <rng:data type="token">
         <rng:param name="pattern">\d*(\.\d+)?(pt|vu)</rng:param>
@@ -15319,7 +15319,7 @@
     </content>
   </macroSpec>
   <macroSpec ident="data.INEUMENAME" module="MEI" type="dt">
-    <desc>Interrupted neume, i.e. neume written as 2 or more sub-neumes.</desc>
+    <desc>Interrupted neume, <abbr>i.e.</abbr>, neume written as 2 or more sub-neumes.</desc>
     <content>
       <valList type="closed">
         <valItem ident="pessubpunctis"/>
@@ -15417,7 +15417,7 @@
     </content>
   </macroSpec>
   <macroSpec ident="data.ISOTIME" module="MEI" type="dt">
-    <desc>ISO 24-hour time format: HH:MM:SS.ss, i.e.,
+    <desc>ISO 24-hour time format: HH:MM:SS.ss, <abbr>i.e.</abbr>,
       [0-9][0-9]:[0-9][0-9]:[0-9][0-9](\.?[0-9]*)?.</desc>
     <content>
       <rng:data type="time"/>
@@ -15587,7 +15587,7 @@
     </content>
   </macroSpec>
   <macroSpec ident="data.MEASUREBEAT" module="MEI" type="dt">
-    <desc>A count of measures plus a beat location, i.e., [0-9]+m *\+ *[0-9]+(\.?[0-9]*)?. The
+    <desc>A count of measures plus a beat location, <abbr>i.e.</abbr>, [0-9]+m *\+ *[0-9]+(\.?[0-9]*)?. The
       measure count is the number of barlines crossed by the event, while the beat location is a
       timestamp expressed as a beat with an optional fractional part. For example, "1m+3.5"
       indicates a point in the next measure on the second half of beat 3. The measure number must be
@@ -15603,7 +15603,7 @@
     </content>
   </macroSpec>
   <macroSpec ident="data.MEASUREBEATOFFSET" module="MEI" type="dt">
-    <desc>A count of measures plus a beat location, i.e., (\+|-)?[0-9]+m\+[0-9]+(\.?[0-9]*)?. The
+    <desc>A count of measures plus a beat location, <abbr>i.e.</abbr>, (\+|-)?[0-9]+m\+[0-9]+(\.?[0-9]*)?. The
       measure count is the number of barlines crossed by the event, while the beat location is a
       timestamp expressed as a beat with an optional fractional part. The measure number must be in
       the range of preceding measures to the number of remaining measures. A value with a positive
@@ -15620,7 +15620,7 @@
     </content>
   </macroSpec>
   <macroSpec ident="data.MEASUREMENTABS" module="MEI" type="dt">
-    <desc>Measurement expressed in real-world (e.g., centimeters, millimeters, inches, points,
+    <desc>Measurement expressed in real-world (<abbr>e.g.</abbr>, centimeters, millimeters, inches, points,
       picas, or pixels) or virtual units (vu). 'vu' is the default value. Unlike
       data.MEASUREMENTREL, which may be used to express relative measures, only positive values are
       allowed.</desc>
@@ -15631,7 +15631,7 @@
     </content>
   </macroSpec>
   <macroSpec ident="data.MEASUREMENTREL" module="MEI" type="dt">
-    <desc>Measurement expressed in real-world (e.g., centimeters, millimeters, inches, points,
+    <desc>Measurement expressed in real-world (<abbr>e.g.</abbr>, centimeters, millimeters, inches, points,
       picas, or pixels) or virtual units (vu). 'vu' is the default value. Unlike
       data.MEASUREMENTABS, in which only positive values are allowed, both positive and negative
       values are permitted.</desc>
@@ -15642,7 +15642,7 @@
     </content>
   </macroSpec>
   <macroSpec ident="data.MELODICFUNCTION" module="MEI" type="dt">
-    <desc>Indication of melodic function, i.e., anticipation, lower neighbor, escape tone,
+    <desc>Indication of melodic function, <abbr>i.e.</abbr>, anticipation, lower neighbor, escape tone,
       etc.</desc>
     <content>
       <valList type="closed">
@@ -15674,7 +15674,7 @@
           <desc>Chromatic lower neighbor.</desc>
         </valItem>
         <valItem ident="ct">
-          <desc>Chord tone (i.e., not an embellishment).</desc>
+          <desc>Chord tone (<abbr>i.e.</abbr>, not an embellishment).</desc>
         </valItem>
         <valItem ident="ct7">
           <desc>Chord tone (7th added to the chord).</desc>
@@ -15809,13 +15809,13 @@
     <content>
       <valList type="closed">
         <valItem ident="common">
-          <desc>Common time; i.e. 4/4.</desc>
+          <desc>Common time; <abbr>i.e.</abbr>, 4/4.</desc>
         </valItem>
         <valItem ident="cut">
-          <desc>Cut time; i.e. 2/2.</desc>
+          <desc>Cut time; <abbr>i.e.</abbr>, 2/2.</desc>
         </valItem>
         <valItem ident="open">
-          <desc>Open time signature, i.e., Senza misura. See Gould pp. 611–615.</desc>
+          <desc>Open time signature, <abbr>i.e.</abbr>, Senza misura. See Gould pp. 611–615.</desc>
         </valItem>
       </valList>
     </content>
@@ -16716,16 +16716,16 @@
           <desc>At the right of the page.</desc>
         </valItem>
         <valItem ident="facing">
-          <desc>On the opposite, i.e. facing, page.</desc>
+          <desc>On the opposite, <abbr>i.e.</abbr>, facing, page.</desc>
         </valItem>
         <valItem ident="overleaf">
           <desc>On the other side of the leaf.</desc>
         </valItem>
         <valItem ident="end">
-          <desc>At the end of this division; e.g., chapter, volume, etc.</desc>
+          <desc>At the end of this division; <abbr>e.g.</abbr>, chapter, volume, etc.</desc>
         </valItem>
         <valItem ident="inter">
-          <desc>Within a line text; i.e., an insertion.</desc>
+          <desc>Within a line text; <abbr>i.e.</abbr>, an insertion.</desc>
         </valItem>
         <valItem ident="intra">
           <desc>Between the lines of text, less exact than "sub" or "super".</desc>
@@ -16739,10 +16739,10 @@
             rendition.</desc>
         </valItem>
         <valItem ident="inspace">
-          <desc>In a predefined space; i.e., that left by an earlier scribe.</desc>
+          <desc>In a predefined space; <abbr>i.e.</abbr>, that left by an earlier scribe.</desc>
         </valItem>
         <valItem ident="superimposed">
-          <desc>Obscures original text; e.g., via overstrike, addition of new writing surface
+          <desc>Obscures original text; <abbr>e.g.</abbr>, via overstrike, addition of new writing surface
             material, etc.</desc>
         </valItem>
       </valList>
@@ -16869,7 +16869,7 @@
   </macroSpec>
   <macroSpec ident="data.OTHERSTAFF" module="MEI" type="dt">
     <desc>For musical material designated to appear on another staff, the location of the staff
-      relative to the current one; i.e., the staff above or the staff below.</desc>
+      relative to the current one; <abbr>i.e.</abbr>, the staff above or the staff below.</desc>
     <content>
       <valList type="closed">
         <valItem ident="above">
@@ -16891,7 +16891,7 @@
     </content>
   </macroSpec>
   <macroSpec ident="data.PERCENT" module="MEI" type="dt">
-    <desc>Positive decimal number plus '%', i.e., [0-9]+(\.?[0-9]*)?\%.</desc>
+    <desc>Positive decimal number plus '%', <abbr>i.e.</abbr>, [0-9]+(\.?[0-9]*)?\%.</desc>
     <content>
       <rng:data type="token">
         <rng:param name="pattern">[0-9]+(\.?[0-9]*)?%</rng:param>
@@ -16949,7 +16949,7 @@
     </content>
   </macroSpec>
   <macroSpec ident="data.PITCHNUMBER" module="MEI" type="dt">
-    <desc>Pnum (pitch number, e.g. MIDI) attribute values.</desc>
+    <desc>Pnum (pitch number, <abbr>e.g.</abbr>, MIDI) attribute values.</desc>
     <content>
       <rng:data type="nonNegativeInteger"/>
     </content>
@@ -16982,7 +16982,7 @@
     </content>
   </macroSpec>
   <macroSpec ident="data.RATIO" module="MEI" type="dt">
-    <desc>A ratio, i.e., [0-9]+(\.?[0-9]*)?:[0-9]+(\.?[0-9]*)? For example, "40:7.2319".</desc>
+    <desc>A ratio, <abbr>i.e.</abbr>, [0-9]+(\.?[0-9]*)?:[0-9]+(\.?[0-9]*)? For example, "40:7.2319".</desc>
     <content>
       <rng:data type="token">
         <rng:param name="pattern">[0-9]+(\.?[0-9]*)?:[0-9]+(\.?[0-9]*)?</rng:param>
@@ -17274,7 +17274,7 @@
     </content>
   </macroSpec>
   <macroSpec ident="data.STRINGNUMBER" module="MEI" type="dt">
-    <desc>In string tablature, the number of the string to be played, i.e., [1-9]+.</desc>
+    <desc>In string tablature, the number of the string to be played, <abbr>i.e.</abbr>, [1-9]+.</desc>
     <content>
       <rng:data type="positiveInteger"/>
     </content>
@@ -17299,7 +17299,7 @@
     </content>
   </macroSpec>
   <macroSpec ident="data.TEMPOVALUE" module="MEI" type="dt">
-    <desc>Beats (meter signature denominator) per minute, e.g. 120.</desc>
+    <desc>Beats (meter signature denominator) per minute, <abbr>e.g.</abbr>, 120.</desc>
     <content>
       <rng:data type="decimal"/>
     </content>
@@ -17360,14 +17360,14 @@
           <desc>Struck through by '/' (forward slash).</desc>
         </valItem>
         <valItem ident="line-through">
-          <desc>Struck through by '-'; may be qualified to indicate multiple parallel lines, e.g.
+          <desc>Struck through by '-'; may be qualified to indicate multiple parallel lines, <abbr>e.g.</abbr>,
             line-through(2).</desc>
         </valItem>
         <valItem ident="none">
           <desc>Not rendered, invisible.</desc>
         </valItem>
         <valItem ident="overline">
-          <desc>Line above the text; may be qualified to indicate multiple parallel lines, e.g.
+          <desc>Line above the text; may be qualified to indicate multiple parallel lines, <abbr>e.g.</abbr>,
             overline(3).</desc>
         </valItem>
         <valItem ident="overstrike">
@@ -17376,7 +17376,7 @@
         </valItem>
         <valItem ident="strike">
           <desc>Struck through by '-'; equivalent to line-through; may be qualified to indicate
-            multiple parallel lines, e.g. strike(3).</desc>
+            multiple parallel lines, <abbr>e.g.</abbr>, strike(3).</desc>
         </valItem>
         <valItem ident="sub">
           <desc>Subscript.</desc>
@@ -17389,12 +17389,12 @@
             earlier writing stage.</desc>
         </valItem>
         <valItem ident="underline">
-          <desc>Underlined; may be qualified to indicate multiple parallel lines, e.g.
+          <desc>Underlined; may be qualified to indicate multiple parallel lines, <abbr>e.g.</abbr>,
             underline(2).</desc>
         </valItem>
         <valItem ident="x-through">
           <desc>Crossed-out; equivalent to 'bslash' (\) plus 'fslash' (/); that is, a hand-written
-            'X'; may be qualified to indicate multiple parallel lines, e.g. x-through(2).</desc>
+            'X'; may be qualified to indicate multiple parallel lines, <abbr>e.g.</abbr>, x-through(2).</desc>
         </valItem>
         <valItem ident="ltr">
           <desc>Left-to-right (BIDI embed).</desc>
@@ -17443,7 +17443,7 @@
   </macroSpec>
   <macroSpec ident="data.TSTAMPOFFSET" module="MEI" type="dt">
     <desc>A positive or negative offset from the value given in the tstamp attribute in terms of
-      musical time, i.e., beats[.fractional beat part].</desc>
+      musical time, <abbr>i.e.</abbr>, beats[.fractional beat part].</desc>
     <content>
       <rng:data type="decimal"/>
     </content>
@@ -17457,7 +17457,7 @@
     </content>
   </macroSpec>
   <macroSpec ident="data.UNEUMEFORM" module="MEI" type="dt">
-    <desc>Basic, i.e., single, uninterrupted, neume forms.</desc>
+    <desc>Basic, <abbr>i.e.</abbr>, single, uninterrupted, neume forms.</desc>
     <content>
       <valList type="closed">
         <valItem ident="liquescent1"/>
@@ -17471,7 +17471,7 @@
     </content>
   </macroSpec>
   <macroSpec ident="data.UNEUMENAME" module="MEI" type="dt">
-    <desc>Basic, i.e., single, uninterrupted, neume names.</desc>
+    <desc>Basic, <abbr>i.e.</abbr>, single, uninterrupted, neume names.</desc>
     <content>
       <valList type="closed">
         <valItem ident="punctum"/>
@@ -17686,12 +17686,12 @@
         <desc>Indicates to what degree the harmonic label is supported by the notation.</desc>
         <valList type="closed">
           <valItem ident="explicit">
-            <desc>The notation contains all the notes necessary for the harmonic label, e.g., the
+            <desc>The notation contains all the notes necessary for the harmonic label, <abbr>e.g.</abbr>, the
               notes "D F♯ A" for the harmonic label "D".</desc>
           </valItem>
           <valItem ident="implied">
             <desc>The harmonic label relies on notes implied, but not actually present, in the
-              notation, e.g., the notes "D F♯ C" for the harmonic label "D7". The note "A" is
+              notation, <abbr>e.g.</abbr>, the notes "D F♯ C" for the harmonic label "D7". The note "A" is
               missing from the notation, but can be implied.</desc>
           </valItem>
         </valList>
@@ -17776,7 +17776,7 @@
       domain that are related to key signatures.</desc>
     <attList>
       <attDef ident="key.accid" usage="opt">
-        <desc>Contains an accidental for the tonic key, if one is required, e.g., if key.pname
+        <desc>Contains an accidental for the tonic key, if one is required, <abbr>e.g.</abbr>, if key.pname
           equals 'c' and key.accid equals 's', then a tonic of C# is indicated.</desc>
         <datatype>
           <rng:ref name="data.ACCIDENTAL.GESTURAL"/>
@@ -17789,7 +17789,7 @@
         </datatype>
       </attDef>
       <attDef ident="key.pname" usage="opt">
-        <desc>Holds the pitch name of the tonic key, e.g. 'c' for the key of C.</desc>
+        <desc>Holds the pitch name of the tonic key, <abbr>e.g.</abbr>, 'c' for the key of C.</desc>
         <datatype>
           <rng:ref name="data.PITCHNAME"/>
         </datatype>
@@ -17998,7 +17998,7 @@
     <desc>Attributes that specify pitch using sol-fa.</desc>
     <attList>
       <attDef ident="psolfa" usage="opt">
-        <desc>Contains sol-fa designation, e.g., do, re, mi, etc., in either a fixed or movable Do
+        <desc>Contains sol-fa designation, <abbr>e.g.</abbr>, do, re, mi, etc., in either a fixed or movable Do
           system.</desc>
         <datatype>
           <rng:data type="NMTOKEN"/>
@@ -18136,7 +18136,7 @@
           <desc>Bend indications.</desc>
         </valItem>
         <valItem ident="bracketSpan">
-          <desc>Brackets, e.g., for transcribed ligatures.</desc>
+          <desc>Brackets, <abbr>e.g.</abbr>, for transcribed ligatures.</desc>
         </valItem>
         <valItem ident="breath">
           <desc>Breath marks.</desc>
@@ -18257,7 +18257,7 @@
     <remarks>
       <p>The <att>beam.group</att> attribute can be used to set a default beaming pattern to be used
         when no beaming is indicated at the event level. <att>beam.group</att> must contain a
-        comma-separated list of time values that add up to a measure, e.g., in 4/4 time '4,4,4,4'
+        comma-separated list of time values that add up to a measure, <abbr>e.g.</abbr>, in 4/4 time '4,4,4,4'
         indicates each quarter note worth of shorter notes would be beamed together. Parentheses can
         be used to indicate sub-groupings of secondary beams. For example, '(4.,4.,4.)' in 9/8 meter
         indicates one outer beam per measure with secondary beams broken at each dotted quarter
@@ -18640,10 +18640,10 @@
           indicates an increase or a decrease in volume.</desc>
         <valList type="closed">
           <valItem ident="cres">
-            <desc>Crescendo; i.e., louder.</desc>
+            <desc>Crescendo; <abbr>i.e.</abbr>, louder.</desc>
           </valItem>
           <valItem ident="dim">
-            <desc>Diminuendo; i.e., softer.</desc>
+            <desc>Diminuendo; <abbr>i.e.</abbr>, softer.</desc>
           </valItem>
         </valList>
       </attDef>
@@ -18664,7 +18664,7 @@
     </classes>
   </classSpec>
   <classSpec ident="att.harpPedal.log" module="MEI.cmn" type="atts">
-    <desc>Logical domain attributes. The pedal setting, i.e., flat, natural, or sharp, for each
+    <desc>Logical domain attributes. The pedal setting, <abbr>i.e.</abbr>, flat, natural, or sharp, for each
       diatonic pitch name is indicated by the seven letter-named attributes.</desc>
     <classes>
       <memberOf key="att.controlEvent"/>
@@ -18844,7 +18844,7 @@
             <desc>Meter signatures apply to alternating measures.</desc>
           </valItem>
           <valItem ident="interchanging">
-            <desc>Meter signatures are interchangeable, e.g. 3/4 and 6/8.</desc>
+            <desc>Meter signatures are interchangeable, <abbr>e.g.</abbr>, 3/4 and 6/8.</desc>
           </valItem>
           <valItem ident="mixed">
             <desc>Meter signatures with different unit values are used to express a complex metrical
@@ -18961,7 +18961,7 @@
     <attList>
       <attDef ident="coll" usage="opt">
         <desc>Indicates whether the octave displacement should be performed simultaneously with the
-          written notes, i.e., "coll' ottava". Unlike other octave signs which are indicated by
+          written notes, <abbr>i.e.</abbr>, "coll' ottava". Unlike other octave signs which are indicated by
           broken lines, coll' ottava typically uses an unbroken line or a series of longer broken
           lines, ending with a short vertical stroke. See Read, p. 47-48.</desc>
         <valList type="closed">
@@ -19612,7 +19612,7 @@
     <remarks>
       <p>The <att>shape</att> attribute may be used to record whether the fermata is curved, square,
         or triangular, while <att>form</att> may be used to capture whether the fermata is
-        "upright", i.e., has the curve or bracket above the dot, or inverted, i.e., has the curve or
+        "upright", <abbr>i.e.</abbr>, has the curve or bracket above the dot, or inverted, <abbr>i.e.</abbr>, has the curve or
         bracket below the dot. Other visual forms of a fermata may be indicated via the
         <att>altsym</att> attribute. The starting point of the fermata may be indicated by either a
         <att>startid</att>, <att>tstamp</att>, <att>tstamp.ges</att>, or <att>tstamp.real</att>
@@ -19732,7 +19732,7 @@
     </constraintSpec>
   </elementSpec>
   <elementSpec ident="hairpin" module="MEI.cmn">
-    <desc>Indicates continuous dynamics expressed on the score as wedge-shaped graphics, e.g. &lt;
+    <desc>Indicates continuous dynamics expressed on the score as wedge-shaped graphics, <abbr>e.g.</abbr>, &lt;
       and &gt;.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -19757,7 +19757,7 @@
       </constraint>
     </constraintSpec>
     <remarks>
-      <p>The <gi scheme="MEI">hairpin</gi> element is used for <emph>graphical</emph>, i.e.,
+      <p>The <gi scheme="MEI">hairpin</gi> element is used for <emph>graphical</emph>, <abbr>i.e.</abbr>,
         crescendo and diminuendo, dynamic markings. For instantaneous or continuous
         <emph>textual</emph> dynamics, such as 'p', 'mf', or 'cres. poco a poco', the <gi scheme="MEI">dynam</gi> element should be used. The starting point of the hairpin marking
         may be indicated by either a <att>startid</att>, <att>tstamp</att>, <att>tstamp.ges</att>,
@@ -20406,7 +20406,7 @@
     </content>
     <remarks>
       <p>The <gi scheme="MEI">beam</gi> sub-element is allowed so that custom beaming may be
-        indicated, e.g., a septuplet may be divided into a group of three plus a group of four
+        indicated, <abbr>e.g.</abbr>, a septuplet may be divided into a group of three plus a group of four
         notes. See Read, p. 187-215. The <gi scheme="MEI">tuplet</gi> element may also used for
         bowed tremolo (Read, p. 394) and double, triple, or flutter tonguing (Read, p. 348-349);
         that is, for repetition of the same pitch. In the case of irrational durations, such as such
@@ -20479,7 +20479,7 @@
     </classes>
     <attList>
       <attDef ident="form" usage="opt">
-        <desc>Records semantic meaning, i.e., intended performance, of the mordent. The
+        <desc>Records semantic meaning, <abbr>i.e.</abbr>, intended performance, of the mordent. The
             <att>altsym</att>, <att>glyph.name</att>, or <att>glyph.num</att> attributes may be used
           to specify the appropriate symbol.</desc>
         <valList type="closed">
@@ -20559,7 +20559,7 @@
         </datatype>
       </attDef>
       <attDef ident="form" usage="opt">
-        <desc>Records meaning; i.e., intended performance, of the turn. The <att>altsym</att>,
+        <desc>Records meaning; <abbr>i.e.</abbr>, intended performance, of the turn. The <att>altsym</att>,
             <att>glyph.name</att>, or <att>glyph.num</att> attributes may be used to specify the
           appropriate symbol.</desc>
         <valList type="closed">
@@ -20634,7 +20634,7 @@
     </constraintSpec>
     <remarks>
       <p>The interval between the main and auxiliary notes is usually understood to be diatonic
-        unless altered by an accidental. The starting note of the trill; i.e., the written one or
+        unless altered by an accidental. The starting note of the trill; <abbr>i.e.</abbr>, the written one or
         the ornamenting one, and the speed of alternation depends on performance practice. The
         starting point of the trill may be indicated by either a <att>startid</att>,
           <att>tstamp</att>, <att>tstamp.ges</att>, or <att>tstamp.real</att> attribute, while the
@@ -20762,9 +20762,9 @@
     <remarks>
       <p>The alternatives provided in <gi scheme="MEI">lem</gi> and/or <gi scheme="MEI">rdg</gi>
         sub-elements may be thought of as exclusive or as parallel. The <att>type</att> attribute
-        may contain any convenient descriptive word, describing the extent of the variation (e.g.
-        note, phrase, measure, etc.), its text-critical significance (e.g. significant, accidental,
-        unclear), or the nature of the variation or the principles required to understand it (e.g.
+        may contain any convenient descriptive word, describing the extent of the variation (<abbr>e.g.</abbr>,
+        note, phrase, measure, etc.), its text-critical significance (<abbr>e.g.</abbr>, significant, accidental,
+        unclear), or the nature of the variation or the principles required to understand it (<abbr>e.g.</abbr>,
         lectio difficilior, usus auctoris, etc.).</p>
     </remarks>
     <remarks>
@@ -21625,8 +21625,8 @@
     </attList>
     <remarks>
       <p>The <att>character</att> attribute describes characteristics of the hand, particularly
-        those related to the quality of the writing, e.g., 'shaky', 'thick', regular'. A description
-        of the tint or type of ink, e.g. 'brown' or the writing medium, e.g. 'pencil', may be placed
+        those related to the quality of the writing, <abbr>e.g.</abbr>, 'shaky', 'thick', regular'. A description
+        of the tint or type of ink, <abbr>e.g.</abbr>, 'brown' or the writing medium, <abbr>e.g.</abbr>, 'pencil', may be placed
         in the <att>medium</att> attribute. The new hand may be identified using the <att>new</att>
         attribute, while the previous hand may be recorded in the <att>old</att> attribute. The
         <att>resp</att> attribute contains an ID reference to an element containing the name of the
@@ -21680,7 +21680,7 @@
         </datatype>
         <valList type="semi">
           <valItem ident="confirmation">
-            <desc>confirmation of a previous textual decision; i.e., cancellation of a deleted
+            <desc>confirmation of a previous textual decision; <abbr>i.e.</abbr>, cancellation of a deleted
               passage in a different writing medium.</desc>
           </valItem>
           <valItem ident="addition">
@@ -21965,7 +21965,7 @@
         causative agent. When the presumed loss of text arises from action (partial deletion, etc.)
         assignable to an identifiable hand, the <att>hand</att> attribute signifies the hand
         responsible for the action. The <att>reason</att> attribute indicates why the text has to be
-        supplied, e.g. 'overbinding', 'faded ink', 'lost folio', 'omitted in original', etc. The
+        supplied, <abbr>e.g.</abbr>, 'overbinding', 'faded ink', 'lost folio', 'omitted in original', etc. The
         <att>source</att> attribute contains the source of the supplied text. The editor(s)
         responsible for supplied material may be recorded in the <att>resp</att> attribute. The
         value of resp must point to one or more identifiers declared in the document header. The
@@ -22070,7 +22070,7 @@
         </constraintSpec>
       </attDef>
       <attDef ident="glyph.num" usage="opt">
-        <desc>Numeric glyph reference in hexadecimal notation, e.g. "#xE000" or "U+E000". N.B. SMuFL
+        <desc>Numeric glyph reference in hexadecimal notation, <abbr>e.g.</abbr>, "#xE000" or "U+E000". N.B. SMuFL
           version 1.18 uses the range U+E000 - U+ECBF.</desc>
         <datatype>
           <rng:ref name="data.HEXNUM"/>
@@ -22788,7 +22788,7 @@
         expressing FRBR's hasPart and isPartOf relationships, it avoids this terminology in order to
         prevent confusion with musical terminology. Work, expression, and item components must be
         the same type as the parent of componentList: <gi scheme="MEI">work</gi> children are
-        allowed within <gi scheme="MEI">work</gi>, etc. Manifestations; i.e., sources, may have
+        allowed within <gi scheme="MEI">work</gi>, etc. Manifestations; <abbr>i.e.</abbr>, sources, may have
         either <gi scheme="MEI">source</gi> or <gi scheme="MEI">item</gi>components as required to
         accommodate composite sources (those containing multiple sources) or multi-part sources
         (those made up of several physical items.</p>
@@ -23355,14 +23355,14 @@
         </datatype>
       </attDef>
       <attDef ident="dur.ppq" usage="opt">
-        <desc>Duration recorded as pulses-per-quarter note, e.g. MIDI clicks or MusicXML
+        <desc>Duration recorded as pulses-per-quarter note, <abbr>e.g.</abbr>, MIDI clicks or MusicXML
           divisions.</desc>
         <datatype>
           <rng:data type="nonNegativeInteger"/>
         </datatype>
       </attDef>
       <attDef ident="dur.real" usage="opt">
-        <desc>Duration in seconds, e.g. '1.732'.</desc>
+        <desc>Duration in seconds, <abbr>e.g.</abbr>, '1.732'.</desc>
         <datatype>
           <rng:data type="decimal">
             <rng:param name="pattern">\d+(\.\d+)?</rng:param>
@@ -23762,7 +23762,7 @@
         </datatype>
       </attDef>
       <attDef ident="tune.Hz" usage="opt">
-        <desc>Holds a value for cycles per second, i.e., Hertz, for a tuning reference pitch.</desc>
+        <desc>Holds a value for cycles per second, <abbr><abbr>i.e.</abbr>,</abbr>, Hertz, for a tuning reference pitch.</desc>
         <datatype>
           <rng:data type="decimal"/>
         </datatype>
@@ -23885,7 +23885,7 @@
     <desc>Attributes that record a performed (as opposed to notated) time stamp.</desc>
     <attList>
       <attDef ident="tstamp.ges" usage="opt">
-        <desc>Encodes the onset time in terms of musical time, i.e., beats[.fractional beat part],
+        <desc>Encodes the onset time in terms of musical time, <abbr>i.e.</abbr>, beats[.fractional beat part],
           as expressed in the written time signature.</desc>
         <datatype>
           <rng:ref name="data.BEAT"/>
@@ -23904,7 +23904,7 @@
       event.</desc>
     <attList>
       <attDef ident="tstamp2.ges" usage="opt">
-        <desc>Encodes the ending point of an event, i.e., a count of measures plus a beat location
+        <desc>Encodes the ending point of an event, <abbr>i.e.</abbr>, a count of measures plus a beat location
           in the ending measure.</desc>
         <datatype>
           <rng:ref name="data.MEASUREBEAT"/>
@@ -24127,7 +24127,7 @@
     </content>
   </elementSpec>
   <elementSpec ident="harm" module="MEI.harmony">
-    <desc>(harmony) – An indication of harmony, e.g., chord names, tablature grids, harmonic
+    <desc>(harmony) – An indication of harmony, <abbr>e.g.</abbr>, chord names, tablature grids, harmonic
       analysis, figured bass.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -24339,9 +24339,9 @@
           <item>Use for motion pictures, videorecordings (including digital video), filmstrips,
             slide, transparencies or material specifically designed for projection.</item>
           <label>i</label>
-          <item>Use for recordings of nonmusical sounds (e.g., speech).</item>
+          <item>Use for recordings of nonmusical sounds (<abbr>e.g.</abbr>, speech).</item>
           <label>j</label>
-          <item>Use for musical sound recording (e.g., phonodiscs, compact discs, or cassette
+          <item>Use for musical sound recording (<abbr>e.g.</abbr>, phonodiscs, compact discs, or cassette
             tapes.</item>
           <label>k</label>
           <item>Use for two-dimensional nonprojectable graphics such as, activity cards, charts,
@@ -24352,7 +24352,7 @@
           <label>m</label>
           <item>Use for computer software (including programs, games, fonts), numeric data,
             computer-oriented multimedia, online systems or services. Other classes of electronic
-            resources are coded for their most significant aspect (e.g. language material, graphic,
+            resources are coded for their most significant aspect (<abbr>e.g.</abbr>, language material, graphic,
             cartographic material, sound, music, moving image). In case of doubt or if the most
             significant aspect cannot be determined, consider the item a computer file.</item>
           <label>o</label>
@@ -24366,7 +24366,7 @@
           <item>Use for materials in two or more forms that are usually related by virtue of their
             having been accumulated by or about a person or body. Includes archival fonds and
             manuscript collections of mixed forms of materials, such as text, photographs, and sound
-            recordings. Intended primary purpose is other than for instructional purposes (i.e.,
+            recordings. Intended primary purpose is other than for instructional purposes (<abbr>i.e.</abbr>,
             materials coded as "o").</item>
           <label>r</label>
           <item>Includes man-made objects such as models, dioramas, games, puzzles, simulations,
@@ -24591,8 +24591,8 @@
     </attList>
   </elementSpec>
   <elementSpec ident="audience" module="MEI.header">
-    <desc>Defines the class of user for which the work is intended, as defined by age group (e.g.,
-      children, young adults, adults, etc.), educational level (e.g., primary, secondary, etc.), or
+    <desc>Defines the class of user for which the work is intended, as defined by age group (<abbr>e.g.</abbr>,
+      children, young adults, adults, etc.), educational level (<abbr>e.g.</abbr>, primary, secondary, etc.), or
       other categorization.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -24671,7 +24671,7 @@
   </elementSpec>
   <elementSpec ident="captureMode" module="MEI.header">
     <desc>(capture mode) – The means used to record notation, sound, or images in the production of
-      a source/manifestation (e.g., analogue, acoustic, electric, digital, optical etc.).</desc>
+      a source/manifestation (<abbr>e.g.</abbr>, analogue, acoustic, electric, digital, optical etc.).</desc>
     <classes>
       <memberOf key="att.common"/>
       <memberOf key="att.authorized"/>
@@ -24685,9 +24685,9 @@
   </elementSpec>
   <elementSpec ident="carrierForm" module="MEI.header">
     <desc>(carrier form) – The specific class of material to which the physical carrier of the
-      source/manifestation belongs (e.g., sound cassette, videodisc, microfilm cartridge,
+      source/manifestation belongs (<abbr>e.g.</abbr>, sound cassette, videodisc, microfilm cartridge,
       transparency, etc.). The carrier for a manifestation comprising multiple physical components
-      may include more than one form (e.g., a filmstrip with an accompanying booklet, a separate
+      may include more than one form (<abbr>e.g.</abbr>, a filmstrip with an accompanying booklet, a separate
       sound disc carrying the sound track for a film, etc.).</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -24880,7 +24880,7 @@
   </elementSpec>
   <elementSpec ident="condition" module="MEI.header">
     <desc>The physical condition of an item, particularly any variances between the physical make-up
-      of the item and that of other copies of the same item (e.g., missing pages or plates,
+      of the item and that of other copies of the same item (<abbr>e.g.</abbr>, missing pages or plates,
       brittleness, faded images, etc.).</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -24982,7 +24982,7 @@
   </elementSpec>
   <elementSpec ident="context" module="MEI.header">
     <desc>The historical, social, intellectual, artistic, or other context within which the work was
-      originally conceived (e.g., the 17th century restoration of the monarchy in England, the
+      originally conceived (<abbr>e.g.</abbr>, the 17th century restoration of the monarchy in England, the
       aesthetic movement of the late 19th century, etc.) or the historical, social, intellectual,
       artistic, or other context within which the expression was realized.</desc>
     <classes>
@@ -25095,7 +25095,7 @@
       </attDef>
     </attList>
     <remarks>
-      <p>The dimensions (@width, @height) of the parent element (e.g. <gi scheme="MEI">folium</gi>)
+      <p>The dimensions (@width, @height) of the parent element (<abbr>e.g.</abbr>, <gi scheme="MEI">folium</gi>)
         indicate the size of the bounding box of the remaining part of the page. That is, if the
         complete lower half of a page has been cut, the @width and @height attributes describe the
         remaining upper half. If, in contrast, only the lower right quarter of the page has been
@@ -25302,8 +25302,8 @@
     </content>
   </elementSpec>
   <elementSpec ident="fileChar" module="MEI.header">
-    <desc>(file characteristics) – Standards or schemes used to encode the file (e.g., ASCII, SGML,
-      etc.), physical characteristics of the file (e.g., recording density, parity, blocking, etc.),
+    <desc>(file characteristics) – Standards or schemes used to encode the file (<abbr>e.g.</abbr>, ASCII, SGML,
+      etc.), physical characteristics of the file (<abbr>e.g.</abbr>, recording density, parity, blocking, etc.),
       and other characteristics that have a bearing on how the file can be processed.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -25435,8 +25435,8 @@
     </attList>
     <remarks>
       <p>The <att>initial</att> attribute indicates whether this is the first or main hand of the
-        document. The <att>medium</att> attribute describes the writing medium, e.g., 'pencil', or
-        the tint or type of ink, e.g. 'brown'. The <att>resp</att> attribute contains an ID
+        document. The <att>medium</att> attribute describes the writing medium, <abbr>e.g.</abbr>, 'pencil', or
+        the tint or type of ink, <abbr>e.g.</abbr>, 'brown'. The <att>resp</att> attribute contains an ID
         reference to an element containing the name of the editor or transcriber responsible for
         identifying the hand. The characteristics of the hand, particularly those related to the
         quality of the writing, such as 'shaky', 'thick', etc. may be described within the content
@@ -25741,7 +25741,7 @@
             <desc>Header is attached to a corpus.</desc>
           </valItem>
           <valItem ident="independent">
-            <desc>Header is independent; i.e., not attached to either a music or a corpus
+            <desc>Header is independent; <abbr>i.e.</abbr>, not attached to either a music or a corpus
               document.</desc>
           </valItem>
         </valList>
@@ -25984,7 +25984,7 @@
     </content>
     <attList>
       <attDef ident="isodur" usage="opt">
-        <desc>Holds a W3C duration value, e.g., "PT2H34M45.67S".</desc>
+        <desc>Holds a W3C duration value, <abbr>e.g.</abbr>, "PT2H34M45.67S".</desc>
         <datatype>
           <rng:data type="duration"/>
         </datatype>
@@ -26112,7 +26112,7 @@
     </content>
     <remarks>
       <p>Dedicatory text and title page features may also be encoded here when they are not
-        transcribed as part of the front or back matter; i.e., when they are considered to be
+        transcribed as part of the front or back matter; <abbr>i.e.</abbr>, when they are considered to be
         meta-data rather than a transcription.</p>
     </remarks>
     <remarks>
@@ -26165,7 +26165,7 @@
   </elementSpec>
   <elementSpec ident="playingSpeed" module="MEI.header">
     <desc>Playing speed for a sound recording is the speed at which the carrier must be operated to
-      produce the sound intended (e.g., 33 1/3 rpm, 19 cm/s, etc.).</desc>
+      produce the sound intended (<abbr>e.g.</abbr>, 33 1/3 rpm, 19 cm/s, etc.).</desc>
     <classes>
       <memberOf key="att.common"/>
       <memberOf key="att.bibl"/>
@@ -26348,7 +26348,7 @@
     </remarks>
   </elementSpec>
   <elementSpec ident="scoreFormat" module="MEI.header">
-    <desc>Describes the type of score used to represent a musical composition (e.g., short score,
+    <desc>Describes the type of score used to represent a musical composition (<abbr>e.g.</abbr>, short score,
       full score, condensed score, close score, etc.).</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -26449,7 +26449,7 @@
     </attList>
     <remarks>
       <p>The number of apparent playback channels can differ from the number of physical channels of
-        the recording medium, i.e., 2-track monophonic recordings. In this example, the soundChan
+        the recording medium, <abbr>i.e.</abbr>, 2-track monophonic recordings. In this example, the soundChan
         element should record the fact that there is a single output channel, while the <gi scheme="MEI">trackConfig</gi> element should capture the existence of two physical tracks.
         This element is analogous to MARC field 344 subfield g.</p>
     </remarks>
@@ -26527,7 +26527,7 @@
   </elementSpec>
   <elementSpec ident="specRepro" module="MEI.header">
     <desc>(special reproduction characteristic) – The equalization system, noise reduction system,
-      etc. used in making the recording (e.g., NAB, DBX, Dolby, etc.).</desc>
+      etc. used in making the recording (<abbr>e.g.</abbr>, NAB, DBX, Dolby, etc.).</desc>
     <classes>
       <memberOf key="att.common"/>
       <memberOf key="att.authorized"/>
@@ -26728,7 +26728,7 @@
     </remarks>
   </elementSpec>
   <elementSpec ident="trackConfig" module="MEI.header">
-    <desc>(track configuration) – Number of physical/input tracks on a sound medium (e.g., eight
+    <desc>(track configuration) – Number of physical/input tracks on a sound medium (<abbr>e.g.</abbr>, eight
       track, twelve track).</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -26750,7 +26750,7 @@
     </attList>
     <remarks>
       <p>The number of apparent playback channels can differ from the number of physical channels of
-        the recording medium, i.e., 2-track monophonic recordings. In this example, the trackConfig
+        the recording medium, <abbr>i.e.</abbr>, 2-track monophonic recordings. In this example, the trackConfig
         element should record the fact that there are two physical tracks on the sound medium, while
         the <gi scheme="MEI">soundChan</gi> element should be used to state that there is a single
         output channel. This element may be mapped to MARC field 344 subfield e or subfield f as
@@ -26758,7 +26758,7 @@
     </remarks>
   </elementSpec>
   <elementSpec ident="treatHist" module="MEI.header">
-    <desc>(treatment history) – A record of the treatment the item has undergone (e.g.,
+    <desc>(treatment history) – A record of the treatment the item has undergone (<abbr>e.g.</abbr>,
       de-acidification, restoration, etc.).</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -26770,7 +26770,7 @@
       <rng:ref name="macro.struc-unstrucContent"/>
     </content>
     <remarks>
-      <p>Treatment history may also comprise details of the treatment process (e.g., chemical
+      <p>Treatment history may also comprise details of the treatment process (<abbr>e.g.</abbr>, chemical
         solutions used, techniques applied, etc.), the date the treatment was applied, etc.</p>
     </remarks>
     <remarks>
@@ -26779,7 +26779,7 @@
     </remarks>
   </elementSpec>
   <elementSpec ident="treatSched" module="MEI.header">
-    <desc>(treatment scheduled) – Scheduled treatment, e.g. de-acidification, restoration, etc., for
+    <desc>(treatment scheduled) – Scheduled treatment, <abbr>e.g.</abbr>, de-acidification, restoration, etc., for
       an item.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -26860,7 +26860,7 @@
   </elementSpec>
   <elementSpec ident="work" module="MEI.header">
     <desc>Provides a detailed description of a work — a distinct intellectual or artistic creation —
-      specifically its history, language use, and high-level musical attributes (e.g., key, tempo,
+      specifically its history, language use, and high-level musical attributes (<abbr>e.g.</abbr>, key, tempo,
       meter, medium of performance, and intended duration).</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -26972,15 +26972,15 @@
   </classSpec>
   <classSpec ident="att.refrain.log" module="MEI.lyrics" type="atts">
     <desc>Logical domain attributes. The n attribute should be used for verse numbers. Numbers need
-      not be consecutive; they may also be expressed as ranges, e.g. 2-3,6.</desc>
+      not be consecutive; they may also be expressed as ranges, <abbr>e.g.</abbr>, 2-3,6.</desc>
   </classSpec>
   <classSpec ident="att.verse.log" module="MEI.lyrics" type="atts">
     <desc>Logical domain attributes. The n attribute should be used for verse numbers. Numbers need
-      not be consecutive; they may also be expressed as ranges, e.g. 2-3,6.</desc>
+      not be consecutive; they may also be expressed as ranges, <abbr>e.g.</abbr>, 2-3,6.</desc>
   </classSpec>
   <classSpec ident="att.volta.log" module="MEI.lyrics" type="atts">
     <desc>Logical domain attributes. The n attribute should be used for repetition numbers. Numbers
-      need not be consecutive; they may also be expressed as ranges, e.g. 2-3,6.</desc>
+      need not be consecutive; they may also be expressed as ranges, <abbr>e.g.</abbr>, 2-3,6.</desc>
   </classSpec>
   <classSpec ident="model.verseLike" module="MEI.lyrics" type="model">
     <desc>Groups elements that contain a lyric verse.</desc>
@@ -27274,7 +27274,7 @@
     <desc>Attribute that expresses duration for a given mensural note symbol.</desc>
     <attList>
       <attDef ident="dur.quality" usage="rec">
-        <desc>Encodes the durational quality of a mensural note using the values provided by the data.DURQUALITY.mensural datatype (i.e., the perfect / imperfect / altered / major / minor / duplex quality of a note).</desc>
+        <desc>Encodes the durational quality of a mensural note using the values provided by the data.DURQUALITY.mensural datatype (<abbr>i.e.</abbr>, the perfect / imperfect / altered / major / minor / duplex quality of a note).</desc>
         <datatype>
           <rng:ref name="data.DURQUALITY.mensural"/>
         </datatype>
@@ -27320,7 +27320,7 @@
     <desc>Used by staffDef and scoreDef to provide default values for attributes in the logical
       domain related to mensuration. The tempus, prolatio, modusmaior, and modusminor attributes
       (from the att.mensural.shared class) specify the relationship between the four principle
-      levels of note value, i.e., the long, breve, semibreve and minim, in mensural notation.
+      levels of note value, <abbr>i.e.</abbr>, the long, breve, semibreve and minim, in mensural notation.
       Modusminor describes the long-breve relationship, while tempus describes the breve-semibreve,
       and prolatio the semibreve-minim relationship, respectively. Modusmaior is for the maxima-long
       relationship. The proport.* attributes describe augmentation or diminution of the normal value
@@ -27331,14 +27331,14 @@
     <attList>
       <attDef ident="proport.num" usage="opt">
         <desc>Together, proport.num and proport.numbase specify a proportional change as a ratio,
-          e.g., 1:3. Proport.num is for the first value in the ratio.</desc>
+          <abbr>e.g.</abbr>, 1:3. Proport.num is for the first value in the ratio.</desc>
         <datatype>
           <rng:data type="positiveInteger"/>
         </datatype>
       </attDef>
       <attDef ident="proport.numbase" usage="opt">
         <desc>Together, proport.num and proport.numbase specify a proportional change as a ratio,
-          e.g., 1:3. Proport.numbase is for the second value in the ratio.</desc>
+          <abbr>e.g.</abbr>, 1:3. Proport.numbase is for the second value in the ratio.</desc>
         <datatype>
           <rng:data type="positiveInteger"/>
         </datatype>
@@ -28088,7 +28088,7 @@
     </content>
     <remarks>
       <p>The <att>label</att> attribute can be used to differentiate between multiple MIDI data
-        streams, e.g. quantized/unquantized, straight/swing, ornamented/as notated, etc.</p>
+        streams, <abbr>e.g.</abbr>, quantized/unquantized, straight/swing, ornamented/as notated, etc.</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="noteOff" module="MEI.midi">
@@ -28263,7 +28263,7 @@
     </remarks>
   </elementSpec>
   <elementSpec ident="binding" module="MEI.msDesc">
-    <desc>(binding) – Contains a description of one binding, i.e. type of covering, boards, etc.
+    <desc>(binding) – Contains a description of one binding, <abbr>i.e.</abbr>, type of covering, boards, etc.
       applied to an item.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -29758,7 +29758,7 @@
         </valList>
       </attDef>
       <attDef ident="s-shape" usage="opt">
-        <desc>Direction of the initial direction for an s-shaped pen stroke; i.e., "w" for the
+        <desc>Direction of the initial direction for an s-shaped pen stroke; <abbr>i.e.</abbr>, "w" for the
           standard letter S, "e" for its mirror image, "s" for the letter S turned 90-degrees
           anti-clockwise, and "n" for its mirror image.</desc>
         <datatype>
@@ -30698,7 +30698,7 @@
   </classSpec>
   <classSpec ident="att.annot.log" module="MEI.shared" type="atts">
     <desc>Logical domain attributes for annot. Values for the type attribute can be taken from any
-      convenient typology of annotation suitable to the work in hand; e.g. annotation, gloss,
+      convenient typology of annotation suitable to the work in hand; <abbr>e.g.</abbr>, annotation, gloss,
       citation, digression, preliminary, temporary, etc.</desc>
     <!-- Some attributes defined in att.controlEvent (att.timestamp.logical, att.timestamp.gestural,
           att.staffIdent, and att.layerIdent) are provided here directly instead of making annot a
@@ -30845,7 +30845,7 @@
     <attList>
       <attDef ident="bar.len" usage="opt">
         <desc>States the length of barlines in virtual units. The value must be greater than 0 and
-          is typically equal to 2 times (the number of staff lines - 1); e.g., a value of '8' for a
+          is typically equal to 2 times (the number of staff lines - 1); <abbr>e.g.</abbr>, a value of '8' for a
           5-line staff.</desc>
         <datatype>
           <rng:data type="decimal">
@@ -30918,7 +30918,7 @@
       <p>Mapping elements from one system to another via <att>analog</att> may help a repository
         harvest selected data from the MEI file to build a basic catalog record. The encoding system
         from which fields are taken must be specified. When possible, subfields as well as fields
-        should be specified, e.g., subfields within MARC fields.</p>
+        should be specified, <abbr>e.g.</abbr>, subfields within MARC fields.</p>
     </remarks>
   </classSpec>
   <classSpec ident="att.caesura.log" module="MEI.shared" type="atts">
@@ -31190,7 +31190,7 @@
     <attList>
       <attDef ident="bezier" usage="opt">
         <desc>Records the placement of Bezier control points as a series of pairs of space-separated
-          values; e.g., 19 45 -32 118.</desc>
+          values; <abbr>e.g.</abbr>, 19 45 -32 118.</desc>
         <datatype>
           <rng:list>
             <rng:oneOrMore>
@@ -31540,7 +31540,7 @@
     </attList>
   </classSpec>
   <classSpec ident="att.event" module="MEI.shared" type="atts">
-    <desc>Attributes that apply to all written events, e.g., note, chord, rest, etc.</desc>
+    <desc>Attributes that apply to all written events, <abbr>e.g.</abbr>, note, chord, rest, etc.</desc>
     <classes>
       <memberOf key="att.alignment"/>
       <memberOf key="att.layerIdent"/>
@@ -31776,7 +31776,7 @@
       </attDef>
     </attList>
     <remarks>
-      <p>Mixed key signatures, e.g. those consisting of a mixture of flats and sharps (Read, p. 143,
+      <p>Mixed key signatures, <abbr>e.g.</abbr>, those consisting of a mixture of flats and sharps (Read, p. 143,
         ex. 9-39), and key signatures with unorthodox placement of the accidentals (Read, p. 141)
         can be encoded using the <gi scheme="MEI">keySig</gi> element.</p>
     </remarks>
@@ -31793,7 +31793,7 @@
       </attDef>
     </attList>
     <remarks>
-      <p>Mixed key signatures, e.g. those consisting of a mixture of flats and sharps (Read, p. 143,
+      <p>Mixed key signatures, <abbr>e.g.</abbr>, those consisting of a mixture of flats and sharps (Read, p. 143,
         ex. 9-39), and key signatures with unorthodox placement of the accidentals (Read, p. 141)
         can be encoded using the <gi scheme="MEI">keySig</gi> element.</p>
     </remarks>
@@ -32324,13 +32324,13 @@
           meter.</desc>
         <valList type="closed">
           <valItem ident="c">
-            <desc>Complete; i.e., conformant with the prevailing meter.</desc>
+            <desc>Complete; <abbr>i.e.</abbr>, conformant with the prevailing meter.</desc>
           </valItem>
           <valItem ident="i">
-            <desc>Incomplete; i.e., not enough beats.</desc>
+            <desc>Incomplete; <abbr>i.e.</abbr>, not enough beats.</desc>
           </valItem>
           <valItem ident="o">
-            <desc>Overfull; i.e., too many beats.</desc>
+            <desc>Overfull; <abbr>i.e.</abbr>, too many beats.</desc>
           </valItem>
         </valList>
       </attDef>
@@ -32583,7 +32583,7 @@
             <sch:rule context="mei:*[lower-case(@head.auth) eq 'smufl']">
               <sch:assert test="matches(@head.shape, '^#x') or matches(@head.shape, '^U+')">When
                 @head.auth matches 'smufl', @head.shape must contain a numeric glyph reference in
-                hexadecimal notation, e.g. "#xE000" or "U+E000".</sch:assert>
+                hexadecimal notation, <abbr>e.g.</abbr>, "#xE000" or "U+E000".</sch:assert>
             </sch:rule>
           </constraint>
         </constraintSpec>
@@ -32765,14 +32765,14 @@
     <desc>Attributes that identify a musical range in terms of musical time.</desc>
     <attList>
       <attDef ident="origin.tstamp" usage="opt">
-        <desc>encodes the starting point of musical material in terms of musical time, i.e., a
+        <desc>encodes the starting point of musical material in terms of musical time, <abbr>i.e.</abbr>, a
           (potentially negative) count of measures plus a beat location.</desc>
         <datatype>
           <rng:ref name="data.MEASUREBEATOFFSET"/>
         </datatype>
       </attDef>
       <attDef ident="origin.tstamp2" usage="rec">
-        <desc>encodes the ending point of musical material in terms of musical time, i.e., a count
+        <desc>encodes the ending point of musical material in terms of musical time, <abbr>i.e.</abbr>, a count
           of measures plus a beat location. The values are relative to the measure identified by
           <att>origin.tstamp</att>.</desc>
         <datatype>
@@ -33389,16 +33389,16 @@
         <desc>Specifies the symbol used to group a set of staves.</desc>
         <valList type="closed">
           <valItem ident="brace">
-            <desc>Curved symbol, i.e., {.</desc>
+            <desc>Curved symbol, <abbr>i.e.</abbr>, {.</desc>
           </valItem>
           <valItem ident="bracket">
-            <desc>Square symbol, i.e., [, but with curved/angled top and bottom segments.</desc>
+            <desc>Square symbol, <abbr>i.e.</abbr>, [, but with curved/angled top and bottom segments.</desc>
           </valItem>
           <valItem ident="bracketsq">
-            <desc>Square symbol, i.e., [, with horizontal top and bottom segments.</desc>
+            <desc>Square symbol, <abbr>i.e.</abbr>, [, with horizontal top and bottom segments.</desc>
           </valItem>
           <valItem ident="line">
-            <desc>Line symbol, i.e., |, (wide) line without top and bottom curved/horizontal
+            <desc>Line symbol, <abbr>i.e.</abbr>, |, (wide) line without top and bottom curved/horizontal
               segments.</desc>
           </valItem>
           <valItem ident="none">
@@ -33838,11 +33838,11 @@
     </attList>
   </classSpec>
   <classSpec ident="att.timestamp.logical" module="MEI.shared" type="atts">
-    <desc>Attributes that record a time stamp in terms of musical time, i.e., beats[.fractional beat
+    <desc>Attributes that record a time stamp in terms of musical time, <abbr>i.e.</abbr>, beats[.fractional beat
       part].</desc>
     <attList>
       <attDef ident="tstamp" usage="opt">
-        <desc>Encodes the onset time in terms of musical time, i.e., beats[.fractional beat part],
+        <desc>Encodes the onset time in terms of musical time, <abbr>i.e.</abbr>, beats[.fractional beat part],
           as expressed in the written time signature.</desc>
         <datatype>
           <rng:ref name="data.BEAT"/>
@@ -33855,7 +33855,7 @@
       time.</desc>
     <attList>
       <attDef ident="tstamp2" usage="opt">
-        <desc>Encodes the ending point of an event, i.e., a count of measures plus a beat location
+        <desc>Encodes the ending point of an event, <abbr>i.e.</abbr>, a count of measures plus a beat location
           in the ending measure.</desc>
         <datatype>
           <rng:ref name="data.MEASUREBEAT"/>
@@ -33867,14 +33867,14 @@
     <desc>Attributes that describe transposition.</desc>
     <attList>
       <attDef ident="trans.diat" usage="opt">
-        <desc>Records the amount of diatonic pitch shift, e.g., C to C♯ = 0, C to D♭ = 1, necessary
+        <desc>Records the amount of diatonic pitch shift, <abbr>e.g.</abbr>, C to C♯ = 0, C to D♭ = 1, necessary
           to calculate the sounded pitch from the written one.</desc>
         <datatype>
           <rng:data type="decimal"/>
         </datatype>
       </attDef>
       <attDef ident="trans.semi" usage="opt">
-        <desc>Records the amount of pitch shift in semitones, e.g., C to C♯ = 1, C to D♭ = 1,
+        <desc>Records the amount of pitch shift in semitones, <abbr>e.g.</abbr>, C to C♯ = 1, C to D♭ = 1,
           necessary to calculate the sounded pitch from the written one.</desc>
         <datatype>
           <rng:data type="decimal"/>
@@ -33934,9 +33934,9 @@
         </datatype>
       </attDef>
       <attDef ident="fontsize" usage="opt">
-        <desc>Indicates the size of a font expressed in printers' points, i.e., 1/72nd of an inch,
-          relative terms, e.g., "small", "larger", etc., or percentage values relative to "normal"
-          size, e.g., "125%". </desc>
+        <desc>Indicates the size of a font expressed in printers' points, <abbr>i.e.</abbr>, 1/72nd of an inch,
+          relative terms, <abbr>e.g.</abbr>, "small", "larger", etc., or percentage values relative to "normal"
+          size, <abbr>e.g.</abbr>, "125%". </desc>
         <datatype>
           <rng:ref name="data.FONTSIZE"/>
         </datatype>
@@ -34116,16 +34116,16 @@
         <desc>Specifies the symbol used to group lyrics.</desc>
         <valList type="closed">
           <valItem ident="brace">
-            <desc>Curved symbol, i.e., {.</desc>
+            <desc>Curved symbol, <abbr>i.e.</abbr>, {.</desc>
           </valItem>
           <valItem ident="bracket">
-            <desc>Square symbol, i.e., [, but with curved/angled top and bottom segments.</desc>
+            <desc>Square symbol, <abbr>i.e.</abbr>, [, but with curved/angled top and bottom segments.</desc>
           </valItem>
           <valItem ident="bracketsq">
-            <desc>Square symbol, i.e., [, with horizontal top and bottom segments.</desc>
+            <desc>Square symbol, <abbr>i.e.</abbr>, [, with horizontal top and bottom segments.</desc>
           </valItem>
           <valItem ident="line">
-            <desc>Line symbol, i.e., |, (wide) line without top and bottom curved/horizontal
+            <desc>Line symbol, <abbr>i.e.</abbr>, |, (wide) line without top and bottom curved/horizontal
               segments.</desc>
           </valItem>
           <valItem ident="none">
@@ -34702,7 +34702,7 @@
     </content>
   </elementSpec>
   <elementSpec ident="analytic" module="MEI.shared">
-    <desc>(analytic level) – Contains bibliographic elements describing an item (e.g. an article or
+    <desc>(analytic level) – Contains bibliographic elements describing an item (<abbr>e.g.</abbr>, an article or
       poem) published within a monograph or journal and not as an independent publication.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -35065,7 +35065,7 @@
   </elementSpec>
   <elementSpec ident="caesura" module="MEI.shared">
     <desc>Break, pause, or interruption in the normal tempo of a composition. Typically indicated by
-      "railroad tracks", i.e., two diagonal slashes.</desc>
+      "railroad tracks", <abbr>i.e.</abbr>, two diagonal slashes.</desc>
     <classes>
       <memberOf key="att.common"/>
       <memberOf key="att.facsimile"/>
@@ -35589,7 +35589,7 @@
               meeting the circumference or surface at each end.</desc>
           </valItem>
           <valItem ident="elevation">
-            <desc>Distance to which something has been raised or uplifted above a level, e.g. a
+            <desc>Distance to which something has been raised or uplifted above a level, <abbr>e.g.</abbr>, a
               hill's elevation above the surrounding country.</desc>
           </valItem>
           <valItem ident="height">
@@ -35875,8 +35875,8 @@
     </constraintSpec>
     <remarks>
       <p>This element may be used for instantaneous or continuous <emph>textual</emph> dynamics,
-        e.g. 'p', 'mf', or 'cresc. poco a poco'. The <gi scheme="MEI">hairpin</gi> element should be
-        used for <emph>graphical</emph>, i.e., crescendo and diminuendo, dynamic markings. The
+        <abbr>e.g.</abbr>, 'p', 'mf', or 'cresc. poco a poco'. The <gi scheme="MEI">hairpin</gi> element should be
+        used for <emph>graphical</emph>, <abbr>i.e.</abbr>, crescendo and diminuendo, dynamic markings. The
         starting point of the dynamic marking may be indicated by either a <att>startid</att>,
         <att>tstamp</att>, <att>tstamp.ges</att>, or <att>tstamp.real</att> attribute, while the
         ending point may be recorded by either a <att>dur</att>, <att>dur.ges</att>,
@@ -35888,8 +35888,8 @@
   <elementSpec ident="edition" module="MEI.shared">
     <desc>(edition designation) – A word or text phrase that indicates a difference in either
       content or form between the item being described and a related item previously issued by the
-      same publisher/distributor (e.g. 2nd edition, version 2.0, etc.), or simultaneously issued by
-      either the same publisher/distributor or another publisher/distributor (e.g. large print
+      same publisher/distributor (<abbr>e.g.</abbr>, 2nd edition, version 2.0, etc.), or simultaneously issued by
+      either the same publisher/distributor or another publisher/distributor (<abbr>e.g.</abbr>, large print
       edition, British edition, etc.).</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -35937,7 +35937,7 @@
     </remarks>
   </elementSpec>
   <elementSpec ident="ending" module="MEI.shared">
-    <desc>Alternative ending for a repeated passage of music; i.e., prima volta, seconda volta,
+    <desc>Alternative ending for a repeated passage of music; <abbr>i.e.</abbr>, prima volta, seconda volta,
       etc.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -35975,7 +35975,7 @@
       <p>The <gi scheme="MEI">scoreDef</gi> element is allowed as a sub-element so that an ending
         may have its own meta-data without the overhead of child <gi scheme="MEI">section</gi>
         elements. <gi scheme="MEI">div</gi> sub-elements are not allowed within ending. They may,
-        however, be contained by the children of ending, e.g., measures. Endings may not contain
+        however, be contained by the children of ending, <abbr>e.g.</abbr>, measures. Endings may not contain
         other ending elements.</p>
     </remarks>
   </elementSpec>
@@ -36606,7 +36606,7 @@
   </elementSpec>
   <elementSpec ident="lg" module="MEI.shared">
     <desc>(line group) – May be used for any section of text that is organized as a group of lines;
-      however, it is most often used for a group of verse lines functioning as a formal unit, e.g. a
+      however, it is most often used for a group of verse lines functioning as a formal unit, <abbr>e.g.</abbr>, a
       stanza, refrain, verse paragraph, etc.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -36892,7 +36892,7 @@
             <desc>Name of a process or software application.</desc>
           </valItem>
           <valItem ident="style">
-            <desc>Name of a musical style; i.e., form, genre, technique, etc.</desc>
+            <desc>Name of a musical style; <abbr>i.e.</abbr>, form, genre, technique, etc.</desc>
           </valItem>
           <valItem ident="time">
             <desc>Name of a period of time.</desc>
@@ -36952,7 +36952,7 @@
     <remarks>
       <p>The <gi scheme="MEI">accid</gi> and <gi scheme="MEI">artic</gi> sub-elements may be used
         instead of the note element's attributes when accid and artic represent first-class objects,
-        e.g., when they require attributes, such as <att>x</att> and <att>y</att> location
+        <abbr>e.g.</abbr>, when they require attributes, such as <att>x</att> and <att>y</att> location
         attributes. Similarly, the <gi scheme="MEI">syl</gi> sub-element may be used instead of the
         <att>syl</att> attribute. The verse sub-element may be used to group text syllables by
         verse. The <att>colored</att> attribute may be used to indicate coloration. In the mensural
@@ -37150,7 +37150,7 @@
     </content>
     <remarks>
       <p>The <att>n</att> attribute should be used to record the page number displayed in the
-        source. It need not be an integer, e.g., 'iv', or 'p17-3'. The logical page number can be
+        source. It need not be an integer, <abbr>e.g.</abbr>, 'iv', or 'p17-3'. The logical page number can be
         calculated by counting previous <gi scheme="MEI">pb</gi> ancestor elements. When used in a
         score context, a page beginning implies an accompanying system beginning.</p>
     </remarks>
@@ -37499,7 +37499,7 @@
     </content>
     <attList>
       <attDef ident="rel" usage="req">
-        <desc>Describes the relationship between the entity identified by the <gi scheme="MEI">relatedItem</gi> element and the resource described in the parent element, i.e., <gi scheme="MEI">bibl</gi>, <gi scheme="MEI">source</gi> or <gi scheme="MEI">relatedItem</gi>.</desc>
+        <desc>Describes the relationship between the entity identified by the <gi scheme="MEI">relatedItem</gi> element and the resource described in the parent element, <abbr>i.e.</abbr>, <gi scheme="MEI">bibl</gi>, <gi scheme="MEI">source</gi> or <gi scheme="MEI">relatedItem</gi>.</desc>
         <datatype>
           <rng:ref name="data.MODSRELATIONSHIP"/>
         </datatype>
@@ -37576,7 +37576,7 @@
     </content>
   </elementSpec>
   <elementSpec ident="rend" module="MEI.shared">
-    <desc>(render) – A formatting element indicating special visual rendering, e.g., bold or
+    <desc>(render) – A formatting element indicating special visual rendering, <abbr>e.g.</abbr>, bold or
       italicized, of a text word or phrase.</desc>
     <classes>
       <memberOf key="att.color"/>
@@ -38374,7 +38374,7 @@
       </constraint>
     </constraintSpec>
     <remarks>
-      <p>The starting point, e.g. "hotspot", of the symbol may be identified in absolute output
+      <p>The starting point, <abbr>e.g.</abbr>, "hotspot", of the symbol may be identified in absolute output
         coordinate terms using the <att>x</att> and <att>y</att> attributes or relative to another
         element using the <att>startid</att> attribute. Attributes in the att.visualOffset class may
         be used to record horizontal, vertical, or time offsets from the absolute coordinates or
@@ -38384,7 +38384,7 @@
     </remarks>
   </elementSpec>
   <elementSpec ident="tempo" module="MEI.shared">
-    <desc>Text and symbols descriptive of tempo, mood, or style, e.g., "allarg.", "a tempo",
+    <desc>Text and symbols descriptive of tempo, mood, or style, <abbr>e.g.</abbr>, "allarg.", "a tempo",
       "cantabile", "Moderato", "♩=60", "Moderato ♩ =60").</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -38454,7 +38454,7 @@
     </constraintSpec>
     <remarks>
       <p>The <gi scheme="MEI">term</gi> element may include other <gi scheme="MEI">term</gi>
-        elements in order to allow the creation of coordinated terms; i.e., terms created from a
+        elements in order to allow the creation of coordinated terms; <abbr>i.e.</abbr>, terms created from a
         combination of other, independent terms.</p>
       <p>To associate a term with a taxonomy category defined in the MEI metadata header, the value
         of <att>class</att> must contain a fragment identifier corresponding to the appropriate <gi scheme="MEI">term</gi> element. To associate a term with category in an externally-defined
@@ -38540,7 +38540,7 @@
               produced together.</desc>
           </valItem>
           <valItem ident="d">
-            <desc>Subunit of a collection, e.g. item, folder, box, archival series, subgroup, or
+            <desc>Subunit of a collection, <abbr>e.g.</abbr>, item, folder, box, archival series, subgroup, or
               subcollection.</desc>
           </valItem>
           <valItem ident="i">
@@ -38987,7 +38987,7 @@
     <remarks>
       <p> <gi scheme="MEI">titlePage</gi> may be used to transcribe the item's title page. Other
         front matter structures, such as a preface, dedication, or table of contents, may be encoded
-        as textual divisions; that is, as <gi scheme="MEI">div</gi> elements, with an optional <gi scheme="MEI">head</gi> sub-element describing the nature of the division. The <gi scheme="MEI">pb</gi> element is allowed here in order to accommodate page images, e.g.
+        as textual divisions; that is, as <gi scheme="MEI">div</gi> elements, with an optional <gi scheme="MEI">head</gi> sub-element describing the nature of the division. The <gi scheme="MEI">pb</gi> element is allowed here in order to accommodate page images, <abbr>e.g.</abbr>,
         cover, endpapers, etc. before and after the actual textual matter.</p>
     </remarks>
     <remarks>
@@ -39041,7 +39041,7 @@
     <attList>
       <attDef ident="rhythm" usage="opt">
         <desc>Used to specify a rhythm for the lyric syllables that differs from that of the notes
-          on the staff, e.g., '4,4,4,4' when the rhythm of the notes is '4.,8,4.,8'.</desc>
+          on the staff, <abbr>e.g.</abbr>, '4,4,4,4' when the rhythm of the notes is '4.,8,4.,8'.</desc>
         <datatype>
           <rng:data type="string"/>
         </datatype>
@@ -39201,7 +39201,7 @@
             <desc>Representation of speech.</desc>
           </valItem>
           <valItem ident="thought">
-            <desc>Representation of thought, e.g. internal monologue.</desc>
+            <desc>Representation of thought, <abbr>e.g.</abbr>, internal monologue.</desc>
           </valItem>
           <valItem ident="written">
             <desc>Quotation from a written source.</desc>
@@ -39470,7 +39470,7 @@
     </remarks>
   </elementSpec>
   <elementSpec ident="line" module="MEI.usersymbols">
-    <desc>A visual line that cannot be represented by a more specific; i.e., semantic,
+    <desc>A visual line that cannot be represented by a more specific; <abbr>i.e.</abbr>, semantic,
       element.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -39514,7 +39514,7 @@
         or from the location of the element reference in the <att>startid</att> attribute.
         Similarly, the terminal point of the line may be recorded using the <att>x2</att> and
         <att>y2</att> attributes. Attributes in the att.visualOffset2 class maybe used to record the
-        offsets of the ending point. Textual content of the <gi scheme="MEI">line</gi> element, e.g.
+        offsets of the ending point. Textual content of the <gi scheme="MEI">line</gi> element, <abbr>e.g.</abbr>,
         'gliss.', may be rendered with the line. The appearance of the line is captured in the
         color, <att>form</att> and <att>width</att> attributes.</p>
     </remarks>
@@ -39784,7 +39784,7 @@
     <attList>
       <attDef ident="len" usage="opt">
         <desc>States the length of barlines in virtual units. The value must be greater than 0 and
-          is typically equal to 2 times (the number of staff lines - 1); e.g., a value of '8' for a
+          is typically equal to 2 times (the number of staff lines - 1); <abbr>e.g.</abbr>, a value of '8' for a
           5-line staff.</desc>
         <datatype>
           <rng:data type="decimal">
@@ -39823,6 +39823,7 @@
       <memberOf key="att.color"/>
       <memberOf key="att.cue"/>
       <memberOf key="att.beamRend"/>
+      <memberOf key="att.visibility"/>
     </classes>
   </classSpec>
   <classSpec ident="att.beaming.vis" module="MEI.visual" type="atts">
@@ -40167,10 +40168,10 @@
           or inverted.</desc>
         <valList type="closed">
           <valItem ident="inv">
-            <desc>Inverted, i.e., curve or bracket below the dot.</desc>
+            <desc>Inverted, <abbr>i.e.</abbr>, curve or bracket below the dot.</desc>
           </valItem>
           <valItem ident="norm">
-            <desc>Upright; i.e., curve or bracket above the dot.</desc>
+            <desc>Upright; <abbr>i.e.</abbr>, curve or bracket above the dot.</desc>
           </valItem>
         </valList>
       </attDef>
@@ -40240,7 +40241,7 @@
         </datatype>
       </attDef>
       <attDef ident="beams.float" usage="opt">
-        <desc>Captures the number of "floating" beams, i.e., those not attached to stems.</desc>
+        <desc>Captures the number of "floating" beams, <abbr>i.e.</abbr>, those not attached to stems.</desc>
         <datatype>
           <rng:data type="nonNegativeInteger"/>
         </datatype>
@@ -41207,7 +41208,7 @@
     </classes>
     <attList>
       <attDef ident="compressable" usage="opt">
-        <desc>Indicates whether a space is 'compressible', i.e., if it may be removed at the
+        <desc>Indicates whether a space is 'compressible', <abbr>i.e.</abbr>, if it may be removed at the
           discretion of processing software.</desc>
         <datatype>
           <rng:ref name="data.BOOLEAN"/>
@@ -41433,10 +41434,10 @@
         <desc>Controls how the num:numbase ratio is to be displayed.</desc>
         <valList type="closed">
           <valItem ident="count">
-            <desc>Only the num attribute is displayed, e.g., '7'.</desc>
+            <desc>Only the num attribute is displayed, <abbr>e.g.</abbr>, '7'.</desc>
           </valItem>
           <valItem ident="ratio">
-            <desc>Both the num and numbase attributes are displayed, e.g., '7:4'.</desc>
+            <desc>Both the num and numbase attributes are displayed, <abbr>e.g.</abbr>, '7:4'.</desc>
           </valItem>
         </valList>
       </attDef>
