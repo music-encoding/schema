@@ -18,7 +18,7 @@
 -->
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<!--canonicalized: 2022-01-27T22:47:49.312Z-->
+<!--canonicalized: 2022-01-28T14:10:24.014Z-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -13470,7 +13470,7 @@
                      <head/>
                      <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code noBase noLang" xml:space="preserve"><moduleRef xmlns="" url="http://www.w3.org/Graphics/SVG/1.1/rng/svg11.rng">
   <content>
-    <rng:define name="mei_model.graphicLike" combine="choice">
+    <rng:define xmlns="http://www.tei-c.org/ns/Examples" name="mei_model.graphicLike" combine="choice">
       <rng:ref name="svg"/>
     </rng:define>
   </content>
@@ -13490,7 +13490,7 @@
                      <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code noBase noLang" xml:space="preserve"><surface xmlns="" lrx="3000" lry="2000" ulx="0" uly="0">
   <graphic target="image1.jpg" width="3000px" height="2000px"/>
   <zone xml:id="rectangle" lrx="370" lry="410" ulx="300" uly="200"/>
-  <svg:svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.tei-c.org/ns/Examples" version="1.1" width="3000px" height="2000px" viewBox="0 0 3000 2000">
+  <svg:svg xmlns="http://www.tei-c.org/ns/Examples" xmlns:svg="http://www.w3.org/2000/svg" version="1.1" width="3000px" height="2000px" viewBox="0 0 3000 2000">
     <svg:path id="fancyShape" fill="#ff0000" d="…"/>
   </svg:svg>
 </surface></egXML>

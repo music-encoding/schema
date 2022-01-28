@@ -3950,7 +3950,7 @@
       <memberOf key="model.editorialLike"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.divLike"/><ref name="model.editLike"/><ref name="model.editTransPart"/><ref name="model.fLike"/><ref name="model.graphicPrimitiveLike"/><ref name="model.layerPart"/><ref name="model.milestoneLike.music"/><ref name="model.neumeComponentModifierLike"/><ref name="model.neumeModifierLike"/><ref name="model.neumePart"/><ref name="model.sectionPart"/><ref name="model.staffGrpLike"/><ref name="model.transcriptionLike"/></choice></zeroOrMore>
-    </content><attList><attDef ident="expan" usage="opt">
+    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="expan" usage="opt">
         <desc>Records the expansion of a text abbreviation.</desc>
         <datatype>
           <rng:data type="string"/>
@@ -3972,7 +3972,7 @@
       <memberOf key="model.transcriptionLike"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.divLike"/><ref name="model.editLike"/><ref name="model.editTransPart"/><ref name="model.fLike"/><ref name="model.graphicPrimitiveLike"/><ref name="model.keyAccidLike"/><ref name="model.layerPart"/><ref name="model.milestoneLike.music"/><ref name="model.sectionPart"/><ref name="model.staffGrpLike"/><ref name="model.transcriptionLike"/></choice></zeroOrMore>
-    </content><attList><attDef ident="place">
+    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="place">
         <desc>Location of the addition.</desc>
         <datatype maxOccurs="unbounded">
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.PLACEMENT"/>
@@ -4086,7 +4086,7 @@
       <memberOf key="model.transcriptionLike"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.divLike"/><ref name="model.editLike"/><ref name="model.editTransPart"/><ref name="model.fLike"/><ref name="model.graphicPrimitiveLike"/><ref name="model.keyAccidLike"/><ref name="model.layerPart"/><ref name="model.milestoneLike.music"/><ref name="model.neumeComponentModifierLike"/><ref name="model.neumeModifierLike"/><ref name="model.neumePart"/><ref name="model.sectionPart"/><ref name="model.staffGrpLike"/><ref name="model.transcriptionLike"/></choice></zeroOrMore>
-    </content><attList><attDef ident="degree" usage="opt">
+    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="degree" usage="opt">
         <desc>Records the degree of damage.</desc>
         <datatype>
           <rng:data type="string"/>
@@ -4133,7 +4133,7 @@
       <memberOf key="model.editorialLike"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.divLike"/><ref name="model.editLike"/><ref name="model.editTransPart"/><ref name="model.fLike"/><ref name="model.graphicPrimitiveLike"/><ref name="model.layerPart"/><ref name="model.milestoneLike.music"/><ref name="model.neumeComponentModifierLike"/><ref name="model.neumeModifierLike"/><ref name="model.neumePart"/><ref name="model.sectionPart"/><ref name="model.staffGrpLike"/><ref name="model.transcriptionLike"/></choice></zeroOrMore>
-    </content><attList><attDef ident="abbr" usage="opt">
+    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="abbr" usage="opt">
         <desc>Captures the abbreviated form of the text.</desc>
         <datatype>
           <rng:data type="string"/>
@@ -4181,12 +4181,12 @@
       <memberOf key="model.transcriptionLike"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <rng:empty/>
-    </content><attList><attDef ident="character" usage="opt">
+    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="character" usage="opt">
         <desc>Describes the character of the new hand.</desc>
         <datatype>
           <rng:text/>
         </datatype>
-      </attDef><attDef ident="new" usage="opt">
+      </attDef><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="new" usage="opt">
         <desc>Identifies the new hand. The value must contain the ID of a hand element given
           elsewhere in the document.</desc>
         <datatype>
@@ -4202,7 +4202,7 @@
             </sch:rule>
           </constraint>
         </constraintSpec>
-      </attDef><attDef ident="old" usage="opt">
+      </attDef><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="old" usage="opt">
         <desc>Identifies the old hand. The value must contain the ID of a hand element given
           elsewhere in the document.</desc>
         <datatype>
@@ -4251,7 +4251,7 @@
             attributes: startid, tstamp, tstamp.ges or tstamp.real</sch:assert>
         </sch:rule>
       </constraint>
-    </constraintSpec><attList><attDef ident="function">
+    </constraintSpec><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="function">
         <desc>Describes the purpose of the metaMark.</desc>
         <datatype>
           <rng:data type="NMTOKEN"/>
@@ -4349,7 +4349,7 @@
       <memberOf key="model.transcriptionLike"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.divLike"/><ref name="model.editLike"/><ref name="model.editTransPart"/><ref name="model.fLike"/><ref name="model.graphicPrimitiveLike"/><ref name="model.keyAccidLike"/><ref name="model.layerPart"/><ref name="model.milestoneLike.music"/><ref name="model.neumeComponentModifierLike"/><ref name="model.neumeModifierLike"/><ref name="model.neumePart"/><ref name="model.sectionPart"/><ref name="model.staffGrpLike"/><ref name="model.transcriptionLike"/></choice></zeroOrMore>
-    </content><attList><attDef ident="desc" usage="opt">
+    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="desc" usage="opt">
         <desc>Provides a description of the means of restoration, 'stet' or 'strike-down', for
           example.</desc>
         <datatype>
@@ -4657,12 +4657,12 @@
             attributes.</sch:assert>
         </sch:rule>
       </constraint>
-    </constraintSpec><attList><attDef ident="ulx" usage="opt">
+    </constraintSpec><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="ulx" usage="opt">
         <desc>Indicates the upper-left corner x coordinate.</desc>
         <datatype>
           <rng:data type="nonNegativeInteger"/>
         </datatype>
-      </attDef><attDef ident="uly" usage="opt">
+      </attDef><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="uly" usage="opt">
         <desc>Indicates the upper-left corner y coordinate.</desc>
         <datatype>
           <rng:data type="nonNegativeInteger"/>
@@ -5047,7 +5047,7 @@
             equals "true".</sch:assert>
         </sch:rule>
       </constraint>
-    </constraintSpec><attList><attDef ident="singleton">
+    </constraintSpec><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="singleton">
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.BOOLEAN"/>
         </datatype>
@@ -5091,7 +5091,7 @@
       <memberOf key="model.resourceLike"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="genDesc"/><ref name="genState"/></choice></zeroOrMore>
-    </content><attList><attDef ident="ordered">
+    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="ordered">
         <desc>When set to "true" the child elements are known to be in chronological order. When set
           to "false" or when not provided, the order of child elements is unknown.</desc>
         <datatype>
@@ -6026,7 +6026,7 @@
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <oneOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="name"/></oneOrMore>
       <choice xmlns="http://relaxng.org/ns/structure/1.0"><zeroOrMore><ref name="model.locrefLike"/></zeroOrMore><zeroOrMore><ref name="model.pLike"/></zeroOrMore></choice>
-    </content><attList><attDef ident="version" usage="opt">
+    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="version" usage="opt">
         <desc>Supplies a version number for an application, independent of its identifier or display
           name.</desc>
         <datatype>
@@ -6046,12 +6046,12 @@
             contain an XPath expression.</sch:assert>
         </sch:rule>
       </constraint>
-    </constraintSpec><attList><attDef ident="name" usage="req">
+    </constraintSpec><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="name" usage="req">
         <desc>Name of the attribute.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.NMTOKEN"/>
         </datatype>
-      </attDef><attDef ident="context" usage="opt">
+      </attDef><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="context" usage="opt">
         <desc>Circumstances in which the element appears, an XPath expression.</desc>
         <datatype>
           <rng:data type="string"/>
@@ -6147,7 +6147,7 @@
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="label"/></zeroOrMore>
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="desc"/></zeroOrMore>
-    </content><attList><attDef ident="type" usage="req">
+    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="type" usage="req">
         <desc>Provides a description of the relationship between the current and the target
           categories.</desc>
         <valList type="closed">
@@ -6307,7 +6307,7 @@
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.headLike"/></zeroOrMore>
       <oneOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.pLike"/></oneOrMore>
-    </content><attList><attDef ident="corrlevel" usage="opt">
+    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="corrlevel" usage="opt">
         <desc>Indicates the degree of correction applied to the text.</desc>
         <valList type="closed">
           <valItem ident="high">
@@ -6335,7 +6335,7 @@
       <memberOf key="model.paperModLike"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="model.foliumLike"/><ref name="model.bifoliumLike"/></choice></zeroOrMore>
-    </content><attList><attDef ident="removed.from" usage="req">
+    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="removed.from" usage="req">
         <desc>Describes the position of the cutout on the parent folium / bifolium.</desc>
         <valList type="closed">
           <valItem ident="outer.recto">
@@ -6357,7 +6357,7 @@
             <desc>removed from verso side of folium.</desc>
           </valItem>
         </valList>
-      </attDef><attDef ident="removed.by" usage="opt">
+      </attDef><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="removed.by" usage="opt">
         <desc>Describes the method of removing the cutout.</desc>
         <datatype>
           <rng:data type="NMTOKEN"/>
@@ -6399,15 +6399,15 @@
     </remarks></elementSpec><elementSpec rend="add" ident="domainsDecl" module="MEI.header"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">(domains declaration) – Indicates which domains are included in the encoding.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       <memberOf key="att.bibl"/>
-    </classes><attList><attDef ident="anl" usage="req">
+    </classes><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="anl" usage="req">
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.BOOLEAN"/>
         </datatype>
-      </attDef><attDef ident="ges" usage="req">
+      </attDef><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="ges" usage="req">
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.BOOLEAN"/>
         </datatype>
-      </attDef><attDef ident="vis" usage="req">
+      </attDef><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="vis" usage="req">
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.BOOLEAN"/>
         </datatype>
@@ -6532,7 +6532,7 @@
       <memberOf key="att.medium"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike.limited"/></choice></zeroOrMore>
-    </content><attList><attDef ident="initial" usage="opt">
+    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="initial" usage="opt">
         <desc>Marks this hand as the first one of the document.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.BOOLEAN"/>
@@ -6596,7 +6596,7 @@
             attribute.</sch:assert>
         </sch:rule>
       </constraint>
-    </constraintSpec><attList><attDef ident="form" usage="opt">
+    </constraintSpec><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="form" usage="opt">
         <desc>Form of the encoded incipit.</desc>
         <datatype>
           <rng:data type="NMTOKEN"/>
@@ -6649,7 +6649,7 @@
       <memberOf key="model.workIdent"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <rng:text/>
-    </content><attList><attDef ident="mode" usage="opt">
+    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="mode" usage="opt">
         <desc>Indicates major, minor, or other tonality.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.MODE"/>
@@ -6716,7 +6716,7 @@
             'independent' only when the document element is "meiHead".</sch:assert>
         </sch:rule>
       </constraint>
-    </constraintSpec><attList><attDef ident="type" usage="opt">
+    </constraintSpec><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="type" usage="opt">
         <desc>Specifies the kind of document to which the header is attached, for example whether it
           is a corpus or individual text.</desc>
         <valList type="closed">
@@ -6768,12 +6768,12 @@
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="desc"/></optional>
       <choice xmlns="http://relaxng.org/ns/structure/1.0"><oneOrMore><ref name="tagUsage"/></oneOrMore><oneOrMore><ref name="attUsage"/></oneOrMore></choice>
-    </content><attList><attDef ident="name" usage="req">
+    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="name" usage="req">
         <desc>Formal namespace identifier; that is, a uniform resource identifier (URI).</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.URI"/>
         </datatype>
-      </attDef><attDef ident="prefix" usage="opt">
+      </attDef><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="prefix" usage="opt">
         <desc>Prefix associated with the formal identifier.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.NMTOKEN"/>
@@ -6826,7 +6826,7 @@
             or a bifolium element.</sch:assert>
         </sch:rule>
       </constraint>
-    </constraintSpec><attList><attDef ident="attached.to" usage="req">
+    </constraintSpec><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="attached.to" usage="req">
         <desc>Describes the position of the patch on the parent folium / bifolium.</desc>
         <valList type="closed">
           <valItem ident="outer.recto">
@@ -6848,7 +6848,7 @@
             <desc>patch attached to verso side of folium.</desc>
           </valItem>
         </valList>
-      </attDef><attDef ident="attached.by" usage="opt">
+      </attDef><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="attached.by" usage="opt">
         <desc>Describes the method of attachment of the patch.</desc>
         <datatype>
           <rng:data type="NMTOKEN"/>
@@ -6885,7 +6885,7 @@
       <memberOf key="model.titlePagePart"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <ref xmlns="http://relaxng.org/ns/structure/1.0" name="macro.struc-unstrucContent"/>
-    </content><attList><attDef ident="isodur" usage="opt">
+    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="isodur" usage="opt">
         <desc>Holds a W3C duration value, <abbr>e.g.</abbr>, "PT2H34M45.67S".</desc>
         <datatype>
           <rng:data type="duration"/>
@@ -6915,12 +6915,12 @@
       <memberOf key="att.lang"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike.limited"/><ref name="perfRes"/></choice></zeroOrMore>
-    </content><attList><attDef ident="count" usage="opt">
+    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="count" usage="opt">
         <desc>Indicates the number of performers.</desc>
         <datatype>
           <rng:data type="positiveInteger"/>
         </datatype>
-      </attDef><attDef ident="solo" usage="opt">
+      </attDef><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="solo" usage="opt">
         <desc>Marks this instrument or vocal part as a soloist. Do not use this attribute for a solo
           instrument which is not accompanied.</desc>
         <datatype>
@@ -6935,7 +6935,7 @@
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.headLike"/></zeroOrMore>
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="annot"/><ref name="perfRes"/><ref name="perfResList"/></choice></zeroOrMore>
-    </content><attList><attDef ident="count" usage="opt">
+    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="count" usage="opt">
         <desc>Indicates the number of performers.</desc>
         <datatype>
           <rng:data type="positiveInteger"/>
@@ -7005,7 +7005,7 @@
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.headLike"/></zeroOrMore>
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike.limited"/></choice></zeroOrMore>
-    </content><attList><attDef ident="amount" usage="opt">
+    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="amount" usage="opt">
         <desc>Numeric value capturing a cost. Can only be interpreted in combination with the
           currency attribute.</desc>
         <datatype>
@@ -7013,7 +7013,7 @@
             <rng:param name="pattern">[0-9]+\.[0-9]{2}</rng:param>
           </rng:data>
         </datatype>
-      </attDef><attDef ident="currency" usage="opt">
+      </attDef><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="currency" usage="opt">
         <desc>Monetary unit.</desc>
         <datatype>
           <rng:data type="NMTOKEN"/>
@@ -7125,7 +7125,7 @@
       <memberOf key="model.physDescPart"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike.limited"/></choice></zeroOrMore>
-    </content><attList><attDef ident="num" usage="opt">
+    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="num" usage="opt">
         <desc>Records the channel configuration in numeric form.</desc>
         <datatype>
           <rng:data type="positiveInteger"/>
@@ -7228,22 +7228,22 @@
             contain an XPath expression.</sch:assert>
         </sch:rule>
       </constraint>
-    </constraintSpec><attList><attDef ident="name" usage="req">
+    </constraintSpec><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="name" usage="req">
         <desc>Name of the element.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.NMTOKEN"/>
         </datatype>
-      </attDef><attDef ident="context" usage="opt">
+      </attDef><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="context" usage="opt">
         <desc>Circumstances in which the element appears, an XPath expression.</desc>
         <datatype>
           <rng:data type="string"/>
         </datatype>
-      </attDef><attDef ident="occurs" usage="opt">
+      </attDef><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="occurs" usage="opt">
         <desc>Number of occurrences in the defined context.</desc>
         <datatype>
           <rng:data type="nonNegativeInteger"/>
         </datatype>
-      </attDef><attDef ident="withid" usage="opt">
+      </attDef><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="withid" usage="opt">
         <desc>Number of occurrences in the defined context that have an <att>xml:id</att>
           attribute.</desc>
         <datatype>
@@ -7295,7 +7295,7 @@
       <memberOf key="model.physDescPart"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <ref xmlns="http://relaxng.org/ns/structure/1.0" name="macro.struc-unstrucContent"/>
-    </content><attList><attDef ident="num" usage="opt">
+    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="num" usage="opt">
         <desc>Records the track configuration in numeric form.</desc>
         <datatype>
           <rng:data type="positiveInteger"/>
@@ -8227,7 +8227,7 @@
       <memberOf key="att.midi.event"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <rng:empty/>
-    </content><attList><attDef ident="num" usage="req">
+    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="num" usage="req">
         <desc>MIDI number in the range set by data.MIDICHANNEL.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.MIDICHANNEL"/>
@@ -8322,7 +8322,7 @@
       <memberOf key="att.midi.event"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <rng:empty/>
-    </content><attList><attDef ident="num" usage="req">
+    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="num" usage="req">
         <desc>Number in the range 0-65535.</desc>
         <datatype>
           <rng:data type="nonNegativeInteger">
@@ -8341,7 +8341,7 @@
       <memberOf key="att.midiNumber"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <rng:empty/>
-    </content><attList><attDef ident="form" usage="req">
+    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="form" usage="req">
         <desc>Indicates whether this is note-on or note-off velocity data.</desc>
         <valList type="closed">
           <valItem ident="on">
@@ -8413,7 +8413,7 @@
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="head"/></zeroOrMore>
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="condition"/><ref name="decoNote"/><ref name="dimensions"/><ref name="p"/></choice></zeroOrMore>
-    </content><attList><attDef ident="contemporary" usage="opt">
+    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="contemporary" usage="opt">
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.BOOLEAN"/>
         </datatype>
@@ -8517,7 +8517,7 @@
       <memberOf key="att.lang"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <ref xmlns="http://relaxng.org/ns/structure/1.0" name="macro.struc-unstrucContent"/>
-    </content><attList><attDef ident="cols" usage="opt">
+    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="cols" usage="opt">
         <desc>Specifies the number of columns per page.</desc>
         <datatype minOccurs="1" maxOccurs="2">
           <rng:data type="nonNegativeInteger"/>
@@ -8526,7 +8526,7 @@
           <p>A single number indicates that all pages have this number of columns. Two numbers mean
             that the number of columns per page varies between the values supplied.</p>
         </remarks>
-      </attDef><attDef ident="ruledlines" usage="opt">
+      </attDef><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="ruledlines" usage="opt">
         <desc>Specifies the number of ruled text lines per column.</desc>
         <datatype minOccurs="1" maxOccurs="2">
           <rng:data type="nonNegativeInteger"/>
@@ -8536,7 +8536,7 @@
             numbers mean that the number of text lines per column varies between the values
             supplied.</p>
         </remarks>
-      </attDef><attDef ident="writtenlines" usage="opt">
+      </attDef><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="writtenlines" usage="opt">
         <desc>Specifies the number of written text lines per column.</desc>
         <datatype minOccurs="1" maxOccurs="2">
           <rng:data type="nonNegativeInteger"/>
@@ -8546,7 +8546,7 @@
             numbers mean that the number of text lines per column varies between the values
             supplied.</p>
         </remarks>
-      </attDef><attDef ident="ruledstaves" usage="opt">
+      </attDef><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="ruledstaves" usage="opt">
         <desc>Specifies the number of ruled staves per column.</desc>
         <datatype minOccurs="1" maxOccurs="2">
           <rng:data type="nonNegativeInteger"/>
@@ -8556,7 +8556,7 @@
             numbers mean that the number of ruled staves per column varies between the values
             supplied.</p>
         </remarks>
-      </attDef><attDef ident="writtenstaves" usage="opt">
+      </attDef><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="writtenstaves" usage="opt">
         <desc>Specifies the number of written staves per column.</desc>
         <datatype minOccurs="1" maxOccurs="2">
           <rng:data type="nonNegativeInteger"/>
@@ -8585,19 +8585,19 @@
       <memberOf key="model.msInline"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="locus"/><ref name="rend"/><ref name="symbol"/></choice></zeroOrMore>
-    </content><attList><attDef ident="scheme" usage="opt">
+    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="scheme" usage="opt">
         <desc>Identifies the foliation scheme in terms of which the location is being specified by
           pointing to some foliation element defining it, or to some other equivalent
           resource.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.URI"/>
         </datatype>
-      </attDef><attDef ident="from" usage="opt">
+      </attDef><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="from" usage="opt">
         <desc>Specifies the starting point of the location in a normalized form.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.WORD"/>
         </datatype>
-      </attDef><attDef ident="to" usage="opt">
+      </attDef><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="to" usage="opt">
         <desc>Specifies the end-point of the location in a normalized form.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.WORD"/>
@@ -8612,7 +8612,7 @@
       <memberOf key="model.msInline"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="locus"/></zeroOrMore>
-    </content><attList><attDef ident="scheme" usage="opt">
+    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="scheme" usage="opt">
         <desc>Identifies the foliation scheme in terms of which the location is being specified by
           pointing to some foliation element defining it, or to some other equivalent
           resource.</desc>
@@ -8632,7 +8632,7 @@
       <memberOf key="model.physDescPart"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <ref xmlns="http://relaxng.org/ns/structure/1.0" name="macro.struc-unstrucContent"/>
-    </content><attList><attDef ident="func">
+    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="func">
         <valList type="closed">
           <valItem ident="initial">
             <desc>Signals beginning of a text division.</desc>
@@ -8669,7 +8669,7 @@
       <memberOf key="att.lang"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <choice xmlns="http://relaxng.org/ns/structure/1.0"><group><zeroOrMore><ref name="head"/></zeroOrMore><zeroOrMore><choice><ref name="condition"/><ref name="decoNote"/><ref name="p"/></choice></zeroOrMore></group><zeroOrMore><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike.limited"/></choice></zeroOrMore></choice>
-    </content><attList><attDef ident="contemporary">
+    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="contemporary">
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.BOOLEAN"/>
         </datatype>
@@ -8737,7 +8737,7 @@
       <memberOf key="model.physDescPart"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <choice xmlns="http://relaxng.org/ns/structure/1.0"><group><zeroOrMore><ref name="head"/></zeroOrMore><choice><zeroOrMore><ref name="p"/></zeroOrMore><group><optional><ref name="support"/></optional><optional><ref name="foliation"/></optional><optional><ref name="collation"/></optional><optional><ref name="condition"/></optional></group></choice></group><zeroOrMore><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike.limited"/></choice></zeroOrMore></choice>
-    </content><attList><attDef ident="material" usage="opt">
+    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="material" usage="opt">
         <desc>Short, project-defined name for the material composing the majority of the
           support.</desc>
         <datatype>
@@ -9205,12 +9205,12 @@
             ancestor.</sch:assert>
         </sch:rule>
       </constraint>
-    </constraintSpec><attList><attDef ident="absolute" usage="opt">
+    </constraintSpec><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="absolute" usage="opt">
         <desc>Provides an absolute value for the time point.</desc>
         <datatype>
           <rng:text/>
         </datatype>
-      </attDef><attDef ident="interval" usage="opt">
+      </attDef><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="interval" usage="opt">
         <desc>Specifies the time interval between this time point and the one designated by the
           since attribute. This attribute can only be interpreted meaningfully in conjunction with
           the inttype attribute.</desc>
@@ -9222,17 +9222,17 @@
             <rng:data type="time"/>
           </rng:choice>
         </datatype>
-      </attDef><attDef ident="abstype" usage="opt">
+      </attDef><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="abstype" usage="opt">
         <desc>Specifies the kind of values used in the absolute attribute.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.BETYPE"/>
         </datatype>
-      </attDef><attDef ident="inttype" usage="opt">
+      </attDef><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="inttype" usage="opt">
         <desc>Specifies the kind of values used in the interval attribute.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.BETYPE"/>
         </datatype>
-      </attDef><attDef ident="since" usage="opt">
+      </attDef><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="since" usage="opt">
         <desc>Identifies the reference point for determining the time of the current when element,
           which is obtained by adding the interval to the time of the reference point. The value
           should be the ID of another when element within the same parent element. If the since
@@ -13174,11 +13174,11 @@
       <memberOf key="model.biblPart"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike.limited"/></choice></zeroOrMore>
-    </content><attList><attDef ident="from" usage="opt">
+    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="from" usage="opt">
         <datatype>
           <rng:data type="token"/>
         </datatype>
-      </attDef><attDef ident="to" usage="opt">
+      </attDef><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="to" usage="opt">
         <datatype>
           <rng:data type="token"/>
         </datatype>
@@ -13293,7 +13293,7 @@
       <memberOf key="model.milestoneLike.text"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <rng:empty/>
-    </content><attList><attDef ident="n" usage="req">
+    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="n" usage="req">
         <desc>Records the column number.</desc>
         <datatype>
           <rng:data type="positiveInteger"/>
@@ -13378,7 +13378,7 @@
       <memberOf key="model.milestoneLike.text"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <rng:empty/>
-    </content><attList><attDef ident="cols" usage="req">
+    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="cols" usage="req">
         <desc>Records the number of columns.</desc>
         <datatype>
           <rng:data type="positiveInteger"/>
@@ -13410,7 +13410,7 @@
             context.</sch:assert>
         </sch:rule>
       </constraint>
-    </constraintSpec><attList><attDef ident="role" usage="rec">
+    </constraintSpec><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="role" usage="rec">
         <desc>Used to specify the contributor's function.</desc>
         <datatype>
           <rng:text/>
@@ -13506,7 +13506,7 @@
       <memberOf key="model.dimLike"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike.limited"/></choice></zeroOrMore>
-    </content><attList><attDef ident="form" usage="req">
+    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="form" usage="req">
         <desc>Aspect of the object being measured.</desc>
         <datatype>
           <rng:data type="NMTOKEN"/>
@@ -13639,7 +13639,7 @@
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="model.headLike"/><ref name="model.milestoneLike.text"/></choice></zeroOrMore>
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="model.divLike"/><ref name="model.figureLike"/><ref name="model.textComponentLike"/><ref name="sp"/></choice><zeroOrMore><ref name="model.milestoneLike.text"/></zeroOrMore></zeroOrMore>
-    </content><attList><attDef ident="type" usage="opt">
+    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="type" usage="opt">
         <desc>Characterizes the textual division in some sense, using any convenient classification
           scheme or typology that employs single-token labels.</desc>
         <datatype>
@@ -13992,7 +13992,7 @@
             @y attribute pair, @pname attribute, or @loc attribute. </sch:assert>
         </sch:rule>
       </constraint>
-    </constraintSpec><attList><attDef ident="form" usage="opt">
+    </constraintSpec><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="form" usage="opt">
         <desc>Specifies whether enharmonic (written) values or implicit ("perform-able") values are
           allowed.</desc>
         <valList type="closed">
@@ -14231,7 +14231,7 @@
             name.</sch:assert>
         </sch:rule>
       </constraint>
-    </constraintSpec><attList><attDef ident="type" usage="opt">
+    </constraintSpec><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="type" usage="opt">
         <desc>Characterizes the name in some sense, using any convenient classification scheme or
           typology that employs single-token labels.</desc>
         <datatype>
@@ -14308,7 +14308,7 @@
       <memberOf key="model.numLike"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike"/><ref name="model.editLike"/><ref name="model.transcriptionLike"/></choice></zeroOrMore>
-    </content><attList><attDef ident="value" usage="opt">
+    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="value" usage="opt">
         <desc>Numeric value capturing a measurement or count. Can only be interpreted in combination
           with the unit attribute.</desc>
         <datatype>
@@ -14432,7 +14432,7 @@
       <memberOf key="att.lang"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textComponentLike"/><ref name="model.textPhraseLike.limited"/><ref name="model.editLike"/><ref name="model.transcriptionLike"/><ref name="model.appLike"/><ref name="anchoredText"/></choice></zeroOrMore>
-    </content><attList><attDef ident="halign" usage="opt">
+    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="halign" usage="opt">
         <desc>Records horizontal alignment of the page footer.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.HORIZONTALALIGNMENT"/>
@@ -14449,7 +14449,7 @@
       <memberOf key="att.lang"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textComponentLike"/><ref name="model.textPhraseLike.limited"/><ref name="model.editLike"/><ref name="model.transcriptionLike"/><ref name="model.appLike"/><ref name="anchoredText"/></choice></zeroOrMore>
-    </content><attList><attDef ident="halign" usage="opt">
+    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="halign" usage="opt">
         <desc>Records horizontal alignment of the page footer. Use multiple values to capture an
           alternating pattern.</desc>
         <datatype maxOccurs="unbounded">
@@ -14468,7 +14468,7 @@
       <memberOf key="att.lang"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textComponentLike"/><ref name="model.textPhraseLike.limited"/><ref name="model.editLike"/><ref name="model.transcriptionLike"/><ref name="model.appLike"/><ref name="anchoredText"/></choice></zeroOrMore>
-    </content><attList><attDef ident="halign" usage="opt">
+    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="halign" usage="opt">
         <desc>Records horizontal alignment of the page header.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.HORIZONTALALIGNMENT"/>
@@ -14485,7 +14485,7 @@
       <memberOf key="att.lang"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textComponentLike"/><ref name="model.textPhraseLike.limited"/><ref name="model.editLike"/><ref name="model.transcriptionLike"/><ref name="model.appLike"/><ref name="anchoredText"/></choice></zeroOrMore>
-    </content><attList><attDef ident="halign" usage="opt">
+    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="halign" usage="opt">
         <desc>Records horizontal alignment of the page header. Use multiple values to capture an
           alternating pattern.</desc>
         <datatype maxOccurs="unbounded">
@@ -14595,7 +14595,7 @@
       <memberOf key="model.biblPart"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="model.biblLike"/></choice></zeroOrMore>
-    </content><attList><attDef ident="rel" usage="req">
+    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="rel" usage="req">
         <desc>Describes the relationship between the entity identified by the <gi scheme="MEI">relatedItem</gi> element and the resource described in the parent element, <abbr>i.e.</abbr>, <gi scheme="MEI">bibl</gi>, <gi scheme="MEI">source</gi> or <gi scheme="MEI">relatedItem</gi>.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.MODSRELATIONSHIP"/>
@@ -14629,7 +14629,7 @@
             must be present.</sch:assert>
         </sch:rule>
       </constraint>
-    </constraintSpec><attList><attDef ident="rel" usage="req">
+    </constraintSpec><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="rel" usage="req">
         <desc>Describes the relationship between the entities identified by the plist and target
           attributes.</desc>
         <datatype>
@@ -14663,7 +14663,7 @@
       <memberOf key="model.rendLike"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike"/><ref name="model.editLike"/><ref name="model.transcriptionLike"/></choice></zeroOrMore>
-    </content><attList><attDef ident="rotation" usage="opt">
+    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="rotation" usage="opt">
         <desc>A positive value for rotation rotates the text in a counter-clockwise fashion, while
           negative values produce clockwise rotation.</desc>
         <datatype>
@@ -14890,13 +14890,13 @@
       <memberOf key="model.rendLike"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike.limited"/></choice></zeroOrMore>
-    </content><attList><attDef ident="delim" usage="opt">
+    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="delim" usage="opt">
         <desc>Indicates the delimiter used to mark the portions of text that are to be
           stacked.</desc>
         <datatype>
           <rng:data type="string"/>
         </datatype>
-      </attDef><attDef ident="align" usage="opt">
+      </attDef><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="align" usage="opt">
         <desc>Specifies how the stacked text components should be aligned.</desc>
         <valList type="closed">
           <valItem ident="left">
@@ -15197,13 +15197,13 @@
       <memberOf key="model.biblPart"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike.limited"/></choice></zeroOrMore>
-    </content><attList><attDef ident="lang.main" usage="opt">
+    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="lang.main" usage="opt">
         <desc>(main language) supplies a code which identifies the chief language used in the
           bibliographic work.</desc>
         <datatype>
           <rng:data type="language"/>
         </datatype>
-      </attDef><attDef ident="lang.other" usage="opt">
+      </attDef><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="lang.other" usage="opt">
         <desc>(other languages) one or more codes identifying any other languages used in the
           bibliographic work.</desc>
         <datatype maxOccurs="unbounded">
@@ -15224,7 +15224,7 @@
       <memberOf key="model.titleLike"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="macro.titlePart"/><ref name="model.editLike"/><ref name="model.transcriptionLike"/><ref name="titlePart"/></choice></zeroOrMore>
-    </content><attList><attDef ident="level" usage="opt">
+    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="level" usage="opt">
         <desc>Indicates the bibliographic level of the title.</desc>
         <valList type="closed">
           <valItem ident="a">
@@ -15257,7 +15257,7 @@
               press).</desc>
           </valItem>
         </valList>
-      </attDef><attDef ident="type" usage="opt">
+      </attDef><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="type" usage="opt">
         <desc>Characterizes the title in some sense, using any convenient classification scheme or
           typology that employs single-token labels.</desc>
         <datatype>
@@ -15330,7 +15330,7 @@
       <memberOf key="model.titlePagePart"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="macro.titlePart"/><ref name="model.editLike"/><ref name="model.titleLike"/><ref name="model.transcriptionLike"/></choice></zeroOrMore>
-    </content><attList><attDef ident="type" usage="opt">
+    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="type" usage="opt">
         <desc>Characterizes this title component in some sense, using any convenient classification
           scheme or typology that employs single-token labels.</desc>
         <datatype>
@@ -15447,7 +15447,7 @@
       <memberOf key="att.startEndId"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <rng:empty/>
-    </content><attList><attDef ident="fret" usage="opt">
+    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="fret" usage="opt">
         <desc>Records the location at which the strings should be stopped against a fret in a
           fretboard diagram. This may or may not be the same as the actual location on the fretboard
           of the instrument in performance.</desc>
@@ -15565,7 +15565,7 @@
       <memberOf key="model.lLike"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <choice xmlns="http://relaxng.org/ns/structure/1.0"><zeroOrMore><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.editLike"/><ref name="model.sylLike"/><ref name="model.textPhraseLike"/><ref name="model.transcriptionLike"/></choice></zeroOrMore></choice>
-    </content><attList><attDef ident="rhythm" usage="opt">
+    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="rhythm" usage="opt">
         <desc>Used to specify a rhythm for the lyric syllables that differs from that of the notes
           on the staff, <abbr>e.g.</abbr>, '4,4,4,4' when the rhythm of the notes is '4.,8,4.,8'.</desc>
         <datatype>
@@ -15607,7 +15607,7 @@
             must be immediately preceded by a label.</sch:assert>
         </sch:rule>
       </constraint>
-    </constraintSpec><attList><attDef ident="form" usage="opt">
+    </constraintSpec><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="form" usage="opt">
         <desc>Used to indicate the format of a list. In a "simple" list, <gi scheme="MEI">li</gi>
           elements are not numbered or bulleted. In a "marked" list, the sequence of the list items
           is not critical, and a bullet, box, dash, or other character is displayed at the start of
@@ -15625,7 +15625,7 @@
             <desc>Each item is numbered or lettered.</desc>
           </valItem>
         </valList>
-      </attDef><attDef ident="type" usage="opt">
+      </attDef><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="type" usage="opt">
         <desc>Captures the nature of the content of a list.</desc>
         <datatype>
           <rng:data type="NMTOKENS"/>
@@ -15671,7 +15671,7 @@
       <memberOf key="model.qLike"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike"/></choice></zeroOrMore>
-    </content><attList><attDef ident="type" usage="opt">
+    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="type" usage="opt">
         <datatype maxOccurs="unbounded">
           <rng:data type="NMTOKEN"/>
         </datatype>
@@ -15935,7 +15935,7 @@
       <memberOf key="att.responsibility"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <rng:text/>
-    </content><attList><attDef ident="type" usage="req">
+    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="type" usage="req">
         <desc>Characterizes the property name.</desc>
         <valList type="closed">
           <valItem ident="unicode">
