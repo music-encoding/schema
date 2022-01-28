@@ -18,7 +18,7 @@
 -->
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<!--canonicalized: 2022-01-28T15:20:14.448Z-->
+<!--canonicalized: 2022-01-28T15:48:24.094Z-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -4574,6 +4574,8 @@
 </egXML>
                      </figure>
                   </p>
+                  <p>For encoding more complex time signatures, simple mathematical symbols such as asterisks and plus signs are allowed in <att>meter.count</att>.</p>
+                  <p>Non-standard key signatures have to be encoded with a <gi scheme="MEI">keySig</gi> element.</p>
                   <p>Other attributes allow the description of default page and system margins and fonts for text and music:</p>
                   <p>
                      <specList>
@@ -32364,11 +32366,11 @@
     <attList>
       <attDef ident="count" usage="opt">
         <desc>Captures the number of beats in a measure, that is, the top number of the meter
-          signature. It must contain a decimal number or an additive expression that evaluates to a
-          decimal number, such as 2+3.</desc>
+          signature. It must contain a decimal number or an expression that evaluates to a
+          decimal number, such as 2+3 or 3*2.</desc>
         <datatype>
           <rng:data type="string">
-            <rng:param name="pattern">\d+(\.\d+)?(\s*\+\s*\d+(\.\d+)?)*</rng:param>
+            <rng:param name="pattern">\d+(\.\d+)?(\s*[\+\-\*/]\s*\d+(\.\d+)?)*</rng:param>
           </rng:data>
         </datatype>
       </attDef>
@@ -32394,11 +32396,11 @@
     <attList>
       <attDef ident="meter.count" usage="opt">
         <desc>Captures the number of beats in a measure, that is, the top number of the meter
-          signature. It must contain a decimal number or an additive expression that evaluates to a
-          decimal number, such as 2+3.</desc>
+          signature. It must contain a decimal number or an expression that evaluates to a
+          decimal number, such as 2+3 or 3*2.</desc>
         <datatype>
           <rng:data type="string">
-            <rng:param name="pattern">\d+(\.\d+)?(\s*\+\s*\d+(\.\d+)?)*</rng:param>
+            <rng:param name="pattern">\d+(\.\d+)?(\s*[\+\-\*/]\s*\d+(\.\d+)?)*</rng:param>
           </rng:data>
         </datatype>
       </attDef>

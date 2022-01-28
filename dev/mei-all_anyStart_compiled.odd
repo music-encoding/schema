@@ -13891,11 +13891,11 @@
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="count" usage="opt">
         <desc>Captures the number of beats in a measure, that is, the top number of the meter
-          signature. It must contain a decimal number or an additive expression that evaluates to a
-          decimal number, such as 2+3.</desc>
+          signature. It must contain a decimal number or an expression that evaluates to a
+          decimal number, such as 2+3 or 3*2.</desc>
         <datatype>
           <rng:data type="string">
-            <rng:param name="pattern">\d+(\.\d+)?(\s*\+\s*\d+(\.\d+)?)*</rng:param>
+            <rng:param name="pattern">\d+(\.\d+)?(\s*[\+\-\*/]\s*\d+(\.\d+)?)*</rng:param>
           </rng:data>
         </datatype>
       </attDef>
@@ -13920,11 +13920,11 @@
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="meter.count" usage="opt">
         <desc>Captures the number of beats in a measure, that is, the top number of the meter
-          signature. It must contain a decimal number or an additive expression that evaluates to a
-          decimal number, such as 2+3.</desc>
+          signature. It must contain a decimal number or an expression that evaluates to a
+          decimal number, such as 2+3 or 3*2.</desc>
         <datatype>
           <rng:data type="string">
-            <rng:param name="pattern">\d+(\.\d+)?(\s*\+\s*\d+(\.\d+)?)*</rng:param>
+            <rng:param name="pattern">\d+(\.\d+)?(\s*[\+\-\*/]\s*\d+(\.\d+)?)*</rng:param>
           </rng:data>
         </datatype>
       </attDef>
