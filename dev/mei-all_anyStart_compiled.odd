@@ -9010,17 +9010,7 @@
     </remarks><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <p>This element is modelled on elements in the Text Encoding Initiative (TEI) and Encoded
         Archival Description (EAD) standards.</p>
-    </remarks></elementSpec><elementSpec rend="add" ident="fingerprint" module="MEI.header"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Contains a string that uniquely identifies an item, such as those constructed by combining
-      groups of characters transcribed from specified pages of a printed item or a file's
-      checksum.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-      <memberOf key="att.common"/>
-      <memberOf key="att.authorized"/>
-      <memberOf key="att.bibl"/>
-      <memberOf key="model.msInline"/>
-      <memberOf key="model.physDescPart"/>
-    </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:text/>
-    </content></elementSpec><elementSpec rend="add" ident="foliaDesc" module="MEI.header"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Describes the order of folia and bifolia making up the text block of a manuscript or
+    </remarks></elementSpec><elementSpec rend="add" ident="foliaDesc" module="MEI.header"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Describes the order of folia and bifolia making up the text block of a manuscript or
       print.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       <memberOf key="model.physDescPart"/>
