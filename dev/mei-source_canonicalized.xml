@@ -18,7 +18,7 @@
 -->
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<!--canonicalized: 2022-02-24T15:59:08.624Z-->
+<!--canonicalized: 2022-02-24T16:53:34.855Z-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -19711,6 +19711,9 @@
       <rng:choice>
         <rng:group>
           <rng:ref name="chord"/>
+          <rng:optional>
+            <rng:ref name="clef"/>
+          </rng:optional>
           <rng:choice>
             <rng:ref name="chord"/>
             <rng:ref name="note"/>
@@ -19718,6 +19721,9 @@
         </rng:group>
         <rng:group>
           <rng:ref name="note"/>
+          <rng:optional>
+            <rng:ref name="clef"/>
+          </rng:optional>
           <rng:choice>
             <rng:ref name="chord"/>
             <rng:ref name="note"/>

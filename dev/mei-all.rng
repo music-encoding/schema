@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2022-02-24T15:58:36Z. .
+Schema generated from ODD source 2022-02-24T16:52:48Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -10356,6 +10356,9 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
          <choice>
             <group>
                <ref name="mei_chord"/>
+               <optional>
+                  <ref name="mei_clef"/>
+               </optional>
                <choice>
                   <ref name="mei_chord"/>
                   <ref name="mei_note"/>
@@ -10363,6 +10366,9 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
             </group>
             <group>
                <ref name="mei_note"/>
+               <optional>
+                  <ref name="mei_clef"/>
+               </optional>
                <choice>
                   <ref name="mei_chord"/>
                   <ref name="mei_note"/>

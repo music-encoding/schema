@@ -3274,7 +3274,7 @@
       
       <memberOf key="model.eventLike.cmn"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-      <choice xmlns="http://relaxng.org/ns/structure/1.0"><group><ref name="chord"/><choice><ref name="chord"/><ref name="note"/></choice></group><group><ref name="note"/><choice><ref name="chord"/><ref name="note"/></choice></group></choice>
+      <choice xmlns="http://relaxng.org/ns/structure/1.0"><group><ref name="chord"/><optional><ref name="clef"/></optional><choice><ref name="chord"/><ref name="note"/></choice></group><group><ref name="note"/><optional><ref name="clef"/></optional><choice><ref name="chord"/><ref name="note"/></choice></group></choice>
     </content></elementSpec><elementSpec rend="add" ident="gliss" module="MEI.cmn"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">(glissando) – A continuous or sliding movement from one pitch to another, usually
       indicated by a straight or wavy line.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
