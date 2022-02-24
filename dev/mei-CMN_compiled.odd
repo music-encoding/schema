@@ -8805,10 +8805,10 @@
       etc.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       <memberOf key="att.bibl"/>
+      <memberOf key="att.datable"/>
       <memberOf key="att.lang"/>
-      <memberOf key="model.physDescPart"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-      <ref xmlns="http://relaxng.org/ns/structure/1.0" name="macro.struc-unstrucContent"/>
+      <choice xmlns="http://relaxng.org/ns/structure/1.0"><group><zeroOrMore><ref name="model.headLike"/></zeroOrMore><zeroOrMore><choice><ref name="eventList"/><ref name="model.pLike"/></choice></zeroOrMore></group><zeroOrMore><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike.limited"/></choice></zeroOrMore></choice>
     </content><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <p>This element is modelled on an element in the Encoded Archival Description (EAD)
         standard.</p>
@@ -8907,9 +8907,10 @@
       circumstances of its creation.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       <memberOf key="att.bibl"/>
+      <memberOf key="model.physDescPart"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.headLike"/></zeroOrMore>
-      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="acquisition"/><ref name="provenance"/><ref name="model.divLike"/><ref name="model.textComponentLike"/></choice></zeroOrMore>
+      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="acquisition"/><ref name="exhibHist"/><ref name="provenance"/><ref name="treatHist"/><ref name="treatSched"/><ref name="model.divLike"/><ref name="model.textComponentLike"/></choice></zeroOrMore>
     </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="history_restriction" scheme="isoschematron">
       <constraint>
         <sch:rule context="mei:history[parent::mei:work or parent::mei:expression]">
@@ -9651,10 +9652,10 @@
       de-acidification, restoration, etc.).</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       <memberOf key="att.bibl"/>
+      <memberOf key="att.datable"/>
       <memberOf key="att.lang"/>
-      <memberOf key="model.physDescPart"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-      <ref xmlns="http://relaxng.org/ns/structure/1.0" name="macro.struc-unstrucContent"/>
+      <choice xmlns="http://relaxng.org/ns/structure/1.0"><group><zeroOrMore><ref name="model.headLike"/></zeroOrMore><zeroOrMore><choice><ref name="eventList"/><ref name="model.pLike"/></choice></zeroOrMore></group><zeroOrMore><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike.limited"/></choice></zeroOrMore></choice>
     </content><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <p>Treatment history may also comprise details of the treatment process (<abbr>e.g.</abbr>, chemical
         solutions used, techniques applied, etc.), the date the treatment was applied, etc.</p>
@@ -9665,10 +9666,10 @@
       an item.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       <memberOf key="att.bibl"/>
+      <memberOf key="att.datable"/>
       <memberOf key="att.lang"/>
-      <memberOf key="model.physDescPart"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-      <ref xmlns="http://relaxng.org/ns/structure/1.0" name="macro.struc-unstrucContent"/>
+      <choice xmlns="http://relaxng.org/ns/structure/1.0"><group><zeroOrMore><ref name="model.headLike"/></zeroOrMore><zeroOrMore><choice><ref name="eventList"/><ref name="model.pLike"/></choice></zeroOrMore></group><zeroOrMore><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike.limited"/></choice></zeroOrMore></choice>
     </content><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <p>This element is modelled on an element in the Encoded Archival Description (EAD)
         standard.</p>
