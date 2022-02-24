@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2022-02-24T14:25:28Z. .
+Schema generated from ODD source 2022-02-24T14:28:44Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -20183,7 +20183,7 @@ Suggested values include: 1] smufl</a:documentation>
                 context="mei:*[lower-case(@head.auth) eq 'smufl']">
          <sch:assert test="matches(@head.shape, '^#x') or matches(@head.shape, '^U+')">When
                 @head.auth matches 'smufl', @head.shape must contain a numeric glyph reference in
-                hexadecimal notation, <abbr>e.g.</abbr>, "#xE000" or "U+E000".</sch:assert>
+                hexadecimal notation, e.g., "#xE000" or "U+E000".</sch:assert>
       </sch:rule>
    </pattern>
    <define name="mei_att.noteHeads.attribute.head.color">
