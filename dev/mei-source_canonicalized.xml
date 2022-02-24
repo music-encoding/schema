@@ -18,7 +18,7 @@
 -->
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<!--canonicalized: 2022-02-24T14:34:42.924Z-->
+<!--canonicalized: 2022-02-24T14:36:58.624Z-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -27391,24 +27391,9 @@
   </macroSpec>
   <classSpec ident="att.duration.quality" module="MEI.mensural" type="atts">
     <desc>Attribute that expresses duration for a given mensural note symbol.</desc>
-    <attList>
-      <attDef ident="dur.quality" usage="rec">
-        <desc>Encodes the durational quality of a mensural note using the values provided by the data.DURQUALITY.mensural datatype (<abbr>i.e.</abbr>, the perfect / imperfect / altered / major / minor / duplex quality of a note).</desc>
-        <datatype>
-          <rng:ref name="data.DURQUALITY.mensural"/>
-        </datatype>
-      </attDef>
-    </attList>
     <constraintSpec ident="check_duplex_quality" scheme="isoschematron">
       <constraint>
-        <sch:rule context="mei:note[@dur.quality='duplex']">
-          <sch:assert test="@dur='longa'">
-            Duplex quality can only be used with longas (in Ars antiqua).
-          </sch:assert>
-        </sch:rule>
-      </constraint>
-      <constraint>
-        <sch:rule context="mei:space[@dur.quality='duplex']">
+        <sch:rule context="(mei:note|mei:space)[@dur.quality='duplex']">
           <sch:assert test="@dur='longa'">
             Duplex quality can only be used with longas (in Ars antiqua).
           </sch:assert>
@@ -27417,20 +27402,21 @@
     </constraintSpec>
     <constraintSpec ident="check_maiorminor_quality" scheme="isoschematron">
       <constraint>
-        <sch:rule context="mei:note[@dur.quality='maior' or @dur.quality='minor']">
-          <sch:assert test="@dur='semibrevis'">
-            Maior / minor quality can only be used with semibreves (in Ars antiqua).
-          </sch:assert>
-        </sch:rule>
-      </constraint>
-      <constraint>
-        <sch:rule context="mei:space[@dur.quality='maior' or @dur.quality='minor']">
+        <sch:rule context="(mei:note|mei:space)[@dur.quality='maior' or @dur.quality='minor']">
           <sch:assert test="@dur='semibrevis'">
             Maior / minor quality can only be used with semibreves (in Ars antiqua).
           </sch:assert>
         </sch:rule>
       </constraint>
     </constraintSpec>
+    <attList>
+      <attDef ident="dur.quality" usage="rec">
+        <desc>Encodes the durational quality of a mensural note using the values provided by the data.DURQUALITY.mensural datatype (<abbr>i.e.</abbr>, the perfect / imperfect / altered / major / minor / duplex quality of a note).</desc>
+        <datatype>
+          <rng:ref name="data.DURQUALITY.mensural"/>
+        </datatype>
+      </attDef>
+    </attList>
   </classSpec>
   <classSpec ident="att.ligature.log" module="MEI.mensural" type="atts">
     <desc>Logical domain attributes.</desc>
