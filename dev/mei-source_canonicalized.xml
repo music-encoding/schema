@@ -18,7 +18,7 @@
 -->
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<!--canonicalized: 2022-02-24T14:36:58.624Z-->
+<!--canonicalized: 2022-02-24T15:02:05.721Z-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -16579,7 +16579,7 @@
       </valList>
     </content>
     <remarks>
-      <p>Instrument names are taken from the list at <ref target="https://www.midi.org/specifications/item/gm-level-1-sound-set">https://www.midi.org/specifications/item/gm-level-1-sound-set</ref>. </p>
+      <p>Instrument names are based on the official list in the <ref target="https://www.midi.org/specifications-old/item/gm-level-1-sound-set">General MIDI Specifications</ref>.</p>
       <p>MEI uses 0-based program numbers.</p>
       <p>Percussion sounds are available when the MIDI channel is set to "10".</p>
     </remarks>
