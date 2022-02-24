@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2022-02-24T15:31:02Z. .
+Schema generated from ODD source 2022-02-24T15:58:48Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -15896,6 +15896,7 @@ Suggested values include: 1] glue; 2] thread; 3] needle; 4] tape; 5] staple</a:d
                <ref name="mei_volta"/>
                <ref name="mei_model.sylLike"/>
                <ref name="mei_model.appLike"/>
+               <ref name="mei_model.editLike"/>
             </choice>
          </oneOrMore>
          <zeroOrMore>
@@ -15933,6 +15934,7 @@ Suggested values include: 1] glue; 2] thread; 3] needle; 4] tape; 5] staple</a:d
                <ref name="mei_volta"/>
                <ref name="mei_model.sylLike"/>
                <ref name="mei_model.appLike"/>
+               <ref name="mei_model.editLike"/>
             </choice>
          </oneOrMore>
          <zeroOrMore>
@@ -15963,6 +15965,7 @@ Suggested values include: 1] glue; 2] thread; 3] needle; 4] tape; 5] staple</a:d
             <choice>
                <ref name="mei_model.sylLike"/>
                <ref name="mei_model.appLike"/>
+               <ref name="mei_model.editLike"/>
             </choice>
          </oneOrMore>
          <zeroOrMore>
@@ -26446,6 +26449,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
             <choice>
                <text/>
                <ref name="mei_model.textPhraseLike.limited"/>
+               <ref name="mei_model.appLike"/>
                <ref name="mei_model.editLike"/>
                <ref name="mei_model.transcriptionLike"/>
             </choice>
