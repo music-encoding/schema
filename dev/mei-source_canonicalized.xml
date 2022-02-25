@@ -18,7 +18,7 @@
 -->
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<!--canonicalized: 2022-02-24T16:53:34.855Z-->
+<!--canonicalized: 2022-02-25T10:08:01.571Z-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -2329,7 +2329,8 @@
 </egXML>
                         </figure>
                      </p>
-                     <p>The <att>unit</att> attribute is restricted to certain values: "byte" (Byte), "char" (Character), "cm" (Centimeter), "deg" (Degree), "in" (Inch), "issue" (Serial issue), "ft" (Foot), "m" (Meter), "mm" (Millimeter), "page" (Page), "pc" (Pica), "pt" (Point), "px" (Pixel), "rad" (Radian), "record" (Record), "vol" (Serial volume), and "vu" (MEI virtual unit).</p>
+                     <p>The <att>unit</att> attribute is restricted to certain units: "byte" (Byte), "char" (Character), "cm" (Centimeter), "deg" (Degree), "in" (Inch), "issue" (Serial issue), "ft" (Foot), "m" (Meter), "mm" (Millimeter), "page" (Page), "pc" (Pica), "pt" (Point), "px" (Pixel), "rad" (Radian), "record" (Record), "vol" (Serial volume), and "vu" (MEI virtual unit).</p>
+                     <p>A virtual unit (vu) in MEI is a measure of distance. It is determined by half the distance between adjacent staff lines where the interline space is measured from the middle of a staff line. Unless otherwise specified, the MEI virtual unit is set as the default unit.</p>
                   </div>
                   <div xml:id="headerPublicationDistribution" type="div4">
                      <head>Publication, Distribution, etc.</head>
@@ -31319,8 +31320,9 @@
           connecting the starting and ending points of the curve. The first value captures a
           distance to the left (positive value) or right (negative value) of the line, expressed in
           virtual units. The second value of each pair represents a point along the line, expressed
-          as a percentage of the line's length. N.B. An MEI virtual unit (VU) is half the distance
-          between adjacent staff lines.</desc>
+          as a percentage of the line's length. N.B. An MEI virtual unit (vu) is half the distance
+          between adjacent staff lines where the interline space is measured from the middle of a 
+          staff line.</desc>
         <datatype>
           <rng:list>
             <rng:oneOrMore>
@@ -41249,8 +41251,8 @@
     <attList>
       <attDef ident="vu.height" usage="opt">
         <desc>Defines the height of a "virtual unit" (vu) in terms of real-world units. A single vu
-          is half the distance between the vertical center point of a staff line and that of an
-          adjacent staff line.</desc>
+          is half the distance between adjacent staff lines where the interline space is measured 
+          from the middle of a staff line.</desc>
         <datatype>
           <rng:data type="token">
             <!-- px and vu are *not* allowed here because they're not real-world units -->

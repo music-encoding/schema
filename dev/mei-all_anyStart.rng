@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2022-02-24T16:52:56Z. .
+Schema generated from ODD source 2022-02-25T10:07:27Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -20537,7 +20537,7 @@ Suggested values include: 1] caesura; 2] finalis; 3] maior; 4] maxima; 5] minima
    <define name="mei_att.curvature.attribute.bulge">
       <optional>
          <attribute name="bulge">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Describes a curve as one or more pairs of values with respect to an imaginary line connecting the starting and ending points of the curve. The first value captures a distance to the left (positive value) or right (negative value) of the line, expressed in virtual units. The second value of each pair represents a point along the line, expressed as a percentage of the line's length. N.B. An MEI virtual unit (VU) is half the distance between adjacent staff lines.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Describes a curve as one or more pairs of values with respect to an imaginary line connecting the starting and ending points of the curve. The first value captures a distance to the left (positive value) or right (negative value) of the line, expressed in virtual units. The second value of each pair represents a point along the line, expressed as a percentage of the line's length. N.B. An MEI virtual unit (vu) is half the distance between adjacent staff lines where the interline space is measured from the middle of a staff line.</a:documentation>
             <list>
                <oneOrMore>
                   <data type="decimal"/>
@@ -30947,7 +30947,7 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
    <define name="mei_att.scoreDef.vis.attribute.vu.height">
       <optional>
          <attribute name="vu.height">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Defines the height of a "virtual unit" (vu) in terms of real-world units. A single vu is half the distance between the vertical center point of a staff line and that of an adjacent staff line.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Defines the height of a "virtual unit" (vu) in terms of real-world units. A single vu is half the distance between adjacent staff lines where the interline space is measured from the middle of a staff line.</a:documentation>
             <data type="token">
                <param name="pattern">\d+(\.\d+)?(cm|mm|in|pt|pc)</param>
             </data>
