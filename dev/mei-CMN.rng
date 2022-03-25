@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2022-03-25T14:13:54Z. .
+Schema generated from ODD source 2022-03-25T14:15:19Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -13858,58 +13858,6 @@ Suggested values include: 1] smufl</a:documentation>
          <ref name="mei_work"/>
       </choice>
    </define>
-   <define name="mei_componentList">
-      <element name="componentList">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Container for intellectual or physical component parts of a bibliographic entity.</a:documentation>
-         <zeroOrMore>
-            <ref name="mei_model.headLike"/>
-         </zeroOrMore>
-         <choice>
-            <choice>
-               <zeroOrMore>
-                  <ref name="mei_model.workLike"/>
-               </zeroOrMore>
-               <zeroOrMore>
-                  <ref name="mei_model.expressionLike"/>
-               </zeroOrMore>
-            </choice>
-            <choice>
-               <zeroOrMore>
-                  <ref name="mei_model.manifestationLike"/>
-               </zeroOrMore>
-               <zeroOrMore>
-                  <ref name="mei_model.itemLike"/>
-               </zeroOrMore>
-            </choice>
-         </choice>
-         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="mei-componentList-checkComponentList-constraint-rule-60">
-            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:xi="http://www.w3.org/2001/XInclude"
-                      context="mei:componentList">
-               <sch:assert test="every $i in ./child::mei:*[not(local-name()='head')] satisfies              $i/local-name() eq ./parent::mei:*/local-name()">Only child elements of the same name as the parent of the componentList are
-            allowed.</sch:assert>
-            </sch:rule>
-         </pattern>
-         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="mei-componentList-checkComponents-constraint-rule-61">
-            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:xi="http://www.w3.org/2001/XInclude"
-                      context="mei:componentList[mei:*[@comptype]]">
-               <sch:assert role="warning"
-                           test="count(mei:*[@comptype]) = count(mei:*[local-name() ne 'head'])">When any child
-            element has a comptype attribute, it is recommended that comptype appear on all child
-            elements.</sch:assert>
-            </sch:rule>
-         </pattern>
-         <ref name="mei_att.common.attributes"/>
-         <empty/>
-      </element>
-   </define>
    <define name="mei_accessRestrict">
       <element name="accessRestrict">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(access restriction) – Describes the conditions that affect the accessibility of material.</a:documentation>
@@ -13992,7 +13940,7 @@ Suggested values include: 1] smufl</a:documentation>
             <ref name="mei_desc"/>
          </optional>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="mei-attUsage-context_attribute_requires_content-constraint-rule-62">
+                  id="mei-attUsage-context_attribute_requires_content-constraint-rule-60">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -14118,7 +14066,7 @@ Suggested values include: 1] smufl</a:documentation>
             <ref name="mei_category"/>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="mei-category-category_id-constraint-rule-63">
+                  id="mei-category-category_id-constraint-rule-61">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -14178,7 +14126,7 @@ Suggested values include: 1] smufl</a:documentation>
             <ref name="mei_model.dateLike"/>
          </optional>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="mei-change-check_change-constraint-rule-64">
+                  id="mei-change-check_change-constraint-rule-62">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -14236,6 +14184,58 @@ Suggested values include: 1] smufl</a:documentation>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.bibl.attributes"/>
          <ref name="mei_att.dataPointing.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_componentList">
+      <element name="componentList">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Container for intellectual or physical component parts of a bibliographic entity.</a:documentation>
+         <zeroOrMore>
+            <ref name="mei_model.headLike"/>
+         </zeroOrMore>
+         <choice>
+            <choice>
+               <zeroOrMore>
+                  <ref name="mei_model.workLike"/>
+               </zeroOrMore>
+               <zeroOrMore>
+                  <ref name="mei_model.expressionLike"/>
+               </zeroOrMore>
+            </choice>
+            <choice>
+               <zeroOrMore>
+                  <ref name="mei_model.manifestationLike"/>
+               </zeroOrMore>
+               <zeroOrMore>
+                  <ref name="mei_model.itemLike"/>
+               </zeroOrMore>
+            </choice>
+         </choice>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="mei-componentList-checkComponentList-constraint-rule-63">
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
+                      context="mei:componentList">
+               <sch:assert test="every $i in ./child::mei:*[not(local-name()='head')] satisfies             $i/local-name() eq ./parent::mei:*/local-name()">Only child elements of the same name as the parent of the componentList are
+            allowed.</sch:assert>
+            </sch:rule>
+         </pattern>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="mei-componentList-checkComponents-constraint-rule-64">
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
+                      context="mei:componentList[mei:*[@comptype]]">
+               <sch:assert role="warning"
+                           test="count(mei:*[@comptype]) = count(mei:*[local-name() ne 'head'])">When any child
+            element has a comptype attribute, it is recommended that comptype appear on all child
+            elements.</sch:assert>
+            </sch:rule>
+         </pattern>
+         <ref name="mei_att.common.attributes"/>
          <empty/>
       </element>
    </define>

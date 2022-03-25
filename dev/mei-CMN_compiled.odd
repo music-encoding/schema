@@ -8167,37 +8167,7 @@
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Groups elements that assist in the identification of a work.</desc>
   </classSpec><classSpec rend="add" predeclare="true" ident="model.workLike" type="model" module="MEI.header">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Collects work-like elements.</desc>
-  </classSpec><elementSpec rend="add" ident="componentList" module="MEI.header"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Container for intellectual or physical component parts of a bibliographic entity.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-      <memberOf key="att.common"/>
-    </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.headLike"/></zeroOrMore>
-      <choice xmlns="http://relaxng.org/ns/structure/1.0"><choice><zeroOrMore><ref name="model.workLike"/></zeroOrMore><zeroOrMore><ref name="model.expressionLike"/></zeroOrMore></choice><choice><zeroOrMore><ref name="model.manifestationLike"/></zeroOrMore><zeroOrMore><ref name="model.itemLike"/></zeroOrMore></choice></choice>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="checkComponentList" scheme="isoschematron">
-      <constraint>
-        <sch:rule context="mei:componentList">
-          <sch:assert test="every $i in ./child::mei:*[not(local-name()='head')] satisfies              $i/local-name() eq ./parent::mei:*/local-name()">Only child elements of the same name as the parent of the componentList are
-            allowed.</sch:assert>
-        </sch:rule>
-      </constraint>
-    </constraintSpec><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="checkComponents" scheme="isoschematron">
-      <constraint>
-        <sch:rule context="mei:componentList[mei:*[@comptype]]">
-          <sch:assert role="warning" test="count(mei:*[@comptype]) = count(mei:*[local-name() ne 'head'])">When any child
-            element has a comptype attribute, it is recommended that comptype appear on all child
-            elements.</sch:assert>
-        </sch:rule>
-      </constraint>
-    </constraintSpec><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-      <p>The child elements of this element are treated as components of the bibliographic entity
-        containing the <gi scheme="MEI">componentList</gi>. Although this is an implicit way of
-        expressing FRBR's hasPart and isPartOf relationships, it avoids this terminology in order to
-        prevent confusion with musical terminology. Work, expression, and item components must be
-        the same type as the parent of componentList: <gi scheme="MEI">work</gi> children are
-        allowed within <gi scheme="MEI">work</gi>, etc. Manifestations; <abbr>i.e.</abbr>, sources, may have
-        either <gi scheme="MEI">source</gi> or <gi scheme="MEI">item</gi>components as required to
-        accommodate composite sources (those containing multiple sources) or multi-part sources
-        (those made up of several physical items.</p>
-    </remarks></elementSpec><elementSpec rend="add" ident="accessRestrict" module="MEI.header"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">(access restriction) – Describes the conditions that affect the accessibility of
+  </classSpec><elementSpec rend="add" ident="accessRestrict" module="MEI.header"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">(access restriction) – Describes the conditions that affect the accessibility of
       material.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       <memberOf key="att.authorized"/>
@@ -8449,6 +8419,36 @@
         vocabularies whenever they are available in order to enable searches in systems that include
         multiple MEI documents, or MEI documents and bibliographic records from many
         institutions.</p>
+    </remarks></elementSpec><elementSpec rend="add" ident="componentList" module="MEI.header"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Container for intellectual or physical component parts of a bibliographic entity.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <memberOf key="att.common"/>
+    </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.headLike"/></zeroOrMore>
+      <choice xmlns="http://relaxng.org/ns/structure/1.0"><choice><zeroOrMore><ref name="model.workLike"/></zeroOrMore><zeroOrMore><ref name="model.expressionLike"/></zeroOrMore></choice><choice><zeroOrMore><ref name="model.manifestationLike"/></zeroOrMore><zeroOrMore><ref name="model.itemLike"/></zeroOrMore></choice></choice>
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="checkComponentList" scheme="isoschematron">
+      <constraint>
+        <sch:rule context="mei:componentList">
+          <sch:assert test="every $i in ./child::mei:*[not(local-name()='head')] satisfies             $i/local-name() eq ./parent::mei:*/local-name()">Only child elements of the same name as the parent of the componentList are
+            allowed.</sch:assert>
+        </sch:rule>
+      </constraint>
+    </constraintSpec><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="checkComponents" scheme="isoschematron">
+      <constraint>
+        <sch:rule context="mei:componentList[mei:*[@comptype]]">
+          <sch:assert role="warning" test="count(mei:*[@comptype]) = count(mei:*[local-name() ne 'head'])">When any child
+            element has a comptype attribute, it is recommended that comptype appear on all child
+            elements.</sch:assert>
+        </sch:rule>
+      </constraint>
+    </constraintSpec><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <p>The child elements of this element are treated as components of the bibliographic entity
+        containing the <gi scheme="MEI">componentList</gi>. Although this is an implicit way of
+        expressing FRBR's hasPart and isPartOf relationships, it avoids this terminology in order to
+        prevent confusion with musical terminology. Work, expression, and item components must be
+        the same type as the parent of componentList: <gi scheme="MEI">work</gi> children are
+        allowed within <gi scheme="MEI">work</gi>, etc. Manifestations; <abbr>i.e.</abbr>, sources, may have
+        either <gi scheme="MEI">source</gi> or <gi scheme="MEI">item</gi>components as required to
+        accommodate composite sources (those containing multiple sources) or multi-part sources
+        (those made up of several physical items.</p>
     </remarks></elementSpec><elementSpec rend="add" ident="condition" module="MEI.header"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">The physical condition of an item, particularly any variances between the physical make-up
       of the item and that of other copies of the same item (<abbr>e.g.</abbr>, missing pages or plates,
       brittleness, faded images, etc.).</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
