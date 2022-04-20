@@ -18,7 +18,7 @@
 -->
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<!--canonicalized: 2022-04-06T21:23:29.349Z-->
+<!--canonicalized: 2022-04-20T12:14:21.684Z-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -18816,6 +18816,7 @@
     <desc>Logical domain attributes.</desc>
     <classes>
       <memberOf key="att.event"/>
+      <memberOf key="att.numbered"/>
     </classes>
   </classSpec>
   <classSpec ident="att.mRpt2.log" module="MEI.cmn" type="atts">
@@ -40776,6 +40777,7 @@
       <memberOf key="att.color"/>
       <memberOf key="att.expandable"/>
       <memberOf key="att.extSym"/>
+      <memberOf key="att.numberPlacement"/>
       <memberOf key="att.typography"/>
     </classes>
   </classSpec>

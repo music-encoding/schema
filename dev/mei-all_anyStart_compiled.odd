@@ -4463,6 +4463,7 @@
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Logical domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.event"/>
+      <memberOf key="att.numbered"/>
     </classes>
   </classSpec><classSpec rend="add" ident="att.mRpt2.log" module="MEI.cmn" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Logical domain attributes.</desc>
@@ -19863,6 +19864,7 @@
       <memberOf key="att.color"/>
       <memberOf key="att.expandable"/>
       <memberOf key="att.extSym"/>
+      <memberOf key="att.numberPlacement"/>
       <memberOf key="att.typography"/>
     </classes>
   </classSpec><classSpec rend="add" ident="att.mRpt2.vis" module="MEI.visual" type="atts">

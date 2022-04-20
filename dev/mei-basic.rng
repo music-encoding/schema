@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2022-04-06T21:23:01Z. .
+Schema generated from ODD source 2022-04-20T12:13:51Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -1605,6 +1605,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
    </define>
    <define name="mei_att.mRpt.log.attributes">
       <ref name="mei_att.event.attributes"/>
+      <ref name="mei_att.numbered.attributes"/>
    </define>
    <define name="mei_att.multiRest.log.attributes">
       <ref name="mei_att.event.attributes"/>
@@ -10495,6 +10496,7 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
    </define>
    <define name="mei_att.mRpt.vis.attributes">
       <ref name="mei_att.expandable.attributes"/>
+      <ref name="mei_att.numberPlacement.attributes"/>
       <ref name="mei_att.typography.attributes"/>
    </define>
    <define name="mei_att.multiRest.vis.attributes">

@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2022-04-06T21:23:04Z. .
+Schema generated from ODD source 2022-04-20T12:13:54Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -9085,6 +9085,7 @@ Suggested values include: 1] coloration; 2] cross-rhythm; 3] ligature</a:documen
    </define>
    <define name="mei_att.mRpt.log.attributes">
       <ref name="mei_att.event.attributes"/>
+      <ref name="mei_att.numbered.attributes"/>
    </define>
    <define name="mei_att.mRpt2.log.attributes">
       <ref name="mei_att.event.attributes"/>
@@ -28437,6 +28438,7 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
       <ref name="mei_att.color.attributes"/>
       <ref name="mei_att.expandable.attributes"/>
       <ref name="mei_att.extSym.attributes"/>
+      <ref name="mei_att.numberPlacement.attributes"/>
       <ref name="mei_att.typography.attributes"/>
    </define>
    <define name="mei_att.mRpt2.vis.attributes">
