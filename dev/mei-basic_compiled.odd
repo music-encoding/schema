@@ -6628,7 +6628,7 @@
           <rng:text/>
         </datatype>
         <remarks>
-          <p>When applicable, values from the MARC relator term list (<ref target="http://www.loc.gov/marc/relators/relaterm.html">http://www.loc.gov/marc/relators/relaterm.html</ref>) or code list (<ref target="http://www.loc.gov/marc/relators/relacode.html">http://www.loc.gov/marc/relators/relacode.html</ref>) are recommended for
+          <p>When applicable, values from the <abbr>MARC</abbr> relator term list (<ref target="http://www.loc.gov/marc/relators/relaterm.html">http://www.loc.gov/marc/relators/relaterm.html</ref>) or code list (<ref target="http://www.loc.gov/marc/relators/relacode.html">http://www.loc.gov/marc/relators/relacode.html</ref>) are recommended for
             <att>role</att>.</p>
         </remarks>
       </attDef>
@@ -7914,7 +7914,7 @@
           <rng:text/>
         </datatype>
         <remarks>
-          <p>When applicable, values from the MARC relator term list (<ref target="http://www.loc.gov/marc/relators/relaterm.html">http://www.loc.gov/marc/relators/relaterm.html</ref>) or code list (<ref target="http://www.loc.gov/marc/relators/relacode.html">http://www.loc.gov/marc/relators/relacode.html</ref>) are recommended for
+          <p>When applicable, values from the <abbr>MARC</abbr> relator term list (<ref target="http://www.loc.gov/marc/relators/relaterm.html">http://www.loc.gov/marc/relators/relaterm.html</ref>) or code list (<ref target="http://www.loc.gov/marc/relators/relacode.html">http://www.loc.gov/marc/relators/relacode.html</ref>) are recommended for
             <att>role</att>.</p>
         </remarks>
       </attDef></attList></elementSpec><elementSpec rend="add" ident="creation" module="MEI.shared"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Non-bibliographic details of the creation of an intellectual entity, in narrative form,
@@ -9598,38 +9598,38 @@
             <desc>Alternate title by which the item is also known.</desc>
           </valItem>
           <valItem ident="arrangement">
-            <desc>Arranged statement for music. Analogous to MARC 240 subfield o.</desc>
+            <desc>Arranged statement for music. Analogous to <abbr>MARC</abbr> 240 subfield o.</desc>
           </valItem>
           <valItem ident="carrier">
-            <desc>Medium of the carrier. Analogous to MARC 240 subfield h.</desc>
+            <desc>Medium of the carrier. Analogous to <abbr>MARC</abbr> 240 subfield h.</desc>
           </valItem>
           <valItem ident="date">
-            <desc>Publication/creation date(s) of work. Analogous to MARC 240 subfield f.</desc>
+            <desc>Publication/creation date(s) of work. Analogous to <abbr>MARC</abbr> 240 subfield f.</desc>
           </valItem>
           <valItem ident="desc">
             <desc>Descriptive paraphrase of the work.</desc>
           </valItem>
           <valItem ident="form">
-            <desc>Form subheading. Analogous to MARC 240 subfield k.</desc>
+            <desc>Form subheading. Analogous to <abbr>MARC</abbr> 240 subfield k.</desc>
           </valItem>
           <valItem ident="key">
-            <desc>Key for music. Analogous to MARC 240 subfield r.</desc>
+            <desc>Key for music. Analogous to <abbr>MARC</abbr> 240 subfield r.</desc>
           </valItem>
           <valItem ident="language">
-            <desc>Language of a work. Analogous to MARC 240 subfield l (el).</desc>
+            <desc>Language of a work. Analogous to <abbr>MARC</abbr> 240 subfield l (el).</desc>
           </valItem>
           <valItem ident="main">
             <desc>Main title.</desc>
           </valItem>
           <valItem ident="name">
-            <desc>Name of a part or section of a work. Analogous to MARC 240 subfield p.</desc>
+            <desc>Name of a part or section of a work. Analogous to <abbr>MARC</abbr> 240 subfield p.</desc>
           </valItem>
           <valItem ident="number">
             <desc>Standard number designation of a work or of a part or section of a work. Analogous
-              to MARC 240 subfield n.</desc>
+              to <abbr>MARC</abbr> 240 subfield n.</desc>
           </valItem>
           <valItem ident="perfmedium">
-            <desc>Performance medium. Analogous to MARC 240 subfield m.</desc>
+            <desc>Performance medium. Analogous to <abbr>MARC</abbr> 240 subfield m.</desc>
           </valItem>
           <valItem ident="subordinate">
             <desc>Subtitle.</desc>
@@ -9638,7 +9638,7 @@
             <desc>Translated form of title.</desc>
           </valItem>
           <valItem ident="version">
-            <desc>Version. Analogous to MARC 240 subfield s.</desc>
+            <desc>Version. Analogous to <abbr>MARC</abbr> 240 subfield s.</desc>
           </valItem>
         </valList>
       </attDef></attList><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
