@@ -9513,7 +9513,7 @@
       <p>The number of apparent playback channels can differ from the number of physical channels of
         the recording medium, <abbr>i.e.</abbr>, 2-track monophonic recordings. In this example, the soundChan
         element should record the fact that there is a single output channel, while the <gi scheme="MEI">trackConfig</gi> element should capture the existence of two physical tracks.
-        This element is analogous to MARC field 344 subfield g.</p>
+        This element is analogous to <abbr>MARC</abbr> field 344 subfield g.</p>
     </remarks></elementSpec><elementSpec rend="add" ident="source" module="MEI.header"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">A bibliographic description of a source used in the creation of the electronic
       file.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
@@ -9684,7 +9684,7 @@
         the recording medium, <abbr>i.e.</abbr>, 2-track monophonic recordings. In this example, the trackConfig
         element should record the fact that there are two physical tracks on the sound medium, while
         the <gi scheme="MEI">soundChan</gi> element should be used to state that there is a single
-        output channel. This element may be mapped to MARC field 344 subfield e or subfield f as
+        output channel. This element may be mapped to <abbr>MARC</abbr> field 344 subfield e or subfield f as
         appropriate.</p>
     </remarks></elementSpec><elementSpec rend="add" ident="treatHist" module="MEI.header"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">(treatment history) – A record of the treatment the item has undergone (<abbr>e.g.</abbr>,
       de-acidification, restoration, etc.).</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -12416,7 +12416,7 @@
       <p>Mapping elements from one system to another via <att>analog</att> may help a repository
         harvest selected data from the MEI file to build a basic catalog record. The encoding system
         from which fields are taken must be specified. When possible, subfields as well as fields
-        should be specified, <abbr>e.g.</abbr>, subfields within MARC fields.</p>
+        should be specified, <abbr>e.g.</abbr>, subfields within <abbr>MARC</abbr> fields.</p>
     </remarks>
   </classSpec><classSpec rend="add" ident="att.caesura.log" module="MEI.shared" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Logical domain attributes.</desc>
@@ -13898,7 +13898,7 @@
           <rng:text/>
         </datatype>
         <remarks>
-          <p>When applicable, values from the MARC relator term list (<ref target="http://www.loc.gov/marc/relators/relaterm.html">http://www.loc.gov/marc/relators/relaterm.html</ref>) or code list (<ref target="http://www.loc.gov/marc/relators/relacode.html">http://www.loc.gov/marc/relators/relacode.html</ref>) are recommended for
+          <p>When applicable, values from the <abbr>MARC</abbr> relator term list (<ref target="http://www.loc.gov/marc/relators/relaterm.html">http://www.loc.gov/marc/relators/relaterm.html</ref>) or code list (<ref target="http://www.loc.gov/marc/relators/relacode.html">http://www.loc.gov/marc/relators/relacode.html</ref>) are recommended for
             <att>role</att>.</p>
         </remarks>
       </attDef>
@@ -16271,7 +16271,7 @@
           <rng:text/>
         </datatype>
         <remarks>
-          <p>When applicable, values from the MARC relator term list (<ref target="http://www.loc.gov/marc/relators/relaterm.html">http://www.loc.gov/marc/relators/relaterm.html</ref>) or code list (<ref target="http://www.loc.gov/marc/relators/relacode.html">http://www.loc.gov/marc/relators/relacode.html</ref>) are recommended for
+          <p>When applicable, values from the <abbr>MARC</abbr> relator term list (<ref target="http://www.loc.gov/marc/relators/relaterm.html">http://www.loc.gov/marc/relators/relaterm.html</ref>) or code list (<ref target="http://www.loc.gov/marc/relators/relacode.html">http://www.loc.gov/marc/relators/relacode.html</ref>) are recommended for
             <att>role</att>.</p>
         </remarks>
       </attDef></attList></elementSpec><elementSpec rend="add" ident="creation" module="MEI.shared"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Non-bibliographic details of the creation of an intellectual entity, in narrative form,
@@ -18207,38 +18207,38 @@
             <desc>Alternate title by which the item is also known.</desc>
           </valItem>
           <valItem ident="arrangement">
-            <desc>Arranged statement for music. Analogous to MARC 240 subfield o.</desc>
+            <desc>Arranged statement for music. Analogous to <abbr>MARC</abbr> 240 subfield o.</desc>
           </valItem>
           <valItem ident="carrier">
-            <desc>Medium of the carrier. Analogous to MARC 240 subfield h.</desc>
+            <desc>Medium of the carrier. Analogous to <abbr>MARC</abbr> 240 subfield h.</desc>
           </valItem>
           <valItem ident="date">
-            <desc>Publication/creation date(s) of work. Analogous to MARC 240 subfield f.</desc>
+            <desc>Publication/creation date(s) of work. Analogous to <abbr>MARC</abbr> 240 subfield f.</desc>
           </valItem>
           <valItem ident="desc">
             <desc>Descriptive paraphrase of the work.</desc>
           </valItem>
           <valItem ident="form">
-            <desc>Form subheading. Analogous to MARC 240 subfield k.</desc>
+            <desc>Form subheading. Analogous to <abbr>MARC</abbr> 240 subfield k.</desc>
           </valItem>
           <valItem ident="key">
-            <desc>Key for music. Analogous to MARC 240 subfield r.</desc>
+            <desc>Key for music. Analogous to <abbr>MARC</abbr> 240 subfield r.</desc>
           </valItem>
           <valItem ident="language">
-            <desc>Language of a work. Analogous to MARC 240 subfield l (el).</desc>
+            <desc>Language of a work. Analogous to <abbr>MARC</abbr> 240 subfield l (el).</desc>
           </valItem>
           <valItem ident="main">
             <desc>Main title.</desc>
           </valItem>
           <valItem ident="name">
-            <desc>Name of a part or section of a work. Analogous to MARC 240 subfield p.</desc>
+            <desc>Name of a part or section of a work. Analogous to <abbr>MARC</abbr> 240 subfield p.</desc>
           </valItem>
           <valItem ident="number">
             <desc>Standard number designation of a work or of a part or section of a work. Analogous
-              to MARC 240 subfield n.</desc>
+              to <abbr>MARC</abbr> 240 subfield n.</desc>
           </valItem>
           <valItem ident="perfmedium">
-            <desc>Performance medium. Analogous to MARC 240 subfield m.</desc>
+            <desc>Performance medium. Analogous to <abbr>MARC</abbr> 240 subfield m.</desc>
           </valItem>
           <valItem ident="subordinate">
             <desc>Subtitle.</desc>
@@ -18247,7 +18247,7 @@
             <desc>Translated form of title.</desc>
           </valItem>
           <valItem ident="version">
-            <desc>Version. Analogous to MARC 240 subfield s.</desc>
+            <desc>Version. Analogous to <abbr>MARC</abbr> 240 subfield s.</desc>
           </valItem>
         </valList>
       </attDef></attList><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
