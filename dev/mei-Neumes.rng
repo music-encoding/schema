@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2022-05-20T19:35:18Z. .
+Schema generated from ODD source 2022-05-21T08:27:53Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -10397,7 +10397,7 @@ Suggested values include: 1] smufl</a:documentation>
    <define name="mei_att.scoreDef.ges.attribute.tune.Hz">
       <optional>
          <attribute name="tune.Hz">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Holds a value for cycles per second, i.e.,, Hertz, for a tuning reference pitch.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Holds a value for cycles per second, i.e., Hertz, for a tuning reference pitch.</a:documentation>
             <data type="decimal"/>
          </attribute>
       </optional>
