@@ -8494,7 +8494,7 @@
           <desc>groups event elements that occur in the neume repertoire.</desc>
           <classes>
             <memberOf key="model.syllablePart"/>
-            
+            <memberOf key="model.rdgPart.music"/>
           </classes>
         </classSpec><classSpec rend="add" predeclare="true" ident="model.layerPart.neumes" module="MEI.neumes" type="model">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Groups notated events that may appear at the layer level in the neume repertoire.</desc>

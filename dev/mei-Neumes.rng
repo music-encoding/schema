@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2022-05-21T08:27:53Z. .
+Schema generated from ODD source 2022-05-27T13:11:02Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -8337,6 +8337,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
       <choice>
          <ref name="mei_model.verseLike"/>
          <ref name="mei_volta"/>
+         <ref name="mei_model.eventLike.neumes"/>
          <ref name="mei_model.controlEventLike"/>
          <ref name="mei_model.layerLike"/>
       </choice>
@@ -15199,6 +15200,40 @@ Suggested values include: 1] paper; 2] parch; 3] mixed</a:documentation>
          <ref name="mei_neume"/>
          <ref name="mei_divLine"/>
       </choice>
+   </define>
+   <define name="mei_model.eventLike.neumes_alternation">
+      <choice>
+         <ref name="mei_neume"/>
+         <ref name="mei_divLine"/>
+      </choice>
+   </define>
+   <define name="mei_model.eventLike.neumes_sequence">
+      <ref name="mei_neume"/>
+      <ref name="mei_divLine"/>
+   </define>
+   <define name="mei_model.eventLike.neumes_sequenceOptional">
+      <optional>
+         <ref name="mei_neume"/>
+      </optional>
+      <optional>
+         <ref name="mei_divLine"/>
+      </optional>
+   </define>
+   <define name="mei_model.eventLike.neumes_sequenceOptionalRepeatable">
+      <zeroOrMore>
+         <ref name="mei_neume"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="mei_divLine"/>
+      </zeroOrMore>
+   </define>
+   <define name="mei_model.eventLike.neumes_sequenceRepeatable">
+      <oneOrMore>
+         <ref name="mei_neume"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="mei_divLine"/>
+      </oneOrMore>
    </define>
    <define name="mei_model.layerPart.neumes">
       <choice>
