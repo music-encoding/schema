@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2022-07-21T10:50:29Z. .
+Schema generated from ODD source 2022-07-29T13:19:03Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -874,7 +874,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <value>constituent</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Intellectual or physical component of the resource.</a:documentation>
          <value>otherVersion</value>
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Version of the resource's intellectual content not changed enough to be a different work.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Version of the resource’s intellectual content not changed enough to be a different work.</a:documentation>
          <value>otherFormat</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Version of the resource in a different physical format.</a:documentation>
          <value>isReferencedBy</value>
@@ -1455,7 +1455,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                     name="c"
                     a:defaultValue="n">
-            <a:documentation>Indicates the pedal setting for the harp's C strings.</a:documentation>
+            <a:documentation>Indicates the pedal setting for the harp’s C strings.</a:documentation>
             <choice>
                <value>f</value>
                <a:documentation>Flat.</a:documentation>
@@ -1472,7 +1472,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                     name="d"
                     a:defaultValue="n">
-            <a:documentation>Indicates the pedal setting for the harp's D strings.</a:documentation>
+            <a:documentation>Indicates the pedal setting for the harp’s D strings.</a:documentation>
             <choice>
                <value>f</value>
                <a:documentation>Flat.</a:documentation>
@@ -1489,7 +1489,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                     name="e"
                     a:defaultValue="n">
-            <a:documentation>Indicates the pedal setting for the harp's E strings.</a:documentation>
+            <a:documentation>Indicates the pedal setting for the harp’s E strings.</a:documentation>
             <choice>
                <value>f</value>
                <a:documentation>Flat.</a:documentation>
@@ -1506,7 +1506,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                     name="f"
                     a:defaultValue="n">
-            <a:documentation>Indicates the pedal setting for the harp's F strings.</a:documentation>
+            <a:documentation>Indicates the pedal setting for the harp’s F strings.</a:documentation>
             <choice>
                <value>f</value>
                <a:documentation>Flat.</a:documentation>
@@ -1523,7 +1523,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                     name="g"
                     a:defaultValue="n">
-            <a:documentation>Indicates the pedal setting for the harp's G strings.</a:documentation>
+            <a:documentation>Indicates the pedal setting for the harp’s G strings.</a:documentation>
             <choice>
                <value>f</value>
                <a:documentation>Flat.</a:documentation>
@@ -1540,7 +1540,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                     name="a"
                     a:defaultValue="n">
-            <a:documentation>Indicates the pedal setting for the harp's A strings.</a:documentation>
+            <a:documentation>Indicates the pedal setting for the harp’s A strings.</a:documentation>
             <choice>
                <value>f</value>
                <a:documentation>Flat.</a:documentation>
@@ -1557,7 +1557,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                     name="b"
                     a:defaultValue="n">
-            <a:documentation>Indicates the pedal setting for the harp's B strings.</a:documentation>
+            <a:documentation>Indicates the pedal setting for the harp’s B strings.</a:documentation>
             <choice>
                <value>f</value>
                <a:documentation>Flat.</a:documentation>
@@ -5156,7 +5156,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    <define name="mei_att.clefShape.attribute.shape">
       <optional>
          <attribute name="shape">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Describes a clef's shape.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Describes a clef’s shape.</a:documentation>
             <ref name="mei_data.CLEFSHAPE"/>
          </attribute>
       </optional>
@@ -5712,7 +5712,7 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
    <define name="mei_att.mmTempo.attribute.mm">
       <optional>
          <attribute name="mm">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Used to describe tempo in terms of beats (often the meter signature denominator) per minute, ala M.M. (Maelzel's Metronome). Do not confuse this attribute with midi.bpm or midi.mspb. In MIDI, a beat is always defined as a quarter note, *not the numerator of the time signature or the metronomic indication*.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Used to describe tempo in terms of beats (often the meter signature denominator) per minute, ala M.M. (Maelzel’s Metronome). Do not confuse this attribute with midi.bpm or midi.mspb. In MIDI, a beat is always defined as a quarter note, *not the numerator of the time signature or the metronomic indication*.</a:documentation>
             <ref name="mei_data.TEMPOVALUE"/>
          </attribute>
       </optional>
@@ -5775,7 +5775,7 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
    <define name="mei_att.nInteger.attribute.n">
       <optional>
          <attribute name="n">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Provides a numeric designation that indicates an element's position in a sequence of similar elements. Its value must be a non-negative integer.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Provides a numeric designation that indicates an element’s position in a sequence of similar elements. Its value must be a non-negative integer.</a:documentation>
             <data type="nonNegativeInteger"/>
          </attribute>
       </optional>
@@ -5786,7 +5786,7 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
    <define name="mei_att.nNumberLike.attribute.n">
       <optional>
          <attribute name="n">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Provides a number-like designation that indicates an element's position in a sequence of similar elements. May not contain space characters.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Provides a number-like designation that indicates an element’s position in a sequence of similar elements. May not contain space characters.</a:documentation>
             <ref name="mei_data.WORD"/>
          </attribute>
       </optional>
@@ -6270,7 +6270,7 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
    <define name="mei_att.textRendition.attribute.rend">
       <optional>
          <attribute name="rend">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Captures the appearance of the element's contents using MEI-defined descriptors.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Captures the appearance of the element’s contents using MEI-defined descriptors.</a:documentation>
             <list>
                <oneOrMore>
                   <ref name="mei_data.TEXTRENDITION"/>
@@ -6347,7 +6347,7 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
    <define name="mei_att.typography.attribute.fontsize">
       <optional>
          <attribute name="fontsize">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates the size of a font expressed in printers' points, i.e., 1/72nd of an inch, relative terms, e.g., "small", "larger", etc., or percentage values relative to "normal" size, e.g., "125%".</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates the size of a font expressed in printers' points, i.e., 1/72nd of an inch, relative terms, e.g., small, larger, etc., or percentage values relative to normal size, e.g., 125%.</a:documentation>
             <ref name="mei_data.FONTSIZE"/>
          </attribute>
       </optional>
@@ -6355,7 +6355,7 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
    <define name="mei_att.typography.attribute.fontstyle">
       <optional>
          <attribute name="fontstyle">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records the style of a font, i.e, italic, oblique, or normal.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records the style of a font, i.e., italic, oblique, or normal.</a:documentation>
             <ref name="mei_data.FONTSTYLE"/>
          </attribute>
       </optional>
@@ -6407,7 +6407,7 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
    <define name="mei_att.whitespace.attribute.xmlspace">
       <optional>
          <attribute name="xml:space">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Allows one to signal to an application whether an element's white space is "significant". The behavior of xml:space cascades to all descendant elements, but it can be turned off locally by setting the xml:space attribute to the value "default".</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Allows one to signal to an application whether an element’s white space is "significant". The behavior of xml:space cascades to all descendant elements, but it can be turned off locally by setting the xml:space attribute to the value "default".</a:documentation>
             <choice>
                <value>default</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Allows the application to handle white space as necessary. Not including an xml:space attribute produces the same result as using the default value.</a:documentation>
@@ -8050,7 +8050,7 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:contributor">
-               <sch:assert test="not(matches(normalize-space(lower-case(@role)),               '(arranger|author|composer|contributor|editor|funder|librettist|lyricist|sponsor)'))">The value of @role must not contain the name of another element available in this
+               <sch:assert test="not(matches(normalize-space(lower-case(@role)), '(arranger|author|composer|contributor|editor|funder|librettist|lyricist|sponsor)'))">The value of @role must not contain the name of another element available in this
             context.</sch:assert>
             </sch:rule>
          </pattern>
@@ -8058,7 +8058,7 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
          <ref name="mei_att.lang.attributes"/>
          <optional>
             <attribute name="role">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Used to specify the contributor's function.</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Used to specify the contributor’s function.</a:documentation>
                <text/>
             </attribute>
          </optional>
@@ -8180,7 +8180,7 @@ Suggested values include: 1] alt; 2] angle; 3] circum; 4] depth; 5] diameter; 6]
                <value>diameter</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Length of a straight line passing through the center of a circle or sphere and meeting the circumference or surface at each end.</a:documentation>
                <value>elevation</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Distance to which something has been raised or uplifted above a level, e.g., a hill's elevation above the surrounding country.</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Distance to which something has been raised or uplifted above a level, e.g., a hill’s elevation above the surrounding country.</a:documentation>
                <value>height</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Denotes extent upward (as from foot to head) as well as any measurable distance above a given level.</a:documentation>
                <value>length</value>
@@ -9278,7 +9278,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
    </define>
    <define name="mei_roleDesc">
       <element name="roleDesc">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(role description) – Describes a character's role in a drama.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(role description) – Describes a character’s role in a drama.</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -9750,7 +9750,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:tempo[not(ancestor::mei:score or ancestor::mei:part)]">
-               <sch:assert test="not(@*[name() != 'analog' and name() != 'class' and name() != 'label' and                name() != 'mm' and name() != 'mm.dots' and name() != 'translit' and                name() != 'type' and name() != 'mm.unit' and name() != 'n' and name() != 'xml:base' and                name() != 'xml:id' and name() != 'xml:lang'])">Only analog, class, label, mm, mm.dots, mm.unit, n, translit, type, xml:base, xml:id,
+               <sch:assert test="not(@*[name() != 'analog' and name() != 'class' and name() != 'label' and name() != 'mm' and name() != 'mm.dots' and name() != 'translit' and name() != 'type' and name() != 'mm.unit' and name() != 'n' and name() != 'xml:base' and name() != 'xml:id' and name() != 'xml:lang'])">Only analog, class, label, mm, mm.dots, mm.unit, n, translit, type, xml:base, xml:id,
             and xml:lang attributes are allowed when tempo is not a descendant of a score or
             part.</sch:assert>
             </sch:rule>
@@ -9970,7 +9970,7 @@ Suggested values include: 1] alternative; 2] arrangement; 3] carrier; 4] date; 5
    <define name="mei_att.stringtab.attribute.tab.fing">
       <optional>
          <attribute name="tab.fing">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates which finger, if any, should be used to play an individual string. The index, middle, ring, and little fingers are represented by the values 1-4, while 't' is for the thumb. The values 'x' and 'o' indicate muffled and open strings, respectively.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates which finger, if any, should be used to play an individual string. The index, middle, ring, and little fingers are represented by the values 1-4, while t is for the thumb. The values x and o indicate muffled and open strings, respectively.</a:documentation>
             <ref name="mei_data.FINGER.FRET"/>
          </attribute>
       </optional>
@@ -10213,7 +10213,7 @@ Suggested values include: 1] alternative; 2] arrangement; 3] carrier; 4] date; 5
          <ref name="mei_att.nNumberLike.attributes"/>
          <optional>
             <attribute name="form">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Used to indicate the format of a list. In a "simple" list, <code xmlns="http://www.w3.org/1999/xhtml">&lt;li&gt;</code> elements are not numbered or bulleted. In a "marked" list, the sequence of the list items is not critical, and a bullet, box, dash, or other character is displayed at the start of each <code xmlns="http://www.w3.org/1999/xhtml">&lt;item&gt;</code>. In an "ordered" list, the sequence of the items is important, and each <code xmlns="http://www.w3.org/1999/xhtml">&lt;li&gt;</code> is lettered or numbered. Style sheet functions should be used to specify the mark or numeration system for each <code xmlns="http://www.w3.org/1999/xhtml">&lt;li&gt;</code>.</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Used to indicate the format of a list. In a simple list, <code xmlns="http://www.w3.org/1999/xhtml">&lt;li&gt;</code> elements are not numbered or bulleted. In a marked list, the sequence of the list items is not critical, and a bullet, box, dash, or other character is displayed at the start of each <code xmlns="http://www.w3.org/1999/xhtml">&lt;item&gt;</code>. In an ordered list, the sequence of the items is important, and each <code xmlns="http://www.w3.org/1999/xhtml">&lt;li&gt;</code> is lettered or numbered. Style sheet functions should be used to specify the mark or numeration system for each <code xmlns="http://www.w3.org/1999/xhtml">&lt;li&gt;</code>.</a:documentation>
                <choice>
                   <value>simple</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Items are not numbered or bulleted.</a:documentation>
@@ -10403,7 +10403,7 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
    </define>
    <define name="mei_att.beatRpt.vis.attribute.slash">
       <attribute name="slash">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates the number of slashes required to render the appropriate beat repeat symbol. When a single beat consisting of a single note or chord is repeated, the repetition symbol is a single thick, slanting slash; therefore, the value '1' should be used. When the beat is divided into even notes, the following values should be used: 4ths or 8ths=1, 16ths=2, 32nds=3, 64ths=4, 128ths=5. When the beat is comprised of mixed duration values, the default rendition is 2 slashes and 2 dots.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates the number of slashes required to render the appropriate beat repeat symbol. When a single beat consisting of a single note or chord is repeated, the repetition symbol is a single thick, slanting slash; therefore, the value 1 should be used. When the beat is divided into even notes, the following values should be used: 4ths or 8ths=1, 16ths=2, 32nds=3, 64ths=4, 128ths=5. When the beat is comprised of mixed duration values, the default rendition is 2 slashes and 2 dots.</a:documentation>
          <ref name="mei_data.BEATRPT.REND"/>
       </attribute>
    </define>

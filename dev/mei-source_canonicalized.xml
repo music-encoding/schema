@@ -18,7 +18,7 @@
 -->
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<!--canonicalized: 2022-07-21T10:50:54.702Z-->
+<!--canonicalized: 2022-07-29T13:19:27.796Z-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -1538,7 +1538,7 @@
                         <specDesc key="att.whitespace" atts="xml:space"/>
                      </specList>
                   </p>
-                  <p>While <att>xml:lang</att> attribute may be used to encode the language of an element's contents, the <att>xml:space</att> attribute lets you define the handling of whitespace, <abbr>i.e.</abbr>, whitespace being important content ("preserve") or negligible ("default"). With the latter also being the default value if no <hi rend="italic">xml:space</hi> attribute is present.</p>
+                  <p>While <att>xml:lang</att> attribute may be used to encode the language of an element's contents, the <att>xml:space</att> attribute lets you define the handling of whitespace, <abbr>i.e.</abbr>, whitespace being important content (<val>preserve</val>) or negligible (<val>default</val>). With the latter also being the default value if no <att>xml:space</att> attribute is present.</p>
                </div>
                <div xml:id="sharedLabellingAttributes" type="div3">
                   <head>Label Attributes</head> 
@@ -1962,7 +1962,7 @@
                      <item>wide</item>
                   </list>
                   <p>These values are also qualitative, however, they are also relative. That is, 'narrow' is the default value, 'medium' is twice as wide as 'narrow', and 'wide' is twice as wide as 'medium'.</p>
-                  <p>In addition to these textual values, the width attribute may contain a numeric value and an optional unit value, "2mm" for example. If the unit value is not provided, staff interline units are presumed.</p>
+                  <p>In addition to these textual values, the width attribute may contain a numeric value and an optional unit value, <val>2mm</val> for example. If the unit value is not provided, staff interline units are presumed.</p>
                   <p>The <att>lstartsym</att> and <att>lendsym</att> attributes name the symbol that may start and/or end a line, while <att>lstartsymsize</att> and <att>lendsymsize</att> indicate the relative size of the symbol using a numeric value in the range from 1 to 9.</p>
                </div>
                <div xml:id="usersymbolsLimitations" type="div3">
@@ -2329,7 +2329,7 @@
 </egXML>
                         </figure>
                      </p>
-                     <p>The <att>unit</att> attribute is restricted to certain units: "byte" (Byte), "char" (Character), "cm" (Centimeter), "deg" (Degree), "in" (Inch), "issue" (Serial issue), "ft" (Foot), "m" (Meter), "mm" (Millimeter), "page" (Page), "pc" (Pica), "pt" (Point), "px" (Pixel), "rad" (Radian), "record" (Record), "vol" (Serial volume), and "vu" (MEI virtual unit).</p>
+                     <p>The <att>unit</att> attribute is restricted to certain values: <val>byte</val> (Byte), <val>char</val> (Character), <val>cm</val> (Centimeter), <val>deg</val> (Degree), <val>in</val> (Inch), <val>issue</val> (Serial issue), <val>ft</val> (Foot), <val>m</val> (Meter), <val>mm</val> (Millimeter), <val>page</val> (Page), <val>pc</val> (Pica), <val>pt</val> (Point), <val>px</val> (Pixel), <val>rad</val> (Radian), <val>record</val> (Record), <val>vol</val> (Serial volume), and <val>vu</val> (MEI virtual unit).</p>
                      <p>A virtual unit (vu) in MEI is a measure of distance. It is determined by half the distance between adjacent staff lines where the interline space is measured from the middle of a staff line. Unless otherwise specified, the MEI virtual unit is set as the default unit.</p>
                   </div>
                   <div xml:id="headerPublicationDistribution" type="div4">
@@ -3447,7 +3447,7 @@
                         <specDesc key="language"/>
                      </specList>
                   </p>
-                  <p>A <gi scheme="MEI">language</gi> element may be supplied for each different language used in a document. If used, its <att>xml:id</att> attribute should specify an appropriate language identifier. This is particularly important if extended language identifiers have been used as the value of @xml:lang attributes elsewhere in the document.</p>
+                  <p>A <gi scheme="MEI">language</gi> element may be supplied for each different language used in a document. If used, its <att>xml:id</att> attribute should specify an appropriate language identifier. This is particularly important if extended language identifiers have been used as the value of <att>xml:lang</att> attributes elsewhere in the document.</p>
                   <p>Here is an example of the use of this element:</p>
                   <p>
                      <figure>
@@ -4138,9 +4138,9 @@
                            <specDesc key="patch" atts="attached.to"/>
                         </specList>
                      </p>
-                     <p>Depending on the parent, allowed values for <att>attached.to</att> are either "<hi rend="italic">recto</hi>" and "<hi rend="italic">verso</hi>" (in case of <gi scheme="MEI">folium</gi>) or "<hi rend="italic">outer.recto</hi>", "<hi rend="italic">inner.verso</hi>", "<hi rend="italic">inner.recto</hi>" and "<hi rend="italic">outer.verso</hi>" (in case of <gi scheme="MEI">bifolium</gi>).</p>
+                     <p>Depending on the parent, allowed values for <att>attached.to</att> are either <val>recto</val> and <val>verso</val> (in case of <gi scheme="MEI">folium</gi>) or <val>outer.recto</val>, <val>inner.verso</val>, <val>inner.recto</val> and <val>outer.verso</val> (in case of <gi scheme="MEI">bifolium</gi>).</p>
                      <p>The exact position of the patch on the underlying surface may be specified using the optional <att>x</att> and <att>y</att> attributes, which are used to specify the distance from the upper left corner of the patch from the upper left corner of the surface it is attached to. At this point, it is not possible to specify rotation.</p>
-                     <p>The (optional) <att>attached.by</att> attribute specifies by which means the patch is attached. Suggested values are: "<hi rend="italic">glue</hi>" (patch is glued on surface beneath), "<hi rend="italic">thread</hi>" (patch is sewn on surface beneath), "<hi rend="italic">needle</hi>" (patch is pinned to the surface beneath), "<hi rend="italic">tape</hi>" (patch is taped on surface beneath using an adhesive strip) and "<hi rend="italic">staple</hi>" (patch is attached on surface beneath using a staple), but other values may be used as necessary.</p>
+                     <p>The (optional) <att>attached.by</att> attribute specifies by which means the patch is attached. Suggested values are: <val>glue</val> (patch is glued on surface beneath), <val>thread</val> (patch is sewn on surface beneath), <val>needle</val> (patch is pinned to the surface beneath), <val>tape</val> (patch is taped on surface beneath using an adhesive strip) and <val>staple</val> (patch is attached on surface beneath using a staple), but other values may be used as necessary.</p>
                      <p>While the <gi scheme="MEI">patch</gi> element provides information about the attachment of a patch, the actual patch is encoded as a <gi scheme="MEI">folium</gi> or <gi scheme="MEI">bifolium</gi> child of <gi scheme="MEI">patch</gi>.</p>
                      <p>
                         <figure>
@@ -4744,9 +4744,9 @@
                         <head>Basic Usage of Notes in CMN</head>
                         <p>In CMN, notes are determined by three basic parameters:</p>
                         <list rend="bulleted">
-                           <item>pitch name (using @pname)</item>
-                           <item>octave (using @oct)</item>
-                           <item>duration (using @dur)</item>
+                           <item>pitch name (using <att>pname</att>)</item>
+                           <item>octave (using <att>oct</att>)</item>
+                           <item>duration (using <att>dur</att>)</item>
                         </list>
                         <p>A single note, in this case a quarter note C4, is therefore encoded as: <figure>
                               <head/>
@@ -4826,7 +4826,7 @@
                            </figure>
                         </p>
                         <p>Grace notes are not counted when determining the measure’s conformance to the current time signature. Therefore, the <att>dur</att> attribute records only the <hi rend="italic">written</hi> rhythmic value of the grace note. The time necessary for the performance of grace notes can be unspecified, calculated based on taking time from other non-grace notes, or specified precisely using the <att>dur.ges</att> attribute.</p>
-                        <p>The values of <att>grace</att> indicate from which note time is ‘borrowed’ to perform the grace note: The preceding note, in which case the value ‘unacc’ (unaccented) is used, or the following note, when the value ‘acc’ (accented) is appropriate. Technically, this value determines if the note following the grace will keep its original onset time or will be slightly delayed to allow the grace note itself to be accented. Sometimes it is not clear how to perform a grace; in these situations the value ‘unknown’ allows one to indicate a grace note while unambiguously stating that its performed duration remains unknown.</p>
+                        <p>The values of <att>grace</att> indicate from which note time is ‘borrowed’ to perform the grace note: The preceding note, in which case the value <val>unacc</val> (unaccented) is used, or the following note, when the value <val>acc</val> (accented) is appropriate. Technically, this value determines if the note following the grace will keep its original onset time or will be slightly delayed to allow the grace note itself to be accented. Sometimes it is not clear how to perform a grace; in these situations the value <val>unknown</val> allows one to indicate a grace note while unambiguously stating that its performed duration remains unknown.</p>
                         <p>The <att>grace.time</att> attribute is only to be used in combination with the <att>grace</att> attribute. It records the amount of time (as a percentage of the written duration) that the grace note should ‘steal’ from the preceding note (when <att>grace</att>="unacc") or the following note (when <att>grace</att>="acc").</p>
                         <p>Grace notes can be placed within a <gi scheme="MEI">graceGrp</gi> element, which itself allows all values for <att>grace</att> as explained above. The optional <att>attach</att> attribute is used to record whether the grace note group is attached to the following event or to the preceding one. The <gi scheme="MEI">graceGrp</gi> element can be used with single or mutliple grace notes.</p>
                         <p>More information about grace notes in the context of other CMN ornaments is available in chapter <ptr target="#cmnOrnaments"/>.</p>
@@ -5341,7 +5341,7 @@
                      <label>beam.rests</label>
                      <item>Indicates whether automatically-drawn beams should include rests shorter than a quarter note duration.</item>
                   </list>
-                  <p>The <att>beam.group</att> attribute can be used to set a default beaming pattern to be used when no beaming is indicated at the layer level. It must contain a comma-separated list of time values that add up to a measure in the current meter, <abbr>e.g.</abbr>, ‘4,4,4,4’ in 4/4 time indicates that each quarter note worth of shorter notes should be beamed together. Parentheses can be used to indicate sub-groupings of secondary beams. For example, ‘(4.,4.,4.)’ in 9/8 meter indicates one primary beam per measure with secondary beams broken at each dotted quarter duration, while ‘(4,4),(4,4)’ in 4/4 will result in a measure of 16th notes being rendered with a primary beam covering all the notes and secondary beams for each group of four 16th notes.</p>
+                  <p>The <att>beam.group</att> attribute can be used to set a default beaming pattern to be used when no beaming is indicated at the layer level. It must contain a comma-separated list of time values that add up to a measure in the current meter, <abbr>e.g.</abbr>, <val>4,4,4,4</val> in 4/4 time indicates that each quarter note worth of shorter notes should be beamed together. Parentheses can be used to indicate sub-groupings of secondary beams. For example, <val>(4.,4.,4.)</val> in 9/8 meter indicates one primary beam per measure with secondary beams broken at each dotted quarter duration, while <val>(4,4),(4,4)</val> in 4/4 will result in a measure of 16th notes being rendered with a primary beam covering all the notes and secondary beams for each group of four 16th notes.</p>
                   <p>The <att>beam.group</att> attribute is available on <gi scheme="MEI">scoreDef</gi>, <gi scheme="MEI">staffDef</gi>, and <gi scheme="MEI">layerDef</gi> elements, making it possible to set different beaming patterns for each of these. Also, the beaming pattern can be changed anywhere score parameters may be changed, for example, at the start of sections. This beaming "directive" can be overridden by using <gi scheme="MEI">beam</gi>, <gi scheme="MEI">beamSpan</gi>, or <att>beam</att> attributes as described above. If none of these beaming specifications is used, then no beaming is implied. Default beaming can be explicitly ‘turned off’ by setting <att>beam.group</att> to an empty string.</p>
                </div>
                <div xml:id="cmnSlurTies" type="div3">
@@ -5366,7 +5366,7 @@
                      <label>t (terminal)</label>
                      <item>Marks the end of a tie</item>
                   </list>
-                  <p>The scope of the <att>tie</att> attribute is the musical <gi scheme="MEI">layer</gi>; that is, a tie started in one layer may only be ended by a subsequent musical event with a <att>tie</att> attribute with an <hi rend="italic">m</hi> or <hi rend="italic">t</hi> value in the same layer. The tie-terminating event may lie in the following measure.</p>
+                  <p>The scope of the <att>tie</att> attribute is the musical <gi scheme="MEI">layer</gi>; that is, a tie started in one layer may only be ended by a subsequent musical event with a <att>tie</att> attribute with an <val>m</val> or <val>t</val> value in the same layer. The tie-terminating event may lie in the following measure.</p>
                   <p>
                      <figure>
                         <head>Ties across barlines</head>
@@ -5616,7 +5616,7 @@
 </egXML>
                      </figure>
                   </p>
-                  <p>The location of a dynamic marking in relation to a staff may be specified using the <att>place</att> attribute, which may be given as <hi rend="italic">above</hi>, <hi rend="italic">within</hi>, or <hi rend="italic">below</hi> the staff:</p>
+                  <p>The location of a dynamic marking in relation to a staff may be specified using the <att>place</att> attribute, which may be given as <val>above</val>, <val>within</val>, or <val>below</val> the staff:</p>
                   <p>
                      <figure>
                         <head/>
@@ -5703,7 +5703,7 @@
                      </figure>
                   </p>
                   <p>It is recommended that the list of references in <att>plist</att> include all participants in the dynamic marking, including the first and last notes as in the preceding example, even though they are duplicated by <att>startid</att> and <att>endid</att> attributes.</p>
-                  <p>In addition to verbal instructions, Common Music Notation uses graphical symbols to indicate ‘continuous’ dynamics. These crescendo and decrescendo (or diminuendo) symbols are encoded in MEI using the <gi scheme="MEI">hairpin</gi> element. It also is a member of the <ident type="class">model.controlEventLike</ident> class, which means it too is used just before the close of a <gi scheme="MEI">measure</gi> element, following the encoding of all staves. The required attribute <att>form</att> specifies the direction of the symbol by taking one of two possible values: <hi rend="italic">cres</hi> (growing louder) or <hi rend="italic">dim</hi> (getting softer).</p>
+                  <p>In addition to verbal instructions, Common Music Notation uses graphical symbols to indicate ‘continuous’ dynamics. These crescendo and decrescendo (or diminuendo) symbols are encoded in MEI using the <gi scheme="MEI">hairpin</gi> element. It also is a member of the <ident type="class">model.controlEventLike</ident> class, which means it too is used just before the close of a <gi scheme="MEI">measure</gi> element, following the encoding of all staves. The required attribute <att>form</att> specifies the direction of the symbol by taking one of two possible values: <val>cres</val> (growing louder) or <val>dim</val> (getting softer).</p>
                   <p>
                      <figure>
                         <head/>
@@ -5778,7 +5778,7 @@
                   </p>
                   <p>Tuplets are often highlighted using brackets above or below the affected notes. The presence and position of these brackets can be encoded using the <att>bracket.place</att> (above / below) and <att>bracket.visible</att> (true / false) attributes.</p>
                   <p>Usually, however, tuplets are rendered with a bracket (<att>bracket.visible</att>="true") and a single number (<att>num.format</att>="count" and <att>num.visible</att>="true"), as seen in the example above. However, the number-to-numbase ratio may be provided in addition to, or in some cases as a replacement for, the bracket. The <att>num.format</att> attribute indicates whether a plain number (the value of <att>num</att>) or a ratio (comprised of <att>num</att> and <att>numbase</att>, <abbr>e.g.</abbr>, "3:2") should be displayed and <att>num.visible</att> indicates the general presence of such a number.</p>
-                  <p>Further visual control comes with the <att>num.place</att> and <att>bracket.place</att> attributes, that allow specific placement of the number and the bracket "above" or "below" the staff.</p>
+                  <p>Further visual control comes with the <att>num.place</att> and <att>bracket.place</att> attributes, that allow specific placement of the number and the bracket <val>above</val> or <val>below</val> the staff.</p>
                   <p>In addition to <gi scheme="MEI">note</gi> elements, <gi scheme="MEI">tuplet</gi> may contain other elements, such as <gi scheme="MEI">rest</gi> or <gi scheme="MEI">space</gi>, to match the content of a source document or an intended rendering. In particular, the <gi scheme="MEI">beam</gi> element is allowed so that custom beaming may be indicated, <abbr>e.g.</abbr>, a septuplet may be divided into a group of three plus a group of four notes.</p>
                   <p>The <gi scheme="MEI">tuplet</gi> element may also be used for repetition of the same pitch; that is, a single note or chord may be the only content of the tuplet. In some cases, optical music recognition software may treat these instances as bowed tremolandi due to the knowledge of the complete semantics of the notation at the time of recognition. However, marking these as tuplets is the recommended practice.</p>
                   <p>In some situations, a tuplet is made up of events in different measures. As this raises the issue of non-concurrent hierarchies, it is not possible to encode such situations with the <gi scheme="MEI">tuplet</gi> element described above. Therefore, MEI offers the <gi scheme="MEI">tupletSpan</gi> element, which is member of the <ident type="class">model.controlEventLike</ident> class. It is nested inside of <gi scheme="MEI">measure</gi>, following all the measure’s <gi scheme="MEI">staff</gi> children. It uses the same attributes as <gi scheme="MEI">tuplet</gi> to describe tuplets, but instead of nesting all affected notes inside itself, it references the <att>xml:id</att> values of all affected notes in its <att>plist</att> attribute and the initial and terminal notes of the tuplet using <att>startid</att> and <att>endid</att> attributes. This configuration allows tuplets to cross beams or measure boundaries. The following example demonstrates a typical example of such hierarchy-crossing tuplets:</p>
@@ -5874,7 +5874,7 @@
 </egXML>
                         </figure>
                      </p>
-                     <p>A third, and somewhat counter-intuitive, value for <att>order</att>, "nonarp", indicates that no arpeggio shall be performed. Normally rendered as a bracket instead of a wavy line, this form of arpeggio is used to indicate a non-arpeggiated chord intervening in a sequence of arpeggiated ones. This is common in music for the harp, where arpeggiation is the usual method of performing chords and deviation from the norm must be explicitly indicated.</p>
+                     <p>A third, and somewhat counter-intuitive, value for <att>order</att>, <val>nonarp</val>, indicates that no arpeggio shall be performed. Normally rendered as a bracket instead of a wavy line, this form of arpeggio is used to indicate a non-arpeggiated chord intervening in a sequence of arpeggiated ones. This is common in music for the harp, where arpeggiation is the usual method of performing chords and deviation from the norm must be explicitly indicated.</p>
                      <p>Whereas an arpeggio ‘staggers’ the onset times of the notes of a chord, a glissando denotes a situation where the pitch ‘slides’ from one note to another. It makes no difference whether this slide produces distinct intermediate pitches (as on the piano) or not (as on the trombone), though the latter is sometimes referred to as portamento. The visual appearance of a glissando, which MEI encodes as <gi scheme="MEI">gliss</gi>, is normally a line connecting two notes in the glissando.</p>
                      <p>
                         <figure>
@@ -6245,7 +6245,7 @@
                      <head>Harp Pedals</head>
                      <p>Modern harps have seven pedals which allow adjustment of their strings to different pitches. The settings for these pedals occur at the beginning of the harp notation and/or whenever it is necessary to change the harp’s tuning. These settings may be rendered using letter pitches (in the order of the pedals from left to right) or in a diagrammatic fashion, such as the form invented by <ref target="https://en.wikipedia.org/wiki/Carlos_Salzedo">Carlos Salzedo</ref>.</p>
                      <p>In MEI, harp pedal settings are encoded using the <gi scheme="MEI">harpPedal</gi> element. It is a member of the <ident type="class">model.controlEventLike.cmn</ident> class and is therefore placed within <gi scheme="MEI">measure</gi>, following all <gi scheme="MEI">staff</gi> children. The <att>staff</att> and <att>layer</att> attributes may be used to assign it to a certain <gi scheme="MEI">staff</gi> or <gi scheme="MEI">layer</gi>. Either a <att>tstamp</att> or <att>startid</att> attribute must be used to indicate the placement within the measure (see <ptr target="#cmnTstamp"/> and <ptr target="#linkingdata"/> for further details about those linking mechanisms).</p>
-                     <p>The musical intention of the element is described using the <att>c</att>, <att>d</att>, <att>e</att>, <att>f</att>, <att>g</att>, <att>a</att> and <att>b</att> attributes, which affect the corresponding strings of the harp. All of these attributes may take the values "<hi rend="italic">f</hi>" (flat), "<hi rend="italic">s</hi>" (sharp) or "<hi rend="italic">n</hi>" (natural), where "n" is the default value, which is assumed when one of these attributes is not specified.</p>
+                     <p>The musical intention of the element is described using the <att>c</att>, <att>d</att>, <att>e</att>, <att>f</att>, <att>g</att>, <att>a</att> and <att>b</att> attributes, which affect the corresponding strings of the harp. All of these attributes may take the values <val>f</val> (flat), <val>s</val> (sharp) or <val>n</val> (natural), where a natural is the default value, which is assumed when one of these attributes is not specified.</p>
                      <p>
                         <figure>
                            <head>Harp pedal diagrams</head>
@@ -6535,7 +6535,7 @@
                            <specDesc key="multiRpt"/>
                         </specList>
                      </p>
-                     <p>The <gi scheme="MEI">beatRpt</gi> element is used to represent a single repeated beat. Its visual rendition can be recorded using the <att>slash</att> attribute. This attribute indicates the number of slashes required to render the appropriate repeat symbol, which, as demonstrated in the preceding figure, depends on the rhythmic content of the beat being repeated. When a beat that consists of a single note or chord is repeated, the repetition sign is typically rendered as a single thick, slanting slash; therefore, the value ‘1’ should be used. The following values should be used when the beat is divided into even notes: 4ths or 8ths=1, 16ths=2, 32nds=3, 64ths=4, 128ths=5. When the beat is comprised of mixed duration values, the symbol is always rendered as 2 slashes and 2 dots.</p>
+                     <p>The <gi scheme="MEI">beatRpt</gi> element is used to represent a single repeated beat. Its visual rendition can be recorded using the <att>slash</att> attribute. This attribute indicates the number of slashes required to render the appropriate repeat symbol, which, as demonstrated in the preceding figure, depends on the rhythmic content of the beat being repeated. When a beat that consists of a single note or chord is repeated, the repetition sign is typically rendered as a single thick, slanting slash; therefore, the value <val>1</val> should be used. The following values should be used when the beat is divided into even notes: 4ths or 8ths=1, 16ths=2, 32nds=3, 64ths=4, 128ths=5. When the beat is comprised of mixed duration values, the symbol is always rendered as 2 slashes and 2 dots.</p>
                      <p>In addition to its indication of a repeated beat, the beatRpt element is sometimes used in popular music notation, especially in guitar or percussion parts, to indicate a repeated rhythmic pattern. The <gi scheme="MEI">beatRpt</gi> element can be used, but when these parts require durations longer or shorter than a beat, note elements with appropriately-shaped note heads should be employed instead.</p>
                      <p>The <gi scheme="MEI">mRpt</gi> element is available for repetition of an entire measure. Like <gi scheme="MEI">mRest</gi>, it must be the sole child of <gi scheme="MEI">layer</gi>, no other events should be used. The <att>n</att> attribute of <gi scheme="MEI">mRpt</gi> should not be used to record the number displayed above the measure in the figure below. Instead, the numbering of repetitions of the written-out measure can be enabled using the <att>multi.number</att> attribute available on the <gi scheme="MEI">scoreDef</gi> and <gi scheme="MEI">staffDef</gi> elements.</p>
                      <p>
@@ -6647,7 +6647,7 @@
                         </figure>
                      </p>
                      <p>The <gi scheme="MEI">mRpt2</gi> element represents repetition of a 2-measure fragment, while <gi scheme="MEI">multiRpt</gi> is for repetition of fragments longer than two measures. In modern publishing practice, repeats of more than two measures are written out using repeat signs. This element is provided, however, for handling non-standard practices often found in manuscripts. The <att>num</att> attribute on <gi scheme="MEI">multiRpt</gi> records the number of preceding measures to be repeated.</p>
-                     <p>All elements described above allow for association of the sign with a symbol in a digital facsimile (via the <att>facs</att> attribute) and with a user-defined symbol (using <att>altsym</att>). See <ptr target="#facsimiles"/> and <ptr target="#userSymbols"/> for further details. In addition, the <att>expand</att> attribute is available on the foregoing elements to inform a rendering process whether to use the repeat symbol or the full content represented by it. A value of "true" indicates that the content should be displayed, while a "false" value means to show only the repeat symbol.</p>
+                     <p>All elements described above allow for association of the sign with a symbol in a digital facsimile (via the <att>facs</att> attribute) and with a user-defined symbol (using <att>altsym</att>). See <ptr target="#facsimiles"/> and <ptr target="#userSymbols"/> for further details. In addition, the <att>expand</att> attribute is available on the foregoing elements to inform a rendering process whether to use the repeat symbol or the full content represented by it. A value of <val>true</val> indicates that the content should be displayed, while a <val>false</val> value means to show only the repeat symbol.</p>
                   </div>
                </div>
             </div>
@@ -7392,7 +7392,7 @@
                      <label>duplex</label>
                      <item>One of the three categories of a longa in Ars antiqua ('duplex', 'perfecta', and 'imperfecta')</item>
                   </list>
-                  <p>The last three values are to be used exclusively in <hi rend="italic">Ars antiqua</hi> mensural notation, where "maior" and "minor" refer to types of <hi rend="italic">semibreves</hi>, and "duplex" refers to a type of <hi rend="italic">longa</hi>. Examples of each of these six values are presented below. In these examples, the ‘voice’ staff renders the notes in the code snippet, and the ‘reference’ staff, together with the dotted barlines, are shown to help to visualize the relative values of the notes in the ‘voice’ staff.</p>
+                  <p>The last three values are to be used exclusively in <hi rend="italic">Ars antiqua</hi> mensural notation, where <val>maior</val>and <val>minor</val>refer to types of <hi rend="italic">semibreves</hi>, and <val>duplex</val>refers to a type of <hi rend="italic">longa</hi>. Examples of each of these six values are presented below. In these examples, the ‘voice’ staff renders the notes in the code snippet, and the ‘reference’ staff, together with the dotted barlines, are shown to help to visualize the relative values of the notes in the ‘voice’ staff.</p>
                   <p>The following example illustrates an <hi rend="italic">alteration</hi> (the second <hi rend="italic">brevis</hi>) in <hi rend="italic">modus minor perfectus</hi>. Notice that the second <hi rend="italic">brevis</hi> has doubled its regular value, it has been altered, unlike the first one. <figure>
                         <head/>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/4.0.1/mei-Mensural.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;&lt;?xml-model href="https://music-encoding.org/schema/4.0.1/mei-Mensural.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="4.0.1"&gt;
@@ -7723,7 +7723,7 @@
                      </figure>
                   </p>
                   <p>
-                     <hi rend="italic">Note:</hi> In <hi rend="italic">Ars Antiqua</hi>, only the <hi rend="italic">longa</hi> could be "perfecta" / "imperfecta" and the <hi rend="italic">brevis</hi> could have a regular value ("recta") or be "altera". In the <hi rend="italic">Ars nova</hi>, principles of imperfection and alteration were extended into the other note levels (<hi rend="italic">brevis</hi>-<hi rend="italic">semibrevis</hi> and <hi rend="italic">semibrevis</hi>-<hi rend="italic">minima</hi>). This means that the <hi rend="italic">breves</hi> in <hi rend="italic">Ars antiqua</hi> do not have a "perfecta" / "imperfecta" quality, and this is why there is no <att>dur.quality</att> attribute for the <hi rend="italic">breves</hi> in the previous example. However, the <hi rend="italic">brevis</hi> can have a ternary division (indicated by <hi rend="italic">tempus=”3”</hi>), being divided either into three (equal) <hi rend="italic">minor semibreves</hi> or into a <hi rend="italic">minor</hi>-<hi rend="italic">maior</hi> pair of <hi rend="italic">semibreves</hi>. The encoding also allows for the possibility of encoding a binary division of the breve in <hi rend="italic">Ars antiqua</hi> notations: the indication <hi rend="italic">tempus=”2”</hi> indicates the breve is divided into two equal <hi rend="italic">semibreves</hi>. This is why in this example with <hi rend="italic">tempus="3"</hi>, the <hi rend="italic">semibreves</hi> do have a <att>dur.quality</att> attribute (with values "minor" or "maior").</p>
+                     <hi rend="italic">Note:</hi> In <hi rend="italic">Ars Antiqua</hi>, only the <hi rend="italic">longa</hi> could be "perfecta" / "imperfecta" and the <hi rend="italic">brevis</hi> could have a regular value ("recta") or be "altera". In the <hi rend="italic">Ars nova</hi>, principles of imperfection and alteration were extended into the other note levels (<hi rend="italic">brevis</hi>-<hi rend="italic">semibrevis</hi> and <hi rend="italic">semibrevis</hi>-<hi rend="italic">minima</hi>). This means that the <hi rend="italic">breves</hi> in <hi rend="italic">Ars antiqua</hi> do not have a "perfecta" / "imperfecta" quality, and this is why there is no <att>dur.quality</att> attribute for the <hi rend="italic">breves</hi> in the previous example. However, the <hi rend="italic">brevis</hi> can have a ternary division (indicated by <hi rend="italic">tempus=”3”</hi>), being divided either into three (equal) <hi rend="italic">minor semibreves</hi> or into a <hi rend="italic">minor</hi>-<hi rend="italic">maior</hi> pair of <hi rend="italic">semibreves</hi>. The encoding also allows for the possibility of encoding a binary division of the breve in <hi rend="italic">Ars antiqua</hi> notations: the indication <hi rend="italic">tempus=”2”</hi> indicates the breve is divided into two equal <hi rend="italic">semibreves</hi>. This is why in this example with <hi rend="italic">tempus="3"</hi>, the <hi rend="italic">semibreves</hi> do have a <att>dur.quality</att> attribute (with values <val>minor</val> or <val>maior</val>).</p>
                   <p>An alternative encoding---removing the <att>dur.quality</att> attributes for notes which lengths are not modified from their default values (<abbr>i.e.</abbr>, the perfect long and the minor <hi rend="italic">semibreves</hi>)---would be: <figure>
                         <head/>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;!--With @modusminor and @tempus equal to "3" in the &lt;staffDef&gt; element--&gt;&lt;layer&gt;
@@ -8081,7 +8081,7 @@
                      <specDesc key="att.mensural.shared" atts="modusmaior modusminor tempus prolatio"/>
                   </specList>
                </p>
-               <p>The mensur signs themselves can be encoded in the <att>mensur.sign</att> attribute with a possible value of "C" or "O". Its orientation can be encoded in the <att>mensur.orient</att> attribute, for example, with the value "reversed" for a flipped C sign. The number of slashes (up to 6) can be given in the <att>mensur.slash</att> attribute. There is also a <att>mensur.dot</att> attribute for indicating the presence of a dot through the boolean values "true" or "false".</p>
+               <p>The mensur signs themselves can be encoded in the <att>mensur.sign</att> attribute with a possible value of <val>C</val> or <val>O</val>. Its orientation can be encoded in the <att>mensur.orient</att> attribute, for example, with the value <val>reversed</val> for a flipped C sign. The number of slashes (up to 6) can be given in the <att>mensur.slash</att> attribute. There is also a <att>mensur.dot</att> attribute for indicating the presence of a dot through the boolean values <val>true</val> or "false".</p>
                <p>
                   <specList>
                      <specDesc key="att.mensural.vis" atts="mensur.sign mensur.dot mensur.slash mensur.orient"/>
@@ -8289,7 +8289,7 @@
                         <specDesc key="att.mensural.shared" atts="divisio"/>
                      </specList>
                   </p>
-                  <p>The signs for the Italian <hi rend="italic">divisiones</hi> can be encoded in the <att>sign</att> or <att>mensur.sign</att> attribute (to be used with <att>mensur</att> or <att>staffDef</att> respectively), with the values: "t" for ternaria, "q" for quaternaria, "si" and "i" for senaria imperfecta, "sp" and "p" for senaria perfecta, "oc" for octonaria, "n" for novenaria, and "d" for duodenaria. And the additional values for senaria gallica, "sg" and "g", and senaria ytalica, "sy" and "y".</p>
+                  <p>The signs for the Italian <hi rend="italic">divisiones</hi> can be encoded in the <att>sign</att> or <att>mensur.sign</att> attribute (to be used with <att>mensur</att> or <att>staffDef</att> respectively), with the values: <val>t</val> for ternaria, <val>q</val> for quaternaria, <val>si</val> and <val>i</val> for senaria imperfecta, <val>sp</val> and <val>p</val> for senaria perfecta, <val>oc</val> for octonaria, <val>n</val> for novenaria, and <val>d</val> for duodenaria. And the additional values for senaria gallica, <val>sg</val> and <val>g</val>, and senaria ytalica, <val>sy</val> and <val>y</val>.</p>
                </div>
             </div>
             <div xml:id="mensuralProportions" type="div2">
@@ -9739,7 +9739,7 @@
 </egXML>
                   </figure>
                </p>
-               <p>In the case of fretted instruments, the fret number may be captured using the <att>tab.fret</att> attribute. An open string may be indicated using the value "0" (zero).</p>
+               <p>In the case of fretted instruments, the fret number may be captured using the <att>tab.fret</att> attribute. An open string may be indicated using the value <val>0</val> (zero).</p>
                <p>
                   <figure>
                      <head/>
@@ -9773,11 +9773,11 @@
                <p>The attribute <att>wordpos</att> is used to specify the position of the marked-up lyric syllable in a word. It allows the following values:</p>
                <list type="gloss">
                   <label>i</label>
-                  <item>Indicates that the current syllable's position is initial; that is, at the beginning of a word;</item>
+                  <item>Indicates that the current syllable’s position is initial; that is, at the beginning of a word;</item>
                   <label>m</label>
                   <item>Indicates that the current syllable is in the middle of a word;</item>
                   <label>t</label>
-                  <item>Indicates that the syllable's position is terminal; that is, at the end of a word.</item>
+                  <item>Indicates that the syllable’s position is terminal; that is, at the end of a word.</item>
                </list>
                <p>When a syllable is at the beginning or in the middle of a word (in which case it will have the <att>wordpos</att> attribute set to ‘i’ or ‘m’), it is recommended to specify the type of connector written between the current and the following syllable. This is expressed with the <att>con</att> attribute, which takes the following values:</p>
                <list type="gloss">
@@ -9790,14 +9790,14 @@
                   <label>t</label>
                   <item>A tilde is used to indicate elision with the following syllable. This is typically rendered as a small curved line between the syllables.</item>
                </list>
-               <p>Occasionally, a word or a final syllable needs to be extended across multiple notes. In this case an ‘extender’ is provided. An extender is a continuous line drawn at the text's baseline from the end of the syllable associated with the first note until the last note to be sung with the syllable.</p>
+               <p>Occasionally, a word or a final syllable needs to be extended across multiple notes. In this case an ‘extender’ is provided. An extender is a continuous line drawn at the text’s baseline from the end of the syllable associated with the first note until the last note to be sung with the syllable.</p>
                <p>The use of <gi scheme="MEI">syl</gi> described in this section is common to CMN and other notation systems, such as mensural notation. Other uses specific to certain types of notation and repertoires are addressed in other chapters. See for example <ptr target="#neumes"/>.</p>
             </div>
             <div xml:id="lyricsInEvents" type="div2">
                <head>Vocally Performed Text Encoded Within Notes</head>
                <p>Each lyric syllable can be encoded directly within an associated note, either by using the <att>syl</att> attribute on <gi scheme="MEI">note</gi> or the <gi scheme="MEI">verse</gi> element.</p>
                <p>Using the <att>syl</att> attribute on notes is the simplest way of encoding vocally performed text and is recommended only for simple situations or for those encodings which do not focus on vocally performed text.</p>
-               <p>The following example from Handel's <hi rend="italic">Messiah</hi> (HWV 56) shows the use of <att>syl</att>:</p>
+               <p>The following example from Handel’s <hi rend="italic">Messiah</hi> (HWV 56) shows the use of <att>syl</att>:</p>
                <p>
                   <figure>
                      <head>Handel, Messiah HWV 56, Halleluja</head>
@@ -9827,7 +9827,7 @@
                      <specDesc key="verse"/>
                   </specList>
                </p>
-               <p>The following example from Handel's <hi rend="italic">Messiah</hi> (HWV 56) shows the use of <gi scheme="MEI">verse</gi>:</p>
+               <p>The following example from Handel’s <hi rend="italic">Messiah</hi> (HWV 56) shows the use of <gi scheme="MEI">verse</gi>:</p>
                <p>
                   <figure>
                      <head/>
@@ -9863,7 +9863,7 @@
 </egXML>
                   </figure>
                </p>
-               <p>As it is common practice in written text, it is assumed that a space separates words. Many vocal texts, however, introduce elisions and connect two syllables into one unit. For example, the vocal text from Mozart's <hi rend="italic">Don Giovanni</hi> sung by Don Giovanni in Finale II, Ho fermo il core in petto introduces an elision between the word fermo and il and between core and in. An elision can be indicated by placing both syllables within the same <gi scheme="MEI">note</gi> and setting the <gi scheme="MEI">syl</gi> element's <att>con</att> attribute value to 't':</p>
+               <p>As it is common practice in written text, it is assumed that a space separates words. Many vocal texts, however, introduce elisions and connect two syllables into one unit. For example, the vocal text from Mozart’s <hi rend="italic">Don Giovanni</hi> sung by Don Giovanni in Finale II, Ho fermo il core in petto introduces an elision between the word fermo and il and between core and in. An elision can be indicated by placing both syllables within the same <gi scheme="MEI">note</gi> and setting the <gi scheme="MEI">syl</gi> element’s <att>con</att> attribute value to 't':</p>
                <p>
                   <figure>
                      <head/>
@@ -9876,10 +9876,10 @@
 </egXML>
                   </figure>
                </p>
-               <p>When there is more than one line of text, more than one <gi scheme="MEI">verse</gi> element can be used. The following example from a piano reduction of Wagner's <hi rend="italic">Rheingold</hi> has two lines of text, with an English translation on the second line. Note the use of the <att>xml:lang</att> attribute to differentiate the two languages:</p>
+               <p>When there is more than one line of text, more than one <gi scheme="MEI">verse</gi> element can be used. The following example from a piano reduction of Wagner’s <hi rend="italic">Rheingold</hi> has two lines of text, with an English translation on the second line. Note the use of the <att>xml:lang</att> attribute to differentiate the two languages:</p>
                <p>
                   <figure>
-                     <head>Example from Wagner's Rheingold with translated text.</head>
+                     <head>Example from Wagner’s Rheingold with translated text.</head>
                      <graphic url="../images/modules/lyrics/ex_verse_m.png"/>
                   </figure>
                   <figure>
@@ -9960,8 +9960,8 @@
                      <specDesc key="att.layerIdent" atts="layer"/>
                   </specList>
                </p>
-               <p>Since this element is separated from the encoding of the notes, it must be associated with a staff that will provide rhythm information when required for automated processing. The <att>staff</att> attribute gives the associated staff and if there is more than one layer on that staff, the <att>layer</att> attribute may be used to indicate the layer from which the rhythm should be taken. If there is any divergence between the rhythm of the vocally performed text and the notes, the <att>rhythm</att> attribute on <gi scheme="MEI">verse</gi> may be used to specify the text's rhythm.</p>
-               <p>The following example from Carl Maria von Weber's <hi rend="italic">Der Freischütz</hi> illustrates this encoding method:</p>
+               <p>Since this element is separated from the encoding of the notes, it must be associated with a staff that will provide rhythm information when required for automated processing. The <att>staff</att> attribute gives the associated staff and if there is more than one layer on that staff, the <att>layer</att> attribute may be used to indicate the layer from which the rhythm should be taken. If there is any divergence between the rhythm of the vocally performed text and the notes, the <att>rhythm</att> attribute on <gi scheme="MEI">verse</gi> may be used to specify the text’s rhythm.</p>
+               <p>The following example from Carl Maria von Weber’s <hi rend="italic">Der Freischütz</hi> illustrates this encoding method:</p>
                <p>
                   <figure>
                      <head>Weber, Der Freischütz</head>
@@ -10350,7 +10350,7 @@
                </div>
                <div xml:id="sharedTextRendition" type="div3">
                   <head>Text Rendition</head>
-                  <p>Sometimes, it is desirable to capture the typographical qualities of a word or phrase without assigning it a special meaning. For this purpose, MEI offers the <gi scheme="MEI">rend</gi> element, similar to TEI's <hi rend="italic">hi</hi> element. Using CSS-like values, its <att>rend</att> attribute can be used to specify many typographic features, such as font style, font variants, and relative font size and weight. In addition, text decoration, direction, and enclosing ‘boxes’ may be captured. While <att>rend</att> is used to record relative font size and weight, absolute values for these qualities (measured in printer's points) should be specified using the <att>fontsize</att> and <att>fontweight</att> attributes. In addition to commonly found typographical qualities, MEI provides the <att>altrend</att> attribute for the capture of additional, user-defined rendition information.</p>
+                  <p>Sometimes, it is desirable to capture the typographical qualities of a word or phrase without assigning it a special meaning. For this purpose, MEI offers the <gi scheme="MEI">rend</gi> element, similar to TEI’s <hi rend="italic">hi</hi> element. Using CSS-like values, its <att>rend</att> attribute can be used to specify many typographic features, such as font style, font variants, and relative font size and weight. In addition, text decoration, direction, and enclosing ‘boxes’ may be captured. While <att>rend</att> is used to record relative font size and weight, absolute values for these qualities (measured in printer’s points) should be specified using the <att>fontsize</att> and <att>fontweight</att> attributes. In addition to commonly found typographical qualities, MEI provides the <att>altrend</att> attribute for the capture of additional, user-defined rendition information.</p>
                   <p>
                      <specList>
                         <specDesc key="rend"/>
@@ -10428,7 +10428,7 @@
                   </div>
                   <div xml:id="figTableImages" type="div4">
                      <head>Images</head>
-                     <p>The <gi scheme="MEI">graphic</gi> element indicates the location of an inline graphic, illustration, or figure. As noted above, there exists a wide variety of different graphics formats, and the following list is in no way exhaustive. Moreover, inclusion of any format in this list should not be taken as indicating endorsement by the MEI of this format or any products associated with it. Some of the formats listed here are proprietary to a greater or lesser extent and cannot therefore be regarded as standards in any meaningful sense. They are, however, widely used by many different vendors. The following formats are widely used at the present time, and are likely to remain supported by more than one vendor's software:</p>
+                     <p>The <gi scheme="MEI">graphic</gi> element indicates the location of an inline graphic, illustration, or figure. As noted above, there exists a wide variety of different graphics formats, and the following list is in no way exhaustive. Moreover, inclusion of any format in this list should not be taken as indicating endorsement by the MEI of this format or any products associated with it. Some of the formats listed here are proprietary to a greater or lesser extent and cannot therefore be regarded as standards in any meaningful sense. They are, however, widely used by many different vendors. The following formats are widely used at the present time, and are likely to remain supported by more than one vendor’s software:</p>
                      <list rend="bulleted">
                         <item>BMP: Microsoft bitmap format</item>
                         <item>CGM: Computer Graphics Metafile</item>
@@ -10892,9 +10892,9 @@
                         <specDesc key="title"/>
                      </specList>
                   </p>
-                  <p>These elements fall into the following categories: - identification of the bibliographic entity and those responsible for its intellectual content - publication and distribution data for the bibliographic entity - description of the physical characteristics of the item - annotation of the bibliographic citation and additional details regarding the item's intellectual content</p>
+                  <p>These elements fall into the following categories: - identification of the bibliographic entity and those responsible for its intellectual content - publication and distribution data for the bibliographic entity - description of the physical characteristics of the item - annotation of the bibliographic citation and additional details regarding the item’s intellectual content</p>
                   <p>The elements <gi scheme="MEI">title</gi>, <gi scheme="MEI">edition</gi>, <gi scheme="MEI">series</gi>, and <gi scheme="MEI">identifier</gi> fall into the first category as do the elements <gi scheme="MEI">arranger</gi>, <gi scheme="MEI">author</gi>, <gi scheme="MEI">composer</gi>, <gi scheme="MEI">librettist</gi>, <gi scheme="MEI">lyricist</gi>, <gi scheme="MEI">funder</gi>, <gi scheme="MEI">sponsor</gi>, and <gi scheme="MEI">respStmt</gi>. The respStmt element is provided for marking responsibility roles that cannot be recorded using more specific elements. The <gi scheme="MEI">biblScope</gi> element also carries information of an identifying nature.</p>
-                  <p>The <gi scheme="MEI">identifier</gi> for a given item may be an International Standard Book/Music Number, Library of Congress Control Number, a publisher's or plate number, a personal identification number, an entry in a bibliography or catalog, etc.</p>
+                  <p>The <gi scheme="MEI">identifier</gi> for a given item may be an International Standard Book/Music Number, Library of Congress Control Number, a publisher’s or plate number, a personal identification number, an entry in a bibliography or catalog, etc.</p>
                   <p>To classify the <gi scheme="MEI">title</gi> according to some convenient typology, the <att>type</att> attribute may be used. Sample values include: main (main title), subordinate (subtitle, title of part), abbreviated (abbreviated form of title), alternative (alternate title by which the work is also known), translated (translated form of title), uniform (collective title). The <att>type</att> attribute is provided for convenience in analysing titles and processing them according to their type; where such specialized processing is not necessary, there is no need for such analysis, and the entire title, including subtitles and any parallel titles, may be enclosed within a single <gi scheme="MEI">title</gi> element. Title parts may be encoded in <gi scheme="MEI">title</gi> sub-elements. The name of the list from which a controlled value is taken may be recorded using the <att>authority</att> attribute.</p>
                   <p>Publication and distribution data may be captured using <gi scheme="MEI">pubPlace</gi>, <gi scheme="MEI">publisher</gi>, <gi scheme="MEI">distributor</gi>, and <gi scheme="MEI">date</gi> elements directly inside <gi scheme="MEI">bibl</gi> when the citation is unstructured. However, these elements should be grouped within <gi scheme="MEI">imprint</gi> whenever practical.</p>
                   <p>The physical characteristics of the cited item may be described using the <gi scheme="MEI">extent</gi> element.</p>
@@ -10956,13 +10956,13 @@
 </egXML>
                         </figure>
                      </p>
-                     <p>In this example, the nested <gi scheme="MEI">relatedItem</gi> / <gi scheme="MEI">bibl</gi> provides information about the ‘container’ where the outer <gi scheme="MEI">bibl</gi> may be found. The kind of relation is expressed using the <att>rel</att> attribute. It describes the relationship of the child <gi scheme="MEI">bibl</gi> to the <gi scheme="MEI">relatedItem</gi>'s parent <gi scheme="MEI">bibl</gi>.</p>
+                     <p>In this example, the nested <gi scheme="MEI">relatedItem</gi> / <gi scheme="MEI">bibl</gi> provides information about the ‘container’ where the outer <gi scheme="MEI">bibl</gi> may be found. The kind of relation is expressed using the <att>rel</att> attribute. It describes the relationship of the child <gi scheme="MEI">bibl</gi> to the <gi scheme="MEI">relatedItem</gi>’s parent <gi scheme="MEI">bibl</gi>.</p>
                      <p>
                         <specList>
                            <specDesc key="relatedItem" atts="rel"/>
                         </specList>
                      </p>
-                     <p>In these relations, the subject is always the relatedItem, and the object is always the parent of the relatedItem. Thus, a value of <att>rel</att>="preceding" indicates that the resource described within the relatedItem (or referenced by its <att>target</att> attribute) precedes the <gi scheme="MEI">bibl</gi> containing the <gi scheme="MEI">relatedItem</gi>. Following MODS, both values of "preceding" and "succeeding" indicate a temporal order.</p>
+                     <p>In these relations, the subject is always the relatedItem, and the object is always the parent of the relatedItem. Thus, a value of <att>rel</att>="preceding" indicates that the resource described within the relatedItem (or referenced by its <att>target</att> attribute) precedes the <gi scheme="MEI">bibl</gi> containing the <gi scheme="MEI">relatedItem</gi>. Following <abbr>MODS</abbr>, both values of <val>preceding</val> and <val>succeeding</val> indicate a temporal order.</p>
                      <p>It is important not to confuse <gi scheme="MEI">relatedItem</gi> with the concepts of <ptr target="#FRBR"/>; see <ptr target="#headerRelatedItemVsFRBR"/>.</p>
                   </div>
                </div>
@@ -11037,10 +11037,10 @@
                      </figure>
                   </p>
                   <p>In this example, the <gi scheme="MEI">note</gi> in the second measure has exactly the same characteristics as the <gi scheme="MEI">note</gi> in the first <gi scheme="MEI">measure</gi>.</p>
-                  <p>Using <att>copyof</att> is not limited to copying events. The <att>copyof</att> attribute can also be used to copy an entire <gi scheme="MEI">measure</gi> or <gi scheme="MEI">staff</gi>. When there are many repeated features, the use of the <att>copyof</att> greatly reduces encoding effort. The image and the following encoding of the beginning of Schubert's <hi rend="italic">Erlkönig</hi> illustrates the benefit of using the <att>copyof</att> attribute.</p>
+                  <p>Using <att>copyof</att> is not limited to copying events. The <att>copyof</att> attribute can also be used to copy an entire <gi scheme="MEI">measure</gi> or <gi scheme="MEI">staff</gi>. When there are many repeated features, the use of the <att>copyof</att> greatly reduces encoding effort. The image and the following encoding of the beginning of Schubert’s <hi rend="italic">Erlkönig</hi> illustrates the benefit of using the <att>copyof</att> attribute.</p>
                   <p>
                      <figure>
-                        <head>First measure of Schubert's Erlkönig</head>
+                        <head>First measure of Schubert’s Erlkönig</head>
                         <graphic url="../images/modules/analysis/schubert_erlkonig_op1_m1.png"/>
                      </figure>
                      <figure>
@@ -11338,7 +11338,7 @@
                   </div>
                   <div xml:id="analysisMelodicFunction" type="div4">
                      <head>Melodic Function</head>
-                     <p>The <att>mfunc</att> attribute describes melodic function of a <gi scheme="MEI">note</gi> or neume using the Humdrum <hi rend="italic"/>embel syntax. In the following example, the note B is labeled as a lower neighbor while all other notes are labeled as chord tones: <figure>
+                     <p>The <att>mfunc</att> attribute describes melodic function of a <gi scheme="MEI">note</gi> or neume using the <ref target="https://www.humdrum.org/rep/embel/">Humdrum **embel syntax</ref>. In the following example, the note B is labeled as a lower neighbor while all other notes are labeled as chord tones: <figure>
                            <head/>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;section&gt;
    &lt;measure n="2"&gt;
@@ -11442,7 +11442,7 @@
                   </div>
                   <div xml:id="analysisPitchClass" type="div4">
                      <head>Pitch Class</head>
-                     <p>The <att>pclass</att> attribute can be used to encode information about the pitch class to which a note belongs. The attribute's value must be an integer less than or equal to 11. It is only allowed on the <gi scheme="MEI">note</gi> element. The <att>pclass</att> attribute comes from "musical set theory" elaborated first by Howard Hanson and Allen Forte as a new method for organizing tones. It provides a concept for categorizing musical objects (notes) and describing their relationships. It is a kind of grouping and combining, mostly developed in connection with atonal music. However, the concept of set theory is general and can also be applied to tonal music. A pitch class means the summary of every pitch with specific characteristics that means a pitch class set is an unordered collection of pitches, <abbr>e.g.</abbr>, every pitch with the name C.</p>
+                     <p>The <att>pclass</att> attribute can be used to encode information about the pitch class to which a note belongs. The attribute’s value must be an integer less than or equal to 11. It is only allowed on the <gi scheme="MEI">note</gi> element. The <att>pclass</att> attribute comes from "musical set theory" elaborated first by Howard Hanson and Allen Forte as a new method for organizing tones. It provides a concept for categorizing musical objects (notes) and describing their relationships. It is a kind of grouping and combining, mostly developed in connection with atonal music. However, the concept of set theory is general and can also be applied to tonal music. A pitch class means the summary of every pitch with specific characteristics that means a pitch class set is an unordered collection of pitches, <abbr>e.g.</abbr>, every pitch with the name C.</p>
                      <p>A pitch class may contain a large number of pitches, because different octaves and enharmonic spellings of pitch make no difference. The notes C, E, and G would be 0, 4 and 7 in pitch class notation, for example, regardless of the octave in which they are performed. The example below contains the same pitch in four different enharmonic spellings, but all are part of the same pitch class.</p>
                      <p>
                         <figure>
@@ -11491,7 +11491,7 @@
                         <specDesc key="att.meterConformance.bar" atts="metcon"/>
                      </specList>
                   </p>
-                  <p>When used on <gi scheme="MEI">staff</gi> or <gi scheme="MEI">layer</gi> elements, the <att>metcon</att> attribute can be used to indicate if the duration of the contained events is equal to ("c"), less than ("i"), or greater than ("o") that predicted by the time signature. When used on the <gi scheme="MEI">measure</gi> element, <att>metcon</att> takes a boolean value, where "true" indicates conformance by all staff and layer descendants of the measure.</p>
+                  <p>When used on <gi scheme="MEI">staff</gi> or <gi scheme="MEI">layer</gi> elements, the <att>metcon</att> attribute can be used to indicate if the duration of the contained events is equal to (<val>c</val>), less than (<val>i</val>), or greater than (<val>o</val>) that predicted by the time signature. When used on the <gi scheme="MEI">measure</gi> element, <att>metcon</att> takes a boolean value, where <val>true</val> indicates conformance by all staff and layer descendants of the measure.</p>
                   <p>In the first example below, the layer, staff, and measure all match the prevailing meter. In the second example, however, the first layer does not comply with the meter, making the staff containing it and measure as a whole non-compliant. When there is a single layer or when all the layers on a staff agree with each other, metrical compliance can be indicated on the <gi scheme="MEI">staff</gi> element. When, however, not all layers have the same value for <att>metcon</att>, then it is necessary to omit <att>metcon</att> at the staff level. The value of <att>metcon</att> on the measure level can usually be computed based on the values of its layer and staff sub-elements.</p>
                   <p>
                      <figure>
@@ -11557,7 +11557,7 @@
                         </specList>
                      </p>
                      <p>The <gi scheme="MEI">chordTable</gi> element is a container for a set of chord definitions, while the <gi scheme="MEI">chordDef</gi> element defines a single chord. Chord definitions may be created <hi rend="italic">a priori</hi> or as the result of analysis of the pitch content of the music at hand, for instance, by examination of the notes occurring on the downbeat of each measure. In this way, the chord definitions serve as a record of the analysis.</p>
-                     <p>Even though it is not required by the schema, an <att>xml:id</att> attribute on <gi scheme="MEI">chordDef</gi> is necessary to permit the creation of associations between harmonic indications in the musical text with the chord defined here. The <att>xml:id</att> attribute provides a unique identifier for the chord definition that can be referenced by the <gi scheme="MEI">harm</gi> element's <att>chordref</att> attribute.</p>
+                     <p>Even though it is not required by the schema, an <att>xml:id</att> attribute on <gi scheme="MEI">chordDef</gi> is necessary to permit the creation of associations between harmonic indications in the musical text with the chord defined here. The <att>xml:id</att> attribute provides a unique identifier for the chord definition that can be referenced by the <gi scheme="MEI">harm</gi> element’s <att>chordref</att> attribute.</p>
                      <p>Individual pitches of a chord are encoded using <gi scheme="MEI">chordMember</gi>. The <att>inth</att> attribute provides the means for indicating the number of half steps of the chord note above the bass note.</p>
                      <p>These simple resources allow for the detailed specification and interpretation of harmonic indications found in the musical text. For example, the harmonic label A can be equated with a fully spelled-out indication of functional harmony that can be substituted for the harmonic label, say, in an aural rendition:</p>
                      <p>
@@ -11751,7 +11751,7 @@
 </egXML>
                            </figure>
                         </p>
-                        <p>Each component of the figured bass sign may use the <att>extender</att> attribute to indicate that horizontal lines are used to mark the extent of the figure's harmonic influence. The <att>altsym</att> attribute can be used to point to a user-defined symbol that better represents the figure component, for example, the combined "2" and "+" below. Similar to the slash in the preceding example before, the small curve over the "5" in example 6 can be represented by the Unicode COMBINING INVERTED BREVE.</p>
+                        <p>Each component of the figured bass sign may use the <att>extender</att> attribute to indicate that horizontal lines are used to mark the extent of the figure’s harmonic influence. The <att>altsym</att> attribute can be used to point to a user-defined symbol that better represents the figure component, for example, the combined "2" and "+" below. Similar to the slash in the preceding example before, the small curve over the "5" in example 6 can be represented by the Unicode COMBINING INVERTED BREVE.</p>
                         <p>
                            <figure>
                               <head>Figured bass with alternative sign</head>
@@ -12123,7 +12123,7 @@
 </egXML>
                      </figure>
                   </p>
-                  <p>When nesting <gi scheme="MEI">app</gi> elements, it is important that the value(s) in the child <gi scheme="MEI">rdg</gi> element's <att>source</att> attribute must be a strict subset of the ancestor <gi scheme="MEI">rdg</gi> element's <att>source</att> value.</p>
+                  <p>When nesting <gi scheme="MEI">app</gi> elements, it is important that the value(s) in the child <gi scheme="MEI">rdg</gi> element’s <att>source</att> attribute must be a strict subset of the ancestor <gi scheme="MEI">rdg</gi> element’s <att>source</att> value.</p>
                </div>
             </div>
             <div xml:id="editTrans" type="div2">
@@ -12238,10 +12238,10 @@
                            <specDesc key="cpMark"/>
                         </specList>
                      </p>
-                     <p>Like any other ‘controlEvent’ (see <ptr target="#eventsControlevents"/>), <gi scheme="MEI">cpMark</gi> is placed in the score using the <att>staff</att> and <att>tstamp</att> attributes. The end point of the mark itself, when necessary, may be indicated using the <att>tstamp2</att> attribute. The source material, which is intended to be inserted in the space indicated by the copy mark, can be identified by the attributes <att>origin.tstamp</att>, <att>origin.tstamp2</att>, <att>origin.staff</att> and <att>origin.layer</att>. While <att>origin.tstamp</att> provides the relative distance from the beginning of the "gap", <att>origin.tstamp</att> is relative to the position identified by <att>origin.tstamp</att>. However, <att>origin.tstamp</att> defaults to the same value as <att>tstamp2</att> and should only be provided when necessary. When neither <att>origin.staff</att> nor <att>origin.tstamp</att> are provided, they take the same values as the cpMark's <att>staff</att> and <att>tstamp</att> attributes; that is, they indicate a strict ‘vertical’ or ‘horizontal’ copy.</p>
+                     <p>Like any other ‘controlEvent’ (see <ptr target="#eventsControlevents"/>), <gi scheme="MEI">cpMark</gi> is placed in the score using the <att>staff</att> and <att>tstamp</att> attributes. The end point of the mark itself, when necessary, may be indicated using the <att>tstamp2</att> attribute. The source material, which is intended to be inserted in the space indicated by the copy mark, can be identified by the attributes <att>origin.tstamp</att>, <att>origin.tstamp2</att>, <att>origin.staff</att> and <att>origin.layer</att>. While <att>origin.tstamp</att> provides the relative distance from the beginning of the "gap", <att>origin.tstamp</att> is relative to the position identified by <att>origin.tstamp</att>. However, <att>origin.tstamp</att> defaults to the same value as <att>tstamp2</att> and should only be provided when necessary. When neither <att>origin.staff</att> nor <att>origin.tstamp</att> are provided, they take the same values as the cpMark’s <att>staff</att> and <att>tstamp</att> attributes; that is, they indicate a strict ‘vertical’ or ‘horizontal’ copy.</p>
                      <p>
                         <figure>
-                           <head>Copy marks in the first and second violin of C.M.v.Weber's Freischütz, Autograph, Nr.3 (Walzer), measures 223-231</head>
+                           <head>Copy marks in the first and second violin of C.M.v.Weber’s Freischütz, Autograph, Nr.3 (Walzer), measures 223-231</head>
                            <graphic url="../images/ExampleImages/cpMark_2.png"/>
                         </figure>
                      </p>
@@ -12274,7 +12274,7 @@
                      </specList>
                   </p>
                   <p>The following examples show alternative treatment of the same material. The text to be encoded contains a chord (c4, e4, g4, a4), where c4, e4, and a4 are quarter notes, but g4 is incorrectly written as a half note.</p>
-                  <p>An encoder may choose to silently correct the engraver's error:</p>
+                  <p>An encoder may choose to silently correct the engraver’s error:</p>
                   <p>
                      <figure>
                         <head/>
@@ -12363,7 +12363,7 @@
 </egXML>
                      </figure>
                   </p>
-                  <p>Here the <att>resp</att> attribute has been used to indicate responsibility for the correction. Its value (<hi rend="italic">#editTrans.JK</hi>) is an example of the pointer values discussed in section <ptr target="#linkingdata"/>. In this case, the <att>resp</att> attribute points to a <gi scheme="MEI">name</gi> element within the metadata header, but any element might be indicated in this way, if the correction has been taken from some other source. The <att>resp</att> attribute is available for all elements which are members of the <ident type="class">att.common</ident> class (through <ident type="class">att.responsibility</ident>). The <ident type="class">att.edit</ident> class makes available a <att>cert</att> attribute (through <ident type="class">att.evidence</ident>), which may be used to indicate the degree of editorial confidence in a particular correction, as in the following example:</p>
+                  <p>Here the <att>resp</att> attribute has been used to indicate responsibility for the correction. Its value (<val>#editTrans.JK</val>) is an example of the pointer values discussed in section <ptr target="#linkingdata"/>. In this case, the <att>resp</att> attribute points to a <gi scheme="MEI">name</gi> element within the metadata header, but any element might be indicated in this way, if the correction has been taken from some other source. The <att>resp</att> attribute is available for all elements which are members of the <ident type="class">att.common</ident> class (through <ident type="class">att.responsibility</ident>). The <ident type="class">att.edit</ident> class makes available a <att>cert</att> attribute (through <ident type="class">att.evidence</ident>), which may be used to indicate the degree of editorial confidence in a particular correction, as in the following example:</p>
                   <p>
                      <figure>
                         <head/>
@@ -12399,7 +12399,7 @@
                   <p>Consider this traditional soprano clef appearing somewhere in the course of a musical piece:</p>
                   <p>
                      <figure>
-                        <head>Soprano clef from the begin of Heinrich Schütz' St. Matthew's Passion.</head>
+                        <head>Soprano clef from the begin of Heinrich Schütz’ St. Matthew’s Passion.</head>
                         <graphic url="../images/modules/edittrans/schütz_sopranoclef.png"/>
                      </figure>
                   </p>
@@ -12423,7 +12423,7 @@
 </egXML>
                      </figure>
                   </p>
-                  <p>As another alternative, the encoder may encode both the old and modernized shapes, so that applications may render both at the reader's will:</p>
+                  <p>As another alternative, the encoder may encode both the old and modernized shapes, so that applications may render both at the reader’s will:</p>
                   <p>
                      <figure>
                         <head/>
@@ -12618,7 +12618,7 @@
                <p>Genetic editions try to trace the creation of a (musical) work in all its recorded details, from the first sketches to the ‘final’ complete text. The aim of genetic textual criticism is to investigate compositional working and thinking processes - the genesis of compositions. In contrast to traditional scholarly editions, which focus on the constitution of a performable text of a work, Genetic Textual Criticism focuses on the process of production, the gradual elaboration of musical thoughts while writing. It is dependent on the availability of comprehensible traces of these writing processes. Genetic editions often have to deal with significant uncertainties, and they require a considerable amount of markup, as detailed below.</p>
                <div xml:id="geneticStates" type="div3">
                   <head>Encoding Genetic States</head>
-                  <p>Leaving aside temporary breaks, a compositional process is continuous: the composer's writing operations have happened in a strict order, which could be specified if his working would have been filmed. However, this exact order is rarely ever recoverable from the surviving mansucripts, prints or other materials. Instead, relative statements can be made – the red pencil must have been written after the brown ink etc. Instead of a continuous movie, scholars are often only able to reconstruct a slide show, reflecting certain recoverable states of the composition. Very often, those states have a local range only – the order of two states on one page may be known, as is the order of two other states on a second page. This doesn't necessarily allow to identify the succession of all four states.</p>
+                  <p>Leaving aside temporary breaks, a compositional process is continuous: the composer’s writing operations have happened in a strict order, which could be specified if his working would have been filmed. However, this exact order is rarely ever recoverable from the surviving mansucripts, prints or other materials. Instead, relative statements can be made – the red pencil must have been written after the brown ink etc. Instead of a continuous movie, scholars are often only able to reconstruct a slide show, reflecting certain recoverable states of the composition. Very often, those states have a local range only – the order of two states on one page may be known, as is the order of two other states on a second page. This doesn't necessarily allow to identify the succession of all four states.</p>
                   <p>MEI utilizes the <gi scheme="MEI">genDesc</gi> element to describe the recoverable genetic states of a work. It is nested inside <gi scheme="MEI">music</gi> and may contain a number of <gi scheme="MEI">genState</gi> elements.</p>
                   <p>
                      <specList>
@@ -12689,7 +12689,7 @@
                      <item>
                         <hi rend="italic">deletion</hi>: denoted material is no longer part of the musical text.</item>
                      <item>
-                        <hi rend="italic">substitution</hi>: denoted material is replaced, either by the musical text pointed at with the @target attribute or the musical content of the metaMark element itself.</item>
+                        <hi rend="italic">substitution</hi>: denoted material is replaced, either by the musical text pointed at with the <att>target</att>  attribute or the musical content of the metaMark element itself.</item>
                      <item>
                         <hi rend="italic">clarification</hi>: attempt to clarify a potentially illegible or otherwise unclear part of the musical text.</item>
                      <item>
@@ -12705,7 +12705,7 @@
                   <p>It is important to keep in mind that <gi scheme="MEI">metaMark</gi> elements do not encode the textual consequences they transport – this is an encoding of the sign, not of its meaning, which can be encoded in other elements like <gi scheme="MEI">restore</gi>.</p>
                   <p>
                      <figure>
-                        <head>metaMarks in Beethoven's op.59.3, p.18</head>
+                        <head>metaMarks in Beethoven’s op.59.3, p.18</head>
                         <graphic url="../images/modules/edittrans/metamarks-Beethoven-op59.3.png"/>
                      </figure>
                   </p>
@@ -12727,7 +12727,7 @@
 </egXML>
                      </figure>
                   </p>
-                  <p>This <gi scheme="MEI">metaMark</gi> transcribes Beethoven's marginal note explaining the same situation as above.</p>
+                  <p>This <gi scheme="MEI">metaMark</gi> transcribes Beethoven’s marginal note explaining the same situation as above.</p>
                   <p>
                      <figure>
                         <head/>
@@ -12779,7 +12779,7 @@
 </egXML>
                      </figure>
                   </p>
-                  <p>It is possible to have more than one <gi scheme="MEI">facsimile</gi> element in this location. This is especially useful when multiple sources are encoded in the same file using the mechanisms described in chapter <ptr target="#editTrans"/> of these Guidelines. In this case, the <att>decls</att> (declarations) attribute of <gi scheme="MEI">facsimile</gi> may be used to refer to a source defined in the document's header, as seen in the following example:</p>
+                  <p>It is possible to have more than one <gi scheme="MEI">facsimile</gi> element in this location. This is especially useful when multiple sources are encoded in the same file using the mechanisms described in chapter <ptr target="#editTrans"/> of these Guidelines. In this case, the <att>decls</att> (declarations) attribute of <gi scheme="MEI">facsimile</gi> may be used to refer to a source defined in the document’s header, as seen in the following example:</p>
                   <p>
                      <figure>
                         <head/>
@@ -12897,7 +12897,7 @@
 </egXML>
                      </figure>
                   </p>
-                  <p>The <gi scheme="MEI">pb</gi> element defined in the <ptr target="#shared"/> makes special use of the <att>facs</att> attribute, in that it does not point to a <gi scheme="MEI">zone</gi>, but a <gi scheme="MEI">surface</gi> element instead. A <gi scheme="MEI">pb</gi> marks the beginning of a page, so it can be concluded that all elements in the content tree which are encoded between any two <gi scheme="MEI">pb</gi> elements encode musical symbols written on the page (<gi scheme="MEI">surface</gi>) referenced by the first of these two <gi scheme="MEI">pb</gi> element's <att>facs</att> attribute.</p>
+                  <p>The <gi scheme="MEI">pb</gi> element defined in the <ptr target="#shared"/> makes special use of the <att>facs</att> attribute, in that it does not point to a <gi scheme="MEI">zone</gi>, but a <gi scheme="MEI">surface</gi> element instead. A <gi scheme="MEI">pb</gi> marks the beginning of a page, so it can be concluded that all elements in the content tree which are encoded between any two <gi scheme="MEI">pb</gi> elements encode musical symbols written on the page (<gi scheme="MEI">surface</gi>) referenced by the first of these two <gi scheme="MEI">pb</gi> element’s <att>facs</att> attribute.</p>
                   <p>The encoding of <gi scheme="MEI">facsimile</gi> elements is intended to support sequential display of page images. If an encoder wants to describe the physical setup of a source document, the <gi scheme="MEI">foliaDesc</gi> element is more appropriate. The difference of both approaches, and how to combine them, is described in chapter <ptr target="#foliadesc"/>.</p>
                </div>
             </div>
@@ -13061,7 +13061,7 @@
 </egXML>
                      </figure>
                   </p>
-                  <p>Clips can also be aligned with components of the musical text encoded in the <gi scheme="MEI">body</gi>. The <att>startid</att> attribute can be used to specify the starting element in the sequence of events to which the clip corresponds. The following example shows the use of clip elements to identify the exposition of the first movement from Beethoven's piano sonata Op. 14, no. 2 and its concluding ‘codetta’.</p>
+                  <p>Clips can also be aligned with components of the musical text encoded in the <gi scheme="MEI">body</gi>. The <att>startid</att> attribute can be used to specify the starting element in the sequence of events to which the clip corresponds. The following example shows the use of clip elements to identify the exposition of the first movement from Beethoven’s piano sonata Op. 14, no. 2 and its concluding ‘codetta’.</p>
                   <p>
                      <figure>
                         <head/>
@@ -13249,7 +13249,7 @@
                         </specList>
                     </p>
                     <p>
-                        In addition to the attributes in the <ident type="class">att.pointing</ident> class, the <hi rend="bold">@mimetype</hi> attribute from the <ident type="class">att.internetMedia</ident> class is also available on <gi scheme="MEI">ptr</gi> and <gi scheme="MEI">ref</gi> (a more detailed explanation is provided below):
+                        In addition to the attributes in the <ident type="class">att.pointing</ident> class, the <att>mimetype</att> attribute from the <ident type="class">att.internetMedia</ident> class is also available on <gi scheme="MEI">ptr</gi> and <gi scheme="MEI">ref</gi> (a more detailed explanation is provided below):
                     </p>
                     <p>
                         <specList>
@@ -13292,7 +13292,7 @@
                         </specList>
                     </p>
                     <div xml:id="ptrRefTarget" type="div4">
-                        <head>Define the link element's target (XPointer mechanism)</head>
+                        <head>Define the link element’s target (XPointer mechanism)</head>
                         <p>
                             The <att>target</att> attribute specifies the destination of a pointer or reference using a method standardized by the W3C consortium, known as the XPointer mechanism. The XPointer framework is described at <ref target="http://www.w3.org/TR/xptr-framework/">http://www.w3.org/TR/xptr-framework/</ref>. This mechanism permits a range of complexity, from the very simple (a reference to the value of the target element’s <att>xml:id</att> attribute) to the more complex usage of a full URI with embedded XPointers:
                         </p>
@@ -13348,7 +13348,7 @@
                         </p>
                     </div>
                     <div xml:id="ptrRefTargettype" type="div4">
-                        <head>Define the type of a link element's target</head>
+                        <head>Define the type of a link element’s target</head>
                         <p>
                             The <att>targettype</att> attribute allows the target resource to be characterized using any convenient classification scheme or typology. This is often useful when the target requires special processing, <abbr>e.g.</abbr>, for display purposes. The pointers in the examples below may be formatted differently, <abbr>e.g.</abbr>, the bibliographic citation may result in special typography while the pointer to the audio file may be used to embed an audio player:
                         </p>
@@ -13368,7 +13368,7 @@
                         </p>
                     </div>
                     <div xml:id="ptrRefMimetype" type="div4">
-                        <head>Define the mimetype of a link element's target</head>
+                        <head>Define the mimetype of a link element’s target</head>
                         <p>
                             The function of the <att>mimetype</att> attribute is similar to that of <att>targettype</att> in that they both allow classification of the destination. Unlike <att>targettype</att>, however, <att>mimetype</att> explicitly defines the destination type using a standard taxonomy. Its value should be a valid MIME (Multimedia Internet Mail Extension) type as defined by the Internet Engineering Task Force (IETF) in RFC 2046, available at <ref target="http://www.ietf.org/rfc/rfc2046.txt">http://www.ietf.org/rfc/rfc2046.txt</ref>. The following are all valid mimetype values:
                         </p>
@@ -13404,7 +13404,7 @@
                         </p>
                     </div>
                     <div xml:id="ptrRefXlinkActuateShow" type="div4">
-                        <head>Determine the link element's behaviour</head>
+                        <head>Determine the link element’s behaviour</head>
                         <p>
                             The <att>xlink:actuate</att> and <att>xlink:show</att> attributes are used in conjunction to determine the link’s behavior.
                         </p>
@@ -13468,7 +13468,7 @@
                         </p>
                     </div>
                     <div xml:id="ptrRefXlinkRole" type="div4">
-                        <head>Determine the link element's role</head>
+                        <head>Determine the link element’s role</head>
                         <p>
                             The <att>xlink:role</att> attribute describes the meaning of resources within the context of a link. It is used to label or describe a link or resource in a human- and machine-readable fashion. The value of <att>xlink:role</att> must be an absolute URI (Uniform Resource Identifier) reference as defined by the Internet Engineering Task Force (IETF) in RFC 3986, available at <ref target="http://tools.ietf.org/html/rfc3986">http://tools.ietf.org/html/rfc3986</ref>. The URI reference identifies a resource that describes the intended property. When no value is supplied, no particular role value is to be inferred.
                         </p>
@@ -13519,7 +13519,7 @@
                   touch</ref>. </p>
             <div xml:id="tei" type="div2">
                <head>TEI</head>
-               <p>The TEI's Special Interest Group on Music has come up with an ODD customization
+               <p>The TEI’s Special Interest Group on Music has come up with an ODD customization
                   for TEI, which allows to embed MEI excerpts into TEI. However, the SIG Music is
                   officially considered <hi rend="italic">dormant</hi>, so the information provided
                   is somewhat outdated. The most recent resources are available from <ref target="https://github.com/TEI-Music-SIG/tei-mei/">GitHub</ref>.</p>
@@ -13559,7 +13559,7 @@
                   element becomes available everywhere `model.graphicLike` (<abbr>i.e.</abbr>, the <gi scheme="MEI">graphic</gi> element) is currently allowed, that is: inside of <gi scheme="MEI">fig</gi>, <gi scheme="MEI">incip</gi>, <gi scheme="MEI">surface</gi>, and <gi scheme="MEI">zone</gi>.</p>
                <p> In the following example, an <ref target="https://www.w3.org/TR/SVG11/paths.html#PathElement">&lt;svg:path&gt;</ref> element is inserted into a <gi scheme="MEI">surface</gi>. It would now be possible for measures or other music features to
                   point to the rectangular <gi scheme="MEI">zone</gi> in MEI namespace, or the fancy
-                  shaped <ref target="https://www.w3.org/TR/SVG11/paths.html#PathElement">&lt;svg:path&gt;</ref> using their <att>facs</att> attribute (see <ptr target="#facsimileElements"/> for that mechanism). It's equally possible to use
+                  shaped <ref target="https://www.w3.org/TR/SVG11/paths.html#PathElement">&lt;svg:path&gt;</ref> using their <att>facs</att> attribute (see <ptr target="#facsimileElements"/> for that mechanism). It’s equally possible to use
                   SVG content inside figures on titlepages or anywhere else.</p>
                <p>
                   <figure>
@@ -13573,7 +13573,7 @@
 </surface></egXML>
                   </figure>
                </p>
-               <p>Of course it's possible to allow elements in SVG namespace in other places in MEI
+               <p>Of course it’s possible to allow elements in SVG namespace in other places in MEI
                   as well, by adjusting the model classes that the SVG namespace shall join.</p>
             </div>
             <div xml:id="midiGuidelines" type="div2">
@@ -14318,9 +14318,9 @@
     </content>
   </macroSpec>
   <macroSpec ident="data.CERTAINTY" module="MEI" type="dt">
-    <desc>Values for certainty attribute. Certainty may be expressed by one of the values 'high',
-      'medium', or 'low'. The value 'unknown' should be used in cases where the encoder does not
-      wish to assert an opinion.</desc>
+    <desc>Values for certainty attribute. Certainty may be expressed by one of the predefined symbolic values <val>high</val>, 
+      <val>medium</val>, or <val>low</val>. The value <val>unknown</val> should be used in cases where the encoder 
+      does not wish to assert an opinion about the matter.</desc>
     <content>
       <valList type="closed">
         <valItem ident="high">
@@ -14941,7 +14941,7 @@
     </content>
   </macroSpec>
   <macroSpec ident="data.DEGREES" module="MEI" type="dt">
-    <desc>360th-unit measure of a circle's circumference; optionally signed decimal number between
+    <desc>360th-unit measure of a circle’s circumference; optionally signed decimal number between
       -360 and 360.</desc>
     <content>
       <rng:data type="decimal">
@@ -15235,7 +15235,7 @@
     </content>
   </macroSpec>
   <macroSpec ident="data.FRETNUMBER" module="MEI" type="dt">
-    <desc>In string tablature, the fret number. The value '0' (zero) indicates the open
+    <desc>In string tablature, the fret number. The value <val>0</val> (zero) indicates the open
       string.</desc>
     <content>
       <rng:data type="nonNegativeInteger"/>
@@ -15261,7 +15261,7 @@
           <desc>First note/chord in glissando.</desc>
         </valItem>
         <valItem ident="m">
-          <desc>Note/chord that's neither first nor last in glissando.</desc>
+          <desc>Note/chord that’s neither first nor last in glissando.</desc>
         </valItem>
         <valItem ident="t">
           <desc>Last note in glissando.</desc>
@@ -16595,7 +16595,7 @@
           <desc>Intellectual or physical component of the resource.</desc>
         </valItem>
         <valItem ident="otherVersion">
-          <desc>Version of the resource's intellectual content not changed enough to be a different
+          <desc>Version of the resource’s intellectual content not changed enough to be a different
             work.</desc>
         </valItem>
         <valItem ident="otherFormat">
@@ -17208,7 +17208,7 @@
     </content>
   </macroSpec>
   <macroSpec ident="data.STEMPOSITION" module="MEI" type="dt">
-    <desc>Position of a note's stem relative to the head of the note.</desc>
+    <desc>Position of a note’s stem relative to the head of the note.</desc>
     <content>
       <valList type="closed">
         <valItem ident="left">
@@ -17652,11 +17652,11 @@
     <desc>Attributes describing the harmonic function of a single pitch.</desc>
     <attList>
       <attDef ident="deg" usage="opt">
-        <desc>Captures scale degree information using Humdrum **deg syntax -- an optional indicator
+        <desc>Captures scale degree information using <ref target="https://www.humdrum.org/rep/deg/">Humdrum **deg syntax</ref> -- an optional indicator
           of melodic approach (^ = ascending approach, v = descending approach), a scale degree
           value (1 = tonic ... 7 = leading tone), and an optional indication of chromatic
-          alteration, "1", "v7", "^1", or "v5+", for example. The amount of chromatic alternation is
-          not indicated.</desc>
+          alteration, <val>1</val>, <val>v7</val>, <val>^1</val>, or <val>v5+</val>, for example. 
+          The amount of chromatic alternation is not indicated.</desc>
         <datatype>
           <rng:ref name="data.SCALEDEGREE"/>
         </datatype>
@@ -17726,8 +17726,8 @@
       domain that are related to key signatures.</desc>
     <attList>
       <attDef ident="key.accid" usage="opt">
-        <desc>Contains an accidental for the tonic key, if one is required, <abbr>e.g.</abbr>, if key.pname
-          equals 'c' and key.accid equals 's', then a tonic of C# is indicated.</desc>
+        <desc>Contains an accidental for the tonic key, if one is required, <abbr>e.g.</abbr>, if <att>key.pname</att>
+          equals <val>c</val> and <att>key.accid</att> equals <val>s</val>, then a tonic of C# is indicated.</desc>
         <datatype>
           <rng:ref name="data.ACCIDENTAL.GESTURAL"/>
         </datatype>
@@ -17739,7 +17739,7 @@
         </datatype>
       </attDef>
       <attDef ident="key.pname" usage="opt">
-        <desc>Holds the pitch name of the tonic key, <abbr>e.g.</abbr>, 'c' for the key of C.</desc>
+        <desc>Holds the pitch name of the tonic key, <abbr>e.g.</abbr>, <val>c</val> for the key of C.</desc>
         <datatype>
           <rng:ref name="data.PITCHNAME"/>
         </datatype>
@@ -17777,7 +17777,7 @@
     <desc>Attributes describing melodic function.</desc>
     <attList>
       <attDef ident="mfunc" usage="opt">
-        <desc>Describes melodic function using Humdrum **embel syntax.</desc>
+        <desc>Describes melodic function using <ref target="https://www.humdrum.org/rep/embel/">Humdrum **embel syntax</ref>.</desc>
         <datatype>
           <rng:ref name="data.MELODICFUNCTION"/>
         </datatype>
@@ -17813,7 +17813,7 @@
   </classSpec>
   <classSpec ident="att.mSpace.anl" module="MEI.analytical" type="atts">
     <desc>Analytical domain attributes in the CMN repertoire. Use the n attribute to explicitly
-      encode this measure's position in a string of measures containing only <gi scheme="MEI">mRest</gi> elements.</desc>
+      encode this measure’s position in a string of measures containing only <gi scheme="MEI">mRest</gi> elements.</desc>
     <classes>
       <memberOf key="att.fermataPresent"/>
     </classes>
@@ -18622,7 +18622,7 @@
     </classes>
     <attList>
       <attDef ident="c" usage="opt">
-        <desc>Indicates the pedal setting for the harp's C strings.</desc>
+        <desc>Indicates the pedal setting for the harp’s C strings.</desc>
         <defaultVal>n</defaultVal>
         <valList type="closed">
           <valItem ident="f">
@@ -18637,7 +18637,7 @@
         </valList>
       </attDef>
       <attDef ident="d" usage="opt">
-        <desc>Indicates the pedal setting for the harp's D strings.</desc>
+        <desc>Indicates the pedal setting for the harp’s D strings.</desc>
         <defaultVal>n</defaultVal>
         <valList type="closed">
           <valItem ident="f">
@@ -18652,7 +18652,7 @@
         </valList>
       </attDef>
       <attDef ident="e" usage="opt">
-        <desc>Indicates the pedal setting for the harp's E strings.</desc>
+        <desc>Indicates the pedal setting for the harp’s E strings.</desc>
         <defaultVal>n</defaultVal>
         <valList type="closed">
           <valItem ident="f">
@@ -18667,7 +18667,7 @@
         </valList>
       </attDef>
       <attDef ident="f" usage="opt">
-        <desc>Indicates the pedal setting for the harp's F strings.</desc>
+        <desc>Indicates the pedal setting for the harp’s F strings.</desc>
         <defaultVal>n</defaultVal>
         <valList type="closed">
           <valItem ident="f">
@@ -18682,7 +18682,7 @@
         </valList>
       </attDef>
       <attDef ident="g" usage="opt">
-        <desc>Indicates the pedal setting for the harp's G strings.</desc>
+        <desc>Indicates the pedal setting for the harp’s G strings.</desc>
         <defaultVal>n</defaultVal>
         <valList type="closed">
           <valItem ident="f">
@@ -18697,7 +18697,7 @@
         </valList>
       </attDef>
       <attDef ident="a" usage="opt">
-        <desc>Indicates the pedal setting for the harp's A strings.</desc>
+        <desc>Indicates the pedal setting for the harp’s A strings.</desc>
         <defaultVal>n</defaultVal>
         <valList type="closed">
           <valItem ident="f">
@@ -18712,7 +18712,7 @@
         </valList>
       </attDef>
       <attDef ident="b" usage="opt">
-        <desc>Indicates the pedal setting for the harp's B strings.</desc>
+        <desc>Indicates the pedal setting for the harp’s B strings.</desc>
         <defaultVal>n</defaultVal>
         <valList type="closed">
           <valItem ident="f">
@@ -20369,7 +20369,7 @@
         that is, for repetition of the same pitch. In the case of irrational durations, such as such
         as two quarter notes in the time of five 8th notes in a measure of 5/8 time, decimal values
         may be used in the <att>dur.ges</att> attribute. For example, the <att>dur.ges</att>
-        attribute would take the value "2.5" if the <att>midi.div</att> attribute's value was "1".
+        attribute would take the value <val>2.5</val> if the <att>midi.div</att> attribute’s value was <val>1</val>.
         The <att>num</att> and <att>numbase</att> attributes may be used for explicit labelling of a
         tuplet, such as, '3' with an 8th-note triplet, '3:2' over a quarter-note triplet, etc. The
         rendering of the ratio, however, is dependent on the <att>num.format</att> attribute found
@@ -20654,7 +20654,7 @@
       <p>This element is modelled on the teiCorpus element in the Text Encoding Initiative (TEI)
         standard. The MEI instances making up the corpus may be related in a number of ways, for
         example, by composer, by similar instrumentation, by holding institution, etc. This
-        element's name should not be changed in order to assure an absolute minimum level of MEI
+        element’s name should not be changed in order to assure an absolute minimum level of MEI
         compliance.</p>
     </remarks>
   </elementSpec>
@@ -20976,7 +20976,7 @@
     </constraintSpec>
     <remarks>
       <p>In a musical context <gi scheme="MEI">stageDir</gi> must have a start-type attribute when
-        it's not a descendant of <gi scheme="MEI">sp</gi>. In a textual content <gi scheme="MEI">stageDir</gi> must NOT have any musical attributes.</p>
+        it’s not a descendant of <gi scheme="MEI">sp</gi>. In a textual content <gi scheme="MEI">stageDir</gi> must NOT have any musical attributes.</p>
     </remarks>
     <remarks>
       <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
@@ -21512,8 +21512,8 @@
         text by an author, scribe, annotator, or corrector. An indication of how much material has
         been omitted from the transcription may be recorded in the <att>extent</att> attribute. The
         <att>unit</att> attribute names the unit used for describing the extent of the gap. The
-        <att>reason</att> attribute gives the reason for omission. Sample values include 'sampling',
-        'irrelevant', 'cancelled'. The <att>resp</att> attribute contains an ID reference to an
+        <att>reason</att> attribute gives the reason for omission. Sample values include <val>sampling</val>,
+        <val>irrelevant</val>, <val>cancelled</val>. The <att>resp</att> attribute contains an ID reference to an
         element containing the name of the editor, transcriber or encoder responsible for the
         decision not to provide any transcription of the material and hence the application of the
         <gi scheme="MEI">gap</gi> tag. The <att>hand</att> attribute signifies the hand which made
@@ -21582,8 +21582,8 @@
     </attList>
     <remarks>
       <p>The <att>character</att> attribute describes characteristics of the hand, particularly
-        those related to the quality of the writing, <abbr>e.g.</abbr>, 'shaky', 'thick', regular'. A description
-        of the tint or type of ink, <abbr>e.g.</abbr>, 'brown' or the writing medium, <abbr>e.g.</abbr>, 'pencil', may be placed
+        those related to the quality of the writing, <abbr>e.g.</abbr>, <val>shaky</val>, <val>thick</val>, <val>regular</val>. A description
+        of the tint or type of ink, <abbr>e.g.</abbr>, <val>brown</val> or the writing medium, <abbr>e.g.</abbr>, <val>pencil</val>, may be placed
         in the <att>medium</att> attribute. The new hand may be identified using the <att>new</att>
         attribute, while the previous hand may be recorded in the <att>old</att> attribute. The
         <att>resp</att> attribute contains an ID reference to an element containing the name of the
@@ -21806,8 +21806,8 @@
     </content>
     <attList>
       <attDef ident="desc" usage="opt">
-        <desc>Provides a description of the means of restoration, 'stet' or 'strike-down', for
-          example.</desc>
+        <desc>Provides a description of the means of restoration, <val>stet</val> or <val>strike-down</val>, 
+          for example.</desc>
         <datatype>
           <rng:data type="string"/>
         </datatype>
@@ -21922,8 +21922,9 @@
         causative agent. When the presumed loss of text arises from action (partial deletion, etc.)
         assignable to an identifiable hand, the <att>hand</att> attribute signifies the hand
         responsible for the action. The <att>reason</att> attribute indicates why the text has to be
-        supplied, <abbr>e.g.</abbr>, 'overbinding', 'faded ink', 'lost folio', 'omitted in original', etc. The
-        <att>source</att> attribute contains the source of the supplied text. The editor(s)
+        supplied, <abbr>e.g.</abbr>, <val>overbinding</val>, <val>faded ink</val>, <val>lost folio</val>, 
+        <val>omitted in original</val>, etc. 
+        The <att>source</att> attribute contains the source of the supplied text. The editor(s)
         responsible for supplied material may be recorded in the <att>resp</att> attribute. The
         value of resp must point to one or more identifiers declared in the document header. The
         <att>cert</att> attribute signifies the degree of certainty ascribed to the supplied
@@ -22662,7 +22663,7 @@
           <desc>Reciprocal relationship of hasSummarization.</desc>
         </valItem>
         <valItem ident="hasSupplement">
-          <desc>Target is an index, concordance, teacher's guide, gloss, supplement, or appendix of
+          <desc>Target is an index, concordance, teacher’s guide, gloss, supplement, or appendix of
             the current entity.</desc>
         </valItem>
         <valItem ident="isSupplementOf">
@@ -23230,7 +23231,7 @@
     <desc>Gestural domain attributes.</desc>
   </classSpec>
   <classSpec ident="att.duration.gestural" module="MEI.gestural" type="atts">
-    <desc>Attributes that record performed duration that differs from a feature's written
+    <desc>Attributes that record performed duration that differs from a feature’s written
       duration.</desc>
     <attList>
       <attDef ident="dur.ges" usage="opt">
@@ -23262,7 +23263,7 @@
         </datatype>
       </attDef>
       <attDef ident="dur.real" usage="opt">
-        <desc>Duration in seconds, <abbr>e.g.</abbr>, '1.732'.</desc>
+        <desc>Duration in seconds, <abbr>e.g.</abbr>, <val>1.732</val>.</desc>
         <datatype>
           <rng:data type="decimal">
             <rng:param name="pattern">\d+(\.\d+)?</rng:param>
@@ -23270,7 +23271,7 @@
         </datatype>
       </attDef>
       <attDef ident="dur.recip" usage="opt">
-        <desc>Duration as an optionally dotted Humdrum *recip value.</desc>
+        <desc>Duration as an optionally dotted <ref target="https://www.humdrum.org/rep/recip/">Humdrum **recip value</ref>.</desc>
         <datatype>
           <rng:data type="token">
             <rng:param name="pattern">[0-9]+(%[0-9]+)?\.*q?</rng:param>
@@ -23540,7 +23541,7 @@
           </valItem>
         </valList>
         <remarks>
-          <p>On a wind instrument, the "highest note possible" depends on the player's abilities. On
+          <p>On a wind instrument, the "highest note possible" depends on the player’s abilities. On
             a string instrument, the "lowest note possible" depends on how much a string is
             de-tuned; that is, loosened using the tuning peg. Use of the <att>pname</att> and
             <att>oct</att> or <att>ploc</att> and <att>oloc</att> or <att>loc</att> attributes is
@@ -23645,7 +23646,7 @@
       score-wide defaults for attributes that are not set in descendant elements. For example, the
       grace attribute value here applies to all the grace attribute values in the score (or, more
       accurately, until the next <gi scheme="MEI">scoreDef</gi> element) without having to
-      individually set each note's grace attribute value. The midi.* attributes function as default
+      individually set each note’s grace attribute value. The midi.* attributes function as default
       values when creating sounding output. The tune.* attributes provide the capability of
       recording a tuning reference pitch.</desc>
     <classes>
@@ -23967,7 +23968,7 @@
         order to create displayable chord tablature grids. The <att>inth</att> (harmonic interval)
         attribute may be used to facilitate automated performance of a chord. It gives the number of
         1/2 steps above the bass. Of course, for the bass note itself, <att>inth</att> should be set
-        to '0'.</p>
+        to <val>0</val>.</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="chordTable" module="MEI.harmony">
@@ -24385,7 +24386,7 @@
   </elementSpec>
   <elementSpec ident="altId" module="MEI.header">
     <desc>(alternative identifier) – May contain a bibliographic identifier that does not fit within
-      the meiHead element's id attribute, for example because the identifier does not fit the
+      the meiHead element’s id attribute, for example because the identifier does not fit the
       definition of an XML id or because multiple identifiers are needed.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -25065,7 +25066,7 @@
         missing part. In this case, the bounding box dimensions are given, together with @x and @y
         to indicate the upper left point on the original page. If, however, the removed section is
         available by itself, then a corresponding <gi scheme="MEI">folium</gi> (or <gi scheme="MEI">bifolium</gi>) should be placed inside the <gi scheme="MEI">cutout</gi> element, and should
-        provide it's own dimensions using @width and @height there. In this case, @width and @height
+        provide it’s own dimensions using @width and @height there. In this case, @width and @height
         on <gi scheme="MEI">cutout</gi> is expendable.</p>
     </remarks>
   </elementSpec>
@@ -25395,12 +25396,13 @@
     </attList>
     <remarks>
       <p>The <att>initial</att> attribute indicates whether this is the first or main hand of the
-        document. The <att>medium</att> attribute describes the writing medium, <abbr>e.g.</abbr>, 'pencil', or
-        the tint or type of ink, <abbr>e.g.</abbr>, 'brown'. The <att>resp</att> attribute contains an ID
-        reference to an element containing the name of the editor or transcriber responsible for
-        identifying the hand. The characteristics of the hand, particularly those related to the
-        quality of the writing, such as 'shaky', 'thick', etc. may be described within the content
-        of the <gi scheme="MEI">hand</gi> element. </p>
+        document. The <att>medium</att> attribute describes the writing medium, <abbr>e.g.</abbr>, 
+        <val>pencil</val>, or the tint or type of ink, <abbr>e.g.</abbr>, <val>brown</val>. 
+        The <att>resp</att> attribute contains an ID reference to an element containing the name of 
+        the editor or transcriber responsible for identifying the hand. The characteristics of the 
+        hand, particularly those related to the quality of the writing, such as <val>shaky</val>, 
+        <val>thick</val>, etc. may be described within the content of the <gi scheme="MEI">hand</gi> 
+        element.</p>
     </remarks>
     <remarks>
       <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
@@ -25537,7 +25539,7 @@
   </elementSpec>
   <elementSpec ident="inscription" module="MEI.header">
     <desc>An inscription added to an item, such as a bookplate, a note designating the item as a
-      gift, and/or the author's signature.</desc>
+      gift, and/or the author’s signature.</desc>
     <classes>
       <memberOf key="att.common"/>
       <memberOf key="att.bibl"/>
@@ -25615,7 +25617,7 @@
     <remarks>
       <p>A textual element may be related to this element by setting its <att>xml:lang</att>
         attribute, which normally takes the form of a code drawn from a coded list, such as
-        ISO639-2b, to the same value as this element's codedval attribute. The name and web location
+        ISO639-2b, to the same value as this element’s codedval attribute. The name and web location
         of the authorizing list may be encoded in the <att>auth</att> attribute and the
         <att>auth.uri</att> attribute, respectively.</p>
     </remarks>
@@ -25927,7 +25929,7 @@
     <!--<remarks>
             <p>TODO: It remains unclear how to specify which part of the patch is attached to the
               underlying surface. Right now, the assumption is that it is always attached with the
-              patch's verso (or outer.verso) side, but what about patches that can be folded up or
+              patch’s verso (or outer.verso) side, but what about patches that can be folded up or
               down?</p>
           </remarks>-->
   </elementSpec>
@@ -26240,7 +26242,7 @@
   </elementSpec>
   <elementSpec ident="pubStmt" module="MEI.header">
     <desc>(publication statement) – Container for information regarding the publication or
-      distribution of a bibliographic item, including the publisher's name and address, the date of
+      distribution of a bibliographic item, including the publisher’s name and address, the date of
       publication, and other relevant details.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -26808,7 +26810,7 @@
     </content>
     <remarks>
       <p>A short phrase indicating the nature of or the reason for the unpublished status may be
-        given as the element's content.</p>
+        given as the element’s content.</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="useRestrict" module="MEI.header">
@@ -27394,7 +27396,7 @@
     <desc>Visual domain attributes in the Mensural repertoire.</desc>
     <attList>
       <attDef ident="lig" usage="opt">
-        <desc>Indicates this element's participation in a ligature.</desc>
+        <desc>Indicates this element’s participation in a ligature.</desc>
         <datatype>
           <rng:ref name="data.LIGATUREFORM"/>
         </datatype>
@@ -27713,7 +27715,7 @@
         </datatype>
       </attDef>
       <attDef ident="midi.duty" usage="opt">
-        <desc>Specifies the 'on' part of the duty cycle as a percentage of a note's duration.</desc>
+        <desc>Specifies the 'on' part of the duty cycle as a percentage of a note’s duration.</desc>
         <datatype>
           <rng:ref name="data.PERCENT.LIMITED"/>
         </datatype>
@@ -27808,7 +27810,7 @@
         </datatype>
       </attDef>
       <attDef ident="midi.pan" usage="opt">
-        <desc>Sets the instrument's position in a stereo field. MIDI values of 0 and 1 both pan
+        <desc>Sets the instrument’s position in a stereo field. MIDI values of 0 and 1 both pan
           left, 127 or 128 pans right, and 63 or 64 pans to the center. Positve percentage values
           pan to the right, negative ones to the left. 0% is centered.</desc>
         <datatype>
@@ -27828,7 +27830,7 @@
         </datatype>
       </attDef>
       <attDef ident="midi.volume" usage="opt">
-        <desc>Sets the instrument's volume.</desc>
+        <desc>Sets the instrument’s volume.</desc>
         <datatype>
           <rng:ref name="data.MIDIVALUE_PERCENT"/>
         </datatype>
@@ -27991,7 +27993,7 @@
       <rng:text/>
     </content>
     <remarks>
-      <p>The element's content must be wrapped in a CDATA section to avoid parsing errors.</p>
+      <p>The element’s content must be wrapped in a CDATA section to avoid parsing errors.</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="instrDef" module="MEI.midi">
@@ -30742,7 +30744,7 @@
             <sch:rule context="mei:attacca/@target">
               <sch:assert role="warning" test="not(normalize-space(.) eq '')">@target attribute
                 should have content.</sch:assert>
-              <sch:assert role="warning" test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*[local-name()                    eq 'section' or local-name() eq 'mdiv']/@xml:id">The value in @target should correspond to the @xml:id attribute of a section or
+              <sch:assert role="warning" test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*[local-name() eq 'section' or local-name() eq 'mdiv']/@xml:id">The value in @target should correspond to the @xml:id attribute of a section or
                 mdiv element.</sch:assert>
             </sch:rule>
           </constraint>
@@ -30834,7 +30836,7 @@
     <attList>
       <attDef ident="bar.len" usage="opt">
         <desc>States the length of barlines in virtual units. The value must be greater than 0 and
-          is typically equal to 2 times (the number of staff lines - 1); <abbr>e.g.</abbr>, a value of '8' for a
+          is typically equal to 2 times (the number of staff lines - 1); <abbr>e.g.</abbr>, a value of <val>8</val> for a
           5-line staff.</desc>
         <datatype>
           <rng:data type="decimal">
@@ -30842,7 +30844,7 @@
           </rng:data>
         </datatype>
         <remarks>
-          <p>This attribute is ignored if the value of the bar.style attribute is "mensur".</p>
+          <p>This attribute is ignored if the value of the bar.style attribute is <val>mensur</val>.</p>
         </remarks>
       </attDef>
       <attDef ident="bar.method" usage="opt">
@@ -30870,8 +30872,8 @@
             directly above and below the staff. The value ranges between 0 (just below the staff) to
             2 * number of staff lines (directly above the staff). For example, on a 5-line staff the
             lines would be numbered 1, 3, 5, 7, and 9 while the spaces would be numbered 0, 2, 4, 6,
-            8, and 10. So, a value of '9' puts the bar line through the top line of the staff.</p>
-          <p>This attribute is ignored if the value of the bar.style attribute is "mensur".</p>
+            8, and 10. So, a value of <val>9</val> puts the bar line through the top line of the staff.</p>
+          <p>This attribute is ignored if the value of the bar.style attribute is <val>mensur</val>.</p>
         </remarks>
       </attDef>
     </attList>
@@ -31060,7 +31062,7 @@
     </constraintSpec>
     <attList>
       <attDef ident="shape" usage="opt">
-        <desc>Describes a clef's shape.</desc>
+        <desc>Describes a clef’s shape.</desc>
         <datatype>
           <rng:ref name="data.CLEFSHAPE"/>
         </datatype>
@@ -31179,7 +31181,7 @@
     <attList>
       <attDef ident="bezier" usage="opt">
         <desc>Records the placement of Bezier control points as a series of pairs of space-separated
-          values; <abbr>e.g.</abbr>, 19 45 -32 118.</desc>
+          values; <abbr>e.g.</abbr>, <val>19 45 -32 118.</val></desc>
         <datatype>
           <rng:list>
             <rng:oneOrMore>
@@ -31194,7 +31196,7 @@
           connecting the starting and ending points of the curve. The first value captures a
           distance to the left (positive value) or right (negative value) of the line, expressed in
           virtual units. The second value of each pair represents a point along the line, expressed
-          as a percentage of the line's length. N.B. An MEI virtual unit (vu) is half the distance
+          as a percentage of the line’s length. N.B. An MEI virtual unit (vu) is half the distance
           between adjacent staff lines where the interline space is measured from the middle of a 
           staff line.</desc>
         <datatype>
@@ -31791,15 +31793,15 @@
   <classSpec ident="att.labelled" module="MEI.shared" type="atts">
     <attList>
       <attDef ident="label" usage="opt">
-        <desc>Captures text to be used to generate a label for the element to which it's attached, a
+        <desc>Captures text to be used to generate a label for the element to which it’s attached, a
           "tool tip" or prefatory text, for example. Should not be used to record document
           content.</desc>
         <datatype>
           <rng:data type="string"/>
         </datatype>
         <remarks>
-          <p> <att>label</att> is used to provide a display label for an element's contents, for
-            example in the form of a "tool tip" or as the "name" when the element's contents are
+          <p> <att>label</att> is used to provide a display label for an element’s contents, for
+            example in the form of a "tool tip" or as the "name" when the element’s contents are
             treated as the "value" in a "name-value pair". Unlike <att>n</att>, <att>label</att> may
             contain space characters.</p>
           <p>Don't confuse this attribute with the <gi scheme="MEI">label</gi> element, which
@@ -31813,10 +31815,10 @@
     <attList>
       <!--<attDef ident="lang" ns="http://www.w3.org/XML/1998/namespace" usage="opt">-->
       <attDef ident="xml:lang" usage="opt">
-        <desc>Identifies the language of the element's content. The values for this attribute are
+        <desc>Identifies the language of the element’s content. The values for this attribute are
           language 'tags' as defined in BCP 47. All language tags that make use of private use
           sub-tags must be documented in a corresponding language element in the MEI header whose id
-          attribute is the same as the language tag's value.</desc>
+          attribute is the same as the language tag’s value.</desc>
         <datatype>
           <rng:data type="language"/>
         </datatype>
@@ -32307,7 +32309,7 @@
     </classes>
   </classSpec>
   <classSpec ident="att.meterConformance" module="MEI.shared" type="atts">
-    <desc>Attributes that provide information about a structure's conformance to the prevailing
+    <desc>Attributes that provide information about a structure’s conformance to the prevailing
       meter.</desc>
     <attList>
       <attDef ident="metcon" usage="opt">
@@ -32328,7 +32330,7 @@
     </attList>
   </classSpec>
   <classSpec ident="att.meterConformance.bar" module="MEI.shared" type="atts">
-    <desc>Attributes that provide information about a measure's conformance to the prevailing
+    <desc>Attributes that provide information about a measure’s conformance to the prevailing
       meter.</desc>
     <attList>
       <attDef ident="metcon" usage="opt">
@@ -32416,7 +32418,7 @@
     <attList>
       <attDef ident="mm" usage="opt">
         <desc>Used to describe tempo in terms of beats (often the meter signature denominator) per
-          minute, ala M.M. (Maelzel's Metronome). Do not confuse this attribute with midi.bpm or
+          minute, ala M.M. (Maelzel’s Metronome). Do not confuse this attribute with midi.bpm or
           midi.mspb. In MIDI, a beat is always defined as a quarter note, *not the numerator of the
           time signature or the metronomic indication*.</desc>
         <datatype>
@@ -32492,7 +32494,7 @@
     <desc>Attributes used to supply an integer number designation for an element.</desc>
     <attList>
       <attDef ident="n" usage="opt">
-        <desc>Provides a numeric designation that indicates an element's position in a sequence of
+        <desc>Provides a numeric designation that indicates an element’s position in a sequence of
           similar elements. Its value must be a non-negative integer.</desc>
         <datatype>
           <rng:data type="nonNegativeInteger"/>
@@ -32504,7 +32506,7 @@
     <desc>Attributes used to supply a number-like designation for an element.</desc>
     <attList>
       <attDef ident="n" usage="opt">
-        <desc>Provides a number-like designation that indicates an element's position in a sequence
+        <desc>Provides a number-like designation that indicates an element’s position in a sequence
           of similar elements. May not contain space characters.</desc>
         <datatype>
           <rng:ref name="data.WORD"/>
@@ -32574,7 +32576,7 @@
             <sch:rule context="mei:*[lower-case(@head.auth) eq 'smufl']">
               <sch:assert test="matches(@head.shape, '^#x') or matches(@head.shape, '^U+')">When
                 @head.auth matches 'smufl', @head.shape must contain a numeric glyph reference in
-                hexadecimal notation, e.g., "#xE000" or "U+E000".</sch:assert>
+                hexadecimal notation, like "#xE000" or "U+E000".</sch:assert>
             </sch:rule>
           </constraint>
         </constraintSpec>
@@ -32682,8 +32684,8 @@
     <desc>Attributes that record placement of notes on a single-line staff.</desc>
     <attList>
       <attDef ident="ontheline" usage="opt">
-        <desc>Determines the placement of notes on a 1-line staff. A value of 'true' places all
-          notes on the line, while a value of 'false' places stems-up notes above the line and
+        <desc>Determines the placement of notes on a 1-line staff. A value of '<val>true</val>' places all
+          notes on the line, while a value of '<val>false</val>' places stems-up notes above the line and
           stems-down notes below the line.</desc>
         <datatype>
           <rng:ref name="data.BOOLEAN"/>
@@ -32934,7 +32936,7 @@
     <desc>Attributes capturing placement on a staff.</desc>
     <attList>
        <attDef ident="onstaff" usage="opt">
-          <desc>Indicates the placement of the item within the staff. A value of 'true' means on the staff, and 'false' off the staff.</desc>
+          <desc>Indicates the placement of the item within the staff. A value of '<val>true</val>' means on the staff, and '<val>false</val>' off the staff.</desc>
           <datatype>
              <rng:ref name="data.BOOLEAN"/>
           </datatype>
@@ -33145,7 +33147,7 @@
       creation, transcription, editing, or encoding.</desc>
     <attList>
       <attDef ident="resp" usage="opt">
-        <desc>Indicates the agent(s) responsible for some aspect of the text's transcription,
+        <desc>Indicates the agent(s) responsible for some aspect of the text’s transcription,
           editing, or encoding. Its value must point to one or more identifiers declared in the
           document header.</desc>
         <datatype maxOccurs="unbounded">
@@ -33297,7 +33299,7 @@
     <desc>Attributes that capture notation spacing information.</desc>
     <attList>
       <attDef ident="spacing.packexp" usage="opt">
-        <desc>Describes a note's spacing relative to its time value.</desc>
+        <desc>Describes a note’s spacing relative to its time value.</desc>
         <datatype>
           <rng:data type="decimal"/>
         </datatype>
@@ -33581,13 +33583,13 @@
         </datatype>
       </attDef>
       <attDef ident="stem.x" usage="opt">
-        <desc>Records the output x coordinate of the stem's attachment point.</desc>
+        <desc>Records the output x coordinate of the stem’s attachment point.</desc>
         <datatype>
           <rng:data type="decimal"/>
         </datatype>
       </attDef>
       <attDef ident="stem.y" usage="opt">
-        <desc>Records the output y coordinate of the stem's attachment point.</desc>
+        <desc>Records the output y coordinate of the stem’s attachment point.</desc>
         <datatype>
           <rng:data type="decimal"/>
         </datatype>
@@ -33689,7 +33691,7 @@
         </datatype>
       </attDef>
       <attDef ident="system.topmar" usage="opt">
-        <desc>Describes the distance from page's top edge to the first system; used for first page
+        <desc>Describes the distance from page’s top edge to the first system; used for first page
           only.</desc>
         <datatype>
           <rng:ref name="data.MEASUREMENTABS"/>
@@ -33768,7 +33770,7 @@
         </datatype>
       </attDef>
       <attDef ident="rend" usage="opt">
-        <desc>Captures the appearance of the element's contents using MEI-defined
+        <desc>Captures the appearance of the element’s contents using MEI-defined
           descriptors.</desc>
         <datatype maxOccurs="unbounded">
           <rng:ref name="data.TEXTRENDITION"/>
@@ -33926,14 +33928,14 @@
       </attDef>
       <attDef ident="fontsize" usage="opt">
         <desc>Indicates the size of a font expressed in printers' points, <abbr>i.e.</abbr>, 1/72nd of an inch,
-          relative terms, <abbr>e.g.</abbr>, "small", "larger", etc., or percentage values relative to "normal"
-          size, <abbr>e.g.</abbr>, "125%". </desc>
+          relative terms, <abbr>e.g.</abbr>, <val>small</val>, <val>larger</val>, <abbr>etc.</abbr>, or percentage values relative to <val>normal</val>
+          size, <abbr>e.g.</abbr>, <val>125%</val>. </desc>
         <datatype>
           <rng:ref name="data.FONTSIZE"/>
         </datatype>
       </attDef>
       <attDef ident="fontstyle" usage="opt">
-        <desc>Records the style of a font, i.e, italic, oblique, or normal.</desc>
+        <desc>Records the style of a font, <abbr>i.e.</abbr>, <val>italic</val>, <val>oblique</val>, or <val>normal</val>.</desc>
         <datatype>
           <rng:ref name="data.FONTSTYLE"/>
         </datatype>
@@ -33995,7 +33997,7 @@
     <desc>Horizontal offset attributes.</desc>
     <attList>
       <attDef ident="ho" usage="opt">
-        <desc>Records a horizontal adjustment to a feature's programmatically-determined location in
+        <desc>Records a horizontal adjustment to a feature’s programmatically-determined location in
           terms of staff interline distance; that is, in units of 1/2 the distance between adjacent
           staff lines.</desc>
         <datatype>
@@ -34008,7 +34010,7 @@
     <desc>Horizontal offset attributes specified in terms of time.</desc>
     <attList>
       <attDef ident="to" usage="opt">
-        <desc>Records a timestamp adjustment of a feature's programmatically-determined location in
+        <desc>Records a timestamp adjustment of a feature’s programmatically-determined location in
           terms of musical time; that is, beats.</desc>
         <datatype>
           <rng:ref name="data.TSTAMPOFFSET"/>
@@ -34020,7 +34022,7 @@
     <desc>Vertical offset attributes.</desc>
     <attList>
       <attDef ident="vo" usage="opt">
-        <desc>Records the vertical adjustment of a feature's programmatically-determined location in
+        <desc>Records the vertical adjustment of a feature’s programmatically-determined location in
           terms of staff interline distance; that is, in units of 1/2 the distance between adjacent
           staff lines.</desc>
         <datatype>
@@ -34046,14 +34048,14 @@
     <desc>Horizontal offset requiring a pair of attributes.</desc>
     <attList>
       <attDef ident="startho" usage="opt">
-        <desc>Records the horizontal adjustment of a feature's programmatically-determined start
+        <desc>Records the horizontal adjustment of a feature’s programmatically-determined start
           point.</desc>
         <datatype>
           <rng:ref name="data.MEASUREMENTREL"/>
         </datatype>
       </attDef>
       <attDef ident="endho" usage="opt">
-        <desc>Records the horizontal adjustment of a feature's programmatically-determined end
+        <desc>Records the horizontal adjustment of a feature’s programmatically-determined end
           point.</desc>
         <datatype>
           <rng:ref name="data.MEASUREMENTREL"/>
@@ -34066,14 +34068,14 @@
       time.</desc>
     <attList>
       <attDef ident="startto" usage="opt">
-        <desc>Records a timestamp adjustment of a feature's programmatically-determined start
+        <desc>Records a timestamp adjustment of a feature’s programmatically-determined start
           point.</desc>
         <datatype>
           <rng:ref name="data.TSTAMPOFFSET"/>
         </datatype>
       </attDef>
       <attDef ident="endto" usage="opt">
-        <desc>Records a timestamp adjustment of a feature's programmatically-determined end
+        <desc>Records a timestamp adjustment of a feature’s programmatically-determined end
           point.</desc>
         <datatype>
           <rng:ref name="data.TSTAMPOFFSET"/>
@@ -34085,14 +34087,14 @@
     <desc>Vertical offset attributes requiring a pair of attributes.</desc>
     <attList>
       <attDef ident="startvo" usage="opt">
-        <desc>Records a vertical adjustment of a feature's programmatically-determined start
+        <desc>Records a vertical adjustment of a feature’s programmatically-determined start
           point.</desc>
         <datatype>
           <rng:ref name="data.MEASUREMENTREL"/>
         </datatype>
       </attDef>
       <attDef ident="endvo" usage="opt">
-        <desc>Records a vertical adjustment of a feature's programmatically-determined end
+        <desc>Records a vertical adjustment of a feature’s programmatically-determined end
           point.</desc>
         <datatype>
           <rng:ref name="data.MEASUREMENTREL"/>
@@ -34131,7 +34133,7 @@
     <!--<attDef ident="space" ns="http://www.w3.org/XML/1998/namespace" usage="opt">-->
     <attList>
       <attDef ident="xml:space" usage="opt">
-        <desc>Allows one to signal to an application whether an element's white space is
+        <desc>Allows one to signal to an application whether an element’s white space is
           "significant". The behavior of xml:space cascades to all descendant elements, but it can
           be turned off locally by setting the xml:space attribute to the value "default".</desc>
         <valList type="closed">
@@ -34587,7 +34589,7 @@
         <att>accid</att> and <att>accid.ges</att> attributes on the <gi scheme="MEI">note</gi>
         element. The element may be used when specific display info, such as size or color, needs to
         be recorded for the accidental or when multiple accidentals occur on a single note. The
-        <att>func</att> attribute can be used to differentiate between the accidental's functions,
+        <att>func</att> attribute can be used to differentiate between the accidental’s functions,
         such as 'cautionary' or 'editorial'.</p>
     </remarks>
   </elementSpec>
@@ -34868,7 +34870,7 @@
     </content>
     <remarks>
       <p>This element is provided for repertoires, such as mensural notation, that lack measures.
-        Because the <gi scheme="MEI">barLine</gi> element's attributes, from which the logical and
+        Because the <gi scheme="MEI">barLine</gi> element’s attributes, from which the logical and
         visual characteristics of the bar line can be discerned, largely duplicate those of measure,
         the use of barLine is not necessary within <gi scheme="MEI">measure</gi> elements in
         CMN.</p>
@@ -35086,8 +35088,8 @@
         <att>tstamp</att>, <att>tstamp.ges</att>, or <att>tstamp.real</att> attribute. It is a
         semantic error not to specify a starting point attribute.</p>
       <p>Unlike the <gi scheme="MEI">breath</gi> mark, a caesura may have a performed duration.
-        Also, while the default value for <att>place</att> on the breath mark is "above", the
-        default value for <att>place</att> for a caesura is "within". Unless indicated by other
+        Also, while the default value for <att>place</att> on the breath mark is <val>above</val>, the
+        default value for <att>place</att> for a caesura is <val>within</val>. Unless indicated by other
         attributes, a caesura will be rendered as a pair of slanted lines through the top line of
         the staff.</p>
       <p/>
@@ -35371,14 +35373,14 @@
     <constraintSpec ident="check_contributor_role" scheme="isoschematron">
       <constraint>
         <sch:rule context="mei:contributor">
-          <sch:assert test="not(matches(normalize-space(lower-case(@role)),               '(arranger|author|composer|contributor|editor|funder|librettist|lyricist|sponsor)'))">The value of @role must not contain the name of another element available in this
+          <sch:assert test="not(matches(normalize-space(lower-case(@role)), '(arranger|author|composer|contributor|editor|funder|librettist|lyricist|sponsor)'))">The value of @role must not contain the name of another element available in this
             context.</sch:assert>
         </sch:rule>
       </constraint>
     </constraintSpec>
     <attList>
       <attDef ident="role" usage="rec">
-        <desc>Used to specify the contributor's function.</desc>
+        <desc>Used to specify the contributor’s function.</desc>
         <datatype>
           <rng:text/>
         </datatype>
@@ -35581,7 +35583,7 @@
           </valItem>
           <valItem ident="elevation">
             <desc>Distance to which something has been raised or uplifted above a level, <abbr>e.g.</abbr>, a
-              hill's elevation above the surrounding country.</desc>
+              hill’s elevation above the surrounding country.</desc>
           </valItem>
           <valItem ident="height">
             <desc>Denotes extent upward (as from foot to head) as well as any measurable distance
@@ -35801,7 +35803,7 @@
       </attDef>
     </attList>
     <remarks>
-      <p>Often, the <gi scheme="MEI">head</gi> sub-element identifies the <gi scheme="MEI">div</gi>'s purpose. This element is modelled on an element in the Text Encoding Initiative
+      <p>Often, the <gi scheme="MEI">head</gi> sub-element identifies the <gi scheme="MEI">div</gi>’s purpose. This element is modelled on an element in the Text Encoding Initiative
         (TEI) standard.</p>
     </remarks>
   </elementSpec>
@@ -36285,7 +36287,7 @@
     </content>
     <remarks>
       <p>Examples include an International Standard Book/Music Number, Library of Congress Control
-        Number, publisher's number, a personal identification number, an entry in a bibliography or
+        Number, publisher’s number, a personal identification number, an entry in a bibliography or
         catalog, etc. The <att>type</att> attribute may be used to indicate the system from which
         the identifier was derived.</p>
     </remarks>
@@ -36477,7 +36479,7 @@
       <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
       <p>Don't confuse this element, which is used to capture labelling text appearing in the
         document, with the <att>label</att> attribute, which records text to be used to generate a
-        designation for the element to which it's attached, a "tool tip" or prefatory text, for
+        designation for the element to which it’s attached, a "tool tip" or prefatory text, for
         example.</p>
     </remarks>
   </elementSpec>
@@ -36697,7 +36699,7 @@
     <remarks>
       <p>The <gi scheme="MEI">mdiv</gi> element may contain one or both of 2 possible views of the
         music. The score view is the traditional full and open score while the parts view contains
-        each performer's view of the score; that is, his part. These 2 views are necessary because
+        each performer’s view of the score; that is, his part. These 2 views are necessary because
         it is not always possible or desirable to generate one from the other. The <gi scheme="MEI">score</gi> and <gi scheme="MEI">parts</gi> elements are placed here and not directly within
         the <gi scheme="MEI">body</gi> element because score and part characteristics may change
         from <gi scheme="MEI">mdiv</gi> to <gi scheme="MEI">mdiv</gi>. For example, the 2nd movement
@@ -36942,13 +36944,13 @@
     </content>
     <remarks>
       <p>The <gi scheme="MEI">accid</gi> and <gi scheme="MEI">artic</gi> sub-elements may be used
-        instead of the note element's attributes when accid and artic represent first-class objects,
+        instead of the note element’s attributes when accid and artic represent first-class objects,
         <abbr>e.g.</abbr>, when they require attributes, such as <att>x</att> and <att>y</att> location
         attributes. Similarly, the <gi scheme="MEI">syl</gi> sub-element may be used instead of the
         <att>syl</att> attribute. The verse sub-element may be used to group text syllables by
         verse. The <att>colored</att> attribute may be used to indicate coloration. In the mensural
         repertoire, coloration is a temporary change in the underlying mensuration from perfect to
-        imperfect. In the CMN repertoire, coloration is an inversion of the note head's normal
+        imperfect. In the CMN repertoire, coloration is an inversion of the note head’s normal
         rendition, that is, the note head is void when it would otherwise be filled and vice versa.
         Do not confuse this with visual color.</p>
     </remarks>
@@ -37318,7 +37320,7 @@
       <p>This element is used to capture the textual data that often appears at the top of the
         second and succeeding pages of printed music. It may also be used for similarly formatted
         material in manuscripts. Auto-generated page numbers may be indicated with a processing
-        instruction. The pgHead, pgHead2, pgFoot, and pgFoot2 elements should <hi rend="bold">*not*</hi> be used to encode textual notes/annotations.</p>
+        instruction. The pgHead, pgHead2, pgFoot, and pgFoot2 elements should <hi rend="bold">not</hi> be used to encode textual notes/annotations.</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="phrase" module="MEI.shared">
@@ -37749,7 +37751,7 @@
     </remarks>
   </elementSpec>
   <elementSpec ident="roleDesc" module="MEI.shared">
-    <desc>(role description) – Describes a character's role in a drama.</desc>
+    <desc>(role description) – Describes a character’s role in a drama.</desc>
     <classes>
       <memberOf key="att.common"/>
       <memberOf key="att.facsimile"/>
@@ -38404,7 +38406,7 @@
     <constraintSpec ident="tempo_in_header_disallow_most_attrs" scheme="isoschematron">
       <constraint>
         <sch:rule context="mei:tempo[not(ancestor::mei:score or ancestor::mei:part)]">
-          <sch:assert test="not(@*[name() != 'analog' and name() != 'class' and name() != 'label' and                name() != 'mm' and name() != 'mm.dots' and name() != 'translit' and                name() != 'type' and name() != 'mm.unit' and name() != 'n' and name() != 'xml:base' and                name() != 'xml:id' and name() != 'xml:lang'])">Only analog, class, label, mm, mm.dots, mm.unit, n, translit, type, xml:base, xml:id,
+          <sch:assert test="not(@*[name() != 'analog' and name() != 'class' and name() != 'label' and name() != 'mm' and name() != 'mm.dots' and name() != 'translit' and name() != 'type' and name() != 'mm.unit' and name() != 'n' and name() != 'xml:base' and name() != 'xml:id' and name() != 'xml:lang'])">Only analog, class, label, mm, mm.dots, mm.unit, n, translit, type, xml:base, xml:id,
             and xml:lang attributes are allowed when tempo is not a descendant of a score or
             part.</sch:assert>
         </sch:rule>
@@ -38751,8 +38753,8 @@
     <attList>
       <attDef ident="tab.fing" usage="opt">
         <desc>Indicates which finger, if any, should be used to play an individual string. The
-          index, middle, ring, and little fingers are represented by the values 1-4, while 't' is
-          for the thumb. The values 'x' and 'o' indicate muffled and open strings,
+          index, middle, ring, and little fingers are represented by the values 1-4, while <val>t</val> is
+          for the thumb. The values <val>x</val> and <val>o</val> indicate muffled and open strings,
           respectively.</desc>
         <datatype>
           <rng:ref name="data.FINGER.FRET"/>
@@ -38977,7 +38979,7 @@
       </rng:zeroOrMore>
     </content>
     <remarks>
-      <p> <gi scheme="MEI">titlePage</gi> may be used to transcribe the item's title page. Other
+      <p> <gi scheme="MEI">titlePage</gi> may be used to transcribe the item’s title page. Other
         front matter structures, such as a preface, dedication, or table of contents, may be encoded
         as textual divisions; that is, as <gi scheme="MEI">div</gi> elements, with an optional <gi scheme="MEI">head</gi> sub-element describing the nature of the division. The <gi scheme="MEI">pb</gi> element is allowed here in order to accommodate page images, <abbr>e.g.</abbr>,
         cover, endpapers, etc. before and after the actual textual matter.</p>
@@ -39106,10 +39108,10 @@
     </constraintSpec>
     <attList>
       <attDef ident="form" usage="opt">
-        <desc>Used to indicate the format of a list. In a "simple" list, <gi scheme="MEI">li</gi>
-          elements are not numbered or bulleted. In a "marked" list, the sequence of the list items
+        <desc>Used to indicate the format of a list. In a <val>simple</val> list, <gi scheme="MEI">li</gi>
+          elements are not numbered or bulleted. In a <val>marked</val> list, the sequence of the list items
           is not critical, and a bullet, box, dash, or other character is displayed at the start of
-          each <gi scheme="MEI">item</gi>. In an "ordered" list, the sequence of the items is
+          each <gi scheme="MEI">item</gi>. In an <val>ordered</val> list, the sequence of the items is
           important, and each <gi scheme="MEI">li</gi> is lettered or numbered. Style sheet
           functions should be used to specify the mark or numeration system for each <gi scheme="MEI">li</gi>.</desc>
         <valList type="closed">
@@ -39151,7 +39153,7 @@
           </valItem>
         </valList>
         <remarks>
-          <p>In a list of type "gloss" it is a semantic error not to precede each list item with a
+          <p>In a list of type <val>gloss</val> it is a semantic error not to precede each list item with a
             label.</p>
         </remarks>
       </attDef>
@@ -39776,7 +39778,7 @@
     <attList>
       <attDef ident="len" usage="opt">
         <desc>States the length of barlines in virtual units. The value must be greater than 0 and
-          is typically equal to 2 times (the number of staff lines - 1); <abbr>e.g.</abbr>, a value of '8' for a
+          is typically equal to 2 times (the number of staff lines - 1); <abbr>e.g.</abbr>, a value of <val>8</val> for a
           5-line staff.</desc>
         <datatype>
           <rng:data type="decimal">
@@ -39784,7 +39786,7 @@
           </rng:data>
         </datatype>
         <remarks>
-          <p>This attribute is ignored if the value of the style attribute is "mensur".</p>
+          <p>This attribute is ignored if the value of the style attribute is <val>mensur</val>.</p>
         </remarks>
       </attDef>
       <attDef ident="method" usage="opt">
@@ -39803,8 +39805,8 @@
             directly above and below the staff. The value ranges between 0 (just below the staff) to
             2 * number of staff lines (directly above the staff). For example, on a 5-line staff the
             lines would be numbered 1, 3, 5, 7, and 9 while the spaces would be numbered 0, 2, 4, 6,
-            8, and 10. So, a value of '9' puts the bar line through the top line of the staff.</p>
-          <p>This attribute is ignored if the value of the style attribute is "mensur".</p>
+            8, and 10. So, a value of <val>9</val> puts the bar line through the top line of the staff.</p>
+          <p>This attribute is ignored if the value of the style attribute is <val>mensur</val>.</p>
         </remarks>
       </attDef>
     </attList>
@@ -39869,7 +39871,7 @@
       <attDef ident="slash" usage="req">
         <desc>Indicates the number of slashes required to render the appropriate beat repeat symbol.
           When a single beat consisting of a single note or chord is repeated, the repetition symbol
-          is a single thick, slanting slash; therefore, the value '1' should be used. When the beat
+          is a single thick, slanting slash; therefore, the value <val>1</val> should be used. When the beat
           is divided into even notes, the following values should be used: 4ths or 8ths=1, 16ths=2,
           32nds=3, 64ths=4, 128ths=5. When the beat is comprised of mixed duration values, the
           default rendition is 2 slashes and 2 dots.</desc>
@@ -40337,7 +40339,7 @@
             <desc>Chord tablature grid.</desc>
           </valItem>
           <valItem ident="gridtext">
-            <desc>Chord tablature grid and the element's textual content.</desc>
+            <desc>Chord tablature grid and the element’s textual content.</desc>
           </valItem>
           <valItem ident="text">
             <desc>Textual content of the element.</desc>
@@ -40958,7 +40960,7 @@
   <classSpec ident="att.pedal.vis" module="MEI.visual" type="atts">
     <desc>Visual domain attributes. The place attribute captures the placement of the pedal marking
       with respect to the staff with which it is associated. Modern publishing standards require the
-      place to be 'below'; however, for transcriptions of manuscript works, this attribute class
+      place to be <val>below</val>; however, for transcriptions of manuscript works, this attribute class
       allows the full range of values.</desc>
     <classes>
       <memberOf key="att.altSym"/>
@@ -41290,8 +41292,8 @@
           <rng:ref name="data.BOOLEAN"/>
         </datatype>
         <remarks>
-          <p>This attribute is ignored when the bar.method attribute's value is "mensur" or
-            "takt".</p>
+          <p>This attribute is ignored when the <att>bar.method</att> attribute’s value is <val>mensur</val> 
+            or <val>takt</val>.</p>
         </remarks>
       </attDef>
     </attList>

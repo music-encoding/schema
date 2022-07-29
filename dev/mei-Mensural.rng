@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2022-07-21T10:50:36Z. .
+Schema generated from ODD source 2022-07-29T13:19:10Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -7243,7 +7243,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <value>constituent</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Intellectual or physical component of the resource.</a:documentation>
          <value>otherVersion</value>
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Version of the resource's intellectual content not changed enough to be a different work.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Version of the resource’s intellectual content not changed enough to be a different work.</a:documentation>
          <value>otherFormat</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Version of the resource in a different physical format.</a:documentation>
          <value>isReferencedBy</value>
@@ -7774,7 +7774,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <value>isSummarizationOf</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reciprocal relationship of hasSummarization.</a:documentation>
          <value>hasSupplement</value>
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Target is an index, concordance, teacher's guide, gloss, supplement, or appendix of the current entity.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Target is an index, concordance, teacher’s guide, gloss, supplement, or appendix of the current entity.</a:documentation>
          <value>isSupplementOf</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reciprocal relationship of hasSupplement.</a:documentation>
          <value>hasTransformation</value>
@@ -8159,7 +8159,8 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
    <define name="mei_att.harmonicFunction.attribute.deg">
       <optional>
          <attribute name="deg">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Captures scale degree information using Humdrum **deg syntax -- an optional indicator of melodic approach (^ = ascending approach, v = descending approach), a scale degree value (1 = tonic ... 7 = leading tone), and an optional indication of chromatic alteration, "1", "v7", "^1", or "v5+", for example. The amount of chromatic alternation is not indicated.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Captures scale degree information using <a xmlns="http://www.w3.org/1999/xhtml"
+                  href="https://www.humdrum.org/rep/deg/">Humdrum **deg syntax</a> -- an optional indicator of melodic approach (^ = ascending approach, v = descending approach), a scale degree value (1 = tonic ... 7 = leading tone), and an optional indication of chromatic alteration, 1, v7, ^1, or v5+, for example. The amount of chromatic alternation is not indicated.</a:documentation>
             <ref name="mei_data.SCALEDEGREE"/>
          </attribute>
       </optional>
@@ -8217,7 +8218,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
    <define name="mei_att.keySigDefault.anl.attribute.key.accid">
       <optional>
          <attribute name="key.accid">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Contains an accidental for the tonic key, if one is required, e.g., if key.pname equals 'c' and key.accid equals 's', then a tonic of C# is indicated.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Contains an accidental for the tonic key, if one is required, e.g., if <code xmlns="http://www.w3.org/1999/xhtml">@key.pname</code> equals c and <code xmlns="http://www.w3.org/1999/xhtml">@key.accid</code> equals s, then a tonic of C# is indicated.</a:documentation>
             <ref name="mei_data.ACCIDENTAL.GESTURAL"/>
          </attribute>
       </optional>
@@ -8233,7 +8234,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
    <define name="mei_att.keySigDefault.anl.attribute.key.pname">
       <optional>
          <attribute name="key.pname">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Holds the pitch name of the tonic key, e.g., 'c' for the key of C.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Holds the pitch name of the tonic key, e.g., c for the key of C.</a:documentation>
             <ref name="mei_data.PITCHNAME"/>
          </attribute>
       </optional>
@@ -8256,7 +8257,8 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
    <define name="mei_att.melodicFunction.attribute.mfunc">
       <optional>
          <attribute name="mfunc">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Describes melodic function using Humdrum **embel syntax.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Describes melodic function using <a xmlns="http://www.w3.org/1999/xhtml"
+                  href="https://www.humdrum.org/rep/embel/">Humdrum **embel syntax</a>.</a:documentation>
             <ref name="mei_data.MELODICFUNCTION"/>
          </attribute>
       </optional>
@@ -9220,7 +9222,7 @@ Suggested values include: 1] confirmation; 2] addition; 3] deletion; 4] substitu
          <ref name="mei_att.trans.attributes"/>
          <optional>
             <attribute name="desc">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Provides a description of the means of restoration, 'stet' or 'strike-down', for example.</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Provides a description of the means of restoration, stet or strike-down, for example.</a:documentation>
                <data type="string"/>
             </attribute>
          </optional>
@@ -10362,7 +10364,7 @@ Suggested values include: 1] smufl</a:documentation>
    <define name="mei_att.duration.gestural.attribute.dur.real">
       <optional>
          <attribute name="dur.real">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Duration in seconds, e.g., '1.732'.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Duration in seconds, e.g., 1.732.</a:documentation>
             <data type="decimal">
                <param name="pattern">\d+(\.\d+)?</param>
             </data>
@@ -10372,7 +10374,8 @@ Suggested values include: 1] smufl</a:documentation>
    <define name="mei_att.duration.gestural.attribute.dur.recip">
       <optional>
          <attribute name="dur.recip">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Duration as an optionally dotted Humdrum *recip value.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Duration as an optionally dotted <a xmlns="http://www.w3.org/1999/xhtml"
+                  href="https://www.humdrum.org/rep/recip/">Humdrum **recip value</a>.</a:documentation>
             <data type="token">
                <param name="pattern">[0-9]+(%[0-9]+)?\.*q?</param>
             </data>
@@ -11146,7 +11149,7 @@ Suggested values include: 1] smufl</a:documentation>
    </define>
    <define name="mei_altId">
       <element name="altId">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(alternative identifier) – May contain a bibliographic identifier that does not fit within the meiHead element's id attribute, for example because the identifier does not fit the definition of an XML id or because multiple identifiers are needed.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(alternative identifier) – May contain a bibliographic identifier that does not fit within the meiHead element’s id attribute, for example because the identifier does not fit the definition of an XML id or because multiple identifiers are needed.</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -12035,7 +12038,7 @@ Suggested values include: 1] plaineAndEasie; 2] humdrumKern; 3] parsons</a:docum
    </define>
    <define name="mei_inscription">
       <element name="inscription">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">An inscription added to an item, such as a bookplate, a note designating the item as a gift, and/or the author's signature.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">An inscription added to an item, such as a bookplate, a note designating the item as a gift, and/or the author’s signature.</a:documentation>
          <ref name="mei_macro.struc-unstrucContent"/>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.bibl.attributes"/>
@@ -12554,7 +12557,7 @@ Suggested values include: 1] glue; 2] thread; 3] needle; 4] tape; 5] staple</a:d
    </define>
    <define name="mei_pubStmt">
       <element name="pubStmt">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(publication statement) – Container for information regarding the publication or distribution of a bibliographic item, including the publisher's name and address, the date of publication, and other relevant details.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(publication statement) – Container for information regarding the publication or distribution of a bibliographic item, including the publisher’s name and address, the date of publication, and other relevant details.</a:documentation>
          <zeroOrMore>
             <ref name="mei_model.headLike"/>
          </zeroOrMore>
@@ -13384,7 +13387,7 @@ Suggested values include: 1] glue; 2] thread; 3] needle; 4] tape; 5] staple</a:d
    <define name="mei_att.note.vis.mensural.attribute.lig">
       <optional>
          <attribute name="lig">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates this element's participation in a ligature.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates this element’s participation in a ligature.</a:documentation>
             <ref name="mei_data.LIGATUREFORM"/>
          </attribute>
       </optional>
@@ -13791,7 +13794,7 @@ Suggested values include: 1] glue; 2] thread; 3] needle; 4] tape; 5] staple</a:d
    <define name="mei_att.channelized.attribute.midi.duty">
       <optional>
          <attribute name="midi.duty">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Specifies the 'on' part of the duty cycle as a percentage of a note's duration.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Specifies the 'on' part of the duty cycle as a percentage of a note’s duration.</a:documentation>
             <ref name="mei_data.PERCENT.LIMITED"/>
          </attribute>
       </optional>
@@ -13879,7 +13882,7 @@ Suggested values include: 1] glue; 2] thread; 3] needle; 4] tape; 5] staple</a:d
    <define name="mei_att.midiInstrument.attribute.midi.pan">
       <optional>
          <attribute name="midi.pan">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sets the instrument's position in a stereo field. MIDI values of 0 and 1 both pan left, 127 or 128 pans right, and 63 or 64 pans to the center. Positve percentage values pan to the right, negative ones to the left. 0% is centered.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sets the instrument’s position in a stereo field. MIDI values of 0 and 1 both pan left, 127 or 128 pans right, and 63 or 64 pans to the center. Positve percentage values pan to the right, negative ones to the left. 0% is centered.</a:documentation>
             <ref name="mei_data.MIDIVALUE_PAN"/>
          </attribute>
       </optional>
@@ -13903,7 +13906,7 @@ Suggested values include: 1] glue; 2] thread; 3] needle; 4] tape; 5] staple</a:d
    <define name="mei_att.midiInstrument.attribute.midi.volume">
       <optional>
          <attribute name="midi.volume">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sets the instrument's volume.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sets the instrument’s volume.</a:documentation>
             <ref name="mei_data.MIDIVALUE_PERCENT"/>
          </attribute>
       </optional>
@@ -16139,7 +16142,7 @@ Suggested values include: 1] paper; 2] parch; 3] mixed</a:documentation>
    <define name="mei_att.barring.attribute.bar.len">
       <optional>
          <attribute name="bar.len">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">States the length of barlines in virtual units. The value must be greater than 0 and is typically equal to 2 times (the number of staff lines - 1); e.g., a value of '8' for a 5-line staff.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">States the length of barlines in virtual units. The value must be greater than 0 and is typically equal to 2 times (the number of staff lines - 1); e.g., a value of 8 for a 5-line staff.</a:documentation>
             <data type="decimal">
                <param name="minExclusive">0</param>
             </data>
@@ -16343,7 +16346,7 @@ Suggested values include: 1] paper; 2] parch; 3] mixed</a:documentation>
    <define name="mei_att.clefShape.attribute.shape">
       <optional>
          <attribute name="shape">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Describes a clef's shape.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Describes a clef’s shape.</a:documentation>
             <ref name="mei_data.CLEFSHAPE"/>
          </attribute>
       </optional>
@@ -16480,7 +16483,7 @@ Suggested values include: 1] paper; 2] parch; 3] mixed</a:documentation>
    <define name="mei_att.curvature.attribute.bulge">
       <optional>
          <attribute name="bulge">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Describes a curve as one or more pairs of values with respect to an imaginary line connecting the starting and ending points of the curve. The first value captures a distance to the left (positive value) or right (negative value) of the line, expressed in virtual units. The second value of each pair represents a point along the line, expressed as a percentage of the line's length. N.B. An MEI virtual unit (vu) is half the distance between adjacent staff lines where the interline space is measured from the middle of a staff line.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Describes a curve as one or more pairs of values with respect to an imaginary line connecting the starting and ending points of the curve. The first value captures a distance to the left (positive value) or right (negative value) of the line, expressed in virtual units. The second value of each pair represents a point along the line, expressed as a percentage of the line’s length. N.B. An MEI virtual unit (vu) is half the distance between adjacent staff lines where the interline space is measured from the middle of a staff line.</a:documentation>
             <list>
                <oneOrMore>
                   <data type="decimal"/>
@@ -17085,7 +17088,7 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
    <define name="mei_att.labelled.attribute.label">
       <optional>
          <attribute name="label">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Captures text to be used to generate a label for the element to which it's attached, a "tool tip" or prefatory text, for example. Should not be used to record document content.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Captures text to be used to generate a label for the element to which it’s attached, a "tool tip" or prefatory text, for example. Should not be used to record document content.</a:documentation>
             <data type="string"/>
          </attribute>
       </optional>
@@ -17097,7 +17100,7 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
    <define name="mei_att.lang.attribute.xmllang">
       <optional>
          <attribute name="xml:lang">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Identifies the language of the element's content. The values for this attribute are language 'tags' as defined in BCP 47. All language tags that make use of private use sub-tags must be documented in a corresponding language element in the MEI header whose id attribute is the same as the language tag's value.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Identifies the language of the element’s content. The values for this attribute are language 'tags' as defined in BCP 47. All language tags that make use of private use sub-tags must be documented in a corresponding language element in the MEI header whose id attribute is the same as the language tag’s value.</a:documentation>
             <data type="language"/>
          </attribute>
       </optional>
@@ -17775,7 +17778,7 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
    <define name="mei_att.mmTempo.attribute.mm">
       <optional>
          <attribute name="mm">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Used to describe tempo in terms of beats (often the meter signature denominator) per minute, ala M.M. (Maelzel's Metronome). Do not confuse this attribute with midi.bpm or midi.mspb. In MIDI, a beat is always defined as a quarter note, *not the numerator of the time signature or the metronomic indication*.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Used to describe tempo in terms of beats (often the meter signature denominator) per minute, ala M.M. (Maelzel’s Metronome). Do not confuse this attribute with midi.bpm or midi.mspb. In MIDI, a beat is always defined as a quarter note, *not the numerator of the time signature or the metronomic indication*.</a:documentation>
             <ref name="mei_data.TEMPOVALUE"/>
          </attribute>
       </optional>
@@ -17851,7 +17854,7 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
    <define name="mei_att.nInteger.attribute.n">
       <optional>
          <attribute name="n">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Provides a numeric designation that indicates an element's position in a sequence of similar elements. Its value must be a non-negative integer.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Provides a numeric designation that indicates an element’s position in a sequence of similar elements. Its value must be a non-negative integer.</a:documentation>
             <data type="nonNegativeInteger"/>
          </attribute>
       </optional>
@@ -17862,7 +17865,7 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
    <define name="mei_att.nNumberLike.attribute.n">
       <optional>
          <attribute name="n">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Provides a number-like designation that indicates an element's position in a sequence of similar elements. May not contain space characters.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Provides a number-like designation that indicates an element’s position in a sequence of similar elements. May not contain space characters.</a:documentation>
             <ref name="mei_data.WORD"/>
          </attribute>
       </optional>
@@ -17951,7 +17954,7 @@ Suggested values include: 1] smufl</a:documentation>
                 context="mei:*[lower-case(@head.auth) eq 'smufl']">
          <sch:assert test="matches(@head.shape, '^#x') or matches(@head.shape, '^U+')">When
                 @head.auth matches 'smufl', @head.shape must contain a numeric glyph reference in
-                hexadecimal notation, e.g., "#xE000" or "U+E000".</sch:assert>
+                hexadecimal notation, like "#xE000" or "U+E000".</sch:assert>
       </sch:rule>
    </pattern>
    <define name="mei_att.noteHeads.attribute.head.color">
@@ -18551,7 +18554,7 @@ Suggested values include: 1] smufl</a:documentation>
    <define name="mei_att.responsibility.attribute.resp">
       <optional>
          <attribute name="resp">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates the agent(s) responsible for some aspect of the text's transcription, editing, or encoding. Its value must point to one or more identifiers declared in the document header.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates the agent(s) responsible for some aspect of the text’s transcription, editing, or encoding. Its value must point to one or more identifiers declared in the document header.</a:documentation>
             <list>
                <oneOrMore>
                   <ref name="mei_data.URI"/>
@@ -18683,7 +18686,7 @@ Suggested values include: 1] smufl</a:documentation>
    <define name="mei_att.spacing.attribute.spacing.packexp">
       <optional>
          <attribute name="spacing.packexp">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Describes a note's spacing relative to its time value.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Describes a note’s spacing relative to its time value.</a:documentation>
             <data type="decimal"/>
          </attribute>
       </optional>
@@ -19009,7 +19012,7 @@ Suggested values include: 1] smufl</a:documentation>
    <define name="mei_att.stems.attribute.stem.x">
       <optional>
          <attribute name="stem.x">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records the output x coordinate of the stem's attachment point.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records the output x coordinate of the stem’s attachment point.</a:documentation>
             <data type="decimal"/>
          </attribute>
       </optional>
@@ -19017,7 +19020,7 @@ Suggested values include: 1] smufl</a:documentation>
    <define name="mei_att.stems.attribute.stem.y">
       <optional>
          <attribute name="stem.y">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records the output y coordinate of the stem's attachment point.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records the output y coordinate of the stem’s attachment point.</a:documentation>
             <data type="decimal"/>
          </attribute>
       </optional>
@@ -19115,7 +19118,7 @@ Suggested values include: 1] smufl</a:documentation>
    <define name="mei_att.systems.attribute.system.topmar">
       <optional>
          <attribute name="system.topmar">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Describes the distance from page's top edge to the first system; used for first page only.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Describes the distance from page’s top edge to the first system; used for first page only.</a:documentation>
             <ref name="mei_data.MEASUREMENTABS"/>
          </attribute>
       </optional>
@@ -19181,7 +19184,7 @@ Suggested values include: 1] smufl</a:documentation>
    <define name="mei_att.textRendition.attribute.rend">
       <optional>
          <attribute name="rend">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Captures the appearance of the element's contents using MEI-defined descriptors.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Captures the appearance of the element’s contents using MEI-defined descriptors.</a:documentation>
             <list>
                <oneOrMore>
                   <ref name="mei_data.TEXTRENDITION"/>
@@ -19321,7 +19324,7 @@ Suggested values include: 1] smufl</a:documentation>
    <define name="mei_att.typography.attribute.fontsize">
       <optional>
          <attribute name="fontsize">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates the size of a font expressed in printers' points, i.e., 1/72nd of an inch, relative terms, e.g., "small", "larger", etc., or percentage values relative to "normal" size, e.g., "125%".</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates the size of a font expressed in printers' points, i.e., 1/72nd of an inch, relative terms, e.g., small, larger, etc., or percentage values relative to normal size, e.g., 125%.</a:documentation>
             <ref name="mei_data.FONTSIZE"/>
          </attribute>
       </optional>
@@ -19329,7 +19332,7 @@ Suggested values include: 1] smufl</a:documentation>
    <define name="mei_att.typography.attribute.fontstyle">
       <optional>
          <attribute name="fontstyle">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records the style of a font, i.e, italic, oblique, or normal.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records the style of a font, i.e., italic, oblique, or normal.</a:documentation>
             <ref name="mei_data.FONTSTYLE"/>
          </attribute>
       </optional>
@@ -19386,7 +19389,7 @@ Suggested values include: 1] smufl</a:documentation>
    <define name="mei_att.visualOffset.ho.attribute.ho">
       <optional>
          <attribute name="ho">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records a horizontal adjustment to a feature's programmatically-determined location in terms of staff interline distance; that is, in units of 1/2 the distance between adjacent staff lines.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records a horizontal adjustment to a feature’s programmatically-determined location in terms of staff interline distance; that is, in units of 1/2 the distance between adjacent staff lines.</a:documentation>
             <ref name="mei_data.MEASUREMENTREL"/>
          </attribute>
       </optional>
@@ -19397,7 +19400,7 @@ Suggested values include: 1] smufl</a:documentation>
    <define name="mei_att.visualOffset.to.attribute.to">
       <optional>
          <attribute name="to">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records a timestamp adjustment of a feature's programmatically-determined location in terms of musical time; that is, beats.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records a timestamp adjustment of a feature’s programmatically-determined location in terms of musical time; that is, beats.</a:documentation>
             <ref name="mei_data.TSTAMPOFFSET"/>
          </attribute>
       </optional>
@@ -19408,7 +19411,7 @@ Suggested values include: 1] smufl</a:documentation>
    <define name="mei_att.visualOffset.vo.attribute.vo">
       <optional>
          <attribute name="vo">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records the vertical adjustment of a feature's programmatically-determined location in terms of staff interline distance; that is, in units of 1/2 the distance between adjacent staff lines.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records the vertical adjustment of a feature’s programmatically-determined location in terms of staff interline distance; that is, in units of 1/2 the distance between adjacent staff lines.</a:documentation>
             <ref name="mei_data.MEASUREMENTREL"/>
          </attribute>
       </optional>
@@ -19425,7 +19428,7 @@ Suggested values include: 1] smufl</a:documentation>
    <define name="mei_att.visualOffset2.ho.attribute.startho">
       <optional>
          <attribute name="startho">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records the horizontal adjustment of a feature's programmatically-determined start point.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records the horizontal adjustment of a feature’s programmatically-determined start point.</a:documentation>
             <ref name="mei_data.MEASUREMENTREL"/>
          </attribute>
       </optional>
@@ -19433,7 +19436,7 @@ Suggested values include: 1] smufl</a:documentation>
    <define name="mei_att.visualOffset2.ho.attribute.endho">
       <optional>
          <attribute name="endho">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records the horizontal adjustment of a feature's programmatically-determined end point.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records the horizontal adjustment of a feature’s programmatically-determined end point.</a:documentation>
             <ref name="mei_data.MEASUREMENTREL"/>
          </attribute>
       </optional>
@@ -19445,7 +19448,7 @@ Suggested values include: 1] smufl</a:documentation>
    <define name="mei_att.visualOffset2.to.attribute.startto">
       <optional>
          <attribute name="startto">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records a timestamp adjustment of a feature's programmatically-determined start point.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records a timestamp adjustment of a feature’s programmatically-determined start point.</a:documentation>
             <ref name="mei_data.TSTAMPOFFSET"/>
          </attribute>
       </optional>
@@ -19453,7 +19456,7 @@ Suggested values include: 1] smufl</a:documentation>
    <define name="mei_att.visualOffset2.to.attribute.endto">
       <optional>
          <attribute name="endto">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records a timestamp adjustment of a feature's programmatically-determined end point.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records a timestamp adjustment of a feature’s programmatically-determined end point.</a:documentation>
             <ref name="mei_data.TSTAMPOFFSET"/>
          </attribute>
       </optional>
@@ -19465,7 +19468,7 @@ Suggested values include: 1] smufl</a:documentation>
    <define name="mei_att.visualOffset2.vo.attribute.startvo">
       <optional>
          <attribute name="startvo">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records a vertical adjustment of a feature's programmatically-determined start point.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records a vertical adjustment of a feature’s programmatically-determined start point.</a:documentation>
             <ref name="mei_data.MEASUREMENTREL"/>
          </attribute>
       </optional>
@@ -19473,7 +19476,7 @@ Suggested values include: 1] smufl</a:documentation>
    <define name="mei_att.visualOffset2.vo.attribute.endvo">
       <optional>
          <attribute name="endvo">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records a vertical adjustment of a feature's programmatically-determined end point.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records a vertical adjustment of a feature’s programmatically-determined end point.</a:documentation>
             <ref name="mei_data.MEASUREMENTREL"/>
          </attribute>
       </optional>
@@ -19506,7 +19509,7 @@ Suggested values include: 1] smufl</a:documentation>
    <define name="mei_att.whitespace.attribute.xmlspace">
       <optional>
          <attribute name="xml:space">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Allows one to signal to an application whether an element's white space is "significant". The behavior of xml:space cascades to all descendant elements, but it can be turned off locally by setting the xml:space attribute to the value "default".</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Allows one to signal to an application whether an element’s white space is "significant". The behavior of xml:space cascades to all descendant elements, but it can be turned off locally by setting the xml:space attribute to the value "default".</a:documentation>
             <choice>
                <value>default</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Allows the application to handle white space as necessary. Not including an xml:space attribute produces the same result as using the default value.</a:documentation>
@@ -21838,7 +21841,7 @@ Suggested values include: 1] smufl</a:documentation>
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:contributor">
-               <sch:assert test="not(matches(normalize-space(lower-case(@role)),               '(arranger|author|composer|contributor|editor|funder|librettist|lyricist|sponsor)'))">The value of @role must not contain the name of another element available in this
+               <sch:assert test="not(matches(normalize-space(lower-case(@role)), '(arranger|author|composer|contributor|editor|funder|librettist|lyricist|sponsor)'))">The value of @role must not contain the name of another element available in this
             context.</sch:assert>
             </sch:rule>
          </pattern>
@@ -21849,7 +21852,7 @@ Suggested values include: 1] smufl</a:documentation>
          <ref name="mei_att.lang.attributes"/>
          <optional>
             <attribute name="role">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Used to specify the contributor's function.</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Used to specify the contributor’s function.</a:documentation>
                <text/>
             </attribute>
          </optional>
@@ -22001,7 +22004,7 @@ Suggested values include: 1] alt; 2] angle; 3] circum; 4] depth; 5] diameter; 6]
                <value>diameter</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Length of a straight line passing through the center of a circle or sphere and meeting the circumference or surface at each end.</a:documentation>
                <value>elevation</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Distance to which something has been raised or uplifted above a level, e.g., a hill's elevation above the surrounding country.</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Distance to which something has been raised or uplifted above a level, e.g., a hill’s elevation above the surrounding country.</a:documentation>
                <value>height</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Denotes extent upward (as from foot to head) as well as any measurable distance above a given level.</a:documentation>
                <value>length</value>
@@ -23641,7 +23644,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
    </define>
    <define name="mei_roleDesc">
       <element name="roleDesc">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(role description) – Describes a character's role in a drama.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(role description) – Describes a character’s role in a drama.</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -24213,7 +24216,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:tempo[not(ancestor::mei:score or ancestor::mei:part)]">
-               <sch:assert test="not(@*[name() != 'analog' and name() != 'class' and name() != 'label' and                name() != 'mm' and name() != 'mm.dots' and name() != 'translit' and                name() != 'type' and name() != 'mm.unit' and name() != 'n' and name() != 'xml:base' and                name() != 'xml:id' and name() != 'xml:lang'])">Only analog, class, label, mm, mm.dots, mm.unit, n, translit, type, xml:base, xml:id,
+               <sch:assert test="not(@*[name() != 'analog' and name() != 'class' and name() != 'label' and name() != 'mm' and name() != 'mm.dots' and name() != 'translit' and name() != 'type' and name() != 'mm.unit' and name() != 'n' and name() != 'xml:base' and name() != 'xml:id' and name() != 'xml:lang'])">Only analog, class, label, mm, mm.dots, mm.unit, n, translit, type, xml:base, xml:id,
             and xml:lang attributes are allowed when tempo is not a descendant of a score or
             part.</sch:assert>
             </sch:rule>
@@ -24483,7 +24486,7 @@ Suggested values include: 1] alternative; 2] arrangement; 3] carrier; 4] date; 5
    <define name="mei_att.stringtab.attribute.tab.fing">
       <optional>
          <attribute name="tab.fing">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates which finger, if any, should be used to play an individual string. The index, middle, ring, and little fingers are represented by the values 1-4, while 't' is for the thumb. The values 'x' and 'o' indicate muffled and open strings, respectively.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates which finger, if any, should be used to play an individual string. The index, middle, ring, and little fingers are represented by the values 1-4, while t is for the thumb. The values x and o indicate muffled and open strings, respectively.</a:documentation>
             <ref name="mei_data.FINGER.FRET"/>
          </attribute>
       </optional>
@@ -24889,7 +24892,7 @@ Suggested values include: 1] alternative; 2] arrangement; 3] carrier; 4] date; 5
          <ref name="mei_att.xy.attributes"/>
          <optional>
             <attribute name="form">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Used to indicate the format of a list. In a "simple" list, <code xmlns="http://www.w3.org/1999/xhtml">&lt;li&gt;</code> elements are not numbered or bulleted. In a "marked" list, the sequence of the list items is not critical, and a bullet, box, dash, or other character is displayed at the start of each <code xmlns="http://www.w3.org/1999/xhtml">&lt;item&gt;</code>. In an "ordered" list, the sequence of the items is important, and each <code xmlns="http://www.w3.org/1999/xhtml">&lt;li&gt;</code> is lettered or numbered. Style sheet functions should be used to specify the mark or numeration system for each <code xmlns="http://www.w3.org/1999/xhtml">&lt;li&gt;</code>.</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Used to indicate the format of a list. In a simple list, <code xmlns="http://www.w3.org/1999/xhtml">&lt;li&gt;</code> elements are not numbered or bulleted. In a marked list, the sequence of the list items is not critical, and a bullet, box, dash, or other character is displayed at the start of each <code xmlns="http://www.w3.org/1999/xhtml">&lt;item&gt;</code>. In an ordered list, the sequence of the items is important, and each <code xmlns="http://www.w3.org/1999/xhtml">&lt;li&gt;</code> is lettered or numbered. Style sheet functions should be used to specify the mark or numeration system for each <code xmlns="http://www.w3.org/1999/xhtml">&lt;li&gt;</code>.</a:documentation>
                <choice>
                   <value>simple</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Items are not numbered or bulleted.</a:documentation>
@@ -25362,7 +25365,7 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
    <define name="mei_att.barLine.vis.attribute.len">
       <optional>
          <attribute name="len">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">States the length of barlines in virtual units. The value must be greater than 0 and is typically equal to 2 times (the number of staff lines - 1); e.g., a value of '8' for a 5-line staff.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">States the length of barlines in virtual units. The value must be greater than 0 and is typically equal to 2 times (the number of staff lines - 1); e.g., a value of 8 for a 5-line staff.</a:documentation>
             <data type="decimal">
                <param name="minExclusive">0</param>
             </data>
@@ -25612,7 +25615,7 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
                <value>grid</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Chord tablature grid.</a:documentation>
                <value>gridtext</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Chord tablature grid and the element's textual content.</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Chord tablature grid and the element’s textual content.</a:documentation>
                <value>text</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Textual content of the element.</a:documentation>
             </choice>

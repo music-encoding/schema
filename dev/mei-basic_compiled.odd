@@ -985,7 +985,7 @@
       </valList>
     </content>
   </macroSpec><macroSpec rend="add" ident="data.DEGREES" module="MEI" type="dt">
-    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">360th-unit measure of a circle's circumference; optionally signed decimal number between
+    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">360th-unit measure of a circle’s circumference; optionally signed decimal number between
       -360 and 360.</desc>
     <content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <rng:data type="decimal">
@@ -1160,7 +1160,7 @@
       </valList>
     </content>
   </macroSpec><macroSpec rend="add" ident="data.FRETNUMBER" module="MEI" type="dt">
-    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">In string tablature, the fret number. The value '0' (zero) indicates the open
+    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">In string tablature, the fret number. The value <val>0</val> (zero) indicates the open
       string.</desc>
     <content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <rng:data type="nonNegativeInteger"/>
@@ -1173,7 +1173,7 @@
           <desc>First note/chord in glissando.</desc>
         </valItem>
         <valItem ident="m">
-          <desc>Note/chord that's neither first nor last in glissando.</desc>
+          <desc>Note/chord that’s neither first nor last in glissando.</desc>
         </valItem>
         <valItem ident="t">
           <desc>Last note in glissando.</desc>
@@ -1783,7 +1783,7 @@
           <desc>Intellectual or physical component of the resource.</desc>
         </valItem>
         <valItem ident="otherVersion">
-          <desc>Version of the resource's intellectual content not changed enough to be a different
+          <desc>Version of the resource’s intellectual content not changed enough to be a different
             work.</desc>
         </valItem>
         <valItem ident="otherFormat">
@@ -2752,7 +2752,7 @@
     </classes>
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="c" usage="opt">
-        <desc>Indicates the pedal setting for the harp's C strings.</desc>
+        <desc>Indicates the pedal setting for the harp’s C strings.</desc>
         <defaultVal>n</defaultVal>
         <valList type="closed">
           <valItem ident="f">
@@ -2767,7 +2767,7 @@
         </valList>
       </attDef>
       <attDef ident="d" usage="opt">
-        <desc>Indicates the pedal setting for the harp's D strings.</desc>
+        <desc>Indicates the pedal setting for the harp’s D strings.</desc>
         <defaultVal>n</defaultVal>
         <valList type="closed">
           <valItem ident="f">
@@ -2782,7 +2782,7 @@
         </valList>
       </attDef>
       <attDef ident="e" usage="opt">
-        <desc>Indicates the pedal setting for the harp's E strings.</desc>
+        <desc>Indicates the pedal setting for the harp’s E strings.</desc>
         <defaultVal>n</defaultVal>
         <valList type="closed">
           <valItem ident="f">
@@ -2797,7 +2797,7 @@
         </valList>
       </attDef>
       <attDef ident="f" usage="opt">
-        <desc>Indicates the pedal setting for the harp's F strings.</desc>
+        <desc>Indicates the pedal setting for the harp’s F strings.</desc>
         <defaultVal>n</defaultVal>
         <valList type="closed">
           <valItem ident="f">
@@ -2812,7 +2812,7 @@
         </valList>
       </attDef>
       <attDef ident="g" usage="opt">
-        <desc>Indicates the pedal setting for the harp's G strings.</desc>
+        <desc>Indicates the pedal setting for the harp’s G strings.</desc>
         <defaultVal>n</defaultVal>
         <valList type="closed">
           <valItem ident="f">
@@ -2827,7 +2827,7 @@
         </valList>
       </attDef>
       <attDef ident="a" usage="opt">
-        <desc>Indicates the pedal setting for the harp's A strings.</desc>
+        <desc>Indicates the pedal setting for the harp’s A strings.</desc>
         <defaultVal>n</defaultVal>
         <valList type="closed">
           <valItem ident="f">
@@ -2842,7 +2842,7 @@
         </valList>
       </attDef>
       <attDef ident="b" usage="opt">
-        <desc>Indicates the pedal setting for the harp's B strings.</desc>
+        <desc>Indicates the pedal setting for the harp’s B strings.</desc>
         <defaultVal>n</defaultVal>
         <valList type="closed">
           <valItem ident="f">
@@ -3654,7 +3654,7 @@
         that is, for repetition of the same pitch. In the case of irrational durations, such as such
         as two quarter notes in the time of five 8th notes in a measure of 5/8 time, decimal values
         may be used in the <att>dur.ges</att> attribute. For example, the <att>dur.ges</att>
-        attribute would take the value "2.5" if the <att>midi.div</att> attribute's value was "1".
+        attribute would take the value <val>2.5</val> if the <att>midi.div</att> attribute’s value was <val>1</val>.
         The <att>num</att> and <att>numbase</att> attributes may be used for explicit labelling of a
         tuplet, such as, '3' with an 8th-note triplet, '3:2' over a quarter-note triplet, etc. The
         rendering of the ratio, however, is dependent on the <att>num.format</att> attribute found
@@ -4185,7 +4185,7 @@
           <desc>Reciprocal relationship of hasSummarization.</desc>
         </valItem>
         <valItem ident="hasSupplement">
-          <desc>Target is an index, concordance, teacher's guide, gloss, supplement, or appendix of
+          <desc>Target is an index, concordance, teacher’s guide, gloss, supplement, or appendix of
             the current entity.</desc>
         </valItem>
         <valItem ident="isSupplementOf">
@@ -4705,7 +4705,7 @@
         order to create displayable chord tablature grids. The <att>inth</att> (harmonic interval)
         attribute may be used to facilitate automated performance of a chord. It gives the number of
         1/2 steps above the bass. Of course, for the bass note itself, <att>inth</att> should be set
-        to '0'.</p>
+        to <val>0</val>.</p>
     </remarks></elementSpec><elementSpec rend="add" ident="chordTable" module="MEI.harmony"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Chord/tablature look-up table.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       
@@ -6038,7 +6038,7 @@
     </constraintSpec>
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="shape" usage="opt">
-        <desc>Describes a clef's shape.</desc>
+        <desc>Describes a clef’s shape.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.CLEFSHAPE"/>
         </datatype>
@@ -6575,7 +6575,7 @@
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="mm" usage="opt">
         <desc>Used to describe tempo in terms of beats (often the meter signature denominator) per
-          minute, ala M.M. (Maelzel's Metronome). Do not confuse this attribute with midi.bpm or
+          minute, ala M.M. (Maelzel’s Metronome). Do not confuse this attribute with midi.bpm or
           midi.mspb. In MIDI, a beat is always defined as a quarter note, *not the numerator of the
           time signature or the metronomic indication*.</desc>
         <datatype>
@@ -6637,7 +6637,7 @@
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Attributes used to supply an integer number designation for an element.</desc>
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="n" usage="opt">
-        <desc>Provides a numeric designation that indicates an element's position in a sequence of
+        <desc>Provides a numeric designation that indicates an element’s position in a sequence of
           similar elements. Its value must be a non-negative integer.</desc>
         <datatype>
           <rng:data type="nonNegativeInteger"/>
@@ -6648,7 +6648,7 @@
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Attributes used to supply a number-like designation for an element.</desc>
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="n" usage="opt">
-        <desc>Provides a number-like designation that indicates an element's position in a sequence
+        <desc>Provides a number-like designation that indicates an element’s position in a sequence
           of similar elements. May not contain space characters.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.WORD"/>
@@ -6736,7 +6736,7 @@
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Attributes capturing placement on a staff.</desc>
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
        <attDef ident="onstaff" usage="opt">
-          <desc>Indicates the placement of the item within the staff. A value of 'true' means on the staff, and 'false' off the staff.</desc>
+          <desc>Indicates the placement of the item within the staff. A value of '<val>true</val>' means on the staff, and '<val>false</val>' off the staff.</desc>
           <datatype>
              <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.BOOLEAN"/>
           </datatype>
@@ -7136,7 +7136,7 @@
         </datatype>
       </attDef>
       <attDef ident="rend" usage="opt">
-        <desc>Captures the appearance of the element's contents using MEI-defined
+        <desc>Captures the appearance of the element’s contents using MEI-defined
           descriptors.</desc>
         <datatype maxOccurs="unbounded">
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.TEXTRENDITION"/>
@@ -7207,14 +7207,14 @@
       </attDef>
       <attDef ident="fontsize" usage="opt">
         <desc>Indicates the size of a font expressed in printers' points, <abbr>i.e.</abbr>, 1/72nd of an inch,
-          relative terms, <abbr>e.g.</abbr>, "small", "larger", etc., or percentage values relative to "normal"
-          size, <abbr>e.g.</abbr>, "125%". </desc>
+          relative terms, <abbr>e.g.</abbr>, <val>small</val>, <val>larger</val>, <abbr>etc.</abbr>, or percentage values relative to <val>normal</val>
+          size, <abbr>e.g.</abbr>, <val>125%</val>. </desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.FONTSIZE"/>
         </datatype>
       </attDef>
       <attDef ident="fontstyle" usage="opt">
-        <desc>Records the style of a font, i.e, italic, oblique, or normal.</desc>
+        <desc>Records the style of a font, <abbr>i.e.</abbr>, <val>italic</val>, <val>oblique</val>, or <val>normal</val>.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.FONTSTYLE"/>
         </datatype>
@@ -7266,7 +7266,7 @@
     
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="xml:space" usage="opt">
-        <desc>Allows one to signal to an application whether an element's white space is
+        <desc>Allows one to signal to an application whether an element’s white space is
           "significant". The behavior of xml:space cascades to all descendant elements, but it can
           be turned off locally by setting the xml:space attribute to the value "default".</desc>
         <valList type="closed">
@@ -7574,7 +7574,7 @@
         <att>accid</att> and <att>accid.ges</att> attributes on the <gi scheme="MEI">note</gi>
         element. The element may be used when specific display info, such as size or color, needs to
         be recorded for the accidental or when multiple accidentals occur on a single note. The
-        <att>func</att> attribute can be used to differentiate between the accidental's functions,
+        <att>func</att> attribute can be used to differentiate between the accidental’s functions,
         such as 'cautionary' or 'editorial'.</p>
     </remarks></elementSpec><elementSpec rend="add" ident="actor" module="MEI.shared"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Name of an actor appearing within a cast list.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
@@ -7792,8 +7792,8 @@
         <att>tstamp</att>, <att>tstamp.ges</att>, or <att>tstamp.real</att> attribute. It is a
         semantic error not to specify a starting point attribute.</p>
       <p>Unlike the <gi scheme="MEI">breath</gi> mark, a caesura may have a performed duration.
-        Also, while the default value for <att>place</att> on the breath mark is "above", the
-        default value for <att>place</att> for a caesura is "within". Unless indicated by other
+        Also, while the default value for <att>place</att> on the breath mark is <val>above</val>, the
+        default value for <att>place</att> for a caesura is <val>within</val>. Unless indicated by other
         attributes, a caesura will be rendered as a pair of slanted lines through the top line of
         the staff.</p>
       <p/>
@@ -7904,12 +7904,12 @@
     </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_contributor_role" scheme="isoschematron">
       <constraint>
         <sch:rule context="mei:contributor">
-          <sch:assert test="not(matches(normalize-space(lower-case(@role)),               '(arranger|author|composer|contributor|editor|funder|librettist|lyricist|sponsor)'))">The value of @role must not contain the name of another element available in this
+          <sch:assert test="not(matches(normalize-space(lower-case(@role)), '(arranger|author|composer|contributor|editor|funder|librettist|lyricist|sponsor)'))">The value of @role must not contain the name of another element available in this
             context.</sch:assert>
         </sch:rule>
       </constraint>
     </constraintSpec><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="role" usage="rec">
-        <desc>Used to specify the contributor's function.</desc>
+        <desc>Used to specify the contributor’s function.</desc>
         <datatype>
           <rng:text/>
         </datatype>
@@ -8004,7 +8004,7 @@
           </valItem>
           <valItem ident="elevation">
             <desc>Distance to which something has been raised or uplifted above a level, <abbr>e.g.</abbr>, a
-              hill's elevation above the surrounding country.</desc>
+              hill’s elevation above the surrounding country.</desc>
           </valItem>
           <valItem ident="height">
             <desc>Denotes extent upward (as from foot to head) as well as any measurable distance
@@ -8336,7 +8336,7 @@
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike"/><ref name="model.editLike"/><ref name="model.transcriptionLike"/></choice></zeroOrMore>
     </content><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <p>Examples include an International Standard Book/Music Number, Library of Congress Control
-        Number, publisher's number, a personal identification number, an entry in a bibliography or
+        Number, publisher’s number, a personal identification number, an entry in a bibliography or
         catalog, etc. The <att>type</att> attribute may be used to indicate the system from which
         the identifier was derived.</p>
     </remarks></elementSpec><elementSpec rend="add" ident="imprint" module="MEI.shared"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Information relating to the publication or distribution of a bibliographic item.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -8415,7 +8415,7 @@
       <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
       <p>Don't confuse this element, which is used to capture labelling text appearing in the
         document, with the <att>label</att> attribute, which records text to be used to generate a
-        designation for the element to which it's attached, a "tool tip" or prefatory text, for
+        designation for the element to which it’s attached, a "tool tip" or prefatory text, for
         example.</p>
     </remarks></elementSpec><elementSpec rend="add" ident="labelAbbr" module="MEI.shared"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">A label on the pages following the first.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
@@ -8662,13 +8662,13 @@
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="model.noteModifierLike"/><ref name="model.verseLike"/><ref name="model.sylLike"/><ref name="model.appLike"/><ref name="model.editLike"/><ref name="model.transcriptionLike"/><ref name="plica"/><ref name="stem"/></choice></zeroOrMore>
     </content><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <p>The <gi scheme="MEI">accid</gi> and <gi scheme="MEI">artic</gi> sub-elements may be used
-        instead of the note element's attributes when accid and artic represent first-class objects,
+        instead of the note element’s attributes when accid and artic represent first-class objects,
         <abbr>e.g.</abbr>, when they require attributes, such as <att>x</att> and <att>y</att> location
         attributes. Similarly, the <gi scheme="MEI">syl</gi> sub-element may be used instead of the
         <att>syl</att> attribute. The verse sub-element may be used to group text syllables by
         verse. The <att>colored</att> attribute may be used to indicate coloration. In the mensural
         repertoire, coloration is a temporary change in the underlying mensuration from perfect to
-        imperfect. In the CMN repertoire, coloration is an inversion of the note head's normal
+        imperfect. In the CMN repertoire, coloration is an inversion of the note head’s normal
         rendition, that is, the note head is void when it would otherwise be filled and vice versa.
         Do not confuse this with visual color.</p>
     </remarks></elementSpec><elementSpec rend="add" ident="num" module="MEI.shared"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">(number) – Numeric information in any form.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -8828,7 +8828,7 @@
       <p>This element is used to capture the textual data that often appears at the top of the
         second and succeeding pages of printed music. It may also be used for similarly formatted
         material in manuscripts. Auto-generated page numbers may be indicated with a processing
-        instruction. The pgHead, pgHead2, pgFoot, and pgFoot2 elements should <hi rend="bold">*not*</hi> be used to encode textual notes/annotations.</p>
+        instruction. The pgHead, pgHead2, pgFoot, and pgFoot2 elements should <hi rend="bold">not</hi> be used to encode textual notes/annotations.</p>
     </remarks></elementSpec><elementSpec rend="add" ident="phrase" module="MEI.shared"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Indication of 1) a "unified melodic idea" or 2) performance technique.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       
@@ -9035,7 +9035,7 @@
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike.limited"/></choice></zeroOrMore>
     </content><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
-    </remarks></elementSpec><elementSpec rend="add" ident="roleDesc" module="MEI.shared"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">(role description) – Describes a character's role in a drama.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+    </remarks></elementSpec><elementSpec rend="add" ident="roleDesc" module="MEI.shared"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">(role description) – Describes a character’s role in a drama.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       
       <memberOf key="att.lang"/>
@@ -9408,7 +9408,7 @@
     </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="tempo_in_header_disallow_most_attrs" scheme="isoschematron">
       <constraint>
         <sch:rule context="mei:tempo[not(ancestor::mei:score or ancestor::mei:part)]">
-          <sch:assert test="not(@*[name() != 'analog' and name() != 'class' and name() != 'label' and                name() != 'mm' and name() != 'mm.dots' and name() != 'translit' and                name() != 'type' and name() != 'mm.unit' and name() != 'n' and name() != 'xml:base' and                name() != 'xml:id' and name() != 'xml:lang'])">Only analog, class, label, mm, mm.dots, mm.unit, n, translit, type, xml:base, xml:id,
+          <sch:assert test="not(@*[name() != 'analog' and name() != 'class' and name() != 'label' and name() != 'mm' and name() != 'mm.dots' and name() != 'translit' and name() != 'type' and name() != 'mm.unit' and name() != 'n' and name() != 'xml:base' and name() != 'xml:id' and name() != 'xml:lang'])">Only analog, class, label, mm, mm.dots, mm.unit, n, translit, type, xml:base, xml:id,
             and xml:lang attributes are allowed when tempo is not a descendant of a score or
             part.</sch:assert>
         </sch:rule>
@@ -9656,8 +9656,8 @@
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="tab.fing" usage="opt">
         <desc>Indicates which finger, if any, should be used to play an individual string. The
-          index, middle, ring, and little fingers are represented by the values 1-4, while 't' is
-          for the thumb. The values 'x' and 'o' indicate muffled and open strings,
+          index, middle, ring, and little fingers are represented by the values 1-4, while <val>t</val> is
+          for the thumb. The values <val>x</val> and <val>o</val> indicate muffled and open strings,
           respectively.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.FINGER.FRET"/>
@@ -9837,10 +9837,10 @@
         </sch:rule>
       </constraint>
     </constraintSpec><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="form" usage="opt">
-        <desc>Used to indicate the format of a list. In a "simple" list, <gi scheme="MEI">li</gi>
-          elements are not numbered or bulleted. In a "marked" list, the sequence of the list items
+        <desc>Used to indicate the format of a list. In a <val>simple</val> list, <gi scheme="MEI">li</gi>
+          elements are not numbered or bulleted. In a <val>marked</val> list, the sequence of the list items
           is not critical, and a bullet, box, dash, or other character is displayed at the start of
-          each <gi scheme="MEI">item</gi>. In an "ordered" list, the sequence of the items is
+          each <gi scheme="MEI">item</gi>. In an <val>ordered</val> list, the sequence of the items is
           important, and each <gi scheme="MEI">li</gi> is lettered or numbered. Style sheet
           functions should be used to specify the mark or numeration system for each <gi scheme="MEI">li</gi>.</desc>
         <valList type="closed">
@@ -9881,7 +9881,7 @@
           </valItem>
         </valList>
         <remarks>
-          <p>In a list of type "gloss" it is a semantic error not to precede each list item with a
+          <p>In a list of type <val>gloss</val> it is a semantic error not to precede each list item with a
             label.</p>
         </remarks>
       </attDef></attList><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -10056,7 +10056,7 @@
       <attDef ident="slash" usage="req">
         <desc>Indicates the number of slashes required to render the appropriate beat repeat symbol.
           When a single beat consisting of a single note or chord is repeated, the repetition symbol
-          is a single thick, slanting slash; therefore, the value '1' should be used. When the beat
+          is a single thick, slanting slash; therefore, the value <val>1</val> should be used. When the beat
           is divided into even notes, the following values should be used: 4ths or 8ths=1, 16ths=2,
           32nds=3, 64ths=4, 128ths=5. When the beat is comprised of mixed duration values, the
           default rendition is 2 slashes and 2 dots.</desc>
@@ -10419,7 +10419,7 @@
   </classSpec><classSpec rend="add" ident="att.pedal.vis" module="MEI.visual" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Visual domain attributes. The place attribute captures the placement of the pedal marking
       with respect to the staff with which it is associated. Modern publishing standards require the
-      place to be 'below'; however, for transcriptions of manuscript works, this attribute class
+      place to be <val>below</val>; however, for transcriptions of manuscript works, this attribute class
       allows the full range of values.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       
@@ -10557,8 +10557,8 @@
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.BOOLEAN"/>
         </datatype>
         <remarks>
-          <p>This attribute is ignored when the bar.method attribute's value is "mensur" or
-            "takt".</p>
+          <p>This attribute is ignored when the <att>bar.method</att> attribute’s value is <val>mensur</val> 
+            or <val>takt</val>.</p>
         </remarks>
       </attDef>
     </attList>
