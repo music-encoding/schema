@@ -12580,7 +12580,6 @@
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Groups event elements that occur in all notational repertoires.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="model.layerPart"/>
-      
     </classes>
   </classSpec><classSpec rend="add" predeclare="true" ident="model.headLike" module="MEI.shared" type="model">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Groups elements used to provide a heading at the start of a text division or other markup
@@ -13188,6 +13187,7 @@
       <memberOf key="att.clef.vis"/>
       <memberOf key="model.eventLike"/>
       <memberOf key="model.staffDefPart"/>
+      
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <rng:empty/>
     </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="Clef_position_lines" scheme="isoschematron">

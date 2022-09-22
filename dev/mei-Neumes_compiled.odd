@@ -12380,7 +12380,12 @@
       <memberOf key="model.scorePart"/>
       <memberOf key="model.sectionPart"/>
     </classes>
-  </classSpec><classSpec rend="add" predeclare="true" ident="model.eventLike" module="MEI.shared" type="model"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Groups event elements that occur in all notational repertoires.</desc><classes><memberOf key="model.layerPart"/></classes><attList/></classSpec><classSpec rend="add" predeclare="true" ident="model.headLike" module="MEI.shared" type="model">
+  </classSpec><classSpec rend="add" predeclare="true" ident="model.eventLike" module="MEI.shared" type="model">
+    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Groups event elements that occur in all notational repertoires.</desc>
+    <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <memberOf key="model.layerPart"/>
+    </classes>
+  </classSpec><classSpec rend="add" predeclare="true" ident="model.headLike" module="MEI.shared" type="model">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Groups elements used to provide a heading at the start of a text division or other markup
       component.</desc>
   </classSpec><classSpec rend="add" predeclare="true" ident="model.identifierLike" module="MEI.shared" type="model">
@@ -12976,7 +12981,20 @@
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="model.chordPart"/><ref name="model.appLike"/><ref name="model.editLike"/><ref name="model.sylLike"/><ref name="model.transcriptionLike"/><ref name="model.verseLike"/></choice></zeroOrMore>
     </content></elementSpec><elementSpec rend="add" ident="clef" module="MEI.shared"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Indication of the exact location of a particular note on the staff and, therefore, the
-      other notes as well.</desc><classes><memberOf key="model.layerPart.neumes"/><memberOf key="att.common"/><memberOf key="att.event"/><memberOf key="att.facsimile"/><memberOf key="att.clef.anl"/><memberOf key="att.clef.ges"/><memberOf key="att.clef.log"/><memberOf key="att.clef.vis"/><memberOf key="model.eventLike"/><memberOf key="model.staffDefPart"/></classes><content><rng:empty xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude"/></content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="Clef_position_lines" scheme="isoschematron">
+      other notes as well.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <memberOf key="att.common"/>
+      <memberOf key="att.event"/>
+      <memberOf key="att.facsimile"/>
+      <memberOf key="att.clef.anl"/>
+      <memberOf key="att.clef.ges"/>
+      <memberOf key="att.clef.log"/>
+      <memberOf key="att.clef.vis"/>
+      <memberOf key="model.eventLike"/>
+      <memberOf key="model.staffDefPart"/>
+      <memberOf key="model.syllablePart"/>
+    </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <rng:empty/>
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="Clef_position_lines" scheme="isoschematron">
       <constraint>
         <sch:rule context="mei:clef[matches(@shape, '[FCG]')][ancestor::mei:staffDef[@lines]]">
           <sch:let name="thisstaff" value="ancestor::mei:staffDef/@n"/>
@@ -12992,7 +13010,7 @@
             staff.</sch:assert>
         </sch:rule>
       </constraint>
-    </constraintSpec><attList/><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+    </constraintSpec><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <p>This element can be used as an alternative to the <gi scheme="MEI">staff</gi> element's
         clef.* attributes. It should be used when specific display info, such as size or color,
         needs to be recorded for the clef or when multiple, simultaneous clefs occur on a single
@@ -13074,7 +13092,18 @@
     </content><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <p>This element is modelled on an element in the Text Encoding Initiative (TEI).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="custos" module="MEI.shared"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Symbol placed at the end of a line of music to indicate the first note of the next line.
-      Sometimes called a "direct".</desc><classes><memberOf key="model.layerPart.neumes"/><memberOf key="att.common"/><memberOf key="att.facsimile"/><memberOf key="att.source"/><memberOf key="att.custos.log"/><memberOf key="att.custos.vis"/><memberOf key="att.custos.ges"/><memberOf key="att.custos.anl"/><memberOf key="model.eventLike"/></classes><content><zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="accid"/></zeroOrMore></content><attList/><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      Sometimes called a "direct".</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <memberOf key="att.common"/>
+      <memberOf key="att.facsimile"/>
+      <memberOf key="att.source"/>
+      <memberOf key="att.custos.log"/>
+      <memberOf key="att.custos.vis"/>
+      <memberOf key="att.custos.ges"/>
+      <memberOf key="att.custos.anl"/>
+      <memberOf key="model.eventLike"/>
+    </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="accid"/></zeroOrMore>
+    </content><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <p>The most common visual form is a sign resembling a mordent. Other graphical forms may be
         indicated by the <att>altsym</att> attribute. Together the <att>pname</att> and
         <att>oct</att> attributes identify the location where the custos appears.</p>
