@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2022-09-22T14:23:06Z. .
+Schema generated from ODD source 2022-09-23T12:57:56Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -23308,7 +23308,7 @@ Suggested values include: 1] smufl</a:documentation>
       <optional>
          <attribute name="trans.diat">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records the amount of diatonic pitch shift, e.g., C to C♯ = 0, C to D♭ = 1, necessary to calculate the sounded pitch from the written one.</a:documentation>
-            <data type="decimal"/>
+            <data type="integer"/>
          </attribute>
       </optional>
    </define>
@@ -23316,7 +23316,7 @@ Suggested values include: 1] smufl</a:documentation>
       <optional>
          <attribute name="trans.semi">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records the amount of pitch shift in semitones, e.g., C to C♯ = 1, C to D♭ = 1, necessary to calculate the sounded pitch from the written one.</a:documentation>
-            <data type="decimal"/>
+            <data type="integer"/>
          </attribute>
       </optional>
    </define>

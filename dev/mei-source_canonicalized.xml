@@ -18,7 +18,7 @@
 -->
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<!--canonicalized: 2022-09-22T14:23:39.287Z-->
+<!--canonicalized: 2022-09-23T12:58:30.815Z-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -33863,14 +33863,14 @@
         <desc>Records the amount of diatonic pitch shift, <abbr>e.g.</abbr>, C to C♯ = 0, C to D♭ = 1, necessary
           to calculate the sounded pitch from the written one.</desc>
         <datatype>
-          <rng:data type="decimal"/>
+          <rng:data type="integer"/>
         </datatype>
       </attDef>
       <attDef ident="trans.semi" usage="opt">
         <desc>Records the amount of pitch shift in semitones, <abbr>e.g.</abbr>, C to C♯ = 1, C to D♭ = 1,
           necessary to calculate the sounded pitch from the written one.</desc>
         <datatype>
-          <rng:data type="decimal"/>
+          <rng:data type="integer"/>
         </datatype>
       </attDef>
     </attList>
