@@ -18,7 +18,7 @@
 -->
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<!--canonicalized: 2022-09-23T12:58:30.815Z-->
+<!--canonicalized: 2022-09-27T19:07:28.851Z-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -25464,9 +25464,8 @@
     </content>
     <constraintSpec ident="history_restriction" scheme="isoschematron">
       <constraint>
-        <sch:rule context="mei:history[parent::mei:work or parent::mei:expression]">
-          <sch:assert test="not(mei:acquisition or mei:provenance)">The acquisition and provenance
-            elements are not permitted in the work or expression context.</sch:assert>
+        <sch:rule context="mei:history[parent::mei:work or parent::mei:expression or parent::mei:manifestation[not(@singleton='true')]]">
+          <sch:assert test="not(mei:acquisition or mei:provenance or mei:exhibHist or mei:treatHist or mei:treatSched)">The elements acquisition, provenance, exhibHist, treatHist and treatSched are not permitted at the work or expression level and are only permitted at the manifestation level, if the manifestation is a manifestation singleton.</sch:assert>
         </sch:rule>
       </constraint>
     </constraintSpec>

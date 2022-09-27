@@ -6438,9 +6438,8 @@
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="acquisition"/><ref name="exhibHist"/><ref name="provenance"/><ref name="treatHist"/><ref name="treatSched"/><ref name="model.divLike"/><ref name="model.textComponentLike"/></choice></zeroOrMore>
     </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="history_restriction" scheme="isoschematron">
       <constraint>
-        <sch:rule context="mei:history[parent::mei:work or parent::mei:expression]">
-          <sch:assert test="not(mei:acquisition or mei:provenance)">The acquisition and provenance
-            elements are not permitted in the work or expression context.</sch:assert>
+        <sch:rule context="mei:history[parent::mei:work or parent::mei:expression or parent::mei:manifestation[not(@singleton='true')]]">
+          <sch:assert test="not(mei:acquisition or mei:provenance or mei:exhibHist or mei:treatHist or mei:treatSched)">The elements acquisition, provenance, exhibHist, treatHist and treatSched are not permitted at the work or expression level and are only permitted at the manifestation level, if the manifestation is a manifestation singleton.</sch:assert>
         </sch:rule>
       </constraint>
     </constraintSpec><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
