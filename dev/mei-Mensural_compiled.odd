@@ -16073,6 +16073,7 @@
       <memberOf key="att.extSym"/>
       <memberOf key="att.staffLoc"/>
       <memberOf key="att.typography"/>
+      <memberOf key="att.visualOffset.ho"/>
     </classes>
   </classSpec><classSpec rend="add" ident="att.mdiv.vis" module="MEI.visual" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Visual domain attributes.</desc>
