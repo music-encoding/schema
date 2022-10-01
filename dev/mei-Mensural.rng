@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2022-10-01T12:59:22Z. .
+Schema generated from ODD source 2022-10-01T13:12:54Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -10426,6 +10426,7 @@ Suggested values include: 1] smufl</a:documentation>
    </define>
    <define name="mei_att.layerDef.ges.attributes">
       <ref name="mei_att.instrumentIdent.attributes"/>
+      <ref name="mei_att.tuning.attributes"/>
    </define>
    <define name="mei_att.ligature.ges.attributes">
       <empty/>
@@ -10546,35 +10547,9 @@ Suggested values include: 1] smufl</a:documentation>
    <define name="mei_att.scoreDef.ges.attributes">
       <ref name="mei_att.channelized.attributes"/>
       <ref name="mei_att.timeBase.attributes"/>
+      <ref name="mei_att.tuning.attributes"/>
       <ref name="mei_att.midiTempo.attributes"/>
       <ref name="mei_att.mmTempo.attributes"/>
-      <ref name="mei_att.scoreDef.ges.attribute.tune.pname"/>
-      <ref name="mei_att.scoreDef.ges.attribute.tune.Hz"/>
-      <ref name="mei_att.scoreDef.ges.attribute.tune.temper"/>
-   </define>
-   <define name="mei_att.scoreDef.ges.attribute.tune.pname">
-      <optional>
-         <attribute name="tune.pname">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Holds the pitch name of a tuning reference pitch.</a:documentation>
-            <ref name="mei_data.PITCHNAME"/>
-         </attribute>
-      </optional>
-   </define>
-   <define name="mei_att.scoreDef.ges.attribute.tune.Hz">
-      <optional>
-         <attribute name="tune.Hz">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Holds a value for cycles per second, i.e., Hertz, for a tuning reference pitch.</a:documentation>
-            <data type="decimal"/>
-         </attribute>
-      </optional>
-   </define>
-   <define name="mei_att.scoreDef.ges.attribute.tune.temper">
-      <optional>
-         <attribute name="tune.temper">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Provides an indication of the tuning system, 'just', for example.</a:documentation>
-            <ref name="mei_data.TEMPERAMENT"/>
-         </attribute>
-      </optional>
    </define>
    <define name="mei_att.section.ges.attributes">
       <ref name="mei_att.section.ges.attribute.attacca"/>
@@ -10620,6 +10595,7 @@ Suggested values include: 1] smufl</a:documentation>
       <ref name="mei_att.instrumentIdent.attributes"/>
       <ref name="mei_att.stringtab.tuning.attributes"/>
       <ref name="mei_att.timeBase.attributes"/>
+      <ref name="mei_att.tuning.attributes"/>
    </define>
    <define name="mei_att.staffGrp.ges.attributes">
       <ref name="mei_att.instrumentIdent.attributes"/>
@@ -19278,6 +19254,35 @@ Suggested values include: 1] smufl</a:documentation>
          <attribute name="trans.semi">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records the amount of pitch shift in semitones, e.g., C to C♯ = 1, C to D♭ = 1, necessary to calculate the sounded pitch from the written one.</a:documentation>
             <data type="integer"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.tuning.attributes">
+      <ref name="mei_att.tuning.attribute.tune.Hz"/>
+      <ref name="mei_att.tuning.attribute.tune.pname"/>
+      <ref name="mei_att.tuning.attribute.tune.temper"/>
+   </define>
+   <define name="mei_att.tuning.attribute.tune.Hz">
+      <optional>
+         <attribute name="tune.Hz">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Holds a value for cycles per second, i.e., Hertz, for a tuning reference pitch.</a:documentation>
+            <data type="decimal"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.tuning.attribute.tune.pname">
+      <optional>
+         <attribute name="tune.pname">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Holds the pitch name of a tuning reference pitch, i.e., the central tone of a tuning system.</a:documentation>
+            <ref name="mei_data.PITCHNAME"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.tuning.attribute.tune.temper">
+      <optional>
+         <attribute name="tune.temper">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Provides an indication of the tuning system, just, for example.</a:documentation>
+            <ref name="mei_data.TEMPERAMENT"/>
          </attribute>
       </optional>
    </define>

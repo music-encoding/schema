@@ -18,7 +18,7 @@
 -->
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<!--canonicalized: 2022-10-01T12:59:40.155Z-->
+<!--canonicalized: 2022-10-01T13:13:16.876Z-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -23436,6 +23436,7 @@
     <desc xml:lang="en">Gestural domain attributes.</desc>
     <classes>
       <memberOf key="att.instrumentIdent"/>
+      <memberOf key="att.tuning"/>
     </classes>
   </classSpec>
   <classSpec ident="att.ligature.ges" module="MEI.gestural" type="atts">
@@ -23695,29 +23696,10 @@
     <classes>
       <memberOf key="att.channelized"/>
       <memberOf key="att.timeBase"/>
+      <memberOf key="att.tuning"/>
       <memberOf key="att.midiTempo"/>
       <memberOf key="att.mmTempo"/>
     </classes>
-    <attList>
-      <attDef ident="tune.pname" usage="opt">
-        <desc xml:lang="en">Holds the pitch name of a tuning reference pitch.</desc>
-        <datatype>
-          <rng:ref name="data.PITCHNAME"/>
-        </datatype>
-      </attDef>
-      <attDef ident="tune.Hz" usage="opt">
-        <desc xml:lang="en">Holds a value for cycles per second, <abbr>i.e.</abbr>, Hertz, for a tuning reference pitch.</desc>
-        <datatype>
-          <rng:data type="decimal"/>
-        </datatype>
-      </attDef>
-      <attDef ident="tune.temper" usage="opt">
-        <desc xml:lang="en">Provides an indication of the tuning system, 'just', for example.</desc>
-        <datatype>
-          <rng:ref name="data.TEMPERAMENT"/>
-        </datatype>
-      </attDef>
-    </attList>
   </classSpec>
   <classSpec ident="att.section.ges" module="MEI.gestural" type="atts">
     <desc xml:lang="en">Gestural domain attributes.</desc>
@@ -23787,6 +23769,7 @@
       <memberOf key="att.instrumentIdent"/>
       <memberOf key="att.stringtab.tuning"/>
       <memberOf key="att.timeBase"/>
+      <memberOf key="att.tuning"/>
     </classes>
   </classSpec>
   <classSpec ident="att.staffGrp.ges" module="MEI.gestural" type="atts">
@@ -34006,6 +33989,29 @@
         attributes in order to distinguish the difference, for example, between a transposition from
         C to C♯ and one from C to D♭.</p>
     </remarks>
+  </classSpec>
+  <classSpec ident="att.tuning" module="MEI.shared" type="atts">
+    <desc>Attributes that describe tuning.</desc>
+    <attList>
+      <attDef ident="tune.Hz" usage="opt">
+        <desc>Holds a value for cycles per second, <abbr>i.e.</abbr>, Hertz, for a tuning reference pitch.</desc>
+        <datatype>
+          <rng:data type="decimal"/>
+        </datatype>
+      </attDef>
+      <attDef ident="tune.pname" usage="opt">
+        <desc>Holds the pitch name of a tuning reference pitch, <abbr>i.e.</abbr>, the central tone of a tuning system.</desc>
+        <datatype>
+          <rng:ref name="data.PITCHNAME"/>
+        </datatype>
+      </attDef>
+      <attDef ident="tune.temper" usage="opt">
+        <desc>Provides an indication of the tuning system, <val>just</val>, for example.</desc>
+        <datatype>
+          <rng:ref name="data.TEMPERAMENT"/>
+        </datatype>
+      </attDef>
+    </attList>
   </classSpec>
   <classSpec ident="att.tupletPresent" module="MEI.shared" type="atts">
     <desc xml:lang="en">Attributes for indicating the presence of a tuplet.</desc>

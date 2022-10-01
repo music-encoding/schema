@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2022-10-01T12:59:15Z. .
+Schema generated from ODD source 2022-10-01T13:12:44Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -984,6 +984,18 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
    </define>
    <define name="mei_data.STRINGNUMBER">
       <data type="positiveInteger"/>
+   </define>
+   <define name="mei_data.TEMPERAMENT">
+      <choice>
+         <value>equal</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Equal or 12-tone temperament.</a:documentation>
+         <value>just</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Just intonation.</a:documentation>
+         <value>mean</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Meantone intonation.</a:documentation>
+         <value>pythagorean</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Pythagorean tuning.</a:documentation>
+      </choice>
    </define>
    <define name="mei_data.TEMPOVALUE">
       <data type="decimal"/>
@@ -3316,7 +3328,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
       <empty/>
    </define>
    <define name="mei_att.layerDef.ges.attributes">
-      <empty/>
+      <ref name="mei_att.tuning.attributes"/>
    </define>
    <define name="mei_att.lv.ges.attributes">
       <empty/>
@@ -3415,6 +3427,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    </define>
    <define name="mei_att.staffDef.ges.attributes">
       <ref name="mei_att.stringtab.tuning.attributes"/>
+      <ref name="mei_att.tuning.attributes"/>
    </define>
    <define name="mei_att.staffGrp.ges.attributes">
       <empty/>
@@ -6318,6 +6331,35 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
          <attribute name="trans.semi">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records the amount of pitch shift in semitones, e.g., C to C♯ = 1, C to D♭ = 1, necessary to calculate the sounded pitch from the written one.</a:documentation>
             <data type="integer"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.tuning.attributes">
+      <ref name="mei_att.tuning.attribute.tune.Hz"/>
+      <ref name="mei_att.tuning.attribute.tune.pname"/>
+      <ref name="mei_att.tuning.attribute.tune.temper"/>
+   </define>
+   <define name="mei_att.tuning.attribute.tune.Hz">
+      <optional>
+         <attribute name="tune.Hz">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Holds a value for cycles per second, i.e., Hertz, for a tuning reference pitch.</a:documentation>
+            <data type="decimal"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.tuning.attribute.tune.pname">
+      <optional>
+         <attribute name="tune.pname">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Holds the pitch name of a tuning reference pitch, i.e., the central tone of a tuning system.</a:documentation>
+            <ref name="mei_data.PITCHNAME"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.tuning.attribute.tune.temper">
+      <optional>
+         <attribute name="tune.temper">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Provides an indication of the tuning system, just, for example.</a:documentation>
+            <ref name="mei_data.TEMPERAMENT"/>
          </attribute>
       </optional>
    </define>
