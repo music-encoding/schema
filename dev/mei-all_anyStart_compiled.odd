@@ -10187,6 +10187,8 @@
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
         <memberOf key="att.xy"/>
         <memberOf key="att.color"/>
+        <memberOf key="att.extSym"/>
+        <memberOf key="att.visibility"/>
     </classes>
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="pos" usage="opt">
