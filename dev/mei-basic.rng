@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2022-09-27T19:07:05Z. .
+Schema generated from ODD source 2022-10-01T12:59:15Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -1989,7 +1989,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    </define>
    <define name="mei_arpeg">
       <element name="arpeg">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(arpeggiation) – Indicates that the notes of a chord are to be performed successively rather than simultaneously, usually from lowest to highest. Sometimes called a "roll".</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(arpeggiation) Indicates that the notes of a chord are to be performed successively rather than simultaneously, usually from lowest to highest. Sometimes called a "roll".</a:documentation>
          <empty/>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.arpeg.log.attributes"/>
@@ -2027,7 +2027,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    </define>
    <define name="mei_beatRpt">
       <element name="beatRpt">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(beat repeat) – An indication that material on a preceding beat should be repeated.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(beat repeat) An indication that material on a preceding beat should be repeated.</a:documentation>
          <empty/>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.beatRpt.log.attributes"/>
@@ -2039,7 +2039,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    </define>
    <define name="mei_breath">
       <element name="breath">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(breath mark) – An indication of a point at which the performer on an instrument requiring breath (including the voice) may breathe.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(breath mark) An indication of a point at which the performer on an instrument requiring breath (including the voice) may breathe.</a:documentation>
          <empty/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-breath-breath_start-type_attributes_required-constraint-rule-6">
@@ -2061,7 +2061,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    </define>
    <define name="mei_bTrem">
       <element name="bTrem">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(bowed tremolo) – A rapid alternation on a single pitch or chord.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(bowed tremolo) A rapid alternation on a single pitch or chord.</a:documentation>
          <choice>
             <ref name="mei_chord"/>
             <ref name="mei_note"/>
@@ -2106,7 +2106,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    </define>
    <define name="mei_fTrem">
       <element name="fTrem">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(fingered tremolo) – A rapid alternation between a pair of notes (or chords or perhaps between a note and a chord) that are (usually) farther apart than a major second.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(fingered tremolo) A rapid alternation between a pair of notes (or chords or perhaps between a note and a chord) that are (usually) farther apart than a major second.</a:documentation>
          <choice>
             <group>
                <ref name="mei_chord"/>
@@ -2137,7 +2137,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    </define>
    <define name="mei_gliss">
       <element name="gliss">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(glissando) – A continuous or sliding movement from one pitch to another, usually indicated by a straight or wavy line.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(glissando) A continuous or sliding movement from one pitch to another, usually indicated by a straight or wavy line.</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -2229,7 +2229,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    </define>
    <define name="mei_halfmRpt">
       <element name="halfmRpt">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(half-measure repeat) – A half-measure repeat in any meter.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(half-measure repeat) A half-measure repeat in any meter.</a:documentation>
          <empty/>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.halfmRpt.log.attributes"/>
@@ -2239,7 +2239,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    </define>
    <define name="mei_harpPedal">
       <element name="harpPedal">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(harp pedal) – Harp pedal diagram.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(harp pedal) Harp pedal diagram.</a:documentation>
          <empty/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-harpPedal-harpPedal_start-type_attributes_required-constraint-rule-13">
@@ -2261,7 +2261,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    </define>
    <define name="mei_lv">
       <element name="lv">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(laissez vibrer) – A "tie-like" indication that a note should ring beyond its written duration.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(laissez vibrer) A "tie-like" indication that a note should ring beyond its written duration.</a:documentation>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-lv-lv_start-_and_end-type_attributes_required-constraint-rule-14">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
@@ -2279,8 +2279,8 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
-                      context="mei:lv[mei:curve[@bezier or @bulge or @curvedir or @lform or @lwidth or              @ho or @startho or @endho or @to or @startto or @endto or @vo or @startvo or              @endvo or @x or @y or @x2 or @y2]]">
-               <sch:assert test="not(@bezier or @bulge or @curvedir or @lform or @lwidth or @ho or @startho or                @endho or @to or @startto or @endto or @vo or @startvo or @endvo or @x or @y or @x2 or @y2)"
+                      context="mei:lv[mei:curve[@bezier or @bulge or @curvedir or @lform or @lwidth or @ho or @startho or @endho or @to or @startto or @endto or @vo or @startvo or              @endvo or @x or @y or @x2 or @y2]]">
+               <sch:assert test="not(@bezier or @bulge or @curvedir or @lform or @lwidth or @ho or @startho or @endho or @to or @startto or @endto or @vo or @startvo or @endvo or @x or @y or @x2 or @y2)"
                            role="warning">The visual attributes of the lv element (@bezier, @bulge, @curvedir,
             @lform, @lwidth, @ho, @startho, @endho, @to, @startto, @endto, @vo, @startvo, @endvo,
             @x, @y, @x2, and @y2) will be overridden by visual attributes of the contained curve
@@ -2317,7 +2317,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    </define>
    <define name="mei_mNum">
       <element name="mNum">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(measure number) – Designation, name, or label for a measure, often but not always consisting of digits. Use this element when the <code xmlns="http://www.w3.org/1999/xhtml">@n</code> attribute on <code xmlns="http://www.w3.org/1999/xhtml">&lt;measure&gt;</code> does not adequately capture the appearance or placement of the measure number/label.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(measure number) Designation, name, or label for a measure, often but not always consisting of digits. Use this element when the <code xmlns="http://www.w3.org/1999/xhtml">@n</code> attribute on <code xmlns="http://www.w3.org/1999/xhtml">&lt;measure&gt;</code> does not adequately capture the appearance or placement of the measure number/label.</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -2336,7 +2336,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    </define>
    <define name="mei_mRest">
       <element name="mRest">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(measure rest) – Complete measure rest in any meter. </a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(measure rest) Complete measure rest in any meter. </a:documentation>
          <empty/>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.mRest.log.attributes"/>
@@ -2347,7 +2347,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    </define>
    <define name="mei_mRpt">
       <element name="mRpt">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(measure repeat) – An indication that the previous measure should be repeated.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(measure repeat) An indication that the previous measure should be repeated.</a:documentation>
          <empty/>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.mRpt.log.attributes"/>
@@ -2358,7 +2358,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    </define>
    <define name="mei_multiRest">
       <element name="multiRest">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(multiple rest) – Multiple measures of rest compressed into a single symbol, frequently found in performer parts.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(multiple rest) Multiple measures of rest compressed into a single symbol, frequently found in performer parts.</a:documentation>
          <empty/>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.multiRest.log.attributes"/>
@@ -2369,7 +2369,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    </define>
    <define name="mei_multiRpt">
       <element name="multiRpt">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(multiple repeat) – Multiple repeated measures.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(multiple repeat) Multiple repeated measures.</a:documentation>
          <empty/>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.multiRpt.log.attributes"/>
@@ -2431,7 +2431,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    </define>
    <define name="mei_reh">
       <element name="reh">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(rehearsal mark) – In an orchestral score and its corresponding parts, a mark indicating a convenient point from which to resume rehearsal after a break.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(rehearsal mark) In an orchestral score and its corresponding parts, a mark indicating a convenient point from which to resume rehearsal after a break.</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -2469,8 +2469,8 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
-                      context="mei:slur[mei:curve[@bezier or @bulge or @curvedir or @lform or @lwidth or              @ho or @startho or @endho or @to or @startto or @endto or @vo or @startvo or @endvo or              @x or @y or @x2 or @y2]]">
-               <sch:assert test="not(@bezier or @bulge or @curvedir or @lform or @lwidth or @ho or @startho or                @endho or @to or @startto or @endto or @vo or @startvo or @endvo or @x or @y or @x2 or @y2)"
+                      context="mei:slur[mei:curve[@bezier or @bulge or @curvedir or @lform or @lwidth or @ho or @startho or @endho or @to or @startto or @endto or @vo or @startvo or @endvo or @x or @y or @x2 or @y2]]">
+               <sch:assert test="not(@bezier or @bulge or @curvedir or @lform or @lwidth or @ho or @startho or @endho or @to or @startto or @endto or @vo or @startvo or @endvo or @x or @y or @x2 or @y2)"
                            role="warning">The visual attributes of the slur (@bezier, @bulge, @curvedir, @lform,
             @lwidth, @ho, @startho, @endho, @to, @startto, @endto, @vo, @startvo, @endvo, @x, @y,
             @x2, and @y2) will be overridden by visual attributes of the contained curve
@@ -2506,8 +2506,8 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
-                      context="mei:tie[mei:curve[@bezier or @bulge or @curvedir or @lform or @lwidth or              @ho or @startho or @endho or @to or @startto or @endto or @vo or @startvo or              @endvo or @x or @y or @x2 or @y2]]">
-               <sch:assert test="not(@bezier or @bulge or @curvedir or @lform or @lwidth or @ho or @startho or                @endho or @to or @startto or @endto or @vo or @startvo or @endvo or @x or @y or @x2 or @y2)"
+                      context="mei:tie[mei:curve[@bezier or @bulge or @curvedir or @lform or @lwidth or @ho or @startho or @endho or @to or @startto or @endto or @vo or @startvo or @endvo or @x or @y or @x2 or @y2]]">
+               <sch:assert test="not(@bezier or @bulge or @curvedir or @lform or @lwidth or @ho or @startho or @endho or @to or @startto or @endto or @vo or @startvo or @endvo or @x or @y or @x2 or @y2)"
                            role="warning">The visual attributes of the tie (@bezier, @bulge, @curvedir, @lform,
             @lwidth, @ho, @startho, @endho, @to, @startto, @endto, @vo, @startvo, @endvo, @x, @y,
             @x2, and @y2) will be overridden by visual attributes of the contained curve
@@ -2798,7 +2798,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    </define>
    <define name="mei_fig">
       <element name="fig">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(figure) – Groups elements representing or containing graphic information such as an illustration or figure.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(figure) Groups elements representing or containing graphic information such as an illustration or figure.</a:documentation>
          <zeroOrMore>
             <choice>
                <ref name="mei_figDesc"/>
@@ -2815,7 +2815,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    </define>
    <define name="mei_figDesc">
       <element name="figDesc">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(figure description) – Contains a brief prose description of the appearance or content of a graphic figure, for use when documenting an image without displaying it.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(figure description) Contains a brief prose description of the appearance or content of a graphic figure, for use when documenting an image without displaying it.</a:documentation>
          <choice>
             <zeroOrMore>
                <ref name="mei_model.textComponentLike"/>
@@ -2902,7 +2902,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    </define>
    <define name="mei_td">
       <element name="td">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(table data) – Designates a table cell that contains data as opposed to a cell that contains column or row heading information.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(table data) Designates a table cell that contains data as opposed to a cell that contains column or row heading information.</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -2918,7 +2918,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    </define>
    <define name="mei_th">
       <element name="th">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(table header) – Designates a table cell containing column or row heading information as opposed to one containing data.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(table header) Designates a table cell containing column or row heading information as opposed to one containing data.</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -2934,7 +2934,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    </define>
    <define name="mei_tr">
       <element name="tr">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(table row) – A formatting element that contains one or more cells (intersection of a row and a column) in a <code xmlns="http://www.w3.org/1999/xhtml">&lt;table&gt;</code>.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(table row) A formatting element that contains one or more cells (intersection of a row and a column) in a <code xmlns="http://www.w3.org/1999/xhtml">&lt;table&gt;</code>.</a:documentation>
          <zeroOrMore>
             <choice>
                <ref name="mei_th"/>
@@ -3557,7 +3557,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    </define>
    <define name="mei_chordDef">
       <element name="chordDef">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(chord definition) – Chord tablature definition.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(chord definition) Chord tablature definition.</a:documentation>
          <zeroOrMore>
             <ref name="mei_chordMember"/>
          </zeroOrMore>
@@ -3585,7 +3585,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    </define>
    <define name="mei_f">
       <element name="f">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(figure) – Single element of a figured bass indication.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(figure) Single element of a figured bass indication.</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -3601,7 +3601,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    </define>
    <define name="mei_fb">
       <element name="fb">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(figured bass) – Symbols added to a bass line that indicate harmony. Used to improvise a chordal accompaniment. Sometimes called Generalbass, thoroughbass, or basso continuo.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(figured bass) Symbols added to a bass line that indicate harmony. Used to improvise a chordal accompaniment. Sometimes called Generalbass, thoroughbass, or basso continuo.</a:documentation>
          <zeroOrMore>
             <choice>
                <ref name="mei_model.fLike"/>
@@ -3613,7 +3613,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    </define>
    <define name="mei_harm">
       <element name="harm">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(harmony) – An indication of harmony, e.g., chord names, tablature grids, harmonic analysis, figured bass.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(harmony) An indication of harmony, e.g., chord names, tablature grids, harmonic analysis, figured bass.</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -3704,7 +3704,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    </define>
    <define name="mei_fileDesc">
       <element name="fileDesc">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(file description) – Contains a full bibliographic description of the MEI file.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(file description) (file description) – Contains a full bibliographic description of the MEI file.</a:documentation>
          <ref name="mei_titleStmt"/>
          <ref name="mei_pubStmt"/>
          <ref name="mei_att.common.attributes"/>
@@ -3732,7 +3732,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    </define>
    <define name="mei_meiHead">
       <element name="meiHead">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(MEI header) – Supplies the descriptive and declarative metadata prefixed to every MEI-conformant text.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(MEI header) (MEI header) – Supplies the descriptive and declarative metadata prefixed to every MEI-conformant text.</a:documentation>
          <ref name="mei_fileDesc"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-meiHead-check_meiHead_type-constraint-rule-38">
@@ -3781,7 +3781,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    </define>
    <define name="mei_pubStmt">
       <element name="pubStmt">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(publication statement) – Container for information regarding the publication or distribution of a bibliographic item, including the publisher's name and address, the date of publication, and other relevant details.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(publication statement) (publication statement) – Container for information regarding the publication or distribution of a bibliographic item, including the publisher's name and address, the date of publication, and other relevant details.</a:documentation>
          <optional>
             <ref name="mei_publisher"/>
          </optional>
@@ -3800,7 +3800,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    </define>
    <define name="mei_titleStmt">
       <element name="titleStmt">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(title statement) – Container for title and responsibility meta-data.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(title statement) Container for title and responsibility meta-data.</a:documentation>
          <zeroOrMore>
             <ref name="mei_model.headLike"/>
          </zeroOrMore>
@@ -4055,7 +4055,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    </define>
    <define name="mei_binding">
       <element name="binding">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(binding) – Contains a description of one binding, i.e., type of covering, boards, etc. applied to an item.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(binding) Contains a description of one binding, i.e., type of covering, boards, etc. applied to an item.</a:documentation>
          <zeroOrMore>
             <ref name="mei_head"/>
          </zeroOrMore>
@@ -4098,7 +4098,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    </define>
    <define name="mei_decoNote">
       <element name="decoNote">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(decoration note) – Contains a description of one or more decorative features of an item.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(decoration note) Contains a description of one or more decorative features of an item.</a:documentation>
          <choice>
             <group>
                <zeroOrMore>
@@ -4241,7 +4241,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    </define>
    <define name="mei_locusGrp">
       <element name="locusGrp">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(locus group) – Groups locations which together form a distinct but discontinuous item within a manuscript or manuscript part, according to a specific foliation.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(locus group) Groups locations which together form a distinct but discontinuous item within a manuscript or manuscript part, according to a specific foliation.</a:documentation>
          <zeroOrMore>
             <ref name="mei_locus"/>
          </zeroOrMore>
@@ -4258,7 +4258,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    </define>
    <define name="mei_scriptNote">
       <element name="scriptNote">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(script note) – Describes a particular script distinguished within the description of an autographic item.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(script note) Describes a particular script distinguished within the description of an autographic item.</a:documentation>
          <ref name="mei_macro.struc-unstrucContent"/>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.lang.attributes"/>
@@ -4301,7 +4301,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    </define>
    <define name="mei_secFolio">
       <element name="secFolio">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(second folio) – Marks the word or words taken from a fixed point in a codex (typically the beginning of the second leaf) in order to provide a unique identifier for the item.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(second folio) Marks the word or words taken from a fixed point in a codex (typically the beginning of the second leaf) in order to provide a unique identifier for the item.</a:documentation>
          <ref name="mei_macro.struc-unstrucContent"/>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.lang.attributes"/>
@@ -4347,7 +4347,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    </define>
    <define name="mei_typeNote">
       <element name="typeNote">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(type note) – Describes a particular font or other significant typographic feature of a printed resource.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(type note) Describes a particular font or other significant typographic feature of a printed resource.</a:documentation>
          <ref name="mei_macro.struc-unstrucContent"/>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.lang.attributes"/>
@@ -4666,7 +4666,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    </define>
    <define name="mei_addName">
       <element name="addName">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(additional name) – Contains an additional name component, such as a nickname, epithet, or alias, or any other descriptive phrase used within a personal name.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(additional name) Contains an additional name component, such as a nickname, epithet, or alias, or any other descriptive phrase used within a personal name.</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -4696,7 +4696,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    </define>
    <define name="mei_corpName">
       <element name="corpName">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(corporate name) – Identifies an organization or group of people that acts as a single entity.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(corporate name) Identifies an organization or group of people that acts as a single entity.</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -4741,7 +4741,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    </define>
    <define name="mei_famName">
       <element name="famName">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(family name) – Contains a family (inherited) name, as opposed to a given, baptismal, or nick name.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(family name) Contains a family (inherited) name, as opposed to a given, baptismal, or nick name.</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -4772,7 +4772,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    </define>
    <define name="mei_genName">
       <element name="genName">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(generational name component) – Contains a name component used to distinguish otherwise similar names on the basis of the relative ages or generations of the persons named.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(generational name component) Contains a name component used to distinguish otherwise similar names on the basis of the relative ages or generations of the persons named.</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -4787,7 +4787,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    </define>
    <define name="mei_geogFeat">
       <element name="geogFeat">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(geographical feature name) – Contains a common noun identifying a geographical feature.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(geographical feature name) Contains a common noun identifying a geographical feature.</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -4802,7 +4802,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    </define>
    <define name="mei_geogName">
       <element name="geogName">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(geographic name) – The proper noun designation for a place, natural feature, or political jurisdiction.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(geographic name) The proper noun designation for a place, natural feature, or political jurisdiction.</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -4817,7 +4817,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    </define>
    <define name="mei_nameLink">
       <element name="nameLink">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(name link) – Contains a connecting phrase or link used within a name but not regarded as part of it, such as "van der" or "of", "from", etc.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(name link) Contains a connecting phrase or link used within a name but not regarded as part of it, such as "van der" or "of", "from", etc.</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -4832,7 +4832,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    </define>
    <define name="mei_periodName">
       <element name="periodName">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(period name) – A label that describes a period of time, such as 'Baroque' or '3rd Style period'.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(period name) A label that describes a period of time, such as 'Baroque' or '3rd Style period'.</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -4847,7 +4847,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    </define>
    <define name="mei_persName">
       <element name="persName">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(personal name) – Designation for an individual, including any or all of that individual's forenames, surnames, honorific titles, and added names.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(personal name) Designation for an individual, including any or all of that individual's forenames, surnames, honorific titles, and added names.</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -4904,7 +4904,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    </define>
    <define name="mei_roleName">
       <element name="roleName">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(role name) – Contains a name component which indicates that the referent has a particular role or position in society, such as an official title or rank.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(role name) Contains a name component which indicates that the referent has a particular role or position in society, such as an official title or rank.</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -4948,7 +4948,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    </define>
    <define name="mei_styleName">
       <element name="styleName">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(style name) – A label for a characteristic style of writing or performance, such as 'bebop' or 'rock-n-roll'.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(style name) A label for a characteristic style of writing or performance, such as 'bebop' or 'rock-n-roll'.</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -7615,7 +7615,7 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
    </define>
    <define name="mei_accid">
       <element name="accid">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(accidental) – Records a temporary alteration to the pitch of a note.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(accidental) Records a temporary alteration to the pitch of a note.</a:documentation>
          <empty/>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.accid.log.attributes"/>
@@ -7655,7 +7655,7 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
    </define>
    <define name="mei_addrLine">
       <element name="addrLine">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(address line) – Single line of a postal address.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(address line) Single line of a postal address.</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -7692,7 +7692,7 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
    </define>
    <define name="mei_analytic">
       <element name="analytic">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(analytic level) – Contains bibliographic elements describing an item (e.g., an article or poem) published within a monograph or journal and not as an independent publication.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(analytic level) Contains bibliographic elements describing an item (e.g., an article or poem) published within a monograph or journal and not as an independent publication.</a:documentation>
          <zeroOrMore>
             <choice>
                <ref name="mei_model.respLikePart"/>
@@ -7729,7 +7729,7 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
    </define>
    <define name="mei_artic">
       <element name="artic">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(articulation) – An indication of how to play a note or chord.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(articulation) An indication of how to play a note or chord.</a:documentation>
          <empty/>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.artic.log.attributes"/>
@@ -7754,7 +7754,7 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
    </define>
    <define name="mei_bibl">
       <element name="bibl">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(bibliographic reference) – Provides a loosely-structured bibliographic citation in which the sub-components may or may not be explicitly marked.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(bibliographic reference) Provides a loosely-structured bibliographic citation in which the sub-components may or may not be explicitly marked.</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -7803,7 +7803,7 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
    </define>
    <define name="mei_biblScope">
       <element name="biblScope">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(scope of citation) – Defines the scope of a bibliographic reference, for example as a list of page numbers, or a named subdivision of a larger work.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(scope of citation) Defines the scope of a bibliographic reference, for example as a list of page numbers, or a named subdivision of a larger work.</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -7830,7 +7830,7 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
    </define>
    <define name="mei_biblStruct">
       <element name="biblStruct">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(structured bibliographic citation) – Contains a bibliographic citation in which bibliographic sub-elements must appear in a specified order.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(structured bibliographic citation) Contains a bibliographic citation in which bibliographic sub-elements must appear in a specified order.</a:documentation>
          <group>
             <zeroOrMore>
                <ref name="mei_analytic"/>
@@ -7907,7 +7907,7 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
    </define>
    <define name="mei_castGrp">
       <element name="castGrp">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(cast group) – Groups one or more individual castItem elements within a cast list.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(cast group) Groups one or more individual castItem elements within a cast list.</a:documentation>
          <oneOrMore>
             <choice>
                <ref name="mei_castItem"/>
@@ -8008,7 +8008,7 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
    </define>
    <define name="mei_clefGrp">
       <element name="clefGrp">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(clef group) – A set of simultaneously-occurring clefs.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(clef group) A set of simultaneously-occurring clefs.</a:documentation>
          <oneOrMore>
             <ref name="mei_clef"/>
          </oneOrMore>
@@ -8141,7 +8141,7 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
    </define>
    <define name="mei_desc">
       <element name="desc">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(description) – Container for text that briefly describes the feature to which it is attached, including its intended usage, purpose, or application as appropriate.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(description) Container for text that briefly describes the feature to which it is attached, including its intended usage, purpose, or application as appropriate.</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -8155,7 +8155,7 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
    </define>
    <define name="mei_dim">
       <element name="dim">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(dimension) – Any single dimensional specification.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(dimension) Any single dimensional specification.</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -8224,7 +8224,7 @@ Suggested values include: 1] alt; 2] angle; 3] circum; 4] depth; 5] diameter; 6]
    </define>
    <define name="mei_dir">
       <element name="dir">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(directive) – An instruction expressed as a combination of text and symbols — such as segno and coda symbols, fermatas over a bar line, etc., typically above, below, or between staves, but not on the staff — that is not encoded elsewhere in more specific elements, like <code xmlns="http://www.w3.org/1999/xhtml">&lt;tempo&gt;</code> or <code xmlns="http://www.w3.org/1999/xhtml">&lt;dynam&gt;</code>.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(directive) An instruction expressed as a combination of text and symbols — such as segno and coda symbols, fermatas over a bar line, etc., typically above, below, or between staves, but not on the staff — that is not encoded elsewhere in more specific elements, like <code xmlns="http://www.w3.org/1999/xhtml">&lt;tempo&gt;</code> or <code xmlns="http://www.w3.org/1999/xhtml">&lt;dynam&gt;</code>.</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -8275,7 +8275,7 @@ Suggested values include: 1] alt; 2] angle; 3] circum; 4] depth; 5] diameter; 6]
    </define>
    <define name="mei_dynam">
       <element name="dynam">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(dynamic) – Indication of the volume of a note, phrase, or section of music.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(dynamic) Indication of the volume of a note, phrase, or section of music.</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -8313,7 +8313,7 @@ Suggested values include: 1] alt; 2] angle; 3] circum; 4] depth; 5] diameter; 6]
    </define>
    <define name="mei_edition">
       <element name="edition">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(edition designation) – A word or text phrase that indicates a difference in either content or form between the item being described and a related item previously issued by the same publisher/distributor (e.g., 2nd edition, version 2.0, etc.), or simultaneously issued by either the same publisher/distributor or another publisher/distributor (e.g., large print edition, British edition, etc.).</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(edition designation) A word or text phrase that indicates a difference in either content or form between the item being described and a related item previously issued by the same publisher/distributor (e.g., 2nd edition, version 2.0, etc.), or simultaneously issued by either the same publisher/distributor or another publisher/distributor (e.g., large print edition, British edition, etc.).</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -8481,7 +8481,7 @@ Suggested values include: 1] alt; 2] angle; 3] circum; 4] depth; 5] diameter; 6]
    </define>
    <define name="mei_head">
       <element name="head">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(heading) – Contains any heading, for example, the title of a section of text, or the heading of a list.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(heading) Contains any heading, for example, the title of a section of text, or the heading of a list.</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -8538,7 +8538,7 @@ Suggested values include: 1] alt; 2] angle; 3] circum; 4] depth; 5] diameter; 6]
    </define>
    <define name="mei_incip">
       <element name="incip">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(incipit) – The opening music and/or words of a musical or textual work.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(incipit) The opening music and/or words of a musical or textual work.</a:documentation>
          <zeroOrMore>
             <ref name="mei_model.headLike"/>
          </zeroOrMore>
@@ -8615,7 +8615,7 @@ Suggested values include: 1] alt; 2] angle; 3] circum; 4] depth; 5] diameter; 6]
    </define>
    <define name="mei_layerDef">
       <element name="layerDef">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(layer definition) – Container for layer meta-information.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(layer definition) Container for layer meta-information.</a:documentation>
          <zeroOrMore>
             <ref name="mei_model.labelLike"/>
          </zeroOrMore>
@@ -8638,7 +8638,7 @@ Suggested values include: 1] alt; 2] angle; 3] circum; 4] depth; 5] diameter; 6]
    </define>
    <define name="mei_lb">
       <element name="lb">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(line beginning) – An empty formatting element that forces text to begin on a new line.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(line beginning) An empty formatting element that forces text to begin on a new line.</a:documentation>
          <empty/>
          <ref name="mei_att.common.attributes"/>
          <empty/>
@@ -8646,7 +8646,7 @@ Suggested values include: 1] alt; 2] angle; 3] circum; 4] depth; 5] diameter; 6]
    </define>
    <define name="mei_lg">
       <element name="lg">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(line group) – May be used for any section of text that is organized as a group of lines; however, it is most often used for a group of verse lines functioning as a formal unit, e.g., a stanza, refrain, verse paragraph, etc.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(line group) May be used for any section of text that is organized as a group of lines; however, it is most often used for a group of verse lines functioning as a formal unit, e.g., a stanza, refrain, verse paragraph, etc.</a:documentation>
          <zeroOrMore>
             <ref name="mei_model.headLike"/>
          </zeroOrMore>
@@ -8698,7 +8698,7 @@ Suggested values include: 1] alt; 2] angle; 3] circum; 4] depth; 5] diameter; 6]
    </define>
    <define name="mei_mdiv">
       <element name="mdiv">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(musical division) – Contains a subdivision of the body of a musical text.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(musical division) (musical division) – Contains a subdivision of the body of a musical text.</a:documentation>
          <choice>
             <ref name="mei_model.scoreLike"/>
             <zeroOrMore>
@@ -8745,7 +8745,7 @@ Suggested values include: 1] alt; 2] angle; 3] circum; 4] depth; 5] diameter; 6]
    </define>
    <define name="mei_monogr">
       <element name="monogr">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(monograph level) – Contains bibliographic elements describing an item, for example, a published book or journal, score, recording, or an unpublished manuscript.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(monograph level) Contains bibliographic elements describing an item, for example, a published book or journal, score, recording, or an unpublished manuscript.</a:documentation>
          <group>
             <optional>
                <choice>
@@ -8909,7 +8909,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
    </define>
    <define name="mei_num">
       <element name="num">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(number) – Numeric information in any form.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(number) Numeric information in any form.</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -8958,7 +8958,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
    </define>
    <define name="mei_p">
       <element name="p">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(paragraph) – One or more text phrases that form a logical prose passage.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(paragraph) One or more text phrases that form a logical prose passage.</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -8972,7 +8972,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
    </define>
    <define name="mei_pb">
       <element name="pb">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(page beginning) – An empty formatting element that forces text to begin on a new page.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(page beginning) An empty formatting element that forces text to begin on a new page.</a:documentation>
          <ref name="mei_macro.metaLike.page"/>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.pb.ges.attributes"/>
@@ -8983,7 +8983,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
    </define>
    <define name="mei_pgDesc">
       <element name="pgDesc">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(page description) – Contains a brief prose description of the appearance or description of the content of a physical page.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(page description) Contains a brief prose description of the appearance or description of the content of a physical page.</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -8998,7 +8998,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
    </define>
    <define name="mei_pgFoot">
       <element name="pgFoot">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(page footer) – A running footer on the first page. Also, used to temporarily override a running footer on individual pages.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(page footer) A running footer on the first page. Also, used to temporarily override a running footer on individual pages.</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -9019,7 +9019,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
    </define>
    <define name="mei_pgHead">
       <element name="pgHead">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(page header) – A running header on the first page. Also, used to temporarily override a running header on individual pages.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(page header) A running header on the first page. Also, used to temporarily override a running header on individual pages.</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -9077,7 +9077,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
    </define>
    <define name="mei_physLoc">
       <element name="physLoc">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(physical location) – Groups information about the current physical location of a bibliographic item, such as the repository in which it is located and its shelf mark(s), and its previous locations.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(physical location) Groups information about the current physical location of a bibliographic item, such as the repository in which it is located and its shelf mark(s), and its previous locations.</a:documentation>
          <zeroOrMore>
             <ref name="mei_model.headLike"/>
          </zeroOrMore>
@@ -9109,7 +9109,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
    </define>
    <define name="mei_pubPlace">
       <element name="pubPlace">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(publication place) – Name of the place where a bibliographic item was published.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(publication place) Name of the place where a bibliographic item was published.</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -9137,7 +9137,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
    </define>
    <define name="mei_relatedItem">
       <element name="relatedItem">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(related item) – Contains or references another bibliographic item which is related to the present one.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(related item) Contains or references another bibliographic item which is related to the present one.</a:documentation>
          <zeroOrMore>
             <ref name="mei_model.biblLike"/>
          </zeroOrMore>
@@ -9152,7 +9152,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
    </define>
    <define name="mei_rend">
       <element name="rend">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(render) – A formatting element indicating special visual rendering, e.g., bold or italicized, of a text word or phrase.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(render) A formatting element indicating special visual rendering, e.g., bold or italicized, of a text word or phrase.</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -9192,7 +9192,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
    </define>
    <define name="mei_resp">
       <element name="resp">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(responsibility) – A phrase describing the nature of intellectual responsibility.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(responsibility) A phrase describing the nature of intellectual responsibility.</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -9207,7 +9207,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
    </define>
    <define name="mei_respStmt">
       <element name="respStmt">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(responsibility statement) – Transcription of text that names one or more individuals, groups, or in rare cases, mechanical processes, responsible for creation, realization, production, funding, or distribution of the intellectual or artistic content.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(responsibility statement) Transcription of text that names one or more individuals, groups, or in rare cases, mechanical processes, responsible for creation, realization, production, funding, or distribution of the intellectual or artistic content.</a:documentation>
          <zeroOrMore>
             <ref name="mei_model.headLike"/>
          </zeroOrMore>
@@ -9278,7 +9278,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
    </define>
    <define name="mei_roleDesc">
       <element name="roleDesc">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(role description) – Describes a character’s role in a drama.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(role description) Describes a character’s role in a drama.</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -9292,7 +9292,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
    </define>
    <define name="mei_sb">
       <element name="sb">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(system beginning) – An empty formatting element that forces musical notation to begin on a new line.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(system beginning) An empty formatting element that forces musical notation to begin on a new line.</a:documentation>
          <empty/>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.sb.ges.attributes"/>
@@ -9324,7 +9324,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
    </define>
    <define name="mei_scoreDef">
       <element name="scoreDef">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(score definition) – Container for score meta-information.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(score definition) (score definition) – Container for score meta-information.</a:documentation>
          <optional>
             <ref name="mei_model.keySigLike"/>
          </optional>
@@ -9421,7 +9421,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
    </define>
    <define name="mei_stack">
       <element name="stack">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(stacked text) – An inline table with a single column.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(stacked text) An inline table with a single column.</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -9487,7 +9487,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
    </define>
    <define name="mei_staffDef">
       <element name="staffDef">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(staff definition) – Container for staff meta-information.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(staff definition) Container for staff meta-information.</a:documentation>
          <zeroOrMore>
             <ref name="mei_model.labelLike"/>
          </zeroOrMore>
@@ -9645,7 +9645,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
    </define>
    <define name="mei_staffGrp">
       <element name="staffGrp">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(staff group) – A group of bracketed or braced staves.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(staff group) (staff group) – A group of bracketed or braced staves.</a:documentation>
          <zeroOrMore>
             <ref name="mei_model.labelLike"/>
          </zeroOrMore>
@@ -9694,7 +9694,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
    </define>
    <define name="mei_syl">
       <element name="syl">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(syllable) – Individual lyric syllable.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(syllable) Individual lyric syllable.</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -9802,7 +9802,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
    </define>
    <define name="mei_textLang">
       <element name="textLang">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(text language) – Identifies the languages and writing systems within the work described by a bibliographic description, not the language of the description.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(text language) Identifies the languages and writing systems within the work described by a bibliographic description, not the language of the description.</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -10151,7 +10151,7 @@ Suggested values include: 1] alternative; 2] arrangement; 3] carrier; 4] date; 5
    </define>
    <define name="mei_l">
       <element name="l">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(line of text) – Contains a single line of text within a line group.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(line of text) Contains a single line of text within a line group.</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -10172,7 +10172,7 @@ Suggested values include: 1] alternative; 2] arrangement; 3] carrier; 4] date; 5
    </define>
    <define name="mei_li">
       <element name="li">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(list item) – Single item in a <code xmlns="http://www.w3.org/1999/xhtml">&lt;list&gt;</code>.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(list item) Single item in a <code xmlns="http://www.w3.org/1999/xhtml">&lt;list&gt;</code>.</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -10248,7 +10248,7 @@ Suggested values include: 1] gloss; 2] index; 3] instructions; 4] litany; 5] syl
    </define>
    <define name="mei_q">
       <element name="q">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(quoted) – Contains material which is distinguished from the surrounding phrase-level text using quotation marks or a similar method. Use <code xmlns="http://www.w3.org/1999/xhtml">&lt;quote&gt;</code> for block-level quotations.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(quoted) Contains material which is distinguished from the surrounding phrase-level text using quotation marks or a similar method. Use <code xmlns="http://www.w3.org/1999/xhtml">&lt;quote&gt;</code> for block-level quotations.</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -10294,7 +10294,7 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
    </define>
    <define name="mei_quote">
       <element name="quote">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(quoted material) – Contains a paragraph-like block of text attributed to an external source, normally set off from the surrounding text by spacing or other typographic distinction.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(quoted material) Contains a paragraph-like block of text attributed to an external source, normally set off from the surrounding text by spacing or other typographic distinction.</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
