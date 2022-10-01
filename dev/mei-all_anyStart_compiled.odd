@@ -2755,16 +2755,16 @@
         <rng:param name="pattern">reversed|90CW|90CCW</rng:param>
       </rng:data>
     </content>
-  </macroSpec><macroSpec rend="add" ident="data.OTHERSTAFF" module="MEI" type="dt">
-    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">For musical material designated to appear on another staff, the location of the staff
-      relative to the current one; <abbr>i.e.</abbr>, the staff above or the staff below.</desc>
+  </macroSpec><macroSpec rend="add" ident="data.NEIGHBORINGLAYER" module="MEI" type="dt">
+    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">For musical material designated to appear on an adjacent layer or staff, the location of the layer
+      relative to the current one; <abbr>i.e.</abbr>, the layer above or the layer below.</desc>
     <content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <valList type="closed">
         <valItem ident="above">
-          <desc xml:lang="en">The staff immediately above.</desc>
+          <desc xml:lang="en">The layer immediately above.</desc>
         </valItem>
         <valItem ident="below">
-          <desc xml:lang="en">The staff immediately below.</desc>
+          <desc xml:lang="en">The layer immediately below.</desc>
         </valItem>
       </valList>
     </content>
@@ -3866,7 +3866,7 @@
         <desc xml:lang="en">In the case of cross-staff beams, the beam.with attribute is used to indicate which
           staff the beam is connected to; that is, the staff above or the staff below.</desc>
         <datatype>
-          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.OTHERSTAFF"/>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.NEIGHBORINGLAYER"/>
         </datatype>
       </attDef>
     </attList>
@@ -4765,7 +4765,7 @@
           current staff should be visually placed on; that is, the one above or the one
           below.</desc>
         <datatype>
-          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.OTHERSTAFF"/>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.NEIGHBORINGLAYER"/>
         </datatype>
       </attDef>
     </attList>
@@ -15160,22 +15160,22 @@
         C to C♯ and one from C to D♭.</p>
     </remarks>
   </classSpec><classSpec rend="add" ident="att.tuning" module="MEI.shared" type="atts">
-    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Attributes that describe tuning.</desc>
+    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that describe tuning.</desc>
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="tune.Hz" usage="opt">
-        <desc>Holds a value for cycles per second, <abbr>i.e.</abbr>, Hertz, for a tuning reference pitch.</desc>
+        <desc xml:lang="en">Holds a value for cycles per second, <abbr>i.e.</abbr>, Hertz, for a tuning reference pitch.</desc>
         <datatype>
           <rng:data type="decimal"/>
         </datatype>
       </attDef>
       <attDef ident="tune.pname" usage="opt">
-        <desc>Holds the pitch name of a tuning reference pitch, <abbr>i.e.</abbr>, the central tone of a tuning system.</desc>
+        <desc xml:lang="en">Holds the pitch name of a tuning reference pitch, <abbr>i.e.</abbr>, the central tone of a tuning system.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.PITCHNAME"/>
         </datatype>
       </attDef>
       <attDef ident="tune.temper" usage="opt">
-        <desc>Provides an indication of the tuning system, <val>just</val>, for example.</desc>
+        <desc xml:lang="en">Provides an indication of the tuning system, <val>just</val>, for example.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.TEMPERAMENT"/>
         </datatype>

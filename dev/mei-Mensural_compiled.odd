@@ -12197,22 +12197,22 @@
         C to C♯ and one from C to D♭.</p>
     </remarks>
   </classSpec><classSpec rend="add" ident="att.tuning" module="MEI.shared" type="atts">
-    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Attributes that describe tuning.</desc>
+    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that describe tuning.</desc>
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="tune.Hz" usage="opt">
-        <desc>Holds a value for cycles per second, <abbr>i.e.</abbr>, Hertz, for a tuning reference pitch.</desc>
+        <desc xml:lang="en">Holds a value for cycles per second, <abbr>i.e.</abbr>, Hertz, for a tuning reference pitch.</desc>
         <datatype>
           <rng:data type="decimal"/>
         </datatype>
       </attDef>
       <attDef ident="tune.pname" usage="opt">
-        <desc>Holds the pitch name of a tuning reference pitch, <abbr>i.e.</abbr>, the central tone of a tuning system.</desc>
+        <desc xml:lang="en">Holds the pitch name of a tuning reference pitch, <abbr>i.e.</abbr>, the central tone of a tuning system.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.PITCHNAME"/>
         </datatype>
       </attDef>
       <attDef ident="tune.temper" usage="opt">
-        <desc>Provides an indication of the tuning system, <val>just</val>, for example.</desc>
+        <desc xml:lang="en">Provides an indication of the tuning system, <val>just</val>, for example.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.TEMPERAMENT"/>
         </datatype>

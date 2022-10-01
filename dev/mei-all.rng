@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2022-10-01T13:21:41Z. .
+Schema generated from ODD source 2022-10-01T15:17:22Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -7495,12 +7495,12 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <param name="pattern">reversed|90CW|90CCW</param>
       </data>
    </define>
-   <define name="mei_data.OTHERSTAFF">
+   <define name="mei_data.NEIGHBORINGLAYER">
       <choice>
          <value>above</value>
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The staff immediately above.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The layer immediately above.</a:documentation>
          <value>below</value>
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The staff immediately below.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The layer immediately below.</a:documentation>
       </choice>
    </define>
    <define name="mei_data.PAGE.PANELS">
@@ -8781,7 +8781,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
       <optional>
          <attribute name="beam.with">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">In the case of cross-staff beams, the beam.with attribute is used to indicate which staff the beam is connected to; that is, the staff above or the staff below.</a:documentation>
-            <ref name="mei_data.OTHERSTAFF"/>
+            <ref name="mei_data.NEIGHBORINGLAYER"/>
          </attribute>
       </optional>
    </define>
@@ -9602,7 +9602,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
       <optional>
          <attribute name="stem.with">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Contains an indication of which staff a note or chord that logically belongs to the current staff should be visually placed on; that is, the one above or the one below.</a:documentation>
-            <ref name="mei_data.OTHERSTAFF"/>
+            <ref name="mei_data.NEIGHBORINGLAYER"/>
          </attribute>
       </optional>
    </define>
