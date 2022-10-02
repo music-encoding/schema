@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2022-10-01T15:22:04Z. .
+Schema generated from ODD source 2022-10-02T12:46:33Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -6652,7 +6652,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
    <define name="mei_data.LINEWIDTH">
       <choice>
          <ref name="mei_data.LINEWIDTHTERM"/>
-         <ref name="mei_data.MEASUREMENTABS"/>
+         <ref name="mei_data.MEASUREMENTUNSIGNED"/>
       </choice>
    </define>
    <define name="mei_data.LINEWIDTHTERM">
@@ -6675,15 +6675,37 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <param name="pattern">(\+|-)?[0-9]+m\+[0-9]+(\.[0-9]*)?</param>
       </data>
    </define>
-   <define name="mei_data.MEASUREMENTABS">
+   <define name="mei_data.MEASUREMENTUNSIGNED">
       <data type="token">
          <param name="pattern">(\+)?\d+(\.\d+)?(cm|mm|in|pt|pc|px|vu)?</param>
       </data>
    </define>
-   <define name="mei_data.MEASUREMENTREL">
+   <define name="mei_data.MEASUREMENTSIGNED">
       <data type="token">
          <param name="pattern">(\+|-)?\d+(\.\d+)?(cm|mm|in|pt|pc|px|vu)?</param>
       </data>
+   </define>
+   <define name="mei_data.MEASUREMENTFONTUNSIGNED">
+      <data type="token">
+         <param name="pattern">\d+(\.\d+)?(ch|em|ex)?</param>
+      </data>
+   </define>
+   <define name="mei_data.MEASUREMENTFONTSIGNED">
+      <data type="token">
+         <param name="pattern">(\+|-)?\d+(\.\d+)?(ch|em|ex)?</param>
+      </data>
+   </define>
+   <define name="mei_data.MEASUREMENTTYPOGRAPHYUNSIGNED">
+      <choice>
+         <ref name="mei_data.MEASUREMENTFONTUNSIGNED"/>
+         <ref name="mei_data.MEASUREMENTUNSIGNED"/>
+      </choice>
+   </define>
+   <define name="mei_data.MEASUREMENTTYPOGRAPHYSIGNED">
+      <choice>
+         <ref name="mei_data.MEASUREMENTFONTSIGNED"/>
+         <ref name="mei_data.MEASUREMENTSIGNED"/>
+      </choice>
    </define>
    <define name="mei_data.MELODICFUNCTION">
       <choice>
@@ -7660,14 +7682,9 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
       </choice>
    </define>
    <define name="mei_data.TEXTRENDITIONPAR">
-      <choice>
-         <data type="string">
-            <param name="pattern">(underline|overline|line-through|strike|x-through)\(\d+\)</param>
-         </data>
-         <data type="string">
-            <param name="pattern">(letter-spacing|line-height)\((\+|-)?\d+(\.\d+)?%?\)</param>
-         </data>
-      </choice>
+      <data type="string">
+         <param name="pattern">(underline|overline|line-through|strike|x-through)\(\d+\)</param>
+      </data>
    </define>
    <define name="mei_data.TEXTRENDITION">
       <choice>
@@ -16693,7 +16710,7 @@ Suggested values include: 1] caesura; 2] finalis; 3] maior; 4] maxima; 5] minima
       <optional>
          <attribute name="dynam.dist">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records the default distance from the staff for dynamic marks.</a:documentation>
-            <ref name="mei_data.MEASUREMENTREL"/>
+            <ref name="mei_data.MEASUREMENTSIGNED"/>
          </attribute>
       </optional>
    </define>
@@ -16701,7 +16718,7 @@ Suggested values include: 1] caesura; 2] finalis; 3] maior; 4] maxima; 5] minima
       <optional>
          <attribute name="harm.dist">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records the default distance from the staff of harmonic indications, such as guitar chord grids or functional labels.</a:documentation>
-            <ref name="mei_data.MEASUREMENTREL"/>
+            <ref name="mei_data.MEASUREMENTSIGNED"/>
          </attribute>
       </optional>
    </define>
@@ -16709,7 +16726,7 @@ Suggested values include: 1] caesura; 2] finalis; 3] maior; 4] maxima; 5] minima
       <optional>
          <attribute name="text.dist">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Determines how far from the staff to render text elements.</a:documentation>
-            <ref name="mei_data.MEASUREMENTREL"/>
+            <ref name="mei_data.MEASUREMENTSIGNED"/>
          </attribute>
       </optional>
    </define>
@@ -16974,7 +16991,7 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
       <optional>
          <attribute name="height">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Measurement of the vertical dimension of an entity.</a:documentation>
-            <ref name="mei_data.MEASUREMENTABS"/>
+            <ref name="mei_data.MEASUREMENTUNSIGNED"/>
          </attribute>
       </optional>
    </define>
@@ -17498,7 +17515,7 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
       <optional>
          <attribute name="lyric.align">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Describes the alignment of lyric syllables associated with a note or chord.</a:documentation>
-            <ref name="mei_data.MEASUREMENTREL"/>
+            <ref name="mei_data.MEASUREMENTSIGNED"/>
          </attribute>
       </optional>
    </define>
@@ -18187,7 +18204,7 @@ Suggested values include: 1] smufl</a:documentation>
       <optional>
          <attribute name="page.height">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Specifies the height of the page; may be expressed in real-world units or staff steps.</a:documentation>
-            <ref name="mei_data.MEASUREMENTABS"/>
+            <ref name="mei_data.MEASUREMENTUNSIGNED"/>
          </attribute>
       </optional>
    </define>
@@ -18195,7 +18212,7 @@ Suggested values include: 1] smufl</a:documentation>
       <optional>
          <attribute name="page.width">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Describes the width of the page; may be expressed in real-world units or staff steps.</a:documentation>
-            <ref name="mei_data.MEASUREMENTABS"/>
+            <ref name="mei_data.MEASUREMENTUNSIGNED"/>
          </attribute>
       </optional>
    </define>
@@ -18203,7 +18220,7 @@ Suggested values include: 1] smufl</a:documentation>
       <optional>
          <attribute name="page.topmar">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates the amount of whitespace at the top of a page.</a:documentation>
-            <ref name="mei_data.MEASUREMENTABS"/>
+            <ref name="mei_data.MEASUREMENTUNSIGNED"/>
          </attribute>
       </optional>
    </define>
@@ -18211,7 +18228,7 @@ Suggested values include: 1] smufl</a:documentation>
       <optional>
          <attribute name="page.botmar">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates the amount of whitespace at the bottom of a page.</a:documentation>
-            <ref name="mei_data.MEASUREMENTABS"/>
+            <ref name="mei_data.MEASUREMENTUNSIGNED"/>
          </attribute>
       </optional>
    </define>
@@ -18219,7 +18236,7 @@ Suggested values include: 1] smufl</a:documentation>
       <optional>
          <attribute name="page.leftmar">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates the amount of whitespace at the left side of a page.</a:documentation>
-            <ref name="mei_data.MEASUREMENTABS"/>
+            <ref name="mei_data.MEASUREMENTUNSIGNED"/>
          </attribute>
       </optional>
    </define>
@@ -18227,7 +18244,7 @@ Suggested values include: 1] smufl</a:documentation>
       <optional>
          <attribute name="page.rightmar">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates the amount of whitespace at the right side of a page.</a:documentation>
-            <ref name="mei_data.MEASUREMENTABS"/>
+            <ref name="mei_data.MEASUREMENTUNSIGNED"/>
          </attribute>
       </optional>
    </define>
@@ -18693,7 +18710,7 @@ Suggested values include: 1] smufl</a:documentation>
       <optional>
          <attribute name="spacing.staff">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Specifies the minimum amount of space between adjacent staves in the same system; measured from the bottom line of the staff above to the top line of the staff below.</a:documentation>
-            <ref name="mei_data.MEASUREMENTREL"/>
+            <ref name="mei_data.MEASUREMENTSIGNED"/>
          </attribute>
       </optional>
    </define>
@@ -18702,9 +18719,9 @@ Suggested values include: 1] smufl</a:documentation>
          <attribute name="spacing.system">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Describes the space between adjacent systems; a pair of space-separated values (minimum and maximum, respectively) provides a range between which a rendering system-supplied value may fall, while a single value indicates a fixed amount of space; that is, the minimum and maximum values are equal.</a:documentation>
             <list>
-               <ref name="mei_data.MEASUREMENTREL"/>
+               <ref name="mei_data.MEASUREMENTSIGNED"/>
                <optional>
-                  <ref name="mei_data.MEASUREMENTREL"/>
+                  <ref name="mei_data.MEASUREMENTSIGNED"/>
                </optional>
             </list>
          </attribute>
@@ -18941,7 +18958,7 @@ Suggested values include: 1] smufl</a:documentation>
       <optional>
          <attribute name="stem.len">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Encodes the stem length.</a:documentation>
-            <ref name="mei_data.MEASUREMENTABS"/>
+            <ref name="mei_data.MEASUREMENTUNSIGNED"/>
          </attribute>
       </optional>
    </define>
@@ -19091,7 +19108,7 @@ Suggested values include: 1] smufl</a:documentation>
       <optional>
          <attribute name="system.leftmar">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Describes the amount of whitespace at the left system margin relative to page.leftmar.</a:documentation>
-            <ref name="mei_data.MEASUREMENTABS"/>
+            <ref name="mei_data.MEASUREMENTUNSIGNED"/>
          </attribute>
       </optional>
    </define>
@@ -19099,7 +19116,7 @@ Suggested values include: 1] smufl</a:documentation>
       <optional>
          <attribute name="system.rightmar">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Describes the amount of whitespace at the right system margin relative to page.rightmar.</a:documentation>
-            <ref name="mei_data.MEASUREMENTABS"/>
+            <ref name="mei_data.MEASUREMENTUNSIGNED"/>
          </attribute>
       </optional>
    </define>
@@ -19107,7 +19124,7 @@ Suggested values include: 1] smufl</a:documentation>
       <optional>
          <attribute name="system.topmar">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Describes the distance from page’s top edge to the first system; used for first page only.</a:documentation>
-            <ref name="mei_data.MEASUREMENTABS"/>
+            <ref name="mei_data.MEASUREMENTUNSIGNED"/>
          </attribute>
       </optional>
    </define>
@@ -19321,6 +19338,8 @@ Suggested values include: 1] smufl</a:documentation>
       <ref name="mei_att.typography.attribute.fontsize"/>
       <ref name="mei_att.typography.attribute.fontstyle"/>
       <ref name="mei_att.typography.attribute.fontweight"/>
+      <ref name="mei_att.typography.attribute.letterspacing"/>
+      <ref name="mei_att.typography.attribute.lineheight"/>
    </define>
    <define name="mei_att.typography.attribute.fontfam">
       <optional>
@@ -19359,6 +19378,25 @@ Suggested values include: 1] smufl</a:documentation>
          <attribute name="fontweight">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Used to indicate bold type.</a:documentation>
             <ref name="mei_data.FONTWEIGHT"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.typography.attribute.letterspacing">
+      <optional>
+         <attribute name="letterspacing">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates letter spacing (aka tracking) in analogy to the CSS letter-spacing property.</a:documentation>
+            <ref name="mei_data.MEASUREMENTTYPOGRAPHYSIGNED"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.typography.attribute.lineheight">
+      <optional>
+         <attribute name="lineheight">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates line height in analogy to the CSS line-height property.</a:documentation>
+            <choice>
+               <ref name="mei_data.MEASUREMENTTYPOGRAPHYUNSIGNED"/>
+               <ref name="mei_data.PERCENT"/>
+            </choice>
          </attribute>
       </optional>
    </define>
@@ -19407,7 +19445,7 @@ Suggested values include: 1] smufl</a:documentation>
       <optional>
          <attribute name="ho">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records a horizontal adjustment to a feature’s programmatically-determined location in terms of staff interline distance; that is, in units of 1/2 the distance between adjacent staff lines.</a:documentation>
-            <ref name="mei_data.MEASUREMENTREL"/>
+            <ref name="mei_data.MEASUREMENTSIGNED"/>
          </attribute>
       </optional>
    </define>
@@ -19429,7 +19467,7 @@ Suggested values include: 1] smufl</a:documentation>
       <optional>
          <attribute name="vo">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records the vertical adjustment of a feature’s programmatically-determined location in terms of staff interline distance; that is, in units of 1/2 the distance between adjacent staff lines.</a:documentation>
-            <ref name="mei_data.MEASUREMENTREL"/>
+            <ref name="mei_data.MEASUREMENTSIGNED"/>
          </attribute>
       </optional>
    </define>
@@ -19446,7 +19484,7 @@ Suggested values include: 1] smufl</a:documentation>
       <optional>
          <attribute name="startho">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records the horizontal adjustment of a feature’s programmatically-determined start point.</a:documentation>
-            <ref name="mei_data.MEASUREMENTREL"/>
+            <ref name="mei_data.MEASUREMENTSIGNED"/>
          </attribute>
       </optional>
    </define>
@@ -19454,7 +19492,7 @@ Suggested values include: 1] smufl</a:documentation>
       <optional>
          <attribute name="endho">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records the horizontal adjustment of a feature’s programmatically-determined end point.</a:documentation>
-            <ref name="mei_data.MEASUREMENTREL"/>
+            <ref name="mei_data.MEASUREMENTSIGNED"/>
          </attribute>
       </optional>
    </define>
@@ -19486,7 +19524,7 @@ Suggested values include: 1] smufl</a:documentation>
       <optional>
          <attribute name="startvo">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records a vertical adjustment of a feature’s programmatically-determined start point.</a:documentation>
-            <ref name="mei_data.MEASUREMENTREL"/>
+            <ref name="mei_data.MEASUREMENTSIGNED"/>
          </attribute>
       </optional>
    </define>
@@ -19494,7 +19532,7 @@ Suggested values include: 1] smufl</a:documentation>
       <optional>
          <attribute name="endvo">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records a vertical adjustment of a feature’s programmatically-determined end point.</a:documentation>
-            <ref name="mei_data.MEASUREMENTREL"/>
+            <ref name="mei_data.MEASUREMENTSIGNED"/>
          </attribute>
       </optional>
    </define>
@@ -19543,7 +19581,7 @@ Suggested values include: 1] smufl</a:documentation>
       <optional>
          <attribute name="width">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Measurement of the horizontal dimension of an entity.</a:documentation>
-            <ref name="mei_data.MEASUREMENTABS"/>
+            <ref name="mei_data.MEASUREMENTUNSIGNED"/>
          </attribute>
       </optional>
    </define>
@@ -26079,7 +26117,7 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
       <optional>
          <attribute name="spacing">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records the absolute distance (as opposed to the relative distances recorded in <code xmlns="http://www.w3.org/1999/xhtml">&lt;scoreDef&gt;</code> elements) between this staff and the preceding one in the same system. This value is meaningless for the first staff in a system since the spacing.system attribute indicates the spacing between systems.</a:documentation>
-            <ref name="mei_data.MEASUREMENTREL"/>
+            <ref name="mei_data.MEASUREMENTSIGNED"/>
          </attribute>
       </optional>
    </define>

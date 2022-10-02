@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2022-10-01T15:21:53Z. .
+Schema generated from ODD source 2022-10-02T12:46:23Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -828,7 +828,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
    <define name="mei_data.LINEWIDTH">
       <choice>
          <ref name="mei_data.LINEWIDTHTERM"/>
-         <ref name="mei_data.MEASUREMENTABS"/>
+         <ref name="mei_data.MEASUREMENTUNSIGNED"/>
       </choice>
    </define>
    <define name="mei_data.LINEWIDTHTERM">
@@ -846,10 +846,37 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <param name="pattern">([0-9]+m\s*\+\s*)?[0-9]+(\.?[0-9]*)?</param>
       </data>
    </define>
-   <define name="mei_data.MEASUREMENTABS">
+   <define name="mei_data.MEASUREMENTUNSIGNED">
       <data type="token">
          <param name="pattern">(\+)?\d+(\.\d+)?(cm|mm|in|pt|pc|px|vu)?</param>
       </data>
+   </define>
+   <define name="mei_data.MEASUREMENTSIGNED">
+      <data type="token">
+         <param name="pattern">(\+|-)?\d+(\.\d+)?(cm|mm|in|pt|pc|px|vu)?</param>
+      </data>
+   </define>
+   <define name="mei_data.MEASUREMENTFONTUNSIGNED">
+      <data type="token">
+         <param name="pattern">\d+(\.\d+)?(ch|em|ex)?</param>
+      </data>
+   </define>
+   <define name="mei_data.MEASUREMENTFONTSIGNED">
+      <data type="token">
+         <param name="pattern">(\+|-)?\d+(\.\d+)?(ch|em|ex)?</param>
+      </data>
+   </define>
+   <define name="mei_data.MEASUREMENTTYPOGRAPHYUNSIGNED">
+      <choice>
+         <ref name="mei_data.MEASUREMENTFONTUNSIGNED"/>
+         <ref name="mei_data.MEASUREMENTUNSIGNED"/>
+      </choice>
+   </define>
+   <define name="mei_data.MEASUREMENTTYPOGRAPHYSIGNED">
+      <choice>
+         <ref name="mei_data.MEASUREMENTFONTSIGNED"/>
+         <ref name="mei_data.MEASUREMENTSIGNED"/>
+      </choice>
    </define>
    <define name="mei_data.METERSIGN">
       <choice>
@@ -1061,14 +1088,9 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
       </choice>
    </define>
    <define name="mei_data.TEXTRENDITIONPAR">
-      <choice>
-         <data type="string">
-            <param name="pattern">(underline|overline|line-through|strike|x-through)\(\d+\)</param>
-         </data>
-         <data type="string">
-            <param name="pattern">(letter-spacing|line-height)\((\+|-)?\d+(\.\d+)?%?\)</param>
-         </data>
-      </choice>
+      <data type="string">
+         <param name="pattern">(underline|overline|line-through|strike|x-through)\(\d+\)</param>
+      </data>
    </define>
    <define name="mei_data.TEXTRENDITION">
       <choice>
@@ -5432,7 +5454,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
       <optional>
          <attribute name="height">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Measurement of the vertical dimension of an entity.</a:documentation>
-            <ref name="mei_data.MEASUREMENTABS"/>
+            <ref name="mei_data.MEASUREMENTUNSIGNED"/>
          </attribute>
       </optional>
    </define>
@@ -6179,7 +6201,7 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
       <optional>
          <attribute name="stem.len">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Encodes the stem length.</a:documentation>
-            <ref name="mei_data.MEASUREMENTABS"/>
+            <ref name="mei_data.MEASUREMENTUNSIGNED"/>
          </attribute>
       </optional>
    </define>
@@ -6369,6 +6391,8 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
       <ref name="mei_att.typography.attribute.fontsize"/>
       <ref name="mei_att.typography.attribute.fontstyle"/>
       <ref name="mei_att.typography.attribute.fontweight"/>
+      <ref name="mei_att.typography.attribute.letterspacing"/>
+      <ref name="mei_att.typography.attribute.lineheight"/>
    </define>
    <define name="mei_att.typography.attribute.fontfam">
       <optional>
@@ -6407,6 +6431,25 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
          <attribute name="fontweight">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Used to indicate bold type.</a:documentation>
             <ref name="mei_data.FONTWEIGHT"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.typography.attribute.letterspacing">
+      <optional>
+         <attribute name="letterspacing">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates letter spacing (aka tracking) in analogy to the CSS letter-spacing property.</a:documentation>
+            <ref name="mei_data.MEASUREMENTTYPOGRAPHYSIGNED"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.typography.attribute.lineheight">
+      <optional>
+         <attribute name="lineheight">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates line height in analogy to the CSS line-height property.</a:documentation>
+            <choice>
+               <ref name="mei_data.MEASUREMENTTYPOGRAPHYUNSIGNED"/>
+               <ref name="mei_data.PERCENT"/>
+            </choice>
          </attribute>
       </optional>
    </define>
@@ -6466,7 +6509,7 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
       <optional>
          <attribute name="width">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Measurement of the horizontal dimension of an entity.</a:documentation>
-            <ref name="mei_data.MEASUREMENTABS"/>
+            <ref name="mei_data.MEASUREMENTUNSIGNED"/>
          </attribute>
       </optional>
    </define>
@@ -10503,7 +10546,7 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
       <optional>
          <attribute name="opening">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Specifies the distance between the lines at the open end of a hairpin dynamic mark.</a:documentation>
-            <ref name="mei_data.MEASUREMENTABS"/>
+            <ref name="mei_data.MEASUREMENTUNSIGNED"/>
          </attribute>
       </optional>
    </define>
