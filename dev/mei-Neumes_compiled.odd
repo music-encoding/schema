@@ -149,10 +149,22 @@
         <graphic url="../images/ExampleImages/accidAEU-overview.png" height="50%" width="50%"/>
       </p>
     </remarks>
+  </macroSpec><macroSpec rend="add" ident="data.ACCIDENTAL.persian" module="MEI" type="dt">
+    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Persian accidental values (written and gestural/performed).</desc>
+    <content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <valList type="closed">
+        <valItem ident="koron">
+          <desc xml:lang="en">Koron (quarter tone flat).</desc>
+        </valItem>
+        <valItem ident="sori">
+          <desc xml:lang="en">Sori (quarter tone sharp).</desc>
+        </valItem>
+      </valList>
+    </content>
   </macroSpec><macroSpec rend="add" ident="data.ACCIDENTAL.GESTURAL" module="MEI" type="dt">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Gestural/performed standard accidental values.</desc>
     <content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-      <alternate minOccurs="1" maxOccurs="1"><macroRef key="data.ACCIDENTAL.GESTURAL.basic"/><macroRef key="data.ACCIDENTAL.GESTURAL.extended"/><macroRef key="data.ACCIDENTAL.aeu"/></alternate>
+      <alternate minOccurs="1" maxOccurs="1"><macroRef key="data.ACCIDENTAL.GESTURAL.basic"/><macroRef key="data.ACCIDENTAL.GESTURAL.extended"/><macroRef key="data.ACCIDENTAL.aeu"/><macroRef key="data.ACCIDENTAL.persian"/></alternate>
     </content>
   </macroSpec><macroSpec rend="add" ident="data.ACCIDENTAL.GESTURAL.basic" module="MEI" type="dt">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Gestural/performed accidental values.</desc>

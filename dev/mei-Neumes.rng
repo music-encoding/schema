@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2022-10-02T12:46:33Z. .
+Schema generated from ODD source 2022-10-02T15:44:03Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -5753,11 +5753,20 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Büyük mücenneb (flat).</a:documentation>
       </choice>
    </define>
+   <define name="mei_data.ACCIDENTAL.persian">
+      <choice>
+         <value>koron</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Koron (quarter tone flat).</a:documentation>
+         <value>sori</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sori (quarter tone sharp).</a:documentation>
+      </choice>
+   </define>
    <define name="mei_data.ACCIDENTAL.GESTURAL">
       <choice>
          <ref name="mei_data.ACCIDENTAL.GESTURAL.basic"/>
          <ref name="mei_data.ACCIDENTAL.GESTURAL.extended"/>
          <ref name="mei_data.ACCIDENTAL.aeu"/>
+         <ref name="mei_data.ACCIDENTAL.persian"/>
       </choice>
    </define>
    <define name="mei_data.ACCIDENTAL.GESTURAL.basic">

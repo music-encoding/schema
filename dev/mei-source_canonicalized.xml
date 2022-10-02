@@ -18,7 +18,7 @@
 -->
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<!--canonicalized: 2022-10-02T12:46:47.797Z-->
+<!--canonicalized: 2022-10-02T15:44:17.228Z-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -13984,6 +13984,19 @@
       </p>
     </remarks>
   </macroSpec>
+  <macroSpec ident="data.ACCIDENTAL.persian" module="MEI" type="dt">
+    <desc xml:lang="en">Persian accidental values (written and gestural/performed).</desc>
+    <content>
+      <valList type="closed">
+        <valItem ident="koron">
+          <desc xml:lang="en">Koron (quarter tone flat).</desc>
+        </valItem>
+        <valItem ident="sori">
+          <desc xml:lang="en">Sori (quarter tone sharp).</desc>
+        </valItem>
+      </valList>
+    </content>
+  </macroSpec>
   <macroSpec ident="data.ACCIDENTAL.GESTURAL" module="MEI" type="dt">
     <desc xml:lang="en">Gestural/performed standard accidental values.</desc>
     <content>
@@ -13991,6 +14004,7 @@
         <macroRef key="data.ACCIDENTAL.GESTURAL.basic"/>
         <macroRef key="data.ACCIDENTAL.GESTURAL.extended"/>
         <macroRef key="data.ACCIDENTAL.aeu"/>
+        <macroRef key="data.ACCIDENTAL.persian"/>
       </alternate>
     </content>
   </macroSpec>
