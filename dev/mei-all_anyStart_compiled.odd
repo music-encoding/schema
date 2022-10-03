@@ -2817,7 +2817,29 @@
         <rng:param name="maxInclusive">2</rng:param>
       </rng:data>
     </content>
-  </macroSpec><macroSpec rend="add" ident="data.PERCENT" module="MEI" type="dt">
+  </macroSpec><macroSpec rend="add" ident="data.PEDALSTYLE" module="MEI" type="dt">
+    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Determines whether piano pedal marks should be rendered as lines or as terms.</desc>
+    <content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <valList type="closed">
+        <valItem ident="line">
+          <desc xml:lang="en">Continuous line with start and end positions rendered by vertical bars and bounces
+            shown by upward-pointing "blips".</desc>
+        </valItem>
+        <valItem ident="pedline">
+          <desc xml:lang="en">Pedal down and half pedal rendered with "Ped." followed by a line with 
+            end position rendered by vertical bars and bounces shown by upward-pointing "blips".</desc>
+        </valItem>
+        <valItem ident="pedstar">
+          <desc xml:lang="en">Pedal down and half pedal rendered with "Ped.", pedal up rendered by "*", pedal
+            "bounce" rendered with "* Ped.".</desc>
+        </valItem>
+        <valItem ident="altpedstar">
+          <desc xml:lang="en">Pedal up and down indications same as with "pedstar", but bounce is rendered with
+            "Ped." only.</desc>
+        </valItem>
+      </valList>
+    </content>
+</macroSpec><macroSpec rend="add" ident="data.PERCENT" module="MEI" type="dt">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Positive decimal number plus '%', <abbr>i.e.</abbr>, [0-9]+(\.?[0-9]*)?\%.</desc>
     <content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <rng:data type="token">
@@ -4670,21 +4692,9 @@
       rendition.</desc>
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="pedal.style" usage="opt">
-        <desc xml:lang="en">Determines whether piano pedal marks should be rendered as lines or as terms.</desc>
-        <valList type="closed">
-          <valItem ident="line">
-            <desc xml:lang="en">Continuous line with start and end positions rendered by vertical bars and bounces
-              shown by upward-pointing "blips".</desc>
-          </valItem>
-          <valItem ident="pedstar">
-            <desc xml:lang="en">Pedal down and half pedal rendered with "Ped.", pedal up rendered by "*", pedal
-              "bounce" rendered with "* Ped.".</desc>
-          </valItem>
-          <valItem ident="altpedstar">
-            <desc xml:lang="en">Pedal up and down indications same as with "pedstar", but bounce is rendered with
-              "Ped." only.</desc>
-          </valItem>
-        </valList>
+        <datatype>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.PEDALSTYLE"/>
+        </datatype>
       </attDef>
     </attList>
   </classSpec><classSpec rend="add" ident="att.reh.log" module="MEI.cmn" type="atts">
@@ -20113,21 +20123,9 @@
     </classes>
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="form" usage="opt">
-        <desc xml:lang="en">Determines whether piano pedal marks should be rendered as lines or as terms.</desc>
-        <valList type="closed">
-          <valItem ident="line">
-            <desc xml:lang="en">Continuous line with start and end positions rendered by vertical bars and bounces
-              shown by upward-pointing "blips".</desc>
-          </valItem>
-          <valItem ident="pedstar">
-            <desc xml:lang="en">Pedal down and half pedal rendered with "Ped.", pedal up rendered by "*", pedal
-              "bounce" rendered with "* Ped.".</desc>
-          </valItem>
-          <valItem ident="altpedstar">
-            <desc xml:lang="en">Pedal up and down indications same as with "pedstar", but bounce is rendered with
-              "Ped." only.</desc>
-          </valItem>
-        </valList>
+        <datatype>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.PEDALSTYLE"/>
+        </datatype>
       </attDef>
     </attList>
   </classSpec><classSpec rend="add" ident="att.phrase.vis" module="MEI.visual" type="atts">
