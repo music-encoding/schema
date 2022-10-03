@@ -10181,7 +10181,7 @@
       <attDef ident="len" usage="opt">
         <desc xml:lang="en">Encodes the stem length.</desc>
         <datatype>
-          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.MEASUREMENTABS"/>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.MEASUREMENTUNSIGNED"/>
         </datatype>
       </attDef>
     </attList>
@@ -10252,7 +10252,7 @@
       <attDef ident="len" usage="opt">
         <desc xml:lang="en">Encodes the stem length.</desc>
         <datatype>
-          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.MEASUREMENTABS"/>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.MEASUREMENTUNSIGNED"/>
         </datatype>
       </attDef>
       <attDef ident="form" usage="opt">
