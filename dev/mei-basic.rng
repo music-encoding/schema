@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2022-10-03T12:35:10Z. .
+Schema generated from ODD source 2022-10-03T15:36:24Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -2621,6 +2621,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
       </optional>
    </define>
    <define name="mei_att.ornamentAccid.attributes">
+      <ref name="mei_att.ornamentAccid.ges.attributes"/>
       <ref name="mei_att.ornamentAccid.attribute.accidupper"/>
       <ref name="mei_att.ornamentAccid.attribute.accidlower"/>
    </define>
@@ -3423,6 +3424,26 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    </define>
    <define name="mei_att.ornam.ges.attributes">
       <empty/>
+   </define>
+   <define name="mei_att.ornamentAccid.ges.attributes">
+      <ref name="mei_att.ornamentAccid.ges.attribute.accidupper.ges"/>
+      <ref name="mei_att.ornamentAccid.ges.attribute.accidlower.ges"/>
+   </define>
+   <define name="mei_att.ornamentAccid.ges.attribute.accidupper.ges">
+      <optional>
+         <attribute name="accidupper.ges">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records the sounding accidental associated with an upper neighboring note.</a:documentation>
+            <ref name="mei_data.ACCIDENTAL.GESTURAL"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.ornamentAccid.ges.attribute.accidlower.ges">
+      <optional>
+         <attribute name="accidlower.ges">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records the sounding accidental associated with a lower neighboring note.</a:documentation>
+            <ref name="mei_data.ACCIDENTAL.GESTURAL"/>
+         </attribute>
+      </optional>
    </define>
    <define name="mei_att.pb.ges.attributes">
       <empty/>

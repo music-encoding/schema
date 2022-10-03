@@ -5721,6 +5721,9 @@
     </attList>
   </classSpec><classSpec rend="add" ident="att.ornamentAccid" module="MEI.cmnOrnaments" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Accidentals associated with ornaments.</desc>
+    <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <memberOf key="att.ornamentAccid.ges"/>
+    </classes>
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="accidupper" usage="opt">
         <desc xml:lang="en">Records the written accidental associated with an upper neighboring note.</desc>
@@ -7802,6 +7805,22 @@
       <memberOf key="att.duration.gestural"/>
       <memberOf key="att.timestamp2.gestural"/>
     </classes>
+  </classSpec><classSpec rend="add" ident="att.ornamentAccid.ges" module="MEI.gestural" type="atts">
+    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Gestural accidentals associated with ornaments.</desc>
+    <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <attDef ident="accidupper.ges" usage="opt">
+        <desc xml:lang="en">Records the sounding accidental associated with an upper neighboring note.</desc>
+        <datatype>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.ACCIDENTAL.GESTURAL"/>
+        </datatype>
+      </attDef>
+      <attDef ident="accidlower.ges" usage="opt">
+        <desc xml:lang="en">Records the sounding accidental associated with a lower neighboring note.</desc>
+        <datatype>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.ACCIDENTAL.GESTURAL"/>
+        </datatype>
+      </attDef>
+    </attList>
   </classSpec><classSpec rend="add" ident="att.ossia.ges" module="MEI.gestural" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Gestural domain attributes.</desc>
   </classSpec><classSpec rend="add" ident="att.pad.ges" module="MEI.gestural" type="atts">
