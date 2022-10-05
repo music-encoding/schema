@@ -19,7 +19,7 @@
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href=../../../source/"validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2022-10-04T18:41:14.443Z-->
+<!--canonicalized: 2022-10-05T08:12:23.06Z-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -16908,7 +16908,7 @@
     </content>
   </macroSpec>
   <macroSpec ident="data.PEDALSTYLE" module="MEI" type="dt">
-    <desc xml:lang="en">Determines whether piano pedal marks should be rendered as lines or as terms.</desc>
+    <desc xml:lang="en">Styling of piano pedal marks.</desc>
     <content>
       <valList type="closed">
         <valItem ident="line">
@@ -19083,6 +19083,7 @@
       rendition.</desc>
     <attList>
       <attDef ident="pedal.style" usage="opt">
+        <desc xml:lang="en">Determines whether piano pedal marks should be rendered as lines or as terms.</desc>
         <datatype>
           <rng:ref name="data.PEDALSTYLE"/>
         </datatype>
@@ -41288,6 +41289,7 @@
     </classes>
     <attList>
       <attDef ident="form" usage="opt">
+        <desc xml:lang="en">Determines whether piano pedal marks should be rendered as lines or as terms.</desc>
         <datatype>
           <rng:ref name="data.PEDALSTYLE"/>
         </datatype>

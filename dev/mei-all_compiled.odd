@@ -2820,7 +2820,7 @@
       </rng:data>
     </content>
   </macroSpec><macroSpec rend="add" ident="data.PEDALSTYLE" module="MEI" type="dt">
-    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Determines whether piano pedal marks should be rendered as lines or as terms.</desc>
+    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Styling of piano pedal marks.</desc>
     <content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <valList type="closed">
         <valItem ident="line">
@@ -4694,6 +4694,7 @@
       rendition.</desc>
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="pedal.style" usage="opt">
+        <desc xml:lang="en">Determines whether piano pedal marks should be rendered as lines or as terms.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.PEDALSTYLE"/>
         </datatype>
@@ -20192,6 +20193,7 @@
     </classes>
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="form" usage="opt">
+        <desc xml:lang="en">Determines whether piano pedal marks should be rendered as lines or as terms.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.PEDALSTYLE"/>
         </datatype>
