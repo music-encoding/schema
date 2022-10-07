@@ -20615,7 +20615,7 @@
             <sch:ns prefix="mei" uri="http://www.music-encoding.org/ns/mei"/>
             <sch:ns prefix="xlink" uri="http://www.w3.org/1999/xlink"/>
           </constraint>
-        </constraintSpec><moduleRef url="https://www.tei-c.org/release/xml/tei/custom/schema/relaxng/svg11.rng" prefix="svg_">
+        </constraintSpec><moduleRef url="../source/svg11.rng" prefix="svg_">
           <content>
             <rng:define name="mei_model.graphicLike" combine="choice">
               <ref xmlns="http://relaxng.org/ns/structure/1.0" name="svg_svg"/>

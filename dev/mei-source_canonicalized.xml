@@ -19,7 +19,7 @@
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href=../../../source/"validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2022-10-05T08:12:23.06Z-->
+<!--canonicalized: 2022-10-07T13:40:20.442Z-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
