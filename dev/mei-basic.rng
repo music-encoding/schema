@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2022-10-07T13:39:50Z. .
+Schema generated from ODD source 2022-10-08T16:41:58Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -10593,6 +10593,8 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
       <ref name="mei_att.placementRelStaff.attributes"/>
       <ref name="mei_att.hairpin.vis.attribute.opening"/>
       <ref name="mei_att.hairpin.vis.attribute.closed"/>
+      <ref name="mei_att.hairpin.vis.attribute.opening.vertical"/>
+      <ref name="mei_att.hairpin.vis.attribute.angle.optimize"/>
    </define>
    <define name="mei_att.hairpin.vis.attribute.opening">
       <optional>
@@ -10606,6 +10608,22 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
       <optional>
          <attribute name="closed">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Applies to a "Rossini" hairpin, i.e., one where the normally open side is closed by a connecting line.</a:documentation>
+            <ref name="mei_data.BOOLEAN"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.hairpin.vis.attribute.opening.vertical">
+      <optional>
+         <attribute name="opening.vertical">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates that the opening points are aligned with an imaginary line that is always 90° perpendicular to the horizontal plane, regardless of any angle or start/end adjustments, including when the hairpin is angled with @angle.optimize or through @endvo/@startvo adjustments.</a:documentation>
+            <ref name="mei_data.BOOLEAN"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.hairpin.vis.attribute.angle.optimize">
+      <optional>
+         <attribute name="angle.optimize">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates that the slope of the hairpin can be adjusted to follow the content in order to optimize spacing.</a:documentation>
             <ref name="mei_data.BOOLEAN"/>
          </attribute>
       </optional>

@@ -18461,6 +18461,18 @@
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.BOOLEAN"/>
         </datatype>
       </attDef>
+      <attDef ident="opening.vertical" usage="opt">
+        <desc xml:lang="en">Indicates that the opening points are aligned with an imaginary line that is always 90° perpendicular to the horizontal plane, regardless of any angle or start/end adjustments, including when the hairpin is angled with @angle.optimize or through @endvo/@startvo adjustments.</desc>
+        <datatype>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.BOOLEAN"/>
+        </datatype>
+      </attDef>
+      <attDef ident="angle.optimize" usage="opt">
+        <desc xml:lang="en">Indicates that the slope of the hairpin can be adjusted to follow the content in order to optimize spacing.</desc>
+        <datatype>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.BOOLEAN"/>
+        </datatype>
+      </attDef>
     </attList>
   </classSpec><classSpec rend="add" ident="att.halfmRpt.vis" module="MEI.visual" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Visual domain attributes.</desc>
