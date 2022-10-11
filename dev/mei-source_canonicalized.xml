@@ -19,7 +19,7 @@
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href=../../../source/"validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2022-10-08T16:42:20.276Z-->
+<!--canonicalized: 2022-10-11T09:14:21.866Z-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -15942,6 +15942,9 @@
         <valItem ident="norm">
           <desc xml:lang="en">Meter signature rendered using traditional numeric values.</desc>
         </valItem>
+        <valItem ident="sym+norm">
+          <desc xml:lang="en">Meter signature rendered using both the symbol and the traditional numeric values.</desc>
+        </valItem>
         <valItem ident="invis">
           <desc xml:lang="en">Meter signature not rendered.</desc>
         </valItem>
@@ -18889,6 +18892,9 @@
             <desc xml:lang="en">Meter signatures with different unit values are used to express a complex metrical
               pattern that is not expressible using traditional means, such as 2/4+1/8.</desc>
           </valItem>
+          <valItem ident="other">
+            <desc xml:lang="en">Meter signatures in a relationship not covered by the values alternating, interchanging or mixed.</desc>
+          </valItem>
         </valList>
       </attDef>
     </attList>
@@ -19954,7 +19960,7 @@
   </elementSpec>
   <elementSpec ident="meterSigGrp" module="MEI.cmn">
     <gloss versionDate="2022-05-18" xml:lang="en">meter signature group</gloss>
-    <desc xml:lang="en">Used to capture alternating, interchanging, and mixed meter signatures.</desc>
+    <desc xml:lang="en">Used to capture alternating, interchanging, mixed or other non-standard meter signatures.</desc>
     <classes>
       <memberOf key="att.common"/>
       <memberOf key="att.facsimile"/>

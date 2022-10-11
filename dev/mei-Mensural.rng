@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2022-10-08T16:42:04Z. .
+Schema generated from ODD source 2022-10-11T09:14:03Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -6813,6 +6813,8 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The lower number in the meter signature is replaced by a note symbol.</a:documentation>
          <value>norm</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Meter signature rendered using traditional numeric values.</a:documentation>
+         <value>sym+norm</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Meter signature rendered using both the symbol and the traditional numeric values.</a:documentation>
          <value>invis</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Meter signature not rendered.</a:documentation>
       </choice>

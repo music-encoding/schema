@@ -1910,6 +1910,9 @@
         <valItem ident="norm">
           <desc xml:lang="en">Meter signature rendered using traditional numeric values.</desc>
         </valItem>
+        <valItem ident="sym+norm">
+          <desc xml:lang="en">Meter signature rendered using both the symbol and the traditional numeric values.</desc>
+        </valItem>
         <valItem ident="invis">
           <desc xml:lang="en">Meter signature not rendered.</desc>
         </valItem>
@@ -4516,6 +4519,9 @@
             <desc xml:lang="en">Meter signatures with different unit values are used to express a complex metrical
               pattern that is not expressible using traditional means, such as 2/4+1/8.</desc>
           </valItem>
+          <valItem ident="other">
+            <desc xml:lang="en">Meter signatures in a relationship not covered by the values alternating, interchanging or mixed.</desc>
+          </valItem>
         </valList>
       </attDef>
     </attList>
@@ -5326,7 +5332,7 @@
       <memberOf key="model.meterSigLike"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <rng:empty/>
-    </content></elementSpec><elementSpec rend="add" ident="meterSigGrp" module="MEI.cmn"><gloss xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">meter signature group</gloss><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Used to capture alternating, interchanging, and mixed meter signatures.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+    </content></elementSpec><elementSpec rend="add" ident="meterSigGrp" module="MEI.cmn"><gloss xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">meter signature group</gloss><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Used to capture alternating, interchanging, mixed or other non-standard meter signatures.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       <memberOf key="att.facsimile"/>
       <memberOf key="att.meterSigGrp.anl"/>
