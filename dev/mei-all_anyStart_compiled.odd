@@ -7289,10 +7289,19 @@
             equals "true".</sch:assert>
         </sch:rule>
       </constraint>
+    </constraintSpec><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_singleton_availability" scheme="schematron">
+      <constraint>
+        <sch:rule context="mei:manifestation[@singleton eq 'false'] | mei:manifestation[not(@singleton)]">
+          <sch:assert test="not(mei:availability)">Availability is only permitted when @singleton equals "true".</sch:assert>
+        </sch:rule>
+      </constraint>
     </constraintSpec><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="singleton">
+        <desc xml:lang="en">Indicates the manifestation is a unique physical object.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.BOOLEAN"/>
         </datatype>
+        <remarks xml:lang="en"><p>This attribute is inspired by the <ref target="https://repository.ifla.org/handle/123456789/659">FRBRoo</ref> concept of manifestation singleton.</p></remarks>
+        <remarks xml:lang="en"><p>Manifestation singleton encompasses: manuscripts, preperatory sketches, and final clean drafts.</p></remarks>
       </attDef></attList></elementSpec><elementSpec rend="add" ident="manifestationList" module="MEI.frbr"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">A container for the descriptions of physical embodiments of an expression of a
       work.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
@@ -8196,6 +8205,7 @@
     <content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="editionStmt"/></optional>
       <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="pubStmt"/></optional>
+      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="availability"/></optional>
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="physDesc"/></zeroOrMore>
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="physLoc"/></zeroOrMore>
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="seriesStmt"/></zeroOrMore>
