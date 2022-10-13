@@ -12764,8 +12764,7 @@
   </classSpec><classSpec rend="add" predeclare="true" ident="model.noteModifierLike" module="MEI.shared" type="model">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Groups elements that modify note-like features.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-      
-      <memberOf key="model.layerPart.mensural"/>
+      <memberOf key="model.layerPart.mensuralAndNeumes"/>
     </classes>
   </classSpec><classSpec rend="add" predeclare="true" ident="model.numLike" module="MEI.shared" type="model">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Groups elements that denote a number or a quantity.</desc>
@@ -12915,6 +12914,7 @@
       <memberOf key="att.accid.ges"/>
       <memberOf key="att.accid.anl"/>
       <memberOf key="model.noteModifierLike"/>
+      
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <rng:empty/>
     </content><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -14029,7 +14029,7 @@
       <memberOf key="att.layer.anl"/>
       <memberOf key="model.layerLike"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="model.annotLike"/><ref name="model.appLike"/><ref name="model.editLike"/><ref name="model.graphicPrimitiveLike"/><ref name="model.layerPart"/><ref name="model.milestoneLike.music"/><ref name="model.transcriptionLike"/></choice></zeroOrMore>
+      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="model.annotLike"/><ref name="model.appLike"/><ref name="model.editLike"/><ref name="model.graphicPrimitiveLike"/><ref name="model.layerPart"/><ref name="model.milestoneLike.music"/><ref name="model.transcriptionLike"/><ref name="divLine"/></choice></zeroOrMore>
     </content><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The term 'layer' is used instead of 'voice' in order to avoid confusion between 'voice' and
         'voice leading' and 'voicing'. The <att>def</att> attribute may be used to create a

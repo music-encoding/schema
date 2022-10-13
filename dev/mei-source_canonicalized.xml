@@ -19,7 +19,7 @@
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href=../../../source/"validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2022-10-12T17:21:11.474Z-->
+<!--canonicalized: 2022-10-13T06:18:04.159Z-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -34660,8 +34660,7 @@
   <classSpec ident="model.noteModifierLike" module="MEI.shared" type="model">
     <desc xml:lang="en">Groups elements that modify note-like features.</desc>
     <classes>
-      <!--<memberOf key="model.layerPart.mensuralAndNeumes"/>-->
-      <memberOf key="model.layerPart.mensural"/>
+      <memberOf key="model.layerPart.mensuralAndNeumes"/>
     </classes>
   </classSpec>
   <classSpec ident="model.numLike" module="MEI.shared" type="model">
@@ -34846,6 +34845,7 @@
       <memberOf key="att.accid.ges"/>
       <memberOf key="att.accid.anl"/>
       <memberOf key="model.noteModifierLike"/>
+      <memberOf key="model.syllablePart"/>
     </classes>
     <content>
       <rng:empty/>
@@ -36820,6 +36820,7 @@
           <rng:ref name="model.layerPart"/>
           <rng:ref name="model.milestoneLike.music"/>
           <rng:ref name="model.transcriptionLike"/>
+          <rng:ref name="divLine"/>
         </rng:choice>
       </rng:zeroOrMore>
     </content>

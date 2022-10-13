@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2022-10-12T17:20:56Z. .
+Schema generated from ODD source 2022-10-13T06:17:50Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -15383,6 +15383,7 @@ Suggested values include: 1] paper; 2] parch; 3] mixed</a:documentation>
          <ref name="mei_model.eventLike.neumes"/>
          <ref name="mei_model.controlEventLike"/>
          <ref name="mei_model.sylLike"/>
+         <ref name="mei_accid"/>
          <ref name="mei_clef"/>
       </choice>
    </define>
@@ -20218,6 +20219,7 @@ Suggested values include: 1] smufl</a:documentation>
       <choice>
          <ref name="mei_model.midiLike"/>
          <ref name="mei_model.layerPart.neumes"/>
+         <ref name="mei_model.noteModifierLike"/>
       </choice>
    </define>
    <define name="mei_model.lbLike">
@@ -20373,6 +20375,51 @@ Suggested values include: 1] smufl</a:documentation>
          <ref name="mei_artic"/>
          <ref name="mei_dot"/>
       </choice>
+   </define>
+   <define name="mei_model.noteModifierLike_alternation">
+      <choice>
+         <ref name="mei_accid"/>
+         <ref name="mei_artic"/>
+         <ref name="mei_dot"/>
+      </choice>
+   </define>
+   <define name="mei_model.noteModifierLike_sequence">
+      <ref name="mei_accid"/>
+      <ref name="mei_artic"/>
+      <ref name="mei_dot"/>
+   </define>
+   <define name="mei_model.noteModifierLike_sequenceOptional">
+      <optional>
+         <ref name="mei_accid"/>
+      </optional>
+      <optional>
+         <ref name="mei_artic"/>
+      </optional>
+      <optional>
+         <ref name="mei_dot"/>
+      </optional>
+   </define>
+   <define name="mei_model.noteModifierLike_sequenceOptionalRepeatable">
+      <zeroOrMore>
+         <ref name="mei_accid"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="mei_artic"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="mei_dot"/>
+      </zeroOrMore>
+   </define>
+   <define name="mei_model.noteModifierLike_sequenceRepeatable">
+      <oneOrMore>
+         <ref name="mei_accid"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="mei_artic"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="mei_dot"/>
+      </oneOrMore>
    </define>
    <define name="mei_model.numLike">
       <choice>
@@ -22754,6 +22801,7 @@ Suggested values include: 1] abstract; 2] ack; 3] appendix; 4] bibliography; 5] 
                <ref name="mei_model.layerPart"/>
                <ref name="mei_model.milestoneLike.music"/>
                <ref name="mei_model.transcriptionLike"/>
+               <ref name="mei_divLine"/>
             </choice>
          </zeroOrMore>
          <ref name="mei_att.basic.attributes"/>
