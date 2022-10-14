@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2022-10-13T20:01:40Z. .
+Schema generated from ODD source 2022-10-14T12:42:34Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -7438,6 +7438,20 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
       <data type="token">
          <param name="pattern">(\+|-)?(([0-9]|[1-9][0-9])(\.[0-9]+)?|100(\.0+)?)%</param>
       </data>
+   </define>
+   <define name="mei_data.PGFUNC">
+      <choice>
+         <value>all</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Header or footer for all pages, including the first and the last page, unless a page header or footer for the first or the last page is provided.</a:documentation>
+         <value>first</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Header or footer for the first page only.</a:documentation>
+         <value>last</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Header or footer for the last page only.</a:documentation>
+         <value>alt1</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The first of an alternating pattern of headers or footers.</a:documentation>
+         <value>alt2</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The second of an alternating pattern of headers or footers.</a:documentation>
+      </choice>
    </define>
    <define name="mei_data.PGSCALE">
       <ref name="mei_data.PERCENT"/>
@@ -23296,7 +23310,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
    </define>
    <define name="mei_pgFoot">
       <element name="pgFoot">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(page footer) A running footer on the first page. Also, used to temporarily override a running footer on individual pages.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(page footer) A running footer.</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -23317,34 +23331,10 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
                <ref name="mei_data.HORIZONTALALIGNMENT"/>
             </attribute>
          </optional>
-         <empty/>
-      </element>
-   </define>
-   <define name="mei_pgFoot2">
-      <element name="pgFoot2">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(page footer 2) A running footer on the pages following the first.</a:documentation>
-         <zeroOrMore>
-            <choice>
-               <text/>
-               <ref name="mei_model.textComponentLike"/>
-               <ref name="mei_model.textPhraseLike.limited"/>
-               <ref name="mei_model.editLike"/>
-               <ref name="mei_model.transcriptionLike"/>
-               <ref name="mei_model.appLike"/>
-               <ref name="mei_anchoredText"/>
-            </choice>
-         </zeroOrMore>
-         <ref name="mei_att.common.attributes"/>
-         <ref name="mei_att.facsimile.attributes"/>
-         <ref name="mei_att.lang.attributes"/>
          <optional>
-            <attribute name="halign">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records horizontal alignment of the page footer. Use multiple values to capture an alternating pattern.</a:documentation>
-               <list>
-                  <oneOrMore>
-                     <ref name="mei_data.HORIZONTALALIGNMENT"/>
-                  </oneOrMore>
-               </list>
+            <attribute name="func">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records the function (i.e., placement) of the page footer.</a:documentation>
+               <ref name="mei_data.PGFUNC"/>
             </attribute>
          </optional>
          <empty/>
@@ -23352,7 +23342,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
    </define>
    <define name="mei_pgHead">
       <element name="pgHead">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(page header) A running header on the first page. Also, used to temporarily override a running header on individual pages.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(page header) A running header.</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -23373,34 +23363,10 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
                <ref name="mei_data.HORIZONTALALIGNMENT"/>
             </attribute>
          </optional>
-         <empty/>
-      </element>
-   </define>
-   <define name="mei_pgHead2">
-      <element name="pgHead2">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(page header 2) A running header on the pages following the first.</a:documentation>
-         <zeroOrMore>
-            <choice>
-               <text/>
-               <ref name="mei_model.textComponentLike"/>
-               <ref name="mei_model.textPhraseLike.limited"/>
-               <ref name="mei_model.editLike"/>
-               <ref name="mei_model.transcriptionLike"/>
-               <ref name="mei_model.appLike"/>
-               <ref name="mei_anchoredText"/>
-            </choice>
-         </zeroOrMore>
-         <ref name="mei_att.common.attributes"/>
-         <ref name="mei_att.facsimile.attributes"/>
-         <ref name="mei_att.lang.attributes"/>
          <optional>
-            <attribute name="halign">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records horizontal alignment of the page header. Use multiple values to capture an alternating pattern.</a:documentation>
-               <list>
-                  <oneOrMore>
-                     <ref name="mei_data.HORIZONTALALIGNMENT"/>
-                  </oneOrMore>
-               </list>
+            <attribute name="func">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records the function (i.e., placement) of the page header.</a:documentation>
+               <ref name="mei_data.PGFUNC"/>
             </attribute>
          </optional>
          <empty/>
@@ -23807,13 +23773,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
             <ref name="mei_pgHead"/>
          </optional>
          <optional>
-            <ref name="mei_pgHead2"/>
-         </optional>
-         <optional>
             <ref name="mei_pgFoot"/>
-         </optional>
-         <optional>
-            <ref name="mei_pgFoot2"/>
          </optional>
          <optional>
             <ref name="mei_instrGrp"/>

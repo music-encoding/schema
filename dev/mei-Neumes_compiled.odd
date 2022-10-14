@@ -2733,6 +2733,30 @@
         <rng:param name="pattern">(\+|-)?(([0-9]|[1-9][0-9])(\.[0-9]+)?|100(\.0+)?)%</rng:param>
       </rng:data>
     </content>
+  </macroSpec><macroSpec rend="add" ident="data.PGFUNC" module="MEI" type="dt">
+    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Page header and footer function; a value that defines the function (i.e., the placement) of the header or the footer.</desc>
+    <content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <valList type="closed">
+        <valItem ident="all">
+          <desc xml:lang="en">Header or footer for all pages, including the first and the last page, unless a page header or footer for the first or the last page is provided.</desc>
+        </valItem>
+        <valItem ident="first">
+          <desc xml:lang="en">Header or footer for the first page only.</desc>
+        </valItem>
+        <valItem ident="last">
+          <desc xml:lang="en">Header or footer for the last page only.</desc>
+        </valItem>
+        <valItem ident="alt1">
+          <desc xml:lang="en">The first of an alternating pattern of headers or footers.</desc>
+        </valItem>
+        <valItem ident="alt2">
+          <desc xml:lang="en">The second of an alternating pattern of headers or footers.</desc>
+        </valItem>
+      </valList>
+    </content>
+    <remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+      <p>An alternating pattern with "alt1" and "alt2" starts from the first page. However, if header or footer with a func="first" is also defined, it will shift the pattern by one page. A header or footer with func="last" will interupt the pattern.</p>
+    </remarks>
   </macroSpec><macroSpec rend="add" ident="data.PGSCALE" module="MEI" type="dt">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Page scale factor; a percentage of the values in page.height and page.width.</desc>
     <content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -14197,8 +14221,7 @@
       <p>Best practice suggests the use of controlled vocabulary. Don't confuse this element with a
         figure caption. A caption is text primarily intended for display with an illustration. It
         may or may not function as a description of the illustration.</p>
-    </remarks></elementSpec><elementSpec rend="add" ident="pgFoot" module="MEI.shared"><gloss xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">page footer</gloss><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">A running footer on the first page. Also, used to temporarily override a
-      running footer on individual pages.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+    </remarks></elementSpec><elementSpec rend="add" ident="pgFoot" module="MEI.shared"><gloss xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">page footer</gloss><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">A running footer.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       <memberOf key="att.facsimile"/>
       <memberOf key="att.lang"/>
@@ -14209,32 +14232,18 @@
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.HORIZONTALALIGNMENT"/>
         </datatype>
+      </attDef><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="func" usage="opt">
+        <desc xml:lang="en">Records the function (i.e., placement) of the page footer.</desc>
+        <datatype>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.PGFUNC"/>
+        </datatype>
       </attDef></attList><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
-      <p>This element is used to capture the textual data that often appears on the first page of
+      <p>This element is used to capture the textual data that often appears in
         printed music. It may also be used for similarly formatted material in manuscripts. When
         used within <gi scheme="MEI">pb</gi>, it records a temporary suspension of the pattern of
         page footers established by the use of <gi scheme="MEI">pgFoot</gi> within a previous <gi scheme="MEI">scoreDef</gi>. Auto-generated page numbers may be indicated with a processing
-        instruction. The pgHead, pgHead2, pgFoot, and pgFoot2 elements should <hi rend="bold">*not*</hi> be used to encode textual notes/annotations.</p>
-    </remarks></elementSpec><elementSpec rend="add" ident="pgFoot2" module="MEI.shared"><gloss xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">page footer 2</gloss><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">A running footer on the pages following the first.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-      <memberOf key="att.common"/>
-      <memberOf key="att.facsimile"/>
-      <memberOf key="att.lang"/>
-    </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textComponentLike"/><ref name="model.textPhraseLike.limited"/><ref name="model.editLike"/><ref name="model.transcriptionLike"/><ref name="model.appLike"/><ref name="anchoredText"/></choice></zeroOrMore>
-    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="halign" usage="opt">
-        <desc xml:lang="en">Records horizontal alignment of the page footer. Use multiple values to capture an
-          alternating pattern.</desc>
-        <datatype maxOccurs="unbounded">
-          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.HORIZONTALALIGNMENT"/>
-        </datatype>
-      </attDef></attList><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
-      <p>This element is used to capture the textual data that often appears on the second and
-        succeeding pages of printed music. It may also be used for similarly formatted material in
-        manuscripts. Auto-generated page numbers may be indicated with a processing instruction. The
-        pgHead, pgHead2, pgFoot, and pgFoot2 elements should <hi rend="bold">*not*</hi> be used to
-        encode textual notes/annotations.</p>
-    </remarks></elementSpec><elementSpec rend="add" ident="pgHead" module="MEI.shared"><gloss xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">page header</gloss><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">A running header on the first page. Also, used to temporarily override a
-      running header on individual pages.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+        instruction. The pgHead and pgFoot elements should <hi rend="bold">*not*</hi> be used to encode textual notes/annotations.</p>
+    </remarks></elementSpec><elementSpec rend="add" ident="pgHead" module="MEI.shared"><gloss xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">page header</gloss><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">A running header.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       <memberOf key="att.facsimile"/>
       <memberOf key="att.lang"/>
@@ -14245,29 +14254,17 @@
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.HORIZONTALALIGNMENT"/>
         </datatype>
+      </attDef><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="func" usage="opt">
+        <desc xml:lang="en">Records the function (i.e., placement) of the page header.</desc>
+        <datatype>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.PGFUNC"/>
+        </datatype>
       </attDef></attList><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
-      <p>This element is used to capture the textual data that often appears on the first page of
+      <p>This element is used to capture the textual data that often appears in
         printed music. It may also be used for similarly formatted material in manuscripts. When
         used within <gi scheme="MEI">pb</gi>, it records a temporary suspension of the pattern of
         page headers established by the use of <gi scheme="MEI">pgHead</gi> within a previous <gi scheme="MEI">scoreDef</gi>. Auto-generated page numbers may be indicated with a processing
-        instruction. The pgHead, pgHead2, pgFoot, and pgFoot2 elements should <hi rend="bold">*not*</hi> be used to encode textual notes/annotations.</p>
-    </remarks></elementSpec><elementSpec rend="add" ident="pgHead2" module="MEI.shared"><gloss xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">page header 2</gloss><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">A running header on the pages following the first.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-      <memberOf key="att.common"/>
-      <memberOf key="att.facsimile"/>
-      <memberOf key="att.lang"/>
-    </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textComponentLike"/><ref name="model.textPhraseLike.limited"/><ref name="model.editLike"/><ref name="model.transcriptionLike"/><ref name="model.appLike"/><ref name="anchoredText"/></choice></zeroOrMore>
-    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="halign" usage="opt">
-        <desc xml:lang="en">Records horizontal alignment of the page header. Use multiple values to capture an
-          alternating pattern.</desc>
-        <datatype maxOccurs="unbounded">
-          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.HORIZONTALALIGNMENT"/>
-        </datatype>
-      </attDef></attList><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
-      <p>This element is used to capture the textual data that often appears at the top of the
-        second and succeeding pages of printed music. It may also be used for similarly formatted
-        material in manuscripts. Auto-generated page numbers may be indicated with a processing
-        instruction. The pgHead, pgHead2, pgFoot, and pgFoot2 elements should <hi rend="bold">not</hi> be used to encode textual notes/annotations.</p>
+        instruction. The pgHead and pgFoot elements should <hi rend="bold">*not*</hi> be used to encode textual notes/annotations.</p>
     </remarks></elementSpec><elementSpec rend="add" ident="phrase" module="MEI.shared"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Indication of 1) a "unified melodic idea" or 2) performance technique.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       <memberOf key="att.facsimile"/>
@@ -14575,9 +14572,7 @@
       <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.keySigLike"/></optional>
       <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.meterSigLike"/></optional>
       <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="pgHead"/></optional>
-      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="pgHead2"/></optional>
       <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="pgFoot"/></optional>
-      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="pgFoot2"/></optional>
       <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="instrGrp"/></optional>
       <choice xmlns="http://relaxng.org/ns/structure/1.0"><optional><ref name="model.staffGrpLike"/></optional></choice>
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="grpSym"/></zeroOrMore>
