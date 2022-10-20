@@ -19,7 +19,7 @@
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href=../../../source/"validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2022-10-19T10:44:23.76953365Z-->
+<!--canonicalized: 2022-10-20T13:03:01.783619895Z-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -31625,6 +31625,12 @@
   <classSpec ident="att.distances" module="MEI.shared" type="atts">
     <desc xml:lang="en">Attributes that describe distance from the staff.</desc>
     <attList>
+      <attDef ident="dir.dist" usage="opt">
+        <desc xml:lang="en">Records the default distance from the staff for directives.</desc>
+        <datatype>
+          <rng:ref name="data.MEASUREMENTSIGNED"/>
+        </datatype>
+      </attDef>
       <attDef ident="dynam.dist" usage="opt">
         <desc xml:lang="en">Records the default distance from the staff for dynamic marks.</desc>
         <datatype>
@@ -31638,8 +31644,14 @@
           <rng:ref name="data.MEASUREMENTSIGNED"/>
         </datatype>
       </attDef>
-      <attDef ident="text.dist" usage="opt">
-        <desc xml:lang="en">Determines how far from the staff to render text elements.</desc>
+      <attDef ident="reh.dist" usage="opt">
+        <desc xml:lang="en">Records the default distance from the staff for rehearsal marks.</desc>
+        <datatype>
+          <rng:ref name="data.MEASUREMENTSIGNED"/>
+        </datatype>
+      </attDef>
+      <attDef ident="tempo.dist" usage="opt">
+        <desc xml:lang="en">Records the default distance from the staff for tempo marks.</desc>
         <datatype>
           <rng:ref name="data.MEASUREMENTSIGNED"/>
         </datatype>

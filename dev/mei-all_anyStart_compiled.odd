@@ -12934,6 +12934,12 @@
   </classSpec><classSpec rend="add" ident="att.distances" module="MEI.shared" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that describe distance from the staff.</desc>
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <attDef ident="dir.dist" usage="opt">
+        <desc xml:lang="en">Records the default distance from the staff for directives.</desc>
+        <datatype>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.MEASUREMENTSIGNED"/>
+        </datatype>
+      </attDef>
       <attDef ident="dynam.dist" usage="opt">
         <desc xml:lang="en">Records the default distance from the staff for dynamic marks.</desc>
         <datatype>
@@ -12947,8 +12953,14 @@
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.MEASUREMENTSIGNED"/>
         </datatype>
       </attDef>
-      <attDef ident="text.dist" usage="opt">
-        <desc xml:lang="en">Determines how far from the staff to render text elements.</desc>
+      <attDef ident="reh.dist" usage="opt">
+        <desc xml:lang="en">Records the default distance from the staff for rehearsal marks.</desc>
+        <datatype>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.MEASUREMENTSIGNED"/>
+        </datatype>
+      </attDef>
+      <attDef ident="tempo.dist" usage="opt">
+        <desc xml:lang="en">Records the default distance from the staff for tempo marks.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.MEASUREMENTSIGNED"/>
         </datatype>
