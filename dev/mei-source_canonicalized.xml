@@ -19,7 +19,7 @@
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href=../../../source/"validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2022-10-20T13:38:55.398761722Z-->
+<!--canonicalized: 2022-10-20T13:43:52.182892594Z-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -20787,8 +20787,7 @@
       </rng:zeroOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on the teiCorpus element in the Text Encoding Initiative (TEI)
-        standard. The MEI instances making up the corpus may be related in a number of ways, for
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-teiCorpus.html">teiCorpus</ref> element of the Text Encoding Initiative (TEI). The MEI instances making up the corpus may be related in a number of ways, for
         example, by composer, by similar instrumentation, by holding institution, etc. This
         element’s name should not be changed in order to assure an absolute minimum level of MEI
         compliance.</p>
@@ -20861,7 +20860,7 @@
         lectio difficilior, usus auctoris, etc.).</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-app.html">app</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="lem" module="MEI.critapp">
@@ -20912,7 +20911,7 @@
         should only contain those elements allowed within <gi scheme="MEI">verse</gi>.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-lem.html">lem</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="rdg" module="MEI.critapp">
@@ -20962,7 +20961,7 @@
         should only contain those elements allowed within <gi scheme="MEI">verse</gi>.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-rdg.html">rdg</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
 </specGrp>
@@ -21068,7 +21067,7 @@
         must NOT have any musical attributes.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-sp.html">sp</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="stageDir" module="MEI.drama">
@@ -21117,7 +21116,7 @@
         it’s not a descendant of <gi scheme="MEI">sp</gi>. In a textual content <gi scheme="MEI">stageDir</gi> must NOT have any musical attributes.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-stage.html">stage</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
 </specGrp>
@@ -21285,8 +21284,8 @@
         example, when used as a descendent of <gi scheme="MEI">verse</gi>, <gi scheme="MEI">abbr</gi> should only contain those elements allowed within <gi scheme="MEI">verse</gi>.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) and Encoded
-        Archival Description (EAD) standards.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-abbr.html">abbr</ref> element of the Text Encoding Initiative (TEI) and the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-abbr">abbr</ref> element of the Encoded
+        Archival Description (EAD).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="add" module="MEI.edittrans">
@@ -21342,7 +21341,7 @@
         should only contain those elements allowed within <gi scheme="MEI">verse</gi>.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-add.html">add</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="choice" module="MEI.edittrans">
@@ -21366,7 +21365,7 @@
         may be recursively nested.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-choice.html">choice</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="corr" module="MEI.edittrans">
@@ -21414,7 +21413,7 @@
         example, when used as a descendent of <gi scheme="MEI">verse</gi>, <gi scheme="MEI">corr</gi> should only contain those elements allowed within <gi scheme="MEI">verse</gi>.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-corr.html">corr</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="cpMark" module="MEI.edittrans">
@@ -21530,7 +21529,7 @@
         example, when used as a descendent of <gi scheme="MEI">verse</gi>, <gi scheme="MEI">damage</gi> should only contain those elements allowed within <gi scheme="MEI">verse</gi>.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-damage.html">damage</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="del" module="MEI.edittrans">
@@ -21581,8 +21580,7 @@
         should only contain those elements allowed within <gi scheme="MEI">verse</gi>.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on elements in the Text Encoding Initiative (TEI) and Encoded
-        Archival Description (EAD) standards.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-del.html">del</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="expan" module="MEI.edittrans">
@@ -21631,8 +21629,8 @@
         example, when used as a descendent of <gi scheme="MEI">verse</gi>, <gi scheme="MEI">expan</gi> should only contain those elements allowed within <gi scheme="MEI">verse</gi>.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on elements in the Text Encoding Initiative (TEI) and Encoded
-        Archival Description (EAD) standards.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-expan.html">expan</ref> element of the Text Encoding Initiative (TEI) and the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-expan">expan</ref> element of the Encoded
+        Archival Description (EAD).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="gap" module="MEI.edittrans">
@@ -21666,7 +21664,7 @@
         certainty ascribed to the identification of the extent of the missing material.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-gap.html">gap</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="handShift" module="MEI.edittrans">
@@ -21736,7 +21734,7 @@
         hand.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-handShift.html">handShift</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="metaMark" module="MEI.edittrans">
@@ -21864,7 +21862,7 @@
         example, when used as a descendent of <gi scheme="MEI">verse</gi>, <gi scheme="MEI">orig</gi> should only contain those elements allowed within <gi scheme="MEI">verse</gi>.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-orig.html">orig</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="reg" module="MEI.edittrans">
@@ -21914,7 +21912,7 @@
         should only contain those elements allowed within <gi scheme="MEI">verse</gi>.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-reg.html">reg</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="restore" module="MEI.edittrans">
@@ -21965,7 +21963,7 @@
         example, when used as a descendent of <gi scheme="MEI">verse</gi>, <gi scheme="MEI">restore</gi> should only contain those elements allowed within <gi scheme="MEI">verse</gi>.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-restore.html">restore</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="sic" module="MEI.edittrans">
@@ -22008,7 +22006,7 @@
         should only contain those elements allowed within <gi scheme="MEI">verse</gi>.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-sic.html">sic</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="subst" module="MEI.edittrans">
@@ -22028,7 +22026,7 @@
       </rng:oneOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-subst.html">subst</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="supplied" module="MEI.edittrans">
@@ -22081,7 +22079,7 @@
         example, when used as a descendent of <gi scheme="MEI">verse</gi>, <gi scheme="MEI">supplied</gi> should only contain those elements allowed within <gi scheme="MEI">verse</gi>.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-supplied.html">supplied</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="unclear" module="MEI.edittrans">
@@ -22136,7 +22134,7 @@
         example, when used as a descendent of <gi scheme="MEI">verse</gi>, <gi scheme="MEI">unclear</gi> should only contain those elements allowed within <gi scheme="MEI">verse</gi>.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-unclear.html">unclear</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
 </specGrp>
@@ -22250,7 +22248,7 @@
         particular source described in the header.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-facsimile.html">facsimile</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="surface" module="MEI.facsimile">
@@ -22282,7 +22280,7 @@
         occurring on this surface.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-surface.html">surface</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="zone" module="MEI.facsimile">
@@ -22303,7 +22301,7 @@
     <remarks xml:lang="en">
       <p>Scalable Vector Graphics (SVG) markup may be used when allowed by the graphicLike
         model.</p>
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-zone.html">zone</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
 </specGrp>
@@ -22373,8 +22371,7 @@
       </rng:zeroOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on the figure element in the Text Encoding Initiative (TEI)
-        standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-figure.html">figure</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="figDesc" module="MEI.figtable">
@@ -22407,7 +22404,7 @@
         with an illustration. It may or may not function as a description of the illustration.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-figDesc.html">figDesc</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="graphic" module="MEI.figtable">
@@ -22461,7 +22458,7 @@
       </attDef>
     </attList>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-graphic.html">graphic</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="table" module="MEI.figtable">
@@ -22485,8 +22482,8 @@
       </rng:optional>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on elements in the Encoded Archival Description (EAD), Text
-        Encoding Initiative (TEI), and HTML standards.</p>
+      <p>The model of this element is based on the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-table">table</ref> element of the Encoded Archival Description (EAD), the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-table.html">table</ref> element of the Text
+        Encoding Initiative (TEI), and the <ref target="https://html.spec.whatwg.org/#the-table-element">table</ref> element of <abbr>HTML</abbr>.</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="td" module="MEI.figtable">
@@ -22516,7 +22513,7 @@
         information.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the HTML standard.</p>
+      <p>The model of this element is based on the <ref target="https://html.spec.whatwg.org/#the-td-element">td</ref> element of <abbr>HTML</abbr>.</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="th" module="MEI.figtable">
@@ -22546,7 +22543,7 @@
         information.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the HTML standard.</p>
+      <p>The model of this element is based on the <ref target="https://html.spec.whatwg.org/#the-th-element">th</ref> element of <abbr>HTML</abbr>.</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="tr" module="MEI.figtable">
@@ -22571,7 +22568,7 @@
       <p>More precise rendition of the table and its cells can be specified in a style sheet.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the HTML standard.</p>
+      <p>The model of this element is based on the <ref target="https://html.spec.whatwg.org/#the-tr-element">tr</ref> element of <abbr>HTML</abbr>.</p>
     </remarks>
   </elementSpec>
 </specGrp>
@@ -24534,8 +24531,7 @@
         afforded by copyright.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Encoded Archival Description (EAD)
-        standard.</p>
+      <p>The model of this element is based on the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-accessrestrict">accessrestrict</ref> element of the Encoded Archival Description (EAD).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="acquisition" module="MEI.header">
@@ -24551,7 +24547,7 @@
       <rng:ref name="macro.struc-unstrucContent"/>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-acquisition.html">acquisition</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="altId" module="MEI.header">
@@ -24593,7 +24589,7 @@
       </rng:zeroOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-appInfo.html">appInfo</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="application" module="MEI.header">
@@ -24626,7 +24622,7 @@
       </attDef>
     </attList>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-application.html">application</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="attUsage" module="MEI.header">
@@ -24694,8 +24690,7 @@
       <p>When used within the <gi scheme="MEI">fileDesc</gi> element, <gi scheme="MEI">availability</gi> indicates access to the MEI-encoded document itself.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on elements in the Text Encoding Initiative (TEI) and Encoded
-        Archival Description (EAD) standards.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-availability.html">availability</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="bifolium" module="MEI.header">
@@ -24890,8 +24885,7 @@
         new version that supersedes earlier versions.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Encoded Archival Description (EAD)
-        standard.</p>
+      <p>The model of this element is based on the respective element of the Encoded Archival Description (EAD).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="changeDesc" module="MEI.header">
@@ -25026,8 +25020,7 @@
       <rng:ref name="macro.struc-unstrucContent"/>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Encoded Archival Description (EAD)
-        standard.</p>
+      <p>The model of this element is based on the respective element of the Encoded Archival Description (EAD).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="contentItem" module="MEI.header">
@@ -25167,7 +25160,7 @@
       </attDef>
     </attList>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-correction.html">correction</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="cutout" module="MEI.header">
@@ -25327,8 +25320,8 @@
       </rng:oneOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on elements in the Text Encoding Initiative (TEI) and Encoded
-        Archival Description (EAD) standards.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-editionStmt.html">editionStmt</ref> element of the Text Encoding Initiative (TEI) and the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-editionstmt">editionstmt</ref> Encoded
+        Archival Description (EAD).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="editorialDecl" module="MEI.header">
@@ -25361,7 +25354,7 @@
       </rng:choice>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-editorialDecl.html">editorialDecl</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="encodingDesc" module="MEI.header">
@@ -25401,7 +25394,7 @@
       </rng:optional>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-encodingDesc.html">encodingDesc</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="exhibHist" module="MEI.header">
@@ -25436,8 +25429,7 @@
       </rng:choice>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Encoded Archival Description (EAD)
-        standard.</p>
+      <p>The model of this element is based on the <abbr>MARC</abbr> <ref target="https://www.loc.gov/marc/bibliographic/bd585.html">585</ref> field.</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="extMeta" module="MEI.header">
@@ -25504,8 +25496,8 @@
       <p>Extent in this context represents file size.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on elements in the Text Encoding Initiative (TEI) and Encoded
-        Archival Description (EAD) standards.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-fileDesc.html">fileDesc</ref> element of the Text Encoding Initiative (TEI) and the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-filedesc">filedesc</ref> element of the Encoded
+        Archival Description (EAD).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="foliaDesc" module="MEI.header">
@@ -25589,7 +25581,7 @@
         element.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-handNote.html">handNote</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="handList" module="MEI.header">
@@ -25619,7 +25611,7 @@
       </constraint>
     </constraintSpec>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-handNotes.html">handNotes</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="history" module="MEI.header">
@@ -25752,7 +25744,7 @@
       </rng:oneOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-interpretation.html">interpretation</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="key" module="MEI.header">
@@ -25805,8 +25797,8 @@
         <att>auth.uri</att> attribute, respectively.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on elements in the Text Encoding Initiative (TEI) and Encoded
-        Archival Description (EAD) standards.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-language.html">language</ref> element of the Text Encoding Initiative (TEI) and the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-language">language</ref> element of the Encoded
+        Archival Description (EAD).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="langUsage" module="MEI.header">
@@ -25827,7 +25819,7 @@
       </rng:oneOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-langUsage.html">langUsage</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="meiHead" module="MEI.header">
@@ -25976,7 +25968,7 @@
       </attDef>
     </attList>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-namespace.html">namespace</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="normalization" module="MEI.header">
@@ -25999,7 +25991,7 @@
       </rng:oneOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-normalization.html">normalization</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="notesStmt" module="MEI.header">
@@ -26018,7 +26010,7 @@
       </rng:oneOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-notesStmt.html">notesStmt</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="otherChar" module="MEI.header">
@@ -26272,8 +26264,7 @@
         meta-data rather than a transcription.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Encoded Archival Description (EAD)
-        standard.</p>
+      <p>The model of this element is based on the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-physdesc">physdesc</ref> element of the Encoded Archival Description (EAD).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="physMedium" module="MEI.header">
@@ -26295,9 +26286,8 @@
         multiple elements may be used, one for each medium.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on elements in the Encoded Archival Description (EAD) standard. It
-        has the same function as the material element in the Text Encoding Initiative (TEI)
-        standard.</p>
+      <p>The model of this element is based on respective elements of the Encoded Archival Description (EAD). It
+        has the same function as the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-material.html">material</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="plateNum" module="MEI.header">
@@ -26396,7 +26386,7 @@
       </rng:oneOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-projectDesc.html">projectDesc</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="provenance" module="MEI.header">
@@ -26429,8 +26419,8 @@
       </rng:choice>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on elements in the Encoded Archival Description (EAD) and Text
-        Encoding Initiative (TEI) standards.</p>
+      <p>The model of this element is based on the respective element of the Encoded Archival Description (EAD) and the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-provenance.html">provenance</ref> element of the Text
+        Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="pubStmt" module="MEI.header">
@@ -26459,7 +26449,7 @@
       <p>When an item is unpublished, use only the <gi scheme="MEI">unpub</gi> sub-element.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-publicationStmt.html">publicationStmt</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="revisionDesc" module="MEI.header">
@@ -26483,7 +26473,7 @@
         recent alteration first.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-revisionDesc.html">revisionDesc</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="samplingDecl" module="MEI.header">
@@ -26506,7 +26496,7 @@
       </rng:oneOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-samplingDecl.html">samplingDecl</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="scoreFormat" module="MEI.header">
@@ -26542,7 +26532,7 @@
       </rng:oneOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-segmentation.html">segmentation</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="seriesStmt" module="MEI.header">
@@ -26581,7 +26571,7 @@
         provided within seriesStmt for the description of a sub-series.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-seriesStmt.html">seriesStmt</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="soundChan" module="MEI.header">
@@ -26666,8 +26656,8 @@
         in the content of this particular source.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on elements in the Text Encoding Initiative (TEI) and Encoded
-        Archival Description (EAD) standards.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-source.html">source</ref> element of the Text Encoding Initiative (TEI) and the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-source">source</ref> element of the Encoded
+        Archival Description (EAD).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="sourceDesc" module="MEI.header">
@@ -26725,7 +26715,7 @@
       </rng:oneOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-stdVals.html">stdVals</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="sysReq" module="MEI.header">
@@ -26761,7 +26751,7 @@
       </rng:zeroOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-tagsDecl.html">tagsDecl</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="tagUsage" module="MEI.header">
@@ -26814,7 +26804,7 @@
       </attDef>
     </attList>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-tagUsage.html">tagUsage</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="taxonomy" module="MEI.header">
@@ -26894,7 +26884,7 @@
       </rng:zeroOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-titleStmt.html">titleStmt</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="trackConfig" module="MEI.header">
@@ -26964,8 +26954,7 @@
         solutions used, techniques applied, etc.), the date the treatment was applied, etc.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Encoded Archival Description (EAD)
-        standard.</p>
+      <p>The model of this element is based on the respective element of the Encoded Archival Description (EAD).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="treatSched" module="MEI.header">
@@ -27000,8 +26989,7 @@
       </rng:choice>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Encoded Archival Description (EAD)
-        standard.</p>
+      <p>The model of this element is based on the respective element of the Encoded Archival Description (EAD).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="unpub" module="MEI.header">
@@ -27044,8 +27032,7 @@
         affecting the availability of the material.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Encoded Archival Description (EAD)
-        standard.</p>
+      <p>The model of this element is based on the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-userestrict">userestrict</ref> element of the Encoded Archival Description (EAD).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="watermark" module="MEI.header">
@@ -27066,7 +27053,7 @@
         facsimile image.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-watermark.html">watermark</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="work" module="MEI.header">
@@ -28457,7 +28444,7 @@
       <rng:ref name="macro.struc-unstrucContent"/>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-accMat.html">accMat</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="addDesc" module="MEI.msDesc">
@@ -28474,7 +28461,7 @@
       <rng:ref name="macro.struc-unstrucContent"/>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-additions.html">additions</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="binding" module="MEI.msDesc">
@@ -28508,7 +28495,7 @@
       </attDef>
     </attList>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-binding.html">binding</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="bindingDesc" module="MEI.msDesc">
@@ -28546,7 +28533,7 @@
       </rng:choice>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-bindingDesc.html">bindingDesc</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="catchwords" module="MEI.msDesc">
@@ -28563,7 +28550,7 @@
       <rng:ref name="macro.struc-unstrucContent"/>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-catchwords.html">catchwords</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="collation" module="MEI.msDesc">
@@ -28578,7 +28565,7 @@
       <rng:ref name="macro.struc-unstrucContent"/>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-collation.html">collation</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="colophon" module="MEI.msDesc">
@@ -28595,7 +28582,7 @@
       <rng:ref name="macro.struc-unstrucContent"/>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-colophon.html">colophon</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="decoDesc" module="MEI.msDesc">
@@ -28630,7 +28617,7 @@
       </rng:choice>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-decoDesc.html">decoDesc</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="decoNote" module="MEI.msDesc">
@@ -28665,7 +28652,7 @@
       </rng:choice>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-decoNote.html">decoNote</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="explicit" module="MEI.msDesc">
@@ -28682,7 +28669,7 @@
       <rng:ref name="macro.struc-unstrucContent"/>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-explicit.html">explicit</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="foliation" module="MEI.msDesc">
@@ -28697,7 +28684,7 @@
       <rng:ref name="macro.struc-unstrucContent"/>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-foliation.html">foliation</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="heraldry" module="MEI.msDesc">
@@ -28715,7 +28702,7 @@
       <rng:ref name="macro.struc-unstrucContent"/>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-heraldry.html">heraldry</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="layout" module="MEI.msDesc">
@@ -28786,7 +28773,7 @@
       </attDef>
     </attList>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-layout.html">layout</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="layoutDesc" module="MEI.msDesc">
@@ -28820,7 +28807,7 @@
       </rng:choice>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-layoutDesc.html">layoutDesc</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="locus" module="MEI.msDesc">
@@ -28865,7 +28852,7 @@
       </attDef>
     </attList>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-locus.html">locus</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="locusGrp" module="MEI.msDesc">
@@ -28894,7 +28881,7 @@
       </attDef>
     </attList>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-locusGrp.html">locusGrp</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="rubric" module="MEI.msDesc">
@@ -28925,7 +28912,7 @@
       </attDef>
     </attList>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-rubric.html">rubric</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="scriptDesc" module="MEI.msDesc">
@@ -28960,7 +28947,7 @@
       </rng:choice>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-scriptDesc.html">scriptDesc</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="scriptNote" module="MEI.msDesc">
@@ -28976,7 +28963,7 @@
       <rng:ref name="macro.struc-unstrucContent"/>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-scriptNote.html">scriptNote</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="seal" module="MEI.msDesc">
@@ -29017,7 +29004,7 @@
       </attDef>
     </attList>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-seal.html">seal</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="sealDesc" module="MEI.msDesc">
@@ -29058,7 +29045,7 @@
       </rng:choice>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-sealDesc.html">sealDesc</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="secFolio" module="MEI.msDesc">
@@ -29077,7 +29064,7 @@
       <rng:ref name="macro.struc-unstrucContent"/>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-secFol.html">secFol</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="signatures" module="MEI.msDesc">
@@ -29093,7 +29080,7 @@
       <rng:ref name="macro.struc-unstrucContent"/>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-signatures.html">signatures</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="stamp" module="MEI.msDesc">
@@ -29112,7 +29099,7 @@
       <rng:ref name="macro.struc-unstrucContent"/>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-stamp.html">stamp</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="support" module="MEI.msDesc">
@@ -29136,7 +29123,7 @@
       </rng:zeroOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-support.html">support</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="supportDesc" module="MEI.msDesc">
@@ -29204,7 +29191,7 @@
       </attDef>
     </attList>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-supportDesc.html">supportDesc</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="typeDesc" module="MEI.msDesc">
@@ -29239,7 +29226,7 @@
       </rng:choice>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-typeDesc.html">typeDesc</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="typeNote" module="MEI.msDesc">
@@ -29255,7 +29242,7 @@
       <rng:ref name="macro.struc-unstrucContent"/>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-typeNote.html">typeNote</ref> element in the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <constraintSpec ident="check_msDesc_inline" module="MEI.msDesc" scheme="isoschematron">
@@ -29345,7 +29332,7 @@
       </rng:zeroOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-addName.html">addName</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="bloc" module="MEI.namesdates">
@@ -29371,7 +29358,7 @@
       </rng:zeroOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-bloc.html">bloc</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="corpName" module="MEI.namesdates">
@@ -29406,8 +29393,7 @@
         using the <att>auth</att> attribute.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Encoded Archival Description (EAD)
-        standard.</p>
+      <p>The model of this element is based on the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-corpname">corpname</ref> element of the Encoded Archival Description (EAD).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="country" module="MEI.namesdates">
@@ -29434,7 +29420,7 @@
       </rng:zeroOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-country.html">country</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="district" module="MEI.namesdates">
@@ -29460,7 +29446,7 @@
       </rng:zeroOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-district.html">district</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="famName" module="MEI.namesdates">
@@ -29510,7 +29496,7 @@
       </rng:zeroOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-forename.html">forename</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="genName" module="MEI.namesdates">
@@ -29537,7 +29523,7 @@
       </rng:zeroOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-genName.html">genName</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="geogFeat" module="MEI.namesdates">
@@ -29564,7 +29550,7 @@
       </rng:zeroOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-geogFeat.html">geogFeat</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="geogName" module="MEI.namesdates">
@@ -29600,8 +29586,7 @@
         attribute.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Encoded Archival Description (EAD)
-        standard.</p>
+      <p>The model of this element is based on the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-geogname">geogname</ref> element of the Encoded Archival Description (EAD).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="nameLink" module="MEI.namesdates">
@@ -29628,7 +29613,7 @@
       </rng:zeroOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-nameLink.html">nameLink</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="periodName" module="MEI.namesdates">
@@ -29690,8 +29675,7 @@
         persName is taken may be recorded using the <att>auth</att> attribute.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Encoded Archival Description (EAD)
-        standard.</p>
+      <p>The model of this element is based on the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-persname">persname</ref> element of the Encoded Archival Description (EAD).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="postBox" module="MEI.namesdates">
@@ -29713,7 +29697,7 @@
       </rng:zeroOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-postBox.html">postBox</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="postCode" module="MEI.namesdates">
@@ -29735,7 +29719,7 @@
       </rng:zeroOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-postCode.html">postCode</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="region" module="MEI.namesdates">
@@ -29761,7 +29745,7 @@
       </rng:zeroOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-region.html">region</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="roleName" module="MEI.namesdates">
@@ -29788,7 +29772,7 @@
       </rng:zeroOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-roleName.html">roleName</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="settlement" module="MEI.namesdates">
@@ -29814,7 +29798,7 @@
       </rng:zeroOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-settlement.html">settlement</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="street" module="MEI.namesdates">
@@ -29837,7 +29821,7 @@
       </rng:zeroOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-street.html">street</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="styleName" module="MEI.namesdates">
@@ -30650,7 +30634,7 @@
         this point in time.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-when.html">when</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
 </specGrp>
@@ -30684,8 +30668,8 @@
         or sub-elements to describe the referenced object.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on elements in the Encoded Archival Description (EAD) and Text
-        Encoding Initiative (TEI) standards.</p>
+      <p>The model of this element is based on the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-ptr">ptr</ref> element of the Encoded Archival Description (EAD) and the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-ptr.html">ptr</ref> element of the Text
+        Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="ref" module="MEI.ptrref">
@@ -30714,8 +30698,8 @@
         and sub-elements to describe the destination.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on elements in the Encoded Archival Description (EAD) and TEI
-        standards.</p>
+      <p>The model of this element is based on the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-ref">ref</ref> element of the Encoded Archival Description (EAD) and the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-ref.html">ref</ref> element of the Text
+        Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
 </specGrp>
@@ -34911,7 +34895,7 @@
       </rng:zeroOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-actor.html">actor</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="address" module="MEI.shared">
@@ -34936,8 +34920,8 @@
       </rng:choice>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) and Encoded
-        Archival Description (EAD) standards.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-address.html">address</ref> element of the Text Encoding Initiative (TEI) and the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-address">address</ref> element of the Encoded
+        Archival Description (EAD).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="addrLine" module="MEI.shared">
@@ -34963,8 +34947,8 @@
         lines of an address.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) and Encoded
-        Archival Description (EAD) standards.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-addrLine.html">addrLine</ref> element of the Text Encoding Initiative (TEI) and the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-addressline">addressline</ref> element of the Encoded
+        Archival Description (EAD).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="ambitus" module="MEI.shared">
@@ -35153,8 +35137,8 @@
       </rng:zeroOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on elements in the Text Encoding Initiative (TEI) and Encoded
-        Archival Description (EAD) standards.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-author.html">author</ref> element of the Text Encoding Initiative (TEI) and the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-author">author</ref> element of the Encoded
+        Archival Description (EAD).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="barLine" module="MEI.shared">
@@ -35226,8 +35210,8 @@
         to an external electronic resource. Do not confuse this element with <gi scheme="MEI">ref</gi>, which does not provide special bibliographic sub-elements.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on elements in the Text Encoding Initiative (TEI) and Encoded
-        Archival Description (EAD) standards.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-bibl.html">bibl</ref> element of the Text Encoding Initiative (TEI) and the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-bibref">bibref</ref> element of the Encoded
+        Archival Description (EAD).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="biblList" module="MEI.shared">
@@ -35264,7 +35248,7 @@
       </constraint>
     </constraintSpec>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-listBibl.html">listBibl</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="biblScope" module="MEI.shared">
@@ -35302,7 +35286,7 @@
     <remarks xml:lang="en">
       <p>Use the <att>from</att> and <att>to</att> attributes to regularize the beginning and ending
         values provided in the element content.</p>
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-biblScope.html">biblScope</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="biblStruct" module="MEI.shared">
@@ -35441,7 +35425,7 @@
       </rng:oneOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-castGroup.html">castGroup</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="castItem" module="MEI.shared">
@@ -35465,7 +35449,7 @@
       </rng:oneOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-castItem.html">castItem</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="castList" module="MEI.shared">
@@ -35489,7 +35473,7 @@
       </rng:oneOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-castList.html">castList</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="cb" module="MEI.shared">
@@ -35531,7 +35515,7 @@
       </attDef>
     </attList>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-cb.html">cb</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="chord" module="MEI.shared">
@@ -35730,7 +35714,7 @@
       </rng:zeroOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI).</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-creation.html">creation</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="custos" module="MEI.shared">
@@ -35778,8 +35762,8 @@
       </rng:zeroOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on elements in the Text Encoding Initiative (TEI) and Encoded
-        Archival Description (EAD) standards.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-date.html">date</ref> element of the Text Encoding Initiative (TEI) and the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-date">date</ref> element of the Encoded
+        Archival Description (EAD).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="dedicatee" module="MEI.shared">
@@ -35849,7 +35833,7 @@
       </rng:zeroOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-desc.html">desc</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="dim" module="MEI.shared">
@@ -35956,8 +35940,8 @@
         materials.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on elements in the Text Encoding Initiative (TEI) and Encoded
-        Archival Description (EAD) standards.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-dimensions.html">dimensions</ref> element of the Text Encoding Initiative (TEI) and the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-dimensions">dimensions</ref> element of the Encoded
+        Archival Description (EAD).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="dir" module="MEI.shared">
@@ -36025,7 +36009,7 @@
       </rng:zeroOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-distributor.html">distributor</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="div" module="MEI.shared">
@@ -36121,8 +36105,8 @@
       </attDef>
     </attList>
     <remarks xml:lang="en">
-      <p>Often, the <gi scheme="MEI">head</gi> sub-element identifies the <gi scheme="MEI">div</gi>’s purpose. This element is modelled on an element in the Text Encoding Initiative
-        (TEI) standard.</p>
+      <p>Often, the <gi scheme="MEI">head</gi> sub-element identifies the <gi scheme="MEI">div</gi>’s purpose. The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-div.html">div</ref> element of the Text Encoding Initiative
+        (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="dot" module="MEI.shared">
@@ -36222,8 +36206,8 @@
       </rng:zeroOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on elements in the Text Encoding Initiative (TEI) and Encoded
-        Archival Description (EAD) standards.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-edition.html">edition</ref> element of the Text Encoding Initiative (TEI) and the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-edition">edition</ref> element of the Encoded
+        Archival Description (EAD).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="editor" module="MEI.shared">
@@ -36246,7 +36230,7 @@
       </rng:zeroOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-editor.html">editor</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="ending" module="MEI.shared">
@@ -36424,8 +36408,7 @@
         width.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on elements in the Text Encoding Initiative (TEI) and Encoded
-        Archival Description (EAD) standards.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-extent.html">extent</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="funder" module="MEI.shared">
@@ -36449,7 +36432,7 @@
       </rng:zeroOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-funder.html">funder</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="genre" module="MEI.shared">
@@ -36498,7 +36481,7 @@
         have its own front and back matter.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-group.html">group</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="grpSym" module="MEI.shared">
@@ -36566,8 +36549,8 @@
         its purpose.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on elements in Encoded Archival Description (EAD), Text Encoding
-        Initiative (TEI), and HTML standards.</p>
+      <p>The model of this element is based on the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-head">head</ref> element of the Encoded Archival Description (EAD), the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-head.html">head</ref> element of the Text Encoding
+        Initiative (TEI), and the <ref target="https://html.spec.whatwg.org/#the-head-element">head</ref> element of <abbr>HTML</abbr>.</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="height" module="MEI.shared">
@@ -36635,8 +36618,7 @@
       </rng:zeroOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) and Encoded
-        Archival Description (EAD) standards.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-imprint.html">imprint</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="incip" module="MEI.shared">
@@ -36801,7 +36783,7 @@
       </rng:zeroOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-label.html">label</ref> element of the Text Encoding Initiative (TEI).</p>
       <p>Don't confuse this element, which is used to capture labelling text appearing in the
         document, with the <att>label</att> attribute, which records text to be used to generate a
         designation for the element to which it’s attached, a "tool tip" or prefatory text, for
@@ -36922,7 +36904,7 @@
         performs a similar function for musical notation.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-lb.html">lb</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="lg" module="MEI.shared">
@@ -36957,7 +36939,7 @@
       </rng:zeroOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-lg.html">lg</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="librettist" module="MEI.shared">
@@ -37243,8 +37225,7 @@
         <att>auth.uri</att> attributes.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Encoded Archival Description (EAD)
-        standard.</p>
+      <p>The model of this element is based on the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-name">name</ref> element of the Encoded Archival Description (EAD).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="note" module="MEI.shared">
@@ -37383,8 +37364,8 @@
         the first letter of the content is often indented, enlarged, or both.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on elements in the Encoded Archival Description, Text Encoding
-        Initiative (TEI), and HTML standards.</p>
+      <p>The model of this element is based on the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-p">p</ref> element of the Encoded Archival Description, the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-p.html">p</ref> element of the Text Encoding
+        Initiative (TEI), and the <ref target="https://html.spec.whatwg.org/#the-p-element">p</ref> element of <abbr>HTML</abbr>.</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="pad" module="MEI.shared">
@@ -37483,7 +37464,7 @@
         score context, a page beginning implies an accompanying system beginning.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-pb.html">pb</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="pgDesc" module="MEI.shared">
@@ -37679,8 +37660,7 @@
       </rng:optional>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Encoded Archival Description (EAD)
-        standard.</p>
+      <p>The model of this element is based on the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-physloc">physloc</ref> element of the Encoded Archival Description (EAD).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="publisher" module="MEI.shared">
@@ -37702,7 +37682,7 @@
       </rng:zeroOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-publisher.html">publisher</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="pubPlace" module="MEI.shared">
@@ -37725,7 +37705,7 @@
       </rng:zeroOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-pubPlace.html">pubPlace</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="recipient" module="MEI.shared">
@@ -37909,8 +37889,7 @@
         using the <att>auth</att> attribute.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Encoded Archival Description (EAD)
-        standard.</p>
+      <p>The model of this element is based on the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-repository">repository</ref> element of the Encoded Archival Description (EAD).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="resp" module="MEI.shared">
@@ -37937,7 +37916,7 @@
         <att>auth</att> attribute.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-resp.html">resp</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="respStmt" module="MEI.shared">
@@ -37974,7 +37953,7 @@
       </constraint>
     </constraintSpec>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-respStmt.html">respStmt</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="rest" module="MEI.shared">
@@ -38028,7 +38007,7 @@
       </rng:zeroOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-role.html">role</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="roleDesc" module="MEI.shared">
@@ -38048,7 +38027,7 @@
       </rng:zeroOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-roleDesc.html">roleDesc</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="sb" module="MEI.shared">
@@ -38228,7 +38207,7 @@
       </rng:zeroOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-series.html">series</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="space" module="MEI.shared">
@@ -38267,7 +38246,7 @@
       </rng:zeroOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-speaker.html">speaker</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="sponsor" module="MEI.shared">
@@ -38291,8 +38270,8 @@
       </rng:zeroOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on elements in the Text Encoding Initiative (TEI) and Encoded
-        Archival Description (EAD) standards.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-sponsor.html">sponsor</ref> element of the Text Encoding Initiative (TEI) and the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-sponsor">sponsor</ref> element of the Encoded
+        Archival Description (EAD).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="stack" module="MEI.shared">
@@ -38739,7 +38718,7 @@
         identifier of the element containing the category label.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-term.html">term</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="textLang" module="MEI.shared">
@@ -38885,7 +38864,7 @@
         or name may be indicated in the <att>nonfiling</att> attribute.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-title.html">title</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="titlePage" module="MEI.shared">
@@ -38918,7 +38897,7 @@
         transcription is provided.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in Encoded Archival Description (EAD) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-titlePage.html">titlePage</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="titlePart" module="MEI.shared">
@@ -39006,7 +38985,7 @@
       </attDef>
     </attList>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-titlePart.html">titlePart</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="width" module="MEI.shared">
@@ -39193,7 +39172,7 @@
       </rng:zeroOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on elements in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-argument.html">argument</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="back" module="MEI.text">
@@ -39218,8 +39197,7 @@
       </rng:zeroOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on elements in the Text Encoding Initiative (TEI) and Encoded
-        Archival Description (EAD) standards.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-back.html">back</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="epigraph" module="MEI.text">
@@ -39241,7 +39219,7 @@
       </rng:zeroOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on elements in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-epigraph.html">epigraph</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="front" module="MEI.text">
@@ -39271,8 +39249,7 @@
         cover, endpapers, etc. before and after the actual textual matter.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on elements in the Text Encoding Initiative (TEI) and Encoded
-        Archival Description (EAD) standards.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-front.html">front</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="imprimatur" module="MEI.text">
@@ -39294,7 +39271,7 @@
       </rng:zeroOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on elements in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-imprimatur.html">imprimatur</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="l" module="MEI.text">
@@ -39333,7 +39310,7 @@
         graphical lines that occur in music notation.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on elements in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-l.html">l</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="li" module="MEI.text">
@@ -39356,8 +39333,8 @@
       </rng:zeroOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on elements in the Encoded Archival Description (EAD), Text
-        Encoding Initiative (TEI), and HTML standards.</p>
+      <p>The model of this element is based on the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-item">item</ref> elements of the Encoded Archival Description (EAD), the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-item.html">item</ref> element of the Text
+        Encoding Initiative (TEI), and the <ref target="https://html.spec.whatwg.org/#the-li-element">li</ref> element of <abbr>HTML</abbr>.</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="list" module="MEI.text">
@@ -39447,8 +39424,8 @@
       </attDef>
     </attList>
     <remarks xml:lang="en">
-      <p>This element is modelled on elements in Encoded Archival Description (EAD), Text Encoding
-        Initiative (TEI), and HTML standards.</p>
+      <p>The model of this element is based on the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-list">list</ref> element of the Encoded Archival Description (EAD), the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-list.html">list</ref> element of the Text Encoding
+        Initiative (TEI), and the respective elements of <abbr>HTML</abbr>.</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="q" module="MEI.text">
@@ -39517,7 +39494,7 @@
       <p>Do not confuse this element, used to capture phrase-level quotations, and <gi scheme="MEI">quote</gi>, intended for block quotations.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on elements found in HTML, TEI, and EAD standards.</p>
+      <p>The model of this element is based on the <ref target="https://html.spec.whatwg.org/#the-q-element">q</ref> element of <abbr>HTML</abbr> and the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-q.html">q</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="quote" module="MEI.text">
@@ -39547,7 +39524,7 @@
       <p>Do not confuse this element, used to capture block-level quotations, and <gi scheme="MEI">q</gi>, intended for inline quotations.</p>
     </remarks>
     <remarks xml:lang="en">
-      <p>This element is modelled on elements found in HTML, TEI, and EAD standards.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-quote.html">quote</ref> element of the Text Encoding Initiative (TEI) and the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-quote">quote</ref> element of the Encoded Archival Description (EAD).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="seg" module="MEI.text">
@@ -39571,7 +39548,7 @@
       </rng:zeroOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-seg.html">seg</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
 </specGrp>
