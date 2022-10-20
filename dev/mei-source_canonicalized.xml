@@ -19,7 +19,7 @@
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href=../../../source/"validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2022-10-20T13:03:01.783619895Z-->
+<!--canonicalized: 2022-10-20T13:08:16.984112865Z-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -38665,6 +38665,7 @@
     <classes>
       <memberOf key="att.common"/>
       <memberOf key="att.bibl"/>
+      <memberOf key="att.extender"/>
       <memberOf key="att.facsimile"/>
       <memberOf key="att.lang"/>
       <memberOf key="att.tempo.log"/>
