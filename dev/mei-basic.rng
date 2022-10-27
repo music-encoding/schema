@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2022-10-24T15:55:59Z. .
+Schema generated from ODD source 2022-10-27T13:23:36Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -646,6 +646,11 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <ref name="mei_data.DURATION.cmn"/>
       </choice>
    </define>
+   <define name="mei_data.DURATION.gestural">
+      <choice>
+         <ref name="mei_data.DURATION.cmn"/>
+      </choice>
+   </define>
    <define name="mei_data.FINGER.FRET">
       <choice>
          <data type="positiveInteger">
@@ -781,6 +786,9 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
             <param name="pattern">[0-9.,DHMPRSTWYZ/:+\-]+</param>
          </data>
       </choice>
+   </define>
+   <define name="mei_data.ISOTIME">
+      <data type="time"/>
    </define>
    <define name="mei_data.KEYFIFTHS">
       <data type="token">
@@ -1286,7 +1294,13 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          </choice>
       </zeroOrMore>
    </define>
+   <define name="mei_att.ambitus.anl.attributes">
+      <ref name="mei_att.intervalHarmonic.attributes"/>
+   </define>
    <define name="mei_att.chordDef.anl.attributes">
+      <empty/>
+   </define>
+   <define name="mei_att.graceGrp.anl.attributes">
       <empty/>
    </define>
    <define name="mei_att.intervalHarmonic.attributes">
@@ -1303,6 +1317,9 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
             </list>
          </attribute>
       </optional>
+   </define>
+   <define name="mei_att.mNum.anl.attributes">
+      <empty/>
    </define>
    <define name="mei_att.arpeg.log.attributes">
       <ref name="mei_att.controlEvent.attributes"/>
@@ -1345,12 +1362,12 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
       <ref name="mei_att.layerIdent.attributes"/>
       <ref name="mei_att.staffIdent.attributes"/>
       <ref name="mei_att.startId.attributes"/>
-      <ref name="mei_att.timestamp.logical.attributes"/>
+      <ref name="mei_att.timestamp.log.attributes"/>
    </define>
    <define name="mei_att.bTrem.log.attributes">
       <ref name="mei_att.event.attributes"/>
       <ref name="mei_att.augmentDots.attributes"/>
-      <ref name="mei_att.duration.logical.attributes"/>
+      <ref name="mei_att.duration.log.attributes"/>
       <ref name="mei_att.numbered.attributes"/>
       <ref name="mei_att.bTrem.log.attribute.form"/>
    </define>
@@ -1387,18 +1404,8 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          </attribute>
       </optional>
    </define>
-   <define name="mei_att.mNum.anl.attributes">
-      <empty/>
-   </define>
-   <define name="mei_att.mNum.ges.attributes">
-      <empty/>
-   </define>
    <define name="mei_att.mNum.log.attributes">
       <empty/>
-   </define>
-   <define name="mei_att.mNum.vis.attributes">
-      <ref name="mei_att.placementRelStaff.attributes"/>
-      <ref name="mei_att.typography.attributes"/>
    </define>
    <define name="mei_att.expandable.attributes">
       <ref name="mei_att.expandable.attribute.expand"/>
@@ -1418,7 +1425,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
    <define name="mei_att.fTrem.log.attributes">
       <ref name="mei_att.event.attributes"/>
       <ref name="mei_att.augmentDots.attributes"/>
-      <ref name="mei_att.duration.logical.attributes"/>
+      <ref name="mei_att.duration.log.attributes"/>
       <ref name="mei_att.fTrem.log.attribute.form"/>
    </define>
    <define name="mei_att.fTrem.log.attribute.form">
@@ -1438,7 +1445,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
       <ref name="mei_att.controlEvent.attributes"/>
       <ref name="mei_att.duration.additive.attributes"/>
       <ref name="mei_att.startEndId.attributes"/>
-      <ref name="mei_att.timestamp2.logical.attributes"/>
+      <ref name="mei_att.timestamp2.log.attributes"/>
    </define>
    <define name="mei_att.graced.attributes">
       <ref name="mei_att.graced.attribute.grace"/>
@@ -1460,12 +1467,6 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          </attribute>
       </optional>
    </define>
-   <define name="mei_att.graceGrp.anl.attributes">
-      <empty/>
-   </define>
-   <define name="mei_att.graceGrp.ges.attributes">
-      <empty/>
-   </define>
    <define name="mei_att.graceGrp.log.attributes">
       <ref name="mei_att.event.attributes"/>
       <ref name="mei_att.graced.attributes"/>
@@ -1486,14 +1487,11 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          </attribute>
       </optional>
    </define>
-   <define name="mei_att.graceGrp.vis.attributes">
-      <empty/>
-   </define>
    <define name="mei_att.hairpin.log.attributes">
       <ref name="mei_att.controlEvent.attributes"/>
       <ref name="mei_att.duration.additive.attributes"/>
       <ref name="mei_att.startEndId.attributes"/>
-      <ref name="mei_att.timestamp2.logical.attributes"/>
+      <ref name="mei_att.timestamp2.log.attributes"/>
       <ref name="mei_att.hairpin.log.attribute.form"/>
       <ref name="mei_att.hairpin.log.attribute.niente"/>
    </define>
@@ -1518,7 +1516,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
    </define>
    <define name="mei_att.halfmRpt.log.attributes">
       <ref name="mei_att.event.attributes"/>
-      <ref name="mei_att.duration.logical.attributes"/>
+      <ref name="mei_att.duration.log.attributes"/>
    </define>
    <define name="mei_att.harpPedal.log.attributes">
       <ref name="mei_att.controlEvent.attributes"/>
@@ -1656,7 +1654,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
    <define name="mei_att.lv.log.attributes">
       <ref name="mei_att.controlEvent.attributes"/>
       <ref name="mei_att.startEndId.attributes"/>
-      <ref name="mei_att.timestamp2.logical.attributes"/>
+      <ref name="mei_att.timestamp2.log.attributes"/>
    </define>
    <define name="mei_att.measure.log.attributes">
       <ref name="mei_att.meterConformance.bar.attributes"/>
@@ -1738,7 +1736,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
       <ref name="mei_att.duration.additive.attributes"/>
       <ref name="mei_att.octaveDisplacement.attributes"/>
       <ref name="mei_att.startEndId.attributes"/>
-      <ref name="mei_att.timestamp2.logical.attributes"/>
+      <ref name="mei_att.timestamp2.log.attributes"/>
       <ref name="mei_att.octave.log.attribute.coll"/>
    </define>
    <define name="mei_att.octave.log.attribute.coll">
@@ -1755,7 +1753,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
    <define name="mei_att.pedal.log.attributes">
       <ref name="mei_att.controlEvent.attributes"/>
       <ref name="mei_att.startEndId.attributes"/>
-      <ref name="mei_att.timestamp2.logical.attributes"/>
+      <ref name="mei_att.timestamp2.log.attributes"/>
       <ref name="mei_att.pedal.log.attribute.dir"/>
       <ref name="mei_att.pedal.log.attribute.func"/>
    </define>
@@ -1799,7 +1797,8 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    <define name="mei_att.reh.log.attributes">
       <ref name="mei_att.staffIdent.attributes"/>
       <ref name="mei_att.startId.attributes"/>
-      <ref name="mei_att.timestamp.logical.attributes"/>
+      <ref name="mei_att.timestamp.log.attributes"/>
+      <ref name="mei_att.timestamp.ges.attributes"/>
    </define>
    <define name="mei_att.rest.log.cmn.attributes">
       <empty/>
@@ -1811,7 +1810,10 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
       <ref name="mei_att.controlEvent.attributes"/>
       <ref name="mei_att.duration.additive.attributes"/>
       <ref name="mei_att.startEndId.attributes"/>
-      <ref name="mei_att.timestamp2.logical.attributes"/>
+      <ref name="mei_att.timestamp2.log.attributes"/>
+   </define>
+   <define name="mei_att.space.log.cmn.attributes">
+      <empty/>
    </define>
    <define name="mei_att.staffDef.log.cmn.attributes">
       <empty/>
@@ -1819,7 +1821,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    <define name="mei_att.tie.log.attributes">
       <ref name="mei_att.controlEvent.attributes"/>
       <ref name="mei_att.startEndId.attributes"/>
-      <ref name="mei_att.timestamp2.logical.attributes"/>
+      <ref name="mei_att.timestamp2.log.attributes"/>
    </define>
    <define name="mei_att.tremMeasured.attributes">
       <ref name="mei_att.tremMeasured.attribute.unitdur"/>
@@ -2672,7 +2674,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
       <ref name="mei_att.duration.additive.attributes"/>
       <ref name="mei_att.ornamentAccid.attributes"/>
       <ref name="mei_att.startEndId.attributes"/>
-      <ref name="mei_att.timestamp2.logical.attributes"/>
+      <ref name="mei_att.timestamp2.log.attributes"/>
    </define>
    <define name="mei_att.turn.log.attributes">
       <ref name="mei_att.controlEvent.attributes"/>
@@ -3032,13 +3034,13 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
       <ref name="mei_att.controlEvent.attributes"/>
       <ref name="mei_att.duration.additive.attributes"/>
       <ref name="mei_att.startEndId.attributes"/>
-      <ref name="mei_att.timestamp2.logical.attributes"/>
+      <ref name="mei_att.timestamp2.log.attributes"/>
    </define>
    <define name="mei_att.fingGrp.log.attributes">
       <ref name="mei_att.controlEvent.attributes"/>
       <ref name="mei_att.duration.additive.attributes"/>
       <ref name="mei_att.startEndId.attributes"/>
-      <ref name="mei_att.timestamp2.logical.attributes"/>
+      <ref name="mei_att.timestamp2.log.attributes"/>
       <ref name="mei_att.fingGrp.log.attribute.form"/>
    </define>
    <define name="mei_att.fingGrp.log.attribute.form">
@@ -3306,12 +3308,12 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
       </element>
    </define>
    <define name="mei_att.accid.ges.attributes">
-      <ref name="mei_att.accidental.gestural.attributes"/>
+      <ref name="mei_att.accidental.ges.attributes"/>
    </define>
-   <define name="mei_att.accidental.gestural.attributes">
-      <ref name="mei_att.accidental.gestural.attribute.accid.ges"/>
+   <define name="mei_att.accidental.ges.attributes">
+      <ref name="mei_att.accidental.ges.attribute.accid.ges"/>
    </define>
-   <define name="mei_att.accidental.gestural.attribute.accid.ges">
+   <define name="mei_att.accidental.ges.attribute.accid.ges">
       <optional>
          <attribute name="accid.ges">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records the performed pitch inflection.</a:documentation>
@@ -3320,7 +3322,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-att.accidental.gestural-accid.ges-check_accid_duplication-constraint-rule-35">
+            id="mei-att.accidental.ges-accid.ges-check_accid_duplication-constraint-rule-35">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -3330,6 +3332,9 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
                 not duplicate the value of @accid.</sch:assert>
       </sch:rule>
    </pattern>
+   <define name="mei_att.ambitus.ges.attributes">
+      <empty/>
+   </define>
    <define name="mei_att.ambNote.ges.attributes">
       <empty/>
    </define>
@@ -3337,7 +3342,22 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
       <empty/>
    </define>
    <define name="mei_att.artic.ges.attributes">
-      <empty/>
+      <ref name="mei_att.articulation.ges.attributes"/>
+   </define>
+   <define name="mei_att.articulation.ges.attributes">
+      <ref name="mei_att.articulation.ges.attribute.artic.ges"/>
+   </define>
+   <define name="mei_att.articulation.ges.attribute.artic.ges">
+      <optional>
+         <attribute name="artic.ges">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records performed articulation that differs from the written value.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <ref name="mei_data.ARTICULATION"/>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
    </define>
    <define name="mei_att.beam.ges.attributes">
       <empty/>
@@ -3346,22 +3366,25 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
       <empty/>
    </define>
    <define name="mei_att.breath.ges.attributes">
-      <empty/>
+      <ref name="mei_att.timestamp.ges.attributes"/>
    </define>
    <define name="mei_att.bTrem.ges.attributes">
       <ref name="mei_att.tremMeasured.attributes"/>
    </define>
    <define name="mei_att.caesura.ges.attributes">
-      <empty/>
+      <ref name="mei_att.duration.ges.attributes"/>
+      <ref name="mei_att.timestamp.ges.attributes"/>
    </define>
    <define name="mei_att.chord.ges.attributes">
+      <ref name="mei_att.articulation.ges.attributes"/>
+      <ref name="mei_att.duration.ges.attributes"/>
       <ref name="mei_att.chord.ges.cmn.attributes"/>
    </define>
    <define name="mei_att.chordDef.ges.attributes">
       <empty/>
    </define>
    <define name="mei_att.chordMember.ges.attributes">
-      <ref name="mei_att.accidental.gestural.attributes"/>
+      <ref name="mei_att.accidental.ges.attributes"/>
    </define>
    <define name="mei_att.clef.ges.attributes">
       <empty/>
@@ -3380,29 +3403,100 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
          </attribute>
       </optional>
    </define>
+   <define name="mei_att.duration.ges.attributes">
+      <ref name="mei_att.duration.ges.attribute.dur.ges"/>
+      <ref name="mei_att.duration.ges.attribute.dots.ges"/>
+      <ref name="mei_att.duration.ges.attribute.dur.metrical"/>
+      <ref name="mei_att.duration.ges.attribute.dur.ppq"/>
+      <ref name="mei_att.duration.ges.attribute.dur.real"/>
+      <ref name="mei_att.duration.ges.attribute.dur.recip"/>
+   </define>
+   <define name="mei_att.duration.ges.attribute.dur.ges">
+      <optional>
+         <attribute name="dur.ges">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records performed duration information that differs from the written duration.</a:documentation>
+            <ref name="mei_data.DURATION.gestural"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.duration.ges.attribute.dots.ges">
+      <optional>
+         <attribute name="dots.ges">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Number of dots required for a gestural duration when different from that of the written duration.</a:documentation>
+            <ref name="mei_data.AUGMENTDOT"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.duration.ges.attribute.dur.metrical">
+      <optional>
+         <attribute name="dur.metrical">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Duration as a count of units provided in the time signature denominator.</a:documentation>
+            <data type="decimal">
+               <param name="pattern">\d+(\.\d+)?</param>
+            </data>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.duration.ges.attribute.dur.ppq">
+      <optional>
+         <attribute name="dur.ppq">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Duration recorded as pulses-per-quarter note, e.g., MIDI clicks or MusicXML divisions.</a:documentation>
+            <data type="nonNegativeInteger"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.duration.ges.attribute.dur.real">
+      <optional>
+         <attribute name="dur.real">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Duration in seconds, e.g., 1.732.</a:documentation>
+            <data type="decimal">
+               <param name="pattern">\d+(\.\d+)?</param>
+            </data>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.duration.ges.attribute.dur.recip">
+      <optional>
+         <attribute name="dur.recip">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Duration as an optionally dotted <a xmlns="http://www.w3.org/1999/xhtml"
+                  href="https://www.humdrum.org/rep/recip/">Humdrum **recip value</a>.</a:documentation>
+            <data type="token">
+               <param name="pattern">[0-9]+(%[0-9]+)?\.*q?</param>
+            </data>
+         </attribute>
+      </optional>
+   </define>
    <define name="mei_att.f.ges.attributes">
-      <empty/>
+      <ref name="mei_att.duration.ges.attributes"/>
+      <ref name="mei_att.timestamp2.ges.attributes"/>
    </define>
    <define name="mei_att.fermata.ges.attributes">
-      <empty/>
+      <ref name="mei_att.duration.ges.attributes"/>
    </define>
    <define name="mei_att.fing.ges.attributes">
-      <empty/>
+      <ref name="mei_att.duration.ges.attributes"/>
+      <ref name="mei_att.timestamp2.ges.attributes"/>
    </define>
    <define name="mei_att.fingGrp.ges.attributes">
-      <empty/>
+      <ref name="mei_att.duration.ges.attributes"/>
+      <ref name="mei_att.timestamp2.ges.attributes"/>
    </define>
    <define name="mei_att.fTrem.ges.attributes">
       <ref name="mei_att.tremMeasured.attributes"/>
    </define>
    <define name="mei_att.gliss.ges.attributes">
+      <ref name="mei_att.duration.ges.attributes"/>
+      <ref name="mei_att.timestamp2.ges.attributes"/>
+   </define>
+   <define name="mei_att.graceGrp.ges.attributes">
       <empty/>
    </define>
    <define name="mei_att.hairpin.ges.attributes">
-      <empty/>
+      <ref name="mei_att.duration.ges.attributes"/>
+      <ref name="mei_att.timestamp2.ges.attributes"/>
    </define>
    <define name="mei_att.harpPedal.ges.attributes">
-      <empty/>
+      <ref name="mei_att.duration.ges.attributes"/>
    </define>
    <define name="mei_att.layer.ges.attributes">
       <empty/>
@@ -3411,25 +3505,28 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
       <ref name="mei_att.tuning.attributes"/>
    </define>
    <define name="mei_att.lv.ges.attributes">
-      <empty/>
+      <ref name="mei_att.timestamp2.ges.attributes"/>
    </define>
    <define name="mei_att.lyrics.ges.attributes">
       <empty/>
    </define>
    <define name="mei_att.measure.ges.attributes">
+      <ref name="mei_att.timestamp.ges.attributes"/>
+   </define>
+   <define name="mei_att.mNum.ges.attributes">
       <empty/>
    </define>
    <define name="mei_att.mordent.ges.attributes">
       <empty/>
    </define>
    <define name="mei_att.mRest.ges.attributes">
-      <empty/>
+      <ref name="mei_att.duration.ges.attributes"/>
    </define>
    <define name="mei_att.mRpt.ges.attributes">
       <empty/>
    </define>
    <define name="mei_att.multiRest.ges.attributes">
-      <empty/>
+      <ref name="mei_att.duration.ges.attributes"/>
    </define>
    <define name="mei_att.multiRpt.ges.attributes">
       <empty/>
@@ -3456,10 +3553,12 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
       </optional>
    </define>
    <define name="mei_att.octave.ges.attributes">
-      <empty/>
+      <ref name="mei_att.duration.ges.attributes"/>
+      <ref name="mei_att.timestamp2.ges.attributes"/>
    </define>
    <define name="mei_att.ornam.ges.attributes">
-      <empty/>
+      <ref name="mei_att.duration.ges.attributes"/>
+      <ref name="mei_att.timestamp2.ges.attributes"/>
    </define>
    <define name="mei_att.ornamentAccid.ges.attributes">
       <ref name="mei_att.ornamentAccid.ges.attribute.accidupper.ges"/>
@@ -3485,10 +3584,11 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
       <empty/>
    </define>
    <define name="mei_att.pedal.ges.attributes">
-      <empty/>
+      <ref name="mei_att.timestamp2.ges.attributes"/>
    </define>
    <define name="mei_att.phrase.ges.attributes">
-      <empty/>
+      <ref name="mei_att.duration.ges.attributes"/>
+      <ref name="mei_att.timestamp2.ges.attributes"/>
    </define>
    <define name="mei_att.refrain.ges.attributes">
       <empty/>
@@ -3517,10 +3617,11 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
       </optional>
    </define>
    <define name="mei_att.slur.ges.attributes">
-      <empty/>
+      <ref name="mei_att.duration.ges.attributes"/>
+      <ref name="mei_att.timestamp2.ges.attributes"/>
    </define>
    <define name="mei_att.space.ges.attributes">
-      <empty/>
+      <ref name="mei_att.duration.ges.attributes"/>
    </define>
    <define name="mei_att.staff.ges.attributes">
       <empty/>
@@ -3542,13 +3643,54 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
       <empty/>
    </define>
    <define name="mei_att.tie.ges.attributes">
-      <empty/>
+      <ref name="mei_att.timestamp2.ges.attributes"/>
+   </define>
+   <define name="mei_att.timestamp.ges.attributes">
+      <ref name="mei_att.timestamp.ges.attribute.tstamp.ges"/>
+      <ref name="mei_att.timestamp.ges.attribute.tstamp.real"/>
+   </define>
+   <define name="mei_att.timestamp.ges.attribute.tstamp.ges">
+      <optional>
+         <attribute name="tstamp.ges">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Encodes the onset time in terms of musical time, i.e., beats[.fractional beat part], as expressed in the written time signature.</a:documentation>
+            <ref name="mei_data.BEAT"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.timestamp.ges.attribute.tstamp.real">
+      <optional>
+         <attribute name="tstamp.real">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records the onset time in terms of ISO time.</a:documentation>
+            <ref name="mei_data.ISOTIME"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.timestamp2.ges.attributes">
+      <ref name="mei_att.timestamp2.ges.attribute.tstamp2.ges"/>
+      <ref name="mei_att.timestamp2.ges.attribute.tstamp2.real"/>
+   </define>
+   <define name="mei_att.timestamp2.ges.attribute.tstamp2.ges">
+      <optional>
+         <attribute name="tstamp2.ges">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Encodes the ending point of an event, i.e., a count of measures plus a beat location in the ending measure.</a:documentation>
+            <ref name="mei_data.MEASUREBEAT"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.timestamp2.ges.attribute.tstamp2.real">
+      <optional>
+         <attribute name="tstamp2.real">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records the ending point of an event in terms of ISO time.</a:documentation>
+            <ref name="mei_data.ISOTIME"/>
+         </attribute>
+      </optional>
    </define>
    <define name="mei_att.trill.ges.attributes">
-      <empty/>
+      <ref name="mei_att.duration.ges.attributes"/>
+      <ref name="mei_att.timestamp2.ges.attributes"/>
    </define>
    <define name="mei_att.tuplet.ges.attributes">
-      <empty/>
+      <ref name="mei_att.duration.ges.attributes"/>
    </define>
    <define name="mei_att.turn.ges.attributes">
       <empty/>
@@ -3571,13 +3713,13 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
       <ref name="mei_att.controlEvent.attributes"/>
       <ref name="mei_att.duration.additive.attributes"/>
       <ref name="mei_att.startEndId.attributes"/>
-      <ref name="mei_att.timestamp2.logical.attributes"/>
+      <ref name="mei_att.timestamp2.log.attributes"/>
    </define>
    <define name="mei_att.harm.log.attributes">
       <ref name="mei_att.controlEvent.attributes"/>
       <ref name="mei_att.duration.additive.attributes"/>
       <ref name="mei_att.startEndId.attributes"/>
-      <ref name="mei_att.timestamp2.logical.attributes"/>
+      <ref name="mei_att.timestamp2.log.attributes"/>
       <ref name="mei_att.harm.log.attribute.chordref"/>
    </define>
    <define name="mei_att.harm.log.attribute.chordref">
@@ -5103,21 +5245,12 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
          </attribute>
       </optional>
    </define>
-   <define name="mei_att.ambitus.anl.attributes">
-      <ref name="mei_att.intervalHarmonic.attributes"/>
-   </define>
-   <define name="mei_att.ambitus.ges.attributes">
-      <empty/>
-   </define>
    <define name="mei_att.ambitus.log.attributes">
-      <empty/>
-   </define>
-   <define name="mei_att.ambitus.vis.attributes">
       <empty/>
    </define>
    <define name="mei_att.ambNote.log.attributes">
       <ref name="mei_att.accidental.attributes"/>
-      <ref name="mei_att.duration.logical.attributes"/>
+      <ref name="mei_att.duration.log.attributes"/>
       <ref name="mei_att.pitched.attributes"/>
    </define>
    <define name="mei_att.artic.log.attributes">
@@ -5168,7 +5301,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
       <ref name="mei_att.layerIdent.attributes"/>
       <ref name="mei_att.staffIdent.attributes"/>
       <ref name="mei_att.startId.attributes"/>
-      <ref name="mei_att.timestamp.logical.attributes"/>
+      <ref name="mei_att.timestamp.log.attributes"/>
    </define>
    <define name="mei_att.calendared.attributes">
       <ref name="mei_att.calendared.attribute.calendar"/>
@@ -5185,7 +5318,6 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
       <ref name="mei_att.augmentDots.attributes"/>
       <ref name="mei_att.chord.log.cmn.attributes"/>
       <ref name="mei_att.cue.attributes"/>
-      <ref name="mei_att.duration.logical.attributes"/>
       <ref name="mei_att.event.attributes"/>
    </define>
    <define name="mei_att.clef.log.attributes">
@@ -5292,7 +5424,8 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
       <ref name="mei_att.layerIdent.attributes"/>
       <ref name="mei_att.plist.attributes"/>
       <ref name="mei_att.staffIdent.attributes"/>
-      <ref name="mei_att.timestamp.logical.attributes"/>
+      <ref name="mei_att.timestamp.log.attributes"/>
+      <ref name="mei_att.timestamp.ges.attributes"/>
    </define>
    <define name="mei_att.cue.attributes">
       <ref name="mei_att.cue.attribute.cue"/>
@@ -5407,7 +5540,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
       <ref name="mei_att.controlEvent.attributes"/>
       <ref name="mei_att.duration.additive.attributes"/>
       <ref name="mei_att.startEndId.attributes"/>
-      <ref name="mei_att.timestamp2.logical.attributes"/>
+      <ref name="mei_att.timestamp2.log.attributes"/>
    </define>
    <define name="mei_att.dot.log.attributes">
       <ref name="mei_att.controlEvent.attributes"/>
@@ -5441,10 +5574,10 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
          </attribute>
       </optional>
    </define>
-   <define name="mei_att.duration.logical.attributes">
-      <ref name="mei_att.duration.logical.attribute.dur"/>
+   <define name="mei_att.duration.log.attributes">
+      <ref name="mei_att.duration.log.attribute.dur"/>
    </define>
-   <define name="mei_att.duration.logical.attribute.dur">
+   <define name="mei_att.duration.log.attribute.dur">
       <optional>
          <attribute name="dur">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records the duration of a feature using the relative durational values provided by the data.DURATION datatype.</a:documentation>
@@ -5476,7 +5609,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
       <ref name="mei_att.controlEvent.attributes"/>
       <ref name="mei_att.duration.additive.attributes"/>
       <ref name="mei_att.startEndId.attributes"/>
-      <ref name="mei_att.timestamp2.logical.attributes"/>
+      <ref name="mei_att.timestamp2.log.attributes"/>
    </define>
    <define name="mei_att.ending.log.attributes">
       <empty/>
@@ -5907,7 +6040,7 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
    <define name="mei_att.note.log.attributes">
       <ref name="mei_att.augmentDots.attributes"/>
       <ref name="mei_att.cue.attributes"/>
-      <ref name="mei_att.duration.logical.attributes"/>
+      <ref name="mei_att.duration.log.attributes"/>
       <ref name="mei_att.event.attributes"/>
       <ref name="mei_att.note.log.cmn.attributes"/>
       <ref name="mei_att.pitched.attributes"/>
@@ -5948,7 +6081,7 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
       <ref name="mei_att.duration.additive.attributes"/>
       <ref name="mei_att.ornamentAccid.attributes"/>
       <ref name="mei_att.startEndId.attributes"/>
-      <ref name="mei_att.timestamp2.logical.attributes"/>
+      <ref name="mei_att.timestamp2.log.attributes"/>
    </define>
    <define name="mei_att.pb.log.attributes">
       <empty/>
@@ -5957,7 +6090,7 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
       <ref name="mei_att.controlEvent.attributes"/>
       <ref name="mei_att.duration.additive.attributes"/>
       <ref name="mei_att.startEndId.attributes"/>
-      <ref name="mei_att.timestamp2.logical.attributes"/>
+      <ref name="mei_att.timestamp2.log.attributes"/>
    </define>
    <define name="mei_att.pitch.attributes">
       <ref name="mei_att.pitch.attribute.pname"/>
@@ -6113,14 +6246,14 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
    <define name="mei_att.rest.log.attributes">
       <ref name="mei_att.augmentDots.attributes"/>
       <ref name="mei_att.cue.attributes"/>
-      <ref name="mei_att.restduration.logical.attributes"/>
+      <ref name="mei_att.restduration.log.attributes"/>
       <ref name="mei_att.event.attributes"/>
       <ref name="mei_att.rest.log.cmn.attributes"/>
    </define>
-   <define name="mei_att.restduration.logical.attributes">
-      <ref name="mei_att.restduration.logical.attribute.dur"/>
+   <define name="mei_att.restduration.log.attributes">
+      <ref name="mei_att.restduration.log.attribute.dur"/>
    </define>
-   <define name="mei_att.restduration.logical.attribute.dur">
+   <define name="mei_att.restduration.log.attribute.dur">
       <optional>
          <attribute name="dur">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records the duration of a rest using the relative durational values provided by the data.DURATIONRESTS datatype.</a:documentation>
@@ -6150,8 +6283,9 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
    </define>
    <define name="mei_att.space.log.attributes">
       <ref name="mei_att.augmentDots.attributes"/>
-      <ref name="mei_att.duration.logical.attributes"/>
+      <ref name="mei_att.duration.log.attributes"/>
       <ref name="mei_att.event.attributes"/>
+      <ref name="mei_att.space.log.cmn.attributes"/>
    </define>
    <define name="mei_att.staffDef.log.attributes">
       <ref name="mei_att.cleffing.log.attributes"/>
@@ -6344,7 +6478,7 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
       <ref name="mei_att.controlEvent.attributes"/>
       <ref name="mei_att.mmTempo.attributes"/>
       <ref name="mei_att.startEndId.attributes"/>
-      <ref name="mei_att.timestamp2.logical.attributes"/>
+      <ref name="mei_att.timestamp2.log.attributes"/>
       <ref name="mei_att.tempo.log.attribute.func"/>
    </define>
    <define name="mei_att.tempo.log.attribute.func">
@@ -6392,10 +6526,10 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
          </attribute>
       </optional>
    </define>
-   <define name="mei_att.timestamp.logical.attributes">
-      <ref name="mei_att.timestamp.logical.attribute.tstamp"/>
+   <define name="mei_att.timestamp.log.attributes">
+      <ref name="mei_att.timestamp.log.attribute.tstamp"/>
    </define>
-   <define name="mei_att.timestamp.logical.attribute.tstamp">
+   <define name="mei_att.timestamp.log.attribute.tstamp">
       <optional>
          <attribute name="tstamp">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Encodes the onset time in terms of musical time, i.e., beats[.fractional beat part], as expressed in the written time signature.</a:documentation>
@@ -6403,10 +6537,10 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
          </attribute>
       </optional>
    </define>
-   <define name="mei_att.timestamp2.logical.attributes">
-      <ref name="mei_att.timestamp2.logical.attribute.tstamp2"/>
+   <define name="mei_att.timestamp2.log.attributes">
+      <ref name="mei_att.timestamp2.log.attribute.tstamp2"/>
    </define>
-   <define name="mei_att.timestamp2.logical.attribute.tstamp2">
+   <define name="mei_att.timestamp2.log.attribute.tstamp2">
       <optional>
          <attribute name="tstamp2">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Encodes the ending point of an event, i.e., a count of measures plus a beat location in the ending measure.</a:documentation>
@@ -10497,6 +10631,9 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
          <empty/>
       </element>
    </define>
+   <define name="mei_att.ambitus.vis.attributes">
+      <empty/>
+   </define>
    <define name="mei_att.arpeg.vis.attributes">
       <ref name="mei_att.typography.attributes"/>
       <ref name="mei_att.arpeg.vis.attribute.arrow"/>
@@ -10627,6 +10764,9 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
       <ref name="mei_att.typography.attributes"/>
       <ref name="mei_att.lineRend.attributes"/>
    </define>
+   <define name="mei_att.graceGrp.vis.attributes">
+      <empty/>
+   </define>
    <define name="mei_att.hairpin.vis.attributes">
       <ref name="mei_att.lineRend.base.attributes"/>
       <ref name="mei_att.placementRelStaff.attributes"/>
@@ -10685,6 +10825,10 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
       <ref name="mei_att.curvature.attributes"/>
    </define>
    <define name="mei_att.lyrics.vis.attributes">
+      <ref name="mei_att.placementRelStaff.attributes"/>
+      <ref name="mei_att.typography.attributes"/>
+   </define>
+   <define name="mei_att.mNum.vis.attributes">
       <ref name="mei_att.placementRelStaff.attributes"/>
       <ref name="mei_att.typography.attributes"/>
    </define>
