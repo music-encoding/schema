@@ -8111,6 +8111,60 @@
         </datatype>
       </attDef>
     </attList>
+  </classSpec><classSpec rend="add" ident="att.perfRes" module="MEI.header" type="atts">
+    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that define the characteristics and components of the performance resource.</desc>
+    <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <memberOf key="att.perfRes.basic"/>
+      <memberOf key="att.transposition"/>
+    </classes>
+    <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <attDef ident="solo" usage="opt">
+        <desc xml:lang="en">Use this attribute to identify the performance resource as a soloist especially in an accompanied work, such as a concerto or vocal solo.</desc>
+        <datatype>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.BOOLEAN"/>
+        </datatype>
+      </attDef>
+    </attList>
+  </classSpec><classSpec rend="add" ident="att.perfRes.basic" module="MEI.header" type="atts">
+    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that define the characteristics and components of the performance resource or a performance resource list.</desc>
+    <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <memberOf key="att.adlibitum"/>
+    </classes>
+    <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <attDef ident="count" usage="opt">
+        <desc xml:lang="en">Indicates the number of performers.</desc>
+        <datatype>
+          <rng:data type="positiveInteger"/>
+        </datatype>
+      </attDef>
+    </attList>
+  </classSpec><classSpec rend="add" ident="att.adlibitum" module="MEI.header" type="atts">
+    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that describe a performance resource as ad libitum (optional).</desc>
+    <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <attDef ident="adlib" usage="opt">
+        <desc xml:lang="en">Marks a performance resource as ad libitum (optional).</desc>
+        <datatype>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.BOOLEAN"/>
+        </datatype>
+      </attDef>
+    </attList>
+    <remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+      <p>The technical term “ad libitum” has several meanings depending on the context in which it occurs:</p>
+      <p>
+        <list type="gloss">
+          <head>Meanings of ad libitum</head>
+          <label>1</label>
+          <item>indicates an optional performance resource (instrumental or vocal part or group),</item>
+          <label>2</label>
+          <item>marks a passage to be played freely or free in time,</item>
+          <label>3</label>
+          <item>requests or invites to improvise a passage of music,</item>
+          <label>4</label>
+          <item>indicates that the number repetitions can be set individually or spontaneously.</item>
+        </list>
+      </p>
+      <p>Currently only the use within a performance resource (case 1) is supported.</p>
+    </remarks>
   </classSpec><classSpec rend="add" ident="att.recordType" type="atts" module="MEI.header">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that define the characteristics and components of the bibliographic
       description.</desc>
@@ -9224,34 +9278,24 @@
       <memberOf key="att.bibl"/>
       <memberOf key="att.edit"/>
       <memberOf key="att.lang"/>
+      <memberOf key="att.perfRes"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike.limited"/><ref name="perfRes"/></choice></zeroOrMore>
-    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="count" usage="opt">
-        <desc xml:lang="en">Indicates the number of performers.</desc>
-        <datatype>
-          <rng:data type="positiveInteger"/>
-        </datatype>
-      </attDef><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="solo" usage="opt">
-        <desc xml:lang="en">Marks this instrument or vocal part as a soloist. Do not use this attribute for a solo
-          instrument which is not accompanied.</desc>
-        <datatype>
-          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.BOOLEAN"/>
-        </datatype>
-      </attDef></attList></elementSpec><elementSpec rend="add" ident="perfResList" module="MEI.header"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Several instrumental or vocal resources treated as a group.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+    </content><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+      <p>In the context of a performance resource the attribute <att>adlib</att> marks a resource as optional.</p>
+    </remarks><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+      <p>To indicate the tuning of an instrument, the attribute <att>trans.diat</att> can be used.</p>
+    </remarks></elementSpec><elementSpec rend="add" ident="perfResList" module="MEI.header"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Several instrumental or vocal resources treated as a group.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       <memberOf key="att.authorized"/>
       <memberOf key="att.bibl"/>
       <memberOf key="att.edit"/>
       <memberOf key="att.lang"/>
+      <memberOf key="att.perfRes.basic"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.headLike"/></zeroOrMore>
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="annot"/><ref name="perfRes"/><ref name="perfResList"/></choice></zeroOrMore>
-    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="count" usage="opt">
-        <desc xml:lang="en">Indicates the number of performers.</desc>
-        <datatype>
-          <rng:data type="positiveInteger"/>
-        </datatype>
-      </attDef></attList><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+    </content><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The function of instrumentalists or vocalists is represented by the choice of <gi scheme="MEI">perfRes</gi> and <gi scheme="MEI">perfResList</gi> child elements. Arrangements
         are coded for the medium of the work being described, not for the original medium.</p>
     </remarks></elementSpec><elementSpec rend="add" ident="physDesc" module="MEI.header"><gloss xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">physical description</gloss><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Container for information about the appearance, construction, or

@@ -19,7 +19,7 @@
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href=../../../source/"validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2022-10-27T21:20:08.479778749Z-->
+<!--canonicalized: 2022-11-25T14:13:43.247222968Z-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -3710,12 +3710,17 @@
 </egXML>
                         </figure>
                      </p>
-                     <p>Music for a single player should, however, never use the <att>solo</att> attribute.</p>
+                     <p>Music for a single player does not have to be marked as solo with the <att>solo</att> attribute.</p>
+                     <p>An <hi rend="italic">ad libitum</hi> part, i.e. not essential for the performance of the work, may be marked with the <att>adlib</att> attribute.</p>
                      <p>
                         <figure>
                            <head/>
-                           <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve" valid="false">&lt;!-- This is an example of what not to do --&gt;&lt;perfResList&gt;
-   &lt;perfRes solo="true"&gt;Piano&lt;/perfRes&gt;
+                           <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve" valid="false">&lt;perfResList&gt;
+   &lt;perfRes&gt;Soprano&lt;/perfRes&gt;
+   &lt;perfRes&gt;Alto&lt;/perfRes&gt;
+   &lt;perfRes&gt;Tenor&lt;/perfRes&gt;
+   &lt;perfRes&gt;Bass&lt;/perfRes&gt;
+   &lt;perfRes adlib="true"&gt;Organ&lt;/perfRes&gt;
 &lt;/perfResList&gt;
 </egXML>
                         </figure>
@@ -24331,6 +24336,63 @@
       </attDef>
     </attList>
   </classSpec>
+  <classSpec ident="att.perfRes" module="MEI.header" type="atts">
+    <desc xml:lang="en">Attributes that define the characteristics and components of the performance resource.</desc>
+    <classes>
+      <memberOf key="att.perfRes.basic"/>
+      <memberOf key="att.transposition"/>
+    </classes>
+    <attList>
+      <attDef ident="solo" usage="opt">
+        <desc xml:lang="en">Use this attribute to identify the performance resource as a soloist especially in an accompanied work, such as a concerto or vocal solo.</desc>
+        <datatype>
+          <rng:ref name="data.BOOLEAN"/>
+        </datatype>
+      </attDef>
+    </attList>
+  </classSpec>
+  <classSpec ident="att.perfRes.basic" module="MEI.header" type="atts">
+    <desc xml:lang="en">Attributes that define the characteristics and components of the performance resource or a performance resource list.</desc>
+    <classes>
+      <memberOf key="att.adlibitum"/>
+    </classes>
+    <attList>
+      <attDef ident="count" usage="opt">
+        <desc xml:lang="en">Indicates the number of performers.</desc>
+        <datatype>
+          <rng:data type="positiveInteger"/>
+        </datatype>
+      </attDef>
+    </attList>
+  </classSpec>
+  <classSpec ident="att.adlibitum" module="MEI.header" type="atts">
+    <desc xml:lang="en">Attributes that describe a performance resource as ad libitum (optional).</desc>
+    <attList>
+      <attDef ident="adlib" usage="opt">
+        <desc xml:lang="en">Marks a performance resource as ad libitum (optional).</desc>
+        <datatype>
+          <rng:ref name="data.BOOLEAN"/>
+        </datatype>
+      </attDef>
+    </attList>
+    <remarks xml:lang="en">
+      <p>The technical term “ad libitum” has several meanings depending on the context in which it occurs:</p>
+      <p>
+        <list type="gloss">
+          <head>Meanings of ad libitum</head>
+          <label>1</label>
+          <item>indicates an optional performance resource (instrumental or vocal part or group),</item>
+          <label>2</label>
+          <item>marks a passage to be played freely or free in time,</item>
+          <label>3</label>
+          <item>requests or invites to improvise a passage of music,</item>
+          <label>4</label>
+          <item>indicates that the number repetitions can be set individually or spontaneously.</item>
+        </list>
+      </p>
+      <p>Currently only the use within a performance resource (case 1) is supported.</p>
+    </remarks>
+  </classSpec>
   <classSpec ident="att.recordType" type="atts" module="MEI.header">
     <desc xml:lang="en">Attributes that define the characteristics and components of the bibliographic
       description.</desc>
@@ -26178,6 +26240,7 @@
       <memberOf key="att.bibl"/>
       <memberOf key="att.edit"/>
       <memberOf key="att.lang"/>
+      <memberOf key="att.perfRes"/>
     </classes>
     <content>
       <rng:zeroOrMore>
@@ -26188,21 +26251,12 @@
         </rng:choice>
       </rng:zeroOrMore>
     </content>
-    <attList>
-      <attDef ident="count" usage="opt">
-        <desc xml:lang="en">Indicates the number of performers.</desc>
-        <datatype>
-          <rng:data type="positiveInteger"/>
-        </datatype>
-      </attDef>
-      <attDef ident="solo" usage="opt">
-        <desc xml:lang="en">Marks this instrument or vocal part as a soloist. Do not use this attribute for a solo
-          instrument which is not accompanied.</desc>
-        <datatype>
-          <rng:ref name="data.BOOLEAN"/>
-        </datatype>
-      </attDef>
-    </attList>
+    <remarks xml:lang="en">
+      <p>In the context of a performance resource the attribute <att>adlib</att> marks a resource as optional.</p>
+    </remarks>
+    <remarks xml:lang="en">
+      <p>To indicate the tuning of an instrument, the attribute <att>trans.diat</att> can be used.</p>
+    </remarks>
   </elementSpec>
   <elementSpec ident="perfResList" module="MEI.header">
     <desc xml:lang="en">Several instrumental or vocal resources treated as a group.</desc>
@@ -26212,6 +26266,7 @@
       <memberOf key="att.bibl"/>
       <memberOf key="att.edit"/>
       <memberOf key="att.lang"/>
+      <memberOf key="att.perfRes.basic"/>
     </classes>
     <content>
       <rng:zeroOrMore>
@@ -26225,14 +26280,6 @@
         </rng:choice>
       </rng:zeroOrMore>
     </content>
-    <attList>
-      <attDef ident="count" usage="opt">
-        <desc xml:lang="en">Indicates the number of performers.</desc>
-        <datatype>
-          <rng:data type="positiveInteger"/>
-        </datatype>
-      </attDef>
-    </attList>
     <remarks xml:lang="en">
       <p>The function of instrumentalists or vocalists is represented by the choice of <gi scheme="MEI">perfRes</gi> and <gi scheme="MEI">perfResList</gi> child elements. Arrangements
         are coded for the medium of the work being described, not for the original medium.</p>

@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2022-10-27T21:19:45Z. .
+Schema generated from ODD source 2022-11-25T14:13:15Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -14262,6 +14262,42 @@ Suggested values include: 1] smufl</a:documentation>
          </attribute>
       </optional>
    </define>
+   <define name="mei_att.perfRes.attributes">
+      <ref name="mei_att.perfRes.basic.attributes"/>
+      <ref name="mei_att.transposition.attributes"/>
+      <ref name="mei_att.perfRes.attribute.solo"/>
+   </define>
+   <define name="mei_att.perfRes.attribute.solo">
+      <optional>
+         <attribute name="solo">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use this attribute to identify the performance resource as a soloist especially in an accompanied work, such as a concerto or vocal solo.</a:documentation>
+            <ref name="mei_data.BOOLEAN"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.perfRes.basic.attributes">
+      <ref name="mei_att.adlibitum.attributes"/>
+      <ref name="mei_att.perfRes.basic.attribute.count"/>
+   </define>
+   <define name="mei_att.perfRes.basic.attribute.count">
+      <optional>
+         <attribute name="count">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates the number of performers.</a:documentation>
+            <data type="positiveInteger"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.adlibitum.attributes">
+      <ref name="mei_att.adlibitum.attribute.adlib"/>
+   </define>
+   <define name="mei_att.adlibitum.attribute.adlib">
+      <optional>
+         <attribute name="adlib">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Marks a performance resource as ad libitum (optional).</a:documentation>
+            <ref name="mei_data.BOOLEAN"/>
+         </attribute>
+      </optional>
+   </define>
    <define name="mei_att.recordType.attributes">
       <ref name="mei_att.recordType.attribute.recordtype"/>
    </define>
@@ -15715,18 +15751,7 @@ Suggested values include: 1] glue; 2] thread; 3] needle; 4] tape; 5] staple</a:d
          <ref name="mei_att.bibl.attributes"/>
          <ref name="mei_att.edit.attributes"/>
          <ref name="mei_att.lang.attributes"/>
-         <optional>
-            <attribute name="count">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates the number of performers.</a:documentation>
-               <data type="positiveInteger"/>
-            </attribute>
-         </optional>
-         <optional>
-            <attribute name="solo">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Marks this instrument or vocal part as a soloist. Do not use this attribute for a solo instrument which is not accompanied.</a:documentation>
-               <ref name="mei_data.BOOLEAN"/>
-            </attribute>
-         </optional>
+         <ref name="mei_att.perfRes.attributes"/>
          <empty/>
       </element>
    </define>
@@ -15748,12 +15773,7 @@ Suggested values include: 1] glue; 2] thread; 3] needle; 4] tape; 5] staple</a:d
          <ref name="mei_att.bibl.attributes"/>
          <ref name="mei_att.edit.attributes"/>
          <ref name="mei_att.lang.attributes"/>
-         <optional>
-            <attribute name="count">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates the number of performers.</a:documentation>
-               <data type="positiveInteger"/>
-            </attribute>
-         </optional>
+         <ref name="mei_att.perfRes.basic.attributes"/>
          <empty/>
       </element>
    </define>
