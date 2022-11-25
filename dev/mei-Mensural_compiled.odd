@@ -4478,9 +4478,9 @@
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that associate a feature corresponding with all or part of an image.</desc>
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="facs" usage="opt">
-        <desc xml:lang="en">Permits the current element to reference a facsimile surface or image zone which
-          corresponds to it.</desc>
-        <datatype maxOccurs="unbounded">
+        <gloss versionDate="2022-10-18" xml:lang="en">facsimile</gloss>
+        <desc versionDate="2022-10-18" xml:lang="en">Points to one or more images, portions of an image, or surfaces which correspond to the current element.</desc>
+        <datatype minOccurs="1" maxOccurs="unbounded">
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.URI"/>
         </datatype>
         <constraintSpec ident="check_facsTarget" scheme="isoschematron">
@@ -4532,7 +4532,7 @@
         occurring on this surface.</p>
     </remarks><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-surface.html">surface</ref> element of the Text Encoding Initiative (TEI).</p>
-    </remarks></elementSpec><elementSpec rend="add" ident="zone" module="MEI.facsimile"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Defines an area of interest within a surface or graphic file.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+    </remarks></elementSpec><elementSpec rend="add" ident="zone" module="MEI.facsimile"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Defines an area of interest within a <gi scheme="MEI">surface</gi> or graphic file.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       <memberOf key="att.coordinated"/>
       <memberOf key="att.dataPointing"/>

@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2022-11-25T14:13:09Z. .
+Schema generated from ODD source 2022-11-25T14:19:26Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -12413,7 +12413,7 @@ Suggested values include: 1] smufl</a:documentation>
    <define name="mei_att.facsimile.attribute.facs">
       <optional>
          <attribute name="facs">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Permits the current element to reference a facsimile surface or image zone which corresponds to it.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(facsimile) Points to one or more images, portions of an image, or surfaces which correspond to the current element.</a:documentation>
             <list>
                <oneOrMore>
                   <ref name="mei_data.URI"/>
@@ -12473,7 +12473,7 @@ Suggested values include: 1] smufl</a:documentation>
    </define>
    <define name="mei_zone">
       <element name="zone">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Defines an area of interest within a surface or graphic file.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Defines an area of interest within a <code xmlns="http://www.w3.org/1999/xhtml">&lt;surface&gt;</code> or graphic file.</a:documentation>
          <zeroOrMore>
             <ref name="mei_model.figDescLike"/>
          </zeroOrMore>
