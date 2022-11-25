@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2022-11-25T14:28:32Z. .
+Schema generated from ODD source 2022-11-25T14:39:55Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -227,19 +227,19 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <value>dotted</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Dotted line (SMuFL E037).</a:documentation>
          <value>dbl</value>
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Double barline (SMuFL E031 and Unicode 1D101).</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Double bar line (SMuFL E031 and Unicode 1D101).</a:documentation>
          <value>dbldashed</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Double dashed line.</a:documentation>
          <value>dbldotted</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Double dotted line.</a:documentation>
          <value>dblheavy</value>
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Heavy double barline (SMuFL E035).</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Heavy double bar line (SMuFL E035).</a:documentation>
          <value>dblsegno</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Segno serpent with vertical lines (SMuFL E04B).</a:documentation>
          <value>end</value>
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">End barline (SMuFL E032 and Unicode 1D102).</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">End bar line (SMuFL E032 and Unicode 1D102).</a:documentation>
          <value>heavy</value>
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Heavy barline (SMuFL E034).</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Heavy bar line (SMuFL E034).</a:documentation>
          <value>invis</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Bar line not rendered.</a:documentation>
          <value>rptstart</value>
@@ -251,7 +251,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <value>segno</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Segno serpent.</a:documentation>
          <value>single</value>
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Single barline (SMuFL E030 and Unicode 1D100).</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Single bar line (SMuFL E030 and Unicode 1D100).</a:documentation>
       </choice>
    </define>
    <define name="mei_data.BEAT">

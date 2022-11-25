@@ -19,7 +19,7 @@
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href=../../../source/"validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2022-11-25T14:28:59.620078801Z-->
+<!--canonicalized: 2022-11-25T14:40:32.458970294Z-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -536,8 +536,8 @@
                   </p>
                   <p>Sometimes, timestamps are used to indicate positions where no music <hi rend="italic">Events</hi> are located (see <ptr target="#eventsControlevents"/>). Therefore, the allowed range of timestamps
                      stretches from 0 to the current meter count + 1. By definition, a timestamp of
-                     1 indicates the position of the left barline, while a timestamp of 5 (in case
-                     of a 4/4 meter) indicates the right barline. This makes it possible to encode
+                     1 indicates the position of the left bar line, while a timestamp of 5 (in case
+                     of a 4/4 meter) indicates the right bar line. This makes it possible to encode
                      open-ended slurs in a graphical way. However, it should be kept in mind that
                      such timestamps may not be converted to <att>startid</att> and
                      <att>endid</att>, and not every application may be able to render them
@@ -4596,7 +4596,7 @@
                      </specList>
                   </p>
                   <p>There are other attributes that allow the specification of many further details of a score. These are available from the element definitions accessible at <gi scheme="MEI">scoreDef</gi>, <gi scheme="MEI">staffDef</gi>, <gi scheme="MEI">staffGrp</gi> and <gi scheme="MEI">layerDef</gi>.</p>
-                  <p>When content is provided for <gi scheme="MEI">scoreDef</gi>, it must contain a <gi scheme="MEI">staffGrp</gi> element. This element is used to gather individual staves and other staff groups. This is useful for collecting instrumental or vocal groups in a large score, such as woodwinds, brasses, etc., and for assigning a shared label to the group, using the <gi scheme="MEI">label</gi> and <gi scheme="MEI">labelAbbr</gi> subelements. The <gi scheme="MEI">staffGrp</gi> element is also used for the two staves of a grand staff. The <att>bar.thru</att> attribute on <gi scheme="MEI">staffGrp</gi> allows one to specify whether barlines are drawn across the space between staves of that group or only on the staves themselves.</p>
+                  <p>When content is provided for <gi scheme="MEI">scoreDef</gi>, it must contain a <gi scheme="MEI">staffGrp</gi> element. This element is used to gather individual staves and other staff groups. This is useful for collecting instrumental or vocal groups in a large score, such as woodwinds, brasses, etc., and for assigning a shared label to the group, using the <gi scheme="MEI">label</gi> and <gi scheme="MEI">labelAbbr</gi> subelements. The <gi scheme="MEI">staffGrp</gi> element is also used for the two staves of a grand staff. The <att>bar.thru</att> attribute on <gi scheme="MEI">staffGrp</gi> allows one to specify whether bar lines are drawn across the space between staves of that group or only on the staves themselves.</p>
                   <p>A <gi scheme="MEI">staffDef</gi> element is used to describe an individual staff of a <gi scheme="MEI">score</gi> or performer <gi scheme="MEI">part</gi>. It bears most of the attributes described above. The <gi scheme="MEI">label</gi> and <gi scheme="MEI">labelAbbr</gi> subelements may be used for providing staff labels for the first and subsequent systems.</p>
                   <p>Every <gi scheme="MEI">staffDef</gi> must have an <att>n</att> attribute with an integer as its value. The first occurence of a <gi scheme="MEI">staffDef</gi> with a given number must also indicate the number of staff lines via the <att>lines</att> attribute.</p>
                   <p>The order of <gi scheme="MEI">staffDef</gi> elements within <gi scheme="MEI">scoreDef</gi> follows the order of staves in the source document or planned rendering. The individual <gi scheme="MEI">staff</gi> elements within a <gi scheme="MEI">measure</gi> refer to these <gi scheme="MEI">staffDef</gi> declarations using their own <att>n</att> attribute values. Therefore, the encoding order of staves within a measure does not have to mimic the order of the <gi scheme="MEI">staffDef</gi> elements with <gi scheme="MEI">scoreDef</gi>.</p>
@@ -5139,7 +5139,7 @@
                <div xml:id="cmnTstamp" type="div3">
                   <head>Timestamps and Durations</head>
                   <p>MEI offers multiple ways of defining onsets and offsets of timed musical events such as notes and slurs. The most common and most musician-friendly approach to this is through the use of a combination of the attributes <att>tstamp</att> and <att>dur</att>, which are made available by the attribute classes <ident type="class">att.timestamp.log</ident> (inherited by <ident type="class">att.controlEvent</ident>) and <ident type="class">att.timestamp2.log</ident>, both from the shared module.</p>
-                  <p>The timestamp (<att>tstamp</att>) of a musical event is calculated in relation to the meter of the current measure and resembles the so-called ‘beat’ position. In a common time measure with four quarter notes, the timestamp of each quarter equals its beat position in the measure: The first quarter has a timestamp of 1, the second has a timestamp of 2, and so on. MEI defines the value of <att>tstamp</att> as a real number; the second eighth note position in a measure would thus be represented by the value of "1.5". The range of possible values is defined as starting with zero and ending with the number of metrical units in a measure (the ‘numerator’ in a time signature) + 1. This allows the capture of all graphical positions starting from the left barline ('0') and ending with the right barline of the measure ('5', in the case of 4/4 time).</p>
+                  <p>The timestamp (<att>tstamp</att>) of a musical event is calculated in relation to the meter of the current measure and resembles the so-called ‘beat’ position. In a common time measure with four quarter notes, the timestamp of each quarter equals its beat position in the measure: The first quarter has a timestamp of 1, the second has a timestamp of 2, and so on. MEI defines the value of <att>tstamp</att> as a real number; the second eighth note position in a measure would thus be represented by the value of "1.5". The range of possible values is defined as starting with zero and ending with the number of metrical units in a measure (the ‘numerator’ in a time signature) + 1. This allows the capture of all graphical positions starting from the left bar line ('0') and ending with the right bar line of the measure ('5', in the case of 4/4 time).</p>
                   <p>For expressing durations, MEI offers the <att>dur</att> attribute. This attribute is described in section <ptr target="#cmnNotesBasic"/>.</p>
                   <p>For ‘spanning’ elements like slurs, which are members of the <ident type="class">model.controlEventLike</ident> class, it is often more intuitive to record two timestamps – one for the onset of the event and one for its termination. Because the termination of the event may be in a succeeding measure, the second timestamp (<att>tstamp2</att>) has a slightly different datatype than the one marking the initiation of the event. Its datatype is constrained to values following the formula "<hi rend="italic">xm + y</hi>", where <hi rend="italic">x</hi> is the number of full measures that this particular feature lasts (or the number of bar lines crossed) and <hi rend="italic">y</hi> is the timestamp in the target measure where the feature ends. The timestamp is expressed using the same logic as described above. For example, a value of "0m+3" in 4/4 time indicates that the element bearing this attribute, a slur for example, ends on beat 3 of the same measure where it started. A value of "1m+1.5" would indicate an end on the second eighth note of the following measure. In 6/8 time, the value "2m+3" means that the feature ends two measures later on the third eighth note.</p>
                </div>
@@ -5329,7 +5329,7 @@
                      </figure>
                   </p>
                   <p>Downstream processing needs are the determining factor in the choice between the two alternative encoding methods.</p>
-                  <p>Due to the potential problem of overlapping hierarchies, the <gi scheme="MEI">beam</gi> element only allows the encoding of beams that do not cross barlines. When beams cross barlines, the use of the <gi scheme="MEI">beamSpan</gi> element is required. Unlike <gi scheme="MEI">beam</gi>, the <gi scheme="MEI">beamSpan</gi> element does not contain the beamed notes as its children. Instead, it references the <att>xml:id</att> values of all affected notes in its <att>plist</att> attribute and denotes the initial and terminal notes of the beam using <att>startid</att> and <att>endid</att> attributes. This configuration allows beams to cross measure boundaries. The following example from <ref target="https://en.wikipedia.org/wiki/Erwin_Schulhoff">Erwin Schulhoff’s</ref>
+                  <p>Due to the potential problem of overlapping hierarchies, the <gi scheme="MEI">beam</gi> element only allows the encoding of beams that do not cross bar lines. When beams cross bar lines, the use of the <gi scheme="MEI">beamSpan</gi> element is required. Unlike <gi scheme="MEI">beam</gi>, the <gi scheme="MEI">beamSpan</gi> element does not contain the beamed notes as its children. Instead, it references the <att>xml:id</att> values of all affected notes in its <att>plist</att> attribute and denotes the initial and terminal notes of the beam using <att>startid</att> and <att>endid</att> attributes. This configuration allows beams to cross measure boundaries. The following example from <ref target="https://en.wikipedia.org/wiki/Erwin_Schulhoff">Erwin Schulhoff’s</ref>
                      <hi rend="italic">Violin Sonata</hi> demonstrates a typical example of such hierarchy-crossing beams:</p>
                   <p>
                      <figure>
@@ -5377,7 +5377,7 @@
                   <p>The scope of the <att>tie</att> attribute is the musical <gi scheme="MEI">layer</gi>; that is, a tie started in one layer may only be ended by a subsequent musical event with a <att>tie</att> attribute with an <val>m</val> or <val>t</val> value in the same layer. The tie-terminating event may lie in the following measure.</p>
                   <p>
                      <figure>
-                        <head>Ties across barlines</head>
+                        <head>Ties across bar lines</head>
                         <graphic url="../images/modules/cmn/finger-300.png"/>
                      </figure>
                      <figure>
@@ -5545,7 +5545,7 @@
 </egXML>
                      </figure>
                   </p>
-                  <p>Slurs and ties that cross system or page breaks are often split into two separate symbols for rendering. One slur or tie ends at the last barline, another one starts at the beginning of the new system. MEI expects this to be the default rendering behaviour, so that in situations like these, the regular <att>tie</att> or <att>slur</att> attributes are sufficient to describe both curved lines resulting from the split.</p>
+                  <p>Slurs and ties that cross system or page breaks are often split into two separate symbols for rendering. One slur or tie ends at the last bar line, another one starts at the beginning of the new system. MEI expects this to be the default rendering behaviour, so that in situations like these, the regular <att>tie</att> or <att>slur</att> attributes are sufficient to describe both curved lines resulting from the split.</p>
                   <p>Sometimes, however, one of these two symbols is missing in the document, or the encoder wants to provide additional (often visual) information about the slur or tie. In these cases, using an attribute is not an adequate solution. Therefore, MEI offers dedicated <gi scheme="MEI">tie</gi> and <gi scheme="MEI">slur</gi> elements. A third element, <gi scheme="MEI">phrase</gi>, is used to identify a unified melodic idea (in German: <hi rend="italic">Phrasierungsbogen</hi>), whereas the <gi scheme="MEI">slur</gi> element is used as a generic element for all curved lines (in German: <hi rend="italic">Bogensetzung</hi>) except ties. All three elements have nearly identical models.</p>
                   <p>Another reason for using elements instead of attributes for ties, slurs, and phrase marks is that only elements may be combined with the functionality provided in chapters <ptr target="#editTrans"/> and <ptr target="#critApp"/> of these Guidelines.</p>
                   <p>Although these elements are allowed within a <gi scheme="MEI">layer</gi> to accommodate unmeasured notation, by convention in CMN they are normally placed inside <gi scheme="MEI">measure</gi>, after the encoding of staves, alongside other so-called ‘control events’.</p>
@@ -6009,7 +6009,7 @@
                   </div>
                   <div xml:id="cmnFermata" type="div4">
                      <head>Fermata</head>
-                     <p>A very common feature of music notation from the CMN period is the so-called ‘fermata’ (or ‘corona’ in Italian). It is usually written as a dot above or below an arc. It may stand above or below the staff it affects with its ‘open’ side usually facing towards the staff. A fermata indicates that a related note or rest should be held longer than its written duration would normally require. Sometimes, a fermata occurs over or under a barline to indicate a pause or even the end of a phrase or section.</p>
+                     <p>A very common feature of music notation from the CMN period is the so-called ‘fermata’ (or ‘corona’ in Italian). It is usually written as a dot above or below an arc. It may stand above or below the staff it affects with its ‘open’ side usually facing towards the staff. A fermata indicates that a related note or rest should be held longer than its written duration would normally require. Sometimes, a fermata occurs over or under a bar line to indicate a pause or even the end of a phrase or section.</p>
                      <p>
                         <figure>
                            <head>The probably most famous fermatas in history from Beethoven’s fifth symphony</head>
@@ -6642,7 +6642,7 @@
 </egXML>
                         </figure>
                      </p>
-                     <p>As seen in the example above, it is possible to continuously repeat half measures, even across barlines.</p>
+                     <p>As seen in the example above, it is possible to continuously repeat half measures, even across bar lines.</p>
                      <p>The <gi scheme="MEI">mRpt2</gi> and <gi scheme="MEI">multiRpt</gi> elements (like the <gi scheme="MEI">multiRest</gi> element) never occur in scores, only in performer parts, where it is often necessary to abbreviate the notation due to page size limitations.</p>
                      <p>
                         <figure>
@@ -7400,7 +7400,7 @@
                      <label>duplex</label>
                      <item>One of the three categories of a longa in Ars antiqua ('duplex', 'perfecta', and 'imperfecta')</item>
                   </list>
-                  <p>The last three values are to be used exclusively in <hi rend="italic">Ars antiqua</hi> mensural notation, where <val>maior</val>and <val>minor</val>refer to types of <hi rend="italic">semibreves</hi>, and <val>duplex</val>refers to a type of <hi rend="italic">longa</hi>. Examples of each of these six values are presented below. In these examples, the ‘voice’ staff renders the notes in the code snippet, and the ‘reference’ staff, together with the dotted barlines, are shown to help to visualize the relative values of the notes in the ‘voice’ staff.</p>
+                  <p>The last three values are to be used exclusively in <hi rend="italic">Ars antiqua</hi> mensural notation, where <val>maior</val>and <val>minor</val>refer to types of <hi rend="italic">semibreves</hi>, and <val>duplex</val>refers to a type of <hi rend="italic">longa</hi>. Examples of each of these six values are presented below. In these examples, the ‘voice’ staff renders the notes in the code snippet, and the ‘reference’ staff, together with the dotted bar lines, are shown to help to visualize the relative values of the notes in the ‘voice’ staff.</p>
                   <p>The following example illustrates an <hi rend="italic">alteration</hi> (the second <hi rend="italic">brevis</hi>) in <hi rend="italic">modus minor perfectus</hi>. Notice that the second <hi rend="italic">brevis</hi> has doubled its regular value, it has been altered, unlike the first one. <figure>
                         <head/>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/4.0.1/mei-Mensural.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;&lt;?xml-model href="https://music-encoding.org/schema/4.0.1/mei-Mensural.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="4.0.1"&gt;
@@ -8375,7 +8375,7 @@
 </egXML>
                   </figure>
                </p>
-               <p>This feature may also be used to encode measured music without using the <gi scheme="MEI">measure</gi> element. That is, the same data organization described above may be used, but with the addition of barlines, indicated by the <gi scheme="MEI">barLine</gi> element, for those situations where a measure-by-measure organization is not appropriate, for example, when measures are not coincident in all the staves of a score.</p>
+               <p>This feature may also be used to encode measured music without using the <gi scheme="MEI">measure</gi> element. That is, the same data organization described above may be used, but with the addition of bar lines, indicated by the <gi scheme="MEI">barLine</gi> element, for those situations where a measure-by-measure organization is not appropriate, for example, when measures are not coincident in all the staves of a score.</p>
             </div>
             <div xml:id="otherFeatures" type="div2">
                <head>Other Features</head>
@@ -14233,7 +14233,7 @@
           <desc xml:lang="en">Dotted line (SMuFL E037).</desc>
         </valItem>
         <valItem ident="dbl">
-          <desc xml:lang="en">Double barline (SMuFL E031 and Unicode 1D101).</desc>
+          <desc xml:lang="en">Double bar line (SMuFL E031 and Unicode 1D101).</desc>
         </valItem>
         <valItem ident="dbldashed">
           <desc xml:lang="en">Double dashed line.</desc>
@@ -14242,16 +14242,16 @@
           <desc xml:lang="en">Double dotted line.</desc>
         </valItem>
         <valItem ident="dblheavy">
-          <desc xml:lang="en">Heavy double barline (SMuFL E035).</desc>
+          <desc xml:lang="en">Heavy double bar line (SMuFL E035).</desc>
         </valItem> 
         <valItem ident="dblsegno">
           <desc xml:lang="en">Segno serpent with vertical lines (SMuFL E04B).</desc>
         </valItem> 
         <valItem ident="end">
-          <desc xml:lang="en">End barline (SMuFL E032 and Unicode 1D102).</desc>
+          <desc xml:lang="en">End bar line (SMuFL E032 and Unicode 1D102).</desc>
         </valItem>
         <valItem ident="heavy">
-          <desc xml:lang="en">Heavy barline (SMuFL E034).</desc>
+          <desc xml:lang="en">Heavy bar line (SMuFL E034).</desc>
         </valItem> 
         <valItem ident="invis">
           <desc xml:lang="en">Bar line not rendered.</desc>
@@ -14269,7 +14269,7 @@
           <desc xml:lang="en">Segno serpent.</desc>
         </valItem>
         <valItem ident="single">
-          <desc xml:lang="en">Single barline (SMuFL E030 and Unicode 1D100).</desc>
+          <desc xml:lang="en">Single bar line (SMuFL E030 and Unicode 1D100).</desc>
         </valItem>
       </valList>
     </content>
@@ -15694,12 +15694,12 @@
   </macroSpec>
   <macroSpec ident="data.MEASUREBEAT" module="MEI" type="dt">
     <desc xml:lang="en">A count of measures plus a beat location, <abbr>i.e.</abbr>, [0-9]+m *\+ *[0-9]+(\.?[0-9]*)?. The
-      measure count is the number of barlines crossed by the event, while the beat location is a
+      measure count is the number of bar lines crossed by the event, while the beat location is a
       timestamp expressed as a beat with an optional fractional part. For example, "1m+3.5"
       indicates a point in the next measure on the second half of beat 3. The measure number must be
       in the range of 0 to the number of remaining measures, while the beat number must be in the
       range from 0 to the numerator of the time signature plus 1. For example, in 6/8 the beat
-      number must be within the range from 0 (the left barline) to 7 (the right barline). A value
+      number must be within the range from 0 (the left bar line) to 7 (the right bar line). A value
       with a measure number of "0", such as "0m+2", indicates a point within the current
       measure.</desc>
     <content>
@@ -15710,14 +15710,14 @@
   </macroSpec>
   <macroSpec ident="data.MEASUREBEATOFFSET" module="MEI" type="dt">
     <desc xml:lang="en">A count of measures plus a beat location, <abbr>i.e.</abbr>, (\+|-)?[0-9]+m\+[0-9]+(\.?[0-9]*)?. The
-      measure count is the number of barlines crossed by the event, while the beat location is a
+      measure count is the number of bar lines crossed by the event, while the beat location is a
       timestamp expressed as a beat with an optional fractional part. The measure number must be in
       the range of preceding measures to the number of remaining measures. A value with a positive
       measure number, such as "1m+3", indicates a point in the following measure, while a value with
       a negative measure number, such as "-1m+3", marks a point in the preceding measure. The beat
       number must be in the range from 0 to the numerator of the time signature plus 1. For example,
-      in 6/8 the beat number must be within the range from 0 (the left barline) to 7 (the right
-      barline). A value with a measure number of "0", such as "0m+2", indicates a point within the
+      in 6/8 the beat number must be within the range from 0 (the left bar line) to 7 (the right
+      bar line). A value with a measure number of "0", such as "0m+2", indicates a point within the
       current measure.</desc>
     <content>
       <rng:data type="token">
@@ -31016,7 +31016,7 @@
     <desc xml:lang="en">Attributes that capture the placement of bar lines.</desc>
     <attList>
       <attDef ident="bar.len" usage="opt">
-        <desc xml:lang="en">States the length of barlines in virtual units. The value must be greater than 0 and
+        <desc xml:lang="en">States the length of bar lines in virtual units. The value must be greater than 0 and
           is typically equal to 2 times (the number of staff lines - 1); <abbr>e.g.</abbr>, a value of <val>8</val> for a
           5-line staff.</desc>
         <datatype>
@@ -32537,7 +32537,7 @@
         <desc xml:lang="en">Indicates whether or not a bar line is "controlling"; that is, if it indicates a point
           of alignment across all the parts. Bar lines within a score are usually controlling; that
           is, they "line up". Bar lines within parts may or may not be controlling. When applied to
-          <gi scheme="MEI">measure</gi>, this attribute indicates the nature of the right barline
+          <gi scheme="MEI">measure</gi>, this attribute indicates the nature of the right bar line
           but not the left.</desc>
         <datatype>
           <rng:ref name="data.BOOLEAN"/>
@@ -34383,7 +34383,7 @@
     </attList>
     <remarks xml:lang="en">
       <p>The width attribute may be used to capture measure width data for interchange with music
-        printing systems that utilize this information for printing. On &lt;barLine&gt; the width
+        printing systems that utilize this information for printing. On <gi scheme="MEI">barLine</gi> the width
         attribute captures the width of the preceding measure.</p>
     </remarks>
   </classSpec>
@@ -35098,7 +35098,7 @@
       <p>This element is provided for repertoires, such as mensural notation, that lack measures.
         Because the <gi scheme="MEI">barLine</gi> element’s attributes, from which the logical and
         visual characteristics of the bar line can be discerned, largely duplicate those of measure,
-        the use of barLine is not necessary within <gi scheme="MEI">measure</gi> elements in
+        the use of <gi scheme="MEI">barLine</gi> is not necessary within <gi scheme="MEI">measure</gi> elements in
         CMN.</p>
     </remarks>
   </elementSpec>
@@ -39996,7 +39996,7 @@
     </classes>
     <attList>
       <attDef ident="len" usage="opt">
-        <desc xml:lang="en">States the length of barlines in virtual units. The value must be greater than 0 and
+        <desc xml:lang="en">States the length of bar lines in virtual units. The value must be greater than 0 and
           is typically equal to 2 times (the number of staff lines - 1); <abbr>e.g.</abbr>, a value of <val>8</val> for a
           5-line staff.</desc>
         <datatype>

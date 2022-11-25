@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2022-11-25T14:28:43Z. .
+Schema generated from ODD source 2022-11-25T14:40:11Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -5898,19 +5898,19 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <value>dotted</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Dotted line (SMuFL E037).</a:documentation>
          <value>dbl</value>
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Double barline (SMuFL E031 and Unicode 1D101).</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Double bar line (SMuFL E031 and Unicode 1D101).</a:documentation>
          <value>dbldashed</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Double dashed line.</a:documentation>
          <value>dbldotted</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Double dotted line.</a:documentation>
          <value>dblheavy</value>
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Heavy double barline (SMuFL E035).</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Heavy double bar line (SMuFL E035).</a:documentation>
          <value>dblsegno</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Segno serpent with vertical lines (SMuFL E04B).</a:documentation>
          <value>end</value>
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">End barline (SMuFL E032 and Unicode 1D102).</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">End bar line (SMuFL E032 and Unicode 1D102).</a:documentation>
          <value>heavy</value>
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Heavy barline (SMuFL E034).</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Heavy bar line (SMuFL E034).</a:documentation>
          <value>invis</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Bar line not rendered.</a:documentation>
          <value>rptstart</value>
@@ -5922,7 +5922,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <value>segno</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Segno serpent.</a:documentation>
          <value>single</value>
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Single barline (SMuFL E030 and Unicode 1D100).</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Single bar line (SMuFL E030 and Unicode 1D100).</a:documentation>
       </choice>
    </define>
    <define name="mei_data.BEAT">
@@ -16196,7 +16196,7 @@ Suggested values include: 1] caesura; 2] finalis; 3] maior; 4] maxima; 5] minima
    <define name="mei_att.barring.attribute.bar.len">
       <optional>
          <attribute name="bar.len">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">States the length of barlines in virtual units. The value must be greater than 0 and is typically equal to 2 times (the number of staff lines - 1); e.g., a value of 8 for a 5-line staff.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">States the length of bar lines in virtual units. The value must be greater than 0 and is typically equal to 2 times (the number of staff lines - 1); e.g., a value of 8 for a 5-line staff.</a:documentation>
             <data type="decimal">
                <param name="minExclusive">0</param>
             </data>
@@ -17756,7 +17756,7 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
    <define name="mei_att.meterConformance.bar.attribute.control">
       <optional>
          <attribute name="control">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates whether or not a bar line is "controlling"; that is, if it indicates a point of alignment across all the parts. Bar lines within a score are usually controlling; that is, they "line up". Bar lines within parts may or may not be controlling. When applied to <code xmlns="http://www.w3.org/1999/xhtml">&lt;measure&gt;</code>, this attribute indicates the nature of the right barline but not the left.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates whether or not a bar line is "controlling"; that is, if it indicates a point of alignment across all the parts. Bar lines within a score are usually controlling; that is, they "line up". Bar lines within parts may or may not be controlling. When applied to <code xmlns="http://www.w3.org/1999/xhtml">&lt;measure&gt;</code>, this attribute indicates the nature of the right bar line but not the left.</a:documentation>
             <ref name="mei_data.BOOLEAN"/>
          </attribute>
       </optional>
@@ -25338,7 +25338,7 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
    <define name="mei_att.barLine.vis.attribute.len">
       <optional>
          <attribute name="len">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">States the length of barlines in virtual units. The value must be greater than 0 and is typically equal to 2 times (the number of staff lines - 1); e.g., a value of 8 for a 5-line staff.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">States the length of bar lines in virtual units. The value must be greater than 0 and is typically equal to 2 times (the number of staff lines - 1); e.g., a value of 8 for a 5-line staff.</a:documentation>
             <data type="decimal">
                <param name="minExclusive">0</param>
             </data>
