@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2022-11-25T14:40:00Z. .
+Schema generated from ODD source 2022-12-08T09:50:59Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -11754,7 +11754,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    </define>
    <define name="mei_metaMark">
       <element name="metaMark">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A graphical or textual statement with additional / explanatory information about the musical text. The textual consequences of this intervention are encoded independently via other means; that is, with elements such as &lt;add&gt;, &lt;del&gt;, etc.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A graphical or textual statement with additional / explanatory information about the musical text. The textual consequences of this intervention are encoded independently via other means; that is, with elements such as <code xmlns="http://www.w3.org/1999/xhtml">&lt;add&gt;</code>, <code xmlns="http://www.w3.org/1999/xhtml">&lt;del&gt;</code>, etc.</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>

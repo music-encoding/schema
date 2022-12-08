@@ -4206,7 +4206,7 @@
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-handShift.html">handShift</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="metaMark" module="MEI.edittrans"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">A graphical or textual statement with additional / explanatory information about the
       musical text. The textual consequences of this intervention are encoded independently via
-      other means; that is, with elements such as &lt;add&gt;, &lt;del&gt;, etc.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      other means; that is, with elements such as <gi scheme="MEI">add</gi>, <gi scheme="MEI">del</gi>, etc.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       <memberOf key="att.facsimile"/>
       <memberOf key="att.lang"/>
