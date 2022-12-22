@@ -14915,7 +14915,6 @@
       "cantabile", "Moderato", "♩=60", "Moderato ♩ =60").</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       <memberOf key="att.bibl"/>
-      <memberOf key="att.extender"/>
       <memberOf key="att.facsimile"/>
       <memberOf key="att.lang"/>
       <memberOf key="att.tempo.log"/>
@@ -16701,6 +16700,7 @@
   </classSpec><classSpec rend="add" ident="att.tempo.vis" module="MEI.visual" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Visual domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <memberOf key="att.extender"/>
       <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.verticalGroup"/>
       <memberOf key="att.visualOffset"/>

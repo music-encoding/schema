@@ -19,7 +19,7 @@
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href=../../../source/"validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2022-12-08T09:51:20.283824646Z-->
+<!--canonicalized: 2022-12-22T13:27:59.036110462Z-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -38581,7 +38581,6 @@
     <classes>
       <memberOf key="att.common"/>
       <memberOf key="att.bibl"/>
-      <memberOf key="att.extender"/>
       <memberOf key="att.facsimile"/>
       <memberOf key="att.lang"/>
       <memberOf key="att.tempo.log"/>
@@ -41674,6 +41673,7 @@
   <classSpec ident="att.tempo.vis" module="MEI.visual" type="atts">
     <desc xml:lang="en">Visual domain attributes.</desc>
     <classes>
+      <memberOf key="att.extender"/>
       <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.verticalGroup"/>
       <memberOf key="att.visualOffset"/>
