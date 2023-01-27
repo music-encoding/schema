@@ -19,7 +19,7 @@
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href=../../../source/"validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2023-01-27T16:56:00.639088993Z-->
+<!--canonicalized: 2023-01-27T16:58:28.851534476Z-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -17738,6 +17738,7 @@
     <desc xml:lang="en">Attributes describing the harmonic function of a single pitch.</desc>
     <attList>
       <attDef ident="deg" usage="opt">
+        <gloss versionDate="2022-10-18" xml:lang="en">degree</gloss>
         <desc xml:lang="en">Captures scale degree information using <ref target="https://www.humdrum.org/rep/deg/">Humdrum **deg syntax</ref> -- an optional indicator
           of melodic approach (^ = ascending approach, v = descending approach), a scale degree
           value (1 = tonic ... 7 = leading tone), and an optional indication of chromatic
@@ -17762,6 +17763,7 @@
     <desc xml:lang="en">Attributes that describe harmonic intervals.</desc>
     <attList>
       <attDef ident="inth" usage="opt">
+        <gloss versionDate="2022-10-18" xml:lang="en">interval harmonic</gloss>
         <desc xml:lang="en">Encodes the harmonic interval between pitches occurring at the same time.</desc>
         <datatype maxOccurs="unbounded">
           <rng:ref name="data.INTERVAL.HARMONIC"/>
@@ -17773,6 +17775,7 @@
     <desc xml:lang="en">Attributes that provide for description of intervallic content.</desc>
     <attList>
       <attDef ident="intm" usage="opt">
+        <gloss versionDate="2022-10-18" xml:lang="en">interval melodic</gloss>
         <desc xml:lang="en">Encodes the melodic interval from the previous pitch. The value may be a general
           directional indication (u, d, s, etc.), an indication of diatonic interval direction,
           quality, and size, or a precise numeric value in half steps.</desc>
@@ -17984,6 +17987,7 @@
     <desc xml:lang="en">Attributes that describe pitch class.</desc>
     <attList>
       <attDef ident="pclass" usage="opt">
+        <gloss versionDate="2022-10-18" xml:lang="en">pitch class</gloss>
         <desc xml:lang="en">Holds pitch class information.</desc>
         <datatype>
           <rng:ref name="data.PITCHCLASS"/>
@@ -18043,6 +18047,7 @@
     <desc xml:lang="en">Attributes that specify pitch using sol-fa.</desc>
     <attList>
       <attDef ident="psolfa" usage="opt">
+        <gloss versionDate="2022-10-18" xml:lang="en">pitch sol-fa</gloss>
         <desc xml:lang="en">Contains sol-fa designation, <abbr>e.g.</abbr>, do, re, mi, etc., in either a fixed or movable Do
           system.</desc>
         <datatype>
@@ -18445,6 +18450,7 @@
     </classes>
     <attList>
       <attDef ident="func" usage="req">
+        <gloss versionDate="2022-10-18" xml:lang="en">function</gloss>
         <desc xml:lang="en">Describes the function of the bracketed event sequence.</desc>
         <datatype>
           <rng:data type="NMTOKENS"/>
@@ -18589,6 +18595,7 @@
     <desc xml:lang="en">Attributes that indicate whether an event participates in a glissando.</desc>
     <attList>
       <attDef ident="gliss" usage="opt">
+        <gloss versionDate="2022-10-18" xml:lang="en">glissando</gloss>
         <desc xml:lang="en">Indicates that this element participates in a glissando. If visual information about
           the glissando needs to be recorded, then a <gi scheme="MEI">gliss</gi> element should be
           employed instead.</desc>
@@ -18862,6 +18869,7 @@
     <desc xml:lang="en">Logical domain attributes.</desc>
     <attList>
       <attDef ident="func" usage="req">
+        <gloss versionDate="2022-10-18" xml:lang="en">function</gloss>
         <desc xml:lang="en">Function of the meter signature group.</desc>
         <valList type="closed">
           <valItem ident="alternating">
@@ -18952,6 +18960,7 @@
     <desc xml:lang="en">Attributes that record numbers to be displayed with a feature.</desc>
     <attList>
       <attDef ident="num" usage="opt">
+        <gloss versionDate="2022-10-18" xml:lang="en">number</gloss>
         <desc xml:lang="en">Records a number or count accompanying a notational feature.</desc>
         <datatype>
           <rng:data type="positiveInteger"/>
@@ -18964,6 +18973,7 @@
       tremolo or tuplet.</desc>
     <attList>
       <attDef ident="num.place" usage="opt">
+        <gloss versionDate="2022-10-30" xml:lang="en">number placement</gloss>
         <desc xml:lang="en">States where the tuplet number will be placed in relation to the note heads.</desc>
         <datatype>
           <rng:ref name="data.STAFFREL.basic"/>
@@ -19012,6 +19022,7 @@
     </classes>
     <attList>
       <attDef ident="dir" usage="req">
+        <gloss versionDate="2022-10-30" xml:lang="en">direction</gloss>
         <desc xml:lang="en">Records the position of the piano damper pedal.</desc>
         <valList type="closed">
           <valItem ident="down">
@@ -19029,6 +19040,7 @@
         </valList>
       </attDef>
       <attDef ident="func" usage="opt">
+        <gloss versionDate="2022-10-18" xml:lang="en">function</gloss>
         <desc xml:lang="en">Indicates the function of the depressed pedal, but not necessarily the text associated
           with its use. Use the <gi>dir</gi> element for such text.</desc>
         <datatype>
@@ -20573,6 +20585,7 @@
     <desc xml:lang="en">Attributes for marking the presence of an ornament.</desc>
     <attList>
       <attDef ident="ornam" usage="opt">
+        <gloss versionDate="2022-10-30" xml:lang="en">ornament</gloss>
         <desc xml:lang="en">Indicates that this element has an attached ornament. If visual information about the
           ornament is needed, then one of the elements that represents an ornament (mordent, trill,
           or turn) should be employed.</desc>
@@ -21558,6 +21571,7 @@
     </content>
     <attList>
       <attDef ident="abbr" usage="opt">
+        <gloss versionDate="2022-10-30" xml:lang="en">abbreviation</gloss>
         <desc xml:lang="en">Captures the abbreviated form of the text.</desc>
         <datatype>
           <rng:data type="string"/>
@@ -21891,6 +21905,7 @@
     </content>
     <attList>
       <attDef ident="desc" usage="opt">
+        <gloss versionDate="2022-10-30" xml:lang="en">description</gloss>
         <desc xml:lang="en">Provides a description of the means of restoration, <val>stet</val> or <val>strike-down</val>, 
           for example.</desc>
         <datatype>
@@ -23610,6 +23625,7 @@
         </datatype>
       </attDef>
       <attDef ident="pnum" usage="opt">
+        <gloss versionDate="2022-10-30" xml:lang="en">pitch number</gloss>
         <desc xml:lang="en">Holds a pitch-to-number mapping, a base-40 or MIDI note number, for example.</desc>
         <datatype>
           <rng:ref name="data.PITCHNUMBER"/>
@@ -23680,6 +23696,7 @@
         </datatype>
       </attDef>
       <attDef ident="pnum" usage="opt">
+        <gloss versionDate="2022-10-30" xml:lang="en">pitch number</gloss>
         <desc xml:lang="en">Holds a pitch-to-number mapping, a base-40 or MIDI note number, for example.</desc>
         <datatype>
           <rng:ref name="data.PITCHNUMBER"/>
@@ -24010,6 +24027,7 @@
     </classes>
     <attList>
       <attDef ident="chordref" usage="opt">
+        <gloss versionDate="2022-10-30" xml:lang="en">chord reference</gloss>
         <desc xml:lang="en">Contains a reference to a <gi scheme="MEI">chordDef</gi> element elsewhere in the
           document.</desc>
         <datatype>
@@ -27973,6 +27991,7 @@
     <desc xml:lang="en">Attributes that record MIDI numbers.</desc>
     <attList>
       <attDef ident="num" usage="req">
+        <gloss versionDate="2022-10-30" xml:lang="en">number</gloss>
         <desc xml:lang="en">MIDI number in the range set by data.MIDIVALUE.</desc>
         <datatype>
           <rng:ref name="data.MIDIVALUE"/>
@@ -29843,6 +29862,7 @@
         </datatype>
       </attDef>
       <attDef ident="pname" usage="opt">
+        <gloss versionDate="2022-10-18" xml:lang="en">pitch name</gloss>
         <desc xml:lang="en">Contains a written pitch name.</desc>
         <datatype>
           <rng:data type="token">
@@ -31571,6 +31591,7 @@
     <desc xml:lang="en">Attributes that permit total duration to be represented by multiple values.</desc>
     <attList>
       <attDef ident="dur" usage="opt">
+        <gloss versionDate="2022-10-18" xml:lang="en">duration</gloss>
         <desc xml:lang="en">When a duration cannot be represented as a single power-of-two value, multiple
           space-separated values that add up to the total duration may be used.</desc>
         <datatype maxOccurs="unbounded">
@@ -31609,6 +31630,7 @@
     <desc xml:lang="en">Attributes that express duration in musical terms.</desc>
     <attList>
       <attDef ident="dur" usage="opt">
+        <gloss versionDate="2022-10-18" xml:lang="en">duration</gloss>
         <desc xml:lang="en">Records the duration of a feature using the relative durational values provided by the
           data.DURATION datatype.</desc>
         <datatype>
@@ -31621,6 +31643,7 @@
     <desc xml:lang="en">Attributes that describe duration as a ratio.</desc>
     <attList>
       <attDef ident="num" usage="opt">
+        <gloss versionDate="2022-10-18" xml:lang="en">number</gloss>
         <desc xml:lang="en">Along with numbase, describes duration as a ratio. num is the first value in the
           ratio, while numbase is the second.</desc>
         <datatype>
@@ -32058,6 +32081,7 @@
     <attList>
       <!-- additional visual characteristics of the line -->
       <attDef ident="lendsym" usage="opt">
+        <gloss versionDate="2022-11-11" xml:lang="en">line end symbol</gloss>
         <desc xml:lang="en">Symbol rendered at end of line.</desc>
         <datatype>
           <rng:ref name="data.LINESTARTENDSYMBOL"/>
@@ -32070,6 +32094,7 @@
         </datatype>
       </attDef>
       <attDef ident="lstartsym" usage="opt">
+        <gloss versionDate="2022-11-11" xml:lang="en">line start symbol</gloss>
         <desc xml:lang="en">Symbol rendered at start of line.</desc>
         <datatype>
           <rng:ref name="data.LINESTARTENDSYMBOL"/>
@@ -32087,6 +32112,7 @@
     <desc xml:lang="en">Attributes that record the basic visual rendition of lines.</desc>
     <attList>
       <attDef ident="lform" usage="opt">
+        <gloss versionDate="2022-10-18" xml:lang="en">line form</gloss>
         <desc xml:lang="en">Describes the line style of a line.</desc>
         <datatype>
           <rng:ref name="data.LINEFORM"/>
@@ -32466,6 +32492,7 @@
       meter.</desc>
     <attList>
       <attDef ident="metcon" usage="opt">
+        <gloss versionDate="2022-11-11" xml:lang="en">meter conformance</gloss>
         <desc xml:lang="en">Indicates the relationship between the content of a staff or layer and the prevailing
           meter.</desc>
         <valList type="closed">
@@ -32487,6 +32514,7 @@
       meter.</desc>
     <attList>
       <attDef ident="metcon" usage="opt">
+        <gloss versionDate="2022-11-11" xml:lang="en">meter conformance</gloss>
         <desc xml:lang="en">Indicates the relationship between the content of a measure and the prevailing
           meter.</desc>
         <datatype>
@@ -32519,6 +32547,7 @@
         </datatype>
       </attDef>
       <attDef ident="sym" usage="opt">
+        <gloss versionDate="2022-11-11" xml:lang="en">symbol</gloss>
         <desc xml:lang="en">Indicates the use of a meter symbol instead of a numeric meter signature, that is, 'C'
           for common time or 'C' with a slash for cut time.</desc>
         <datatype>
@@ -32797,6 +32826,7 @@
     <desc xml:lang="en">Attributes that record written octave.</desc>
     <attList>
       <attDef ident="oct" usage="opt">
+        <gloss versionDate="2022-10-18" xml:lang="en">octave</gloss>
         <desc xml:lang="en">Captures written octave information.</desc>
         <datatype>
           <rng:ref name="data.OCTAVE"/>
@@ -32970,24 +33000,28 @@
         </datatype>
       </attDef>
       <attDef ident="page.topmar" usage="opt">
+        <gloss versionDate="2022-11-11" xml:lang="en">page top margin</gloss>
         <desc xml:lang="en">Indicates the amount of whitespace at the top of a page.</desc>
         <datatype>
           <rng:ref name="data.MEASUREMENTUNSIGNED"/>
         </datatype>
       </attDef>
       <attDef ident="page.botmar" usage="opt">
+        <gloss versionDate="2022-11-11" xml:lang="en">page bottom margin</gloss>
         <desc xml:lang="en">Indicates the amount of whitespace at the bottom of a page.</desc>
         <datatype>
           <rng:ref name="data.MEASUREMENTUNSIGNED"/>
         </datatype>
       </attDef>
       <attDef ident="page.leftmar" usage="opt">
+        <gloss versionDate="2022-11-11" xml:lang="en">page left margin</gloss>
         <desc xml:lang="en">Indicates the amount of whitespace at the left side of a page.</desc>
         <datatype>
           <rng:ref name="data.MEASUREMENTUNSIGNED"/>
         </datatype>
       </attDef>
       <attDef ident="page.rightmar" usage="opt">
+        <gloss versionDate="2022-11-11" xml:lang="en">page right margin</gloss>
         <desc xml:lang="en">Indicates the amount of whitespace at the right side of a page.</desc>
         <datatype>
           <rng:ref name="data.MEASUREMENTUNSIGNED"/>
@@ -33071,6 +33105,7 @@
     <desc xml:lang="en">Attributes that record written pitch name.</desc>
     <attList>
       <attDef ident="pname" usage="opt">
+        <gloss versionDate="2022-10-18" xml:lang="en">pitch name</gloss>
         <desc xml:lang="en">Contains a written pitch name.</desc>
         <datatype>
           <rng:ref name="data.PITCHNAME"/>
@@ -33913,6 +33948,7 @@
         </datatype>
       </attDef>
       <attDef ident="rend" usage="opt">
+        <gloss versionDate="2022-10-18" xml:lang="en">rendition</gloss>
         <desc xml:lang="en">Captures the appearance of the element’s contents using MEI-defined
           descriptors.</desc>
         <datatype maxOccurs="unbounded">
@@ -33978,6 +34014,7 @@
       part].</desc>
     <attList>
       <attDef ident="tstamp" usage="opt">
+        <gloss versionDate="2022-10-18" xml:lang="en">time stamp</gloss>
         <desc xml:lang="en">Encodes the onset time in terms of musical time, <abbr>i.e.</abbr>, beats[.fractional beat part],
           as expressed in the written time signature.</desc>
         <datatype>
@@ -34003,6 +34040,7 @@
     <desc xml:lang="en">Attributes that describe transposition.</desc>
     <attList>
       <attDef ident="trans.diat" usage="opt">
+        <gloss versionDate="2022-10-18" xml:lang="en">transposition (diatonic)</gloss>
         <desc xml:lang="en">Records the amount of diatonic pitch shift, <abbr>e.g.</abbr>, C to C♯ = 0, C to D♭ = 1, necessary
           to calculate the sounded pitch from the written one.</desc>
         <datatype>
@@ -34010,6 +34048,7 @@
         </datatype>
       </attDef>
       <attDef ident="trans.semi" usage="opt">
+        <gloss versionDate="2022-10-18" xml:lang="en">transposition (semitones)</gloss>
         <desc xml:lang="en">Records the amount of pitch shift in semitones, <abbr>e.g.</abbr>, C to C♯ = 1, C to D♭ = 1,
           necessary to calculate the sounded pitch from the written one.</desc>
         <datatype>
@@ -39955,6 +39994,7 @@
     </classes>
     <attList>
       <attDef ident="len" usage="opt">
+        <gloss versionDate="2022-10-30" xml:lang="en">length</gloss>
         <desc xml:lang="en">States the length of bar lines in virtual units. The value must be greater than 0 and
           is typically equal to 2 times (the number of staff lines - 1); <abbr>e.g.</abbr>, a value of <val>8</val> for a
           5-line staff.</desc>
@@ -40390,6 +40430,7 @@
     </classes>
     <attList>
       <attDef ident="orient" usage="opt">
+        <gloss versionDate="2022-10-30" xml:lang="en">orientation</gloss>
         <valList type="closed">
           <valItem ident="horiz">
             <desc xml:lang="en">Combination expressed horizontally, as for brass instruments.</desc>
@@ -41216,12 +41257,14 @@
     <desc xml:lang="en">Visual domain attributes that describe the properties of a plica stem in the mensural repertoire.</desc>
     <attList>
       <attDef ident="dir" usage="opt">
+        <gloss versionDate="2022-10-30" xml:lang="en">direction</gloss>
         <desc xml:lang="en">Describes the direction of a stem.</desc>
         <datatype>
           <rng:ref name="data.STEMDIRECTION.basic"/>
         </datatype>
       </attDef>
       <attDef ident="len" usage="opt">
+        <gloss versionDate="2022-10-30" xml:lang="en">length</gloss>
         <desc xml:lang="en">Encodes the stem length.</desc>
         <datatype>
           <rng:ref name="data.MEASUREMENTUNSIGNED"/>
@@ -41511,6 +41554,7 @@
     </classes>
     <attList>
       <attDef ident="bar.thru" usage="opt">
+        <gloss versionDate="2022-10-18" xml:lang="en">bar lines through</gloss>
         <desc xml:lang="en">Indicates whether bar lines go across the space between staves (true) or are only
           drawn across the lines of each staff (false).</desc>
         <datatype>
@@ -41543,12 +41587,14 @@
     </classes>
     <attList>
       <attDef ident="pos" usage="opt">
+        <gloss versionDate="2022-10-30" xml:lang="en">position</gloss>
         <desc xml:lang="en">Records the position of the stem in relation to the note head(s).</desc>
         <datatype>
           <rng:ref name="data.STEMPOSITION"/>
         </datatype>
       </attDef>
       <attDef ident="len" usage="opt">
+        <gloss versionDate="2022-10-30" xml:lang="en">length</gloss>
         <desc xml:lang="en">Encodes the stem length.</desc>
         <datatype>
           <rng:ref name="data.MEASUREMENTUNSIGNED"/>
@@ -41561,6 +41607,7 @@
         </datatype>
       </attDef>
       <attDef ident="dir" usage="opt">
+        <gloss versionDate="2022-10-30" xml:lang="en">direction</gloss>
         <desc xml:lang="en">Describes the direction of a stem.</desc>
         <datatype>
           <rng:ref name="data.STEMDIRECTION"/>

@@ -5,7 +5,7 @@
           xmlns:xlink="http://www.w3.org/1999/xlink"
           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
           ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2023-01-27T16:55:32Z. .
+Schema generated from ODD source 2023-01-27T16:57:59Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -1309,7 +1309,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
    <define name="mei_att.intervalHarmonic.attribute.inth">
       <optional>
          <attribute name="inth">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Encodes the harmonic interval between pitches occurring at the same time.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(interval harmonic) Encodes the harmonic interval between pitches occurring at the same time.</a:documentation>
             <list>
                <oneOrMore>
                   <ref name="mei_data.INTERVAL.HARMONIC"/>
@@ -1706,7 +1706,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
    <define name="mei_att.numbered.attribute.num">
       <optional>
          <attribute name="num">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records a number or count accompanying a notational feature.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(number) Records a number or count accompanying a notational feature.</a:documentation>
             <data type="positiveInteger"/>
          </attribute>
       </optional>
@@ -1718,7 +1718,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
    <define name="mei_att.numberPlacement.attribute.num.place">
       <optional>
          <attribute name="num.place">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">States where the tuplet number will be placed in relation to the note heads.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(number placement) States where the tuplet number will be placed in relation to the note heads.</a:documentation>
             <ref name="mei_data.STAFFREL.basic"/>
          </attribute>
       </optional>
@@ -1759,7 +1759,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
    </define>
    <define name="mei_att.pedal.log.attribute.dir">
       <attribute name="dir">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records the position of the piano damper pedal.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(direction) Records the position of the piano damper pedal.</a:documentation>
          <choice>
             <value>down</value>
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Depress the pedal.</a:documentation>
@@ -1775,7 +1775,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
    <define name="mei_att.pedal.log.attribute.func">
       <optional>
          <attribute name="func">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates the function of the depressed pedal, but not necessarily the text associated with its use. Use the <code xmlns="http://www.w3.org/1999/xhtml">&lt;dir&gt;</code> element for such text.
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(function) Indicates the function of the depressed pedal, but not necessarily the text associated with its use. Use the <code xmlns="http://www.w3.org/1999/xhtml">&lt;dir&gt;</code> element for such text.
 Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:documentation>
             <choice>
                <value>sustain</value>
@@ -3725,7 +3725,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    <define name="mei_att.harm.log.attribute.chordref">
       <optional>
          <attribute name="chordref">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Contains a reference to a <code xmlns="http://www.w3.org/1999/xhtml">&lt;chordDef&gt;</code> element elsewhere in the document.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(chord reference) Contains a reference to a <code xmlns="http://www.w3.org/1999/xhtml">&lt;chordDef&gt;</code> element elsewhere in the document.</a:documentation>
             <ref name="mei_data.URI"/>
          </attribute>
       </optional>
@@ -5565,7 +5565,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    <define name="mei_att.duration.additive.attribute.dur">
       <optional>
          <attribute name="dur">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">When a duration cannot be represented as a single power-of-two value, multiple space-separated values that add up to the total duration may be used.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(duration) When a duration cannot be represented as a single power-of-two value, multiple space-separated values that add up to the total duration may be used.</a:documentation>
             <list>
                <oneOrMore>
                   <ref name="mei_data.DURATION"/>
@@ -5580,7 +5580,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    <define name="mei_att.duration.log.attribute.dur">
       <optional>
          <attribute name="dur">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records the duration of a feature using the relative durational values provided by the data.DURATION datatype.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(duration) Records the duration of a feature using the relative durational values provided by the data.DURATION datatype.</a:documentation>
             <ref name="mei_data.DURATION"/>
          </attribute>
       </optional>
@@ -5592,7 +5592,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    <define name="mei_att.duration.ratio.attribute.num">
       <optional>
          <attribute name="num">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Along with numbase, describes duration as a ratio. num is the first value in the ratio, while numbase is the second.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(number) Along with numbase, describes duration as a ratio. num is the first value in the ratio, while numbase is the second.</a:documentation>
             <data type="positiveInteger"/>
          </attribute>
       </optional>
@@ -5768,7 +5768,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    <define name="mei_att.lineRend.attribute.lendsym">
       <optional>
          <attribute name="lendsym">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Symbol rendered at end of line.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(line end symbol) Symbol rendered at end of line.</a:documentation>
             <ref name="mei_data.LINESTARTENDSYMBOL"/>
          </attribute>
       </optional>
@@ -5784,7 +5784,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    <define name="mei_att.lineRend.attribute.lstartsym">
       <optional>
          <attribute name="lstartsym">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Symbol rendered at start of line.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(line start symbol) Symbol rendered at start of line.</a:documentation>
             <ref name="mei_data.LINESTARTENDSYMBOL"/>
          </attribute>
       </optional>
@@ -5805,7 +5805,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    <define name="mei_att.lineRend.base.attribute.lform">
       <optional>
          <attribute name="lform">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Describes the line style of a line.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(line form) Describes the line style of a line.</a:documentation>
             <ref name="mei_data.LINEFORM"/>
          </attribute>
       </optional>
@@ -6051,7 +6051,7 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
    <define name="mei_att.octave.attribute.oct">
       <optional>
          <attribute name="oct">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Captures written octave information.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(octave) Captures written octave information.</a:documentation>
             <ref name="mei_data.OCTAVE"/>
          </attribute>
       </optional>
@@ -6098,7 +6098,7 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
    <define name="mei_att.pitch.attribute.pname">
       <optional>
          <attribute name="pname">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Contains a written pitch name.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(pitch name) Contains a written pitch name.</a:documentation>
             <ref name="mei_data.PITCHNAME"/>
          </attribute>
       </optional>
@@ -6517,7 +6517,7 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
    <define name="mei_att.textRendition.attribute.rend">
       <optional>
          <attribute name="rend">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Captures the appearance of the element’s contents using MEI-defined descriptors.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(rendition) Captures the appearance of the element’s contents using MEI-defined descriptors.</a:documentation>
             <list>
                <oneOrMore>
                   <ref name="mei_data.TEXTRENDITION"/>
@@ -6532,7 +6532,7 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
    <define name="mei_att.timestamp.log.attribute.tstamp">
       <optional>
          <attribute name="tstamp">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Encodes the onset time in terms of musical time, i.e., beats[.fractional beat part], as expressed in the written time signature.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(time stamp) Encodes the onset time in terms of musical time, i.e., beats[.fractional beat part], as expressed in the written time signature.</a:documentation>
             <ref name="mei_data.BEAT"/>
          </attribute>
       </optional>
@@ -6555,7 +6555,7 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
    <define name="mei_att.transposition.attribute.trans.diat">
       <optional>
          <attribute name="trans.diat">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records the amount of diatonic pitch shift, e.g., C to C♯ = 0, C to D♭ = 1, necessary to calculate the sounded pitch from the written one.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(transposition (diatonic)) Records the amount of diatonic pitch shift, e.g., C to C♯ = 0, C to D♭ = 1, necessary to calculate the sounded pitch from the written one.</a:documentation>
             <data type="integer"/>
          </attribute>
       </optional>
@@ -6563,7 +6563,7 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
    <define name="mei_att.transposition.attribute.trans.semi">
       <optional>
          <attribute name="trans.semi">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records the amount of pitch shift in semitones, e.g., C to C♯ = 1, C to D♭ = 1, necessary to calculate the sounded pitch from the written one.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(transposition (semitones)) Records the amount of pitch shift in semitones, e.g., C to C♯ = 1, C to D♭ = 1, necessary to calculate the sounded pitch from the written one.</a:documentation>
             <data type="integer"/>
          </attribute>
       </optional>
@@ -10974,7 +10974,7 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
    <define name="mei_att.staffGrp.vis.attribute.bar.thru">
       <optional>
          <attribute name="bar.thru">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates whether bar lines go across the space between staves (true) or are only drawn across the lines of each staff (false).</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(bar lines through) Indicates whether bar lines go across the space between staves (true) or are only drawn across the lines of each staff (false).</a:documentation>
             <ref name="mei_data.BOOLEAN"/>
          </attribute>
       </optional>

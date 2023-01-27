@@ -3343,6 +3343,7 @@
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes describing the harmonic function of a single pitch.</desc>
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="deg" usage="opt">
+        <gloss versionDate="2022-10-18" xml:lang="en">degree</gloss>
         <desc xml:lang="en">Captures scale degree information using <ref target="https://www.humdrum.org/rep/deg/">Humdrum **deg syntax</ref> -- an optional indicator
           of melodic approach (^ = ascending approach, v = descending approach), a scale degree
           value (1 = tonic ... 7 = leading tone), and an optional indication of chromatic
@@ -3361,6 +3362,7 @@
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that describe harmonic intervals.</desc>
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="inth" usage="opt">
+        <gloss versionDate="2022-10-18" xml:lang="en">interval harmonic</gloss>
         <desc xml:lang="en">Encodes the harmonic interval between pitches occurring at the same time.</desc>
         <datatype maxOccurs="unbounded">
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.INTERVAL.HARMONIC"/>
@@ -3371,6 +3373,7 @@
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that provide for description of intervallic content.</desc>
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="intm" usage="opt">
+        <gloss versionDate="2022-10-18" xml:lang="en">interval melodic</gloss>
         <desc xml:lang="en">Encodes the melodic interval from the previous pitch. The value may be a general
           directional indication (u, d, s, etc.), an indication of diatonic interval direction,
           quality, and size, or a precise numeric value in half steps.</desc>
@@ -3491,6 +3494,7 @@
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that describe pitch class.</desc>
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="pclass" usage="opt">
+        <gloss versionDate="2022-10-18" xml:lang="en">pitch class</gloss>
         <desc xml:lang="en">Holds pitch class information.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.PITCHCLASS"/>
@@ -3525,6 +3529,7 @@
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that specify pitch using sol-fa.</desc>
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="psolfa" usage="opt">
+        <gloss versionDate="2022-10-18" xml:lang="en">pitch sol-fa</gloss>
         <desc xml:lang="en">Contains sol-fa designation, <abbr>e.g.</abbr>, do, re, mi, etc., in either a fixed or movable Do
           system.</desc>
         <datatype>
@@ -4040,6 +4045,7 @@
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.divLike"/><ref name="model.editLike"/><ref name="model.editTransPart"/><ref name="model.fLike"/><ref name="model.graphicPrimitiveLike"/><ref name="model.layerPart"/><ref name="model.milestoneLike.music"/><ref name="model.neumeComponentModifierLike"/><ref name="model.neumeModifierLike"/><ref name="model.neumePart"/><ref name="model.sectionPart"/><ref name="model.staffGrpLike"/><ref name="model.transcriptionLike"/></choice></zeroOrMore>
     </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="abbr" usage="opt">
+        <gloss versionDate="2022-10-30" xml:lang="en">abbreviation</gloss>
         <desc xml:lang="en">Captures the abbreviated form of the text.</desc>
         <datatype>
           <rng:data type="string"/>
@@ -4256,6 +4262,7 @@
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.divLike"/><ref name="model.editLike"/><ref name="model.editTransPart"/><ref name="model.fLike"/><ref name="model.graphicPrimitiveLike"/><ref name="model.keyAccidLike"/><ref name="model.layerPart"/><ref name="model.milestoneLike.music"/><ref name="model.neumeComponentModifierLike"/><ref name="model.neumeModifierLike"/><ref name="model.neumePart"/><ref name="model.sectionPart"/><ref name="model.staffGrpLike"/><ref name="model.transcriptionLike"/></choice></zeroOrMore>
     </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="desc" usage="opt">
+        <gloss versionDate="2022-10-30" xml:lang="en">description</gloss>
         <desc xml:lang="en">Provides a description of the means of restoration, <val>stet</val> or <val>strike-down</val>, 
           for example.</desc>
         <datatype>
@@ -5193,6 +5200,7 @@
         </datatype>
       </attDef>
       <attDef ident="pnum" usage="opt">
+        <gloss versionDate="2022-10-30" xml:lang="en">pitch number</gloss>
         <desc xml:lang="en">Holds a pitch-to-number mapping, a base-40 or MIDI note number, for example.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.PITCHNUMBER"/>
@@ -5260,6 +5268,7 @@
         </datatype>
       </attDef>
       <attDef ident="pnum" usage="opt">
+        <gloss versionDate="2022-10-30" xml:lang="en">pitch number</gloss>
         <desc xml:lang="en">Holds a pitch-to-number mapping, a base-40 or MIDI note number, for example.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.PITCHNUMBER"/>
@@ -5468,6 +5477,7 @@
     </classes>
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="chordref" usage="opt">
+        <gloss versionDate="2022-10-30" xml:lang="en">chord reference</gloss>
         <desc xml:lang="en">Contains a reference to a <gi scheme="MEI">chordDef</gi> element elsewhere in the
           document.</desc>
         <datatype>
@@ -7506,6 +7516,7 @@
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that record MIDI numbers.</desc>
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="num" usage="req">
+        <gloss versionDate="2022-10-30" xml:lang="en">number</gloss>
         <desc xml:lang="en">MIDI number in the range set by data.MIDIVALUE.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.MIDIVALUE"/>
@@ -8498,6 +8509,7 @@
         </datatype>
       </attDef>
       <attDef ident="pname" usage="opt">
+        <gloss versionDate="2022-10-18" xml:lang="en">pitch name</gloss>
         <desc xml:lang="en">Contains a written pitch name.</desc>
         <datatype>
           <rng:data type="token">
@@ -9873,6 +9885,7 @@
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that express duration in musical terms.</desc>
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="dur" usage="opt">
+        <gloss versionDate="2022-10-18" xml:lang="en">duration</gloss>
         <desc xml:lang="en">Records the duration of a feature using the relative durational values provided by the
           data.DURATION datatype.</desc>
         <datatype>
@@ -9884,6 +9897,7 @@
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that describe duration as a ratio.</desc>
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="num" usage="opt">
+        <gloss versionDate="2022-10-18" xml:lang="en">number</gloss>
         <desc xml:lang="en">Along with numbase, describes duration as a ratio. num is the first value in the
           ratio, while numbase is the second.</desc>
         <datatype>
@@ -10294,6 +10308,7 @@
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       
       <attDef ident="lendsym" usage="opt">
+        <gloss versionDate="2022-11-11" xml:lang="en">line end symbol</gloss>
         <desc xml:lang="en">Symbol rendered at end of line.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.LINESTARTENDSYMBOL"/>
@@ -10306,6 +10321,7 @@
         </datatype>
       </attDef>
       <attDef ident="lstartsym" usage="opt">
+        <gloss versionDate="2022-11-11" xml:lang="en">line start symbol</gloss>
         <desc xml:lang="en">Symbol rendered at start of line.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.LINESTARTENDSYMBOL"/>
@@ -10322,6 +10338,7 @@
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that record the basic visual rendition of lines.</desc>
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="lform" usage="opt">
+        <gloss versionDate="2022-10-18" xml:lang="en">line form</gloss>
         <desc xml:lang="en">Describes the line style of a line.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.LINEFORM"/>
@@ -10682,6 +10699,7 @@
       meter.</desc>
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="metcon" usage="opt">
+        <gloss versionDate="2022-11-11" xml:lang="en">meter conformance</gloss>
         <desc xml:lang="en">Indicates the relationship between the content of a staff or layer and the prevailing
           meter.</desc>
         <valList type="closed">
@@ -10702,6 +10720,7 @@
       meter.</desc>
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="metcon" usage="opt">
+        <gloss versionDate="2022-11-11" xml:lang="en">meter conformance</gloss>
         <desc xml:lang="en">Indicates the relationship between the content of a measure and the prevailing
           meter.</desc>
         <datatype>
@@ -10733,6 +10752,7 @@
         </datatype>
       </attDef>
       <attDef ident="sym" usage="opt">
+        <gloss versionDate="2022-11-11" xml:lang="en">symbol</gloss>
         <desc xml:lang="en">Indicates the use of a meter symbol instead of a numeric meter signature, that is, 'C'
           for common time or 'C' with a slash for cut time.</desc>
         <datatype>
@@ -11001,6 +11021,7 @@
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that record written octave.</desc>
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="oct" usage="opt">
+        <gloss versionDate="2022-10-18" xml:lang="en">octave</gloss>
         <desc xml:lang="en">Captures written octave information.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.OCTAVE"/>
@@ -11155,24 +11176,28 @@
         </datatype>
       </attDef>
       <attDef ident="page.topmar" usage="opt">
+        <gloss versionDate="2022-11-11" xml:lang="en">page top margin</gloss>
         <desc xml:lang="en">Indicates the amount of whitespace at the top of a page.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.MEASUREMENTUNSIGNED"/>
         </datatype>
       </attDef>
       <attDef ident="page.botmar" usage="opt">
+        <gloss versionDate="2022-11-11" xml:lang="en">page bottom margin</gloss>
         <desc xml:lang="en">Indicates the amount of whitespace at the bottom of a page.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.MEASUREMENTUNSIGNED"/>
         </datatype>
       </attDef>
       <attDef ident="page.leftmar" usage="opt">
+        <gloss versionDate="2022-11-11" xml:lang="en">page left margin</gloss>
         <desc xml:lang="en">Indicates the amount of whitespace at the left side of a page.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.MEASUREMENTUNSIGNED"/>
         </datatype>
       </attDef>
       <attDef ident="page.rightmar" usage="opt">
+        <gloss versionDate="2022-11-11" xml:lang="en">page right margin</gloss>
         <desc xml:lang="en">Indicates the amount of whitespace at the right side of a page.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.MEASUREMENTUNSIGNED"/>
@@ -11250,6 +11275,7 @@
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that record written pitch name.</desc>
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="pname" usage="opt">
+        <gloss versionDate="2022-10-18" xml:lang="en">pitch name</gloss>
         <desc xml:lang="en">Contains a written pitch name.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.PITCHNAME"/>
@@ -12035,6 +12061,7 @@
         </datatype>
       </attDef>
       <attDef ident="rend" usage="opt">
+        <gloss versionDate="2022-10-18" xml:lang="en">rendition</gloss>
         <desc xml:lang="en">Captures the appearance of the element’s contents using MEI-defined
           descriptors.</desc>
         <datatype maxOccurs="unbounded">
@@ -12086,6 +12113,7 @@
       part].</desc>
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="tstamp" usage="opt">
+        <gloss versionDate="2022-10-18" xml:lang="en">time stamp</gloss>
         <desc xml:lang="en">Encodes the onset time in terms of musical time, <abbr>i.e.</abbr>, beats[.fractional beat part],
           as expressed in the written time signature.</desc>
         <datatype>
@@ -12109,6 +12137,7 @@
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that describe transposition.</desc>
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="trans.diat" usage="opt">
+        <gloss versionDate="2022-10-18" xml:lang="en">transposition (diatonic)</gloss>
         <desc xml:lang="en">Records the amount of diatonic pitch shift, <abbr>e.g.</abbr>, C to C♯ = 0, C to D♭ = 1, necessary
           to calculate the sounded pitch from the written one.</desc>
         <datatype>
@@ -12116,6 +12145,7 @@
         </datatype>
       </attDef>
       <attDef ident="trans.semi" usage="opt">
+        <gloss versionDate="2022-10-18" xml:lang="en">transposition (semitones)</gloss>
         <desc xml:lang="en">Records the amount of pitch shift in semitones, <abbr>e.g.</abbr>, C to C♯ = 1, C to D♭ = 1,
           necessary to calculate the sounded pitch from the written one.</desc>
         <datatype>
@@ -15759,6 +15789,7 @@
     </classes>
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="len" usage="opt">
+        <gloss versionDate="2022-10-30" xml:lang="en">length</gloss>
         <desc xml:lang="en">States the length of bar lines in virtual units. The value must be greater than 0 and
           is typically equal to 2 times (the number of staff lines - 1); <abbr>e.g.</abbr>, a value of <val>8</val> for a
           5-line staff.</desc>
@@ -16640,6 +16671,7 @@
     </classes>
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="bar.thru" usage="opt">
+        <gloss versionDate="2022-10-18" xml:lang="en">bar lines through</gloss>
         <desc xml:lang="en">Indicates whether bar lines go across the space between staves (true) or are only
           drawn across the lines of each staff (false).</desc>
         <datatype>
