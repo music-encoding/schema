@@ -19,7 +19,7 @@
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href=../../../source/"validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2023-01-27T16:18:56.91857181Z-->
+<!--canonicalized: 2023-01-27T16:56:00.639088993Z-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -9964,79 +9964,39 @@
                <p>
                   <specList>
                      <specDesc key="lg"/>
+                     <specDesc key="l"/>
                      <specDesc key="att.staffIdent" atts="staff"/>
                      <specDesc key="att.layerIdent" atts="layer"/>
                   </specList>
                </p>
-               <p>Since this element is separated from the encoding of the notes, it must be associated with a staff that will provide rhythm information when required for automated processing. The <att>staff</att> attribute gives the associated staff and if there is more than one layer on that staff, the <att>layer</att> attribute may be used to indicate the layer from which the rhythm should be taken. If there is any divergence between the rhythm of the vocally performed text and the notes, the <att>rhythm</att> attribute on <gi scheme="MEI">verse</gi> may be used to specify the text’s rhythm.</p>
-               <p>The following example from Carl Maria von Weber’s <hi rend="italic">Der Freischütz</hi> illustrates this encoding method:</p>
-               <p>
-                  <figure>
-                     <head>Weber, Der Freischütz</head>
-                     <graphic url="../images/modules/lyrics/ex_lyric.png"/>
-                  </figure>
-                  <figure>
-                     <head/>
-                     <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve" valid="feasible">&lt;section&gt;
-   &lt;measure&gt;
-      &lt;staff n="1"&gt;
-         &lt;layer n="1"&gt;
-            &lt;note dots="1" dur="4" oct="3" pname="a"&gt;
-               &lt;artic artic="acc"/&gt;
-            &lt;/note&gt;
-            &lt;note dots="1" dur="4" oct="3" pname="a"&gt;
-               &lt;artic artic="acc"/&gt;
-            &lt;/note&gt;
-         &lt;/layer&gt;
-      &lt;/staff&gt;
-      &lt;lyrics staff="1"&gt;
-         &lt;verse&gt;
-            &lt;syl&gt;Sturm&lt;/syl&gt;
-            &lt;syl&gt;und&lt;/syl&gt;
-         &lt;/verse&gt;
-      &lt;/lyrics&gt;
-   &lt;/measure&gt;
-   &lt;measure&gt;
-      &lt;staff n="1"&gt;
-         &lt;layer n="1"&gt;
-            &lt;note dots="1" dur="2" oct="3" pname="g" tie="i"/&gt;
-         &lt;/layer&gt;
-      &lt;/staff&gt;
-      &lt;lyrics staff="1"&gt;
-         &lt;verse&gt;
-            &lt;syl&gt;Nacht!&lt;/syl&gt;
-         &lt;/verse&gt;
-      &lt;/lyrics&gt;
-   &lt;/measure&gt;
-   &lt;measure&gt;
-      &lt;staff n="1"&gt;
-         &lt;layer n="1"&gt;
-            &lt;note dots="1" dur="2" oct="3" pname="g" tie="t"/&gt;
-         &lt;/layer&gt;
-      &lt;/staff&gt;
-   &lt;/measure&gt;
-&lt;/section&gt;
-</egXML>
-                  </figure>
-               </p>
-               <p>In this encoding style, a <gi scheme="MEI">syl</gi> element with its <att>con</att> attribute set to 't' and the following syllable are presumed to be associated with a single note. In the following example, the first two syllables occur on the first note and the third syllable occurs on the second note.</p>
+               <p>Since this element is separated from the encoding of the notes, it must be associated with a staff that will provide rhythm information when required for automated processing. The <att>staff</att> attribute gives the associated staff and if there is more than one layer on that staff, the <att>layer</att> attribute may be used to indicate the layer from which the rhythm should be taken. If there is any divergence between the rhythm of the vocally performed text and the notes, the <att>rhythm</att> attribute on <gi scheme="MEI">l</gi> may be used to specify the text’s rhythm.</p>
                <p>
                   <figure>
                      <head/>
-                     <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve" valid="feasible">&lt;staff&gt;
-   &lt;layer&gt;
-      &lt;note dur="2" oct="3" pname="g"&gt;&lt;/note&gt;
-      &lt;note dur="2" oct="3" pname="f"&gt;&lt;/note&gt;
+                     <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve" valid="feasible">
+                        &lt;staff n="1"&gt;
+   &lt;layer n="1"&gt;
+      &lt;tuplet num="3" numbase="2"&gt;
+         &lt;note dur="4" oct="3" pname="c" /&gt;
+         &lt;note dur="8" oct="3" pname="e" accid.ges="f" /&gt;
+      &lt;/tuplet&gt;
+      &lt;tuplet num="3" numbase="2"&gt;
+         &lt;note dur="4" oct="3" pname="g" /&gt;
+         &lt;note dur="8" oct="3" pname="g" /&gt;
+      &lt;/tuplet&gt;
+      &lt;note dur="4" oct="3" pname="g" /&gt;
+      &lt;note dur="4" oct="3" pname="b" accid.ges="f" /&gt;
    &lt;/layer&gt;
 &lt;/staff&gt;
 &lt;!-- later --&gt;
-&lt;lyrics staff="1"&gt;
-   &lt;verse&gt;
-      &lt;syl con="t" wordpos="t"&gt;re&lt;/syl&gt;
-      &lt;syl wordpos="i"&gt;il&lt;/syl&gt;
-      &lt;syl wordpos="i"&gt;pet&lt;/syl&gt;
-   &lt;/verse&gt;
-&lt;/lyrics&gt;</egXML>
+&lt;div&gt;
+   &lt;lg staff="1"&gt;
+      &lt;l&gt;&lt;syl&gt;Or&lt;/syl&gt; &lt;syl&gt;let&lt;/syl&gt; &lt;syl con="d"&gt;Au&lt;/syl&gt;&lt;syl&gt;tumn&lt;/syl&gt; &lt;syl&gt;fall&lt;/syl&gt; &lt;syl&gt;on&lt;/syl&gt; &lt;syl&gt;me&lt;/syl&gt;&lt;/l&gt;
+      &lt;l&gt;&lt;syl&gt;Where&lt;/syl&gt; &lt;syl con="d"&gt;a&lt;/syl&gt;&lt;syl&gt;field&lt;/syl&gt; &lt;syl&gt;I&lt;/syl&gt; &lt;syl&gt;lin&lt;/syl&gt;&lt;syl&gt;ger&lt;/syl&gt;&lt;/l&gt;
+   &lt;/lg&gt;
+&lt;/div&gt;
+
+                     </egXML>
                   </figure>
                </p>
             </div>
