@@ -6604,7 +6604,7 @@
                     <desc>Language attributes common to text elements.</desc>
                     <attList org="group">
 
-                        <attDef ident="xml:lang" mode="add" ns="http://www.tei-c.org/ns/1.0" predeclare="false" usage="opt">
+                        <attDef ident="xml:lang" mode="add" predeclare="false" usage="opt">
                             <desc>Identifies the language of the element's content. The values for this attribute are
                                 language 'tags' as defined in BCP 47. All language tags that make use of private use
                                 sub-tags must be documented in a corresponding language element in the MEI header whose
