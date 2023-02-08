@@ -6230,7 +6230,7 @@
                         and tuplet attributes may be used to indicate the attachment of these things to this chord. If
                         visual information about these things needs to be recorded, then either the elements
                         corresponding to these attributes or the attributes available in the att.vis.chord class should
-                        be employed.</desc><classes><memberOf key="att.augmentDots"/><memberOf key="att.chord.log.cmn"/><memberOf key="att.cue"/><memberOf key="att.event"/></classes><attList/></classSpec><classSpec rend="add" ident="att.clef.log" module="MEI.shared" type="atts">
+                        be employed.</desc><classes><memberOf key="att.augmentDots"/><memberOf key="att.chord.log.cmn"/><memberOf key="att.cue"/><memberOf key="att.duration.log"/><memberOf key="att.event"/></classes><attList/></classSpec><classSpec rend="add" ident="att.clef.log" module="MEI.shared" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Logical domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.clefShape"/>
