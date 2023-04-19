@@ -5,7 +5,7 @@
           xmlns:xlink="http://www.w3.org/1999/xlink"
           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
           ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2023-03-07T08:09:28Z. .
+Schema generated from ODD source 2023-04-19T14:13:47Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -15116,6 +15116,36 @@ Suggested values include: 1] paper; 2] parch; 3] mixed</a:documentation>
          <empty/>
       </element>
    </define>
+   <define name="mei_att.divLine.log.attributes">
+      <ref name="mei_att.divLine.log.attribute.form"/>
+   </define>
+   <define name="mei_att.divLine.log.attribute.form">
+      <optional>
+         <attribute name="form">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Identifies the different kinds of division.
+Suggested values include: 1] caesura; 2] finalis; 3] maior; 4] maxima; 5] minima; 6] virgula</a:documentation>
+            <list>
+               <oneOrMore>
+                  <choice>
+                     <value>caesura</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                     <value>finalis</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                     <value>maior</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                     <value>maxima</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                     <value>minima</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                     <value>virgula</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                     <data type="NMTOKEN"/>
+                  </choice>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
    <define name="mei_att.episema.log.attributes">
       <ref name="mei_att.alignment.attributes"/>
       <ref name="mei_att.layerIdent.attributes"/>
@@ -15740,6 +15770,7 @@ Suggested values include: 1] apostropha; 2] bistropha; 3] climacus; 4] clivis; 5
          <ref name="mei_att.basic.attributes"/>
          <ref name="mei_att.classed.attributes"/>
          <ref name="mei_att.color.attributes"/>
+         <ref name="mei_att.divLine.log.attributes"/>
          <ref name="mei_att.facsimile.attributes"/>
          <ref name="mei_att.labelled.attributes"/>
          <ref name="mei_att.linking.attributes"/>
@@ -15750,31 +15781,6 @@ Suggested values include: 1] apostropha; 2] bistropha; 3] climacus; 4] clivis; 5
          <ref name="mei_att.visibility.attributes"/>
          <ref name="mei_att.xy.attributes"/>
          <ref name="mei_att.visualOffset.ho.attributes"/>
-         <optional>
-            <attribute name="form">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Identifies the different kinds of division.
-Suggested values include: 1] caesura; 2] finalis; 3] maior; 4] maxima; 5] minima; 6] virgula</a:documentation>
-               <list>
-                  <oneOrMore>
-                     <choice>
-                        <value>caesura</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                        <value>finalis</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                        <value>maior</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                        <value>maxima</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                        <value>minima</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                        <value>virgula</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                        <data type="NMTOKEN"/>
-                     </choice>
-                  </oneOrMore>
-               </list>
-            </attribute>
-         </optional>
          <empty/>
       </element>
    </define>

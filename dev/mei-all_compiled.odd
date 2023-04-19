@@ -11537,7 +11537,25 @@
         attribute.</p>
     </remarks></elementSpec><macroSpec rend="add" ident="data.STAFFITEM.neumes" module="MEI.neumes" type="dt">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Items in the Neume repertoire that may be printed near a staff.</desc>
-  </macroSpec><classSpec rend="add" ident="att.episema.log" module="MEI.neumes" type="atts">
+  </macroSpec><classSpec rend="add" ident="att.divLine.log" module="MEI.neumes" type="atts">
+    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Logical domain attributes.</desc>
+    <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <attDef ident="form" usage="opt">
+        <desc xml:lang="en">Identifies the different kinds of division.</desc>
+        <datatype maxOccurs="unbounded">
+          <rng:data type="NMTOKEN"/>
+        </datatype>
+        <valList type="semi">
+          <valItem ident="caesura"/>
+          <valItem ident="finalis"/>
+          <valItem ident="maior"/>
+          <valItem ident="maxima"/>
+          <valItem ident="minima"/>
+          <valItem ident="virgula"/>
+        </valList>
+      </attDef>
+    </attList>
+  </classSpec><classSpec rend="add" ident="att.episema.log" module="MEI.neumes" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Logical domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       
@@ -11906,6 +11924,7 @@
       <memberOf key="att.basic"/>
       <memberOf key="att.classed"/>
       <memberOf key="att.color"/>
+      <memberOf key="att.divLine.log"/>
       <memberOf key="att.facsimile"/>
       <memberOf key="att.labelled"/>
       <memberOf key="att.linking"/>
@@ -11917,20 +11936,7 @@
       <memberOf key="att.xy"/>
       <memberOf key="att.visualOffset.ho"/>
       <memberOf key="model.eventLike.neumes"/>
-    </classes><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="form" usage="opt">
-        <desc xml:lang="en">Identifies the different kinds of division.</desc>
-        <datatype maxOccurs="unbounded">
-          <rng:data type="NMTOKEN"/>
-        </datatype>
-        <valList type="semi">
-          <valItem ident="caesura"/>
-          <valItem ident="finalis"/>
-          <valItem ident="maior"/>
-          <valItem ident="maxima"/>
-          <valItem ident="minima"/>
-          <valItem ident="virgula"/>
-        </valList>
-      </attDef></attList></elementSpec><classSpec rend="add" ident="att.alignment" module="MEI.performance" type="atts">
+    </classes></elementSpec><classSpec rend="add" ident="att.alignment" module="MEI.performance" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Temporal alignment attributes.</desc>
     <constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_whenTarget" scheme="isoschematron">
       <constraint>
