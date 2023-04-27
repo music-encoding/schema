@@ -5,7 +5,7 @@
           xmlns:xlink="http://www.w3.org/1999/xlink"
           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
           ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2023-04-27T15:20:35Z. .
+Schema generated from ODD source 2023-04-27T15:46:58Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -6847,8 +6847,6 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Meter signature rendered using traditional numeric values.</a:documentation>
          <value>sym+norm</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Meter signature rendered using both the symbol and the traditional numeric values.</a:documentation>
-         <value>invis</value>
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Meter signature not rendered.</a:documentation>
       </choice>
    </define>
    <define name="mei_data.METERSIGN">
@@ -28369,21 +28367,21 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
       </optional>
    </define>
    <define name="mei_att.keySigDefault.vis.attributes">
-      <ref name="mei_att.keySigDefault.vis.attribute.keysig.show"/>
       <ref name="mei_att.keySigDefault.vis.attribute.keysig.showchange"/>
-   </define>
-   <define name="mei_att.keySigDefault.vis.attribute.keysig.show">
-      <optional>
-         <attribute name="keysig.show">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates whether the key signature should be displayed.</a:documentation>
-            <ref name="mei_data.BOOLEAN"/>
-         </attribute>
-      </optional>
+      <ref name="mei_att.keySigDefault.vis.attribute.keysig.visible"/>
    </define>
    <define name="mei_att.keySigDefault.vis.attribute.keysig.showchange">
       <optional>
          <attribute name="keysig.showchange">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Determines whether cautionary accidentals should be displayed at a key change.</a:documentation>
+            <ref name="mei_data.BOOLEAN"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.keySigDefault.vis.attribute.keysig.visible">
+      <optional>
+         <attribute name="keysig.visible">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Determines whether the key signature is to be displayed.</a:documentation>
             <ref name="mei_data.BOOLEAN"/>
          </attribute>
       </optional>
@@ -28533,6 +28531,7 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
       <ref name="mei_att.enclosingChars.attributes"/>
       <ref name="mei_att.extSym.attributes"/>
       <ref name="mei_att.typography.attributes"/>
+      <ref name="mei_att.visibility.attributes"/>
       <ref name="mei_att.meterSig.vis.attribute.form"/>
    </define>
    <define name="mei_att.meterSig.vis.attribute.form">
@@ -28546,6 +28545,7 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
    <define name="mei_att.meterSigDefault.vis.attributes">
       <ref name="mei_att.meterSigDefault.vis.attribute.meter.form"/>
       <ref name="mei_att.meterSigDefault.vis.attribute.meter.showchange"/>
+      <ref name="mei_att.meterSigDefault.vis.attribute.meter.visible"/>
    </define>
    <define name="mei_att.meterSigDefault.vis.attribute.meter.form">
       <optional>
@@ -28559,6 +28559,14 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
       <optional>
          <attribute name="meter.showchange">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Determines whether the old meter signature should be displayed when the meter signature changes.</a:documentation>
+            <ref name="mei_data.BOOLEAN"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.meterSigDefault.vis.attribute.meter.visible">
+      <optional>
+         <attribute name="meter.visible">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Determines whether the meter signature is to be displayed.</a:documentation>
             <ref name="mei_data.BOOLEAN"/>
          </attribute>
       </optional>

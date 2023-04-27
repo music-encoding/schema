@@ -19,7 +19,7 @@
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href=../../../source/"validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2023-04-27T15:21:01.557954992Z-->
+<!--canonicalized: 2023-04-27T15:47:21.732166424Z-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -15904,9 +15904,6 @@
         </valItem>
         <valItem ident="sym+norm">
           <desc xml:lang="en">Meter signature rendered using both the symbol and the traditional numeric values.</desc>
-        </valItem>
-        <valItem ident="invis">
-          <desc xml:lang="en">Meter signature not rendered.</desc>
         </valItem>
       </valList>
     </content>
@@ -40688,14 +40685,14 @@
     <desc xml:lang="en">Used by staffDef and scoreDef to provide default values for attributes in the visual
       domain related to key signatures.</desc>
     <attList>
-      <attDef ident="keysig.show" usage="opt">
-        <desc xml:lang="en">Indicates whether the key signature should be displayed.</desc>
+      <attDef ident="keysig.showchange" usage="opt">
+        <desc xml:lang="en">Determines whether cautionary accidentals should be displayed at a key change.</desc>
         <datatype>
           <rng:ref name="data.BOOLEAN"/>
         </datatype>
       </attDef>
-      <attDef ident="keysig.showchange" usage="opt">
-        <desc xml:lang="en">Determines whether cautionary accidentals should be displayed at a key change.</desc>
+      <attDef ident="keysig.visible" usage="opt">
+        <desc xml:lang="en">Determines whether the key signature is to be displayed.</desc>
         <datatype>
           <rng:ref name="data.BOOLEAN"/>
         </datatype>
@@ -40984,6 +40981,7 @@
       <memberOf key="att.enclosingChars"/>
       <memberOf key="att.extSym"/>
       <memberOf key="att.typography"/>
+      <memberOf key="att.visibility"/>
     </classes>
     <attList>
       <attDef ident="form" usage="opt">
@@ -41007,6 +41005,12 @@
       <attDef ident="meter.showchange" usage="opt">
         <desc xml:lang="en">Determines whether the old meter signature should be displayed when the meter
           signature changes.</desc>
+        <datatype>
+          <rng:ref name="data.BOOLEAN"/>
+        </datatype>
+      </attDef>
+      <attDef ident="meter.visible" usage="opt">
+        <desc xml:lang="en">Determines whether the meter signature is to be displayed.</desc>
         <datatype>
           <rng:ref name="data.BOOLEAN"/>
         </datatype>

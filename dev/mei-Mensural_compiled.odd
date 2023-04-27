@@ -1856,9 +1856,6 @@
         <valItem ident="sym+norm">
           <desc xml:lang="en">Meter signature rendered using both the symbol and the traditional numeric values.</desc>
         </valItem>
-        <valItem ident="invis">
-          <desc xml:lang="en">Meter signature not rendered.</desc>
-        </valItem>
       </valList>
     </content>
   </macroSpec><macroSpec rend="add" ident="data.METERSIGN" module="MEI" type="dt">
@@ -16315,14 +16312,14 @@
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Used by staffDef and scoreDef to provide default values for attributes in the visual
       domain related to key signatures.</desc>
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-      <attDef ident="keysig.show" usage="opt">
-        <desc xml:lang="en">Indicates whether the key signature should be displayed.</desc>
+      <attDef ident="keysig.showchange" usage="opt">
+        <desc xml:lang="en">Determines whether cautionary accidentals should be displayed at a key change.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.BOOLEAN"/>
         </datatype>
       </attDef>
-      <attDef ident="keysig.showchange" usage="opt">
-        <desc xml:lang="en">Determines whether cautionary accidentals should be displayed at a key change.</desc>
+      <attDef ident="keysig.visible" usage="opt">
+        <desc xml:lang="en">Determines whether the key signature is to be displayed.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.BOOLEAN"/>
         </datatype>
@@ -16531,6 +16528,12 @@
       <attDef ident="meter.showchange" usage="opt">
         <desc xml:lang="en">Determines whether the old meter signature should be displayed when the meter
           signature changes.</desc>
+        <datatype>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.BOOLEAN"/>
+        </datatype>
+      </attDef>
+      <attDef ident="meter.visible" usage="opt">
+        <desc xml:lang="en">Determines whether the meter signature is to be displayed.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.BOOLEAN"/>
         </datatype>
