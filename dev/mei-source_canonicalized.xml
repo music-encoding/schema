@@ -19,7 +19,7 @@
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href=../../../source/"validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2023-04-19T14:14:05.224165184Z-->
+<!--canonicalized: 2023-04-27T15:21:01.557954992Z-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -25134,7 +25134,7 @@
     <exemplum>
       <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">
 <contents>
-  <p>A suitable tone ; Left hand colouring ; Rhythm and accent ; Tempo ; 
+  <p>A suitable tone ; Left hand coloring ; Rhythm and accent ; Tempo ; 
     Flexibility ; Ornaments</p>
 </contents>
             </egXML>
@@ -25739,7 +25739,7 @@
             <desc xml:lang="en">Plaine &amp; Easie Code.</desc>
           </valItem>
           <valItem ident="humdrumKern">
-            <desc xml:lang="en">Humdrum Kern format.</desc>
+            <desc xml:lang="en">**kern representation of the Humdrum format.</desc>
           </valItem>
           <valItem ident="parsons">
             <desc xml:lang="en">Parsons code.</desc>
