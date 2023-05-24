@@ -19,7 +19,7 @@
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href=../../../source/"validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2023-05-24T20:43:40.548+02:00-->
+<!--canonicalized: 2023-05-24T22:50:08.235+02:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -11701,7 +11701,7 @@
 </egXML>
                            </figure>
                         </p>
-                        <p>Characters with combining slashes can be handled using the Unicode characters COMBINING REVERSE SOLIDUS OVERLAY (6⃥) and COMBINING LONG SOLIDUS OVERLAY (6̸). The combining nature of these Unicode characters indicates very clearly that they "overstrike" the preceding character. The usual convention for slashes; that is, 6\ and 6/ for backslash and slash, respectively, may also be followed:</p>
+                        <p>You may use 6\ and 6/ for numerals that should be shown with a backslash and slash, respectively. An alternative would be to use the "bslash" (backward slash) and "fslash" (forward slash) on the <gi scheme="MEI">rend&gt;</gi> element.</p>
                         <p>
                            <figure>
                               <head>Figured bass with chromatically altered figure</head>
@@ -11711,9 +11711,9 @@
                               <head/>
                               <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;harm&gt;
    &lt;fb&gt;
-      &lt;f&gt;6⃥&lt;/f&gt;
+      &lt;f&gt;&lt;rend rend="bslash"&gt;6&lt;/rend&gt;&lt;/f&gt;
       &lt;!-- or --&gt;
-      &lt;f&gt;6\&lt;/f&gt;
+      &lt;f&gt;&lt;rend rend="fslash"&gt;6&lt;/rend&gt;&lt;/f&gt;
    &lt;/fb&gt;
 &lt;/harm&gt;
 </egXML>
