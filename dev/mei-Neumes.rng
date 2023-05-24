@@ -5,8 +5,8 @@
           xmlns:xlink="http://www.w3.org/1999/xlink"
           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
           ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2023-04-27T15:47:06Z. .
-TEI Edition: Version 4.0.0
+Schema generated from ODD source 2023-05-24T16:02:36Z. .
+TEI Edition: Version 5.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
 --><!---->
@@ -5820,6 +5820,10 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Marcato (Unicode 1D17F).</a:documentation>
          <value>spicc</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Spiccato.</a:documentation>
+         <value>stress</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Stress (Unicode 00B4).</a:documentation>
+         <value>unstress</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Unstress (Unicode 02D8).</a:documentation>
          <value>doit</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Main note followed by short slide to higher, indeterminate pitch (Unicode 1D185).</a:documentation>
          <value>scoop</value>
@@ -5958,7 +5962,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <value>G</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">G clef (Unicode 1D11E).</a:documentation>
          <value>GG</value>
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Double G clef.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Double G clef. Sounds one octave lower than G clef. (See remarks on usage below.)</a:documentation>
          <value>F</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">F clef (Unicode 1D122).</a:documentation>
          <value>C</value>
