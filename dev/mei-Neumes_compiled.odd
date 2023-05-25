@@ -9263,30 +9263,6 @@
         </valList>
       </attDef>
     </attList>
-  </classSpec><classSpec rend="add" ident="att.augmentDots" module="MEI.shared" type="atts">
-    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that record the number of dots of augmentation.</desc>
-    <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-      <attDef ident="dots" usage="opt">
-        <desc xml:lang="en">Records the number of augmentation dots required by a written dotted duration.</desc>
-        <datatype>
-          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.AUGMENTDOT"/>
-        </datatype>
-        <constraintSpec ident="dots_attribute_requires_dur" scheme="isoschematron">
-          <constraint>
-            <sch:rule context="mei:*[@dots]">
-              <sch:assert test="@dur">An element with a dots attribute must also have a dur
-                attribute.</sch:assert>
-            </sch:rule>
-          </constraint>
-        </constraintSpec>
-      </attDef>
-    </attList>
-    <remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
-      <p>The <att>dots</att> attribute records the number of augmentation dots necessary to
-        represent a non-power-of-two duration. This is usually, but not always, the number of dots
-        displayed. For example, a note with this attribute will result in displayed dots, while a
-        glissando will not.</p>
-    </remarks>
   </classSpec><classSpec rend="add" ident="att.authorized" module="MEI.shared" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that describe the source of a controlled value.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -9443,7 +9419,7 @@
       should be employed.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.articulation"/>
-      <memberOf key="att.augmentDots"/>
+      
       
       <memberOf key="att.cue"/>
       <memberOf key="att.duration.log"/>
@@ -10936,7 +10912,7 @@
   </classSpec><classSpec rend="add" ident="att.note.log" module="MEI.shared" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Logical domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-      <memberOf key="att.augmentDots"/>
+      
       <memberOf key="att.coloration"/>
       <memberOf key="att.cue"/>
       <memberOf key="att.duration.log"/>
@@ -11524,7 +11500,7 @@
   </classSpec><classSpec rend="add" ident="att.rest.log" module="MEI.shared" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Logical domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-      <memberOf key="att.augmentDots"/>
+      
       <memberOf key="att.cue"/>
       <memberOf key="att.restduration.log"/>
       <memberOf key="att.event"/>
@@ -11622,7 +11598,7 @@
   </classSpec><classSpec rend="add" ident="att.space.log" module="MEI.shared" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Logical domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-      <memberOf key="att.augmentDots"/>
+      
       <memberOf key="att.duration.log"/>
       <memberOf key="att.event"/>
       
