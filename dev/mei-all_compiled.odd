@@ -7737,6 +7737,7 @@
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Gestural domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.duration.ges"/>
+      <memberOf key="att.timestamp2.ges"/>
     </classes>
   </classSpec><classSpec rend="add" ident="att.meterSig.ges" module="MEI.gestural" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Gestural domain attributes.</desc>
