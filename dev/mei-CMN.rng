@@ -5,7 +5,7 @@
           xmlns:xlink="http://www.w3.org/1999/xlink"
           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
           ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2023-05-25T17:02:07Z. .
+Schema generated from ODD source 2023-05-25T19:29:55Z. .
 TEI Edition: Version 5.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -7409,7 +7409,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Enclosing box.</a:documentation>
          <value>circle</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Enclosing circle.</a:documentation>
-         <value>dblwhole</value>
+         <value>fences</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Enclosing "fences".</a:documentation>
       </choice>
    </define>
