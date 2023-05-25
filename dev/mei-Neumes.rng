@@ -5,7 +5,7 @@
           xmlns:xlink="http://www.w3.org/1999/xlink"
           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
           ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2023-05-25T20:00:47Z. .
+Schema generated from ODD source 2023-05-25T22:06:55Z. .
 TEI Edition: Version 5.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -9344,16 +9344,14 @@ Suggested values include: 1] confirmation; 2] addition; 3] deletion; 4] substitu
          <empty/>
       </element>
    </define>
-   <define name="mei_att.extSym.attributes">
-      <ref name="mei_att.extSym.attribute.glyph.auth"/>
-      <ref name="mei_att.extSym.attribute.glyph.name"/>
-      <ref name="mei_att.extSym.attribute.glyph.num"/>
-      <ref name="mei_att.extSym.attribute.glyph.uri"/>
+   <define name="mei_att.extSym.auth.attributes">
+      <ref name="mei_att.extSym.auth.attribute.glyph.auth"/>
+      <ref name="mei_att.extSym.auth.attribute.glyph.uri"/>
    </define>
-   <define name="mei_att.extSym.attribute.glyph.auth">
+   <define name="mei_att.extSym.auth.attribute.glyph.auth">
       <optional>
          <attribute name="glyph.auth">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A name or label associated with the controlled vocabulary from which the value of <code xmlns="http://www.w3.org/1999/xhtml">@glyph.name</code> or <code xmlns="http://www.w3.org/1999/xhtml">@glyph.num</code> is taken.
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A name or label associated with the controlled vocabulary from which the value of <code xmlns="http://www.w3.org/1999/xhtml">@glyph.name</code> or <code xmlns="http://www.w3.org/1999/xhtml">@glyph.num</code> is taken, or the textual content of the element.
 Suggested values include: 1] smufl</a:documentation>
             <choice>
                <value>smufl</value>
@@ -9363,7 +9361,19 @@ Suggested values include: 1] smufl</a:documentation>
          </attribute>
       </optional>
    </define>
-   <define name="mei_att.extSym.attribute.glyph.name">
+   <define name="mei_att.extSym.auth.attribute.glyph.uri">
+      <optional>
+         <attribute name="glyph.uri">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The web-accessible location of the controlled vocabulary from which the value of <code xmlns="http://www.w3.org/1999/xhtml">@glyph.name</code> or <code xmlns="http://www.w3.org/1999/xhtml">@glyph.num</code> is taken, or the textual content of the element.</a:documentation>
+            <ref name="mei_data.URI"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.extSym.names.attributes">
+      <ref name="mei_att.extSym.names.attribute.glyph.name"/>
+      <ref name="mei_att.extSym.names.attribute.glyph.num"/>
+   </define>
+   <define name="mei_att.extSym.names.attribute.glyph.name">
       <optional>
          <attribute name="glyph.name">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Glyph name.</a:documentation>
@@ -9372,7 +9382,7 @@ Suggested values include: 1] smufl</a:documentation>
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-             id="mei-att.extSym-glyph.name-check_glyph.name-constraint-rule-14">
+             id="mei-att.extSym.names-glyph.name-check_glyph.name-constraint-rule-14">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                  xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -9382,7 +9392,7 @@ Suggested values include: 1] smufl</a:documentation>
                 should have content.</sch:assert>
       </sch:rule>
    </pattern>
-   <define name="mei_att.extSym.attribute.glyph.num">
+   <define name="mei_att.extSym.names.attribute.glyph.num">
       <optional>
          <attribute name="glyph.num">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Numeric glyph reference in hexadecimal notation, e.g., "#xE000" or "U+E000". N.B. SMuFL version 1.18 uses the range U+E000 - U+ECBF.</a:documentation>
@@ -9391,7 +9401,7 @@ Suggested values include: 1] smufl</a:documentation>
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-             id="mei-att.extSym-glyph.num-check_glyph.num-constraint-rule-15">
+             id="mei-att.extSym.names-glyph.num-check_glyph.num-constraint-rule-15">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                  xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -9401,13 +9411,9 @@ Suggested values include: 1] smufl</a:documentation>
                       test="matches(normalize-space(@glyph.num), '^(#x|U\+)E([0-9AB][0-9A-F][0-9A-F]|C[0-9A][0-9A-F]|CB[0-9A-F])$')">SMuFL version 1.18 uses the range U+E000 - U+ECBF.</sch:assert>
       </sch:rule>
    </pattern>
-   <define name="mei_att.extSym.attribute.glyph.uri">
-      <optional>
-         <attribute name="glyph.uri">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The web-accessible location of the controlled vocabulary from which the value of <code xmlns="http://www.w3.org/1999/xhtml">@glyph.name</code> or <code xmlns="http://www.w3.org/1999/xhtml">@glyph.num</code> is taken.</a:documentation>
-            <ref name="mei_data.URI"/>
-         </attribute>
-      </optional>
+   <define name="mei_att.extSym.attributes">
+      <ref name="mei_att.extSym.auth.attributes"/>
+      <ref name="mei_att.extSym.names.attributes"/>
    </define>
    <define name="mei_att.facsimile.attributes">
       <ref name="mei_att.facsimile.attribute.facs"/>
@@ -23668,6 +23674,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          </zeroOrMore>
          <ref name="mei_att.color.attributes"/>
          <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.extSym.auth.attributes"/>
          <ref name="mei_att.horizontalAlign.attributes"/>
          <ref name="mei_att.lang.attributes"/>
          <ref name="mei_att.textRendition.attributes"/>

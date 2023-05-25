@@ -6721,13 +6721,12 @@
         example, when used as a descendent of <gi scheme="MEI">verse</gi>, <gi scheme="MEI">unclear</gi> should only contain those elements allowed within <gi scheme="MEI">verse</gi>.</p>
     </remarks><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-unclear.html">unclear</ref> element of the Text Encoding Initiative (TEI).</p>
-    </remarks></elementSpec><classSpec rend="add" ident="att.extSym" module="MEI.externalsymbols" type="atts">
-    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes used to associate MEI features with corresponding glyphs in an
-      externally-defined standard such as SMuFL.</desc>
+    </remarks></elementSpec><classSpec rend="add" ident="att.extSym.auth" module="MEI.externalsymbols" type="atts">
+    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that point to an external symbol authority.</desc>
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="glyph.auth" usage="opt">
         <desc xml:lang="en">A name or label associated with the controlled vocabulary from which the value of
-            <att>glyph.name</att> or <att>glyph.num</att> is taken.</desc>
+          <att>glyph.name</att> or <att>glyph.num</att> is taken, or the textual content of the element.</desc>
         <datatype>
           <rng:data type="NMTOKEN"/>
         </datatype>
@@ -6737,6 +6736,17 @@
           </valItem>
         </valList>
       </attDef>
+      <attDef ident="glyph.uri" usage="opt">
+        <desc xml:lang="en">The web-accessible location of the controlled vocabulary from which the value of
+          <att>glyph.name</att> or <att>glyph.num</att> is taken, or the textual content of the element.</desc>
+        <datatype>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.URI"/>
+        </datatype>
+      </attDef>
+    </attList>
+  </classSpec><classSpec rend="add" ident="att.extSym.names" module="MEI.externalsymbols" type="atts">
+    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that specify names or values taken from an external symbol authority.</desc>
+    <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="glyph.name" usage="opt">
         <desc xml:lang="en">Glyph name.</desc>
         <datatype>
@@ -6765,14 +6775,14 @@
           </constraint>
         </constraintSpec>
       </attDef>
-      <attDef ident="glyph.uri" usage="opt">
-        <desc xml:lang="en">The web-accessible location of the controlled vocabulary from which the value of
-            <att>glyph.name</att> or <att>glyph.num</att> is taken.</desc>
-        <datatype>
-          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.URI"/>
-        </datatype>
-      </attDef>
     </attList>
+  </classSpec><classSpec rend="add" ident="att.extSym" module="MEI.externalsymbols" type="atts">
+    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes used to associate MEI features with corresponding glyphs in an
+      externally-defined standard such as SMuFL.</desc>
+    <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <memberOf key="att.extSym.auth"/>
+      <memberOf key="att.extSym.names"/>
+    </classes>
   </classSpec><classSpec rend="add" ident="att.facsimile" module="MEI.facsimile" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that associate a feature corresponding with all or part of an image.</desc>
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -17696,6 +17706,7 @@
       italicized, of a text word or phrase.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.color"/>
       <memberOf key="att.common"/>
+      <memberOf key="att.extSym.auth"/>
       <memberOf key="att.horizontalAlign"/>
       <memberOf key="att.lang"/>
       <memberOf key="att.textRendition"/>
@@ -17713,7 +17724,9 @@
         </datatype>
       </attDef></attList><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>When an entire element should be rendered in a special way, a style sheet function should
-        be used instead of the <gi scheme="MEI">rend</gi> element.</p>
+        be used instead of the <gi scheme="MEI">rend</gi> element. The <att>glyph.auth</att> and <att>glyph.uri</att>
+        attributes may be used to specify an external authority, <abbr>e.g.,</abbr> SMuFL, to be used for
+        displaying code points in the textual content of the element.</p>
     </remarks></elementSpec><elementSpec rend="add" ident="repository" module="MEI.shared"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Institution, agency, or individual which holds a bibliographic item.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       <memberOf key="att.bibl"/>

@@ -7262,6 +7262,7 @@
       italicized, of a text word or phrase.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       
       <memberOf key="att.common"/>
+      
       <memberOf key="att.horizontalAlign"/>
       <memberOf key="att.lang"/>
       <memberOf key="att.textRendition"/>
@@ -7279,7 +7280,9 @@
         </datatype>
       </attDef></attList><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>When an entire element should be rendered in a special way, a style sheet function should
-        be used instead of the <gi scheme="MEI">rend</gi> element.</p>
+        be used instead of the <gi scheme="MEI">rend</gi> element. The <att>glyph.auth</att> and <att>glyph.uri</att>
+        attributes may be used to specify an external authority, <abbr>e.g.,</abbr> SMuFL, to be used for
+        displaying code points in the textual content of the element.</p>
     </remarks></elementSpec><elementSpec rend="add" ident="respStmt" module="MEI.shared"><gloss xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">responsibility statement</gloss><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Transcription of text that names one or more individuals,
       groups, or in rare cases, mechanical processes, responsible for creation, realization,
       production, funding, or distribution of the intellectual or artistic content.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
