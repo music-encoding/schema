@@ -19,7 +19,7 @@
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href=../../../source/"validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2023-05-25T15:13:11.35+02:00-->
+<!--canonicalized: 2023-05-25T17:40:58.122+02:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -27102,6 +27102,14 @@
     <content>
       <rng:ref name="macro.struc-unstrucContent"/>
     </content>
+    <constraintSpec ident="check_watermark_inline" scheme="isoschematron">
+      <constraint>
+        <sch:rule context="mei:watermark">
+          <sch:assert test="ancestor::mei:physDesc">The watermark element may only appear as a
+            descendant of the physDesc element.</sch:assert>
+        </sch:rule>
+      </constraint>
+    </constraintSpec>
     <remarks xml:lang="en">
       <p>The <att>facs</att> attribute may be used to record the location of the watermark in a
         facsimile image.</p>
@@ -28534,6 +28542,14 @@
     <content>
       <rng:ref name="macro.struc-unstrucContent"/>
     </content>
+    <constraintSpec ident="check_catchwords_inline" scheme="isoschematron">
+      <constraint>
+        <sch:rule context="mei:catchwords">
+          <sch:assert test="ancestor::mei:physDesc">The catchwords element may only appear as a
+            descendant of the physDesc element.</sch:assert>
+        </sch:rule>
+      </constraint>
+    </constraintSpec>
     <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-catchwords.html">catchwords</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
@@ -28686,6 +28702,14 @@
     <content>
       <rng:ref name="macro.struc-unstrucContent"/>
     </content>
+    <constraintSpec ident="check_heraldry_inline" scheme="isoschematron">
+      <constraint>
+        <sch:rule context="mei:heraldry">
+          <sch:assert test="ancestor::mei:physDesc">The heraldry element may only appear as a
+            descendant of the physDesc element.</sch:assert>
+        </sch:rule>
+      </constraint>
+    </constraintSpec>
     <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-heraldry.html">heraldry</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
@@ -28814,6 +28838,15 @@
         </rng:choice>
       </rng:zeroOrMore>
     </content>
+    <constraintSpec ident="check_locus_inline" scheme="isoschematron">
+      <constraint>
+        <sch:rule context="mei:locus">
+          <sch:assert test="ancestor::mei:physDesc or parent::mei:contentItem or              ancestor::mei:source[ancestor::mei:componentList[ancestor::mei:sourceDesc or              ancestor::mei:sourceList or ancestor::mei:workList]]">The locus element may only appear as a descendant of a physDesc element, a
+            contentItem element, or a source element that is a component of another source or
+            work.</sch:assert>
+        </sch:rule>
+      </constraint>
+    </constraintSpec>
     <attList>
       <attDef ident="scheme" usage="opt">
         <desc xml:lang="en">Identifies the foliation scheme in terms of which the location is being specified by
@@ -28855,6 +28888,15 @@
         <rng:ref name="locus"/>
       </rng:zeroOrMore>
     </content>
+    <constraintSpec ident="check_locusGrp_inline" module="MEI.msDesc" scheme="isoschematron">
+      <constraint>
+        <sch:rule context="mei:locusGrp">
+          <sch:assert test="ancestor::mei:physDesc or parent::mei:contentItem or              ancestor::mei:source[ancestor::mei:componentList[ancestor::mei:sourceDesc or              ancestor::mei:sourceList or ancestor::mei:workList]]">The locusGrp element may only appear as a descendant of a physDesc element, a
+            contentItem element, or a source element that is a component of another source or
+            work.</sch:assert>
+        </sch:rule>
+      </constraint>
+    </constraintSpec>
     <attList>
       <attDef ident="scheme" usage="opt">
         <desc xml:lang="en">Identifies the foliation scheme in terms of which the location is being specified by
@@ -29048,6 +29090,14 @@
     <content>
       <rng:ref name="macro.struc-unstrucContent"/>
     </content>
+    <constraintSpec ident="check_secFolio_inline" scheme="isoschematron">
+      <constraint>
+        <sch:rule context="mei:secFolio">
+          <sch:assert test="ancestor::mei:physDesc">The secFolio element may only appear as a
+            descendant of the physDesc element.</sch:assert>
+        </sch:rule>
+      </constraint>
+    </constraintSpec>
     <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-secFol.html">secFol</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
@@ -29064,6 +29114,14 @@
     <content>
       <rng:ref name="macro.struc-unstrucContent"/>
     </content>
+    <constraintSpec ident="check_signatures_inline" scheme="isoschematron">
+      <constraint>
+        <sch:rule context="mei:signatures">
+          <sch:assert test="ancestor::mei:physDesc">The signatures element may only appear as a
+            descendant of the physDesc element.</sch:assert>
+        </sch:rule>
+      </constraint>
+    </constraintSpec>
     <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-signatures.html">signatures</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
@@ -29230,23 +29288,6 @@
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-typeNote.html">typeNote</ref> element in the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
-  <constraintSpec ident="check_msDesc_inline" module="MEI.msDesc" scheme="isoschematron">
-    <constraint>
-      <sch:rule context="mei:catchwords | mei:heraldry | mei:secFolio | mei:signatures | mei:watermark">
-        <sch:assert test="ancestor::mei:physDesc">The <sch:name/> element may only appear as a
-          descendant of the physDesc element.</sch:assert>
-      </sch:rule>
-    </constraint>
-  </constraintSpec>
-  <constraintSpec ident="check_locus_inline" module="MEI.msDesc" scheme="isoschematron">
-    <constraint>
-      <sch:rule context="mei:locus | mei:locusGrp">
-        <sch:assert test="ancestor::mei:physDesc or parent::mei:contentItem or            ancestor::mei:source[ancestor::mei:componentList[ancestor::mei:sourceDesc or            ancestor::mei:sourceList or ancestor::mei:workList]]">The <sch:name/> element may only appear as a descendant of a physDesc element, a
-          contentItem element, or a source element that is a component of another source or
-          work.</sch:assert>
-      </sch:rule>
-    </constraint>
-  </constraintSpec>
 </specGrp>
                <specGrp xml:id="module.MEI.namesdates">
   <moduleSpec ident="MEI.namesdates">

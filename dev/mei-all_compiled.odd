@@ -9921,7 +9921,14 @@
       <memberOf key="model.physDescPart"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <ref xmlns="http://relaxng.org/ns/structure/1.0" name="macro.struc-unstrucContent"/>
-    </content><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_watermark_inline" scheme="isoschematron">
+      <constraint>
+        <sch:rule context="mei:watermark">
+          <sch:assert test="ancestor::mei:physDesc">The watermark element may only appear as a
+            descendant of the physDesc element.</sch:assert>
+        </sch:rule>
+      </constraint>
+    </constraintSpec><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The <att>facs</att> attribute may be used to record the location of the watermark in a
         facsimile image.</p>
     </remarks><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -10909,7 +10916,14 @@
       <memberOf key="model.physDescPart"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <ref xmlns="http://relaxng.org/ns/structure/1.0" name="macro.struc-unstrucContent"/>
-    </content><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_catchwords_inline" scheme="isoschematron">
+      <constraint>
+        <sch:rule context="mei:catchwords">
+          <sch:assert test="ancestor::mei:physDesc">The catchwords element may only appear as a
+            descendant of the physDesc element.</sch:assert>
+        </sch:rule>
+      </constraint>
+    </constraintSpec><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-catchwords.html">catchwords</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="collation" module="MEI.msDesc"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Records a description of how the leaves or bifolia of an item are physically
       arranged.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -10979,7 +10993,14 @@
       <memberOf key="model.physDescPart"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <ref xmlns="http://relaxng.org/ns/structure/1.0" name="macro.struc-unstrucContent"/>
-    </content><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_heraldry_inline" scheme="isoschematron">
+      <constraint>
+        <sch:rule context="mei:heraldry">
+          <sch:assert test="ancestor::mei:physDesc">The heraldry element may only appear as a
+            descendant of the physDesc element.</sch:assert>
+        </sch:rule>
+      </constraint>
+    </constraintSpec><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-heraldry.html">heraldry</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="layout" module="MEI.msDesc"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Describes how text is laid out on the page, including information about any ruling,
       pricking, or other evidence of page-preparation techniques.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -11056,7 +11077,15 @@
       <memberOf key="model.msInline"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="locus"/><ref name="rend"/><ref name="symbol"/></choice></zeroOrMore>
-    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="scheme" usage="opt">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_locus_inline" scheme="isoschematron">
+      <constraint>
+        <sch:rule context="mei:locus">
+          <sch:assert test="ancestor::mei:physDesc or parent::mei:contentItem or              ancestor::mei:source[ancestor::mei:componentList[ancestor::mei:sourceDesc or              ancestor::mei:sourceList or ancestor::mei:workList]]">The locus element may only appear as a descendant of a physDesc element, a
+            contentItem element, or a source element that is a component of another source or
+            work.</sch:assert>
+        </sch:rule>
+      </constraint>
+    </constraintSpec><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="scheme" usage="opt">
         <desc xml:lang="en">Identifies the foliation scheme in terms of which the location is being specified by
           pointing to some foliation element defining it, or to some other equivalent
           resource.</desc>
@@ -11083,7 +11112,15 @@
       <memberOf key="model.msInline"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="locus"/></zeroOrMore>
-    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="scheme" usage="opt">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_locusGrp_inline" module="MEI.msDesc" scheme="isoschematron">
+      <constraint>
+        <sch:rule context="mei:locusGrp">
+          <sch:assert test="ancestor::mei:physDesc or parent::mei:contentItem or              ancestor::mei:source[ancestor::mei:componentList[ancestor::mei:sourceDesc or              ancestor::mei:sourceList or ancestor::mei:workList]]">The locusGrp element may only appear as a descendant of a physDesc element, a
+            contentItem element, or a source element that is a component of another source or
+            work.</sch:assert>
+        </sch:rule>
+      </constraint>
+    </constraintSpec><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="scheme" usage="opt">
         <desc xml:lang="en">Identifies the foliation scheme in terms of which the location is being specified by
           pointing to some foliation element defining it, or to some other equivalent
           resource.</desc>
@@ -11166,7 +11203,14 @@
       <memberOf key="model.physDescPart"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <ref xmlns="http://relaxng.org/ns/structure/1.0" name="macro.struc-unstrucContent"/>
-    </content><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_secFolio_inline" scheme="isoschematron">
+      <constraint>
+        <sch:rule context="mei:secFolio">
+          <sch:assert test="ancestor::mei:physDesc">The secFolio element may only appear as a
+            descendant of the physDesc element.</sch:assert>
+        </sch:rule>
+      </constraint>
+    </constraintSpec><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-secFol.html">secFol</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="signatures" module="MEI.msDesc"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Provides a description of the leaf or quire signatures found within a codex.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
@@ -11176,7 +11220,14 @@
       <memberOf key="model.physDescPart"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <ref xmlns="http://relaxng.org/ns/structure/1.0" name="macro.struc-unstrucContent"/>
-    </content><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_signatures_inline" scheme="isoschematron">
+      <constraint>
+        <sch:rule context="mei:signatures">
+          <sch:assert test="ancestor::mei:physDesc">The signatures element may only appear as a
+            descendant of the physDesc element.</sch:assert>
+        </sch:rule>
+      </constraint>
+    </constraintSpec><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-signatures.html">signatures</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="stamp" module="MEI.msDesc"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Contains a word or phrase describing an official mark indicating ownership, genuineness,
       validity, etc.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
