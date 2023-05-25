@@ -5,7 +5,7 @@
           xmlns:xlink="http://www.w3.org/1999/xlink"
           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
           ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2023-05-25T19:29:55Z. .
+Schema generated from ODD source 2023-05-25T19:56:32Z. .
 TEI Edition: Version 5.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -18224,7 +18224,9 @@ Suggested values include: 1] paper; 2] parch; 3] mixed</a:documentation>
    <define name="mei_when">
       <element name="when">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates a point in time either absolutely (using the absolute attribute), or relative to another when element (using the since, interval and inttype attributes).</a:documentation>
-         <empty/>
+         <zeroOrMore>
+            <ref name="mei_extData"/>
+         </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                    id="mei-when-check_when_interval-constraint-rule-92">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
@@ -24934,6 +24936,25 @@ Suggested values include: 1] abstract; 2] ack; 3] appendix; 4] bibliography; 5] 
          <ref name="mei_att.facsimile.attributes"/>
          <ref name="mei_att.lang.attributes"/>
          <ref name="mei_att.quantity.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_extData">
+      <element name="extData">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(extended data) Provides a container element for non-MEI data formats.</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="mei_macro.anyXML"/>
+            </choice>
+         </zeroOrMore>
+         <ref name="mei_att.basic.attributes"/>
+         <ref name="mei_att.labelled.attributes"/>
+         <ref name="mei_att.responsibility.attributes"/>
+         <ref name="mei_att.typed.attributes"/>
+         <ref name="mei_att.whitespace.attributes"/>
+         <ref name="mei_att.pointing.attributes"/>
+         <ref name="mei_att.internetMedia.attributes"/>
          <empty/>
       </element>
    </define>

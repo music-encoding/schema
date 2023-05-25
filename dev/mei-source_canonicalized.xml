@@ -19,7 +19,7 @@
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href=../../../source/"validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2023-05-25T21:33:12.546+02:00-->
+<!--canonicalized: 2023-05-25T21:59:35.416+02:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -13146,6 +13146,22 @@
                      </figure>
                   </p>
                   <p>indicates that the entities identified in <att>data</att> all occur at the same instant.</p>
+                  <p><gi scheme="MEI">extData</gi> is a container for holding non-MEI data formats, similar to <gi scheme="MEI">extMeta</gi> but available in <gi scheme="MEI">when</gi> rather than in <gi scheme="MEI">meiHead</gi>. <gi scheme="MEI">extData</gi> allows for data from audio or other sources to be linked to notes or other score events. Data should be enclosed in a CDATA tag.</p>
+                  <p>The following example shows JSON formatted performance data encoded with <gi scheme="MEI">extMeta</gi> for a single note (presumed to be defined elsewhere in the document as with the ID "note_1"). Both single-value summaries (<abbr>e.g.</abbr>, pitch) and time series values (<abbr>e.g.</abbr>, contF0) are encoded.</p>
+                  <p>
+                     <figure>
+                        <head/>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;when absolute="00:00:00.00" xml:id="when_1" data="#note_1"&gt;
+    &lt;extData&gt;
+        &amp;lt;![CDATA[
+            {"offset": "00:00:02.9005", 
+            "pitch": "455.98", 
+            "contF0": [454.3737606, 454.7165531, 455.2337513, 455.4622624, 456.0605954]}
+        ]]&amp;gt;
+    &lt;/extData&gt;
+&lt;/when&gt;</egXML>
+                     </figure>
+                  </p>  
                </div>
             </div>
          </div>
@@ -30579,7 +30595,9 @@
       <memberOf key="att.dataPointing"/>
     </classes>
     <content>
-      <rng:empty/>
+      <rng:zeroOrMore>
+         <rng:ref name="extData"/>
+      </rng:zeroOrMore>
     </content>
     <constraintSpec ident="check_when_interval" scheme="isoschematron">
       <constraint>
@@ -36424,6 +36442,32 @@
     </remarks>
     <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-extent.html">extent</ref> element of the Text Encoding Initiative (TEI).</p>
+    </remarks>
+  </elementSpec>
+  <elementSpec ident="extData" module="MEI.shared">
+    <gloss versionDate="2023-05-23" xml:lang="en">extended data</gloss>
+    <desc xml:lang="en">Provides a container element for non-MEI data formats.</desc>
+    <classes>
+      <memberOf key="att.basic"/>
+      <memberOf key="att.labelled"/>
+      <memberOf key="att.responsibility"/>
+      <memberOf key="att.typed"/>
+      <memberOf key="att.whitespace"/>
+      <memberOf key="att.pointing"/>
+      <memberOf key="att.internetMedia"/>
+    </classes>
+    <content>
+      <rng:zeroOrMore>
+        <rng:group>
+          <rng:choice>
+            <rng:text/>
+            <rng:ref name="macro.anyXML"/>
+          </rng:choice>
+        </rng:group>
+      </rng:zeroOrMore>
+    </content>
+    <remarks xml:lang="en">
+      <p>Container for holding non-MEI data formats, similar to <gi scheme="MEI">extMeta</gi> but available in <gi scheme="MEI">when</gi> rather than in <gi scheme="MEI">meiHead</gi>. The content of this element, by virtue of being inside a <gi scheme="MEI">when</gi> element, is associated with a particular point in time in a media file and this point in time may be linked to symbolic data, such as notes, chords, rests, etc., recorded elsewhere. When the data in <gi scheme="MEI">extData</gi> contains left angle bracket (less-than) or ampersand characters, or when it contains white space that should be preserved (such as line breaks), then the data should be enclosed in a CDATA section (<abbr>e.g.</abbr>, for JSON formatted data).</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="funder" module="MEI.shared">
