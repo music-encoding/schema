@@ -19,7 +19,7 @@
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href=../../../source/"validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2023-05-26T17:30:02.846+02:00-->
+<!--canonicalized: 2023-05-26T17:44:35.121+02:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -1224,8 +1224,11 @@
                      <p>
                         <figure>
                            <head/>
-                           <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="http://music-encoding.org/schema/4.0.0/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;&lt;?xml-model href="http://music-encoding.org/schema/4.0.0/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="4.0.0"&gt;
-   &lt;meiHead meiversion="4.0.0"&gt;
+                           <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
+&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
+&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.0.0-dev"&gt;
+   &lt;meiHead&gt;
       &lt;fileDesc&gt;
          &lt;titleStmt&gt;
             &lt;title&gt;Alignment of editorial accidentals&lt;/title&gt;
@@ -1237,53 +1240,36 @@
             &lt;annot&gt;Editorial accidentals are aligned on the centre of the notehead.&lt;/annot&gt;
          &lt;/notesStmt&gt;
       &lt;/fileDesc&gt;
-      &lt;encodingDesc&gt;
-         &lt;appInfo&gt;
-            &lt;application version="0.9.13"&gt;
-               &lt;name&gt;Verovio&lt;/name&gt;
-            &lt;/application&gt;
-         &lt;/appInfo&gt;
-      &lt;/encodingDesc&gt;
-      &lt;workDesc&gt;
-         &lt;work&gt;
-            &lt;titleStmt&gt;
-               &lt;title/&gt;
-            &lt;/titleStmt&gt;
-         &lt;/work&gt;
-      &lt;/workDesc&gt;
+      &lt;encodingDesc /&gt;
    &lt;/meiHead&gt;
-   &lt;music meiversion="4.0.0"&gt;
+   &lt;music&gt;
       &lt;body&gt;
-         &lt;mdiv xml:id="mdiv-0000001056540324"&gt;
-            &lt;score xml:id="score-0000000884943276"&gt;
-               &lt;scoreDef xml:id="scoredef-000000027977328" n="1" label="feature-example"&gt;
-                  &lt;staffGrp xml:id="m-000000028778056"&gt;
-                     &lt;staffDef xml:id="staffdef-000000129725177"
-                               n="1"
-                               lines="5"
-                               clef.shape="G"
-                               clef.line="2"/&gt;
+         &lt;mdiv&gt;
+            &lt;score&gt;
+               &lt;scoreDef n="1"&gt;
+                  &lt;staffGrp&gt;
+                     &lt;staffDef n="1" lines="5" clef.shape="G" clef.line="2" /&gt;
                   &lt;/staffGrp&gt;
                &lt;/scoreDef&gt;
-               &lt;section xml:id="section-000000076944697"&gt;
-                  &lt;measure xml:id="measure-L2" right="end" n="1"&gt;
-                     &lt;staff xml:id="staff-L2F1" n="1"&gt;
-								&lt;?edit-start?&gt;
-                        &lt;layer xml:id="layer-L2F1" n="1"&gt;
-                           &lt;note xml:id="note-L3F1" dur="1" oct="5" pname="f"&gt;
-                              &lt;accid xml:id="accid-000000113038940" accid="s" func="edit"/&gt;
+               &lt;section&gt;
+                  &lt;measure right="end" n="1"&gt;
+                     &lt;staff n="1"&gt;
+                        &lt;?edit-start?&gt;
+                        &lt;layer n="1"&gt;
+                           &lt;note dur="1" oct="5" pname="f"&gt;
+                              &lt;accid accid="s" func="edit" /&gt;
                            &lt;/note&gt;
-                           &lt;note xml:id="note-L4F1" dur="1" oct="5" pname="f"&gt;
-                              &lt;accid xml:id="accid-000000162539045" accid="f" func="edit"/&gt;
+                           &lt;note dur="1" oct="5" pname="f"&gt;
+                              &lt;accid accid="f" func="edit" /&gt;
                            &lt;/note&gt;
-                           &lt;note xml:id="note-L5F1" dur="1" oct="5" pname="f"&gt;
-                              &lt;accid xml:id="accid-000000208946960" accid="n" func="edit"/&gt;
+                           &lt;note dur="1" oct="5" pname="f"&gt;
+                              &lt;accid accid="n" func="edit" /&gt;
                            &lt;/note&gt;
-                           &lt;note xml:id="note-L6F1" dur="1" oct="5" pname="f"&gt;
-                              &lt;accid xml:id="accid-000000207644959" accid="x" func="edit"/&gt;
+                           &lt;note dur="1" oct="5" pname="f"&gt;
+                              &lt;accid accid="x" func="edit" /&gt;
                            &lt;/note&gt;
-                           &lt;note xml:id="note-L7F1" dur="1" oct="5" pname="f"&gt;
-                              &lt;accid xml:id="accid-000000179518178" accid="ff" func="edit"/&gt;
+                           &lt;note dur="1" oct="5" pname="f"&gt;
+                              &lt;accid accid="ff" func="edit" /&gt;
                            &lt;/note&gt;
                         &lt;/layer&gt;
                         &lt;?edit-end?&gt;
@@ -1352,8 +1338,11 @@
                      <p>
                         <figure>
                            <head/>
-                           <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="http://www.music-encoding.org/schema/4.0.0/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;&lt;?xml-model href="http://www.music-encoding.org/schema/4.0.0/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="4.0.0"&gt;
-   &lt;meiHead meiversion="4.0.0"&gt;
+                           <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
+&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
+&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.0.0-dev"&gt;
+   &lt;meiHead&gt;
       &lt;fileDesc&gt;
          &lt;titleStmt&gt;
             &lt;title&gt;Tempo example&lt;/title&gt;
@@ -1373,47 +1362,43 @@
          &lt;/appInfo&gt;
       &lt;/encodingDesc&gt;
    &lt;/meiHead&gt;
-   &lt;music meiversion="4.0.0"&gt;
+   &lt;music&gt;
       &lt;body&gt;
          &lt;mdiv&gt;
             &lt;score&gt;
                &lt;scoreDef meter.sym="cut"&gt;
                   &lt;staffGrp&gt;
-                     &lt;staffDef n="1"
-                               label="Violino"
-                               lines="5"
-                               clef.line="2"
-                               clef.shape="G"/&gt;
+                     &lt;staffDef label="Violino" n="1" lines="5" clef.shape="G" clef.line="2" /&gt;
                   &lt;/staffGrp&gt;
                &lt;/scoreDef&gt;
                &lt;section&gt;
-                    	&lt;?edit-start?&gt;
+                  &lt;?edit-start?&gt;
                   &lt;measure n="0" type="upbeat"&gt;
                      &lt;staff n="1"&gt;
                         &lt;layer n="1"&gt;
                            &lt;beam&gt;
-                              &lt;note xml:id="m0_s2_e1" pname="e" oct="5" dur="8"/&gt;
-                              &lt;note xml:id="m0_s2_e2" pname="f" oct="5" dur="8"/&gt;
+                              &lt;note xml:id="m0_s2_e1" dur="8" oct="5" pname="e" /&gt;
+                              &lt;note xml:id="m0_s2_e2" dur="8" oct="5" pname="f" /&gt;
                            &lt;/beam&gt;
                         &lt;/layer&gt;
                      &lt;/staff&gt;
-                     &lt;tempo tstamp="1" staff="1"&gt;Andante con moto &lt;rend fontname="VerovioText"&gt;&lt;/rend&gt; = 70 &lt;/tempo&gt;
-                     &lt;slur startid="#m0_s2_e1" endid="#m0_s2_e2"/&gt;
+                     &lt;tempo staff="1" tstamp="1.000000"&gt;Andante con moto &lt;rend fontfam="smufl"&gt;&amp;#xE1D3;&lt;/rend&gt; = 70&lt;/tempo&gt;
+                     &lt;slur startid="#m0_s2_e1" endid="#m0_s2_e2" /&gt;
                   &lt;/measure&gt;
-                  &lt;?edit-end?&gt;
+                  &lt;?edit-start?&gt;
                   &lt;measure n="1"&gt;
                      &lt;staff n="1"&gt;
                         &lt;layer n="1"&gt;
-                           &lt;note xml:id="m1_s2_e1" pname="g" oct="5" dur="4" dots="1"/&gt;
-                           &lt;note xml:id="m1_s2_e2" pname="g" oct="5" dur="8"/&gt;
-                           &lt;note xml:id="m1_s2_e3" pname="g" oct="5" dur="4"/&gt;
+                           &lt;note dots="1" dur="4" oct="5" pname="g" /&gt;
+                           &lt;note dur="8" oct="5" pname="g" /&gt;
+                           &lt;note dur="4" oct="5" pname="g" /&gt;
                            &lt;beam&gt;
-                              &lt;note xml:id="m1_s2_e4" pname="g" oct="5" dur="8"/&gt;
-                              &lt;note xml:id="m1_s2_e5" pname="c" oct="6" dur="8"/&gt;
+                              &lt;note xml:id="m1_s2_e4" dur="8" oct="5" pname="g" /&gt;
+                              &lt;note xml:id="m1_s2_e5" dur="8" oct="6" pname="c" /&gt;
                            &lt;/beam&gt;
                         &lt;/layer&gt;
                      &lt;/staff&gt;
-                     &lt;slur startid="#m1_s2_e4" endid="#m1_s2_e5"/&gt;
+                     &lt;slur startid="#m1_s2_e4" endid="#m1_s2_e5" /&gt;
                   &lt;/measure&gt;
                &lt;/section&gt;
             &lt;/score&gt;
@@ -6054,8 +6039,11 @@
                      <p>
                         <figure>
                            <head/>
-                           <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="http://music-encoding.org/schema/4.0.0/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;&lt;?xml-model href="http://music-encoding.org/schema/4.0.0/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="4.0.0"&gt;
-   &lt;meiHead meiversion="4.0.0"&gt;
+                           <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
+&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
+&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.0.0-dev"&gt;
+   &lt;meiHead&gt;
       &lt;fileDesc&gt;
          &lt;titleStmt&gt;
             &lt;title&gt;Octave shift example&lt;/title&gt;
@@ -6065,17 +6053,17 @@
          &lt;/pubStmt&gt;
          &lt;notesStmt&gt;
             &lt;annot&gt;Example use of the "octave" element for octave shifts. For correct MIDI output, the
-          "oct.ges" attribute needs to be provided.&lt;/annot&gt;
+               "oct.ges" attribute needs to be provided.&lt;/annot&gt;
          &lt;/notesStmt&gt;
       &lt;/fileDesc&gt;
    &lt;/meiHead&gt;
-   &lt;music meiversion="4.0.0"&gt;
+   &lt;music&gt;
       &lt;body&gt;
          &lt;mdiv&gt;
             &lt;score&gt;
                &lt;scoreDef n="1"&gt;
                   &lt;staffGrp&gt;
-                     &lt;staffDef n="1" lines="5" clef.shape="G" clef.line="2"/&gt;
+                     &lt;staffDef n="1" lines="5" clef.shape="G" clef.line="2" /&gt;
                   &lt;/staffGrp&gt;
                &lt;/scoreDef&gt;
                &lt;?edit-start?&gt;
@@ -6083,12 +6071,12 @@
                   &lt;measure n="1"&gt;
                      &lt;staff n="1"&gt;
                         &lt;layer n="1"&gt;
-                           &lt;note dur="2" oct="6" pname="e"/&gt;
+                           &lt;note dur="2" oct="6" pname="e" /&gt;
                            &lt;beam&gt;
-                              &lt;note dur="8" oct="6" pname="f"/&gt;
-                              &lt;note dur="8" oct="6" pname="a"/&gt;
-                              &lt;note dur="8" oct="6" pname="g"/&gt;
-                              &lt;note dur="8" oct="6" pname="b"/&gt;
+                              &lt;note dur="8" oct="6" pname="f" /&gt;
+                              &lt;note dur="8" oct="6" pname="a" /&gt;
+                              &lt;note dur="8" oct="6" pname="g" /&gt;
+                              &lt;note dur="8" oct="6" pname="b" /&gt;
                            &lt;/beam&gt;
                         &lt;/layer&gt;
                      &lt;/staff&gt;
@@ -6096,120 +6084,112 @@
                   &lt;measure right="dbl" n="2"&gt;
                      &lt;staff n="1"&gt;
                         &lt;layer n="1"&gt;
-                           &lt;note dur="1" oct="7" pname="c"/&gt;
+                           &lt;note dur="1" oct="7" pname="c" /&gt;
                         &lt;/layer&gt;
                      &lt;/staff&gt;
                   &lt;/measure&gt;
                   &lt;measure n="3"&gt;
                      &lt;staff n="1"&gt;
                         &lt;layer n="1"&gt;
-                           &lt;note xml:id="n1" dur="2" oct.ges="6" oct="5" pname="e"/&gt;
+                           &lt;note xml:id="n1" dur="2" oct.ges="6" oct="5" pname="e" /&gt;
                            &lt;beam&gt;
-                              &lt;note dur="8" oct.ges="6" oct="5" pname="f"/&gt;
-                              &lt;note dur="8" oct.ges="6" oct="5" pname="a"/&gt;
-                              &lt;note dur="8" oct.ges="6" oct="5" pname="g"/&gt;
-                              &lt;note dur="8" oct.ges="6" oct="5" pname="b"/&gt;
+                              &lt;note dur="8" oct.ges="6" oct="5" pname="f" /&gt;
+                              &lt;note dur="8" oct.ges="6" oct="5" pname="a" /&gt;
+                              &lt;note dur="8" oct.ges="6" oct="5" pname="g" /&gt;
+                              &lt;note dur="8" oct.ges="6" oct="5" pname="b" /&gt;
                            &lt;/beam&gt;
                         &lt;/layer&gt;
                      &lt;/staff&gt;
-                     &lt;octave startid="#n1" endid="#n2" dis="8" dis.place="above"/&gt;
+                     &lt;octave startid="#n1" endid="#n2" dis="8" dis.place="above" /&gt;
                   &lt;/measure&gt;
                   &lt;measure right="dbl" n="4"&gt;
                      &lt;staff n="1"&gt;
                         &lt;layer n="1"&gt;
-                           &lt;note xml:id="n2" dur="1" oct.ges="7" oct="6" pname="c"/&gt;
+                           &lt;note xml:id="n2" dur="1" oct.ges="7" oct="6" pname="c" /&gt;
                         &lt;/layer&gt;
                      &lt;/staff&gt;
                   &lt;/measure&gt;
                   &lt;measure n="5"&gt;
                      &lt;staff n="1"&gt;
                         &lt;layer n="1"&gt;
-                           &lt;note xml:id="n3" dur="2" oct.ges="2" oct="3" pname="e"/&gt;
+                           &lt;note xml:id="n3" dur="2" oct.ges="2" oct="3" pname="e" /&gt;
                            &lt;beam&gt;
-                              &lt;note dur="8" oct.ges="2" oct="3" pname="f"/&gt;
-                              &lt;note dur="8" oct.ges="2" oct="3" pname="a"/&gt;
-                              &lt;note dur="8" oct.ges="2" oct="3" pname="g"/&gt;
-                              &lt;note dur="8" oct.ges="2" oct="3" pname="b"/&gt;
+                              &lt;note dur="8" oct.ges="2" oct="3" pname="f" /&gt;
+                              &lt;note dur="8" oct.ges="2" oct="3" pname="a" /&gt;
+                              &lt;note dur="8" oct.ges="2" oct="3" pname="g" /&gt;
+                              &lt;note dur="8" oct.ges="2" oct="3" pname="b" /&gt;
                            &lt;/beam&gt;
                         &lt;/layer&gt;
                      &lt;/staff&gt;
-                     &lt;octave startid="#n3" endid="#n4" dis="8" dis.place="below"/&gt;
+                     &lt;octave startid="#n3" endid="#n4" dis="8" dis.place="below" /&gt;
                   &lt;/measure&gt;
                   &lt;measure right="dbl" n="6"&gt;
                      &lt;staff n="1"&gt;
                         &lt;layer n="1"&gt;
-                           &lt;note xml:id="n4" dur="1" oct.ges="3" oct="4" pname="c"/&gt;
+                           &lt;note xml:id="n4" dur="1" oct.ges="3" oct="4" pname="c" /&gt;
                         &lt;/layer&gt;
                      &lt;/staff&gt;
                   &lt;/measure&gt;
                   &lt;measure n="7"&gt;
                      &lt;staff n="1"&gt;
                         &lt;layer n="1"&gt;
-                           &lt;note xml:id="n3" dur="2" oct.ges="2" oct="4" pname="e"/&gt;
+                           &lt;note xml:id="n3" dur="2" oct.ges="2" oct="4" pname="e" /&gt;
                            &lt;beam&gt;
-                              &lt;note dur="8" oct.ges="2" oct="4" pname="f"/&gt;
-                              &lt;note dur="8" oct.ges="2" oct="4" pname="a"/&gt;
-                              &lt;note dur="8" oct.ges="2" oct="4" pname="g"/&gt;
-                              &lt;note dur="8" oct.ges="2" oct="4" pname="b"/&gt;
+                              &lt;note dur="8" oct.ges="2" oct="4" pname="f" /&gt;
+                              &lt;note dur="8" oct.ges="2" oct="4" pname="a" /&gt;
+                              &lt;note dur="8" oct.ges="2" oct="4" pname="g" /&gt;
+                              &lt;note dur="8" oct.ges="2" oct="4" pname="b" /&gt;
                            &lt;/beam&gt;
                         &lt;/layer&gt;
                      &lt;/staff&gt;
-                     &lt;octave startid="#n3" tstamp2="1m+4.0000" dis="15" dis.place="below"/&gt;
+                     &lt;octave startid="#n3" tstamp2="1m+4.0000" dis="15" dis.place="below" /&gt;
                   &lt;/measure&gt;
                   &lt;measure right="dbl" n="8"&gt;
                      &lt;staff n="1"&gt;
                         &lt;layer n="1"&gt;
-                           &lt;note dur="1" oct.ges="3" oct="5" pname="c"/&gt;
+                           &lt;note dur="1" oct.ges="3" oct="5" pname="c" /&gt;
                         &lt;/layer&gt;
                      &lt;/staff&gt;
                   &lt;/measure&gt;
                   &lt;measure n="9"&gt;
                      &lt;staff n="1"&gt;
                         &lt;layer n="1"&gt;
-                           &lt;note xml:id="n5" dur="2" oct.ges="2" oct="3" pname="e"/&gt;
+                           &lt;note xml:id="n5" dur="2" oct.ges="2" oct="3" pname="e" /&gt;
                            &lt;beam&gt;
-                              &lt;note dur="8" oct.ges="2" oct="3" pname="f"/&gt;
-                              &lt;note dur="8" oct.ges="2" oct="3" pname="a"/&gt;
-                              &lt;note dur="8" oct.ges="2" oct="3" pname="g"/&gt;
-                              &lt;note dur="8" oct.ges="2" oct="3" pname="b"/&gt;
+                              &lt;note dur="8" oct.ges="2" oct="3" pname="f" /&gt;
+                              &lt;note dur="8" oct.ges="2" oct="3" pname="a" /&gt;
+                              &lt;note dur="8" oct.ges="2" oct="3" pname="g" /&gt;
+                              &lt;note dur="8" oct.ges="2" oct="3" pname="b" /&gt;
                            &lt;/beam&gt;
                         &lt;/layer&gt;
                      &lt;/staff&gt;
-                     &lt;octave startid="#n5"
-                             endid="#n6"
-                             lwidth="0.5"
-                             dis="8"
-                             dis.place="below"/&gt;
+                     &lt;octave startid="#n5" endid="#n6" lwidth="0.5000vu" dis="8" dis.place="below" /&gt;
                   &lt;/measure&gt;
                   &lt;measure right="dbl" n="10"&gt;
                      &lt;staff n="1"&gt;
                         &lt;layer n="1"&gt;
-                           &lt;note xml:id="n6" dur="1" oct.ges="3" oct="4" pname="c"/&gt;
+                           &lt;note xml:id="n6" dur="1" oct.ges="3" oct="4" pname="c" /&gt;
                         &lt;/layer&gt;
                      &lt;/staff&gt;
                   &lt;/measure&gt;
                   &lt;measure n="11"&gt;
                      &lt;staff n="1"&gt;
                         &lt;layer n="1"&gt;
-                           &lt;note xml:id="n7" dur="2" oct.ges="4" oct="3" pname="e"/&gt;
+                           &lt;note xml:id="n7" dur="2" oct.ges="4" oct="3" pname="e" /&gt;
                            &lt;beam&gt;
-                              &lt;note dur="8" oct.ges="4" oct="3" pname="f"/&gt;
-                              &lt;note dur="8" oct.ges="4" oct="3" pname="a"/&gt;
-                              &lt;note dur="8" oct.ges="4" oct="3" pname="g"/&gt;
-                              &lt;note dur="8" oct.ges="4" oct="3" pname="b"/&gt;
+                              &lt;note dur="8" oct.ges="4" oct="3" pname="f" /&gt;
+                              &lt;note dur="8" oct.ges="4" oct="3" pname="a" /&gt;
+                              &lt;note dur="8" oct.ges="4" oct="3" pname="g" /&gt;
+                              &lt;note dur="8" oct.ges="4" oct="3" pname="b" /&gt;
                            &lt;/beam&gt;
                         &lt;/layer&gt;
                      &lt;/staff&gt;
-                     &lt;octave startid="#n7"
-                             tstamp2="1m+4.0000"
-                             lform="solid"
-                             dis="8"
-                             dis.place="above"/&gt;
+                     &lt;octave startid="#n7" tstamp2="1m+4.0000" lform="solid" dis="8" dis.place="above" /&gt;
                   &lt;/measure&gt;
                   &lt;measure right="dbl" n="12"&gt;
                      &lt;staff n="1"&gt;
                         &lt;layer n="1"&gt;
-                           &lt;note dur="1" oct.ges="5" oct="4" pname="c"/&gt;
+                           &lt;note dur="1" oct.ges="5" oct="4" pname="c" /&gt;
                         &lt;/layer&gt;
                      &lt;/staff&gt;
                   &lt;/measure&gt;
@@ -7243,8 +7223,11 @@
                <p>
                   <figure>
                      <head/>
-                     <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/4.0.1/mei-Mensural.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;&lt;?xml-model href="https://music-encoding.org/schema/4.0.1/mei-Mensural.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="4.0.1"&gt;
-   &lt;meiHead meiversion="4.0.1"&gt;
+                     <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
+&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
+&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.0.0-dev"&gt;
+   &lt;meiHead&gt;
       &lt;fileDesc&gt;
          &lt;titleStmt&gt;
             &lt;title&gt;Notes and Rests&lt;/title&gt;
@@ -7257,50 +7240,40 @@
          &lt;/notesStmt&gt;
       &lt;/fileDesc&gt;
    &lt;/meiHead&gt;
-   &lt;music meiversion="4.0.1"&gt;
+   &lt;music&gt;
       &lt;body&gt;
          &lt;mdiv&gt;
             &lt;score&gt;
                &lt;scoreDef&gt;
                   &lt;staffGrp&gt;
-                     &lt;staffDef n="1"
-                               label="notes"
-                               notationtype="mensural.white"
-                               lines="5"
-                               clef.shape="G"
-                               clef.line="2"/&gt;
-                     &lt;staffDef n="2"
-                               label="rests"
-                               notationtype="mensural.white"
-                               lines="5"
-                               clef.shape="G"
-                               clef.line="2"/&gt;
+                     &lt;staffDef label="notes" n="1" notationtype="mensural.white" lines="5" clef.shape="G" clef.line="2" /&gt;
+                     &lt;staffDef label="rests" n="2" notationtype="mensural.white" lines="5" clef.shape="G" clef.line="2" /&gt;
                   &lt;/staffGrp&gt;
                &lt;/scoreDef&gt;
                &lt;section&gt;
                   &lt;?edit-start?&gt;
                   &lt;staff n="1"&gt;
-                     &lt;layer&gt;
-                        &lt;note dur="maxima"/&gt;
-                        &lt;note dur="longa"/&gt;
-                        &lt;note dur="brevis"/&gt;
-                        &lt;note dur="semibrevis"/&gt;
-                        &lt;note dur="minima"/&gt;
-                        &lt;note dur="semiminima"/&gt;
-                        &lt;note dur="fusa"/&gt;
-                        &lt;note dur="semifusa"/&gt;
+                     &lt;layer n="1"&gt;
+                        &lt;note dur="maxima" /&gt;
+                        &lt;note dur="longa" /&gt;
+                        &lt;note dur="brevis" /&gt;
+                        &lt;note dur="semibrevis" /&gt;
+                        &lt;note dur="minima" /&gt;
+                        &lt;note dur="semiminima" /&gt;
+                        &lt;note dur="fusa" /&gt;
+                        &lt;note dur="semifusa" /&gt;
                      &lt;/layer&gt;
                   &lt;/staff&gt;
                   &lt;staff n="2"&gt;
-                     &lt;layer&gt;
-                        &lt;rest dur="maxima"/&gt;
-                        &lt;rest dur="longa"/&gt;
-                        &lt;rest dur="brevis"/&gt;
-                        &lt;rest dur="semibrevis"/&gt;
-                        &lt;rest dur="minima"/&gt;
-                        &lt;rest dur="semiminima"/&gt;
-                        &lt;rest dur="fusa"/&gt;
-                        &lt;rest dur="semifusa"/&gt;
+                     &lt;layer n="1"&gt;
+                        &lt;rest dur="maxima" /&gt;
+                        &lt;rest dur="longa" /&gt;
+                        &lt;rest dur="brevis" /&gt;
+                        &lt;rest dur="semibrevis" /&gt;
+                        &lt;rest dur="minima" /&gt;
+                        &lt;rest dur="semiminima" /&gt;
+                        &lt;rest dur="fusa" /&gt;
+                        &lt;rest dur="semifusa" /&gt;
                      &lt;/layer&gt;
                   &lt;/staff&gt;
                   &lt;?edit-end?&gt;
@@ -7403,8 +7376,11 @@
                   <p>The last three values are to be used exclusively in <hi rend="italic">Ars antiqua</hi> mensural notation, where <val>maior</val>and <val>minor</val>refer to types of <hi rend="italic">semibreves</hi>, and <val>duplex</val>refers to a type of <hi rend="italic">longa</hi>. Examples of each of these six values are presented below. In these examples, the ‘voice’ staff renders the notes in the code snippet, and the ‘reference’ staff, together with the dotted bar lines, are shown to help to visualize the relative values of the notes in the ‘voice’ staff.</p>
                   <p>The following example illustrates an <hi rend="italic">alteration</hi> (the second <hi rend="italic">brevis</hi>) in <hi rend="italic">modus minor perfectus</hi>. Notice that the second <hi rend="italic">brevis</hi> has doubled its regular value, it has been altered, unlike the first one. <figure>
                         <head/>
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/4.0.1/mei-Mensural.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;&lt;?xml-model href="https://music-encoding.org/schema/4.0.1/mei-Mensural.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="4.0.1"&gt;
-   &lt;meiHead meiversion="4.0.1"&gt;
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
+&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
+&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.0.0-dev"&gt;
+   &lt;meiHead&gt;
       &lt;fileDesc&gt;
          &lt;titleStmt&gt;
             &lt;title&gt;Example of 'alteration'&lt;/title&gt;
@@ -7417,58 +7393,46 @@
          &lt;/notesStmt&gt;
       &lt;/fileDesc&gt;
    &lt;/meiHead&gt;
-   &lt;music meiversion="4.0.1"&gt;
+   &lt;music&gt;
       &lt;body&gt;
          &lt;mdiv&gt;
             &lt;score&gt;
                &lt;scoreDef&gt;
                   &lt;staffGrp&gt;
-                     &lt;staffDef n="1"
-                               label="voice"
-                               notationtype="mensural.white"
-                               lines="5"
-                               clef.shape="G"
-                               clef.line="2"
-                               modusminor="3"/&gt;
-                     &lt;staffDef n="2"
-                               label="reference"
-                               notationtype="mensural.white"
-                               lines="5"
-                               clef.shape="G"
-                               clef.line="2"
-                               modusminor="3"/&gt;
+                     &lt;staffDef label="voice" n="1" notationtype="mensural.white" lines="5" clef.shape="G" clef.line="2" /&gt;
+                     &lt;staffDef label="reference" n="2" notationtype="mensural.white" lines="5" clef.shape="G" clef.line="2" /&gt;
                   &lt;/staffGrp&gt;
                &lt;/scoreDef&gt;
                &lt;section&gt;
                   &lt;staff n="1"&gt;
-                            &lt;?edit-start?&gt;
-                     &lt;layer&gt;
-                        &lt;note dur="longa" dur.quality="perfecta"/&gt;
-                        &lt;barLine form="dashed"/&gt;
-                        &lt;note dur="brevis"/&gt;
-                        &lt;barLine form="dashed"/&gt;
-                        &lt;note dur="brevis" dur.quality="altera"/&gt;
-                        &lt;barLine form="dashed"/&gt;
-                        &lt;note dur="longa" dur.quality="perfecta"/&gt;
-                        &lt;barLine form="dashed"/&gt;
+                     &lt;?edit-start?&gt;
+                     &lt;layer n="1"&gt;
+                        &lt;note dur="longa" dur.quality="perfecta" /&gt;
+                        &lt;barLine form="dashed" /&gt;
+                        &lt;note dur="brevis" /&gt;
+                        &lt;barLine form="dashed" /&gt;
+                        &lt;note dur="brevis" dur.quality="altera" /&gt;
+                        &lt;barLine form="dashed" /&gt;
+                        &lt;note dur="longa" dur.quality="perfecta" /&gt;
+                        &lt;barLine form="dashed" /&gt;
                      &lt;/layer&gt;
                      &lt;?edit-end?&gt;
                   &lt;/staff&gt;
                   &lt;staff n="2"&gt;
-                     &lt;layer&gt;
-                        &lt;note dur="brevis" pname="a" oct="4"/&gt;
-                        &lt;note dur="brevis" pname="a" oct="4"/&gt;
-                        &lt;note dur="brevis" pname="a" oct="4"/&gt;
-                        &lt;barLine form="dashed"/&gt;
-                        &lt;note dur="brevis" pname="a" oct="4"/&gt;
-                        &lt;barLine form="dashed"/&gt;
-                        &lt;note dur="brevis" pname="a" oct="4"/&gt;
-                        &lt;note dur="brevis" pname="a" oct="4"/&gt;
-                        &lt;barLine form="dashed"/&gt;
-                        &lt;note dur="brevis" pname="a" oct="4"/&gt;
-                        &lt;note dur="brevis" pname="a" oct="4"/&gt;
-                        &lt;note dur="brevis" pname="a" oct="4"/&gt;
-                        &lt;barLine form="dashed"/&gt;
+                     &lt;layer n="1"&gt;
+                        &lt;note dur="brevis" oct="4" pname="a" /&gt;
+                        &lt;note dur="brevis" oct="4" pname="a" /&gt;
+                        &lt;note dur="brevis" oct="4" pname="a" /&gt;
+                        &lt;barLine form="dashed" /&gt;
+                        &lt;note dur="brevis" oct="4" pname="a" /&gt;
+                        &lt;barLine form="dashed" /&gt;
+                        &lt;note dur="brevis" oct="4" pname="a" /&gt;
+                        &lt;note dur="brevis" oct="4" pname="a" /&gt;
+                        &lt;barLine form="dashed" /&gt;
+                        &lt;note dur="brevis" oct="4" pname="a" /&gt;
+                        &lt;note dur="brevis" oct="4" pname="a" /&gt;
+                        &lt;note dur="brevis" oct="4" pname="a" /&gt;
+                        &lt;barLine form="dashed" /&gt;
                      &lt;/layer&gt;
                   &lt;/staff&gt;
                &lt;/section&gt;
@@ -7492,8 +7456,11 @@
                      </figure> The same applies to the examples that follow.</p>
                   <p>The following example illustrates an <hi rend="italic">imperfection</hi> (the two <hi rend="italic">longae</hi>) in <hi rend="italic">modus minor perfectus</hi> with the same <hi rend="italic">longa</hi>-<hi rend="italic">brevis</hi>-<hi rend="italic">brevis</hi>-<hi rend="italic">longa</hi> sequence but with an additional <hi rend="italic">dot of division</hi> between the two <hi rend="italic">breves</hi>. Notice that here the <hi rend="italic">longae</hi> have been imperfected, unlike the previous example in which they kept the perfect value indicated by the mensuration. <figure>
                         <head/>
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/4.0.1/mei-Mensural.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;&lt;?xml-model href="https://music-encoding.org/schema/4.0.1/mei-Mensural.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="4.0.1"&gt;
-   &lt;meiHead meiversion="4.0.1"&gt;
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
+&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
+&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.0.0-dev"&gt;
+   &lt;meiHead&gt;
       &lt;fileDesc&gt;
          &lt;titleStmt&gt;
             &lt;title&gt;Example of 'imperfection' and 'dot of division'&lt;/title&gt;
@@ -7506,56 +7473,44 @@
          &lt;/notesStmt&gt;
       &lt;/fileDesc&gt;
    &lt;/meiHead&gt;
-   &lt;music meiversion="4.0.1"&gt;
+   &lt;music&gt;
       &lt;body&gt;
          &lt;mdiv&gt;
             &lt;score&gt;
                &lt;scoreDef&gt;
                   &lt;staffGrp&gt;
-                     &lt;staffDef n="1"
-                               label="voice"
-                               notationtype="mensural.white"
-                               lines="5"
-                               clef.shape="G"
-                               clef.line="2"
-                               modusminor="3"/&gt;
-                     &lt;staffDef n="2"
-                               label="reference"
-                               notationtype="mensural.white"
-                               lines="5"
-                               clef.shape="G"
-                               clef.line="2"
-                               modusminor="3"/&gt;
+                     &lt;staffDef label="voice" n="1" notationtype="mensural.white" lines="5" clef.shape="G" clef.line="2" /&gt;
+                     &lt;staffDef label="reference" n="2" notationtype="mensural.white" lines="5" clef.shape="G" clef.line="2" /&gt;
                   &lt;/staffGrp&gt;
                &lt;/scoreDef&gt;
                &lt;section&gt;
                   &lt;staff n="1"&gt;
-                            &lt;?edit-start?&gt;
-                     &lt;layer&gt;
-                        &lt;note dur="longa" dur.quality="imperfecta"/&gt;
-                        &lt;barLine form="dashed"/&gt;
-                        &lt;note dur="brevis"/&gt;
-                        &lt;dot form="div"/&gt;
-                        &lt;barLine form="dashed"/&gt;
-                        &lt;note dur="brevis"/&gt;
-                        &lt;barLine form="dashed"/&gt;
-                        &lt;note dur="longa" dur.quality="imperfecta"/&gt;
-                        &lt;barLine form="dashed"/&gt;
+                     &lt;?edit-start?&gt;
+                     &lt;layer n="1"&gt;
+                        &lt;note dur="longa" dur.quality="imperfecta" /&gt;
+                        &lt;barLine form="dashed" /&gt;
+                        &lt;note dur="brevis" /&gt;
+                        &lt;dot form="div" /&gt;
+                        &lt;barLine form="dashed" /&gt;
+                        &lt;note dur="brevis" /&gt;
+                        &lt;barLine form="dashed" /&gt;
+                        &lt;note dur="longa" dur.quality="imperfecta" /&gt;
+                        &lt;barLine form="dashed" /&gt;
                      &lt;/layer&gt;
                      &lt;?edit-end?&gt;
                   &lt;/staff&gt;
                   &lt;staff n="2"&gt;
-                     &lt;layer&gt;
-                        &lt;note dur="brevis" pname="a" oct="4"/&gt;
-                        &lt;note dur="brevis" pname="a" oct="4"/&gt;
-                        &lt;barLine form="dashed"/&gt;
-                        &lt;note dur="brevis" pname="a" oct="4"/&gt;
-                        &lt;barLine form="dashed"/&gt;
-                        &lt;note dur="brevis" pname="a" oct="4"/&gt;
-                        &lt;barLine form="dashed"/&gt;
-                        &lt;note dur="brevis" pname="a" oct="4"/&gt;
-                        &lt;note dur="brevis" pname="a" oct="4"/&gt;
-                        &lt;barLine form="dashed"/&gt;
+                     &lt;layer n="1"&gt;
+                        &lt;note dur="brevis" oct="4" pname="a" /&gt;
+                        &lt;note dur="brevis" oct="4" pname="a" /&gt;
+                        &lt;barLine form="dashed" /&gt;
+                        &lt;note dur="brevis" oct="4" pname="a" /&gt;
+                        &lt;barLine form="dashed" /&gt;
+                        &lt;note dur="brevis" oct="4" pname="a" /&gt;
+                        &lt;barLine form="dashed" /&gt;
+                        &lt;note dur="brevis" oct="4" pname="a" /&gt;
+                        &lt;note dur="brevis" oct="4" pname="a" /&gt;
+                        &lt;barLine form="dashed" /&gt;
                      &lt;/layer&gt;
                   &lt;/staff&gt;
                &lt;/section&gt;
@@ -7569,8 +7524,11 @@
                   </p>
                   <p>The following example in <hi rend="italic">modus minor imperfectus</hi> illustrates the use of a dot of augmentation following the <hi rend="italic">longa</hi>. Notice that the <hi rend="italic">longa</hi>, which is supposed to be imperfect according to the mensuration, has a perfect value due to the augmentation dot. <figure>
                         <head/>
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/4.0.1/mei-Mensural.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;&lt;?xml-model href="https://music-encoding.org/schema/4.0.1/mei-Mensural.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="4.0.1"&gt;
-   &lt;meiHead meiversion="4.0.1"&gt;
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
+&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
+&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.0.0-dev"&gt;
+   &lt;meiHead&gt;
       &lt;fileDesc&gt;
          &lt;titleStmt&gt;
             &lt;title&gt;Example of 'augmentation'&lt;/title&gt;
@@ -7583,50 +7541,36 @@
          &lt;/notesStmt&gt;
       &lt;/fileDesc&gt;
    &lt;/meiHead&gt;
-   &lt;music meiversion="4.0.1"&gt;
+   &lt;music&gt;
       &lt;body&gt;
          &lt;mdiv&gt;
             &lt;score&gt;
                &lt;scoreDef&gt;
                   &lt;staffGrp&gt;
-                     &lt;staffDef n="1"
-                               label="voice"
-                               notationtype="mensural.white"
-                               lines="5"
-                               clef.shape="G"
-                               clef.line="2"
-                               modusminor="2"
-                               tempus="2"/&gt;
-                     &lt;staffDef n="2"
-                               label="reference"
-                               notationtype="mensural.white"
-                               lines="5"
-                               clef.shape="G"
-                               clef.line="2"
-                               modusminor="2"
-                               tempus="2"/&gt;
+                     &lt;staffDef label="voice" n="1" notationtype="mensural.white" lines="5" clef.shape="G" clef.line="2" modusminor="2" tempus="2" mensur.sign="C" mensur.slash="1" /&gt;
+                     &lt;staffDef label="reference" n="2" notationtype="mensural.white" lines="5" clef.shape="G" clef.line="2" modusminor="2" tempus="2" mensur.sign="C" mensur.slash="1" /&gt;
                   &lt;/staffGrp&gt;
                &lt;/scoreDef&gt;
                &lt;section&gt;
                   &lt;staff n="1"&gt;
-                            &lt;?edit-start?&gt;
-                     &lt;layer&gt;
-                        &lt;note dur="longa" dur.quality="perfecta"/&gt;
-                        &lt;dot form="aug"/&gt;
-                        &lt;barLine form="dashed"/&gt;
-                        &lt;note dur="brevis"/&gt;
-                        &lt;barLine form="dashed"/&gt;
+                     &lt;?edit-start?&gt;
+                     &lt;layer n="1"&gt;
+                        &lt;note dur="longa" dur.quality="perfecta" /&gt;
+                        &lt;dot form="aug" /&gt;
+                        &lt;barLine form="dashed" /&gt;
+                        &lt;note dur="brevis" /&gt;
+                        &lt;barLine form="dashed" /&gt;
                      &lt;/layer&gt;
                      &lt;?edit-end?&gt;
                   &lt;/staff&gt;
                   &lt;staff n="2"&gt;
-                     &lt;layer&gt;
-                        &lt;note dur="brevis" pname="a" oct="4"/&gt;
-                        &lt;note dur="brevis" pname="a" oct="4"/&gt;
-                        &lt;note dur="brevis" pname="a" oct="4"/&gt;
-                        &lt;barLine form="dashed"/&gt;
-                        &lt;note dur="brevis" pname="a" oct="4"/&gt;
-                        &lt;barLine form="dashed"/&gt;
+                     &lt;layer n="1"&gt;
+                        &lt;note dur="brevis" oct="4" pname="a" /&gt;
+                        &lt;note dur="brevis" oct="4" pname="a" /&gt;
+                        &lt;note dur="brevis" oct="4" pname="a" /&gt;
+                        &lt;barLine form="dashed" /&gt;
+                        &lt;note dur="brevis" oct="4" pname="a" /&gt;
+                        &lt;barLine form="dashed" /&gt;
                      &lt;/layer&gt;
                   &lt;/staff&gt;
                &lt;/section&gt;
@@ -7640,8 +7584,11 @@
                   </p>
                   <p>Finally, the following example illustrates the <att>dur.quality</att> values related to the <hi rend="italic">Ars antiqua</hi> style, for <hi rend="italic">perfect modus</hi>, with the breve equivalents notated in the lower staff for reference (as in the previous examples). <figure>
                         <head/>
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/4.0.1/mei-Mensural.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;&lt;?xml-model href="https://music-encoding.org/schema/4.0.1/mei-Mensural.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="4.0.1"&gt;
-   &lt;meiHead meiversion="4.0.1"&gt;
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
+&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
+&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.0.0-dev"&gt;
+   &lt;meiHead&gt;
       &lt;fileDesc&gt;
          &lt;titleStmt&gt;
             &lt;title&gt;Example of 'imperfection' and 'dot of division'&lt;/title&gt;
@@ -7654,71 +7601,57 @@
          &lt;/notesStmt&gt;
       &lt;/fileDesc&gt;
    &lt;/meiHead&gt;
-   &lt;music meiversion="4.0.1"&gt;
+   &lt;music&gt;
       &lt;body&gt;
          &lt;mdiv&gt;
             &lt;score&gt;
                &lt;scoreDef&gt;
                   &lt;staffGrp&gt;
-                     &lt;staffDef n="1"
-                               label="voice"
-                               notationtype="mensural.black"
-                               lines="5"
-                               clef.shape="G"
-                               clef.line="2"
-                               modusminor="3"
-                               tempus="3"/&gt;
-                     &lt;staffDef n="2"
-                               label="reference"
-                               notationtype="mensural.black"
-                               lines="5"
-                               clef.shape="G"
-                               clef.line="2"
-                               modusminor="3"
-                               tempus="3"/&gt;
+                     &lt;staffDef label="voice" n="1" notationtype="mensural.black" lines="5" clef.shape="G" clef.line="2" modusminor="3" tempus="3" mensur.sign="O" mensur.slash="1" /&gt;
+                     &lt;staffDef label="reference" n="2" notationtype="mensural.black" lines="5" clef.shape="G" clef.line="2" modusminor="3" tempus="3" mensur.sign="O" mensur.slash="1" /&gt;
                   &lt;/staffGrp&gt;
                &lt;/scoreDef&gt;
                &lt;section&gt;
                   &lt;staff n="1"&gt;
-                            &lt;?edit-start?&gt;
-                     &lt;layer&gt;
-                        &lt;note dur="longa" dur.quality="perfecta"/&gt;
-                        &lt;barLine form="dashed"/&gt;
-                        &lt;note dur="semibrevis" dur.quality="minor"/&gt;
-                        &lt;note dur="semibrevis" dur.quality="minor"/&gt;
-                        &lt;note dur="semibrevis" dur.quality="minor"/&gt;
-                        &lt;dot form="div"/&gt;
-                        &lt;barLine form="dashed"/&gt;
-                        &lt;note dur="semibrevis" dur.quality="minor"/&gt;
-                        &lt;note dur="semibrevis" dur.quality="maior"/&gt;
-                        &lt;barLine form="dashed"/&gt;
-                        &lt;note dur="brevis"/&gt;
-                        &lt;barLine form="dashed"/&gt;
-                        &lt;note dur="longa" dur.quality="duplex"/&gt;
-                        &lt;barLine form="dashed"/&gt;
-                     &lt;/layer&gt;
+                     &lt;?edit-start?&gt;
+                     &lt;layer n="1"&gt;
+                        &lt;note dur="longa" dur.quality="perfecta" /&gt;
+                        &lt;barLine form="dashed" /&gt;
+                        &lt;note dur="semibrevis" dur.quality="minor" /&gt;
+                        &lt;note dur="semibrevis" dur.quality="minor" /&gt;
+                        &lt;note dur="semibrevis" dur.quality="minor" /&gt;
+                        &lt;dot form="div" /&gt;
+                        &lt;barLine form="dashed" /&gt;
+                        &lt;note dur="semibrevis" dur.quality="minor" /&gt;
+                        &lt;note dur="semibrevis" dur.quality="maior" /&gt;
+                        &lt;barLine form="dashed" /&gt;
+                        &lt;note dur="brevis" /&gt;
+                        &lt;barLine form="dashed" /&gt;
+                        &lt;note dur="longa" dur.quality="duplex" /&gt;
+                        &lt;barLine form="dashed" /&gt;
+                     &lt;/layer&gt;  
                      &lt;?edit-end?&gt;
                   &lt;/staff&gt;
                   &lt;staff n="2"&gt;
-                     &lt;layer&gt;
-                        &lt;note dur="brevis"/&gt;
-                        &lt;note dur="brevis"/&gt;
-                        &lt;note dur="brevis"/&gt;
-                        &lt;barLine form="dashed"/&gt;
-                        &lt;note dur="brevis"/&gt;
-                        &lt;barLine form="dashed"/&gt;
-                        &lt;note dur="brevis"/&gt;
-                        &lt;barLine form="dashed"/&gt;
-                        &lt;note dur="brevis"/&gt;
-                        &lt;barLine form="dashed"/&gt;
-                        &lt;note dur="brevis"/&gt;
-                        &lt;note dur="brevis"/&gt;
-                        &lt;note dur="brevis"/&gt;
-                        &lt;barLine form="dashed"/&gt;
-                        &lt;note dur="brevis"/&gt;
-                        &lt;note dur="brevis"/&gt;
-                        &lt;note dur="brevis"/&gt;
-                        &lt;barLine form="dashed"/&gt;
+                     &lt;layer n="1"&gt;
+                        &lt;note dur="brevis" /&gt;
+                        &lt;note dur="brevis" /&gt;
+                        &lt;note dur="brevis" /&gt;
+                        &lt;barLine form="dashed" /&gt;
+                        &lt;note dur="brevis" /&gt;
+                        &lt;barLine form="dashed" /&gt;
+                        &lt;note dur="brevis" /&gt;
+                        &lt;barLine form="dashed" /&gt;
+                        &lt;note dur="brevis" /&gt;
+                        &lt;barLine form="dashed" /&gt;
+                        &lt;note dur="brevis" /&gt;
+                        &lt;note dur="brevis" /&gt;
+                        &lt;note dur="brevis" /&gt;
+                        &lt;barLine form="dashed" /&gt;
+                        &lt;note dur="brevis" /&gt;
+                        &lt;note dur="brevis" /&gt;
+                        &lt;note dur="brevis" /&gt;
+                        &lt;barLine form="dashed" /&gt;
                      &lt;/layer&gt;
                   &lt;/staff&gt;
                &lt;/section&gt;
@@ -7756,8 +7689,11 @@
                   <p>
                      <figure>
                         <head/>
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/4.0.1/mei-Mensural.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;&lt;?xml-model href="https://music-encoding.org/schema/4.0.1/mei-Mensural.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="4.0.1"&gt;
-   &lt;meiHead meiversion="4.0.1"&gt;
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
+&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
+&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.0.0-dev"&gt;
+   &lt;meiHead&gt;
       &lt;fileDesc&gt;
          &lt;titleStmt&gt;
             &lt;title&gt;Example of "partial imperfection of an immediate part" (ad partem propinquam)&lt;/title&gt;
@@ -7770,51 +7706,37 @@
          &lt;/notesStmt&gt;
       &lt;/fileDesc&gt;
    &lt;/meiHead&gt;
-   &lt;music meiversion="4.0.1"&gt;
+   &lt;music&gt;
       &lt;body&gt;
          &lt;mdiv&gt;
             &lt;score&gt;
                &lt;scoreDef&gt;
                   &lt;staffGrp&gt;
-                     &lt;staffDef n="1"
-                               label="voice"
-                               notationtype="mensural.white"
-                               lines="5"
-                               clef.shape="G"
-                               clef.line="2"
-                               modusminor="2"
-                               tempus="3"/&gt;
-                     &lt;staffDef n="2"
-                               label="reference"
-                               notationtype="mensural.white"
-                               lines="5"
-                               clef.shape="G"
-                               clef.line="2"
-                               modusminor="2"
-                               tempus="3"/&gt;
+                     &lt;staffDef label="voice" n="1" notationtype="mensural.white" lines="5" clef.shape="G" clef.line="2" modusminor="2" tempus="3" mensur.sign="O" mensur.slash="1" /&gt;
+                     &lt;staffDef label="reference" n="2" notationtype="mensural.white" lines="5" clef.shape="G" clef.line="2" modusminor="2" tempus="3" mensur.sign="O" mensur.slash="1" /&gt;
                   &lt;/staffGrp&gt;
                &lt;/scoreDef&gt;
                &lt;section&gt;
                   &lt;staff n="1"&gt;
-                            &lt;?edit-start?&gt;
-                     &lt;layer&gt;
-                        &lt;note dur="longa" num="6" numbase="5"/&gt;
-                        &lt;barLine form="dotted"/&gt;
-                        &lt;note dur="semibrevis"/&gt;
-                        &lt;barLine form="dashed"/&gt;
+                     &lt;?edit-start?&gt;
+                     &lt;layer n="1"&gt;
+                        &lt;note dur="longa" num="6" numbase="5" /&gt;
+                        &lt;barLine form="dotted" /&gt;
+                        &lt;note dur="semibrevis" /&gt;
+                        &lt;barLine form="dashed" /&gt;
                      &lt;/layer&gt;
                      &lt;?edit-end?&gt;
                   &lt;/staff&gt;
                   &lt;staff n="2"&gt;
-                     &lt;layer&gt;
-                        &lt;note dur="semibrevis" pname="a" oct="4"/&gt;
-                        &lt;note dur="semibrevis" pname="a" oct="4"/&gt;
-                        &lt;note dur="semibrevis" pname="a" oct="4"/&gt;
-                        &lt;barLine form="dashed"/&gt;
-                        &lt;note dur="semibrevis" pname="a" oct="4"/&gt;
-                        &lt;note dur="semibrevis" pname="a" oct="4"/&gt;
-                        &lt;note dur="semibrevis" pname="a" oct="4"/&gt;
-                        &lt;barLine form="dashed"/&gt;
+                     &lt;layer n="1"&gt;
+                        &lt;note dur="semibrevis" oct="4" pname="a" /&gt;
+                        &lt;note dur="semibrevis" oct="4" pname="a" /&gt;
+                        &lt;note dur="semibrevis" oct="4" pname="a" /&gt;
+                        &lt;barLine form="dashed" /&gt;
+                        &lt;note dur="semibrevis" oct="4" pname="a" /&gt;
+                        &lt;note dur="semibrevis" oct="4" pname="a" /&gt;
+                        &lt;note dur="semibrevis" oct="4" pname="a" /&gt;
+                        &lt;barLine form="dashed" /&gt;
                      &lt;/layer&gt;
                   &lt;/staff&gt;
                &lt;/section&gt;
@@ -7830,8 +7752,11 @@
                   <p>
                      <figure>
                         <head/>
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/4.0.1/mei-Mensural.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;&lt;?xml-model href="https://music-encoding.org/schema/4.0.1/mei-Mensural.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="4.0.1"&gt;
-   &lt;meiHead meiversion="4.0.1"&gt;
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
+&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
+&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.0.0-dev"&gt;
+   &lt;meiHead&gt;
       &lt;fileDesc&gt;
          &lt;titleStmt&gt;
             &lt;title&gt;Example of "partial imperfection" from both sides (ad partes)&lt;/title&gt;
@@ -7844,53 +7769,39 @@
          &lt;/notesStmt&gt;
       &lt;/fileDesc&gt;
    &lt;/meiHead&gt;
-   &lt;music meiversion="4.0.1"&gt;
+   &lt;music&gt;
       &lt;body&gt;
          &lt;mdiv&gt;
             &lt;score&gt;
                &lt;scoreDef&gt;
                   &lt;staffGrp&gt;
-                     &lt;staffDef n="1"
-                               label="voice"
-                               notationtype="mensural.white"
-                               lines="5"
-                               clef.shape="G"
-                               clef.line="2"
-                               modusminor="2"
-                               tempus="3"/&gt;
-                     &lt;staffDef n="2"
-                               label="reference"
-                               notationtype="mensural.white"
-                               lines="5"
-                               clef.shape="G"
-                               clef.line="2"
-                               modusminor="2"
-                               tempus="3"/&gt;
+                     &lt;staffDef label="voice" n="1" notationtype="mensural.white" lines="5" clef.shape="G" clef.line="2" modusminor="2" tempus="3" mensur.sign="O" mensur.slash="1" /&gt;
+                     &lt;staffDef label="reference" n="2" notationtype="mensural.white" lines="5" clef.shape="G" clef.line="2" modusminor="2" tempus="3" mensur.sign="O" mensur.slash="1" /&gt;
                   &lt;/staffGrp&gt;
                &lt;/scoreDef&gt;
                &lt;section&gt;
                   &lt;staff n="1"&gt;
-                            &lt;?edit-start?&gt;
-                     &lt;layer&gt;
-                        &lt;note dur="semibrevis"/&gt;
-                        &lt;barLine form="dotted"/&gt;
-                        &lt;note dur="longa" num="6" numbase="4"/&gt;
-                        &lt;barLine form="dotted"/&gt;
-                        &lt;note dur="semibrevis"/&gt;
-                        &lt;barLine form="dashed"/&gt;
+                     &lt;?edit-start?&gt;
+                     &lt;layer n="1"&gt;
+                        &lt;note dur="semibrevis" /&gt;
+                        &lt;barLine form="dotted" /&gt;
+                        &lt;note dur="longa" num="6" numbase="4" /&gt;
+                        &lt;barLine form="dotted" /&gt;
+                        &lt;note dur="semibrevis" /&gt;
+                        &lt;barLine form="dashed" /&gt;
                      &lt;/layer&gt;
                      &lt;?edit-end?&gt;
                   &lt;/staff&gt;
                   &lt;staff n="2"&gt;
-                     &lt;layer&gt;
-                        &lt;note dur="semibrevis" pname="a" oct="4"/&gt;
-                        &lt;note dur="semibrevis" pname="a" oct="4"/&gt;
-                        &lt;note dur="semibrevis" pname="a" oct="4"/&gt;
-                        &lt;barLine form="dashed"/&gt;
-                        &lt;note dur="semibrevis" pname="a" oct="4"/&gt;
-                        &lt;note dur="semibrevis" pname="a" oct="4"/&gt;
-                        &lt;note dur="semibrevis" pname="a" oct="4"/&gt;
-                        &lt;barLine form="dashed"/&gt;
+                     &lt;layer n="1"&gt;
+                        &lt;note dur="semibrevis" oct="4" pname="a" /&gt;
+                        &lt;note dur="semibrevis" oct="4" pname="a" /&gt;
+                        &lt;note dur="semibrevis" oct="4" pname="a" /&gt;
+                        &lt;barLine form="dashed" /&gt;
+                        &lt;note dur="semibrevis" oct="4" pname="a" /&gt;
+                        &lt;note dur="semibrevis" oct="4" pname="a" /&gt;
+                        &lt;note dur="semibrevis" oct="4" pname="a" /&gt;
+                        &lt;barLine form="dashed" /&gt;
                      &lt;/layer&gt;
                   &lt;/staff&gt;
                &lt;/section&gt;
@@ -7906,8 +7817,11 @@
                   <p>
                      <figure>
                         <head/>
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/4.0.1/mei-Mensural.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;&lt;?xml-model href="https://music-encoding.org/schema/4.0.1/mei-Mensural.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="4.0.1"&gt;
-   &lt;meiHead meiversion="4.0.1"&gt;
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
+&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
+&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.0.0-dev"&gt;
+   &lt;meiHead&gt;
       &lt;fileDesc&gt;
          &lt;titleStmt&gt;
             &lt;title&gt;Example of "partial imperfection of a remote part" (ad partem remotam)&lt;/title&gt;
@@ -7920,61 +7834,45 @@
          &lt;/notesStmt&gt;
       &lt;/fileDesc&gt;
    &lt;/meiHead&gt;
-   &lt;music meiversion="4.0.1"&gt;
+   &lt;music&gt;
       &lt;body&gt;
          &lt;mdiv&gt;
             &lt;score&gt;
                &lt;scoreDef&gt;
                   &lt;staffGrp&gt;
-                     &lt;staffDef n="1"
-                               label="voice"
-                               notationtype="mensural.white"
-                               lines="5"
-                               clef.shape="G"
-                               clef.line="2"
-                               modusminor="2"
-                               tempus="2"
-                               prolatio="3"/&gt;
-                     &lt;staffDef n="2"
-                               label="reference"
-                               notationtype="mensural.white"
-                               lines="5"
-                               clef.shape="G"
-                               clef.line="2"
-                               modusminor="2"
-                               tempus="2"
-                               prolatio="3"/&gt;
+                     &lt;staffDef label="voice" n="1" notationtype="mensural.white" lines="5" clef.shape="G" clef.line="2" modusminor="2" prolatio="3" tempus="2" mensur.dot="true" mensur.sign="C" mensur.slash="1" /&gt;
+                     &lt;staffDef label="reference" n="2" notationtype="mensural.white" lines="5" clef.shape="G" clef.line="2" modusminor="2" prolatio="3" tempus="2" mensur.dot="true" mensur.sign="C" mensur.slash="1" /&gt;
                   &lt;/staffGrp&gt;
                &lt;/scoreDef&gt;
                &lt;section&gt;
                   &lt;staff n="1"&gt;
-                            &lt;?edit-start?&gt;
-                     &lt;layer&gt;
-                        &lt;note dur="longa" num="12" numbase="11"/&gt;
-                        &lt;barLine form="dotted"/&gt;
-                        &lt;note dur="minima"/&gt;
-                        &lt;barLine form="dashed"/&gt;
+                     &lt;?edit-start?&gt;
+                     &lt;layer n="1"&gt;
+                        &lt;note dur="longa" num="12" numbase="11" /&gt;
+                        &lt;barLine form="dotted" /&gt;
+                        &lt;note dur="minima" /&gt;
+                        &lt;barLine form="dashed" /&gt;
                      &lt;/layer&gt;
-                     &lt;?edit-end?&gt;
+                     &lt;?edit-ebd?&gt;
                   &lt;/staff&gt;
                   &lt;staff n="2"&gt;
-                     &lt;layer&gt;
-                        &lt;note dur="minima" pname="a" oct="4"/&gt;
-                        &lt;note dur="minima" pname="a" oct="4"/&gt;
-                        &lt;note dur="minima" pname="a" oct="4"/&gt;
-                        &lt;barLine form="dotted"/&gt;
-                        &lt;note dur="minima" pname="a" oct="4"/&gt;
-                        &lt;note dur="minima" pname="a" oct="4"/&gt;
-                        &lt;note dur="minima" pname="a" oct="4"/&gt;
-                        &lt;barLine form="dashed"/&gt;
-                        &lt;note dur="minima" pname="a" oct="4"/&gt;
-                        &lt;note dur="minima" pname="a" oct="4"/&gt;
-                        &lt;note dur="minima" pname="a" oct="4"/&gt;
-                        &lt;barLine form="dotted"/&gt;
-                        &lt;note dur="minima" pname="a" oct="4"/&gt;
-                        &lt;note dur="minima" pname="a" oct="4"/&gt;
-                        &lt;note dur="minima" pname="a" oct="4"/&gt;
-                        &lt;barLine form="dashed"/&gt;
+                     &lt;layer n="1"&gt;
+                        &lt;note dur="minima" oct="4" pname="a" /&gt;
+                        &lt;note dur="minima" oct="4" pname="a" /&gt;
+                        &lt;note dur="minima" oct="4" pname="a" /&gt;
+                        &lt;barLine form="dotted" /&gt;
+                        &lt;note dur="minima" oct="4" pname="a" /&gt;
+                        &lt;note dur="minima" oct="4" pname="a" /&gt;
+                        &lt;note dur="minima" oct="4" pname="a" /&gt;
+                        &lt;barLine form="dashed" /&gt;
+                        &lt;note dur="minima" oct="4" pname="a" /&gt;
+                        &lt;note dur="minima" oct="4" pname="a" /&gt;
+                        &lt;note dur="minima" oct="4" pname="a" /&gt;
+                        &lt;barLine form="dotted" /&gt;
+                        &lt;note dur="minima" oct="4" pname="a" /&gt;
+                        &lt;note dur="minima" oct="4" pname="a" /&gt;
+                        &lt;note dur="minima" oct="4" pname="a" /&gt;
+                        &lt;barLine form="dashed" /&gt;
                      &lt;/layer&gt;
                   &lt;/staff&gt;
                &lt;/section&gt;
@@ -7990,8 +7888,11 @@
                   <p>
                      <figure>
                         <head/>
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/4.0.1/mei-Mensural.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;&lt;?xml-model href="https://music-encoding.org/schema/4.0.1/mei-Mensural.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="4.0.1"&gt;
-   &lt;meiHead meiversion="4.0.1"&gt;
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
+&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
+&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.0.0-dev"&gt;
+   &lt;meiHead&gt;
       &lt;fileDesc&gt;
          &lt;titleStmt&gt;
             &lt;title&gt;Example of "partial imperfection of a remote part" (ad partem remotam)&lt;/title&gt;
@@ -8004,69 +7905,53 @@
          &lt;/notesStmt&gt;
       &lt;/fileDesc&gt;
    &lt;/meiHead&gt;
-   &lt;music meiversion="4.0.1"&gt;
+   &lt;music&gt;
       &lt;body&gt;
          &lt;mdiv&gt;
             &lt;score&gt;
                &lt;scoreDef&gt;
                   &lt;staffGrp&gt;
-                     &lt;staffDef n="1"
-                               label="voice"
-                               notationtype="mensural.white"
-                               lines="5"
-                               clef.shape="G"
-                               clef.line="2"
-                               modusminor="3"
-                               tempus="2"
-                               prolatio="3"/&gt;
-                     &lt;staffDef n="2"
-                               label="reference"
-                               notationtype="mensural.white"
-                               lines="5"
-                               clef.shape="G"
-                               clef.line="2"
-                               modusminor="3"
-                               tempus="2"
-                               prolatio="3"/&gt;
+                     &lt;staffDef label="voice" n="1" notationtype="mensural.white" lines="5" clef.shape="G" clef.line="2" modusminor="3" prolatio="3" tempus="2" mensur.dot="true" mensur.sign="C" mensur.slash="1" /&gt;
+                     &lt;staffDef label="reference" n="2" notationtype="mensural.white" lines="5" clef.shape="G" clef.line="2" modusminor="3" prolatio="3" tempus="2" mensur.dot="true" mensur.sign="C" mensur.slash="1" /&gt;
                   &lt;/staffGrp&gt;
                &lt;/scoreDef&gt;
                &lt;section&gt;
                   &lt;staff n="1"&gt;
-                            &lt;?edit-start?&gt;
-                     &lt;layer&gt;
-                        &lt;note dur="longa" num="18" numbase="17"/&gt;
-                        &lt;barLine form="dotted"/&gt;
-                        &lt;note dur="minima"/&gt;
-                        &lt;barLine form="dashed"/&gt;
+                     &lt;?edit-start?&gt;
+                     &lt;layer n="1"&gt;
+                        &lt;note dur="longa" num="18" numbase="17" /&gt;
+                        &lt;barLine form="dotted" /&gt;
+                        &lt;note dur="minima" /&gt;
+                        &lt;barLine form="dashed" /&gt;
                      &lt;/layer&gt;
                      &lt;?edit-end?&gt;
                   &lt;/staff&gt;
                   &lt;staff n="2"&gt;
-                     &lt;layer&gt;
-                        &lt;note dur="minima" pname="a" oct="4"/&gt;
-                        &lt;note dur="minima" pname="a" oct="4"/&gt;
-                        &lt;note dur="minima" pname="a" oct="4"/&gt;
-                        &lt;barLine form="dotted"/&gt;
-                        &lt;note dur="minima" pname="a" oct="4"/&gt;
-                        &lt;note dur="minima" pname="a" oct="4"/&gt;
-                        &lt;note dur="minima" pname="a" oct="4"/&gt;
-                        &lt;barLine form="dashed"/&gt;
-                        &lt;note dur="minima" pname="a" oct="4"/&gt;
-                        &lt;note dur="minima" pname="a" oct="4"/&gt;
-                        &lt;note dur="minima" pname="a" oct="4"/&gt;
-                        &lt;barLine form="dotted"/&gt;
-                        &lt;note dur="minima" pname="a" oct="4"/&gt;
-                        &lt;note dur="minima" pname="a" oct="4"/&gt;
-                        &lt;note dur="minima" pname="a" oct="4"/&gt;
-                        &lt;barLine form="dashed"/&gt;
-                        &lt;note dur="minima" pname="a" oct="4"/&gt;
-                        &lt;note dur="minima" pname="a" oct="4"/&gt;
-                        &lt;note dur="minima" pname="a" oct="4"/&gt;
-                        &lt;barLine form="dotted"/&gt;
-                        &lt;note dur="minima" pname="a" oct="4"/&gt;
-                        &lt;note dur="minima" pname="a" oct="4"/&gt;
-                        &lt;note dur="minima" pname="a" oct="4"/&gt;
-                        &lt;barLine form="dashed"/&gt;
+                     &lt;layer n="1"&gt;
+                        &lt;note dur="minima" oct="4" pname="a" /&gt;
+                        &lt;note dur="minima" oct="4" pname="a" /&gt;
+                        &lt;note dur="minima" oct="4" pname="a" /&gt;
+                        &lt;barLine form="dotted" /&gt;
+                        &lt;note dur="minima" oct="4" pname="a" /&gt;
+                        &lt;note dur="minima" oct="4" pname="a" /&gt;
+                        &lt;note dur="minima" oct="4" pname="a" /&gt;
+                        &lt;barLine form="dashed" /&gt;
+                        &lt;note dur="minima" oct="4" pname="a" /&gt;
+                        &lt;note dur="minima" oct="4" pname="a" /&gt;
+                        &lt;note dur="minima" oct="4" pname="a" /&gt;
+                        &lt;barLine form="dotted" /&gt;
+                        &lt;note dur="minima" oct="4" pname="a" /&gt;
+                        &lt;note dur="minima" oct="4" pname="a" /&gt;
+                        &lt;note dur="minima" oct="4" pname="a" /&gt;
+                        &lt;barLine form="dashed" /&gt;
+                        &lt;note dur="minima" oct="4" pname="a" /&gt;
+                        &lt;note dur="minima" oct="4" pname="a" /&gt;
+                        &lt;note dur="minima" oct="4" pname="a" /&gt;
+                        &lt;barLine form="dotted" /&gt;
+                        &lt;note dur="minima" oct="4" pname="a" /&gt;
+                        &lt;note dur="minima" oct="4" pname="a" /&gt;
+                        &lt;note dur="minima" oct="4" pname="a" /&gt;
+                        &lt;barLine form="dashed" /&gt;
                      &lt;/layer&gt;
                   &lt;/staff&gt;
                &lt;/section&gt;
@@ -8117,8 +8002,11 @@
                   <head>Change in mensuration</head>
                   <p>The following example illustrates a <hi rend="italic">change in mensuration</hi>. In this case, the element <gi scheme="MEI">mensur</gi> is used within the <gi scheme="MEI">layer</gi> element, preceding the stream of notes affected by the new mensuration defined by it. <figure>
                         <head/>
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/4.0.1/mei-Mensural.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;&lt;?xml-model href="https://music-encoding.org/schema/4.0.1/mei-Mensural.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="4.0.1"&gt;
-   &lt;meiHead meiversion="4.0.1"&gt;
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
+&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
+&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.0.0-dev"&gt;
+   &lt;meiHead&gt;
       &lt;fileDesc&gt;
          &lt;titleStmt&gt;
             &lt;title&gt;Example of 'mensuration changes'&lt;/title&gt;
@@ -8128,34 +8016,26 @@
          &lt;/pubStmt&gt;
       &lt;/fileDesc&gt;
    &lt;/meiHead&gt;
-   &lt;music meiversion="4.0.1"&gt;
+   &lt;music&gt;
       &lt;body&gt;
          &lt;mdiv&gt;
-                &lt;?edit-start?&gt;
+            &lt;?edit-start?&gt;
             &lt;score&gt;
                &lt;scoreDef&gt;
                   &lt;staffGrp&gt;
-                     &lt;staffDef n="1"
-                               notationtype="mensural"
-                               lines="5"
-                               clef.shape="G"
-                               clef.line="2"
-                               mensur.sign="O"
-                               mensur.dot="true"
-                               mensur.slash="1"
-                               mensur.color="red"/&gt;
+                     &lt;staffDef n="1" notationtype="mensural" lines="5" clef.shape="G" clef.line="2" mensur.color="red" mensur.dot="true" mensur.sign="O" mensur.slash="1" /&gt;
                   &lt;/staffGrp&gt;
                &lt;/scoreDef&gt;
                &lt;section&gt;
                   &lt;staff n="1"&gt;
-                     &lt;layer&gt;
-                        &lt;note/&gt;
-                        &lt;note/&gt;
-                        &lt;note/&gt;
-                        &lt;mensur loc="3" sign="C"/&gt;
-                        &lt;note/&gt;
-                        &lt;note/&gt;
-                        &lt;note/&gt;
+                     &lt;layer n="1"&gt;
+                        &lt;note /&gt;
+                        &lt;note /&gt;
+                        &lt;note /&gt;
+                        &lt;mensur sign="C" loc="3" /&gt;
+                        &lt;note /&gt;
+                        &lt;note /&gt;
+                        &lt;note /&gt;
                      &lt;/layer&gt;
                   &lt;/staff&gt;
                &lt;/section&gt;
@@ -8173,110 +8053,61 @@
                   <head>Implicit mensuration</head>
                   <p>It is common in <hi rend="italic">Ars antiqua</hi> and some <hi rend="italic">Ars nova</hi> pieces to have no mensuration signs. In this case, the mensuration—the division levels corresponding to <hi rend="italic">modus maior</hi>, <hi rend="italic">modus minor</hi>, <hi rend="italic">tempus</hi>, and <hi rend="italic">prolatio</hi>—is given by the context. The next example shows the incipit of a four-voice piece, Josquin’s <hi rend="italic">Tu solus qui facis mirabilia</hi>, where only two of the voices (<hi rend="italic">Cantus</hi> and <hi rend="italic">Tenor</hi>) have a mensuration sign. The other two (<hi rend="italic">Altus</hi> and <hi rend="italic">Bassus</hi>) have <hi rend="italic">no mensuration signs</hi>, and the <hi rend="italic">mensura is given by the context</hi>. Therefore, while only the <hi rend="italic">Cantus</hi> and the <hi rend="italic">Tenor</hi> have attributes for encoding the mensuration sign (in this case, <att>mensur.sign</att> and <att>mensur.slash</att>), all four voices include attributes to encode the <hi rend="italic">mensura</hi> (<att>tempus</att> and <att>prolatio</att>). <figure>
                         <head/>
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/4.0.1/mei-Mensural.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;&lt;?xml-model href="https://music-encoding.org/schema/4.0.1/mei-Mensural.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="4.0.1"&gt;
-   &lt;meiHead meiversion="4.0.1"&gt;
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
+&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
+&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.0.0-dev"&gt;
+   &lt;meiHead&gt;
       &lt;fileDesc&gt;
          &lt;titleStmt&gt;
-            &lt;title&gt;
-                    Example of omitted mensuration signs
-                &lt;/title&gt;
+            &lt;title&gt;Example of 'imperfection' and 'dot of division'&lt;/title&gt;
          &lt;/titleStmt&gt;
-         &lt;pubStmt/&gt;
+         &lt;pubStmt&gt;
+            &lt;date&gt;2019-11-15&lt;/date&gt;
+         &lt;/pubStmt&gt;
          &lt;notesStmt&gt;
-            &lt;annot&gt;In this choir book, only the verso parts have a mensuration sign, whereas Altus and Bassus on the recto don't.&lt;/annot&gt;
+            &lt;annot&gt;The bottom staff, together with the dotted barlines, is used here to help visualizing the durational values of the notes in the upper staff.&lt;/annot&gt;
          &lt;/notesStmt&gt;
-         &lt;sourceDesc&gt;
-            &lt;source&gt;
-               &lt;bibl&gt;FlorPanc27, 79v-80r&lt;/bibl&gt;
-            &lt;/source&gt;
-         &lt;/sourceDesc&gt;
       &lt;/fileDesc&gt;
    &lt;/meiHead&gt;
-   &lt;music meiversion="4.0.1"&gt;
+   &lt;music&gt;
       &lt;body&gt;
          &lt;mdiv&gt;
             &lt;score&gt;
-                    &lt;?edit-start?&gt;
-               &lt;scoreDef key.sig="1f"&gt;
+               &lt;?edit-start?&gt;
+               &lt;scoreDef&gt;
                   &lt;staffGrp&gt;
-                     &lt;staffDef n="1"
-                               label="Cantus"
-                               lines="5"
-                               notationtype="mensural.white"
-                               clef.shape="C"
-                               clef.line="1"
-                               tempus="2"
-                               prolatio="2"
-                               mensur.sign="C"
-                               mensur.slash="1"/&gt;
-                     &lt;staffDef n="2"
-                               label="Tenor"
-                               lines="5"
-                               notationtype="mensural.white"
-                               clef.shape="C"
-                               clef.line="4"
-                               tempus="2"
-                               prolatio="2"
-                               mensur.sign="C"
-                               mensur.slash="1"/&gt;
-                     &lt;staffDef n="3"
-                               label="Altus"
-                               lines="5"
-                               notationtype="mensural.white"
-                               clef.shape="C"
-                               clef.line="3"
-                               tempus="2"
-                               prolatio="2"/&gt;
-                     &lt;staffDef n="4"
-                               label="Bassus"
-                               lines="5"
-                               notationtype="mensural.white"
-                               clef.shape="F"
-                               clef.line="4"
-                               tempus="2"
-                               prolatio="2"/&gt;
+                     &lt;staffDef label="voice" n="1" notationtype="mensural.white" lines="5" clef.shape="G" clef.line="2" /&gt;
+                     &lt;staffDef label="reference" n="2" notationtype="mensural.white" lines="5" clef.shape="G" clef.line="2" /&gt;
                   &lt;/staffGrp&gt;
                &lt;/scoreDef&gt;
                &lt;?edit-end?&gt;
                &lt;section&gt;
                   &lt;staff n="1"&gt;
-                     &lt;layer&gt;
-                        &lt;note pname="b" oct="4" dur="brevis"/&gt;
-                        &lt;note pname="b" oct="4" dur="brevis"/&gt;
-                        &lt;note pname="a" oct="4" dur="brevis"/&gt;
-                        &lt;note pname="g" oct="4" dur="brevis"/&gt;
-                        &lt;note pname="g" oct="4" dur="semibrevis"/&gt;
-                        &lt;note pname="g" oct="4" dur="semibrevis"/&gt;
+                     &lt;layer n="1"&gt;
+                        &lt;note dur="longa" dur.quality="imperfecta" /&gt;
+                        &lt;barLine form="dashed" /&gt;
+                        &lt;note dur="brevis" /&gt;
+                        &lt;dot form="div" /&gt;
+                        &lt;barLine form="dashed" /&gt;
+                        &lt;note dur="brevis" /&gt;
+                        &lt;barLine form="dashed" /&gt;
+                        &lt;note dur="longa" dur.quality="imperfecta" /&gt;
+                        &lt;barLine form="dashed" /&gt;
                      &lt;/layer&gt;
                   &lt;/staff&gt;
                   &lt;staff n="2"&gt;
-                     &lt;layer&gt;
-                        &lt;note pname="g" oct="3" dur="brevis"/&gt;
-                        &lt;note pname="b" oct="3" dur="brevis"/&gt;
-                        &lt;note pname="c" oct="4" dur="brevis"/&gt;
-                        &lt;note pname="c" oct="4" dur="brevis"/&gt;
-                        &lt;note pname="c" oct="4" dur="semibrevis"/&gt;
-                        &lt;note pname="c" oct="4" dur="semibrevis"/&gt;
-                     &lt;/layer&gt;
-                  &lt;/staff&gt;
-                  &lt;staff n="3"&gt;
-                     &lt;layer&gt;
-                        &lt;note pname="d" oct="4" dur="brevis"/&gt;
-                        &lt;note pname="d" oct="4" dur="brevis"/&gt;
-                        &lt;note pname="f" oct="4" dur="brevis"/&gt;
-                        &lt;note pname="e" oct="4" dur="brevis"/&gt;
-                        &lt;note pname="e" oct="4" dur="semibrevis"/&gt;
-                        &lt;note pname="e" oct="4" dur="semibrevis"/&gt;
-                     &lt;/layer&gt;
-                  &lt;/staff&gt;
-                  &lt;staff n="4"&gt;
-                     &lt;layer&gt;
-                        &lt;note pname="g" oct="2" dur="brevis"/&gt;
-                        &lt;note pname="g" oct="3" dur="brevis"/&gt;
-                        &lt;note pname="g" oct="3" dur="brevis"/&gt;
-                        &lt;note pname="c" oct="3" dur="brevis"/&gt;
-                        &lt;note pname="c" oct="3" dur="semibrevis"/&gt;
-                        &lt;note pname="c" oct="3" dur="semibrevis"/&gt;
+                     &lt;layer n="1"&gt;
+                        &lt;note dur="brevis" oct="4" pname="a" /&gt;
+                        &lt;note dur="brevis" oct="4" pname="a" /&gt;
+                        &lt;barLine form="dashed" /&gt;
+                        &lt;note dur="brevis" oct="4" pname="a" /&gt;
+                        &lt;barLine form="dashed" /&gt;
+                        &lt;note dur="brevis" oct="4" pname="a" /&gt;
+                        &lt;barLine form="dashed" /&gt;
+                        &lt;note dur="brevis" oct="4" pname="a" /&gt;
+                        &lt;note dur="brevis" oct="4" pname="a" /&gt;
+                        &lt;barLine form="dashed" /&gt;
                      &lt;/layer&gt;
                   &lt;/staff&gt;
                &lt;/section&gt;
