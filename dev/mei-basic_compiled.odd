@@ -4725,6 +4725,13 @@
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       
     </classes>
+  </classSpec><classSpec rend="add" ident="att.instrDef.ges" module="MEI.gestural" type="atts">
+    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Gestural domain attributes.</desc>
+    <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <memberOf key="att.channelized"/>
+      <memberOf key="att.midiInstrument"/>
+      <memberOf key="att.soundLocation"/>
+    </classes>
   </classSpec><classSpec rend="add" ident="att.lv.ges" module="MEI.gestural" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Gestural domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -4825,6 +4832,30 @@
       
       
     </classes>
+  </classSpec><classSpec rend="add" ident="att.soundLocation" module="MEI.gestural" type="atts">
+    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that locate a sound source within 3-D space.</desc>
+    <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <attDef ident="azimuth" usage="opt">
+        <desc xml:lang="en">The lateral or left-to-right plane.</desc>
+        <datatype>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.DEGREES"/>
+        </datatype>
+        <remarks xml:lang="en">
+          <p>A value of 0, 360, or -360 is directly in front of the listener, while a value of 180
+            or -180 is directly behind.</p>
+        </remarks>
+      </attDef>
+      <attDef ident="elevation" usage="opt">
+        <desc xml:lang="en">The above-to-below axis.</desc>
+        <datatype>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.DEGREES"/>
+        </datatype>
+        <remarks xml:lang="en">
+          <p>A value of 0, 360, or -360 is directly above the listener, while a value of 180 or -180
+            is directly below.</p>
+        </remarks>
+      </attDef>
+    </attList>
   </classSpec><classSpec rend="add" ident="att.space.ges" module="MEI.gestural" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Gestural domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -5141,7 +5172,37 @@
     </content><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The volta element is intended for those cases where the musical notation is repeated, but
         the accompanying lyrics are not.</p>
-    </remarks></elementSpec><classSpec rend="add" ident="att.instrumentIdent" module="MEI.midi" type="atts">
+    </remarks></elementSpec><classSpec rend="add" ident="att.channelized" module="MEI.midi" type="atts">
+    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that record MIDI channel information.</desc>
+    <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <attDef ident="midi.channel" usage="opt">
+        <desc xml:lang="en">Records a MIDI channel value.</desc>
+        <datatype>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.MIDICHANNEL"/>
+        </datatype>
+      </attDef>
+      <attDef ident="midi.duty" usage="opt">
+        <desc xml:lang="en">Specifies the 'on' part of the duty cycle as a percentage of a note’s duration.</desc>
+        <datatype>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.PERCENT.LIMITED"/>
+        </datatype>
+      </attDef>
+      <attDef ident="midi.port" usage="opt">
+        <desc xml:lang="en">Sets the MIDI port value.</desc>
+        <datatype>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.MIDIVALUE_NAME"/>
+        </datatype>
+      </attDef>
+      <attDef ident="midi.track" usage="opt">
+        <desc xml:lang="en">Sets the MIDI track.</desc>
+        <datatype>
+          <rng:data type="positiveInteger"/>
+        </datatype>
+      </attDef>
+    </attList>
+  </classSpec><classSpec rend="add" ident="att.instrDef.log" module="MEI.midi" type="atts">
+    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Logical domain attributes.</desc>
+  </classSpec><classSpec rend="add" ident="att.instrumentIdent" module="MEI.midi" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes which identify a MIDI instrument.</desc>
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="instr" usage="opt">
@@ -5160,6 +5221,65 @@
             </sch:rule>
           </constraint>
         </constraintSpec>
+      </attDef>
+    </attList>
+  </classSpec><classSpec rend="add" ident="att.midiInstrument" module="MEI.midi" type="atts">
+    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that record MIDI instrument information.</desc>
+    <constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="One_of_instrname_or_instrnum" scheme="isoschematron">
+      <constraint>
+        <sch:rule context="mei:*[@midi.instrname]">
+          <sch:assert test="not(@midi.instrnum)">Only one of @midi.instrname and @midi.instrnum
+            allowed.</sch:assert>
+        </sch:rule>
+      </constraint>
+    </constraintSpec>
+    <constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="One_of_patchname_or_patchnum" scheme="isoschematron">
+      <constraint>
+        <sch:rule context="mei:*[@midi.patchname]">
+          <sch:assert test="not(@midi.patchnum)">Only one of @midi.patchname and @midi.patchnum
+            allowed.</sch:assert>
+        </sch:rule>
+      </constraint>
+    </constraintSpec>
+    <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <attDef ident="midi.instrnum" usage="opt">
+        <desc xml:lang="en">Captures the General MIDI instrument number. Use an integer for a 0-based value. An
+          integer preceded by "in" indicates a 1-based value.</desc>
+        <datatype>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.MIDIVALUE"/>
+        </datatype>
+      </attDef>
+      <attDef ident="midi.instrname" usage="opt">
+        <desc xml:lang="en">Provides a General MIDI label for the MIDI instrument.</desc>
+        <datatype>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.MIDINAMES"/>
+        </datatype>
+      </attDef>
+      <attDef ident="midi.pan" usage="opt">
+        <desc xml:lang="en">Sets the instrument’s position in a stereo field. MIDI values of 0 and 1 both pan
+          left, 127 or 128 pans right, and 63 or 64 pans to the center. Positve percentage values
+          pan to the right, negative ones to the left. 0% is centered.</desc>
+        <datatype>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.MIDIVALUE_PAN"/>
+        </datatype>
+      </attDef>
+      <attDef ident="midi.patchname" usage="opt">
+        <desc xml:lang="en">Records a non-General MIDI patch/instrument name.</desc>
+        <datatype>
+          <rng:data type="NMTOKEN"/>
+        </datatype>
+      </attDef>
+      <attDef ident="midi.patchnum" usage="opt">
+        <desc xml:lang="en">Records a non-General MIDI patch/instrument number.</desc>
+        <datatype>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.MIDIVALUE"/>
+        </datatype>
+      </attDef>
+      <attDef ident="midi.volume" usage="opt">
+        <desc xml:lang="en">Sets the instrument’s volume.</desc>
+        <datatype>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.MIDIVALUE_PERCENT"/>
+        </datatype>
       </attDef>
     </attList>
   </classSpec><classSpec rend="add" ident="att.midiTempo" module="MEI.midi" type="atts">
@@ -5232,7 +5352,26 @@
       <memberOf key="model.measurePart"/>
       
     </classes>
-  </classSpec><classSpec rend="add" predeclare="true" ident="model.addressPart" module="MEI.namesdates" type="model">
+  </classSpec><elementSpec rend="add" ident="instrDef" module="MEI.midi"><gloss xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">instrument definition</gloss><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">MIDI instrument declaration.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <memberOf key="att.basic"/>
+      <memberOf key="att.labelled"/>
+      
+      
+      <memberOf key="att.nInteger"/>
+      
+      <memberOf key="att.typed"/>
+      
+      <memberOf key="att.instrDef.ges"/>
+      <memberOf key="att.instrDef.log"/>
+      
+      <memberOf key="model.instrDefLike"/>
+    </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <rng:empty/>
+    </content><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+      <p>This element provides a starting or default instrument declaration for a staff, a group of
+        staves, or a layer. Following scoreDef, staffDef, layerDef, or MIDI prog elements may then
+        change the instrument as necessary.</p>
+    </remarks></elementSpec><classSpec rend="add" predeclare="true" ident="model.addressPart" module="MEI.namesdates" type="model">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Groups elements used as part of a physical address.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="model.textPhraseLike.limited"/>
