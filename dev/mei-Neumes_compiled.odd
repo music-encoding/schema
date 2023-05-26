@@ -13473,10 +13473,9 @@
     </remarks><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-dimensions.html">dimensions</ref> element of the Text Encoding Initiative (TEI) and the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-dimensions">dimensions</ref> element of the Encoded
         Archival Description (EAD).</p>
-    </remarks></elementSpec><elementSpec rend="add" ident="dir" module="MEI.shared"><gloss xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">directive</gloss><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">An instruction expressed as a combination of text and symbols — such as
-      segno and coda symbols, fermatas over a bar line, etc., typically above, below, or between
-      staves, but not on the staff — that is not encoded elsewhere in more specific elements, like
-      <gi scheme="MEI">tempo</gi> or <gi scheme="MEI">dynam</gi>.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+    </remarks></elementSpec><elementSpec rend="add" ident="dir" module="MEI.shared"><gloss xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">directive</gloss><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">An instruction expressed as a combination of text and symbols, typically above,
+      below, or between staves, but not on the staff — that is not encoded elsewhere in more specific
+      elements, like <gi scheme="MEI">tempo</gi>, <gi scheme="MEI">dynam</gi>  or <gi scheme="MEI">repeatMark</gi>.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       <memberOf key="att.facsimile"/>
       <memberOf key="att.lang"/>

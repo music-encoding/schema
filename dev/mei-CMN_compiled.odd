@@ -3662,6 +3662,8 @@
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Analytical domain attributes.</desc>
   </classSpec><classSpec rend="add" ident="att.reh.anl" module="MEI.analytical" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Analytical domain attributes.</desc>
+  </classSpec><classSpec rend="add" ident="att.repeatMark.anl" module="MEI.analytical" type="atts">
+    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Analytical domain attributes.</desc>
   </classSpec><classSpec rend="add" ident="att.rest.anl" module="MEI.analytical" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Analytical domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -5511,6 +5513,37 @@
       <p>It may also be called a "rehearsal figure", or when numbers are used instead of letters, a
         "rehearsal number". See Read, p. 443. <gi scheme="MEI">reh</gi> uses a subset of
         model.textPhraseLike.limited.</p>
+    </remarks></elementSpec><elementSpec rend="add" ident="repeatMark" module="MEI.cmn"><gloss xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">repetition mark</gloss><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+      An instruction expressed as a combination of text and symbols – segno and coda – typically above, 
+      below, or between staves, but not on the staff.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <memberOf key="att.common"/>
+      <memberOf key="att.facsimile"/>
+      <memberOf key="att.lang"/>
+      <memberOf key="att.repeatMark.log"/>
+      <memberOf key="att.repeatMark.vis"/>
+      <memberOf key="att.repeatMark.ges"/>
+      <memberOf key="att.repeatMark.anl"/>
+      <memberOf key="model.controlEventLike"/>
+    </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike.limited"/><ref name="model.graphicPrimitiveLike"/><ref name="model.editLike"/><ref name="model.transcriptionLike"/></choice></zeroOrMore>
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="repeatMark_start-type_attributes_required" scheme="isoschematron">
+      <constraint>
+        <sch:rule context="mei:repeatMark">
+          <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
+            attributes: startid, tstamp, tstamp.ges or tstamp.real.</sch:assert>
+        </sch:rule>
+      </constraint>
+    </constraintSpec><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="repeatMark_with_glyph_has_to_be_empty" scheme="isoschematron">
+      <constraint>
+        <sch:rule context="mei:repeatMark[@glyph.num or @glyph.name]">
+          <sch:assert test="not(element()) and not(text())">When @glyph.name or @glyph.num is present, repeatMark must not have content.</sch:assert>
+        </sch:rule>
+      </constraint>
+    </constraintSpec><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+      <p>When only <att>func</att> is provided to describe the function of the repeat mark (<abbr>i.e.</abbr>, without glyph information and no textual content), then a renderer
+        can rely on it to display the appropriate symbol. When textual content is provided, it will take precedence over the symbol implied by the function. Generic repeat marks where
+        no function can be determined, then generic <gi scheme="MEI">dir</gi> elements should be used.
+      </p>
     </remarks></elementSpec><elementSpec rend="add" ident="slur" module="MEI.cmn"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Indication of 1) a "unified melodic idea" or 2) performance technique.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       <memberOf key="att.facsimile"/>
@@ -7777,6 +7810,12 @@
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Gestural domain attributes.</desc>
   </classSpec><classSpec rend="add" ident="att.reh.ges" module="MEI.gestural" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Gestural domain attributes.</desc>
+  </classSpec><classSpec rend="add" ident="att.repeatMark.ges" module="MEI.gestural" type="atts">
+    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Gestural domain attributes.</desc>
+    <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <memberOf key="att.duration.ges"/>
+      <memberOf key="att.timestamp2.ges"/>
+    </classes>
   </classSpec><classSpec rend="add" ident="att.rest.ges" module="MEI.gestural" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Gestural domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -13672,6 +13711,36 @@
         </constraintSpec>
       </attDef>
     </attList>
+  </classSpec><classSpec rend="add" ident="att.repeatMark.log" module="MEI.shared" type="atts">
+    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Logical domain attributes.</desc>
+    <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <memberOf key="att.controlEvent"/>
+      <memberOf key="att.duration.additive"/>
+      <memberOf key="att.startEndId"/>
+      <memberOf key="att.timestamp2.log"/>
+    </classes>
+    <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <attDef ident="func" usage="req">
+        <desc xml:lang="en">Indicates the function of the mark, usually implying a corresponding form.</desc>
+        <valList type="closed">
+          <valItem ident="coda">
+            <desc xml:lang="en">Coda (SMuFL E048 or Unicode 1D10C).</desc>
+          </valItem>
+          <valItem ident="segno">
+            <desc xml:lang="en">Segno (SMuFL E047 or Unicode 1D10B).</desc>
+          </valItem>
+          <valItem ident="dalSegno">
+            <desc xml:lang="en">Dal segno (SMuFL E045 or Unicode 1D109).</desc>
+          </valItem>
+          <valItem ident="daCapo">
+            <desc xml:lang="en">Da capo (SMuFL E046 or Unicode 1D10A).</desc>
+          </valItem>
+          <valItem ident="fine">
+            <desc xml:lang="en">Fine. (text)</desc>
+          </valItem>
+        </valList>
+      </attDef>
+    </attList>
   </classSpec><classSpec rend="add" ident="att.responsibility" module="MEI.shared" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes capturing information regarding responsibility for some aspect of the text's
       creation, transcription, editing, or encoding.</desc>
@@ -15626,10 +15695,9 @@
     </remarks><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-dimensions.html">dimensions</ref> element of the Text Encoding Initiative (TEI) and the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-dimensions">dimensions</ref> element of the Encoded
         Archival Description (EAD).</p>
-    </remarks></elementSpec><elementSpec rend="add" ident="dir" module="MEI.shared"><gloss xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">directive</gloss><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">An instruction expressed as a combination of text and symbols — such as
-      segno and coda symbols, fermatas over a bar line, etc., typically above, below, or between
-      staves, but not on the staff — that is not encoded elsewhere in more specific elements, like
-      <gi scheme="MEI">tempo</gi> or <gi scheme="MEI">dynam</gi>.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+    </remarks></elementSpec><elementSpec rend="add" ident="dir" module="MEI.shared"><gloss xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">directive</gloss><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">An instruction expressed as a combination of text and symbols, typically above,
+      below, or between staves, but not on the staff — that is not encoded elsewhere in more specific
+      elements, like <gi scheme="MEI">tempo</gi>, <gi scheme="MEI">dynam</gi>  or <gi scheme="MEI">repeatMark</gi>.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       <memberOf key="att.facsimile"/>
       <memberOf key="att.lang"/>
@@ -19125,6 +19193,18 @@
       <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.typography"/>
       <memberOf key="att.visualOffset"/>
+      <memberOf key="att.xy"/>
+    </classes>
+  </classSpec><classSpec rend="add" ident="att.repeatMark.vis" module="MEI.visual" type="atts">
+    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Visual domain attributes.</desc>
+    <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <memberOf key="att.extender"/>
+      <memberOf key="att.extSym"/>
+      <memberOf key="att.placementRelStaff"/>
+      <memberOf key="att.verticalGroup"/>
+      <memberOf key="att.visualOffset"/>
+      <memberOf key="att.visualOffset2.ho"/>
+      <memberOf key="att.visualOffset2.to"/>
       <memberOf key="att.xy"/>
     </classes>
   </classSpec><classSpec rend="add" ident="att.rest.vis" module="MEI.visual" type="atts">

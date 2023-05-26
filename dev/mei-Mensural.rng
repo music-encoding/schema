@@ -5,7 +5,7 @@
           xmlns:xlink="http://www.w3.org/1999/xlink"
           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
           ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2023-05-26T15:41:33Z. .
+Schema generated from ODD source 2023-05-26T16:54:22Z. .
 TEI Edition: Version 5.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -22175,7 +22175,7 @@ Suggested values include: 1] alt; 2] angle; 3] circum; 4] depth; 5] diameter; 6]
    </define>
    <define name="mei_dir">
       <element name="dir">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(directive) An instruction expressed as a combination of text and symbols — such as segno and coda symbols, fermatas over a bar line, etc., typically above, below, or between staves, but not on the staff — that is not encoded elsewhere in more specific elements, like <code xmlns="http://www.w3.org/1999/xhtml">&lt;tempo&gt;</code> or <code xmlns="http://www.w3.org/1999/xhtml">&lt;dynam&gt;</code>.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(directive) An instruction expressed as a combination of text and symbols, typically above, below, or between staves, but not on the staff — that is not encoded elsewhere in more specific elements, like <code xmlns="http://www.w3.org/1999/xhtml">&lt;tempo&gt;</code>, <code xmlns="http://www.w3.org/1999/xhtml">&lt;dynam&gt;</code> or <code xmlns="http://www.w3.org/1999/xhtml">&lt;repeatMark&gt;</code>.</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
