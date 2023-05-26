@@ -19,7 +19,7 @@
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href=../../../source/"validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2023-05-26T18:56:52.057+02:00-->
+<!--canonicalized: 2023-05-26T20:51:49.171+02:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -14007,7 +14007,7 @@
         </valItem>
       </valList>
     </content>
-    <constraintSpec ident="warn_deprecated" scheme="isoschematron">
+    <constraintSpec ident="warn_deprecated" scheme="schematron">
       <constraint>
         <sch:rule context="@artic">
           <sch:assert role="warning" test="not(contains(., 'marc-stacc')) and not(contains(., 'ten-stacc'))">"<sch:value-of select="."/>" contains a deprecated value.</sch:assert>
@@ -16859,7 +16859,7 @@
         <rng:ref name="data.NMTOKEN"/>
       </rng:choice>
     </content>
-    <constraintSpec ident="constrain_place" scheme="isoschematron">
+    <constraintSpec ident="constrain_place" scheme="schematron">
       <constraint>
         <sch:rule context="@place">
           <sch:assert test="not((some $token in tokenize(normalize-space(.),' ') satisfies             $token =('below','above','between','within')) and count(tokenize(normalize-space(.),' ')) gt 1)">Other values not permitted when 'above', 'below', 'between' or 'within' is
@@ -17032,7 +17032,7 @@
         <rng:ref name="data.STAFFREL.extended"/>
       </rng:choice>
     </content>
-    <constraintSpec ident="between_requires_adjacent_staves" scheme="isoschematron">
+    <constraintSpec ident="between_requires_adjacent_staves" scheme="schematron">
       <constraint>
         <sch:rule context="mei:*[@place eq 'between']">
           <sch:assert test="count(tokenize(normalize-space(string(@staff)), '\s+')) = 2">The @staff
@@ -17431,7 +17431,7 @@
         <datatype>
           <rng:data type="NMTOKEN"/>
         </datatype>
-        <constraintSpec ident="When_notationsubtype" scheme="isoschematron">
+        <constraintSpec ident="When_notationsubtype" scheme="schematron">
           <constraint>
             <sch:rule context="mei:*[@notationsubtype]">
               <sch:assert test="@notationtype">An element with a notationsubtype attribute must have
@@ -18234,7 +18234,7 @@
         <datatype>
           <rng:ref name="data.BEAMPLACE"/>
         </datatype>
-        <constraintSpec ident="check_beam_place" scheme="isoschematron">
+        <constraintSpec ident="check_beam_place" scheme="schematron">
           <constraint>
             <sch:rule context="mei:beam[@place eq 'mixed' and not(descendant::mei:*[local-name() eq 'note' or local-name() eq 'chord'][@staff != ./@staff] or descendant::mei:*[local-name() eq 'note' or local-name() eq 'chord'][@staff != ancestor::mei:staff/@n])]">
               <sch:assert test="count(descendant::mei:*[local-name() eq 'note' or local-name() eq 'chord'][@stem.dir]) = count(descendant::mei:*[local-name() eq 'note' or local-name() eq 'chord'])">Stem direction must be specified for all notes and chords under the
@@ -19254,7 +19254,7 @@
         </rng:choice>
       </rng:zeroOrMore>
     </content>
-    <constraintSpec ident="attacca_start-type_attributes_required" scheme="isoschematron">
+    <constraintSpec ident="attacca_start-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:attacca[not(ancestor::mei:syllable)]">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
@@ -19295,7 +19295,7 @@
         </rng:choice>
       </rng:zeroOrMore>
     </content>
-    <constraintSpec ident="When_not_copyof_beam_content" scheme="isoschematron">
+    <constraintSpec ident="When_not_copyof_beam_content" scheme="schematron">
       <constraint>
         <sch:rule context="mei:beam[not(@copyof or @sameas)]">
           <sch:assert test="count(descendant::*[local-name()='note' or local-name()='rest' or               local-name()='chord' or local-name()='space']) &gt; 1">A beam that contains neither a copyof nor sameas attribute must have at least 2 note, rest, chord, or space
@@ -19327,7 +19327,7 @@
     <content>
       <rng:empty/>
     </content>
-    <constraintSpec ident="beamspan_start-_and_end-type_attributes_required" scheme="isoschematron">
+    <constraintSpec ident="beamspan_start-_and_end-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:beamSpan">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
@@ -19384,7 +19384,7 @@
     <content>
       <rng:empty/>
     </content>
-    <constraintSpec ident="bend_start-_and_end-type_attributes_required" scheme="isoschematron">
+    <constraintSpec ident="bend_start-_and_end-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:bend">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
@@ -19414,7 +19414,7 @@
         </rng:choice>
       </rng:zeroOrMore>
     </content>
-    <constraintSpec ident="bracketSpan_start-_and_end-type_attributes_required" scheme="isoschematron">
+    <constraintSpec ident="bracketSpan_start-_and_end-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:bracketSpan">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
@@ -19449,7 +19449,7 @@
     <content>
       <rng:empty/>
     </content>
-    <constraintSpec ident="breath_start-type_attributes_required" scheme="isoschematron">
+    <constraintSpec ident="breath_start-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:breath">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
@@ -19505,7 +19505,7 @@
     <content>
       <rng:empty/>
     </content>
-    <constraintSpec ident="fermata_start-type_attributes_required" scheme="isoschematron">
+    <constraintSpec ident="fermata_start-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:fermata">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
@@ -19582,7 +19582,7 @@
         </rng:choice>
       </rng:zeroOrMore>
     </content>
-    <constraintSpec ident="gliss_start-_and_end-type_attributes_required" scheme="isoschematron">
+    <constraintSpec ident="gliss_start-_and_end-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:gliss">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
@@ -19626,7 +19626,7 @@
         </rng:choice>
       </rng:zeroOrMore>
     </content>
-    <constraintSpec ident="When_not_copyof_graceGrp_content" scheme="isoschematron">
+    <constraintSpec ident="When_not_copyof_graceGrp_content" scheme="schematron">
       <constraint>
         <sch:rule context="mei:graceGrp[not(@copyof)]">
           <sch:assert test="count(descendant::*[local-name()='note' or local-name()='rest' or               local-name()='chord' or local-name()='space']) &gt; 0">A graceGrp without a copyof attribute must have at least 1 note, rest, chord, or space
@@ -19634,7 +19634,7 @@
         </sch:rule>
       </constraint>
     </constraintSpec>
-    <constraintSpec ident="When_graced" scheme="isoschematron">
+    <constraintSpec ident="When_graced" scheme="schematron">
       <constraint>
         <sch:rule context="mei:graceGrp[@grace]">
           <sch:assert test="not(descendant::mei:*[@grace])">The grace attribute is not allowed on
@@ -19658,7 +19658,7 @@
     <content>
       <rng:empty/>
     </content>
-    <constraintSpec ident="hairpin_start-_and_end-type_attributes_required" scheme="isoschematron">
+    <constraintSpec ident="hairpin_start-_and_end-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:hairpin">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
@@ -19711,7 +19711,7 @@
     <content>
       <rng:empty/>
     </content>
-    <constraintSpec ident="harpPedal_start-type_attributes_required" scheme="isoschematron">
+    <constraintSpec ident="harpPedal_start-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:harpPedal">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
@@ -19742,7 +19742,7 @@
         <rng:ref name="curve"/>
       </rng:zeroOrMore>
     </content>
-    <constraintSpec ident="lv_start-_and_end-type_attributes_required" scheme="isoschematron">
+    <constraintSpec ident="lv_start-_and_end-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:lv">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
@@ -19750,7 +19750,7 @@
         </sch:rule>
       </constraint>
     </constraintSpec>
-    <constraintSpec ident="lv_containing_curve" scheme="isoschematron">
+    <constraintSpec ident="lv_containing_curve" scheme="schematron">
       <constraint>
         <sch:rule context="mei:lv[mei:curve[@bezier or @bulge or @curvedir or @lform or @lwidth or @ho or @startho or @endho or @to or @startto or @endto or @vo or @startvo or              @endvo or @x or @y or @x2 or @y2]]">
           <sch:assert test="not(@bezier or @bulge or @curvedir or @lform or @lwidth or @ho or @startho or @endho or @to or @startto or @endto or @vo or @startvo or @endvo or @x or @y or @x2 or @y2)" role="warning">The visual attributes of the lv element (@bezier, @bulge, @curvedir,
@@ -19839,7 +19839,7 @@
         <rng:ref name="meterSig"/>
       </rng:zeroOrMore>
     </content>
-    <constraintSpec ident="check_meterSigGrpContent" scheme="isoschematron">
+    <constraintSpec ident="check_meterSigGrpContent" scheme="schematron">
       <constraint>
         <sch:rule context="mei:meterSigGrp[not(@copyof)]">
           <sch:assert test="count(mei:meterSig) &gt; 1">meterSigGrp must have at least 2 child
@@ -20013,7 +20013,7 @@
         </rng:choice>
       </rng:zeroOrMore>
     </content>
-    <constraintSpec ident="octave_start-_and_end-type_attributes_required" scheme="isoschematron">
+    <constraintSpec ident="octave_start-_and_end-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:octave">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
@@ -20098,7 +20098,7 @@
         </rng:interleave>
       </rng:choice>
     </content>
-    <constraintSpec ident="Check_ossia" scheme="isoschematron">
+    <constraintSpec ident="Check_ossia" scheme="schematron">
       <constraint>
         <sch:pattern>
           <sch:rule context="mei:measure/mei:ossia">
@@ -20169,7 +20169,7 @@
     <content>
       <rng:empty/>
     </content>
-    <constraintSpec ident="pedal_start-type_attributes_required" scheme="isoschematron">
+    <constraintSpec ident="pedal_start-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:pedal">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
@@ -20276,7 +20276,7 @@
         <rng:ref name="curve"/>
       </rng:zeroOrMore>
     </content>
-    <constraintSpec ident="slur_start-_and_end-type_attributes_required" scheme="isoschematron">
+    <constraintSpec ident="slur_start-_and_end-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:slur">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
@@ -20286,7 +20286,7 @@
         </sch:rule>
       </constraint>
     </constraintSpec>
-    <constraintSpec ident="slur_containing_curve" scheme="isoschematron">
+    <constraintSpec ident="slur_containing_curve" scheme="schematron">
       <constraint>
         <sch:rule context="mei:slur[mei:curve[@bezier or @bulge or @curvedir or @lform or @lwidth or @ho or @startho or @endho or @to or @startto or @endto or @vo or @startvo or @endvo or @x or @y or @x2 or @y2]]">
           <sch:assert test="not(@bezier or @bulge or @curvedir or @lform or @lwidth or @ho or @startho or @endho or @to or @startto or @endto or @vo or @startvo or @endvo or @x or @y or @x2 or @y2)" role="warning">The visual attributes of the slur (@bezier, @bulge, @curvedir, @lform,
@@ -20330,7 +20330,7 @@
         <rng:ref name="curve"/>
       </rng:zeroOrMore>
     </content>
-    <constraintSpec ident="tie_start-_and_end-type_attributes_required" scheme="isoschematron">
+    <constraintSpec ident="tie_start-_and_end-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:tie">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
@@ -20340,7 +20340,7 @@
         </sch:rule>
       </constraint>
     </constraintSpec>
-    <constraintSpec ident="tie_containing_curve" scheme="isoschematron">
+    <constraintSpec ident="tie_containing_curve" scheme="schematron">
       <constraint>
         <sch:rule context="mei:tie[mei:curve[@bezier or @bulge or @curvedir or @lform or @lwidth or @ho or @startho or @endho or @to or @startto or @endto or @vo or @startvo or @endvo or @x or @y or @x2 or @y2]]">
           <sch:assert test="not(@bezier or @bulge or @curvedir or @lform or @lwidth or @ho or @startho or @endho or @to or @startto or @endto or @vo or @startvo or @endvo or @x or @y or @x2 or @y2)" role="warning">The visual attributes of the tie (@bezier, @bulge, @curvedir, @lform,
@@ -20409,7 +20409,7 @@
     <content>
       <rng:empty/>
     </content>
-    <constraintSpec ident="tupletSpan_start-_and_end-type_attributes_required" scheme="isoschematron">
+    <constraintSpec ident="tupletSpan_start-_and_end-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:tupletSpan">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
@@ -20574,7 +20574,7 @@
     <content>
       <rng:empty/>
     </content>
-    <constraintSpec ident="mordent_start-type_attributes_required" scheme="isoschematron">
+    <constraintSpec ident="mordent_start-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:mordent">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
@@ -20603,7 +20603,7 @@
     <content>
       <rng:empty/>
     </content>
-    <constraintSpec ident="trill_start-type_attributes_required" scheme="isoschematron">
+    <constraintSpec ident="trill_start-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:trill">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
@@ -20637,7 +20637,7 @@
     <content>
       <rng:empty/>
     </content>
-    <constraintSpec ident="turn_start-type_attributes_required" scheme="isoschematron">
+    <constraintSpec ident="turn_start-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:turn">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
@@ -20931,7 +20931,7 @@
         </rng:choice>
       </rng:zeroOrMore>
     </content>
-    <constraintSpec ident="sp_start-type_attributes_required" scheme="isoschematron">
+    <constraintSpec ident="sp_start-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:sp[ancestor::mei:layer or ancestor::mei:measure or ancestor::mei:staff][not(ancestor::mei:sp)]">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
@@ -20939,7 +20939,7 @@
         </sch:rule>
       </constraint>
     </constraintSpec>
-    <constraintSpec ident="sp_start-type_attributes_forbidden" scheme="isoschematron">
+    <constraintSpec ident="sp_start-type_attributes_forbidden" scheme="schematron">
       <constraint>
         <sch:rule context="mei:sp[not(ancestor::mei:layer or ancestor::mei:measure or ancestor::mei:staff)]">
           <sch:assert test="not(@startid or @endid or @tstamp or @tstamp2 or @tstamp.ges or @tstamp.real or                @startho or @endho or @to or @startto or @endto or @staff or @layer or @place or @plist)">Must not have any of the attributes: startid, endid, tstamp, tstamp2, tstamp.ges,
@@ -20981,7 +20981,7 @@
         </rng:choice>
       </rng:zeroOrMore>
     </content>
-    <constraintSpec ident="stageDir_start-type_attributes_required" scheme="isoschematron">
+    <constraintSpec ident="stageDir_start-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:stageDir[ancestor::mei:layer or ancestor::mei:measure or ancestor::mei:staff][not(ancestor::mei:sp)]">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
@@ -20989,7 +20989,7 @@
         </sch:rule>
       </constraint>
     </constraintSpec>
-    <constraintSpec ident="stageDir_start-type_attributes_forbidden" scheme="isoschematron">
+    <constraintSpec ident="stageDir_start-type_attributes_forbidden" scheme="schematron">
       <constraint>
         <sch:rule context="mei:stageDir[not(ancestor::mei:layer or ancestor::mei:measure or ancestor::mei:staff) or ancestor::mei:sp]">
           <sch:assert test="not(@startid or @endid or @tstamp or @tstamp2 or @tstamp.ges or @tstamp.real or @startho or @endho or @to or                @startto or @endto or @staff or @layer or @place or @plist)">Must not have any of the attributes: startid, endid, tstamp, tstamp2, tstamp.ges,
@@ -21311,7 +21311,7 @@
         </rng:choice>
       </rng:zeroOrMore>
     </content>
-    <constraintSpec ident="cpMark_start-_and_end-type_attributes_required" scheme="isoschematron">
+    <constraintSpec ident="cpMark_start-_and_end-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:cpMark">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
@@ -21566,7 +21566,7 @@
         <datatype>
           <rng:ref name="data.URI"/>
         </datatype>
-        <constraintSpec ident="check_newTarget" scheme="isoschematron">
+        <constraintSpec ident="check_newTarget" scheme="schematron">
           <constraint>
             <sch:rule context="@new">
               <sch:assert role="warning" test="not(normalize-space(.) eq '')">@new attribute should
@@ -21583,7 +21583,7 @@
         <datatype>
           <rng:ref name="data.URI"/>
         </datatype>
-        <constraintSpec ident="check_oldTarget" scheme="isoschematron">
+        <constraintSpec ident="check_oldTarget" scheme="schematron">
           <constraint>
             <sch:rule context="@old">
               <sch:assert role="warning" test="not(normalize-space(.) eq '')">@old attribute should
@@ -22048,7 +22048,7 @@
         <datatype>
           <rng:data type="string"/>
         </datatype>
-        <constraintSpec ident="check_glyph.name" scheme="isoschematron">
+        <constraintSpec ident="check_glyph.name" scheme="schematron">
           <constraint>
             <sch:rule context="@glyph.name">
               <sch:assert role="warning" test="not(normalize-space(.) eq '')">@glyph.name attribute
@@ -22063,7 +22063,7 @@
         <datatype>
           <rng:ref name="data.HEXNUM"/>
         </datatype>
-        <constraintSpec ident="check_glyph.num" scheme="isoschematron">
+        <constraintSpec ident="check_glyph.num" scheme="schematron">
           <constraint>
             <sch:rule context="mei:*[@glyph.num and (lower-case(@glyph.auth) eq 'smufl' or @glyph.uri eq 'http://www.smufl.org/')]">
               <sch:assert role="warning" test="matches(normalize-space(@glyph.num), '^(#x|U\+)E([0-9AB][0-9A-F][0-9A-F]|C[0-9A][0-9A-F]|CB[0-9A-F])$')">SMuFL version 1.18 uses the range U+E000 - U+ECBF.</sch:assert>
@@ -22095,7 +22095,7 @@
         <datatype minOccurs="1" maxOccurs="unbounded">
           <rng:ref name="data.URI"/>
         </datatype>
-        <constraintSpec ident="check_facsTarget" scheme="isoschematron">
+        <constraintSpec ident="check_facsTarget" scheme="schematron">
           <constraint>
             <sch:rule context="@facs">
               <sch:assert role="warning" test="not(normalize-space(.) eq '')">@facs attribute should
@@ -22311,7 +22311,7 @@
         <rng:ref name="zone"/>
       </rng:zeroOrMore>
     </content>
-    <constraintSpec ident="graphic_attributes" scheme="isoschematron">
+    <constraintSpec ident="graphic_attributes" scheme="schematron">
       <constraint>
         <sch:rule context="mei:zone/mei:graphic">
           <sch:assert role="warning" test="count(mei:*) = 0">Graphic child of zone should not have
@@ -22523,7 +22523,7 @@
         </rng:choice>
       </rng:zeroOrMore>
     </content>
-    <constraintSpec ident="fing_start-type_attributes_required" scheme="isoschematron">
+    <constraintSpec ident="fing_start-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:fing[not(ancestor::mei:fingGrp)]">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
@@ -22531,7 +22531,7 @@
         </sch:rule>
       </constraint>
     </constraintSpec>
-    <constraintSpec ident="stack_exclusion" scheme="isoschematron">
+    <constraintSpec ident="stack_exclusion" scheme="schematron">
       <!-- Exclusion implemented using Schematron -->
       <constraint>
         <sch:rule context="mei:fing">
@@ -22561,7 +22561,7 @@
         </rng:choice>
       </rng:zeroOrMore>
     </content>
-    <constraintSpec ident="require_fingeringLike_children" scheme="isoschematron">
+    <constraintSpec ident="require_fingeringLike_children" scheme="schematron">
       <constraint>
         <sch:rule context="mei:fingGrp">
           <sch:assert test="count(mei:fing) + count(mei:fingGrp) &gt; 1">At least 2 fing or fingGrp
@@ -22569,7 +22569,7 @@
         </sch:rule>
       </constraint>
     </constraintSpec>
-    <constraintSpec ident="check_fingGrp_start-type_attributes" scheme="isoschematron">
+    <constraintSpec ident="check_fingGrp_start-type_attributes" scheme="schematron">
       <constraint>
         <sch:pattern>
           <sch:rule context="mei:fingGrp[not(ancestor::mei:fingGrp)][@tstamp or @startid]">
@@ -23111,7 +23111,7 @@
         <datatype>
           <rng:ref name="data.ACCIDENTAL.GESTURAL"/>
         </datatype>
-        <constraintSpec ident="check_accid_duplication" scheme="isoschematron">
+        <constraintSpec ident="check_accid_duplication" scheme="schematron">
           <constraint>
             <sch:rule context="@accid.ges">
               <sch:assert role="warning" test="not(. eq ../@accid)">The value of @accid.ges should
@@ -23587,7 +23587,7 @@
       <memberOf key="att.note.ges.mensural"/>
       <memberOf key="att.stringtab"/>
     </classes>
-    <constraintSpec ident="extremis_disallows_gestural_pitch" scheme="isoschematron">
+    <constraintSpec ident="extremis_disallows_gestural_pitch" scheme="schematron">
       <constraint>
         <sch:rule context="mei:note[@extremis]">
           <sch:assert test="not(@pname.ges) and not(@oct.ges)">When the @extremis attribute is used,
@@ -23971,7 +23971,7 @@
         <datatype>
           <rng:ref name="data.URI"/>
         </datatype>
-        <constraintSpec ident="check_chordrefTarget" scheme="isoschematron">
+        <constraintSpec ident="check_chordrefTarget" scheme="schematron">
           <constraint>
             <sch:rule context="@chordref">
               <sch:assert role="warning" test="not(normalize-space(.) eq '')">@chordref attribute
@@ -24135,7 +24135,7 @@
         </rng:choice>
       </rng:zeroOrMore>
     </content>
-    <constraintSpec ident="harm_start-type_attributes_required" scheme="isoschematron">
+    <constraintSpec ident="harm_start-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:harm">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
@@ -24632,7 +24632,7 @@
         <rng:ref name="desc"/>
       </rng:optional>
     </content>
-    <constraintSpec ident="context_attribute_requires_content" scheme="isoschematron">
+    <constraintSpec ident="context_attribute_requires_content" scheme="schematron">
       <constraint>
         <sch:rule context="@context">
           <sch:assert role="warning" test="not(normalize-space(.) eq '')">@context attribute should
@@ -24792,7 +24792,7 @@
         <rng:ref name="category"/>
       </rng:zeroOrMore>
     </content>
-    <constraintSpec ident="category_id" scheme="isoschematron">
+    <constraintSpec ident="category_id" scheme="schematron">
       <constraint>
         <sch:rule context="mei:category">
           <sch:assert test="@xml:id" role="warning">To be addressable, the category element must
@@ -24860,7 +24860,7 @@
         <rng:ref name="model.dateLike"/>
       </rng:optional>
     </content>
-    <constraintSpec ident="check_change" scheme="isoschematron">
+    <constraintSpec ident="check_change" scheme="schematron">
       <constraint>
         <sch:rule context="mei:change">
           <sch:assert test="@isodate or mei:date">The date of the change must be recorded in an
@@ -24973,7 +24973,7 @@
         </rng:choice>
       </rng:choice>
     </content>
-    <constraintSpec ident="checkComponentList" scheme="isoschematron">
+    <constraintSpec ident="checkComponentList" scheme="schematron">
       <constraint>
         <sch:rule context="mei:componentList">
           <sch:assert test="every $i in ./child::mei:*[not(local-name()='head')] satisfies             $i/local-name() eq ./parent::mei:*/local-name()">Only child elements of the same name as the parent of the componentList are
@@ -24981,7 +24981,7 @@
         </sch:rule>
       </constraint>
     </constraintSpec>
-    <constraintSpec ident="checkComponents" scheme="isoschematron">
+    <constraintSpec ident="checkComponents" scheme="schematron">
       <constraint>
         <sch:rule context="mei:componentList[mei:*[@comptype]]">
           <sch:assert role="warning" test="count(mei:*[@comptype]) = count(mei:*[local-name() ne 'head'])">When any child
@@ -25062,7 +25062,7 @@
         </rng:oneOrMore>
       </rng:choice>
     </content>
-    <constraintSpec ident="checkContentsLabels" scheme="isoschematron">
+    <constraintSpec ident="checkContentsLabels" scheme="schematron">
       <constraint>
         <sch:rule context="mei:contents[mei:label]">
           <sch:assert role="warning" test="count(mei:label) = count(mei:contentItem)">When labels
@@ -25598,7 +25598,7 @@
         <rng:ref name="hand"/>
       </rng:zeroOrMore>
     </content>
-    <constraintSpec ident="checkHandListLabels" scheme="isoschematron">
+    <constraintSpec ident="checkHandListLabels" scheme="schematron">
       <constraint>
         <sch:rule context="mei:handList[mei:label]">
           <sch:assert role="warning" test="count(mei:label) = count(mei:hand)">When labels are used,
@@ -25634,7 +25634,7 @@
         </rng:choice>
       </rng:zeroOrMore>
     </content>
-    <constraintSpec ident="history_restriction" scheme="isoschematron">
+    <constraintSpec ident="history_restriction" scheme="schematron">
       <constraint>
         <sch:rule context="mei:history[parent::mei:work or parent::mei:expression or parent::mei:manifestation[not(@singleton='true')]]">
           <sch:assert test="not(mei:acquisition or mei:provenance or mei:exhibHist or mei:treatHist or mei:treatSched)">The elements acquisition, provenance, exhibHist, treatHist and treatSched are not permitted at the work or expression level and are only permitted at the manifestation level, if the manifestation is a manifestation singleton.</sch:assert>
@@ -25659,7 +25659,7 @@
     <content>
       <rng:text/>
     </content>
-    <constraintSpec ident="Check_incipCode_form_mimetype" scheme="isoschematron">
+    <constraintSpec ident="Check_incipCode_form_mimetype" scheme="schematron">
       <constraint>
         <sch:rule context="mei:incipCode">
           <sch:assert test="@form or @mimetype">incipCode must have a form or mimetype
@@ -26749,7 +26749,7 @@
         <rng:ref name="attUsage"/>
       </rng:zeroOrMore>
     </content>
-    <constraintSpec ident="context_attribute_requires_content" scheme="isoschematron">
+    <constraintSpec ident="context_attribute_requires_content" scheme="schematron">
       <constraint>
         <sch:rule context="@context">
           <sch:assert role="warning" test="not(normalize-space(.) eq '')">@context attribute should
@@ -26831,7 +26831,7 @@
         <rng:ref name="term"/>
       </rng:zeroOrMore>
     </content>
-    <constraintSpec ident="checkTermListLabels" scheme="isoschematron">
+    <constraintSpec ident="checkTermListLabels" scheme="schematron">
       <constraint>
         <sch:rule context="mei:termList[mei:label]">
           <sch:assert role="warning" test="count(mei:label) = count(mei:term)">When labels are used,
@@ -27029,7 +27029,7 @@
     <content>
       <rng:ref name="macro.struc-unstrucContent"/>
     </content>
-    <constraintSpec ident="check_watermark_inline" scheme="isoschematron">
+    <constraintSpec ident="check_watermark_inline" scheme="schematron">
       <constraint>
         <sch:rule context="mei:watermark">
           <sch:assert test="ancestor::mei:physDesc">The watermark element may only appear as a
@@ -27463,7 +27463,7 @@
   </macroSpec>
   <classSpec ident="att.duration.quality" module="MEI.mensural" type="atts">
     <desc xml:lang="en">Attribute that expresses duration for a given mensural note symbol.</desc>
-    <constraintSpec ident="check_duplex_quality" scheme="isoschematron">
+    <constraintSpec ident="check_duplex_quality" scheme="schematron">
       <constraint>
         <sch:rule context="(mei:note|mei:space)[@dur.quality='duplex']">
           <sch:assert test="@dur='longa'">
@@ -27472,7 +27472,7 @@
         </sch:rule>
       </constraint>
     </constraintSpec>
-    <constraintSpec ident="check_maiorminor_quality" scheme="isoschematron">
+    <constraintSpec ident="check_maiorminor_quality" scheme="schematron">
       <constraint>
         <sch:rule context="(mei:note|mei:space)[@dur.quality='maior' or @dur.quality='minor']">
           <sch:assert test="@dur='semibrevis'">
@@ -27524,7 +27524,7 @@
   </classSpec>
   <classSpec ident="att.mensural.shared" module="MEI.mensural" type="atts">
     <desc xml:lang="en">Shared attributes in the mensural repertoire.</desc>
-    <constraintSpec ident="mensuration_conflicting_attributes" scheme="isoschematron">
+    <constraintSpec ident="mensuration_conflicting_attributes" scheme="schematron">
       <constraint>
         <sch:rule context="mei:mensur[@divisio]">
           <sch:assert test="not(@tempus) and not(@prolatio)">
@@ -27755,7 +27755,7 @@
       <memberOf key="att.plica.ges"/>
       <memberOf key="att.plica.anl"/>
     </classes>
-    <constraintSpec ident="Check_plica" scheme="isoschematron">
+    <constraintSpec ident="Check_plica" scheme="schematron">
       <constraint>
         <sch:rule context="mei:plica">
           <sch:assert test="count(../mei:plica) &lt;= 1">Only one plica is allowed.</sch:assert>
@@ -27799,7 +27799,7 @@
     <content>
       <rng:empty/>
     </content>
-    <constraintSpec ident="Check_stem" scheme="isoschematron">
+    <constraintSpec ident="Check_stem" scheme="schematron">
       <constraint>
         <sch:rule context="mei:stem">
           <sch:assert test="not(ancestor::mei:note/@*[starts-with(local-name(),'stem.')])">A note with nested stem elements must not have @stem.* attributes.</sch:assert>
@@ -27860,7 +27860,7 @@
         <datatype>
           <rng:ref name="data.URI"/>
         </datatype>
-        <constraintSpec ident="check_instrTarget" scheme="isoschematron">
+        <constraintSpec ident="check_instrTarget" scheme="schematron">
           <constraint>
             <sch:rule context="@instr">
               <sch:assert role="warning" test="not(normalize-space(.) eq '')">@instr attribute
@@ -27893,7 +27893,7 @@
   </classSpec>
   <classSpec ident="att.midiInstrument" module="MEI.midi" type="atts">
     <desc xml:lang="en">Attributes that record MIDI instrument information.</desc>
-    <constraintSpec ident="One_of_instrname_or_instrnum" scheme="isoschematron">
+    <constraintSpec ident="One_of_instrname_or_instrnum" scheme="schematron">
       <constraint>
         <sch:rule context="mei:*[@midi.instrname]">
           <sch:assert test="not(@midi.instrnum)">Only one of @midi.instrname and @midi.instrnum
@@ -27901,7 +27901,7 @@
         </sch:rule>
       </constraint>
     </constraintSpec>
-    <constraintSpec ident="One_of_patchname_or_patchnum" scheme="isoschematron">
+    <constraintSpec ident="One_of_patchname_or_patchnum" scheme="schematron">
       <constraint>
         <sch:rule context="mei:*[@midi.patchname]">
           <sch:assert test="not(@midi.patchnum)">Only one of @midi.patchname and @midi.patchnum
@@ -28320,7 +28320,7 @@
     <desc xml:lang="en">Attributes that express the relationship between a component and its host.</desc>
     <attList>
       <attDef ident="comptype" usage="opt">
-        <constraintSpec ident="checkComponentType" scheme="isoschematron">
+        <constraintSpec ident="checkComponentType" scheme="schematron">
           <constraint>
             <sch:rule context="mei:*[@comptype]">
               <sch:let name="elementName" value="local-name()"/>
@@ -28469,7 +28469,7 @@
     <content>
       <rng:ref name="macro.struc-unstrucContent"/>
     </content>
-    <constraintSpec ident="check_catchwords_inline" scheme="isoschematron">
+    <constraintSpec ident="check_catchwords_inline" scheme="schematron">
       <constraint>
         <sch:rule context="mei:catchwords">
           <sch:assert test="ancestor::mei:physDesc">The catchwords element may only appear as a
@@ -28629,7 +28629,7 @@
     <content>
       <rng:ref name="macro.struc-unstrucContent"/>
     </content>
-    <constraintSpec ident="check_heraldry_inline" scheme="isoschematron">
+    <constraintSpec ident="check_heraldry_inline" scheme="schematron">
       <constraint>
         <sch:rule context="mei:heraldry">
           <sch:assert test="ancestor::mei:physDesc">The heraldry element may only appear as a
@@ -28765,7 +28765,7 @@
         </rng:choice>
       </rng:zeroOrMore>
     </content>
-    <constraintSpec ident="check_locus_inline" scheme="isoschematron">
+    <constraintSpec ident="check_locus_inline" scheme="schematron">
       <constraint>
         <sch:rule context="mei:locus">
           <sch:assert test="ancestor::mei:physDesc or parent::mei:contentItem or              ancestor::mei:source[ancestor::mei:componentList[ancestor::mei:sourceDesc or              ancestor::mei:sourceList or ancestor::mei:workList]]">The locus element may only appear as a descendant of a physDesc element, a
@@ -28815,7 +28815,7 @@
         <rng:ref name="locus"/>
       </rng:zeroOrMore>
     </content>
-    <constraintSpec ident="check_locusGrp_inline" module="MEI.msDesc" scheme="isoschematron">
+    <constraintSpec ident="check_locusGrp_inline" module="MEI.msDesc" scheme="schematron">
       <constraint>
         <sch:rule context="mei:locusGrp">
           <sch:assert test="ancestor::mei:physDesc or parent::mei:contentItem or              ancestor::mei:source[ancestor::mei:componentList[ancestor::mei:sourceDesc or              ancestor::mei:sourceList or ancestor::mei:workList]]">The locusGrp element may only appear as a descendant of a physDesc element, a
@@ -29017,7 +29017,7 @@
     <content>
       <rng:ref name="macro.struc-unstrucContent"/>
     </content>
-    <constraintSpec ident="check_secFolio_inline" scheme="isoschematron">
+    <constraintSpec ident="check_secFolio_inline" scheme="schematron">
       <constraint>
         <sch:rule context="mei:secFolio">
           <sch:assert test="ancestor::mei:physDesc">The secFolio element may only appear as a
@@ -29041,7 +29041,7 @@
     <content>
       <rng:ref name="macro.struc-unstrucContent"/>
     </content>
-    <constraintSpec ident="check_signatures_inline" scheme="isoschematron">
+    <constraintSpec ident="check_signatures_inline" scheme="schematron">
       <constraint>
         <sch:rule context="mei:signatures">
           <sch:assert test="ancestor::mei:physDesc">The signatures element may only appear as a
@@ -30366,7 +30366,7 @@
   </moduleSpec>
   <classSpec ident="att.alignment" module="MEI.performance" type="atts">
     <desc xml:lang="en">Temporal alignment attributes.</desc>
-    <constraintSpec ident="check_whenTarget" scheme="isoschematron">
+    <constraintSpec ident="check_whenTarget" scheme="schematron">
       <constraint>
         <sch:rule context="@when">
           <sch:assert role="warning" test="not(normalize-space(.) eq '')">@when attribute should
@@ -30403,7 +30403,7 @@
         <rng:ref name="clip"/>
       </rng:zeroOrMore>
     </content>
-    <constraintSpec ident="avFile_child_of_clip" scheme="isoschematron">
+    <constraintSpec ident="avFile_child_of_clip" scheme="schematron">
       <constraint>
         <sch:rule context="mei:clip/mei:avFile">
           <sch:assert test="count(mei:*) = 0">An avFile child of clip cannot have
@@ -30434,7 +30434,7 @@
         <rng:ref name="when"/>
       </rng:zeroOrMore>
     </content>
-    <constraintSpec ident="betype_required_when_begin_or_end" scheme="isoschematron">
+    <constraintSpec ident="betype_required_when_begin_or_end" scheme="schematron">
       <constraint>
         <sch:rule context="mei:clip[@begin or @end]">
           <sch:assert role="warning" test="@betype or ancestor::mei:*[@betype]">When @begin or @end
@@ -30485,7 +30485,7 @@
         <rng:ref name="clip"/>
       </rng:zeroOrMore>
     </content>
-    <constraintSpec ident="betype_required_when_begin_or_end" scheme="isoschematron">
+    <constraintSpec ident="betype_required_when_begin_or_end" scheme="schematron">
       <constraint>
         <sch:rule context="mei:recording[@begin or @end]">
           <sch:assert role="warning" test="@betype">When @begin or @end is used, @betype should be
@@ -30510,7 +30510,7 @@
          <rng:ref name="extData"/>
       </rng:zeroOrMore>
     </content>
-    <constraintSpec ident="check_when_interval" scheme="isoschematron">
+    <constraintSpec ident="check_when_interval" scheme="schematron">
       <constraint>
         <sch:rule context="mei:when[@interval]">
           <sch:assert test="@since">@since must be present when @interval is used.</sch:assert>
@@ -30527,7 +30527,7 @@
         </sch:rule>
       </constraint>
     </constraintSpec>
-    <constraintSpec ident="check_when_absolute" scheme="isoschematron">
+    <constraintSpec ident="check_when_absolute" scheme="schematron">
       <constraint>
         <sch:rule context="mei:when[@absolute]">
           <sch:assert role="warning" test="@abstype or ancestor::mei:*[@betype]">When @absolute is
@@ -30577,7 +30577,7 @@
         <datatype>
           <rng:ref name="data.URI"/>
         </datatype>
-        <constraintSpec ident="check_sinceTarget" scheme="isoschematron">
+        <constraintSpec ident="check_sinceTarget" scheme="schematron">
           <constraint>
             <sch:rule context="@since">
               <sch:assert role="warning" test="not(normalize-space(.) eq '')">@since attribute
@@ -30909,7 +30909,7 @@
         <datatype>
           <rng:ref name="data.URI"/>
         </datatype>
-        <constraintSpec ident="check_attaccaTarget" scheme="isoschematron">
+        <constraintSpec ident="check_attaccaTarget" scheme="schematron">
           <constraint>
             <sch:rule context="mei:attacca/@target">
               <sch:assert role="warning" test="not(normalize-space(.) eq '')">@target attribute
@@ -30946,7 +30946,7 @@
         <datatype>
           <rng:ref name="data.AUGMENTDOT"/>
         </datatype>
-        <constraintSpec ident="dots_attribute_requires_dur" scheme="isoschematron">
+        <constraintSpec ident="dots_attribute_requires_dur" scheme="schematron">
           <constraint>
             <sch:rule context="mei:*[@dots]">
               <sch:assert test="@dur">An element with a dots attribute must also have a dur
@@ -31022,7 +31022,7 @@
         <datatype>
           <rng:ref name="data.BARMETHOD"/>
         </datatype>
-        <constraintSpec ident="check_barmethod" scheme="isoschematron">
+        <constraintSpec ident="check_barmethod" scheme="schematron">
           <constraint>
             <sch:rule context="@bar.method[parent::*[matches(local-name(), '(staffDef|measure)')]]">
               <sch:assert test="not(. eq 'mensur')">"mensur" not allowed in this
@@ -31144,7 +31144,7 @@
         <datatype maxOccurs="unbounded">
           <rng:ref name="data.URI"/>
         </datatype>
-        <constraintSpec ident="check_classURI" scheme="isoschematron">
+        <constraintSpec ident="check_classURI" scheme="schematron">
           <constraint>
             <sch:rule context="@class">
               <sch:assert test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:category/@xml:id or matches($i, '^([a-z]+://|\.{1,2}/)')">The value in @class must either correspond to the @xml:id attribute of a category
@@ -31176,7 +31176,7 @@
   <classSpec ident="att.cleffing.log" module="MEI.shared" type="atts">
     <desc xml:lang="en">Used by staffDef and scoreDef to provide default values for attributes in the logical
       domain related to clefs.</desc>
-    <constraintSpec ident="clef_shape_requires_clef_line" scheme="isoschematron">
+    <constraintSpec ident="clef_shape_requires_clef_line" scheme="schematron">
       <constraint>
         <sch:rule context="mei:*[matches(@clef.shape, '[FCG]')]">
           <sch:assert test="@clef.line">An 'F', 'C', or 'G' clef requires that its position be
@@ -31222,7 +31222,7 @@
   </classSpec>
   <classSpec ident="att.clefShape" module="MEI.shared" type="atts">
     <desc xml:lang="en">Attributes that record the shape of a clef.</desc>
-    <constraintSpec ident="shape_requires_line" scheme="isoschematron">
+    <constraintSpec ident="shape_requires_line" scheme="schematron">
       <constraint>
         <sch:rule context="mei:clef[matches(@shape, '[FCG]')]">
           <sch:assert test="@line">When @shape is present, @line must also be
@@ -31424,7 +31424,7 @@
         <datatype>
           <rng:ref name="data.URI"/>
         </datatype>
-        <constraintSpec ident="check_custosTarget" scheme="isoschematron">
+        <constraintSpec ident="check_custosTarget" scheme="schematron">
           <constraint>
             <sch:rule context="mei:custos/@target">
               <sch:assert role="warning" test="not(normalize-space(.) eq '')">@target attribute
@@ -31480,7 +31480,7 @@
         <datatype maxOccurs="unbounded">
           <rng:ref name="data.URI"/>
         </datatype>
-        <constraintSpec ident="check_dataTarget" scheme="isoschematron">
+        <constraintSpec ident="check_dataTarget" scheme="schematron">
           <constraint>
             <sch:rule context="@data">
               <sch:assert role="warning" test="not(normalize-space(.) eq '')">@data attribute should
@@ -31510,7 +31510,7 @@
         <datatype maxOccurs="unbounded">
           <rng:ref name="data.URI"/>
         </datatype>
-        <constraintSpec ident="check_declsTarget" scheme="isoschematron">
+        <constraintSpec ident="check_declsTarget" scheme="schematron">
           <constraint>
             <sch:rule context="@decls">
               <sch:assert role="warning" test="not(normalize-space(.) eq '')">@decls attribute
@@ -31784,7 +31784,7 @@
         <datatype>
           <rng:data type="string"/>
         </datatype>
-        <constraintSpec ident="check_extent" scheme="isoschematron">
+        <constraintSpec ident="check_extent" scheme="schematron">
           <constraint>
             <sch:rule context="@extent[matches(normalize-space(.), '^\d+(\.\d+)?$')]">
               <sch:assert role="warning" test="../@unit">The @unit attribute is
@@ -31847,7 +31847,7 @@
         <datatype>
           <rng:ref name="data.URI"/>
         </datatype>
-        <constraintSpec ident="check_handTarget" scheme="isoschematron">
+        <constraintSpec ident="check_handTarget" scheme="schematron">
           <constraint>
             <sch:rule context="@hand">
               <sch:assert role="warning" test="not(normalize-space(.) eq '')">@hand attribute should
@@ -31921,7 +31921,7 @@
         <datatype maxOccurs="unbounded">
           <rng:ref name="data.URI"/>
         </datatype>
-        <constraintSpec ident="check_joinTarget" scheme="isoschematron">
+        <constraintSpec ident="check_joinTarget" scheme="schematron">
           <constraint>
             <sch:rule context="@join">
               <sch:assert role="warning" test="not(normalize-space(.) eq '')">@join attribute should
@@ -32036,7 +32036,7 @@
         <datatype>
           <rng:ref name="data.URI"/>
         </datatype>
-        <constraintSpec ident="check_defTarget_layer" scheme="isoschematron">
+        <constraintSpec ident="check_defTarget_layer" scheme="schematron">
           <constraint>
             <sch:rule context="mei:layer/@def">
               <sch:assert role="warning" test="not(normalize-space(.) eq '')">@def attribute should
@@ -32142,7 +32142,7 @@
             <rng:param name="minInclusive">2</rng:param>
           </rng:data>
         </datatype>
-        <constraintSpec ident="check_lsegs" scheme="isoschematron">
+        <constraintSpec ident="check_lsegs" scheme="schematron">
           <constraint>
             <sch:rule context="@lsegs">
               <sch:assert test="matches(../@lform, '(dashed|dotted|wavy)')">@lform attribute
@@ -32656,7 +32656,7 @@
         <datatype>
           <rng:ref name="data.URI"/>
         </datatype>
-        <constraintSpec ident="check_nymrefTarget" scheme="isoschematron">
+        <constraintSpec ident="check_nymrefTarget" scheme="schematron">
           <constraint>
             <sch:rule context="@nymref">
               <sch:assert role="warning" test="not(normalize-space(.) eq '')">@nymref attribute
@@ -32745,7 +32745,7 @@
         <datatype>
           <rng:ref name="data.URI"/>
         </datatype>
-        <constraintSpec ident="check_head.altsymTarget" scheme="isoschematron">
+        <constraintSpec ident="check_head.altsymTarget" scheme="schematron">
           <constraint>
             <sch:rule context="@head.altsym">
               <sch:assert role="warning" test="not(normalize-space(.) eq '')">@head.altsym attribute
@@ -32762,7 +32762,7 @@
         <datatype>
           <rng:data type="NMTOKEN"/>
         </datatype>
-        <constraintSpec ident="check_head.auth" scheme="isoschematron">
+        <constraintSpec ident="check_head.auth" scheme="schematron">
           <constraint>
             <sch:rule context="mei:*[lower-case(@head.auth) eq 'smufl']">
               <sch:assert test="matches(@head.shape, '^#x') or matches(@head.shape, '^U+')">When
@@ -32814,7 +32814,7 @@
         <datatype>
           <rng:ref name="data.HEADSHAPE"/>
         </datatype>
-        <constraintSpec ident="check_headshape_num" scheme="isoschematron">
+        <constraintSpec ident="check_headshape_num" scheme="schematron">
           <constraint>
             <sch:rule context="mei:*[(matches(@head.shape, '#x') or matches(@head.shape, 'U+')) and (lower-case(@head.auth) eq 'smufl')]">
               <sch:assert role="warning" test="matches(normalize-space(@head.shape), '^(#x|U\+)E([0-9AB][0-9A-F][0-9A-F]|C[0-9A][0-9A-F]|CB[0-9A-F])$')">SMuFL version 1.18 uses the range U+E000 - U+ECBF.</sch:assert>
@@ -32963,7 +32963,7 @@
         <datatype>
           <rng:ref name="data.MEASUREBEAT"/>
         </datatype>
-        <constraintSpec ident="origin.tstamp2_requires_origin.tstamp" scheme="isoschematron">
+        <constraintSpec ident="origin.tstamp2_requires_origin.tstamp" scheme="schematron">
           <constraint>
             <sch:rule context="mei:*[@origin.tstamp2]">
               <sch:assert test="@origin.tstamp">When @origin.tstamp2 is used @origin.tstamp must
@@ -33175,7 +33175,7 @@
         <datatype maxOccurs="unbounded">
           <rng:ref name="data.URI"/>
         </datatype>
-        <constraintSpec ident="check_plistTarget" scheme="isoschematron">
+        <constraintSpec ident="check_plistTarget" scheme="schematron">
           <constraint>
             <sch:rule context="@plist">
               <sch:assert role="warning" test="not(normalize-space(.) eq '')">@plist attribute
@@ -33317,7 +33317,7 @@
         <datatype>
           <rng:ref name="data.CONFIDENCE"/>
         </datatype>
-        <constraintSpec ident="check_confidence" scheme="isoschematron">
+        <constraintSpec ident="check_confidence" scheme="schematron">
           <constraint>
             <sch:rule context="mei:*[@confidence]">
               <sch:assert test="@min and @max">The attributes @min and @max are required when
@@ -33370,7 +33370,7 @@
         <datatype maxOccurs="unbounded">
           <rng:ref name="data.URI"/>
         </datatype>
-        <constraintSpec ident="check_respTarget" scheme="isoschematron">
+        <constraintSpec ident="check_respTarget" scheme="schematron">
           <constraint>
             <sch:rule context="@resp">
               <sch:assert role="warning" test="not(normalize-space(.) eq '')">@resp attribute should
@@ -33558,7 +33558,7 @@
         <datatype>
           <rng:ref name="data.URI"/>
         </datatype>
-        <constraintSpec ident="check_defTarget_staff" scheme="isoschematron">
+        <constraintSpec ident="check_defTarget_staff" scheme="schematron">
           <constraint>
             <sch:rule context="mei:staff/@def">
               <sch:assert role="warning" test="not(normalize-space(.) eq '')">@def attribute should
@@ -33700,7 +33700,7 @@
         <datatype>
           <rng:ref name="data.URI"/>
         </datatype>
-        <constraintSpec ident="check_endidTarget" scheme="isoschematron">
+        <constraintSpec ident="check_endidTarget" scheme="schematron">
           <constraint>
             <sch:rule context="@endid">
               <sch:assert role="warning" test="not(normalize-space(.) eq '')">@endid attribute
@@ -33723,7 +33723,7 @@
         <datatype>
           <rng:ref name="data.URI"/>
         </datatype>
-        <constraintSpec ident="check_startidTarget" scheme="isoschematron">
+        <constraintSpec ident="check_startidTarget" scheme="schematron">
           <constraint>
             <sch:rule context="@startid">
               <sch:assert role="warning" test="not(normalize-space(.) eq '')">@startid attribute
@@ -33777,7 +33777,7 @@
         <datatype maxOccurs="1">
           <rng:ref name="data.URI"/>
         </datatype>
-        <constraintSpec ident="check_stem.sameasTarget" scheme="isoschematron">
+        <constraintSpec ident="check_stem.sameasTarget" scheme="schematron">
           <constraint>
             <sch:rule context="@stem.sameas">
               <sch:let name="layer.n" value="self::node()/ancestor::mei:layer/@n"/>
@@ -35025,7 +35025,7 @@
         </rng:zeroOrMore>
       </rng:choice>
     </content>
-    <constraintSpec ident="Check_annot_data" scheme="isoschematron">
+    <constraintSpec ident="Check_annot_data" scheme="schematron">
       <constraint>
         <sch:rule context="mei:annot[@data]">
           <sch:assert test="ancestor::mei:notesStmt">The @data attribute may only occur on an
@@ -35214,7 +35214,7 @@
         </rng:choice>
       </rng:zeroOrMore>
     </content>
-    <constraintSpec ident="checkBiblLabels" scheme="isoschematron">
+    <constraintSpec ident="checkBiblLabels" scheme="schematron">
       <constraint>
         <sch:rule context="mei:biblList[mei:label]">
           <sch:assert role="warning" test="count(mei:label) = count(mei:bibl)">When labels are used,
@@ -35339,7 +35339,7 @@
     <content>
       <rng:empty/>
     </content>
-    <constraintSpec ident="caesura_start-type_attributes_required" scheme="isoschematron">
+    <constraintSpec ident="caesura_start-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:caesura">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
@@ -35475,7 +35475,7 @@
         <datatype>
           <rng:data type="positiveInteger"/>
         </datatype>
-        <constraintSpec ident="check_cb" scheme="isoschematron">
+        <constraintSpec ident="check_cb" scheme="schematron">
           <constraint>
             <sch:rule context="mei:cb">
               <sch:let name="totalColumns" value="preceding::mei:colLayout[1]/@cols"/>
@@ -35536,7 +35536,7 @@
     <content>
       <rng:empty/>
     </content>
-    <constraintSpec ident="Clef_position_lines" scheme="isoschematron">
+    <constraintSpec ident="Clef_position_lines" scheme="schematron">
       <constraint>
         <sch:rule context="mei:clef[matches(@shape, '[FCG]')][ancestor::mei:staffDef[@lines]]">
           <sch:let name="thisstaff" value="ancestor::mei:staffDef/@n"/>
@@ -35545,7 +35545,7 @@
         </sch:rule>
       </constraint>
     </constraintSpec>
-    <constraintSpec ident="Clef_position_nolines" scheme="isoschematron">
+    <constraintSpec ident="Clef_position_nolines" scheme="schematron">
       <constraint>
         <sch:rule context="mei:clef[ancestor::mei:staffDef[not(@lines)]]">
           <sch:let name="thisstaff" value="ancestor::mei:staffDef/@n"/>
@@ -35643,7 +35643,7 @@
         </rng:choice>
       </rng:zeroOrMore>
     </content>
-    <constraintSpec ident="check_contributor_role" scheme="isoschematron">
+    <constraintSpec ident="check_contributor_role" scheme="schematron">
       <constraint>
         <sch:rule context="mei:contributor">
           <sch:assert test="not(matches(normalize-space(lower-case(@role)), '(arranger|author|composer|contributor|editor|funder|librettist|lyricist|sponsor)'))">The value of @role must not contain the name of another element available in this
@@ -35758,7 +35758,7 @@
         </rng:choice>
       </rng:zeroOrMore>
     </content>
-    <constraintSpec ident="check_dedicatee" scheme="isoschematron">
+    <constraintSpec ident="check_dedicatee" scheme="schematron">
       <constraint>
         <sch:rule context="mei:dedicatee">
           <sch:assert test="not(ancestor::mei:dedicatee)">The dedicatee element may not be
@@ -35897,7 +35897,7 @@
     <content>
       <rng:ref name="macro.struc-unstrucContent"/>
     </content>
-    <constraintSpec ident="check_dimensions" scheme="isoschematron">
+    <constraintSpec ident="check_dimensions" scheme="schematron">
       <constraint>
         <sch:rule context="mei:physDesc/mei:dimensions">
           <sch:assert test="not(count(mei:depth) &gt; 1)">The depth element may only appear
@@ -35945,7 +35945,7 @@
         </rng:choice>
       </rng:zeroOrMore>
     </content>
-    <constraintSpec ident="dir_start-type_attributes_required" scheme="isoschematron">
+    <constraintSpec ident="dir_start-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:dir[not(ancestor::mei:syllable)]">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
@@ -36127,7 +36127,7 @@
         </rng:choice>
       </rng:zeroOrMore>
     </content>
-    <constraintSpec ident="dynam_start-type_attributes_required" scheme="isoschematron">
+    <constraintSpec ident="dynam_start-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:dynam">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real"> Must have one of
@@ -36135,7 +36135,7 @@
         </sch:rule>
       </constraint>
     </constraintSpec>
-    <constraintSpec ident="dynam_end-type_attributes" scheme="isoschematron">
+    <constraintSpec ident="dynam_end-type_attributes" scheme="schematron">
       <constraint>
         <sch:rule context="mei:dynam[@val2]">
           <sch:assert test="@dur or @dur.ges or @endid or @tstamp2">When @val2 is present, either
@@ -36501,7 +36501,7 @@
         <rng:ref name="model.labelLike"/>
       </rng:zeroOrMore>
     </content>
-    <constraintSpec ident="check_grpSym_attributes_scoreDef" scheme="isoschematron">
+    <constraintSpec ident="check_grpSym_attributes_scoreDef" scheme="schematron">
       <constraint>
         <sch:rule context="mei:grpSym[parent::mei:scoreDef]">
           <sch:assert test="@startid and @endid and @level">In scoreDef, grpSym must have startid,
@@ -36509,7 +36509,7 @@
         </sch:rule>
       </constraint>
     </constraintSpec>
-    <constraintSpec ident="check_grpSym_attributes_staffDef" scheme="isoschematron">
+    <constraintSpec ident="check_grpSym_attributes_staffDef" scheme="schematron">
       <constraint>
         <sch:rule context="mei:grpSym[parent::mei:staffGrp]">
           <sch:assert test="not(@startid or @endid or @level)">In staffGrp, grpSym must not have
@@ -36696,7 +36696,7 @@
     <content>
       <rng:empty/>
     </content>
-    <constraintSpec ident="Check_keyAccidPlacement" scheme="isoschematron">
+    <constraintSpec ident="Check_keyAccidPlacement" scheme="schematron">
       <constraint>
         <sch:rule context="mei:keyAccid">
           <sch:assert test="(@x and @y) or @pname or @loc">One of the following is required: @x and
@@ -36744,7 +36744,7 @@
         </rng:choice>
       </rng:zeroOrMore>
     </content>
-    <constraintSpec ident="check_keyAccid_oct" scheme="isoschematron">
+    <constraintSpec ident="check_keyAccid_oct" scheme="schematron">
       <constraint>
         <sch:rule context="mei:keySig[mei:keyAccid[@oct]]">
           <sch:assert test="count(mei:keyAccid[@oct]) = count(mei:keyAccid)">If the @oct attribute
@@ -36753,7 +36753,7 @@
         </sch:rule>
       </constraint>
     </constraintSpec>
-    <constraintSpec ident="check_keySig_editorial" scheme="isoschematron">
+    <constraintSpec ident="check_keySig_editorial" scheme="schematron">
       <constraint>
         <sch:rule context="mei:keySig/mei:*[local-name() eq 'add' or local-name() eq 'corr'             or local-name() eq 'damage' or local-name() eq 'del' or local-name() eq 'orig' or              local-name() eq 'reg' or local-name() eq 'restore' or local-name() eq 'sic' or              local-name() eq 'supplied' or local-name() eq 'unclear']">
           <sch:assert test="count(mei:keyAccid) = count(mei:*)">Only keyAccid elements are allowed
@@ -37034,7 +37034,7 @@
       <rng:ref name="meiHead"/>
       <rng:ref name="music"/>
     </content>
-    <constraintSpec ident="Check_staff" scheme="isoschematron">
+    <constraintSpec ident="Check_staff" scheme="schematron">
       <constraint>
         <sch:rule context="mei:*[@staff]">
           <sch:assert test="every $i in tokenize(normalize-space(@staff), '\s+') satisfies $i=//mei:staffDef/@n">The values in @staff must correspond to @n attribute of a staffDef
@@ -37170,7 +37170,7 @@
         </rng:choice>
       </rng:zeroOrMore>
     </content>
-    <constraintSpec ident="nameParts" scheme="isoschematron">
+    <constraintSpec ident="nameParts" scheme="schematron">
       <constraint>
         <sch:rule context="mei:name">
           <sch:assert role="warning" test="not(mei:geogName or mei:persName or mei:corpName)">Recommended practice is to use name elements to capture sub-parts of a generic
@@ -37325,7 +37325,7 @@
         </rng:choice>
       </rng:zeroOrMore>
     </content>
-    <constraintSpec ident="ornam_start-type_attributes_required" scheme="isoschematron">
+    <constraintSpec ident="ornam_start-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:ornam">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
@@ -37596,7 +37596,7 @@
         <rng:ref name="curve"/>
       </rng:zeroOrMore>
     </content>
-    <constraintSpec ident="phrase_start-_and_end-type_attributes_required" scheme="isoschematron">
+    <constraintSpec ident="phrase_start-_and_end-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:phrase">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
@@ -37606,7 +37606,7 @@
         </sch:rule>
       </constraint>
     </constraintSpec>
-    <constraintSpec ident="phrase_containing_curve" scheme="isoschematron">
+    <constraintSpec ident="phrase_containing_curve" scheme="schematron">
       <constraint>
         <sch:rule context="mei:phrase[mei:curve[@bezier or @bulge or @curvedir or @lform or @lwidth or @ho or              @startho or @endho or @to or @startto or @endto or @vo or @startvo or @endvo or @x or @y or @x2 or @y2]]">
           <sch:assert test="not(@bezier or @bulge or @curvedir or @lform or @lwidth or @ho or @startho or @endho or                @to or @startto or @endto or @vo or @startvo or @endvo or @x or @y or @x2 or @y2)" role="warning">The visual attributes of the phrase (@bezier, @bulge, @curvedir, @lform,
@@ -37774,7 +37774,7 @@
     <content>
       <rng:empty/>
     </content>
-    <constraintSpec ident="FRBR_relation" scheme="isoschematron">
+    <constraintSpec ident="FRBR_relation" scheme="schematron">
       <constraint>
         <!-- See http://vocab.org/frbr/core for more-precise entity-to-entity constraints -->
         <sch:rule context="mei:relationList/mei:relation[parent::mei:work or parent::mei:expression or           parent::mei:source or parent::mei:item]">
@@ -37947,7 +37947,7 @@
         </rng:choice>
       </rng:zeroOrMore>
     </content>
-    <constraintSpec ident="check_respStmt" scheme="isoschematron">
+    <constraintSpec ident="check_respStmt" scheme="schematron">
       <constraint>
         <sch:rule context="mei:respStmt[not(ancestor::mei:change)]">
           <sch:assert test="(mei:resp and (mei:name or mei:corpName or mei:persName)) or             count(mei:*[@role]) = count(mei:*) and count(mei:*) &gt; 0" role="warning">At least one element pair (a resp element and a name-like element) is
@@ -37981,7 +37981,7 @@
         </rng:choice>
       </rng:zeroOrMore>
     </content>
-    <constraintSpec ident="Check_restline" scheme="isoschematron">
+    <constraintSpec ident="Check_restline" scheme="schematron">
       <constraint>
         <sch:rule context="mei:rest[@line]">
           <sch:let name="thisstaff" value="ancestor::mei:staff/@n"/>
@@ -38169,7 +38169,7 @@
         </rng:choice>
       </rng:zeroOrMore>
     </content>
-    <constraintSpec ident="Check_sectionexpansion" scheme="isoschematron">
+    <constraintSpec ident="Check_sectionexpansion" scheme="schematron">
       <constraint>
         <sch:rule context="mei:section[mei:expansion]">
           <sch:assert test="descendant::mei:section|descendant::mei:ending|descendant::mei:rdg">A
@@ -38358,7 +38358,7 @@
       </rng:zeroOrMore>
     </content>
     <!--
-        <constraintSpec ident="staffOrganization" scheme="isoschematron">
+        <constraintSpec ident="staffOrganization" scheme="schematron">
           <constraint>
             <sch:rule context="mei:staff">
               <sch:assert test="not(descendant::mei:staff)">A staff cannot have staff
@@ -38367,7 +38367,7 @@
           </constraint>
         </constraintSpec>
       -->
-    <constraintSpec ident="checkStaff_n" scheme="isoschematron">
+    <constraintSpec ident="checkStaff_n" scheme="schematron">
       <constraint>
         <sch:rule context="mei:staff[@n]">
           <sch:let name="thisstaff" value="@n"/>
@@ -38416,7 +38416,7 @@
         <rng:ref name="ambitus"/>
       </rng:optional>
     </content>
-    <constraintSpec ident="Check_staffDefn" scheme="isoschematron">
+    <constraintSpec ident="Check_staffDefn" scheme="schematron">
       <constraint>
         <sch:rule context="mei:staffDef[not(ancestor::mei:staff)]">
           <sch:let name="thisstaff" value="@n"/>
@@ -38429,7 +38429,7 @@
         </sch:rule>
       </constraint>
     </constraintSpec>
-    <constraintSpec ident="Check_ancestor_staff" scheme="isoschematron">
+    <constraintSpec ident="Check_ancestor_staff" scheme="schematron">
       <constraint>
         <sch:rule context="mei:staffDef[ancestor::mei:staff and @n]">
           <sch:let name="thisstaff" value="@n"/>
@@ -38438,7 +38438,7 @@
         </sch:rule>
       </constraint>
     </constraintSpec>
-    <constraintSpec ident="Check_ancestor_staff_lines" scheme="isoschematron">
+    <constraintSpec ident="Check_ancestor_staff_lines" scheme="schematron">
       <constraint>
         <sch:rule context="mei:staffDef[ancestor::mei:staff and not(@n)]">
           <sch:let name="thisstaff" value="ancestor::mei:staff/@n"/>
@@ -38448,7 +38448,7 @@
         </sch:rule>
       </constraint>
     </constraintSpec>
-    <constraintSpec ident="Check_clef_position_staffDef" scheme="isoschematron">
+    <constraintSpec ident="Check_clef_position_staffDef" scheme="schematron">
       <constraint>
         <sch:rule context="mei:staffDef[@clef.line and @lines]">
           <sch:assert test="number(@clef.line) &lt;= number(@lines)">The clef position must be less
@@ -38456,7 +38456,7 @@
         </sch:rule>
       </constraint>
     </constraintSpec>
-    <constraintSpec ident="Check_clef_position_staffDef_nolines" scheme="isoschematron">
+    <constraintSpec ident="Check_clef_position_staffDef_nolines" scheme="schematron">
       <constraint>
         <sch:rule context="mei:staffDef[@clef.line and not(@lines)]">
           <sch:let name="thisstaff" value="@n"/>
@@ -38466,7 +38466,7 @@
         </sch:rule>
       </constraint>
     </constraintSpec>
-    <constraintSpec ident="Check_tab_strings_lines" scheme="isoschematron">
+    <constraintSpec ident="Check_tab_strings_lines" scheme="schematron">
       <constraint>
         <sch:rule context="mei:staffDef[@tab.strings and @lines]">
           <sch:let name="countTokens" value="count(tokenize(normalize-space(@tab.strings), '\s'))"/>
@@ -38475,7 +38475,7 @@
         </sch:rule>
       </constraint>
     </constraintSpec>
-    <constraintSpec ident="Check_tab_strings_nolines" scheme="isoschematron">
+    <constraintSpec ident="Check_tab_strings_nolines" scheme="schematron">
       <constraint>
         <sch:rule context="mei:staffDef[@tab.strings and not(@lines)]">
           <sch:let name="countTokens" value="count(tokenize(normalize-space(@tab.strings), '\s'))"/>
@@ -38486,7 +38486,7 @@
         </sch:rule>
       </constraint>
     </constraintSpec>
-    <constraintSpec ident="Check_lines_color" scheme="isoschematron">
+    <constraintSpec ident="Check_lines_color" scheme="schematron">
       <constraint>
         <sch:pattern>
           <sch:rule context="mei:staffDef[@lines.color and @lines]">
@@ -38504,7 +38504,7 @@
         </sch:pattern>
       </constraint>
     </constraintSpec>
-    <constraintSpec ident="Check_staff_ppq_ancestor" scheme="isoschematron">
+    <constraintSpec ident="Check_staff_ppq_ancestor" scheme="schematron">
       <constraint>
         <sch:pattern>
           <sch:rule context="mei:staffDef[@ppq][ancestor::mei:scoreDef[@ppq]]">
@@ -38516,7 +38516,7 @@
         </sch:pattern>
       </constraint>
     </constraintSpec>
-    <constraintSpec ident="Check_staff_ppq_preceding" scheme="isoschematron">
+    <constraintSpec ident="Check_staff_ppq_preceding" scheme="schematron">
       <constraint>
         <sch:pattern>
           <sch:rule context="mei:staffDef[@ppq][preceding::mei:scoreDef[@ppq]]">
@@ -38562,7 +38562,7 @@
         <rng:ref name="grpSym"/>
       </rng:zeroOrMore>
     </content>
-    <constraintSpec ident="Check_staffGrp_unique_staff_n_values" scheme="isoschematron">
+    <constraintSpec ident="Check_staffGrp_unique_staff_n_values" scheme="schematron">
       <constraint>
         <sch:rule context="mei:staffGrp">
           <sch:let name="countstaves" value="count(descendant::mei:staffDef)"/>
@@ -38621,7 +38621,7 @@
     <content>
       <rng:empty/>
     </content>
-    <constraintSpec ident="symbolDef_symbol_attributes_required" scheme="isoschematron">
+    <constraintSpec ident="symbolDef_symbol_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:symbol[ancestor::mei:symbolDef]">
           <sch:assert test="@startid or (@x and @y)">In the symbolDef context, symbol must have
@@ -38668,7 +38668,7 @@
         </rng:choice>
       </rng:zeroOrMore>
     </content>
-    <constraintSpec ident="tempo_in_header_disallow_most_attrs" scheme="isoschematron">
+    <constraintSpec ident="tempo_in_header_disallow_most_attrs" scheme="schematron">
       <constraint>
         <sch:rule context="mei:tempo[not(ancestor::mei:score or ancestor::mei:part)]">
           <sch:assert test="not(@*[name() != 'analog' and name() != 'class' and name() != 'label' and name() != 'mm' and name() != 'mm.dots' and name() != 'translit' and name() != 'type' and name() != 'mm.unit' and name() != 'n' and name() != 'xml:base' and name() != 'xml:id' and name() != 'xml:lang'])">Only analog, class, label, mm, mm.dots, mm.unit, n, translit, type, xml:base, xml:id,
@@ -38677,7 +38677,7 @@
         </sch:rule>
       </constraint>
     </constraintSpec>
-    <constraintSpec ident="tempo_start-type_attributes_required" scheme="isoschematron">
+    <constraintSpec ident="tempo_start-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:tempo[not(ancestor::mei:syllable) and not(ancestor::mei:work) and not(ancestor::mei:expression) and not(count(ancestor::mei:*) = 0)]">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
@@ -38703,7 +38703,7 @@
         </rng:choice>
       </rng:zeroOrMore>
     </content>
-    <constraintSpec ident="Check_term_dataTarget" scheme="isoschematron">
+    <constraintSpec ident="Check_term_dataTarget" scheme="schematron">
       <constraint>
         <sch:rule context="mei:term[@data]">
           <sch:assert test="ancestor::mei:classification">The @data attribute may only occur on a
@@ -39366,7 +39366,7 @@
         <rng:ref name="li"/>
       </rng:zeroOrMore>
     </content>
-    <constraintSpec ident="list_type_constraint" scheme="isoschematron">
+    <constraintSpec ident="list_type_constraint" scheme="schematron">
       <constraint>
         <sch:rule context="mei:list[contains(@type,'gloss')]">
           <sch:assert test="count(mei:label) = count(mei:li)">In a list of type "gloss" all items
@@ -39568,7 +39568,7 @@
         <datatype>
           <rng:ref name="data.URI"/>
         </datatype>
-        <constraintSpec ident="check_altsymTarget" scheme="isoschematron">
+        <constraintSpec ident="check_altsymTarget" scheme="schematron">
           <constraint>
             <sch:rule context="@altsym">
               <sch:assert role="warning" test="not(normalize-space(.) eq '')">@altsym attribute
@@ -39707,7 +39707,7 @@
     <content>
       <rng:empty/>
     </content>
-    <constraintSpec ident="symbolDef_curve_attributes_required" scheme="isoschematron">
+    <constraintSpec ident="symbolDef_curve_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:curve[ancestor::mei:symbolDef]">
           <sch:assert test="@startid or (@x and @y)">In the symbolDef context, curve must have
@@ -39753,7 +39753,7 @@
         </rng:choice>
       </rng:zeroOrMore>
     </content>
-    <constraintSpec ident="line_start-_and_end-type_attributes_required" scheme="isoschematron">
+    <constraintSpec ident="line_start-_and_end-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:line[ancestor::mei:symbolDef]">
           <sch:assert test="@startid or (@x and @y)">When used in the symbolDef context, must have
@@ -40527,7 +40527,7 @@
         <datatype>
           <rng:data type="nonNegativeInteger"/>
         </datatype>
-        <constraintSpec ident="check_beams.floating" scheme="isoschematron">
+        <constraintSpec ident="check_beams.floating" scheme="schematron">
           <constraint>
             <sch:rule context="mei:fTrem[@beams and @beams.float]">
               <sch:assert test="@beams.float &lt;= @beams">The number of floating beams must be less
@@ -41740,7 +41740,7 @@
     </classes>
     <!-- Is this constraint true in all cases? -->
     <!-- 
-      <constraintSpec ident="check_sylAncestor" scheme="isoschematron">
+      <constraintSpec ident="check_sylAncestor" scheme="schematron">
         <constraint>
           <sch:rule context="mei:syl[@place]">
             <sch:assert test="not(ancestor::mei:verse or ancestor::mei:refrain)">When syl is a

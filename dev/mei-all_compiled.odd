@@ -343,7 +343,7 @@
         </valItem>
       </valList>
     </content>
-    <constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="warn_deprecated" scheme="isoschematron">
+    <constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="warn_deprecated" scheme="schematron">
       <constraint>
         <sch:rule context="@artic">
           <sch:assert role="warning" test="not(contains(., 'marc-stacc')) and not(contains(., 'ten-stacc'))">"<sch:value-of select="."/>" contains a deprecated value.</sch:assert>
@@ -2938,7 +2938,7 @@
     <content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <choice xmlns="http://relaxng.org/ns/structure/1.0"><ref name="data.STAFFREL"/><ref name="data.NONSTAFFPLACE"/><ref name="data.NMTOKEN"/></choice>
     </content>
-    <constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="constrain_place" scheme="isoschematron">
+    <constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="constrain_place" scheme="schematron">
       <constraint>
         <sch:rule context="@place">
           <sch:assert test="not((some $token in tokenize(normalize-space(.),' ') satisfies             $token =('below','above','between','within')) and count(tokenize(normalize-space(.),' ')) gt 1)">Other values not permitted when 'above', 'below', 'between' or 'within' is
@@ -3077,7 +3077,7 @@
     <content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <choice xmlns="http://relaxng.org/ns/structure/1.0"><ref name="data.STAFFREL.basic"/><ref name="data.STAFFREL.extended"/></choice>
     </content>
-    <constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="between_requires_adjacent_staves" scheme="isoschematron">
+    <constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="between_requires_adjacent_staves" scheme="schematron">
       <constraint>
         <sch:rule context="mei:*[@place eq 'between']">
           <sch:assert test="count(tokenize(normalize-space(string(@staff)), '\s+')) = 2">The @staff
@@ -3415,7 +3415,7 @@
         <datatype>
           <rng:data type="NMTOKEN"/>
         </datatype>
-        <constraintSpec ident="When_notationsubtype" scheme="isoschematron">
+        <constraintSpec ident="When_notationsubtype" scheme="schematron">
           <constraint>
             <sch:rule context="mei:*[@notationsubtype]">
               <sch:assert test="@notationtype">An element with a notationsubtype attribute must have
@@ -4071,7 +4071,7 @@
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.BEAMPLACE"/>
         </datatype>
-        <constraintSpec ident="check_beam_place" scheme="isoschematron">
+        <constraintSpec ident="check_beam_place" scheme="schematron">
           <constraint>
             <sch:rule context="mei:beam[@place eq 'mixed' and not(descendant::mei:*[local-name() eq 'note' or local-name() eq 'chord'][@staff != ./@staff] or descendant::mei:*[local-name() eq 'note' or local-name() eq 'chord'][@staff != ancestor::mei:staff/@n])]">
               <sch:assert test="count(descendant::mei:*[local-name() eq 'note' or local-name() eq 'chord'][@stem.dir]) = count(descendant::mei:*[local-name() eq 'note' or local-name() eq 'chord'])">Stem direction must be specified for all notes and chords under the
@@ -5000,7 +5000,7 @@
       
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike.limited"/><ref name="model.graphicPrimitiveLike"/><ref name="model.editLike"/><ref name="model.transcriptionLike"/></choice></zeroOrMore>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="attacca_start-type_attributes_required" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="attacca_start-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:attacca[not(ancestor::mei:syllable)]">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
@@ -5026,7 +5026,7 @@
       <memberOf key="model.eventLike.cmn"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="model.eventLike"/><ref name="model.eventLike.cmn"/><ref name="model.appLike"/><ref name="model.editLike"/><ref name="model.transcriptionLike"/></choice></zeroOrMore>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="When_not_copyof_beam_content" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="When_not_copyof_beam_content" scheme="schematron">
       <constraint>
         <sch:rule context="mei:beam[not(@copyof or @sameas)]">
           <sch:assert test="count(descendant::*[local-name()='note' or local-name()='rest' or               local-name()='chord' or local-name()='space']) &gt; 1">A beam that contains neither a copyof nor sameas attribute must have at least 2 note, rest, chord, or space
@@ -5050,7 +5050,7 @@
       <memberOf key="model.controlEventLike.cmn"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <rng:empty/>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="beamspan_start-_and_end-type_attributes_required" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="beamspan_start-_and_end-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:beamSpan">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
@@ -5093,7 +5093,7 @@
       <memberOf key="model.controlEventLike"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <rng:empty/>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="bend_start-_and_end-type_attributes_required" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="bend_start-_and_end-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:bend">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
@@ -5112,7 +5112,7 @@
       <memberOf key="model.controlEventLike.cmn"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike.limited"/></choice></zeroOrMore>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="bracketSpan_start-_and_end-type_attributes_required" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="bracketSpan_start-_and_end-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:bracketSpan">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
@@ -5139,7 +5139,7 @@
       <memberOf key="model.controlEventLike.cmn"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <rng:empty/>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="breath_start-type_attributes_required" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="breath_start-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:breath">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
@@ -5179,7 +5179,7 @@
       <memberOf key="model.controlEventLike.cmn"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <rng:empty/>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="fermata_start-type_attributes_required" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="fermata_start-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:fermata">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
@@ -5216,7 +5216,7 @@
       <memberOf key="model.controlEventLike"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike.limited"/></choice></zeroOrMore>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="gliss_start-_and_end-type_attributes_required" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="gliss_start-_and_end-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:gliss">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
@@ -5245,14 +5245,14 @@
       <memberOf key="model.eventLike.cmn"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="model.eventLike"/><ref name="model.eventLike.cmn"/><ref name="model.appLike"/><ref name="model.editLike"/><ref name="model.transcriptionLike"/></choice></zeroOrMore>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="When_not_copyof_graceGrp_content" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="When_not_copyof_graceGrp_content" scheme="schematron">
       <constraint>
         <sch:rule context="mei:graceGrp[not(@copyof)]">
           <sch:assert test="count(descendant::*[local-name()='note' or local-name()='rest' or               local-name()='chord' or local-name()='space']) &gt; 0">A graceGrp without a copyof attribute must have at least 1 note, rest, chord, or space
             descendants.</sch:assert>
         </sch:rule>
       </constraint>
-    </constraintSpec><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="When_graced" scheme="isoschematron">
+    </constraintSpec><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="When_graced" scheme="schematron">
       <constraint>
         <sch:rule context="mei:graceGrp[@grace]">
           <sch:assert test="not(descendant::mei:*[@grace])">The grace attribute is not allowed on
@@ -5270,7 +5270,7 @@
       <memberOf key="model.controlEventLike.cmn"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <rng:empty/>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="hairpin_start-_and_end-type_attributes_required" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="hairpin_start-_and_end-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:hairpin">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
@@ -5309,7 +5309,7 @@
       <memberOf key="model.controlEventLike.cmn"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <rng:empty/>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="harpPedal_start-type_attributes_required" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="harpPedal_start-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:harpPedal">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
@@ -5330,14 +5330,14 @@
       <memberOf key="model.controlEventLike.cmn"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="curve"/></zeroOrMore>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="lv_start-_and_end-type_attributes_required" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="lv_start-_and_end-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:lv">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
             attributes: startid, tstamp, tstamp.ges or tstamp.real.</sch:assert>
         </sch:rule>
       </constraint>
-    </constraintSpec><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="lv_containing_curve" scheme="isoschematron">
+    </constraintSpec><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="lv_containing_curve" scheme="schematron">
       <constraint>
         <sch:rule context="mei:lv[mei:curve[@bezier or @bulge or @curvedir or @lform or @lwidth or @ho or @startho or @endho or @to or @startto or @endto or @vo or @startvo or              @endvo or @x or @y or @x2 or @y2]]">
           <sch:assert test="not(@bezier or @bulge or @curvedir or @lform or @lwidth or @ho or @startho or @endho or @to or @startto or @endto or @vo or @startvo or @endvo or @x or @y or @x2 or @y2)" role="warning">The visual attributes of the lv element (@bezier, @bulge, @curvedir,
@@ -5390,7 +5390,7 @@
       <memberOf key="model.meterSigLike"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="meterSig"/></zeroOrMore>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_meterSigGrpContent" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_meterSigGrpContent" scheme="schematron">
       <constraint>
         <sch:rule context="mei:meterSigGrp[not(@copyof)]">
           <sch:assert test="count(mei:meterSig) &gt; 1">meterSigGrp must have at least 2 child
@@ -5498,7 +5498,7 @@
       <memberOf key="model.controlEventLike.cmn"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike.limited"/></choice></zeroOrMore>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="octave_start-_and_end-type_attributes_required" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="octave_start-_and_end-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:octave">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
@@ -5543,7 +5543,7 @@
       <memberOf key="model.ossiaLike"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <choice xmlns="http://relaxng.org/ns/structure/1.0"><interleave><oneOrMore><ref name="oStaff"/></oneOrMore><oneOrMore><ref name="model.staffLike"/></oneOrMore></interleave><interleave><oneOrMore><ref name="oLayer"/></oneOrMore><oneOrMore><ref name="model.layerLike"/></oneOrMore></interleave></choice>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="Check_ossia" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="Check_ossia" scheme="schematron">
       <constraint>
         <sch:pattern>
           <sch:rule context="mei:measure/mei:ossia">
@@ -5589,7 +5589,7 @@
       <memberOf key="model.controlEventLike.cmn"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <rng:empty/>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="pedal_start-type_attributes_required" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="pedal_start-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:pedal">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
@@ -5657,7 +5657,7 @@
       <memberOf key="model.controlEventLike.cmn"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="curve"/></zeroOrMore>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="slur_start-_and_end-type_attributes_required" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="slur_start-_and_end-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:slur">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
@@ -5666,7 +5666,7 @@
             dur, dur.ges, endid, or tstamp2.</sch:assert>
         </sch:rule>
       </constraint>
-    </constraintSpec><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="slur_containing_curve" scheme="isoschematron">
+    </constraintSpec><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="slur_containing_curve" scheme="schematron">
       <constraint>
         <sch:rule context="mei:slur[mei:curve[@bezier or @bulge or @curvedir or @lform or @lwidth or @ho or @startho or @endho or @to or @startto or @endto or @vo or @startvo or @endvo or @x or @y or @x2 or @y2]]">
           <sch:assert test="not(@bezier or @bulge or @curvedir or @lform or @lwidth or @ho or @startho or @endho or @to or @startto or @endto or @vo or @startvo or @endvo or @x or @y or @x2 or @y2)" role="warning">The visual attributes of the slur (@bezier, @bulge, @curvedir, @lform,
@@ -5701,7 +5701,7 @@
       <memberOf key="model.controlEventLike.cmn"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="curve"/></zeroOrMore>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="tie_start-_and_end-type_attributes_required" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="tie_start-_and_end-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:tie">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
@@ -5710,7 +5710,7 @@
             dur, dur.ges, endid, or tstamp2.</sch:assert>
         </sch:rule>
       </constraint>
-    </constraintSpec><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="tie_containing_curve" scheme="isoschematron">
+    </constraintSpec><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="tie_containing_curve" scheme="schematron">
       <constraint>
         <sch:rule context="mei:tie[mei:curve[@bezier or @bulge or @curvedir or @lform or @lwidth or @ho or @startho or @endho or @to or @startto or @endto or @vo or @startvo or @endvo or @x or @y or @x2 or @y2]]">
           <sch:assert test="not(@bezier or @bulge or @curvedir or @lform or @lwidth or @ho or @startho or @endho or @to or @startto or @endto or @vo or @startvo or @endvo or @x or @y or @x2 or @y2)" role="warning">The visual attributes of the tie (@bezier, @bulge, @curvedir, @lform,
@@ -5757,7 +5757,7 @@
       <memberOf key="model.controlEventLike.cmn"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <rng:empty/>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="tupletSpan_start-_and_end-type_attributes_required" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="tupletSpan_start-_and_end-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:tupletSpan">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
@@ -5903,7 +5903,7 @@
       <memberOf key="model.ornamentLike.cmn"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <rng:empty/>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="mordent_start-type_attributes_required" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="mordent_start-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:mordent">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
@@ -5925,7 +5925,7 @@
       <memberOf key="model.ornamentLike.cmn"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <rng:empty/>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="trill_start-type_attributes_required" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="trill_start-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:trill">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
@@ -5952,7 +5952,7 @@
       <memberOf key="model.ornamentLike.cmn"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <rng:empty/>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="turn_start-type_attributes_required" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="turn_start-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:turn">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
@@ -6105,14 +6105,14 @@
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="speaker"/><zeroOrMore><choice><ref name="model.annotLike"/><ref name="model.appLike"/><ref name="model.figureLike"/><ref name="model.milestoneLike.text"/></choice></zeroOrMore></zeroOrMore>
       <oneOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="model.lgLike"/><ref name="model.lLike"/><ref name="model.pLike"/><ref name="model.quoteLike"/><ref name="model.stageDirLike"/><ref name="list"/></choice></oneOrMore>
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="model.annotLike"/><ref name="model.appLike"/><ref name="model.figureLike"/><ref name="model.milestoneLike.text"/></choice></zeroOrMore>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="sp_start-type_attributes_required" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="sp_start-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:sp[ancestor::mei:layer or ancestor::mei:measure or ancestor::mei:staff][not(ancestor::mei:sp)]">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
             attributes: startid, tstamp, tstamp.ges or tstamp.real.</sch:assert>
         </sch:rule>
       </constraint>
-    </constraintSpec><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="sp_start-type_attributes_forbidden" scheme="isoschematron">
+    </constraintSpec><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="sp_start-type_attributes_forbidden" scheme="schematron">
       <constraint>
         <sch:rule context="mei:sp[not(ancestor::mei:layer or ancestor::mei:measure or ancestor::mei:staff)]">
           <sch:assert test="not(@startid or @endid or @tstamp or @tstamp2 or @tstamp.ges or @tstamp.real or                @startho or @endho or @to or @startto or @endto or @staff or @layer or @place or @plist)">Must not have any of the attributes: startid, endid, tstamp, tstamp2, tstamp.ges,
@@ -6138,14 +6138,14 @@
       <memberOf key="model.stageDirLike"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike.limited"/><ref name="model.editLike"/><ref name="model.transcriptionLike"/></choice></zeroOrMore>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="stageDir_start-type_attributes_required" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="stageDir_start-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:stageDir[ancestor::mei:layer or ancestor::mei:measure or ancestor::mei:staff][not(ancestor::mei:sp)]">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
             attributes: startid, tstamp, tstamp.ges or tstamp.real.</sch:assert>
         </sch:rule>
       </constraint>
-    </constraintSpec><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="stageDir_start-type_attributes_forbidden" scheme="isoschematron">
+    </constraintSpec><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="stageDir_start-type_attributes_forbidden" scheme="schematron">
       <constraint>
         <sch:rule context="mei:stageDir[not(ancestor::mei:layer or ancestor::mei:measure or ancestor::mei:staff) or ancestor::mei:sp]">
           <sch:assert test="not(@startid or @endid or @tstamp or @tstamp2 or @tstamp.ges or @tstamp.real or @startho or @endho or @to or                @startto or @endto or @staff or @layer or @place or @plist)">Must not have any of the attributes: startid, endid, tstamp, tstamp2, tstamp.ges,
@@ -6343,7 +6343,7 @@
       <memberOf key="model.controlEventLike"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike.limited"/><ref name="model.editLike"/><ref name="model.transcriptionLike"/></choice></zeroOrMore>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="cpMark_start-_and_end-type_attributes_required" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="cpMark_start-_and_end-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:cpMark">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
@@ -6497,7 +6497,7 @@
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.URI"/>
         </datatype>
-        <constraintSpec ident="check_newTarget" scheme="isoschematron">
+        <constraintSpec ident="check_newTarget" scheme="schematron">
           <constraint>
             <sch:rule context="@new">
               <sch:assert role="warning" test="not(normalize-space(.) eq '')">@new attribute should
@@ -6513,7 +6513,7 @@
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.URI"/>
         </datatype>
-        <constraintSpec ident="check_oldTarget" scheme="isoschematron">
+        <constraintSpec ident="check_oldTarget" scheme="schematron">
           <constraint>
             <sch:rule context="@old">
               <sch:assert role="warning" test="not(normalize-space(.) eq '')">@old attribute should
@@ -6785,7 +6785,7 @@
         <datatype>
           <rng:data type="string"/>
         </datatype>
-        <constraintSpec ident="check_glyph.name" scheme="isoschematron">
+        <constraintSpec ident="check_glyph.name" scheme="schematron">
           <constraint>
             <sch:rule context="@glyph.name">
               <sch:assert role="warning" test="not(normalize-space(.) eq '')">@glyph.name attribute
@@ -6800,7 +6800,7 @@
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.HEXNUM"/>
         </datatype>
-        <constraintSpec ident="check_glyph.num" scheme="isoschematron">
+        <constraintSpec ident="check_glyph.num" scheme="schematron">
           <constraint>
             <sch:rule context="mei:*[@glyph.num and (lower-case(@glyph.auth) eq 'smufl' or @glyph.uri eq 'http://www.smufl.org/')]">
               <sch:assert role="warning" test="matches(normalize-space(@glyph.num), '^(#x|U\+)E([0-9AB][0-9A-F][0-9A-F]|C[0-9A][0-9A-F]|CB[0-9A-F])$')">SMuFL version 1.18 uses the range U+E000 - U+ECBF.</sch:assert>
@@ -6825,7 +6825,7 @@
         <datatype minOccurs="1" maxOccurs="unbounded">
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.URI"/>
         </datatype>
-        <constraintSpec ident="check_facsTarget" scheme="isoschematron">
+        <constraintSpec ident="check_facsTarget" scheme="schematron">
           <constraint>
             <sch:rule context="@facs">
               <sch:assert role="warning" test="not(normalize-space(.) eq '')">@facs attribute should
@@ -6956,7 +6956,7 @@
       <memberOf key="model.graphicLike"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="zone"/></zeroOrMore>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="graphic_attributes" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="graphic_attributes" scheme="schematron">
       <constraint>
         <sch:rule context="mei:zone/mei:graphic">
           <sch:assert role="warning" test="count(mei:*) = 0">Graphic child of zone should not have
@@ -7085,14 +7085,14 @@
       <memberOf key="model.fingeringLike"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike.limited"/><ref name="model.editLike"/><ref name="model.transcriptionLike"/></choice></zeroOrMore>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="fing_start-type_attributes_required" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="fing_start-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:fing[not(ancestor::mei:fingGrp)]">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
             attributes: startid, tstamp, tstamp.ges or tstamp.real.</sch:assert>
         </sch:rule>
       </constraint>
-    </constraintSpec><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="stack_exclusion" scheme="isoschematron">
+    </constraintSpec><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="stack_exclusion" scheme="schematron">
       
       <constraint>
         <sch:rule context="mei:fing">
@@ -7110,14 +7110,14 @@
       <memberOf key="model.fingeringLike"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="model.fingeringLike"/><ref name="model.editLike"/><ref name="model.transcriptionLike"/></choice></zeroOrMore>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="require_fingeringLike_children" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="require_fingeringLike_children" scheme="schematron">
       <constraint>
         <sch:rule context="mei:fingGrp">
           <sch:assert test="count(mei:fing) + count(mei:fingGrp) &gt; 1">At least 2 fing or fingGrp
             elements are required.</sch:assert>
         </sch:rule>
       </constraint>
-    </constraintSpec><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_fingGrp_start-type_attributes" scheme="isoschematron">
+    </constraintSpec><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_fingGrp_start-type_attributes" scheme="schematron">
       <constraint>
         <sch:pattern>
           <sch:rule context="mei:fingGrp[not(ancestor::mei:fingGrp)][@tstamp or @startid]">
@@ -7462,7 +7462,7 @@
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.ACCIDENTAL.GESTURAL"/>
         </datatype>
-        <constraintSpec ident="check_accid_duplication" scheme="isoschematron">
+        <constraintSpec ident="check_accid_duplication" scheme="schematron">
           <constraint>
             <sch:rule context="@accid.ges">
               <sch:assert role="warning" test="not(. eq ../@accid)">The value of @accid.ges should
@@ -7865,7 +7865,7 @@
       <memberOf key="att.note.ges.mensural"/>
       <memberOf key="att.stringtab"/>
     </classes>
-    <constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="extremis_disallows_gestural_pitch" scheme="isoschematron">
+    <constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="extremis_disallows_gestural_pitch" scheme="schematron">
       <constraint>
         <sch:rule context="mei:note[@extremis]">
           <sch:assert test="not(@pname.ges) and not(@oct.ges)">When the @extremis attribute is used,
@@ -8193,7 +8193,7 @@
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.URI"/>
         </datatype>
-        <constraintSpec ident="check_chordrefTarget" scheme="isoschematron">
+        <constraintSpec ident="check_chordrefTarget" scheme="schematron">
           <constraint>
             <sch:rule context="@chordref">
               <sch:assert role="warning" test="not(normalize-space(.) eq '')">@chordref attribute
@@ -8287,7 +8287,7 @@
       <memberOf key="model.harmLike"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike.limited"/><ref name="model.graphicPrimitiveLike"/><ref name="model.editLike"/><ref name="model.transcriptionLike"/><ref name="model.figbassLike"/></choice></zeroOrMore>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="harm_start-type_attributes_required" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="harm_start-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:harm">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
@@ -8638,7 +8638,7 @@
       <memberOf key="att.bibl"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="desc"/></optional>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="context_attribute_requires_content" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="context_attribute_requires_content" scheme="schematron">
       <constraint>
         <sch:rule context="@context">
           <sch:assert role="warning" test="not(normalize-space(.) eq '')">@context attribute should
@@ -8727,7 +8727,7 @@
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="desc"/></zeroOrMore>
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="catRel"/></zeroOrMore>
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="category"/></zeroOrMore>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="category_id" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="category_id" scheme="schematron">
       <constraint>
         <sch:rule context="mei:category">
           <sch:assert test="@xml:id" role="warning">To be addressable, the category element must
@@ -8772,7 +8772,7 @@
       <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="respStmt"/></optional>
       <ref xmlns="http://relaxng.org/ns/structure/1.0" name="changeDesc"/>
       <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.dateLike"/></optional>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_change" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_change" scheme="schematron">
       <constraint>
         <sch:rule context="mei:change">
           <sch:assert test="@isodate or mei:date">The date of the change must be recorded in an
@@ -8828,14 +8828,14 @@
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.headLike"/></zeroOrMore>
       <choice xmlns="http://relaxng.org/ns/structure/1.0"><choice><zeroOrMore><ref name="model.workLike"/></zeroOrMore><zeroOrMore><ref name="model.expressionLike"/></zeroOrMore></choice><choice><zeroOrMore><ref name="model.manifestationLike"/></zeroOrMore><zeroOrMore><ref name="model.itemLike"/></zeroOrMore></choice></choice>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="checkComponentList" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="checkComponentList" scheme="schematron">
       <constraint>
         <sch:rule context="mei:componentList">
           <sch:assert test="every $i in ./child::mei:*[not(local-name()='head')] satisfies             $i/local-name() eq ./parent::mei:*/local-name()">Only child elements of the same name as the parent of the componentList are
             allowed.</sch:assert>
         </sch:rule>
       </constraint>
-    </constraintSpec><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="checkComponents" scheme="isoschematron">
+    </constraintSpec><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="checkComponents" scheme="schematron">
       <constraint>
         <sch:rule context="mei:componentList[mei:*[@comptype]]">
           <sch:assert role="warning" test="count(mei:*[@comptype]) = count(mei:*[local-name() ne 'head'])">When any child
@@ -8878,7 +8878,7 @@
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.headLike"/></zeroOrMore>
       <choice xmlns="http://relaxng.org/ns/structure/1.0"><optional><ref name="model.pLike"/></optional><oneOrMore><optional><ref name="label"/></optional><ref name="contentItem"/></oneOrMore></choice>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="checkContentsLabels" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="checkContentsLabels" scheme="schematron">
       <constraint>
         <sch:rule context="mei:contents[mei:label]">
           <sch:assert role="warning" test="count(mei:label) = count(mei:contentItem)">When labels
@@ -9170,7 +9170,7 @@
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.headLike"/></zeroOrMore>
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><optional><ref name="label"/></optional><ref name="hand"/></zeroOrMore>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="checkHandListLabels" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="checkHandListLabels" scheme="schematron">
       <constraint>
         <sch:rule context="mei:handList[mei:label]">
           <sch:assert role="warning" test="count(mei:label) = count(mei:hand)">When labels are used,
@@ -9187,7 +9187,7 @@
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.headLike"/></zeroOrMore>
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="acquisition"/><ref name="exhibHist"/><ref name="provenance"/><ref name="treatHist"/><ref name="treatSched"/><ref name="model.divLike"/><ref name="model.textComponentLike"/></choice></zeroOrMore>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="history_restriction" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="history_restriction" scheme="schematron">
       <constraint>
         <sch:rule context="mei:history[parent::mei:work or parent::mei:expression or parent::mei:manifestation[not(@singleton='true')]]">
           <sch:assert test="not(mei:acquisition or mei:provenance or mei:exhibHist or mei:treatHist or mei:treatSched)">The elements acquisition, provenance, exhibHist, treatHist and treatSched are not permitted at the work or expression level and are only permitted at the manifestation level, if the manifestation is a manifestation singleton.</sch:assert>
@@ -9205,7 +9205,7 @@
       <memberOf key="att.whitespace"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <rng:text/>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="Check_incipCode_form_mimetype" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="Check_incipCode_form_mimetype" scheme="schematron">
       <constraint>
         <sch:rule context="mei:incipCode">
           <sch:assert test="@form or @mimetype">incipCode must have a form or mimetype
@@ -9825,7 +9825,7 @@
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="desc"/></optional>
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="attUsage"/></zeroOrMore>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="context_attribute_requires_content" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="context_attribute_requires_content" scheme="schematron">
       <constraint>
         <sch:rule context="@context">
           <sch:assert role="warning" test="not(normalize-space(.) eq '')">@context attribute should
@@ -9871,7 +9871,7 @@
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.headLike"/></zeroOrMore>
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><optional><ref name="label"/></optional><ref name="term"/></zeroOrMore>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="checkTermListLabels" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="checkTermListLabels" scheme="schematron">
       <constraint>
         <sch:rule context="mei:termList[mei:label]">
           <sch:assert role="warning" test="count(mei:label) = count(mei:term)">When labels are used,
@@ -9971,7 +9971,7 @@
       <memberOf key="model.physDescPart"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <ref xmlns="http://relaxng.org/ns/structure/1.0" name="macro.struc-unstrucContent"/>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_watermark_inline" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_watermark_inline" scheme="schematron">
       <constraint>
         <sch:rule context="mei:watermark">
           <sch:assert test="ancestor::mei:physDesc">The watermark element may only appear as a
@@ -10248,7 +10248,7 @@
     </content>
   </macroSpec><classSpec rend="add" ident="att.duration.quality" module="MEI.mensural" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attribute that expresses duration for a given mensural note symbol.</desc>
-    <constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_duplex_quality" scheme="isoschematron">
+    <constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_duplex_quality" scheme="schematron">
       <constraint>
         <sch:rule context="(mei:note|mei:space)[@dur.quality='duplex']">
           <sch:assert test="@dur='longa'">
@@ -10257,7 +10257,7 @@
         </sch:rule>
       </constraint>
     </constraintSpec>
-    <constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_maiorminor_quality" scheme="isoschematron">
+    <constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_maiorminor_quality" scheme="schematron">
       <constraint>
         <sch:rule context="(mei:note|mei:space)[@dur.quality='maior' or @dur.quality='minor']">
           <sch:assert test="@dur='semibrevis'">
@@ -10306,7 +10306,7 @@
     </attList>
   </classSpec><classSpec rend="add" ident="att.mensural.shared" module="MEI.mensural" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Shared attributes in the mensural repertoire.</desc>
-    <constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="mensuration_conflicting_attributes" scheme="isoschematron">
+    <constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="mensuration_conflicting_attributes" scheme="schematron">
       <constraint>
         <sch:rule context="mei:mensur[@divisio]">
           <sch:assert test="not(@tempus) and not(@prolatio)">
@@ -10484,7 +10484,7 @@
       <memberOf key="att.plica.vis"/>
       <memberOf key="att.plica.ges"/>
       <memberOf key="att.plica.anl"/>
-    </classes><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="Check_plica" scheme="isoschematron">
+    </classes><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="Check_plica" scheme="schematron">
       <constraint>
         <sch:rule context="mei:plica">
           <sch:assert test="count(../mei:plica) &lt;= 1">Only one plica is allowed.</sch:assert>
@@ -10515,7 +10515,7 @@
       <memberOf key="att.stem.anl"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <rng:empty/>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="Check_stem" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="Check_stem" scheme="schematron">
       <constraint>
         <sch:rule context="mei:stem">
           <sch:assert test="not(ancestor::mei:note/@*[starts-with(local-name(),'stem.')])">A note with nested stem elements must not have @stem.* attributes.</sch:assert>
@@ -10566,7 +10566,7 @@
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.URI"/>
         </datatype>
-        <constraintSpec ident="check_instrTarget" scheme="isoschematron">
+        <constraintSpec ident="check_instrTarget" scheme="schematron">
           <constraint>
             <sch:rule context="@instr">
               <sch:assert role="warning" test="not(normalize-space(.) eq '')">@instr attribute
@@ -10596,7 +10596,7 @@
     </classes>
   </classSpec><classSpec rend="add" ident="att.midiInstrument" module="MEI.midi" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that record MIDI instrument information.</desc>
-    <constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="One_of_instrname_or_instrnum" scheme="isoschematron">
+    <constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="One_of_instrname_or_instrnum" scheme="schematron">
       <constraint>
         <sch:rule context="mei:*[@midi.instrname]">
           <sch:assert test="not(@midi.instrnum)">Only one of @midi.instrname and @midi.instrnum
@@ -10604,7 +10604,7 @@
         </sch:rule>
       </constraint>
     </constraintSpec>
-    <constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="One_of_patchname_or_patchnum" scheme="isoschematron">
+    <constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="One_of_patchname_or_patchnum" scheme="schematron">
       <constraint>
         <sch:rule context="mei:*[@midi.patchname]">
           <sch:assert test="not(@midi.patchnum)">Only one of @midi.patchname and @midi.patchnum
@@ -10883,7 +10883,7 @@
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that express the relationship between a component and its host.</desc>
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="comptype" usage="opt">
-        <constraintSpec ident="checkComponentType" scheme="isoschematron">
+        <constraintSpec ident="checkComponentType" scheme="schematron">
           <constraint>
             <sch:rule context="mei:*[@comptype]">
               <sch:let name="elementName" value="local-name()"/>
@@ -10966,7 +10966,7 @@
       <memberOf key="model.physDescPart"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <ref xmlns="http://relaxng.org/ns/structure/1.0" name="macro.struc-unstrucContent"/>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_catchwords_inline" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_catchwords_inline" scheme="schematron">
       <constraint>
         <sch:rule context="mei:catchwords">
           <sch:assert test="ancestor::mei:physDesc">The catchwords element may only appear as a
@@ -11043,7 +11043,7 @@
       <memberOf key="model.physDescPart"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <ref xmlns="http://relaxng.org/ns/structure/1.0" name="macro.struc-unstrucContent"/>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_heraldry_inline" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_heraldry_inline" scheme="schematron">
       <constraint>
         <sch:rule context="mei:heraldry">
           <sch:assert test="ancestor::mei:physDesc">The heraldry element may only appear as a
@@ -11127,7 +11127,7 @@
       <memberOf key="model.msInline"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="locus"/><ref name="rend"/><ref name="symbol"/></choice></zeroOrMore>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_locus_inline" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_locus_inline" scheme="schematron">
       <constraint>
         <sch:rule context="mei:locus">
           <sch:assert test="ancestor::mei:physDesc or parent::mei:contentItem or              ancestor::mei:source[ancestor::mei:componentList[ancestor::mei:sourceDesc or              ancestor::mei:sourceList or ancestor::mei:workList]]">The locus element may only appear as a descendant of a physDesc element, a
@@ -11162,7 +11162,7 @@
       <memberOf key="model.msInline"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="locus"/></zeroOrMore>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_locusGrp_inline" module="MEI.msDesc" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_locusGrp_inline" module="MEI.msDesc" scheme="schematron">
       <constraint>
         <sch:rule context="mei:locusGrp">
           <sch:assert test="ancestor::mei:physDesc or parent::mei:contentItem or              ancestor::mei:source[ancestor::mei:componentList[ancestor::mei:sourceDesc or              ancestor::mei:sourceList or ancestor::mei:workList]]">The locusGrp element may only appear as a descendant of a physDesc element, a
@@ -11253,7 +11253,7 @@
       <memberOf key="model.physDescPart"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <ref xmlns="http://relaxng.org/ns/structure/1.0" name="macro.struc-unstrucContent"/>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_secFolio_inline" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_secFolio_inline" scheme="schematron">
       <constraint>
         <sch:rule context="mei:secFolio">
           <sch:assert test="ancestor::mei:physDesc">The secFolio element may only appear as a
@@ -11270,7 +11270,7 @@
       <memberOf key="model.physDescPart"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <ref xmlns="http://relaxng.org/ns/structure/1.0" name="macro.struc-unstrucContent"/>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_signatures_inline" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_signatures_inline" scheme="schematron">
       <constraint>
         <sch:rule context="mei:signatures">
           <sch:assert test="ancestor::mei:physDesc">The signatures element may only appear as a
@@ -12056,7 +12056,7 @@
       <memberOf key="model.eventLike.neumes"/>
     </classes></elementSpec><classSpec rend="add" ident="att.alignment" module="MEI.performance" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Temporal alignment attributes.</desc>
-    <constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_whenTarget" scheme="isoschematron">
+    <constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_whenTarget" scheme="schematron">
       <constraint>
         <sch:rule context="@when">
           <sch:assert role="warning" test="not(normalize-space(.) eq '')">@when attribute should
@@ -12085,7 +12085,7 @@
       <memberOf key="att.pointing"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="clip"/></zeroOrMore>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="avFile_child_of_clip" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="avFile_child_of_clip" scheme="schematron">
       <constraint>
         <sch:rule context="mei:clip/mei:avFile">
           <sch:assert test="count(mei:*) = 0">An avFile child of clip cannot have
@@ -12105,7 +12105,7 @@
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="avFile"/></zeroOrMore>
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="when"/></zeroOrMore>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="betype_required_when_begin_or_end" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="betype_required_when_begin_or_end" scheme="schematron">
       <constraint>
         <sch:rule context="mei:clip[@begin or @end]">
           <sch:assert role="warning" test="@betype or ancestor::mei:*[@betype]">When @begin or @end
@@ -12135,7 +12135,7 @@
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="avFile"/></zeroOrMore>
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="when"/></zeroOrMore>
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="clip"/></zeroOrMore>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="betype_required_when_begin_or_end" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="betype_required_when_begin_or_end" scheme="schematron">
       <constraint>
         <sch:rule context="mei:recording[@begin or @end]">
           <sch:assert role="warning" test="@betype">When @begin or @end is used, @betype should be
@@ -12151,7 +12151,7 @@
       <memberOf key="att.dataPointing"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="extData"/></zeroOrMore>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_when_interval" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_when_interval" scheme="schematron">
       <constraint>
         <sch:rule context="mei:when[@interval]">
           <sch:assert test="@since">@since must be present when @interval is used.</sch:assert>
@@ -12167,7 +12167,7 @@
             be 'time'.</sch:assert>
         </sch:rule>
       </constraint>
-    </constraintSpec><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_when_absolute" scheme="isoschematron">
+    </constraintSpec><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_when_absolute" scheme="schematron">
       <constraint>
         <sch:rule context="mei:when[@absolute]">
           <sch:assert role="warning" test="@abstype or ancestor::mei:*[@betype]">When @absolute is
@@ -12211,7 +12211,7 @@
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.URI"/>
         </datatype>
-        <constraintSpec ident="check_sinceTarget" scheme="isoschematron">
+        <constraintSpec ident="check_sinceTarget" scheme="schematron">
           <constraint>
             <sch:rule context="@since">
               <sch:assert role="warning" test="not(normalize-space(.) eq '')">@since attribute
@@ -12435,7 +12435,7 @@
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.URI"/>
         </datatype>
-        <constraintSpec ident="check_attaccaTarget" scheme="isoschematron">
+        <constraintSpec ident="check_attaccaTarget" scheme="schematron">
           <constraint>
             <sch:rule context="mei:attacca/@target">
               <sch:assert role="warning" test="not(normalize-space(.) eq '')">@target attribute
@@ -12470,7 +12470,7 @@
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.AUGMENTDOT"/>
         </datatype>
-        <constraintSpec ident="dots_attribute_requires_dur" scheme="isoschematron">
+        <constraintSpec ident="dots_attribute_requires_dur" scheme="schematron">
           <constraint>
             <sch:rule context="mei:*[@dots]">
               <sch:assert test="@dur">An element with a dots attribute must also have a dur
@@ -12543,7 +12543,7 @@
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.BARMETHOD"/>
         </datatype>
-        <constraintSpec ident="check_barmethod" scheme="isoschematron">
+        <constraintSpec ident="check_barmethod" scheme="schematron">
           <constraint>
             <sch:rule context="@bar.method[parent::*[matches(local-name(), '(staffDef|measure)')]]">
               <sch:assert test="not(. eq 'mensur')">"mensur" not allowed in this
@@ -12658,7 +12658,7 @@
         <datatype maxOccurs="unbounded">
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.URI"/>
         </datatype>
-        <constraintSpec ident="check_classURI" scheme="isoschematron">
+        <constraintSpec ident="check_classURI" scheme="schematron">
           <constraint>
             <sch:rule context="@class">
               <sch:assert test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:category/@xml:id or matches($i, '^([a-z]+://|\.{1,2}/)')">The value in @class must either correspond to the @xml:id attribute of a category
@@ -12688,7 +12688,7 @@
   </classSpec><classSpec rend="add" ident="att.cleffing.log" module="MEI.shared" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Used by staffDef and scoreDef to provide default values for attributes in the logical
       domain related to clefs.</desc>
-    <constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="clef_shape_requires_clef_line" scheme="isoschematron">
+    <constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="clef_shape_requires_clef_line" scheme="schematron">
       <constraint>
         <sch:rule context="mei:*[matches(@clef.shape, '[FCG]')]">
           <sch:assert test="@clef.line">An 'F', 'C', or 'G' clef requires that its position be
@@ -12732,7 +12732,7 @@
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Logical domain attributes.</desc>
   </classSpec><classSpec rend="add" ident="att.clefShape" module="MEI.shared" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that record the shape of a clef.</desc>
-    <constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="shape_requires_line" scheme="isoschematron">
+    <constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="shape_requires_line" scheme="schematron">
       <constraint>
         <sch:rule context="mei:clef[matches(@shape, '[FCG]')]">
           <sch:assert test="@line">When @shape is present, @line must also be
@@ -12915,7 +12915,7 @@
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.URI"/>
         </datatype>
-        <constraintSpec ident="check_custosTarget" scheme="isoschematron">
+        <constraintSpec ident="check_custosTarget" scheme="schematron">
           <constraint>
             <sch:rule context="mei:custos/@target">
               <sch:assert role="warning" test="not(normalize-space(.) eq '')">@target attribute
@@ -12969,7 +12969,7 @@
         <datatype maxOccurs="unbounded">
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.URI"/>
         </datatype>
-        <constraintSpec ident="check_dataTarget" scheme="isoschematron">
+        <constraintSpec ident="check_dataTarget" scheme="schematron">
           <constraint>
             <sch:rule context="@data">
               <sch:assert role="warning" test="not(normalize-space(.) eq '')">@data attribute should
@@ -12997,7 +12997,7 @@
         <datatype maxOccurs="unbounded">
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.URI"/>
         </datatype>
-        <constraintSpec ident="check_declsTarget" scheme="isoschematron">
+        <constraintSpec ident="check_declsTarget" scheme="schematron">
           <constraint>
             <sch:rule context="@decls">
               <sch:assert role="warning" test="not(normalize-space(.) eq '')">@decls attribute
@@ -13255,7 +13255,7 @@
         <datatype>
           <rng:data type="string"/>
         </datatype>
-        <constraintSpec ident="check_extent" scheme="isoschematron">
+        <constraintSpec ident="check_extent" scheme="schematron">
           <constraint>
             <sch:rule context="@extent[matches(normalize-space(.), '^\d+(\.\d+)?$')]">
               <sch:assert role="warning" test="../@unit">The @unit attribute is
@@ -13314,7 +13314,7 @@
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.URI"/>
         </datatype>
-        <constraintSpec ident="check_handTarget" scheme="isoschematron">
+        <constraintSpec ident="check_handTarget" scheme="schematron">
           <constraint>
             <sch:rule context="@hand">
               <sch:assert role="warning" test="not(normalize-space(.) eq '')">@hand attribute should
@@ -13383,7 +13383,7 @@
         <datatype maxOccurs="unbounded">
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.URI"/>
         </datatype>
-        <constraintSpec ident="check_joinTarget" scheme="isoschematron">
+        <constraintSpec ident="check_joinTarget" scheme="schematron">
           <constraint>
             <sch:rule context="@join">
               <sch:assert role="warning" test="not(normalize-space(.) eq '')">@join attribute should
@@ -13492,7 +13492,7 @@
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.URI"/>
         </datatype>
-        <constraintSpec ident="check_defTarget_layer" scheme="isoschematron">
+        <constraintSpec ident="check_defTarget_layer" scheme="schematron">
           <constraint>
             <sch:rule context="mei:layer/@def">
               <sch:assert role="warning" test="not(normalize-space(.) eq '')">@def attribute should
@@ -13590,7 +13590,7 @@
             <rng:param name="minInclusive">2</rng:param>
           </rng:data>
         </datatype>
-        <constraintSpec ident="check_lsegs" scheme="isoschematron">
+        <constraintSpec ident="check_lsegs" scheme="schematron">
           <constraint>
             <sch:rule context="@lsegs">
               <sch:assert test="matches(../@lform, '(dashed|dotted|wavy)')">@lform attribute
@@ -14082,7 +14082,7 @@
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.URI"/>
         </datatype>
-        <constraintSpec ident="check_nymrefTarget" scheme="isoschematron">
+        <constraintSpec ident="check_nymrefTarget" scheme="schematron">
           <constraint>
             <sch:rule context="@nymref">
               <sch:assert role="warning" test="not(normalize-space(.) eq '')">@nymref attribute
@@ -14166,7 +14166,7 @@
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.URI"/>
         </datatype>
-        <constraintSpec ident="check_head.altsymTarget" scheme="isoschematron">
+        <constraintSpec ident="check_head.altsymTarget" scheme="schematron">
           <constraint>
             <sch:rule context="@head.altsym">
               <sch:assert role="warning" test="not(normalize-space(.) eq '')">@head.altsym attribute
@@ -14183,7 +14183,7 @@
         <datatype>
           <rng:data type="NMTOKEN"/>
         </datatype>
-        <constraintSpec ident="check_head.auth" scheme="isoschematron">
+        <constraintSpec ident="check_head.auth" scheme="schematron">
           <constraint>
             <sch:rule context="mei:*[lower-case(@head.auth) eq 'smufl']">
               <sch:assert test="matches(@head.shape, '^#x') or matches(@head.shape, '^U+')">When
@@ -14235,7 +14235,7 @@
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.HEADSHAPE"/>
         </datatype>
-        <constraintSpec ident="check_headshape_num" scheme="isoschematron">
+        <constraintSpec ident="check_headshape_num" scheme="schematron">
           <constraint>
             <sch:rule context="mei:*[(matches(@head.shape, '#x') or matches(@head.shape, 'U+')) and (lower-case(@head.auth) eq 'smufl')]">
               <sch:assert role="warning" test="matches(normalize-space(@head.shape), '^(#x|U\+)E([0-9AB][0-9A-F][0-9A-F]|C[0-9A][0-9A-F]|CB[0-9A-F])$')">SMuFL version 1.18 uses the range U+E000 - U+ECBF.</sch:assert>
@@ -14367,7 +14367,7 @@
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.MEASUREBEAT"/>
         </datatype>
-        <constraintSpec ident="origin.tstamp2_requires_origin.tstamp" scheme="isoschematron">
+        <constraintSpec ident="origin.tstamp2_requires_origin.tstamp" scheme="schematron">
           <constraint>
             <sch:rule context="mei:*[@origin.tstamp2]">
               <sch:assert test="@origin.tstamp">When @origin.tstamp2 is used @origin.tstamp must
@@ -14565,7 +14565,7 @@
         <datatype maxOccurs="unbounded">
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.URI"/>
         </datatype>
-        <constraintSpec ident="check_plistTarget" scheme="isoschematron">
+        <constraintSpec ident="check_plistTarget" scheme="schematron">
           <constraint>
             <sch:rule context="@plist">
               <sch:assert role="warning" test="not(normalize-space(.) eq '')">@plist attribute
@@ -14699,7 +14699,7 @@
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.CONFIDENCE"/>
         </datatype>
-        <constraintSpec ident="check_confidence" scheme="isoschematron">
+        <constraintSpec ident="check_confidence" scheme="schematron">
           <constraint>
             <sch:rule context="mei:*[@confidence]">
               <sch:assert test="@min and @max">The attributes @min and @max are required when
@@ -14750,7 +14750,7 @@
         <datatype maxOccurs="unbounded">
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.URI"/>
         </datatype>
-        <constraintSpec ident="check_respTarget" scheme="isoschematron">
+        <constraintSpec ident="check_respTarget" scheme="schematron">
           <constraint>
             <sch:rule context="@resp">
               <sch:assert role="warning" test="not(normalize-space(.) eq '')">@resp attribute should
@@ -14924,7 +14924,7 @@
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.URI"/>
         </datatype>
-        <constraintSpec ident="check_defTarget_staff" scheme="isoschematron">
+        <constraintSpec ident="check_defTarget_staff" scheme="schematron">
           <constraint>
             <sch:rule context="mei:staff/@def">
               <sch:assert role="warning" test="not(normalize-space(.) eq '')">@def attribute should
@@ -15058,7 +15058,7 @@
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.URI"/>
         </datatype>
-        <constraintSpec ident="check_endidTarget" scheme="isoschematron">
+        <constraintSpec ident="check_endidTarget" scheme="schematron">
           <constraint>
             <sch:rule context="@endid">
               <sch:assert role="warning" test="not(normalize-space(.) eq '')">@endid attribute
@@ -15080,7 +15080,7 @@
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.URI"/>
         </datatype>
-        <constraintSpec ident="check_startidTarget" scheme="isoschematron">
+        <constraintSpec ident="check_startidTarget" scheme="schematron">
           <constraint>
             <sch:rule context="@startid">
               <sch:assert role="warning" test="not(normalize-space(.) eq '')">@startid attribute
@@ -15133,7 +15133,7 @@
         <datatype maxOccurs="1">
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.URI"/>
         </datatype>
-        <constraintSpec ident="check_stem.sameasTarget" scheme="isoschematron">
+        <constraintSpec ident="check_stem.sameasTarget" scheme="schematron">
           <constraint>
             <sch:rule context="@stem.sameas">
               <sch:let name="layer.n" value="self::node()/ancestor::mei:layer/@n"/>
@@ -16176,7 +16176,7 @@
       <memberOf key="model.annotLike"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <choice xmlns="http://relaxng.org/ns/structure/1.0"><group><zeroOrMore><ref name="model.headLike"/></zeroOrMore><zeroOrMore><ref name="model.textComponentLike"/></zeroOrMore></group><zeroOrMore><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.editLike"/><ref name="model.textPhraseLike"/><ref name="model.transcriptionLike"/></choice></zeroOrMore></choice>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="Check_annot_data" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="Check_annot_data" scheme="schematron">
       <constraint>
         <sch:rule context="mei:annot[@data]">
           <sch:assert test="ancestor::mei:notesStmt">The @data attribute may only occur on an
@@ -16282,7 +16282,7 @@
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.headLike"/></zeroOrMore>
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><group><optional><ref name="label"/></optional><ref name="model.biblLike"/></group><ref name="biblList"/></choice></zeroOrMore>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="checkBiblLabels" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="checkBiblLabels" scheme="schematron">
       <constraint>
         <sch:rule context="mei:biblList[mei:label]">
           <sch:assert role="warning" test="count(mei:label) = count(mei:bibl)">When labels are used,
@@ -16350,7 +16350,7 @@
       <memberOf key="model.controlEventLike"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <rng:empty/>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="caesura_start-type_attributes_required" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="caesura_start-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:caesura">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
@@ -16425,7 +16425,7 @@
         <datatype>
           <rng:data type="positiveInteger"/>
         </datatype>
-        <constraintSpec ident="check_cb" scheme="isoschematron">
+        <constraintSpec ident="check_cb" scheme="schematron">
           <constraint>
             <sch:rule context="mei:cb">
               <sch:let name="totalColumns" value="preceding::mei:colLayout[1]/@cols"/>
@@ -16464,7 +16464,7 @@
       <memberOf key="model.syllablePart"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <rng:empty/>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="Clef_position_lines" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="Clef_position_lines" scheme="schematron">
       <constraint>
         <sch:rule context="mei:clef[matches(@shape, '[FCG]')][ancestor::mei:staffDef[@lines]]">
           <sch:let name="thisstaff" value="ancestor::mei:staffDef/@n"/>
@@ -16472,7 +16472,7 @@
             staff.</sch:assert>
         </sch:rule>
       </constraint>
-    </constraintSpec><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="Clef_position_nolines" scheme="isoschematron">
+    </constraintSpec><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="Clef_position_nolines" scheme="schematron">
       <constraint>
         <sch:rule context="mei:clef[ancestor::mei:staffDef[not(@lines)]]">
           <sch:let name="thisstaff" value="ancestor::mei:staffDef/@n"/>
@@ -16531,7 +16531,7 @@
       <memberOf key="model.respLikePart"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike.limited"/></choice></zeroOrMore>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_contributor_role" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_contributor_role" scheme="schematron">
       <constraint>
         <sch:rule context="mei:contributor">
           <sch:assert test="not(matches(normalize-space(lower-case(@role)), '(arranger|author|composer|contributor|editor|funder|librettist|lyricist|sponsor)'))">The value of @role must not contain the name of another element available in this
@@ -16599,7 +16599,7 @@
       <memberOf key="model.textPhraseLike.limited"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike.limited"/></choice></zeroOrMore>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_dedicatee" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_dedicatee" scheme="schematron">
       <constraint>
         <sch:rule context="mei:dedicatee">
           <sch:assert test="not(ancestor::mei:dedicatee)">The dedicatee element may not be
@@ -16693,7 +16693,7 @@
       <memberOf key="model.textPhraseLike.limited"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <ref xmlns="http://relaxng.org/ns/structure/1.0" name="macro.struc-unstrucContent"/>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_dimensions" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_dimensions" scheme="schematron">
       <constraint>
         <sch:rule context="mei:physDesc/mei:dimensions">
           <sch:assert test="not(count(mei:depth) &gt; 1)">The depth element may only appear
@@ -16724,7 +16724,7 @@
       <memberOf key="model.controlEventLike"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike.limited"/><ref name="model.graphicPrimitiveLike"/><ref name="model.editLike"/><ref name="model.transcriptionLike"/></choice></zeroOrMore>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="dir_start-type_attributes_required" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="dir_start-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:dir[not(ancestor::mei:syllable)]">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
@@ -16849,14 +16849,14 @@
       <memberOf key="model.controlEventLike"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike.limited"/><ref name="model.editLike"/><ref name="model.transcriptionLike"/></choice></zeroOrMore>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="dynam_start-type_attributes_required" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="dynam_start-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:dynam">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real"> Must have one of
             the attributes: startid, tstamp, tstamp.ges or tstamp.real.</sch:assert>
         </sch:rule>
       </constraint>
-    </constraintSpec><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="dynam_end-type_attributes" scheme="isoschematron">
+    </constraintSpec><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="dynam_end-type_attributes" scheme="schematron">
       <constraint>
         <sch:rule context="mei:dynam[@val2]">
           <sch:assert test="@dur or @dur.ges or @endid or @tstamp2">When @val2 is present, either
@@ -17039,14 +17039,14 @@
       <memberOf key="att.grpSym.anl"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.labelLike"/></zeroOrMore>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_grpSym_attributes_scoreDef" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_grpSym_attributes_scoreDef" scheme="schematron">
       <constraint>
         <sch:rule context="mei:grpSym[parent::mei:scoreDef]">
           <sch:assert test="@startid and @endid and @level">In scoreDef, grpSym must have startid,
             endid, and level attributes.</sch:assert>
         </sch:rule>
       </constraint>
-    </constraintSpec><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_grpSym_attributes_staffDef" scheme="isoschematron">
+    </constraintSpec><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_grpSym_attributes_staffDef" scheme="schematron">
       <constraint>
         <sch:rule context="mei:grpSym[parent::mei:staffGrp]">
           <sch:assert test="not(@startid or @endid or @level)">In staffGrp, grpSym must not have
@@ -17133,7 +17133,7 @@
       <memberOf key="model.keyAccidLike"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <rng:empty/>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="Check_keyAccidPlacement" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="Check_keyAccidPlacement" scheme="schematron">
       <constraint>
         <sch:rule context="mei:keyAccid">
           <sch:assert test="(@x and @y) or @pname or @loc">One of the following is required: @x and
@@ -17165,7 +17165,7 @@
       <memberOf key="model.keySigLike"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="model.keyAccidLike"/><ref name="model.transcriptionLike"/></choice></zeroOrMore>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_keyAccid_oct" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_keyAccid_oct" scheme="schematron">
       <constraint>
         <sch:rule context="mei:keySig[mei:keyAccid[@oct]]">
           <sch:assert test="count(mei:keyAccid[@oct]) = count(mei:keyAccid)">If the @oct attribute
@@ -17173,7 +17173,7 @@
             elements.</sch:assert>
         </sch:rule>
       </constraint>
-    </constraintSpec><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_keySig_editorial" scheme="isoschematron">
+    </constraintSpec><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_keySig_editorial" scheme="schematron">
       <constraint>
         <sch:rule context="mei:keySig/mei:*[local-name() eq 'add' or local-name() eq 'corr'             or local-name() eq 'damage' or local-name() eq 'del' or local-name() eq 'orig' or              local-name() eq 'reg' or local-name() eq 'restore' or local-name() eq 'sic' or              local-name() eq 'supplied' or local-name() eq 'unclear']">
           <sch:assert test="count(mei:keyAccid) = count(mei:*)">Only keyAccid elements are allowed
@@ -17327,7 +17327,7 @@
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <ref xmlns="http://relaxng.org/ns/structure/1.0" name="meiHead"/>
       <ref xmlns="http://relaxng.org/ns/structure/1.0" name="music"/>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="Check_staff" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="Check_staff" scheme="schematron">
       <constraint>
         <sch:rule context="mei:*[@staff]">
           <sch:assert test="every $i in tokenize(normalize-space(@staff), '\s+') satisfies $i=//mei:staffDef/@n">The values in @staff must correspond to @n attribute of a staffDef
@@ -17373,7 +17373,7 @@
       <memberOf key="model.nameLike"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike"/><ref name="model.editLike"/><ref name="model.transcriptionLike"/></choice></zeroOrMore>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="nameParts" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="nameParts" scheme="schematron">
       <constraint>
         <sch:rule context="mei:name">
           <sch:assert role="warning" test="not(mei:geogName or mei:persName or mei:corpName)">Recommended practice is to use name elements to capture sub-parts of a generic
@@ -17475,7 +17475,7 @@
       <memberOf key="model.controlEventLike"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike.limited"/><ref name="model.graphicPrimitiveLike"/><ref name="model.editLike"/><ref name="model.transcriptionLike"/></choice></zeroOrMore>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="ornam_start-type_attributes_required" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="ornam_start-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:ornam">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
@@ -17627,7 +17627,7 @@
       <memberOf key="model.controlEventLike"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="curve"/></zeroOrMore>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="phrase_start-_and_end-type_attributes_required" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="phrase_start-_and_end-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:phrase">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
@@ -17636,7 +17636,7 @@
             dur, dur.ges, endid, or tstamp2.</sch:assert>
         </sch:rule>
       </constraint>
-    </constraintSpec><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="phrase_containing_curve" scheme="isoschematron">
+    </constraintSpec><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="phrase_containing_curve" scheme="schematron">
       <constraint>
         <sch:rule context="mei:phrase[mei:curve[@bezier or @bulge or @curvedir or @lform or @lwidth or @ho or              @startho or @endho or @to or @startto or @endto or @vo or @startvo or @endvo or @x or @y or @x2 or @y2]]">
           <sch:assert test="not(@bezier or @bulge or @curvedir or @lform or @lwidth or @ho or @startho or @endho or                @to or @startto or @endto or @vo or @startvo or @endvo or @x or @y or @x2 or @y2)" role="warning">The visual attributes of the phrase (@bezier, @bulge, @curvedir, @lform,
@@ -17732,7 +17732,7 @@
       <memberOf key="model.relationLike"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <rng:empty/>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="FRBR_relation" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="FRBR_relation" scheme="schematron">
       <constraint>
         
         <sch:rule context="mei:relationList/mei:relation[parent::mei:work or parent::mei:expression or           parent::mei:source or parent::mei:item]">
@@ -17835,7 +17835,7 @@
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.headLike"/></zeroOrMore>
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="name"/><ref name="resp"/><ref name="model.nameLike.agent"/></choice></zeroOrMore>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_respStmt" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_respStmt" scheme="schematron">
       <constraint>
         <sch:rule context="mei:respStmt[not(ancestor::mei:change)]">
           <sch:assert test="(mei:resp and (mei:name or mei:corpName or mei:persName)) or             count(mei:*[@role]) = count(mei:*) and count(mei:*) &gt; 0" role="warning">At least one element pair (a resp element and a name-like element) is
@@ -17855,7 +17855,7 @@
       <memberOf key="model.eventLike"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="dot"/><ref name="model.appLike"/><ref name="model.editLike"/><ref name="model.transcriptionLike"/></choice></zeroOrMore>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="Check_restline" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="Check_restline" scheme="schematron">
       <constraint>
         <sch:rule context="mei:rest[@line]">
           <sch:let name="thisstaff" value="ancestor::mei:staff/@n"/>
@@ -17944,7 +17944,7 @@
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="expansion"/></zeroOrMore>
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="model.annotLike"/><ref name="model.appLike"/><ref name="model.divLike"/><ref name="model.editLike"/><ref name="model.graphicPrimitiveLike"/><ref name="model.milestoneLike.music"/><ref name="model.relationLike"/><ref name="model.sectionPart"/><ref name="model.transcriptionLike"/></choice></zeroOrMore>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="Check_sectionexpansion" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="Check_sectionexpansion" scheme="schematron">
       <constraint>
         <sch:rule context="mei:section[mei:expansion]">
           <sch:assert test="descendant::mei:section|descendant::mei:ending|descendant::mei:rdg">A
@@ -18051,7 +18051,7 @@
       <memberOf key="model.staffLike"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="model.annotLike"/><ref name="model.appLike"/><ref name="model.editLike"/><ref name="model.graphicPrimitiveLike"/><ref name="model.milestoneLike.music"/><ref name="model.relationLike"/><ref name="model.staffDefLike"/><ref name="model.staffPart"/><ref name="model.transcriptionLike"/></choice></zeroOrMore>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="checkStaff_n" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="checkStaff_n" scheme="schematron">
       <constraint>
         <sch:rule context="mei:staff[@n]">
           <sch:let name="thisstaff" value="@n"/>
@@ -18082,7 +18082,7 @@
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.labelLike"/></zeroOrMore>
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="model.instrDefLike"/><ref name="model.layerDefLike"/><ref name="model.staffDefPart"/></choice></zeroOrMore>
       <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="ambitus"/></optional>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="Check_staffDefn" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="Check_staffDefn" scheme="schematron">
       <constraint>
         <sch:rule context="mei:staffDef[not(ancestor::mei:staff)]">
           <sch:let name="thisstaff" value="@n"/>
@@ -18094,7 +18094,7 @@
             permitted.</sch:assert>
         </sch:rule>
       </constraint>
-    </constraintSpec><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="Check_ancestor_staff" scheme="isoschematron">
+    </constraintSpec><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="Check_ancestor_staff" scheme="schematron">
       <constraint>
         <sch:rule context="mei:staffDef[ancestor::mei:staff and @n]">
           <sch:let name="thisstaff" value="@n"/>
@@ -18102,7 +18102,7 @@
             current staff.</sch:assert>
         </sch:rule>
       </constraint>
-    </constraintSpec><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="Check_ancestor_staff_lines" scheme="isoschematron">
+    </constraintSpec><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="Check_ancestor_staff_lines" scheme="schematron">
       <constraint>
         <sch:rule context="mei:staffDef[ancestor::mei:staff and not(@n)]">
           <sch:let name="thisstaff" value="ancestor::mei:staff/@n"/>
@@ -18111,14 +18111,14 @@
             exist.</sch:assert>
         </sch:rule>
       </constraint>
-    </constraintSpec><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="Check_clef_position_staffDef" scheme="isoschematron">
+    </constraintSpec><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="Check_clef_position_staffDef" scheme="schematron">
       <constraint>
         <sch:rule context="mei:staffDef[@clef.line and @lines]">
           <sch:assert test="number(@clef.line) &lt;= number(@lines)">The clef position must be less
             than or equal to the number of lines on the staff.</sch:assert>
         </sch:rule>
       </constraint>
-    </constraintSpec><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="Check_clef_position_staffDef_nolines" scheme="isoschematron">
+    </constraintSpec><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="Check_clef_position_staffDef_nolines" scheme="schematron">
       <constraint>
         <sch:rule context="mei:staffDef[@clef.line and not(@lines)]">
           <sch:let name="thisstaff" value="@n"/>
@@ -18127,7 +18127,7 @@
             less than or equal to the number of lines on the staff.</sch:assert>
         </sch:rule>
       </constraint>
-    </constraintSpec><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="Check_tab_strings_lines" scheme="isoschematron">
+    </constraintSpec><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="Check_tab_strings_lines" scheme="schematron">
       <constraint>
         <sch:rule context="mei:staffDef[@tab.strings and @lines]">
           <sch:let name="countTokens" value="count(tokenize(normalize-space(@tab.strings), '\s'))"/>
@@ -18135,7 +18135,7 @@
             number of values as there are staff lines.</sch:assert>
         </sch:rule>
       </constraint>
-    </constraintSpec><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="Check_tab_strings_nolines" scheme="isoschematron">
+    </constraintSpec><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="Check_tab_strings_nolines" scheme="schematron">
       <constraint>
         <sch:rule context="mei:staffDef[@tab.strings and not(@lines)]">
           <sch:let name="countTokens" value="count(tokenize(normalize-space(@tab.strings), '\s'))"/>
@@ -18145,7 +18145,7 @@
             lines.</sch:assert>
         </sch:rule>
       </constraint>
-    </constraintSpec><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="Check_lines_color" scheme="isoschematron">
+    </constraintSpec><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="Check_lines_color" scheme="schematron">
       <constraint>
         <sch:pattern>
           <sch:rule context="mei:staffDef[@lines.color and @lines]">
@@ -18162,7 +18162,7 @@
           </sch:rule>
         </sch:pattern>
       </constraint>
-    </constraintSpec><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="Check_staff_ppq_ancestor" scheme="isoschematron">
+    </constraintSpec><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="Check_staff_ppq_ancestor" scheme="schematron">
       <constraint>
         <sch:pattern>
           <sch:rule context="mei:staffDef[@ppq][ancestor::mei:scoreDef[@ppq]]">
@@ -18173,7 +18173,7 @@
           </sch:rule>
         </sch:pattern>
       </constraint>
-    </constraintSpec><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="Check_staff_ppq_preceding" scheme="isoschematron">
+    </constraintSpec><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="Check_staff_ppq_preceding" scheme="schematron">
       <constraint>
         <sch:pattern>
           <sch:rule context="mei:staffDef[@ppq][preceding::mei:scoreDef[@ppq]]">
@@ -18199,7 +18199,7 @@
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.instrDefLike"/></zeroOrMore>
       <oneOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="model.staffGrpLike"/><ref name="model.staffDefLike"/></choice></oneOrMore>
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="grpSym"/></zeroOrMore>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="Check_staffGrp_unique_staff_n_values" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="Check_staffGrp_unique_staff_n_values" scheme="schematron">
       <constraint>
         <sch:rule context="mei:staffGrp">
           <sch:let name="countstaves" value="count(descendant::mei:staffDef)"/>
@@ -18236,7 +18236,7 @@
       <memberOf key="model.textPhraseLike.limited"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <rng:empty/>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="symbolDef_symbol_attributes_required" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="symbolDef_symbol_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:symbol[ancestor::mei:symbolDef]">
           <sch:assert test="@startid or (@x and @y)">In the symbolDef context, symbol must have
@@ -18268,7 +18268,7 @@
       <memberOf key="model.workIdent"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike.limited"/><ref name="model.graphicPrimitiveLike"/><ref name="model.editLike"/><ref name="model.transcriptionLike"/></choice></zeroOrMore>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="tempo_in_header_disallow_most_attrs" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="tempo_in_header_disallow_most_attrs" scheme="schematron">
       <constraint>
         <sch:rule context="mei:tempo[not(ancestor::mei:score or ancestor::mei:part)]">
           <sch:assert test="not(@*[name() != 'analog' and name() != 'class' and name() != 'label' and name() != 'mm' and name() != 'mm.dots' and name() != 'translit' and name() != 'type' and name() != 'mm.unit' and name() != 'n' and name() != 'xml:base' and name() != 'xml:id' and name() != 'xml:lang'])">Only analog, class, label, mm, mm.dots, mm.unit, n, translit, type, xml:base, xml:id,
@@ -18276,7 +18276,7 @@
             part.</sch:assert>
         </sch:rule>
       </constraint>
-    </constraintSpec><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="tempo_start-type_attributes_required" scheme="isoschematron">
+    </constraintSpec><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="tempo_start-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:tempo[not(ancestor::mei:syllable) and not(ancestor::mei:work) and not(ancestor::mei:expression) and not(count(ancestor::mei:*) = 0)]">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
@@ -18291,7 +18291,7 @@
       <memberOf key="model.textPhraseLike.limited"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike.limited"/></choice></zeroOrMore>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="Check_term_dataTarget" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="Check_term_dataTarget" scheme="schematron">
       <constraint>
         <sch:rule context="mei:term[@data]">
           <sch:assert test="ancestor::mei:classification">The @data attribute may only occur on a
@@ -18718,7 +18718,7 @@
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.headLike"/></zeroOrMore>
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><optional><ref name="label"/></optional><ref name="li"/></zeroOrMore>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="list_type_constraint" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="list_type_constraint" scheme="schematron">
       <constraint>
         <sch:rule context="mei:list[contains(@type,'gloss')]">
           <sch:assert test="count(mei:label) = count(mei:li)">In a list of type "gloss" all items
@@ -18863,7 +18863,7 @@
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.URI"/>
         </datatype>
-        <constraintSpec ident="check_altsymTarget" scheme="isoschematron">
+        <constraintSpec ident="check_altsymTarget" scheme="schematron">
           <constraint>
             <sch:rule context="@altsym">
               <sch:assert role="warning" test="not(normalize-space(.) eq '')">@altsym attribute
@@ -18979,7 +18979,7 @@
       <memberOf key="model.graphicPrimitiveLike"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <rng:empty/>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="symbolDef_curve_attributes_required" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="symbolDef_curve_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:curve[ancestor::mei:symbolDef]">
           <sch:assert test="@startid or (@x and @y)">In the symbolDef context, curve must have
@@ -19013,7 +19013,7 @@
       <memberOf key="model.graphicPrimitiveLike"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike.limited"/></choice></zeroOrMore>
-    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="line_start-_and_end-type_attributes_required" scheme="isoschematron">
+    </content><constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="line_start-_and_end-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:line[ancestor::mei:symbolDef]">
           <sch:assert test="@startid or (@x and @y)">When used in the symbolDef context, must have
@@ -19671,7 +19671,7 @@
         <datatype>
           <rng:data type="nonNegativeInteger"/>
         </datatype>
-        <constraintSpec ident="check_beams.floating" scheme="isoschematron">
+        <constraintSpec ident="check_beams.floating" scheme="schematron">
           <constraint>
             <sch:rule context="mei:fTrem[@beams and @beams.float]">
               <sch:assert test="@beams.float &lt;= @beams">The number of floating beams must be less
@@ -20924,7 +20924,7 @@
       <memberOf key="att.visualOffset.vo"/>
       <memberOf key="att.xy"/>
     </classes>
-  </classSpec><constraintSpec ident="set_ns" scheme="isoschematron" mode="add">
+  </classSpec><constraintSpec ident="set_ns" scheme="schematron" mode="add">
           <constraint>
             <sch:ns prefix="mei" uri="http://www.music-encoding.org/ns/mei"/>
             <sch:ns prefix="xlink" uri="http://www.w3.org/1999/xlink"/>
