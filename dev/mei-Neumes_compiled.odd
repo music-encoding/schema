@@ -2724,24 +2724,24 @@
       </valList>
     </content>
 </macroSpec><macroSpec rend="add" ident="data.PERCENT" module="MEI" type="dt">
-    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Positive decimal number plus '%', <abbr>i.e.</abbr>, [0-9]+(\.?[0-9]*)?\%.</desc>
+    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Positive decimal number plus '%', <abbr>i.e.</abbr>, [0-9]+(\.[0-9]*)?%.</desc>
     <content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <rng:data type="token">
-        <rng:param name="pattern">[0-9]+(\.?[0-9]*)?%</rng:param>
+        <rng:param name="pattern">[0-9]+(\.[0-9]*)?%</rng:param>
       </rng:data>
     </content>
   </macroSpec><macroSpec rend="add" ident="data.PERCENT.LIMITED" module="MEI" type="dt">
-    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Positive decimal number between 0 and 100, followed by a percent sign "%".</desc>
+    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Decimal number between 0 and 100, followed by a percent sign "%".</desc>
     <content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <rng:data type="token">
-        <rng:param name="pattern">(([0-9]|[1-9][0-9])(\.[0-9]+)?|100(\.0+)?)%</rng:param>
+        <rng:param name="pattern">(([0-9]|[1-9][0-9])(\.[0-9]*)?|100(\.0*)?)%</rng:param>
       </rng:data>
     </content>
   </macroSpec><macroSpec rend="add" ident="data.PERCENT.LIMITED.SIGNED" module="MEI" type="dt">
-    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Positive decimal number between -100 and 100, followed by a percent sign "%".</desc>
+    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Decimal number between -100 and 100, followed by a percent sign "%".</desc>
     <content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <rng:data type="token">
-        <rng:param name="pattern">(\+|-)?(([0-9]|[1-9][0-9])(\.[0-9]+)?|100(\.0+)?)%</rng:param>
+        <rng:param name="pattern">(\+|-)?(([0-9]|[1-9][0-9])(\.[0-9]*)?|100(\.0*)?)%</rng:param>
       </rng:data>
     </content>
   </macroSpec><macroSpec rend="add" ident="data.PGFUNC" module="MEI" type="dt">
