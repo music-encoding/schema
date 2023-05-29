@@ -19,7 +19,7 @@
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href=../../../source/"validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2023-05-27T15:11:15.407+02:00-->
+<!--canonicalized: 2023-05-29T11:51:06.759+02:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -1351,7 +1351,7 @@
             &lt;date&gt;2019-10-25&lt;/date&gt;
          &lt;/pubStmt&gt;
          &lt;notesStmt&gt;
-            &lt;annot&gt;Verovio supports "tempo" elements. Horizontal positioning can be specified. By default, tempi indications are placed above the staff. The "rend" element can used within the text, for example for specifying metronome values.&lt;/annot&gt;
+            &lt;annot&gt;Verovio supports "tempo" elements. Horizontal positioning can be specified. By default, tempi indications are placed above the staff. The "rend" element can be used within the text, for example for specifying metronome values.&lt;/annot&gt;
          &lt;/notesStmt&gt;
       &lt;/fileDesc&gt;
       &lt;encodingDesc&gt;
@@ -11541,7 +11541,7 @@
 </egXML>
                            </figure>
                         </p>
-                        <p>You may use 6\ and 6/ for numerals that should be shown with a backslash and slash, respectively. An alternative would be to use the "bslash" (backward slash) and "fslash" (forward slash) on the <gi scheme="MEI">rend&gt;</gi> element.</p>
+                        <p>You may use 6\ and 6/ for numerals that should be shown with a backslash and slash, respectively. An alternative would be to use the "bslash" (backward slash) and "fslash" (forward slash) on the <gi scheme="MEI">rend</gi> element.</p>
                         <p>
                            <figure>
                               <head>Figured bass with chromatically altered figure</head>
