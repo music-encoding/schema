@@ -5,7 +5,7 @@
           xmlns:xlink="http://www.w3.org/1999/xlink"
           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
           ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2023-05-30T13:45:16Z. .
+Schema generated from ODD source 2023-05-30T21:54:56Z. .
 TEI Edition: Version 5.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -1348,7 +1348,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <param name="pattern">[a-g]</param>
       </data>
    </define>
-   <define name="mei_data.PITCHNAME.GES">
+   <define name="mei_data.PITCHNAME.GESTURAL">
       <data type="token">
          <param name="pattern">[a-g]|none</param>
       </data>
@@ -3394,7 +3394,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
       <optional>
          <attribute name="pname.ges">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Contains a performed pitch name that differs from the written value.</a:documentation>
-            <ref name="mei_data.PITCHNAME.GES"/>
+            <ref name="mei_data.PITCHNAME.GESTURAL"/>
          </attribute>
       </optional>
    </define>

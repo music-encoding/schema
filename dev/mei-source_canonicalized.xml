@@ -19,7 +19,7 @@
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href=../../../source/"validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2023-05-30T15:48:42.719+02:00-->
+<!--canonicalized: 2023-05-30T23:58:16.573+02:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -14847,7 +14847,7 @@
       </rng:choice>
     </content>
   </macroSpec>
-  <macroSpec ident="data.DURATION.gestural" module="MEI" type="dt">
+  <macroSpec ident="data.DURATION.GESTURAL" module="MEI" type="dt">
     <desc xml:lang="en">Performed duration attribute values.</desc>
     <content>
       <rng:choice>
@@ -16821,7 +16821,7 @@
       </rng:data>
     </content>
   </macroSpec>
-  <macroSpec ident="data.PITCHNAME.GES" module="MEI" type="dt">
+  <macroSpec ident="data.PITCHNAME.GESTURAL" module="MEI" type="dt">
     <desc xml:lang="en">Gestural pitch names need an additional value for when the notated pitch is not to be
       sounded.</desc>
     <content>
@@ -23274,7 +23274,7 @@
       <attDef ident="dur.ges" usage="opt">
         <desc xml:lang="en">Records performed duration information that differs from the written duration.</desc>
         <datatype>
-          <rng:ref name="data.DURATION.gestural"/>
+          <rng:ref name="data.DURATION.GESTURAL"/>
         </datatype>
       </attDef>
       <attDef ident="dots.ges" usage="opt">
@@ -23538,7 +23538,7 @@
       <attDef ident="pname.ges" usage="opt">
         <desc xml:lang="en">Contains a performed pitch name that differs from the written value.</desc>
         <datatype>
-          <rng:ref name="data.PITCHNAME.GES"/>
+          <rng:ref name="data.PITCHNAME.GESTURAL"/>
         </datatype>
       </attDef>
       <attDef ident="pnum" usage="opt">
@@ -23609,7 +23609,7 @@
       <attDef ident="pname.ges" usage="opt">
         <desc xml:lang="en">Contains a performed pitch name that differs from the written value.</desc>
         <datatype>
-          <rng:ref name="data.PITCHNAME.GES"/>
+          <rng:ref name="data.PITCHNAME.GESTURAL"/>
         </datatype>
       </attDef>
       <attDef ident="pnum" usage="opt">

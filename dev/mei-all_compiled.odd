@@ -1140,7 +1140,7 @@
     <content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <choice xmlns="http://relaxng.org/ns/structure/1.0"><ref name="data.DURATION.cmn"/><ref name="data.DURATIONRESTS.mensural"/></choice>
     </content>
-  </macroSpec><macroSpec rend="add" ident="data.DURATION.gestural" module="MEI" type="dt">
+  </macroSpec><macroSpec rend="add" ident="data.DURATION.GESTURAL" module="MEI" type="dt">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Performed duration attribute values.</desc>
     <content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <choice xmlns="http://relaxng.org/ns/structure/1.0"><ref name="data.DURATION.cmn"/><ref name="data.DURATION.mensural"/></choice>
@@ -2920,7 +2920,7 @@
         <rng:param name="pattern">[a-g]</rng:param>
       </rng:data>
     </content>
-  </macroSpec><macroSpec rend="add" ident="data.PITCHNAME.GES" module="MEI" type="dt">
+  </macroSpec><macroSpec rend="add" ident="data.PITCHNAME.GESTURAL" module="MEI" type="dt">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Gestural pitch names need an additional value for when the notated pitch is not to be
       sounded.</desc>
     <content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -7610,7 +7610,7 @@
       <attDef ident="dur.ges" usage="opt">
         <desc xml:lang="en">Records performed duration information that differs from the written duration.</desc>
         <datatype>
-          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.DURATION.gestural"/>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.DURATION.GESTURAL"/>
         </datatype>
       </attDef>
       <attDef ident="dots.ges" usage="opt">
@@ -7833,7 +7833,7 @@
       <attDef ident="pname.ges" usage="opt">
         <desc xml:lang="en">Contains a performed pitch name that differs from the written value.</desc>
         <datatype>
-          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.PITCHNAME.GES"/>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.PITCHNAME.GESTURAL"/>
         </datatype>
       </attDef>
       <attDef ident="pnum" usage="opt">
@@ -7901,7 +7901,7 @@
       <attDef ident="pname.ges" usage="opt">
         <desc xml:lang="en">Contains a performed pitch name that differs from the written value.</desc>
         <datatype>
-          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.PITCHNAME.GES"/>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.PITCHNAME.GESTURAL"/>
         </datatype>
       </attDef>
       <attDef ident="pnum" usage="opt">
