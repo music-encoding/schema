@@ -19,7 +19,7 @@
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href=../../../source/"validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2023-05-30T23:58:16.573+02:00-->
+<!--canonicalized: 2023-06-02T17:01:23.912+02:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -24663,7 +24663,7 @@
       <memberOf key="att.bibl"/>
       <memberOf key="att.dataPointing"/>
       <memberOf key="model.pubStmtPart"/>
-      <memberOf key="model.titlePagePart"/>
+      <memberOf key="model.imprintPart"/>
     </classes>
     <content>
       <rng:ref name="macro.availabilityPart"/>
@@ -26967,6 +26967,7 @@
       <memberOf key="att.common"/>
       <memberOf key="att.bibl"/>
       <memberOf key="att.lang"/>
+      <memberOf key="model.imprintPart"/>
     </classes>
     <content>
       <rng:text/>
