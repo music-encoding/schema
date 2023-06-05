@@ -5,7 +5,7 @@
           xmlns:xlink="http://www.w3.org/1999/xlink"
           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
           ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2023-06-05T11:16:13Z. .
+Schema generated from ODD source 2023-06-05T11:36:12Z. .
 TEI Edition: Version 5.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -4671,11 +4671,11 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
       </optional>
    </define>
    <define name="mei_att.keySigDefault.log.attributes">
-      <ref name="mei_att.keySigDefault.log.attribute.key.sig"/>
+      <ref name="mei_att.keySigDefault.log.attribute.keysig"/>
    </define>
-   <define name="mei_att.keySigDefault.log.attribute.key.sig">
+   <define name="mei_att.keySigDefault.log.attribute.keysig">
       <optional>
-         <attribute name="key.sig">
+         <attribute name="keysig">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Written key signature.</a:documentation>
             <list>
                <oneOrMore>

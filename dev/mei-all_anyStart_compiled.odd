@@ -503,6 +503,24 @@
         </valItem>
       </valList>
     </content>
+  </macroSpec><macroSpec rend="add" ident="data.CANCELACCID" module="MEI" type="dt">
+    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Indicates where cancellation accidentals are shown in a key signature.</desc>
+    <content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <valList type="closed">
+        <valItem ident="none">
+          <desc xml:lang="en">Do not show cancellation accidentals.</desc>
+        </valItem>
+        <valItem ident="before">
+          <desc xml:lang="en">Show cancellation accidentals before the new key accidentals.</desc>
+        </valItem>
+        <valItem ident="after">
+          <desc xml:lang="en">Show cancellation accidentals after the new key accidentals ("Old style" or "French")</desc>
+        </valItem>
+        <valItem ident="before-bar">
+          <desc xml:lang="en">Show cancellation accidentals before the barline (also known as "Russian").</desc>
+        </valItem>
+      </valList>
+    </content>
   </macroSpec><macroSpec rend="add" ident="data.CERTAINTY" module="MEI" type="dt">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Values for certainty attribute. Certainty may be expressed by one of the predefined symbolic values <val>high</val>, 
       <val>medium</val>, or <val>low</val>. The value <val>unknown</val> should be used in cases where the encoder 
@@ -13400,7 +13418,7 @@
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Used by staffDef and scoreDef to provide default values for attributes in the logical
       domain that are related to key signatures.</desc>
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-      <attDef ident="key.sig" usage="opt">
+      <attDef ident="keysig" usage="opt">
         <desc xml:lang="en">Written key signature.</desc>
         <datatype maxOccurs="unbounded">
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.KEYFIFTHS"/>
@@ -19819,10 +19837,10 @@
       <memberOf key="att.visibility"/>
     </classes>
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-      <attDef ident="sig.showchange" usage="opt">
-        <desc xml:lang="en">Determines whether cautionary accidentals should be displayed at a key change.</desc>
+      <attDef ident="cancelaccid" usage="opt">
+        <desc xml:lang="en">Determines where cautionary accidentals should be displayed at a key change.</desc>
         <datatype>
-          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.BOOLEAN"/>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.CANCELACCID"/>
         </datatype>
       </attDef>
     </attList>
@@ -19830,10 +19848,10 @@
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Used by staffDef and scoreDef to provide default values for attributes in the visual
       domain related to key signatures.</desc>
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-      <attDef ident="keysig.showchange" usage="opt">
-        <desc xml:lang="en">Determines whether cautionary accidentals should be displayed at a key change.</desc>
+      <attDef ident="keysig.cancelaccid" usage="opt">
+        <desc xml:lang="en">Determines where cautionary accidentals should be displayed at a key change.</desc>
         <datatype>
-          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.BOOLEAN"/>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.CANCELACCID"/>
         </datatype>
       </attDef>
       <attDef ident="keysig.visible" usage="opt">

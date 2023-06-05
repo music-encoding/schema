@@ -20,7 +20,7 @@
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href=../../../source/"validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2023-06-05T13:18:57.891+02:00-->
+<!--canonicalized: 2023-06-05T13:40:03.554+02:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -4557,14 +4557,14 @@
                      <specList>
                         <specDesc key="att.meterSigDefault.log" atts="meter.count meter.unit"/>
                         <specDesc key="att.meterSigDefault.log" atts="meter.sym"/>
-                        <specDesc key="att.keySigDefault.log" atts="key.sig"/>
+                        <specDesc key="att.keySigDefault.log" atts="keysig"/>
                      </specList>
                   </p>
                   <p>The following example describes a score in common time with 3 flats:</p>
                   <p>
                      <figure>
                         <head/>
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;scoreDef key.sig="3f" meter.count="4" meter.sym="common" meter.unit="4"/&gt;
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;scoreDef keysig="3f" meter.count="4" meter.sym="common" meter.unit="4"/&gt;
 </egXML>
                      </figure>
                   </p>
@@ -4612,7 +4612,7 @@
       &lt;staffDef clef.line="2"
                 clef.shape="G"
                 key.mode="major"
-                key.sig="4f"
+                keysig="4f"
                 label="Piccolo"
                 label.abbr="Picc."
                 lines="5"
@@ -4623,7 +4623,7 @@
       &lt;staffDef clef.line="2"
                 clef.shape="G"
                 key.mode="major"
-                key.sig="4f"
+                keysig="4f"
                 label="Flute"
                 label.abbr="Fl."
                 lines="5"
@@ -4632,7 +4632,7 @@
       &lt;staffDef clef.line="2"
                 clef.shape="G"
                 key.mode="major"
-                key.sig="4f"
+                keysig="4f"
                 label="Oboe"
                 label.abbr="Ob."
                 lines="5"
@@ -4641,7 +4641,7 @@
       &lt;staffDef clef.line="4"
                 clef.shape="F"
                 key.mode="major"
-                key.sig="4f"
+                keysig="4f"
                 label="Bassoon"
                 label.abbr="Bsn."
                 lines="5"
@@ -4651,7 +4651,7 @@
       &lt;staffDef clef.line="2"
                 clef.shape="G"
                 key.mode="major"
-                key.sig="1f"
+                keysig="1f"
                 label="Clarinet in E♭"
                 label.abbr="E♭ Cl."
                 lines="5"
@@ -4713,8 +4713,8 @@
                   </p>
                </div>
                <div xml:id="cmnReDef" type="div3">
-                  <head>Redefinition of Score Parameters</head>
-                  <p>Sometimes it is necessary to provide the parameters of a score or a staff with new values. For example. a score may change keys, gain or lose staves, use different layout settings at any point, etc. Likewise, a staff may change its clef, gain or lose layers, or become invisible, and so on. To accommodate these circumstances, in CMN <gi scheme="MEI">staffDef</gi> is allowed to occur in the following locations:</p>
+                  <head>Re-definition of Score Parameters</head>
+                  <p>Sometimes it is necessary to re-define the parameters of a score or a staff. For example, a score may change keys, the number of staves, or use different layout settings. Likewise, a staff may change its clef, change the number of layers, or become invisible. To accommodate these changes, <gi scheme="MEI">staffDef</gi> is allowed to occur in the following locations:</p>
                   <list rend="bulleted">
                      <item>within the description of staff groups; that is, in <gi scheme="MEI">staffGrp</gi>,</item>
                      <item>within the content of a <gi scheme="MEI">measure</gi>,</item>
@@ -4726,7 +4726,117 @@
                      <item>within sections and endings; that is, inside <gi scheme="MEI">section</gi> and <gi scheme="MEI">ending</gi> elements; and</item>
                      <item>between sections and endings; that is, directly within a <gi scheme="MEI">score</gi> or <gi scheme="MEI">part</gi>.</item>
                   </list>
-                  <p>The possibility also exists to include <gi scheme="MEI">scoreDef</gi> and <gi scheme="MEI">staffDef</gi> in staves and layers when the mei-all schema is in use; however, this practice is not recommended for the CMN repertoire.</p>
+                  <p>It is also possible to include <gi scheme="MEI">scoreDef</gi> and <gi scheme="MEI">staffDef</gi> in staves and layers when the MEI All schema is in use; however, this practice is not recommended for the CMN repertoire.</p>
+                  <p>The following example shows how to change the key and meter signatures within a score. The <att>keysig.cancelaccid</att> attribute may be used to control the position of the cancellation accidentals of the key signature change, while the <att>keysig.visible</att> can be used to hide the key signature entirely.</p>  
+                  <p>
+                     <figure>
+                        <head/>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
+&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
+&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.0.0-dev"&gt;
+    &lt;meiHead&gt;
+        &lt;fileDesc&gt;
+            &lt;titleStmt&gt;
+                &lt;title&gt;Key changes example&lt;/title&gt;
+            &lt;/titleStmt&gt;
+            &lt;pubStmt&gt;
+                &lt;date isodate="2017-05-09"&gt;2017-05-09&lt;/date&gt;
+            &lt;/pubStmt&gt;
+            &lt;seriesStmt&gt;
+                &lt;title&gt;Verovio test suite&lt;/title&gt;
+            &lt;/seriesStmt&gt;
+            &lt;notesStmt&gt;
+                &lt;annot&gt;Example taken from the Verovio Test Suite&lt;/annot&gt;
+            &lt;/notesStmt&gt;
+        &lt;/fileDesc&gt;
+    &lt;/meiHead&gt;
+    &lt;music&gt;
+        &lt;body&gt;
+            &lt;mdiv&gt;
+                &lt;score&gt;
+                    &lt;?edit-start?&gt;
+                    &lt;scoreDef keysig="4f" meter.sym="common"&gt;
+                        &lt;staffGrp&gt;
+                            &lt;staffDef n="1" lines="5" clef.shape="G" clef.line="2" /&gt;
+                        &lt;/staffGrp&gt;
+                    &lt;/scoreDef&gt;
+                    &lt;section&gt;
+                        &lt;measure right="dbl" n="1"&gt;
+                            &lt;staff n="1"&gt;
+                                &lt;layer n="1"&gt;
+                                    &lt;chord dur="1"&gt;
+                                        &lt;note oct="4" pname="a" accid.ges="f" /&gt;
+                                        &lt;note oct="5" pname="c" accid.ges="f" /&gt;
+                                        &lt;note oct="5" pname="e" accid.ges="f" /&gt;
+                                    &lt;/chord&gt;
+                                &lt;/layer&gt;
+                            &lt;/staff&gt;
+                        &lt;/measure&gt;
+                        &lt;scoreDef key.sig="0" keysig.cancellaccid="none" /&gt;
+                        &lt;measure right="dbl" n="4"&gt;
+                            &lt;staff n="1"&gt;
+                                &lt;layer n="1"&gt;
+                                    &lt;chord dur="1"&gt;
+                                        &lt;note oct="4" pname="a" /&gt;
+                                        &lt;note oct="5" pname="c" /&gt;
+                                        &lt;note oct="5" pname="e" /&gt;
+                                    &lt;/chord&gt;
+                                &lt;/layer&gt;
+                            &lt;/staff&gt;
+                        &lt;/measure&gt;
+                        &lt;scoreDef keysig="2s" keysig.cancellaccid="before" meter.sym="cut" /&gt;
+                        &lt;measure n="2"&gt;
+                            &lt;staff n="1"&gt;
+                                &lt;layer n="1"&gt;
+                                    &lt;chord dur="1"&gt;
+                                        &lt;note oct="4" pname="b" /&gt;
+                                        &lt;note oct="5" pname="d" /&gt;
+                                        &lt;note oct="5" pname="f" accid.ges="s" /&gt;
+                                    &lt;/chord&gt;
+                                &lt;/layer&gt;
+                            &lt;/staff&gt;
+                        &lt;/measure&gt;
+                        &lt;measure right="dbl" n="3"&gt;
+                            &lt;staff n="1"&gt;
+                                &lt;layer n="1"&gt;
+                                    &lt;multiRest num="3" /&gt;
+                                &lt;/layer&gt;
+                            &lt;/staff&gt;
+                        &lt;/measure&gt;
+                        &lt;scoreDef keysig.visible="false" keysig="5f" meter.count="4" meter.unit="4" /&gt;
+                        &lt;measure right="dbl" n="5"&gt;
+                            &lt;staff n="1"&gt;
+                                &lt;layer n="1"&gt;
+                                    &lt;chord dur="1"&gt;
+                                        &lt;note oct="4" pname="g" /&gt;
+                                        &lt;note oct="4" pname="b" accid.ges="f" /&gt;
+                                        &lt;note oct="5" pname="d" /&gt;
+                                    &lt;/chord&gt;
+                                &lt;/layer&gt;
+                            &lt;/staff&gt;
+                        &lt;/measure&gt;
+                        &lt;scoreDef keysig="2s" keysig.cancellaccid="before-bar" /&gt;
+                        &lt;measure right="end" n="2"&gt;
+                            &lt;staff n="1"&gt;
+                                &lt;layer n="1"&gt;
+                                    &lt;chord dur="1"&gt;
+                                        &lt;note oct="4" pname="b" /&gt;
+                                        &lt;note oct="5" pname="d" /&gt;
+                                        &lt;note oct="5" pname="f" accid.ges="s" /&gt;
+                                    &lt;/chord&gt;
+                                &lt;/layer&gt;
+                            &lt;/staff&gt;
+                        &lt;/measure&gt;
+                    &lt;/section&gt;
+                    &lt;?edit-end?&gt;
+                &lt;/score&gt;
+            &lt;/mdiv&gt;
+        &lt;/body&gt;
+    &lt;/music&gt;
+&lt;/mei&gt;
+</egXML>
+                     </figure>
+                  </p>
                </div>
                <div xml:id="cmnNotesChords" type="div3">
                   <head>Notes, Chords and Rests in CMN</head>
@@ -6808,7 +6918,7 @@
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;score&gt;
    &lt;scoreDef&gt;
       &lt;staffGrp&gt;
-         &lt;staffDef clef.line="2" clef.shape="G" key.sig="2f" lines="5" n="1"/&gt;
+         &lt;staffDef clef.line="2" clef.shape="G" keysig="2f" lines="5" n="1"/&gt;
       &lt;/staffGrp&gt;
    &lt;/scoreDef&gt;
    &lt;section&gt;
@@ -9712,7 +9822,7 @@
                      <head/>
                      <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve" valid="feasible">&lt;scoreDef&gt;
    &lt;staffGrp&gt;
-      &lt;staffDef clef.line="4" clef.shape="F" key.sig="4s" lines="5" n="1"&gt;&lt;/staffDef&gt;
+      &lt;staffDef clef.line="4" clef.shape="F" keysig="4s" lines="5" n="1"&gt;&lt;/staffDef&gt;
    &lt;/staffGrp&gt;
 &lt;/scoreDef&gt;
 &lt;section&gt;
@@ -13409,11 +13519,11 @@
                   <p>
                      <figure>
                         <head/>
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve" valid="feasible">&lt;scoreDef key.sig="1f" meter.count="4" meter.sym="common" meter.unit="4" ppq="48"&gt;
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve" valid="feasible">&lt;scoreDef keysig="1f" meter.count="4" meter.sym="common" meter.unit="4" ppq="48"&gt;
    &lt;staffGrp&gt;
-      &lt;staffDef clef.line="2" clef.shape="G" key.sig="1f" lines="5" n="1" xml:id="midi.P1"&gt;&lt;/staffDef&gt;
-      &lt;staffDef clef.line="4" clef.shape="F" key.sig="1f" lines="5" n="2" xml:id="midi.P2"&gt;&lt;/staffDef&gt;
-      &lt;staffDef clef.line="4" clef.shape="F" key.sig="1f" lines="5" n="3" xml:id="midi.P3"&gt;&lt;/staffDef&gt;
+      &lt;staffDef clef.line="2" clef.shape="G" keysig="1f" lines="5" n="1" xml:id="midi.P1"&gt;&lt;/staffDef&gt;
+      &lt;staffDef clef.line="4" clef.shape="F" keysig="1f" lines="5" n="2" xml:id="midi.P2"&gt;&lt;/staffDef&gt;
+      &lt;staffDef clef.line="4" clef.shape="F" keysig="1f" lines="5" n="3" xml:id="midi.P3"&gt;&lt;/staffDef&gt;
    &lt;/staffGrp&gt;
 &lt;/scoreDef&gt;
 &lt;!-- snip --&gt;
@@ -13434,7 +13544,7 @@
                   <p>
                      <figure>
                         <head/>
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;scoreDef key.sig="1f"
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;scoreDef keysig="1f"
           meter.count="4"
           meter.sym="common"
           meter.unit="4"
@@ -13442,21 +13552,21 @@
    &lt;staffGrp&gt;
       &lt;staffDef clef.line="2"
                 clef.shape="G"
-                key.sig="1f"
+                keysig="1f"
                 lines="5"
                 n="1"
                 ppq="2"
                 xml:id="midi.P1"/&gt;
       &lt;staffDef clef.line="4"
                 clef.shape="F"
-                key.sig="1f"
+                keysig="1f"
                 lines="5"
                 n="2"
                 ppq="16"
                 xml:id="midi.P2"/&gt;
       &lt;staffDef clef.line="4"
                 clef.shape="F"
-                key.sig="1f"
+                keysig="1f"
                 lines="5"
                 n="3"
                 ppq="24"
@@ -13478,7 +13588,7 @@
                   <p>
                      <figure>
                         <head/>
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;scoreDef key.sig="1f"
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;scoreDef keysig="1f"
           meter.count="4"
           meter.sym="common"
           meter.unit="4"
@@ -13523,7 +13633,7 @@
                   <p>
                      <figure>
                         <head/>
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;scoreDef key.sig="1f"
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;scoreDef keysig="1f"
           meter.count="4"
           meter.sym="common"
           meter.unit="4"
@@ -14174,6 +14284,25 @@
         </valItem>
         <valItem ident="false">
           <desc xml:lang="en">False.</desc>
+        </valItem>
+      </valList>
+    </content>
+  </macroSpec>
+  <macroSpec ident="data.CANCELACCID" module="MEI" type="dt">
+    <desc xml:lang="en">Indicates where cancellation accidentals are shown in a key signature.</desc>
+    <content>
+      <valList type="closed">
+        <valItem ident="none">
+          <desc xml:lang="en">Do not show cancellation accidentals.</desc>
+        </valItem>
+        <valItem ident="before">
+          <desc xml:lang="en">Show cancellation accidentals before the new key accidentals.</desc>
+        </valItem>
+        <valItem ident="after">
+          <desc xml:lang="en">Show cancellation accidentals after the new key accidentals ("Old style" or "French")</desc>
+        </valItem>
+        <valItem ident="before-bar">
+          <desc xml:lang="en">Show cancellation accidentals before the barline (also known as "Russian").</desc>
         </valItem>
       </valList>
     </content>
@@ -32392,7 +32521,7 @@
     <desc xml:lang="en">Used by staffDef and scoreDef to provide default values for attributes in the logical
       domain that are related to key signatures.</desc>
     <attList>
-      <attDef ident="key.sig" usage="opt">
+      <attDef ident="keysig" usage="opt">
         <desc xml:lang="en">Written key signature.</desc>
         <datatype maxOccurs="unbounded">
           <rng:ref name="data.KEYFIFTHS"/>
@@ -41221,10 +41350,10 @@
       <memberOf key="att.visibility"/>
     </classes>
     <attList>
-      <attDef ident="sig.showchange" usage="opt">
-        <desc xml:lang="en">Determines whether cautionary accidentals should be displayed at a key change.</desc>
+      <attDef ident="cancelaccid" usage="opt">
+        <desc xml:lang="en">Determines where cautionary accidentals should be displayed at a key change.</desc>
         <datatype>
-          <rng:ref name="data.BOOLEAN"/>
+          <rng:ref name="data.CANCELACCID"/>
         </datatype>
       </attDef>
     </attList>
@@ -41233,10 +41362,10 @@
     <desc xml:lang="en">Used by staffDef and scoreDef to provide default values for attributes in the visual
       domain related to key signatures.</desc>
     <attList>
-      <attDef ident="keysig.showchange" usage="opt">
-        <desc xml:lang="en">Determines whether cautionary accidentals should be displayed at a key change.</desc>
+      <attDef ident="keysig.cancelaccid" usage="opt">
+        <desc xml:lang="en">Determines where cautionary accidentals should be displayed at a key change.</desc>
         <datatype>
-          <rng:ref name="data.BOOLEAN"/>
+          <rng:ref name="data.CANCELACCID"/>
         </datatype>
       </attDef>
       <attDef ident="keysig.visible" usage="opt">
