@@ -5,7 +5,7 @@
           xmlns:xlink="http://www.w3.org/1999/xlink"
           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
           ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2023-06-02T15:59:35Z. .
+Schema generated from ODD source 2023-06-05T11:16:13Z. .
 TEI Edition: Version 5.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -1618,9 +1618,6 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
             <ref name="mei_model.rendLike"/>
          </choice>
       </zeroOrMore>
-   </define>
-   <define name="mei_att.chordDef.anl.attributes">
-      <empty/>
    </define>
    <define name="mei_att.repeatMark.anl.attributes">
       <empty/>
@@ -3613,7 +3610,6 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
             <ref name="mei_barre"/>
          </zeroOrMore>
          <ref name="mei_att.common.attributes"/>
-         <ref name="mei_att.chordDef.anl.attributes"/>
          <ref name="mei_att.chordDef.log.attributes"/>
          <empty/>
       </element>
@@ -6031,7 +6027,11 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
       </choice>
    </define>
    <define name="mei_model.respLikePart">
-      <notAllowed/>
+      <choice>
+         <ref name="mei_arranger"/>
+         <ref name="mei_composer"/>
+         <ref name="mei_lyricist"/>
+      </choice>
    </define>
    <define name="mei_model.scoreDefLike">
       <choice>
@@ -6165,6 +6165,20 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
          <empty/>
       </element>
    </define>
+   <define name="mei_arranger">
+      <element name="arranger">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A person or organization who transcribes a musical composition, usually for a different medium from that of the original; in an arrangement the musical substance remains essentially unchanged.</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="mei_model.textPhraseLike.limited"/>
+            </choice>
+         </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
+         <empty/>
+      </element>
+   </define>
    <define name="mei_artic">
       <element name="artic">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(articulation) An indication of how to play a note or chord.</a:documentation>
@@ -6270,6 +6284,20 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
          </oneOrMore>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.event.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_composer">
+      <element name="composer">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The name of the creator of the intellectual content of a musical work.</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="mei_model.textPhraseLike.limited"/>
+            </choice>
+         </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
          <empty/>
       </element>
    </define>
@@ -6405,6 +6433,20 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(line beginning) An empty formatting element that forces text to begin on a new line.</a:documentation>
          <empty/>
          <ref name="mei_att.common.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_lyricist">
+      <element name="lyricist">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Person or organization who is a writer of the text of a song.</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="mei_model.textPhraseLike.limited"/>
+            </choice>
+         </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
          <empty/>
       </element>
    </define>

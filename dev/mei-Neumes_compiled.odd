@@ -9274,7 +9274,7 @@
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.accidental"/>
       <memberOf key="att.coloration"/>
-      <memberOf key="att.duration.log"/>
+      
       <memberOf key="att.pitched"/>
     </classes>
   </classSpec><classSpec rend="add" ident="att.annot.log" module="MEI.shared" type="atts">
@@ -9485,7 +9485,7 @@
       
       
       <memberOf key="att.cue"/>
-      <memberOf key="att.duration.log"/>
+      
       <memberOf key="att.event"/>
       <memberOf key="att.sylText"/>
     </classes>
@@ -9940,18 +9940,6 @@
           the second value in the ratio.</desc>
         <datatype>
           <rng:data type="positiveInteger"/>
-        </datatype>
-      </attDef>
-    </attList>
-  </classSpec><classSpec rend="add" ident="att.duration.log" module="MEI.shared" type="atts">
-    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that express duration in musical terms.</desc>
-    <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-      <attDef ident="dur" usage="opt">
-        <gloss versionDate="2022-10-18" xml:lang="en">duration</gloss>
-        <desc xml:lang="en">Records the duration of a feature using the relative durational values provided by the
-          data.DURATION datatype.</desc>
-        <datatype>
-          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.DURATION"/>
         </datatype>
       </attDef>
     </attList>
@@ -10978,7 +10966,7 @@
       
       <memberOf key="att.coloration"/>
       <memberOf key="att.cue"/>
-      <memberOf key="att.duration.log"/>
+      
       <memberOf key="att.event"/>
       
       
@@ -11662,7 +11650,7 @@
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Logical domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       
-      <memberOf key="att.duration.log"/>
+      
       <memberOf key="att.event"/>
       
     </classes>

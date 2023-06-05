@@ -5,7 +5,7 @@
           xmlns:xlink="http://www.w3.org/1999/xlink"
           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
           ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2023-06-02T15:59:50Z. .
+Schema generated from ODD source 2023-06-05T11:16:26Z. .
 TEI Edition: Version 5.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -16206,7 +16206,6 @@ Suggested values include: 1] apostropha; 2] bistropha; 3] climacus; 4] clivis; 5
    <define name="mei_att.ambNote.log.attributes">
       <ref name="mei_att.accidental.attributes"/>
       <ref name="mei_att.coloration.attributes"/>
-      <ref name="mei_att.duration.log.attributes"/>
       <ref name="mei_att.pitched.attributes"/>
    </define>
    <define name="mei_att.annot.log.attributes">
@@ -16387,7 +16386,6 @@ Suggested values include: 1] apostropha; 2] bistropha; 3] climacus; 4] clivis; 5
    <define name="mei_att.chord.log.attributes">
       <ref name="mei_att.articulation.attributes"/>
       <ref name="mei_att.cue.attributes"/>
-      <ref name="mei_att.duration.log.attributes"/>
       <ref name="mei_att.event.attributes"/>
       <ref name="mei_att.sylText.attributes"/>
    </define>
@@ -16916,17 +16914,6 @@ Suggested values include: 1] apostropha; 2] bistropha; 3] climacus; 4] clivis; 5
          <attribute name="numbase.default">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Along with num.default, describes the default duration as a ratio. numbase.default is the second value in the ratio.</a:documentation>
             <data type="positiveInteger"/>
-         </attribute>
-      </optional>
-   </define>
-   <define name="mei_att.duration.log.attributes">
-      <ref name="mei_att.duration.log.attribute.dur"/>
-   </define>
-   <define name="mei_att.duration.log.attribute.dur">
-      <optional>
-         <attribute name="dur">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(duration) Records the duration of a feature using the relative durational values provided by the data.DURATION datatype.</a:documentation>
-            <ref name="mei_data.DURATION"/>
          </attribute>
       </optional>
    </define>
@@ -18045,7 +18032,6 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
    <define name="mei_att.note.log.attributes">
       <ref name="mei_att.coloration.attributes"/>
       <ref name="mei_att.cue.attributes"/>
-      <ref name="mei_att.duration.log.attributes"/>
       <ref name="mei_att.event.attributes"/>
       <ref name="mei_att.pitched.attributes"/>
    </define>
@@ -18821,7 +18807,6 @@ Suggested values include: 1] smufl</a:documentation>
       </sch:rule>
    </pattern>
    <define name="mei_att.space.log.attributes">
-      <ref name="mei_att.duration.log.attributes"/>
       <ref name="mei_att.event.attributes"/>
    </define>
    <define name="mei_att.spacing.attributes">
