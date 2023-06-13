@@ -5,7 +5,7 @@
           xmlns:xlink="http://www.w3.org/1999/xlink"
           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
           ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2023-06-13T20:13:46Z. .
+Schema generated from ODD source 2023-06-13T21:53:02Z. .
 TEI Edition: Version 5.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -7836,10 +7836,6 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Surrounded by single quotes.</a:documentation>
          <value>quotedbl</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Surrounded by double quotes.</a:documentation>
-         <value>italic</value>
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Italicized (slanted to right).</a:documentation>
-         <value>oblique</value>
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Oblique (slanted to left).</a:documentation>
          <value>smcaps</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Small capitals.</a:documentation>
          <value>bold</value>
