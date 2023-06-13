@@ -5,7 +5,7 @@
           xmlns:xlink="http://www.w3.org/1999/xlink"
           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
           ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2023-06-12T21:15:01Z. .
+Schema generated from ODD source 2023-06-13T20:10:11Z. .
 TEI Edition: Version 5.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -4644,6 +4644,9 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
       <ref name="mei_att.startEndId.attributes"/>
       <ref name="mei_att.timestamp2.log.attributes"/>
    </define>
+   <define name="mei_att.ending.log.attributes">
+      <empty/>
+   </define>
    <define name="mei_att.event.attributes">
       <ref name="mei_att.layerIdent.attributes"/>
       <ref name="mei_att.staffIdent.attributes"/>
@@ -5718,7 +5721,9 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
       <notAllowed/>
    </define>
    <define name="mei_model.endingLike">
-      <notAllowed/>
+      <choice>
+         <ref name="mei_ending"/>
+      </choice>
    </define>
    <define name="mei_model.eventLike">
       <choice>
@@ -6379,6 +6384,26 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
          <ref name="mei_att.dynam.log.attributes"/>
          <ref name="mei_att.dynam.vis.attributes"/>
          <ref name="mei_att.lang.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_ending">
+      <element name="ending">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Alternative ending for a repeated passage of music; i.e., prima volta, seconda volta, etc.</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <ref name="mei_model.annotLike"/>
+               <ref name="mei_model.milestoneLike.music"/>
+               <ref name="mei_model.relationLike"/>
+               <ref name="mei_model.scoreDefLike"/>
+               <ref name="mei_model.sectionLike"/>
+               <ref name="mei_model.sectionPart.cmn"/>
+               <ref name="mei_model.staffDefLike"/>
+            </choice>
+         </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.ending.log.attributes"/>
+         <ref name="mei_att.ending.vis.attributes"/>
          <empty/>
       </element>
    </define>
@@ -7344,6 +7369,9 @@ Suggested values include: 1] main; 2] subordinate; 3] abbreviated; 4] alternativ
    </define>
    <define name="mei_att.dynam.vis.attributes">
       <ref name="mei_att.placementRelStaff.attributes"/>
+   </define>
+   <define name="mei_att.ending.vis.attributes">
+      <ref name="mei_att.lineRend.attributes"/>
    </define>
    <define name="mei_att.f.vis.attributes">
       <ref name="mei_att.placementRelStaff.attributes"/>

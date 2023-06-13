@@ -5720,6 +5720,11 @@
       <memberOf key="att.startEndId"/>
       <memberOf key="att.timestamp2.log"/>
     </classes>
+  </classSpec><classSpec rend="add" ident="att.ending.log" module="MEI.shared" type="atts">
+    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Logical domain attributes.</desc>
+    <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      
+    </classes>
   </classSpec><classSpec rend="add" ident="att.event" module="MEI.shared" type="atts"><desc>Attributes that apply to all written events, e.g., note, chord, rest, etc.</desc><classes><memberOf key="att.layerIdent" mode="add"/><memberOf key="att.staffIdent" mode="add"/></classes><attList/></classSpec><classSpec rend="add" ident="att.horizontalAlign" module="MEI.shared" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that record horizontal alignment.</desc>
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -7124,6 +7129,26 @@
         <att>endid</att>, or <att>tstamp2</att> attribute. It is a semantic error not to specify a
         starting point attribute. MIDI values associated with the graphical dynamic sign may be
         recorded in the <att>val</att> and <att>val2</att> attributes.</p>
+    </remarks></elementSpec><elementSpec rend="add" ident="ending" module="MEI.shared"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Alternative ending for a repeated passage of music; <abbr>i.e.</abbr>, prima volta, seconda volta,
+      etc.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <memberOf key="att.common"/>
+      
+      
+      <memberOf key="att.ending.log"/>
+      <memberOf key="att.ending.vis"/>
+      
+      
+      
+      <memberOf key="model.endingLike"/>
+    </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="expansion"/></zeroOrMore>
+      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="model.annotLike"/><ref name="model.appLike"/><ref name="model.editLike"/><ref name="model.graphicPrimitiveLike"/><ref name="model.milestoneLike.music"/><ref name="model.relationLike"/><ref name="model.scoreDefLike"/><ref name="model.sectionLike"/><ref name="model.sectionPart.cmn"/><ref name="model.sectionPart.mensuralAndNeumes"/><ref name="model.staffDefLike"/><ref name="model.transcriptionLike"/></choice></zeroOrMore>
+    </content><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+      <p>The <gi scheme="MEI">scoreDef</gi> element is allowed as a sub-element so that an ending
+        may have its own meta-data without the overhead of child <gi scheme="MEI">section</gi>
+        elements. <gi scheme="MEI">div</gi> sub-elements are not allowed within ending. They may,
+        however, be contained by the children of ending, <abbr>e.g.</abbr>, measures. Endings may not contain
+        other ending elements.</p>
     </remarks></elementSpec><elementSpec rend="add" ident="label" module="MEI.shared"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">A container for document text that identifies the feature to which it is attached. For a
       "tool tip" or other generated label, use the <att>label</att> attribute.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
@@ -8027,6 +8052,11 @@
       
       
       
+    </classes>
+  </classSpec><classSpec rend="add" ident="att.ending.vis" module="MEI.visual" type="atts">
+    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Visual domain attributes.</desc>
+    <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <memberOf key="att.lineRend"/>
     </classes>
   </classSpec><classSpec rend="add" ident="att.f.vis" module="MEI.visual" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Visual domain attributes.</desc>
