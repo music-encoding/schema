@@ -20,7 +20,7 @@
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href=../../../source/"validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2023-06-15T00:31:07.359+02:00-->
+<!--canonicalized: 2023-06-15T01:21:57.023+02:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -17351,6 +17351,12 @@
         </valItem>
         <valItem ident="quotedbl">
           <desc xml:lang="en">Surrounded by double quotes.</desc>
+        </valItem>
+        <valItem ident="italic">
+          <desc xml:lang="en">Italicized (slanted to right).</desc>
+        </valItem>
+        <valItem ident="oblique">
+          <desc xml:lang="en">Oblique (slanted to left).</desc>
         </valItem>
         <valItem ident="smcaps">
           <desc xml:lang="en">Small capitals.</desc>
