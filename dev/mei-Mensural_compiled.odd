@@ -2751,8 +2751,7 @@
         </rng:data></choice>
     </content>
   </macroSpec><macroSpec rend="add" ident="data.OCTAVE" module="MEI" type="dt">
-    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Oct attribute values. The default values conform to Acoustical Society of America
-      representation. Read, p. 44.</desc>
+    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Octave number. The default values conform to the Scientific Pitch Notation (SPN).</desc>
     <content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <rng:data type="nonNegativeInteger">
         <rng:param name="maxInclusive">9</rng:param>

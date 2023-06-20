@@ -20,7 +20,7 @@
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href=../../../source/"validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2023-06-20T22:59:02.892075197+02:00-->
+<!--canonicalized: 2023-06-20T23:01:34.214696794+02:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -16883,8 +16883,7 @@
     </content>
   </macroSpec>
   <macroSpec ident="data.OCTAVE" module="MEI" type="dt">
-    <desc xml:lang="en">Oct attribute values. The default values conform to Acoustical Society of America
-      representation. Read, p. 44.</desc>
+    <desc xml:lang="en">Octave number. The default values conform to the Scientific Pitch Notation (SPN).</desc>
     <content>
       <rng:data type="nonNegativeInteger">
         <rng:param name="maxInclusive">9</rng:param>
