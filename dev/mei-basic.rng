@@ -5,7 +5,7 @@
           xmlns:xlink="http://www.w3.org/1999/xlink"
           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
           ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2023-06-16T06:36:14Z. .
+Schema generated from ODD source 2023-06-20T10:17:54Z. .
 TEI Edition: Version 5.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -1640,6 +1640,17 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
    <define name="mei_att.beam.log.attributes">
       <ref name="mei_att.event.attributes"/>
    </define>
+   <define name="mei_att.beamSecondary.attributes">
+      <ref name="mei_att.beamSecondary.attribute.breaksec"/>
+   </define>
+   <define name="mei_att.beamSecondary.attribute.breaksec">
+      <optional>
+         <attribute name="breaksec">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Presence of this attribute indicates that the secondary beam should be broken following this note/chord. The value of the attribute records the number of beams which should remain unbroken.</a:documentation>
+            <data type="positiveInteger"/>
+         </attribute>
+      </optional>
+   </define>
    <define name="mei_att.beatRpt.log.attributes">
       <ref name="mei_att.event.attributes"/>
       <ref name="mei_att.beatRpt.log.attribute.beatdef"/>
@@ -1985,7 +1996,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
       <ref name="mei_att.graced.attributes"/>
    </define>
    <define name="mei_att.note.vis.cmn.attributes">
-      <empty/>
+      <ref name="mei_att.beamSecondary.attributes"/>
    </define>
    <define name="mei_att.numbered.attributes">
       <ref name="mei_att.numbered.attribute.num"/>
@@ -2084,7 +2095,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
       <ref name="mei_att.timestamp.log.attributes"/>
    </define>
    <define name="mei_att.rest.vis.cmn.attributes">
-      <empty/>
+      <ref name="mei_att.beamSecondary.attributes"/>
    </define>
    <define name="mei_att.slur.log.attributes">
       <ref name="mei_att.controlEvent.attributes"/>
