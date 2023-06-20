@@ -20,7 +20,7 @@
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href=../../../source/"validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2023-06-20T21:58:03.767216581+02:00-->
+<!--canonicalized: 2023-06-20T22:35:25.710552779+02:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -7304,8 +7304,8 @@
          <div xml:id="mensural" type="div1">
             <head>Repertoire: Mensural Notation</head>
             <p>This chapter describes the module for encoding mensural notation from the late 13th century to about 1600. Historically, mensural notation preceded the development of Common Music Notation (CMN) and it included a wide range of features that persist in CMN and that can be encoded in a standard manner in MEI. In mensural notation, pitches are notated as in CMN, leaving out here the major exception of <hi rend="italic">musica ficta</hi>. The pitch is given by the position of the note on the staff and the current clef as in CMN, and the mensural module introduces no modification to MEI regarding how pitches are encoded.</p>
-            <p>There are a certain number of differences, however, regarding the representation of duration in mensural notation. The mensural module introduces specific attribute values for notes and rests for appropriately encoding mensural durations. One of the main particularities is that the actual duration of a note is not given only by its symbol but also by position and the context in which the symbol appears. The general context is given by one of the 16 mensural <hi rend="italic">species</hi> provide four levels of division: <hi rend="italic">modus major</hi>, <hi rend="italic">modus minor</hi>, <hi rend="italic">tempus</hi> and <hi rend="italic">prolatio</hi>. Depending on the context, certain rules must be applied in order to determine the duration of a note. In these cases, encoding both the sign and its actual duration is highly desirable.</p>
-            <p>Another particularity of mensural notation is the use of proportions that are indicated by numeric proportions or by specific mensuration signs. The proportions indicate that the durations have to be modified accordingly and they can be combined in a very complex manner. Over time, proportions and mensuration signs were simplified and became time signatures in CMN. The attributes and elements that are necessary for encoding proportions and mensural signs are made available by the module.</p>
+            <p>There are a number of differences, however, in the representation of duration in mensural notation. The mensural module introduces specific attribute values for notes and rests for appropriately encoding mensural durations. One of the main differences is that the duration of a note is not determined by its symbol, but also by the meter and the context in which the symbol appears in relation to other notes and rests in the same voice. The meter is given by one of the 16 mensural <hi rend="italic">species</hi> provided by four levels of division: <hi rend="italic">modus major</hi>, <hi rend="italic">modus minor</hi>, <hi rend="italic">tempus</hi> and <hi rend="italic">prolatio</hi>. In the case of triple meter and depending on the specific context where the note is positioned, certain rules must be applied in order to determine the duration of a note. In these cases, encoding both the sign and its actual duration is highly recommended (as will be shown in <ptr target="#mensuralNotes"/>).</p>
+            <p>Another difference is the use of proportions that are indicated by numeric ratios or by specific mensuration signs. The proportions indicate that the durations have to be modified and they may be combined. Proportions and mensuration signs were eventually simplified and became time signatures in CMN. The attributes and elements available in this module for encoding mensural signs and proportions can be found below (see <ptr target="#mensuralSigns"/> and <ptr target="#mensuralProportions"/>).</p>
             <p>In mensural notation, notes can also be notated in ligatures that regroup two or more notes. Ligatures were a legacy from an earlier notation system that were still widely used in Renaissance music notation. They gradually disappeared during the seventeenth century. The mensural module provides multiple ways of encoding the ligatures.</p>
             <div xml:id="mensuralNotes" type="div2">
                <head>Durations</head>
@@ -7410,8 +7410,9 @@
                <p>
                   <figure>
                      <head/>
-                     <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;!--With @modusminor equal to "3" in the &lt;staffDef&gt; element--&gt;&lt;layer n="1"&gt;
-    &lt;!--First system in the image--&gt;
+                     <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;!-- mensuration encoded in &lt;staffDef&gt; element indicates @modusminor = 3 --&gt;
+&lt;layer n="1"&gt;
+    &lt;!-- First system in the image --&gt;
     &lt;!-- ... --&gt;
     &lt;rest dur="2B"/&gt;
    &lt;ligature&gt;
@@ -7443,7 +7444,7 @@
    &lt;note dur="longa" oct="3" pname="a"/&gt;
    &lt;note dur="semibrevis" oct="4" pname="d"/&gt;
    &lt;note dur="semibrevis" oct="4" pname="e"/&gt;
-   &lt;!--Next system in the image--&gt;
+   &lt;!-- Next system in the image --&gt;
    &lt;note dur="longa" oct="4" pname="f"/&gt;
    &lt;note dur="brevis" oct="4" pname="e"/&gt;
    &lt;dot form="div"/&gt;
@@ -7480,7 +7481,7 @@
                      <label>duplex</label>
                      <item>One of the three categories of a longa in Ars antiqua ('duplex', 'perfecta', and 'imperfecta')</item>
                   </list>
-                  <p>The last three values are to be used exclusively in <hi rend="italic">Ars antiqua</hi> mensural notation, where <val>maior</val>and <val>minor</val>refer to types of <hi rend="italic">semibreves</hi>, and <val>duplex</val>refers to a type of <hi rend="italic">longa</hi>. Examples of each of these six values are presented below. In these examples, the ‘voice’ staff renders the notes in the code snippet, and the ‘reference’ staff, together with the dotted bar lines, are shown to help to visualize the relative values of the notes in the ‘voice’ staff.</p>
+                  <p>The last three values are to be used exclusively in <hi rend="italic">Ars antiqua</hi> mensural notation, where <val>maior</val> and <val>minor</val> refer to types of <hi rend="italic">semibreves</hi>, and <val>duplex</val> refers to a type of <hi rend="italic">longa</hi>. Examples of each of these six values are presented below. In these examples, the ‘voice’ staff renders the notes in the code snippet, and the ‘reference’ staff, together with the dotted bar lines, are shown to help to visualize the relative values of the notes in the ‘voice’ staff.</p>
                   <p>The following example illustrates an <hi rend="italic">alteration</hi> (the second <hi rend="italic">brevis</hi>) in <hi rend="italic">modus minor perfectus</hi>. Notice that the second <hi rend="italic">brevis</hi> has doubled its regular value, it has been altered, unlike the first one. <figure>
                         <head/>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
@@ -7505,13 +7506,14 @@
             &lt;score&gt;
                &lt;scoreDef&gt;
                   &lt;staffGrp&gt;
-                     &lt;staffDef label="voice" n="1" notationtype="mensural.white" lines="5" clef.shape="G" clef.line="2" /&gt;
-                     &lt;staffDef label="reference" n="2" notationtype="mensural.white" lines="5" clef.shape="G" clef.line="2" /&gt;
+                     &lt;staffDef label="voice" n="1" notationtype="mensural.white" lines="5" clef.shape="G" clef.line="2" modusminor="3" /&gt;
+                     &lt;staffDef label="reference" n="2" notationtype="mensural.white" lines="5" clef.shape="G" clef.line="2" modusminor="3" /&gt;
                   &lt;/staffGrp&gt;
                &lt;/scoreDef&gt;
                &lt;section&gt;
                   &lt;staff n="1"&gt;
                      &lt;?edit-start?&gt;
+                     &lt;!-- mensuration encoded in &lt;staffDef&gt; element indicates @modusminor = 3 --&gt;
                      &lt;layer n="1"&gt;
                         &lt;note dur="longa" dur.quality="perfecta" /&gt;
                         &lt;barLine form="dashed" /&gt;
@@ -7552,7 +7554,8 @@
                   </p>
                   <p>It is possible to omit the <att>dur.quality</att> attribute in a note when the performed duration of the note is the default value provided by the mensuration. In this case, the <hi rend="italic">longas</hi> are perfect, just as the mensuration (<hi rend="italic">perfect modus minor</hi>) indicates. Therefore, the <att>dur.quality</att> attribute can be omitted for the two <hi rend="italic">longas</hi>. <figure>
                         <head/>
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;!--With @modusminor equal to "3" in the &lt;staffDef&gt; element--&gt;&lt;layer&gt;
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;!-- mensuration encoded in &lt;staffDef&gt; element indicates @modusminor = 3 --&gt;
+&lt;layer&gt;
    &lt;note dur="longa"/&gt;
    &lt;note dur="brevis"/&gt;
    &lt;note dur="brevis" dur.quality="altera"/&gt;
@@ -7560,7 +7563,7 @@
 &lt;/layer&gt;
 </egXML>
                      </figure> The same applies to the examples that follow.</p>
-                  <p>The following example illustrates an <hi rend="italic">imperfection</hi> (the two <hi rend="italic">longae</hi>) in <hi rend="italic">modus minor perfectus</hi> with the same <hi rend="italic">longa</hi>-<hi rend="italic">brevis</hi>-<hi rend="italic">brevis</hi>-<hi rend="italic">longa</hi> sequence but with an additional <hi rend="italic">dot of division</hi> between the two <hi rend="italic">breves</hi>. Notice that here the <hi rend="italic">longae</hi> have been imperfected, unlike the previous example in which they kept the perfect value indicated by the mensuration. <figure>
+                  <p>The following example illustrates an <hi rend="italic">imperfection</hi> (the two <hi rend="italic">longae</hi>) in <hi rend="italic">modus minor perfectus</hi> with the same <hi rend="italic">longa</hi>-<hi rend="italic">brevis</hi>-<hi rend="italic">brevis</hi>-<hi rend="italic">longa</hi> sequence but with an additional <hi rend="italic">dot of division</hi> between the two <hi rend="italic">breves</hi> (see <ptr target="#dots"/> for more details). Notice that here the <hi rend="italic">longae</hi> have been imperfected, unlike the previous example in which they kept the perfect value indicated by the mensuration. <figure>
                         <head/>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
 &lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
@@ -7584,13 +7587,14 @@
             &lt;score&gt;
                &lt;scoreDef&gt;
                   &lt;staffGrp&gt;
-                     &lt;staffDef label="voice" n="1" notationtype="mensural.white" lines="5" clef.shape="G" clef.line="2" /&gt;
-                     &lt;staffDef label="reference" n="2" notationtype="mensural.white" lines="5" clef.shape="G" clef.line="2" /&gt;
+                     &lt;staffDef label="voice" n="1" notationtype="mensural.white" lines="5" clef.shape="G" clef.line="2" modusminor="3" /&gt;
+                     &lt;staffDef label="reference" n="2" notationtype="mensural.white" lines="5" clef.shape="G" clef.line="2" modusminor="3" /&gt;
                   &lt;/staffGrp&gt;
                &lt;/scoreDef&gt;
                &lt;section&gt;
                   &lt;staff n="1"&gt;
                      &lt;?edit-start?&gt;
+                     &lt;!-- mensuration encoded in &lt;staffDef&gt; element indicates @modusminor = 3 --&gt;
                      &lt;layer n="1"&gt;
                         &lt;note dur="longa" dur.quality="imperfecta" /&gt;
                         &lt;barLine form="dashed" /&gt;
@@ -7627,7 +7631,7 @@
 </egXML>
                      </figure>
                   </p>
-                  <p>The following example in <hi rend="italic">modus minor imperfectus</hi> illustrates the use of a dot of augmentation following the <hi rend="italic">longa</hi>. Notice that the <hi rend="italic">longa</hi>, which is supposed to be imperfect according to the mensuration, has a perfect value due to the augmentation dot. <figure>
+                  <p>The following example in <hi rend="italic">modus minor imperfectus</hi> illustrates the use of a dot of augmentation following the <hi rend="italic">longa</hi> (see <ptr target="#dots"/> for more details). Notice that the <hi rend="italic">longa</hi>, which is supposed to be imperfect according to the mensuration, has a perfect value due to the augmentation dot. <figure>
                         <head/>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
 &lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
@@ -7651,13 +7655,14 @@
             &lt;score&gt;
                &lt;scoreDef&gt;
                   &lt;staffGrp&gt;
-                     &lt;staffDef label="voice" n="1" notationtype="mensural.white" lines="5" clef.shape="G" clef.line="2" modusminor="2" tempus="2" mensur.sign="C" mensur.slash="1" /&gt;
-                     &lt;staffDef label="reference" n="2" notationtype="mensural.white" lines="5" clef.shape="G" clef.line="2" modusminor="2" tempus="2" mensur.sign="C" mensur.slash="1" /&gt;
+                     &lt;staffDef label="voice" n="1" notationtype="mensural.white" lines="5" clef.shape="G" clef.line="2" modusminor="2" tempus="2" /&gt;
+                     &lt;staffDef label="reference" n="2" notationtype="mensural.white" lines="5" clef.shape="G" clef.line="2" modusminor="2" tempus="2" /&gt;
                   &lt;/staffGrp&gt;
                &lt;/scoreDef&gt;
                &lt;section&gt;
                   &lt;staff n="1"&gt;
                      &lt;?edit-start?&gt;
+                     &lt;!-- mensuration encoded in &lt;staffDef&gt; element indicates @modusminor = 2 and @tempus = 2 --&gt;
                      &lt;layer n="1"&gt;
                         &lt;note dur="longa" dur.quality="perfecta" /&gt;
                         &lt;dot form="aug" /&gt;
@@ -7710,13 +7715,14 @@
             &lt;score&gt;
                &lt;scoreDef&gt;
                   &lt;staffGrp&gt;
-                     &lt;staffDef label="voice" n="1" notationtype="mensural.black" lines="5" clef.shape="G" clef.line="2" modusminor="3" tempus="3" mensur.sign="O" mensur.slash="1" /&gt;
-                     &lt;staffDef label="reference" n="2" notationtype="mensural.black" lines="5" clef.shape="G" clef.line="2" modusminor="3" tempus="3" mensur.sign="O" mensur.slash="1" /&gt;
+                     &lt;staffDef label="voice" n="1" notationtype="mensural.black" lines="5" clef.shape="G" clef.line="2" modusminor="3" tempus="3" /&gt;
+                     &lt;staffDef label="reference" n="2" notationtype="mensural.black" lines="5" clef.shape="G" clef.line="2" modusminor="3" tempus="3" /&gt;
                   &lt;/staffGrp&gt;
                &lt;/scoreDef&gt;
                &lt;section&gt;
                   &lt;staff n="1"&gt;
                      &lt;?edit-start?&gt;
+                     &lt;!-- mensuration encoded in &lt;staffDef&gt; element indicates @modusminor = 3 and @tempus = 3 --&gt;
                      &lt;layer n="1"&gt;
                         &lt;note dur="longa" dur.quality="perfecta" /&gt;
                         &lt;barLine form="dashed" /&gt;
@@ -7770,7 +7776,8 @@
                      <hi rend="italic">Note:</hi> In <hi rend="italic">Ars Antiqua</hi>, only the <hi rend="italic">longa</hi> could be "perfecta" / "imperfecta" and the <hi rend="italic">brevis</hi> could have a regular value ("recta") or be "altera". In the <hi rend="italic">Ars nova</hi>, principles of imperfection and alteration were extended into the other note levels (<hi rend="italic">brevis</hi>-<hi rend="italic">semibrevis</hi> and <hi rend="italic">semibrevis</hi>-<hi rend="italic">minima</hi>). This means that the <hi rend="italic">breves</hi> in <hi rend="italic">Ars antiqua</hi> do not have a "perfecta" / "imperfecta" quality, and this is why there is no <att>dur.quality</att> attribute for the <hi rend="italic">breves</hi> in the previous example. However, the <hi rend="italic">brevis</hi> can have a ternary division (indicated by <hi rend="italic">tempus=”3”</hi>), being divided either into three (equal) <hi rend="italic">minor semibreves</hi> or into a <hi rend="italic">minor</hi>-<hi rend="italic">maior</hi> pair of <hi rend="italic">semibreves</hi>. The encoding also allows for the possibility of encoding a binary division of the breve in <hi rend="italic">Ars antiqua</hi> notations: the indication <hi rend="italic">tempus=”2”</hi> indicates the breve is divided into two equal <hi rend="italic">semibreves</hi>. This is why in this example with <hi rend="italic">tempus="3"</hi>, the <hi rend="italic">semibreves</hi> do have a <att>dur.quality</att> attribute (with values <val>minor</val> or <val>maior</val>).</p>
                   <p>An alternative encoding---removing the <att>dur.quality</att> attributes for notes which lengths are not modified from their default values (<abbr>i.e.</abbr>, the perfect long and the minor <hi rend="italic">semibreves</hi>)---would be: <figure>
                         <head/>
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;!--With @modusminor and @tempus equal to "3" in the &lt;staffDef&gt; element--&gt;&lt;layer&gt;
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;!-- mensuration encoded in &lt;staffDef&gt; element indicates @modusminor = 3 and @tempus = 3 --&gt;
+&lt;layer&gt;
    &lt;note dur="longa"/&gt;
    &lt;note dur="semibrevis"/&gt;
    &lt;note dur="semibrevis"/&gt;
@@ -7814,13 +7821,14 @@
             &lt;score&gt;
                &lt;scoreDef&gt;
                   &lt;staffGrp&gt;
-                     &lt;staffDef label="voice" n="1" notationtype="mensural.white" lines="5" clef.shape="G" clef.line="2" modusminor="2" tempus="3" mensur.sign="O" mensur.slash="1" /&gt;
-                     &lt;staffDef label="reference" n="2" notationtype="mensural.white" lines="5" clef.shape="G" clef.line="2" modusminor="2" tempus="3" mensur.sign="O" mensur.slash="1" /&gt;
+                     &lt;staffDef label="voice" n="1" notationtype="mensural.white" lines="5" clef.shape="G" clef.line="2" modusminor="2" tempus="3" /&gt;
+                     &lt;staffDef label="reference" n="2" notationtype="mensural.white" lines="5" clef.shape="G" clef.line="2" modusminor="2" tempus="3" /&gt;
                   &lt;/staffGrp&gt;
                &lt;/scoreDef&gt;
                &lt;section&gt;
                   &lt;staff n="1"&gt;
                      &lt;?edit-start?&gt;
+                     &lt;!-- mensuration encoded in &lt;staffDef&gt; element indicates @modusminor = 2 and @tempus = 3 --&gt;
                      &lt;layer n="1"&gt;
                         &lt;note dur="longa" num="6" numbase="5" /&gt;
                         &lt;barLine form="dotted" /&gt;
@@ -7876,13 +7884,14 @@
             &lt;score&gt;
                &lt;scoreDef&gt;
                   &lt;staffGrp&gt;
-                     &lt;staffDef label="voice" n="1" notationtype="mensural.white" lines="5" clef.shape="G" clef.line="2" modusminor="2" tempus="3" mensur.sign="O" mensur.slash="1" /&gt;
-                     &lt;staffDef label="reference" n="2" notationtype="mensural.white" lines="5" clef.shape="G" clef.line="2" modusminor="2" tempus="3" mensur.sign="O" mensur.slash="1" /&gt;
+                     &lt;staffDef label="voice" n="1" notationtype="mensural.white" lines="5" clef.shape="G" clef.line="2" modusminor="2" tempus="3" /&gt;
+                     &lt;staffDef label="reference" n="2" notationtype="mensural.white" lines="5" clef.shape="G" clef.line="2" modusminor="2" tempus="3" /&gt;
                   &lt;/staffGrp&gt;
                &lt;/scoreDef&gt;
                &lt;section&gt;
                   &lt;staff n="1"&gt;
                      &lt;?edit-start?&gt;
+                     &lt;!-- mensuration encoded in &lt;staffDef&gt; element indicates @modusminor = 2 and @tempus = 3 --&gt;
                      &lt;layer n="1"&gt;
                         &lt;note dur="semibrevis" /&gt;
                         &lt;barLine form="dotted" /&gt;
@@ -7940,20 +7949,21 @@
             &lt;score&gt;
                &lt;scoreDef&gt;
                   &lt;staffGrp&gt;
-                     &lt;staffDef label="voice" n="1" notationtype="mensural.white" lines="5" clef.shape="G" clef.line="2" modusminor="2" prolatio="3" tempus="2" mensur.dot="true" mensur.sign="C" mensur.slash="1" /&gt;
-                     &lt;staffDef label="reference" n="2" notationtype="mensural.white" lines="5" clef.shape="G" clef.line="2" modusminor="2" prolatio="3" tempus="2" mensur.dot="true" mensur.sign="C" mensur.slash="1" /&gt;
+                     &lt;staffDef label="voice" n="1" notationtype="mensural.white" lines="5" clef.shape="G" clef.line="2" modusminor="2" prolatio="3" tempus="2" /&gt;
+                     &lt;staffDef label="reference" n="2" notationtype="mensural.white" lines="5" clef.shape="G" clef.line="2" modusminor="2" prolatio="3" tempus="2" /&gt;
                   &lt;/staffGrp&gt;
                &lt;/scoreDef&gt;
                &lt;section&gt;
                   &lt;staff n="1"&gt;
                      &lt;?edit-start?&gt;
+                     &lt;!-- mensuration encoded in &lt;staffDef&gt; element indicates @modusminor = 2, @tempus = 2, and @prolatio = 3 --&gt;
                      &lt;layer n="1"&gt;
                         &lt;note dur="longa" num="12" numbase="11" /&gt;
                         &lt;barLine form="dotted" /&gt;
                         &lt;note dur="minima" /&gt;
                         &lt;barLine form="dashed" /&gt;
                      &lt;/layer&gt;
-                     &lt;?edit-ebd?&gt;
+                     &lt;?edit-end?&gt;
                   &lt;/staff&gt;
                   &lt;staff n="2"&gt;
                      &lt;layer n="1"&gt;
@@ -8010,13 +8020,14 @@
             &lt;score&gt;
                &lt;scoreDef&gt;
                   &lt;staffGrp&gt;
-                     &lt;staffDef label="voice" n="1" notationtype="mensural.white" lines="5" clef.shape="G" clef.line="2" modusminor="3" prolatio="3" tempus="2" mensur.dot="true" mensur.sign="C" mensur.slash="1" /&gt;
-                     &lt;staffDef label="reference" n="2" notationtype="mensural.white" lines="5" clef.shape="G" clef.line="2" modusminor="3" prolatio="3" tempus="2" mensur.dot="true" mensur.sign="C" mensur.slash="1" /&gt;
+                     &lt;staffDef label="voice" n="1" notationtype="mensural.white" lines="5" clef.shape="G" clef.line="2" modusminor="3" prolatio="3" tempus="2" /&gt;
+                     &lt;staffDef label="reference" n="2" notationtype="mensural.white" lines="5" clef.shape="G" clef.line="2" modusminor="3" prolatio="3" tempus="2" /&gt;
                   &lt;/staffGrp&gt;
                &lt;/scoreDef&gt;
                &lt;section&gt;
                   &lt;staff n="1"&gt;
                      &lt;?edit-start?&gt;
+                     &lt;!-- mensuration encoded in &lt;staffDef&gt; element indicates @modusminor = 3, @tempus = 2, and @prolatio = 3 --&gt;
                      &lt;layer n="1"&gt;
                         &lt;note dur="longa" num="18" numbase="17" /&gt;
                         &lt;barLine form="dotted" /&gt;
@@ -8157,58 +8168,78 @@
    &lt;meiHead&gt;
       &lt;fileDesc&gt;
          &lt;titleStmt&gt;
-            &lt;title&gt;Example of 'imperfection' and 'dot of division'&lt;/title&gt;
+            &lt;title&gt;Example of omitted mensuration signs&lt;/title&gt;
          &lt;/titleStmt&gt;
          &lt;pubStmt&gt;
             &lt;date&gt;2019-11-15&lt;/date&gt;
          &lt;/pubStmt&gt;
          &lt;notesStmt&gt;
-            &lt;annot&gt;The bottom staff, together with the dotted barlines, is used here to help visualizing the durational values of the notes in the upper staff.&lt;/annot&gt;
+            &lt;annot&gt;In this choir book, only the verso parts have a mensuration sign, whereas Altus and Bassus on the recto don't.&lt;/annot&gt;
          &lt;/notesStmt&gt;
+         &lt;sourceDesc&gt;
+            &lt;source&gt;
+               &lt;bibl&gt;FlorPanc27, 79v-80r&lt;/bibl&gt;
+            &lt;/source&gt;
+         &lt;/sourceDesc&gt;
       &lt;/fileDesc&gt;
    &lt;/meiHead&gt;
    &lt;music&gt;
       &lt;body&gt;
          &lt;mdiv&gt;
+            &lt;?edit-start?&gt;
             &lt;score&gt;
-               &lt;?edit-start?&gt;
-               &lt;scoreDef&gt;
+               &lt;scoreDef key.sig="1f"&gt;
                   &lt;staffGrp&gt;
-                     &lt;staffDef label="voice" n="1" notationtype="mensural.white" lines="5" clef.shape="G" clef.line="2" /&gt;
-                     &lt;staffDef label="reference" n="2" notationtype="mensural.white" lines="5" clef.shape="G" clef.line="2" /&gt;
+                     &lt;staffDef n="1" label="Cantus" lines="5" notationtype="mensural.white" clef.shape="C" clef.line="1" mensur.sign="C" mensur.slash="1" prolatio="2" tempus="2" /&gt;
+                     &lt;staffDef n="2" label="Tenor" lines="5" notationtype="mensural.white" clef.shape="C" clef.line="4" mensur.sign="C" mensur.slash="1" prolatio="2" tempus="2" /&gt;
+                     &lt;staffDef n="3" label="Altus" lines="5" notationtype="mensural.white" clef.shape="C" clef.line="3" prolatio="2" tempus="2" /&gt;
+                     &lt;staffDef n="4" label="Bassus" lines="5" notationtype="mensural.white" clef.shape="F" clef.line="4" prolatio="2" tempus="2" /&gt;
                   &lt;/staffGrp&gt;
                &lt;/scoreDef&gt;
-               &lt;?edit-end?&gt;
                &lt;section&gt;
                   &lt;staff n="1"&gt;
-                     &lt;layer n="1"&gt;
-                        &lt;note dur="longa" dur.quality="imperfecta" /&gt;
-                        &lt;barLine form="dashed" /&gt;
-                        &lt;note dur="brevis" /&gt;
-                        &lt;dot form="div" /&gt;
-                        &lt;barLine form="dashed" /&gt;
-                        &lt;note dur="brevis" /&gt;
-                        &lt;barLine form="dashed" /&gt;
-                        &lt;note dur="longa" dur.quality="imperfecta" /&gt;
-                        &lt;barLine form="dashed" /&gt;
+                     &lt;layer&gt;
+                        &lt;note pname="b" oct="4" dur="brevis"/&gt;
+                        &lt;note pname="b" oct="4" dur="brevis"/&gt;
+                        &lt;note pname="a" oct="4" dur="brevis"/&gt;
+                        &lt;note pname="g" oct="4" dur="brevis"/&gt;
+                        &lt;note pname="g" oct="4" dur="semibrevis"/&gt;
+                        &lt;note pname="g" oct="4" dur="semibrevis"/&gt;
                      &lt;/layer&gt;
                   &lt;/staff&gt;
                   &lt;staff n="2"&gt;
-                     &lt;layer n="1"&gt;
-                        &lt;note dur="brevis" oct="4" pname="a" /&gt;
-                        &lt;note dur="brevis" oct="4" pname="a" /&gt;
-                        &lt;barLine form="dashed" /&gt;
-                        &lt;note dur="brevis" oct="4" pname="a" /&gt;
-                        &lt;barLine form="dashed" /&gt;
-                        &lt;note dur="brevis" oct="4" pname="a" /&gt;
-                        &lt;barLine form="dashed" /&gt;
-                        &lt;note dur="brevis" oct="4" pname="a" /&gt;
-                        &lt;note dur="brevis" oct="4" pname="a" /&gt;
-                        &lt;barLine form="dashed" /&gt;
+                     &lt;layer&gt;
+                        &lt;note pname="g" oct="3" dur="brevis"/&gt;
+                        &lt;note pname="b" oct="3" dur="brevis"/&gt;
+                        &lt;note pname="c" oct="4" dur="brevis"/&gt;
+                        &lt;note pname="c" oct="4" dur="brevis"/&gt;
+                        &lt;note pname="c" oct="4" dur="semibrevis"/&gt;
+                        &lt;note pname="c" oct="4" dur="semibrevis"/&gt;
+                     &lt;/layer&gt;
+                  &lt;/staff&gt;
+                  &lt;staff n="3"&gt;
+                     &lt;layer&gt;
+                        &lt;note pname="d" oct="4" dur="brevis"/&gt;
+                        &lt;note pname="d" oct="4" dur="brevis"/&gt;
+                        &lt;note pname="f" oct="4" dur="brevis"/&gt;
+                        &lt;note pname="e" oct="4" dur="brevis"/&gt;
+                        &lt;note pname="e" oct="4" dur="semibrevis"/&gt;
+                        &lt;note pname="e" oct="4" dur="semibrevis"/&gt;
+                     &lt;/layer&gt;
+                  &lt;/staff&gt;
+                  &lt;staff n="4"&gt;
+                     &lt;layer&gt;
+                        &lt;note pname="g" oct="2" dur="brevis"/&gt;
+                        &lt;note pname="g" oct="3" dur="brevis"/&gt;
+                        &lt;note pname="g" oct="3" dur="brevis"/&gt;
+                        &lt;note pname="c" oct="3" dur="brevis"/&gt;
+                        &lt;note pname="c" oct="3" dur="semibrevis"/&gt;
+                        &lt;note pname="c" oct="3" dur="semibrevis"/&gt;
                      &lt;/layer&gt;
                   &lt;/staff&gt;
                &lt;/section&gt;
             &lt;/score&gt;
+            &lt;?edit-end?&gt;
          &lt;/mdiv&gt;
       &lt;/body&gt;
    &lt;/music&gt;
@@ -8344,7 +8375,7 @@
                         <specDesc key="att.stems.mensural" atts="stem.form"/>
                      </specList>
                   </p>
-                  <p>PLACE-HOLDER FOR EXAMPLE OF ONE NOTE WITH ONE STEM: IMAGE &amp; ITS ENCODING</p>
+                  <p>[include example (image and code) of a note with one stem that includes many of these attributes]</p>
                   <p>Sometimes notes have two stems. In this case, the <gi scheme="MEI">stem</gi> element can be used as a child of <gi scheme="MEI">note</gi> to define the individual characteristics of each stem with the following attributes:</p>
                   <p>
                      <specList>
@@ -8357,7 +8388,7 @@
                         <specDesc key="att.xy" atts="x y"/>
                      </specList>
                   </p>
-                  <p>PLACE-HOLDER FOR EXAMPLE OF A NOTE WITH TWO STEMS: IMAGE &amp; ITS ENCODING</p>
+                  <p>[include example (image and code) of a note with two stems]</p>
                </div>
                <div xml:id="plicas" type="div3">
                   <head>Plicas</head>
@@ -8372,6 +8403,35 @@
                         <specDesc key="att.plica.vis" atts="dir len"/>
                      </specList>
                   </p>
+                  <figure>
+                     <head>Encoding and rendering of plicas</head>
+                     <graphic url="../images/modules/mensural/ex_plicae.png"/>
+                  </figure>
+               </div>
+               <div xml:id="dots" type="div3">
+                  <head>Dots</head>
+                  <p>Dots of division and augmentation can be encoded by using the <gi scheme="MEI">dot</gi> element (provided by the MEI.shared module). This element is meant to be used as a child of <gi scheme="MEI">layer</gi> following the <gi scheme="MEI">note</gi> or <gi scheme="MEI">rest</gi> after which it appears in the original source.</p> 
+                  <p>Dots in mensural notation are not encoded as children of notes or rests, but rather as a sibling of these. They are also not encoded as attributes (the use of the <att>dot</att> attribute in a <gi scheme="MEI">note</gi> or <gi scheme="MEI">rest</gi> element is only acceptable in Common Music Notation, not mensural).</p>
+                  <p>To indicate the nature of the dot (as a dot of division or augmentation), the <gi scheme="MEI">dot</gi> element has an attribute <att>form</att>, which can take on the following values:</p>
+                  <list type="gloss">
+                     <label>aug</label>
+                     <item>Value of the form attribute for a dot of augmentation (this is a dot that adds half the value to the previous note, like a dotted note in common Western music notation)</item>
+                     <label>div</label>
+                     <item>Value of the form attribute for a dot of division (this is a dot that modifies the perfect groupings of the notes, thus, changing some notes' duration in the process)</item>
+                  </list>
+                  The actual effect of these dots (<hi rend="italic">augmenting</hi> a note and making it perfect, or dividing a sequence of notes in different groupings by <hi rend="italic">imperfecting</hi> some notes or <hi rend="italic">altering</hi> others) is encoded with the <att>dur.quality</att> attribute of the correspoding <gi scheme="MEI">note</gi> elements. Examples of the use of dots of division and augmentation can be found in the <ptr target="#mensuralRules"/> section.
+               </div>
+               <div xml:id="accidentals" type="div3">
+                 <head>Accidentals</head>
+                 <p>[explain that accidentals are usually encoded as independent elements and that accid.ges can be used within notes]</p>
+               </div>
+               <div xml:id="coloration" type="div3">
+                 <head>Coloration</head>
+                 <p>[explain where/how coloration can be encoded]</p>
+               </div>
+               <div xml:id="custos" type="div3">
+                 <head>Custos</head>
+                 <p>[explain that there is a custos element available]</p>
                </div>
             </div>
          </div>
