@@ -5,7 +5,7 @@
           xmlns:xlink="http://www.w3.org/1999/xlink"
           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
           ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2023-06-20T21:10:48Z. .
+Schema generated from ODD source 2023-06-21T13:28:16Z. .
 TEI Edition: Version 5.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -742,6 +742,11 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <value>unknown</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">No interpretation regarding performed value of grace note.</a:documentation>
       </choice>
+   </define>
+   <define name="mei_data.HEXNUM">
+      <data type="string">
+         <param name="pattern">(#x|U\+)[A-F0-9]+</param>
+      </data>
    </define>
    <define name="mei_data.HORIZONTALALIGNMENT">
       <choice>
@@ -1611,6 +1616,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
             <ref name="mei_model.nameLike.label"/>
             <ref name="mei_model.pbLike"/>
             <ref name="mei_model.rendLike"/>
+            <ref name="mei_symbol"/>
          </choice>
       </zeroOrMore>
    </define>
@@ -3137,6 +3143,77 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
          <empty/>
       </element>
    </define>
+   <define name="mei_att.extSym.auth.attributes">
+      <ref name="mei_att.extSym.auth.attribute.glyph.auth"/>
+      <ref name="mei_att.extSym.auth.attribute.glyph.uri"/>
+   </define>
+   <define name="mei_att.extSym.auth.attribute.glyph.auth">
+      <optional>
+         <attribute name="glyph.auth">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A name or label associated with the controlled vocabulary from which the value of <code xmlns="http://www.w3.org/1999/xhtml">@glyph.name</code> or <code xmlns="http://www.w3.org/1999/xhtml">@glyph.num</code> is taken, or the textual content of the element.
+Suggested values include: 1] smufl</a:documentation>
+            <choice>
+               <value>smufl</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Standard Music Font Layout.</a:documentation>
+               <data type="NMTOKEN"/>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.extSym.auth.attribute.glyph.uri">
+      <optional>
+         <attribute name="glyph.uri">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The web-accessible location of the controlled vocabulary from which the value of <code xmlns="http://www.w3.org/1999/xhtml">@glyph.name</code> or <code xmlns="http://www.w3.org/1999/xhtml">@glyph.num</code> is taken, or the textual content of the element.</a:documentation>
+            <ref name="mei_data.URI"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.extSym.names.attributes">
+      <ref name="mei_att.extSym.names.attribute.glyph.name"/>
+      <ref name="mei_att.extSym.names.attribute.glyph.num"/>
+   </define>
+   <define name="mei_att.extSym.names.attribute.glyph.name">
+      <optional>
+         <attribute name="glyph.name">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Glyph name.</a:documentation>
+            <data type="string"/>
+         </attribute>
+      </optional>
+   </define>
+   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+             id="mei-att.extSym.names-glyph.name-check_glyph.name-constraint-rule-27">
+      <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                 xmlns:xi="http://www.w3.org/2001/XInclude"
+                 context="@glyph.name">
+         <sch:assert role="warning" test="not(normalize-space(.) eq '')">@glyph.name attribute
+                should have content.</sch:assert>
+      </sch:rule>
+   </pattern>
+   <define name="mei_att.extSym.names.attribute.glyph.num">
+      <optional>
+         <attribute name="glyph.num">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Numeric glyph reference in hexadecimal notation, e.g., "#xE000" or "U+E000". N.B. SMuFL version 1.18 uses the range U+E000 - U+ECBF.</a:documentation>
+            <ref name="mei_data.HEXNUM"/>
+         </attribute>
+      </optional>
+   </define>
+   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+             id="mei-att.extSym.names-glyph.num-check_glyph.num-constraint-rule-28">
+      <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                 xmlns:xi="http://www.w3.org/2001/XInclude"
+                 context="mei:*[@glyph.num and (lower-case(@glyph.auth) eq 'smufl' or @glyph.uri eq 'http://www.smufl.org/')]">
+         <sch:assert role="warning"
+                      test="matches(normalize-space(@glyph.num), '^(#x|U\+)E([0-9AB][0-9A-F][0-9A-F]|C[0-9A][0-9A-F]|CB[0-9A-F])$')">SMuFL version 1.18 uses the range U+E000 - U+ECBF.</sch:assert>
+      </sch:rule>
+   </pattern>
+   <define name="mei_att.extSym.attributes">
+      <ref name="mei_att.extSym.auth.attributes"/>
+      <ref name="mei_att.extSym.names.attributes"/>
+   </define>
    <define name="mei_att.fing.log.attributes">
       <ref name="mei_att.controlEvent.attributes"/>
       <ref name="mei_att.duration.additive.attributes"/>
@@ -3215,7 +3292,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                   id="mei-fing-fing_start-type_attributes_required-constraint-rule-27">
+                   id="mei-fing-fing_start-type_attributes_required-constraint-rule-29">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -3226,7 +3303,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                   id="mei-fing-stack_exclusion-constraint-rule-28">
+                   id="mei-fing-stack_exclusion-constraint-rule-30">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -3252,7 +3329,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                   id="mei-fingGrp-require_fingeringLike_children-constraint-rule-29">
+                   id="mei-fingGrp-require_fingeringLike_children-constraint-rule-31">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -3297,7 +3374,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-             id="mei-att.accidental.ges-accid.ges-check_accid_duplication-constraint-rule-32">
+             id="mei-att.accidental.ges-accid.ges-check_accid_duplication-constraint-rule-34">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                  xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -3527,7 +3604,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-             id="mei-att.harm.log-chordref-check_chordrefTarget-constraint-rule-33">
+             id="mei-att.harm.log-chordref-check_chordrefTarget-constraint-rule-35">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                  xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -3669,7 +3746,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                   id="mei-harm-harm_start-type_attributes_required-constraint-rule-34">
+                   id="mei-harm-harm_start-type_attributes_required-constraint-rule-36">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -3710,7 +3787,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
             </attribute>
          </optional>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                   id="mei-fileDesc-corresp-check_correspTarget-constraint-rule-35">
+                   id="mei-fileDesc-corresp-check_correspTarget-constraint-rule-37">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -3726,7 +3803,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(MEI header) (MEI header) – Supplies the descriptive and declarative metadata prefixed to every MEI-conformant text.</a:documentation>
          <ref name="mei_fileDesc"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                   id="mei-meiHead-check_meiHead_type-constraint-rule-36">
+                   id="mei-meiHead-check_meiHead_type-constraint-rule-38">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -3945,7 +4022,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-             id="mei-att.instrumentIdent-instr-check_instrTarget-constraint-rule-39">
+             id="mei-att.instrumentIdent-instr-check_instrTarget-constraint-rule-41">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                  xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -4015,7 +4092,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-             id="mei-att.midiInstrument-One_of_instrname_or_instrnum-constraint-rule-40">
+             id="mei-att.midiInstrument-One_of_instrname_or_instrnum-constraint-rule-42">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                  xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -4026,7 +4103,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
       </sch:rule>
    </pattern>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-             id="mei-att.midiInstrument-One_of_patchname_or_patchnum-constraint-rule-41">
+             id="mei-att.midiInstrument-One_of_patchname_or_patchnum-constraint-rule-43">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                  xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -4345,7 +4422,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-             id="mei-att.augmentDots-dots-dots_attribute_requires_dur-constraint-rule-42">
+             id="mei-att.augmentDots-dots-dots_attribute_requires_dur-constraint-rule-44">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                  xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -4436,7 +4513,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-             id="mei-att.cleffing.log-clef_shape_requires_clef_line-constraint-rule-43">
+             id="mei-att.cleffing.log-clef_shape_requires_clef_line-constraint-rule-45">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                  xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -4466,7 +4543,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-             id="mei-att.clefShape-shape_requires_line-constraint-rule-45">
+             id="mei-att.clefShape-shape_requires_line-constraint-rule-47">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                  xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -4579,7 +4656,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-             id="mei-att.dataPointing-data-check_dataTarget-constraint-rule-46">
+             id="mei-att.dataPointing-data-check_dataTarget-constraint-rule-48">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                  xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -4812,7 +4889,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-             id="mei-att.lineRend.base-lsegs-check_lsegs-constraint-rule-47">
+             id="mei-att.lineRend.base-lsegs-check_lsegs-constraint-rule-49">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                  xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -4929,7 +5006,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-             id="mei-att.name-nymref-check_nymrefTarget-constraint-rule-48">
+             id="mei-att.name-nymref-check_nymrefTarget-constraint-rule-50">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                  xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -5086,7 +5163,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-             id="mei-att.plist-plist-check_plistTarget-constraint-rule-49">
+             id="mei-att.plist-plist-check_plistTarget-constraint-rule-51">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                  xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -5132,6 +5209,17 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    </define>
    <define name="mei_att.sb.log.attributes">
       <empty/>
+   </define>
+   <define name="mei_att.scalable.attributes">
+      <ref name="mei_att.scalable.attribute.scale"/>
+   </define>
+   <define name="mei_att.scalable.attribute.scale">
+      <optional>
+         <attribute name="scale">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Scale factor to be applied to the feature to make it the desired display size.</a:documentation>
+            <ref name="mei_data.PERCENT"/>
+         </attribute>
+      </optional>
    </define>
    <define name="mei_att.section.log.attributes">
       <empty/>
@@ -5207,7 +5295,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-             id="mei-att.startEndId-endid-check_endidTarget-constraint-rule-50">
+             id="mei-att.startEndId-endid-check_endidTarget-constraint-rule-52">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                  xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -5233,7 +5321,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-             id="mei-att.startId-startid-check_startidTarget-constraint-rule-51">
+             id="mei-att.startId-startid-check_startidTarget-constraint-rule-53">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                  xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -5536,6 +5624,76 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
          <attribute name="valign">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records vertical alignment.</a:documentation>
             <ref name="mei_data.VERTICALALIGNMENT"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.visualOffset.attributes">
+      <ref name="mei_att.visualOffset.ho.attributes"/>
+      <ref name="mei_att.visualOffset.vo.attributes"/>
+   </define>
+   <define name="mei_att.visualOffset.ho.attributes">
+      <ref name="mei_att.visualOffset.ho.attribute.ho"/>
+   </define>
+   <define name="mei_att.visualOffset.ho.attribute.ho">
+      <optional>
+         <attribute name="ho">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records a horizontal adjustment to a feature’s programmatically-determined location in terms of staff interline distance; that is, in units of 1/2 the distance between adjacent staff lines.</a:documentation>
+            <ref name="mei_data.MEASUREMENTSIGNED"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.visualOffset.vo.attributes">
+      <ref name="mei_att.visualOffset.vo.attribute.vo"/>
+   </define>
+   <define name="mei_att.visualOffset.vo.attribute.vo">
+      <optional>
+         <attribute name="vo">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records the vertical adjustment of a feature’s programmatically-determined location in terms of staff interline distance; that is, in units of 1/2 the distance between adjacent staff lines.</a:documentation>
+            <ref name="mei_data.MEASUREMENTSIGNED"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.visualOffset2.attributes">
+      <ref name="mei_att.visualOffset2.ho.attributes"/>
+      <ref name="mei_att.visualOffset2.vo.attributes"/>
+   </define>
+   <define name="mei_att.visualOffset2.ho.attributes">
+      <ref name="mei_att.visualOffset2.ho.attribute.startho"/>
+      <ref name="mei_att.visualOffset2.ho.attribute.endho"/>
+   </define>
+   <define name="mei_att.visualOffset2.ho.attribute.startho">
+      <optional>
+         <attribute name="startho">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records the horizontal adjustment of a feature’s programmatically-determined start point.</a:documentation>
+            <ref name="mei_data.MEASUREMENTSIGNED"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.visualOffset2.ho.attribute.endho">
+      <optional>
+         <attribute name="endho">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records the horizontal adjustment of a feature’s programmatically-determined end point.</a:documentation>
+            <ref name="mei_data.MEASUREMENTSIGNED"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.visualOffset2.vo.attributes">
+      <ref name="mei_att.visualOffset2.vo.attribute.startvo"/>
+      <ref name="mei_att.visualOffset2.vo.attribute.endvo"/>
+   </define>
+   <define name="mei_att.visualOffset2.vo.attribute.startvo">
+      <optional>
+         <attribute name="startvo">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records a vertical adjustment of a feature’s programmatically-determined start point.</a:documentation>
+            <ref name="mei_data.MEASUREMENTSIGNED"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.visualOffset2.vo.attribute.endvo">
+      <optional>
+         <attribute name="endvo">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records a vertical adjustment of a feature’s programmatically-determined end point.</a:documentation>
+            <ref name="mei_data.MEASUREMENTSIGNED"/>
          </attribute>
       </optional>
    </define>
@@ -6125,6 +6283,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
          <ref name="mei_model.relationLike"/>
          <ref name="mei_model.rendLike"/>
          <ref name="mei_model.titleLike"/>
+         <ref name="mei_symbol"/>
       </choice>
    </define>
    <define name="mei_model.titleLike">
@@ -6207,7 +6366,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Break, pause, or interruption in the normal tempo of a composition. Typically indicated by "railroad tracks", i.e., two diagonal slashes.</a:documentation>
          <empty/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                   id="mei-caesura-caesura_start-type_attributes_required-constraint-rule-52">
+                   id="mei-caesura-caesura_start-type_attributes_required-constraint-rule-54">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6246,7 +6405,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indication of the exact location of a particular note on the staff and, therefore, the other notes as well.</a:documentation>
          <empty/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                   id="mei-clef-Clef_position_lines-constraint-rule-53">
+                   id="mei-clef-Clef_position_lines-constraint-rule-55">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6258,7 +6417,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                   id="mei-clef-Clef_position_nolines-constraint-rule-54">
+                   id="mei-clef-Clef_position_nolines-constraint-rule-56">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6327,7 +6486,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                   id="mei-dir-dir_start-type_attributes_required-constraint-rule-55">
+                   id="mei-dir-dir_start-type_attributes_required-constraint-rule-57">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6354,7 +6513,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                   id="mei-dynam-dynam_start-type_attributes_required-constraint-rule-56">
+                   id="mei-dynam-dynam_start-type_attributes_required-constraint-rule-58">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6365,7 +6524,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                   id="mei-dynam-dynam_end-type_attributes-constraint-rule-57">
+                   id="mei-dynam-dynam_end-type_attributes-constraint-rule-59">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6496,7 +6655,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
          <ref name="mei_meiHead"/>
          <ref name="mei_music"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                   id="mei-mei-Check_staff-constraint-rule-58">
+                   id="mei-mei-Check_staff-constraint-rule-60">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6519,7 +6678,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
          </zeroOrMore>
          <ref name="mei_macro.musicPart"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                   id="mei-music-check_controlEventLinking-constraint-rule-59">
+                   id="mei-music-check_controlEventLinking-constraint-rule-61">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6564,7 +6723,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                   id="mei-ornam-ornam_start-type_attributes_required-constraint-rule-61">
+                   id="mei-ornam-ornam_start-type_attributes_required-constraint-rule-63">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6669,6 +6828,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
             </choice>
          </zeroOrMore>
          <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.extSym.auth.attributes"/>
          <ref name="mei_att.horizontalAlign.attributes"/>
          <ref name="mei_att.lang.attributes"/>
          <ref name="mei_att.textRendition.attributes"/>
@@ -6696,7 +6856,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                   id="mei-respStmt-check_respStmt-constraint-rule-62">
+                   id="mei-respStmt-check_respStmt-constraint-rule-64">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6719,7 +6879,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
             <empty/>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                   id="mei-rest-Check_restline-constraint-rule-63">
+                   id="mei-rest-Check_restline-constraint-rule-65">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6801,7 +6961,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                   id="mei-section-Check_sectionexpansion-constraint-rule-64">
+                   id="mei-section-Check_sectionexpansion-constraint-rule-66">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6843,7 +7003,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                   id="mei-staff-checkStaff_n-constraint-rule-65">
+                   id="mei-staff-checkStaff_n-constraint-rule-67">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6876,7 +7036,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                   id="mei-staffDef-Check_staffDefn-constraint-rule-66">
+                   id="mei-staffDef-Check_staffDefn-constraint-rule-68">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6892,7 +7052,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                   id="mei-staffDef-Check_ancestor_staff-constraint-rule-67">
+                   id="mei-staffDef-Check_ancestor_staff-constraint-rule-69">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6904,7 +7064,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                   id="mei-staffDef-Check_ancestor_staff_lines-constraint-rule-68">
+                   id="mei-staffDef-Check_ancestor_staff_lines-constraint-rule-70">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6917,7 +7077,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                   id="mei-staffDef-Check_clef_position_staffDef-constraint-rule-69">
+                   id="mei-staffDef-Check_clef_position_staffDef-constraint-rule-71">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6928,7 +7088,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                   id="mei-staffDef-Check_clef_position_staffDef_nolines-constraint-rule-70">
+                   id="mei-staffDef-Check_clef_position_staffDef_nolines-constraint-rule-72">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6942,7 +7102,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                   id="mei-staffDef-Check_tab_strings_lines-constraint-rule-71">
+                   id="mei-staffDef-Check_tab_strings_lines-constraint-rule-73">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6955,7 +7115,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                   id="mei-staffDef-Check_tab_strings_nolines-constraint-rule-72">
+                   id="mei-staffDef-Check_tab_strings_nolines-constraint-rule-74">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -7035,7 +7195,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
             </choice>
          </oneOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                   id="mei-staffGrp-Check_staffGrp_unique_staff_n_values-constraint-rule-77">
+                   id="mei-staffGrp-Check_staffGrp_unique_staff_n_values-constraint-rule-79">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -7048,7 +7208,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                   id="mei-staffGrp-Check_staffGrp_unique_staff_n_values-constraint-rule-78">
+                   id="mei-staffGrp-Check_staffGrp_unique_staff_n_values-constraint-rule-80">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -7083,6 +7243,29 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
          <empty/>
       </element>
    </define>
+   <define name="mei_symbol">
+      <element name="symbol">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A reference to a previously defined symbol.</a:documentation>
+         <empty/>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                   id="mei-symbol-symbolDef_symbol_attributes_required-constraint-rule-81">
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                       xmlns:xi="http://www.w3.org/2001/XInclude"
+                       context="mei:symbol[ancestor::mei:symbolDef]">
+               <sch:assert test="@startid or (@x and @y)">In the symbolDef context, symbol must have
+            either a startid attribute or x and y attributes.</sch:assert>
+               <sch:assert test="@altsym or @glyph.name or @glyph.num">In the symbolDef context, symbol
+            must have one of the following attributes: altsym, glyph.name, or
+            glyph.num.</sch:assert>
+            </sch:rule>
+         </pattern>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.symbol.vis.attributes"/>
+         <empty/>
+      </element>
+   </define>
    <define name="mei_tempo">
       <element name="tempo">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Text and symbols descriptive of tempo, mood, or style, e.g., "allarg.", "a tempo", "cantabile", "Moderato", "♩=60", "Moderato ♩ =60").</a:documentation>
@@ -7093,7 +7276,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                   id="mei-tempo-tempo_in_header_disallow_most_attrs-constraint-rule-79">
+                   id="mei-tempo-tempo_in_header_disallow_most_attrs-constraint-rule-82">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -7105,7 +7288,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                   id="mei-tempo-tempo_start-type_attributes_required-constraint-rule-80">
+                   id="mei-tempo-tempo_start-type_attributes_required-constraint-rule-83">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -7261,7 +7444,9 @@ Suggested values include: 1] main; 2] subordinate; 3] abbreviated; 4] alternativ
       </element>
    </define>
    <define name="mei_att.arpeg.vis.attributes">
+      <ref name="mei_att.extSym.attributes"/>
       <ref name="mei_att.typography.attributes"/>
+      <ref name="mei_att.visualOffset.attributes"/>
       <ref name="mei_att.arpeg.vis.attribute.arrow"/>
       <ref name="mei_att.arpeg.vis.attribute.arrow.shape"/>
       <ref name="mei_att.arpeg.vis.attribute.arrow.size"/>
@@ -7327,15 +7512,18 @@ Suggested values include: 1] main; 2] subordinate; 3] abbreviated; 4] alternativ
       </optional>
    </define>
    <define name="mei_att.artic.vis.attributes">
+      <ref name="mei_att.extSym.attributes"/>
       <ref name="mei_att.placementOnStaff.attributes"/>
       <ref name="mei_att.placementRelEvent.attributes"/>
       <ref name="mei_att.typography.attributes"/>
+      <ref name="mei_att.visualOffset.attributes"/>
    </define>
    <define name="mei_att.beam.vis.attributes">
       <ref name="mei_att.cue.attributes"/>
    </define>
    <define name="mei_att.beatRpt.vis.attributes">
       <ref name="mei_att.expandable.attributes"/>
+      <ref name="mei_att.extSym.attributes"/>
       <ref name="mei_att.typography.attributes"/>
       <ref name="mei_att.beatRpt.vis.attribute.slash"/>
    </define>
@@ -7346,36 +7534,51 @@ Suggested values include: 1] main; 2] subordinate; 3] abbreviated; 4] alternativ
       </attribute>
    </define>
    <define name="mei_att.breath.vis.attributes">
+      <ref name="mei_att.extSym.attributes"/>
       <ref name="mei_att.placementRelStaff.attributes"/>
       <ref name="mei_att.typography.attributes"/>
+      <ref name="mei_att.visualOffset.attributes"/>
    </define>
    <define name="mei_att.bTrem.vis.attributes">
       <ref name="mei_att.numberPlacement.attributes"/>
    </define>
    <define name="mei_att.caesura.vis.attributes">
+      <ref name="mei_att.extSym.attributes"/>
       <ref name="mei_att.placementRelStaff.attributes"/>
       <ref name="mei_att.typography.attributes"/>
+      <ref name="mei_att.visualOffset.attributes"/>
    </define>
    <define name="mei_att.clef.vis.attributes">
+      <ref name="mei_att.extSym.attributes"/>
       <ref name="mei_att.typography.attributes"/>
+      <ref name="mei_att.visualOffset.attributes"/>
    </define>
    <define name="mei_att.dir.vis.attributes">
       <ref name="mei_att.placementRelStaff.attributes"/>
+      <ref name="mei_att.visualOffset.attributes"/>
+      <ref name="mei_att.visualOffset2.ho.attributes"/>
    </define>
    <define name="mei_att.dynam.vis.attributes">
       <ref name="mei_att.placementRelStaff.attributes"/>
+      <ref name="mei_att.visualOffset.attributes"/>
+      <ref name="mei_att.visualOffset2.ho.attributes"/>
    </define>
    <define name="mei_att.ending.vis.attributes">
       <ref name="mei_att.lineRend.attributes"/>
    </define>
    <define name="mei_att.f.vis.attributes">
       <ref name="mei_att.placementRelStaff.attributes"/>
+      <ref name="mei_att.visualOffset.attributes"/>
    </define>
    <define name="mei_att.fing.vis.attributes">
       <ref name="mei_att.placementRelStaff.attributes"/>
+      <ref name="mei_att.visualOffset.attributes"/>
    </define>
    <define name="mei_att.gliss.vis.attributes">
+      <ref name="mei_att.extSym.attributes"/>
       <ref name="mei_att.typography.attributes"/>
+      <ref name="mei_att.visualOffset.attributes"/>
+      <ref name="mei_att.visualOffset2.attributes"/>
       <ref name="mei_att.lineRend.attributes"/>
    </define>
    <define name="mei_att.graceGrp.vis.attributes">
@@ -7384,6 +7587,8 @@ Suggested values include: 1] main; 2] subordinate; 3] abbreviated; 4] alternativ
    <define name="mei_att.hairpin.vis.attributes">
       <ref name="mei_att.lineRend.base.attributes"/>
       <ref name="mei_att.placementRelStaff.attributes"/>
+      <ref name="mei_att.visualOffset.attributes"/>
+      <ref name="mei_att.visualOffset2.attributes"/>
       <ref name="mei_att.hairpin.vis.attribute.opening"/>
       <ref name="mei_att.hairpin.vis.attribute.closed"/>
       <ref name="mei_att.hairpin.vis.attribute.opening.vertical"/>
@@ -7423,36 +7628,49 @@ Suggested values include: 1] main; 2] subordinate; 3] abbreviated; 4] alternativ
    </define>
    <define name="mei_att.halfmRpt.vis.attributes">
       <ref name="mei_att.expandable.attributes"/>
+      <ref name="mei_att.extSym.attributes"/>
       <ref name="mei_att.typography.attributes"/>
+      <ref name="mei_att.visualOffset.attributes"/>
    </define>
    <define name="mei_att.harpPedal.vis.attributes">
+      <ref name="mei_att.extSym.attributes"/>
       <ref name="mei_att.placementRelStaff.attributes"/>
       <ref name="mei_att.typography.attributes"/>
+      <ref name="mei_att.visualOffset.attributes"/>
    </define>
    <define name="mei_att.layer.vis.attributes">
       <empty/>
    </define>
    <define name="mei_att.lv.vis.attributes">
+      <ref name="mei_att.visualOffset.attributes"/>
+      <ref name="mei_att.visualOffset2.attributes"/>
       <ref name="mei_att.curvature.attributes"/>
    </define>
    <define name="mei_att.mNum.vis.attributes">
       <ref name="mei_att.placementRelStaff.attributes"/>
       <ref name="mei_att.typography.attributes"/>
+      <ref name="mei_att.visualOffset.attributes"/>
    </define>
    <define name="mei_att.mordent.vis.attributes">
+      <ref name="mei_att.extSym.attributes"/>
       <ref name="mei_att.placementRelStaff.attributes"/>
       <ref name="mei_att.typography.attributes"/>
+      <ref name="mei_att.visualOffset.attributes"/>
    </define>
    <define name="mei_att.mRest.vis.attributes">
       <ref name="mei_att.cutout.attributes"/>
+      <ref name="mei_att.extSym.attributes"/>
       <ref name="mei_att.typography.attributes"/>
+      <ref name="mei_att.visualOffset.attributes"/>
    </define>
    <define name="mei_att.mRpt.vis.attributes">
       <ref name="mei_att.expandable.attributes"/>
+      <ref name="mei_att.extSym.attributes"/>
       <ref name="mei_att.numberPlacement.attributes"/>
       <ref name="mei_att.typography.attributes"/>
    </define>
    <define name="mei_att.multiRest.vis.attributes">
+      <ref name="mei_att.extSym.attributes"/>
       <ref name="mei_att.numberPlacement.attributes"/>
       <ref name="mei_att.typography.attributes"/>
       <ref name="mei_att.width.attributes"/>
@@ -7468,18 +7686,24 @@ Suggested values include: 1] main; 2] subordinate; 3] abbreviated; 4] alternativ
    </define>
    <define name="mei_att.multiRpt.vis.attributes">
       <ref name="mei_att.expandable.attributes"/>
+      <ref name="mei_att.extSym.attributes"/>
       <ref name="mei_att.typography.attributes"/>
    </define>
    <define name="mei_att.note.vis.attributes">
+      <ref name="mei_att.extSym.attributes"/>
       <ref name="mei_att.stems.attributes"/>
       <ref name="mei_att.typography.attributes"/>
+      <ref name="mei_att.visualOffset.ho.attributes"/>
       <ref name="mei_att.note.vis.cmn.attributes"/>
    </define>
    <define name="mei_att.octave.vis.attributes">
-      <empty/>
+      <ref name="mei_att.visualOffset.attributes"/>
+      <ref name="mei_att.visualOffset2.ho.attributes"/>
    </define>
    <define name="mei_att.ornam.vis.attributes">
       <ref name="mei_att.placementRelStaff.attributes"/>
+      <ref name="mei_att.visualOffset.attributes"/>
+      <ref name="mei_att.visualOffset2.ho.attributes"/>
    </define>
    <define name="mei_att.pb.vis.attributes">
       <ref name="mei_att.pb.vis.attribute.folium"/>
@@ -7498,9 +7722,11 @@ Suggested values include: 1] main; 2] subordinate; 3] abbreviated; 4] alternativ
       </optional>
    </define>
    <define name="mei_att.pedal.vis.attributes">
+      <ref name="mei_att.extSym.attributes"/>
       <ref name="mei_att.lineRend.attributes"/>
       <ref name="mei_att.placementRelStaff.attributes"/>
       <ref name="mei_att.typography.attributes"/>
+      <ref name="mei_att.visualOffset.attributes"/>
       <ref name="mei_att.pedal.vis.attribute.form"/>
    </define>
    <define name="mei_att.pedal.vis.attribute.form">
@@ -7514,20 +7740,27 @@ Suggested values include: 1] main; 2] subordinate; 3] abbreviated; 4] alternativ
    <define name="mei_att.refrain.vis.attributes">
       <ref name="mei_att.placementRelStaff.attributes"/>
       <ref name="mei_att.typography.attributes"/>
+      <ref name="mei_att.visualOffset.vo.attributes"/>
       <ref name="mei_att.voltaGroupingSym.attributes"/>
    </define>
    <define name="mei_att.reh.vis.attributes">
       <ref name="mei_att.placementRelStaff.attributes"/>
       <ref name="mei_att.typography.attributes"/>
+      <ref name="mei_att.visualOffset.attributes"/>
    </define>
    <define name="mei_att.repeatMark.vis.attributes">
+      <ref name="mei_att.extSym.attributes"/>
       <ref name="mei_att.placementRelStaff.attributes"/>
+      <ref name="mei_att.visualOffset.attributes"/>
+      <ref name="mei_att.visualOffset2.ho.attributes"/>
    </define>
    <define name="mei_att.rest.vis.attributes">
       <ref name="mei_att.rest.vis.cmn.attributes"/>
       <ref name="mei_att.typography.attributes"/>
+      <ref name="mei_att.visualOffset.attributes"/>
    </define>
    <define name="mei_att.sb.vis.attributes">
+      <ref name="mei_att.extSym.attributes"/>
       <ref name="mei_att.typography.attributes"/>
       <ref name="mei_att.sb.vis.attribute.form"/>
    </define>
@@ -7554,6 +7787,8 @@ Suggested values include: 1] main; 2] subordinate; 3] abbreviated; 4] alternativ
       </optional>
    </define>
    <define name="mei_att.slur.vis.attributes">
+      <ref name="mei_att.visualOffset.attributes"/>
+      <ref name="mei_att.visualOffset2.attributes"/>
       <ref name="mei_att.curvature.attributes"/>
    </define>
    <define name="mei_att.space.vis.attributes">
@@ -7586,17 +7821,30 @@ Suggested values include: 1] main; 2] subordinate; 3] abbreviated; 4] alternativ
    <define name="mei_att.syl.vis.attributes">
       <ref name="mei_att.placementRelStaff.attributes"/>
       <ref name="mei_att.typography.attributes"/>
+      <ref name="mei_att.visualOffset.attributes"/>
       <ref name="mei_att.horizontalAlign.attributes"/>
+   </define>
+   <define name="mei_att.symbol.vis.attributes">
+      <ref name="mei_att.extSym.attributes"/>
+      <ref name="mei_att.scalable.attributes"/>
+      <ref name="mei_att.visualOffset.attributes"/>
    </define>
    <define name="mei_att.tempo.vis.attributes">
       <ref name="mei_att.placementRelStaff.attributes"/>
+      <ref name="mei_att.visualOffset.attributes"/>
+      <ref name="mei_att.visualOffset2.ho.attributes"/>
    </define>
    <define name="mei_att.tie.vis.attributes">
+      <ref name="mei_att.visualOffset.attributes"/>
+      <ref name="mei_att.visualOffset2.attributes"/>
       <ref name="mei_att.curvature.attributes"/>
    </define>
    <define name="mei_att.trill.vis.attributes">
       <ref name="mei_att.placementRelStaff.attributes"/>
+      <ref name="mei_att.extSym.attributes"/>
       <ref name="mei_att.typography.attributes"/>
+      <ref name="mei_att.visualOffset.attributes"/>
+      <ref name="mei_att.visualOffset2.ho.attributes"/>
    </define>
    <define name="mei_att.tuplet.vis.attributes">
       <ref name="mei_att.numberPlacement.attributes"/>
@@ -7643,16 +7891,20 @@ Suggested values include: 1] main; 2] subordinate; 3] abbreviated; 4] alternativ
       </optional>
    </define>
    <define name="mei_att.turn.vis.attributes">
+      <ref name="mei_att.extSym.attributes"/>
       <ref name="mei_att.placementRelStaff.attributes"/>
       <ref name="mei_att.typography.attributes"/>
+      <ref name="mei_att.visualOffset.attributes"/>
    </define>
    <define name="mei_att.verse.vis.attributes">
       <ref name="mei_att.placementRelStaff.attributes"/>
       <ref name="mei_att.typography.attributes"/>
+      <ref name="mei_att.visualOffset.vo.attributes"/>
       <ref name="mei_att.voltaGroupingSym.attributes"/>
    </define>
    <define name="mei_att.volta.vis.attributes">
       <ref name="mei_att.typography.attributes"/>
+      <ref name="mei_att.visualOffset.vo.attributes"/>
    </define>
    <start>
       <choice>
