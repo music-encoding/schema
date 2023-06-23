@@ -3797,7 +3797,7 @@
       <choice xmlns="http://relaxng.org/ns/structure/1.0"><ref name="chord"/><ref name="note"/></choice>
     </content></elementSpec><elementSpec rend="add" ident="fermata" module="MEI.cmn"><desc rend="replace">An indication placed over a note or rest to indicate that it should be held longer than its
                         written value. May also occur over a bar line to indicate the end of a phrase or section.
-                        Sometimes called a 'hold' or 'pause'.</desc><classes><memberOf key="att.common"/><memberOf key="att.fermata.log"/><memberOf key="att.fermata.ges"/><memberOf key="model.controlEventLike.cmn"/></classes><content><rng:empty/></content><constraintSpec ident="fermata_start-type_attributes_required" scheme="schematron">
+                        Sometimes called a 'hold' or 'pause'.</desc><classes><memberOf key="att.common"/><memberOf key="att.fermata.log"/><memberOf key="att.fermata.vis"/><memberOf key="model.controlEventLike.cmn"/></classes><content><rng:empty/></content><constraintSpec ident="fermata_start-type_attributes_required" scheme="schematron">
                         <constraint>
                             <sch:rule context="mei:fermata">
                                 <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of
@@ -4648,11 +4648,6 @@
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Gestural domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       
-      
-    </classes>
-  </classSpec><classSpec rend="add" ident="att.fermata.ges" module="MEI.gestural" type="atts">
-    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Gestural domain attributes.</desc>
-    <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       
     </classes>
   </classSpec><classSpec rend="add" ident="att.fing.ges" module="MEI.gestural" type="atts">
@@ -5798,7 +5793,21 @@
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       
     </classes>
-  </classSpec><classSpec rend="add" ident="att.event" module="MEI.shared" type="atts"><desc>Attributes that apply to all written events, e.g., note, chord, rest, etc.</desc><classes><memberOf key="att.layerIdent" mode="add"/><memberOf key="att.staffIdent" mode="add"/></classes><attList/></classSpec><classSpec rend="add" ident="att.horizontalAlign" module="MEI.shared" type="atts">
+  </classSpec><classSpec rend="add" ident="att.event" module="MEI.shared" type="atts"><desc>Attributes that apply to all written events, e.g., note, chord, rest, etc.</desc><classes><memberOf key="att.layerIdent" mode="add"/><memberOf key="att.staffIdent" mode="add"/></classes><attList/></classSpec><classSpec rend="add" ident="att.extender" module="MEI.shared" type="atts">
+    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that describe extension symbols, typically lines. Members of this class are
+      also typically members of the att.lineRend class.</desc>
+    <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <memberOf key="att.lineRend"/>
+    </classes>
+    <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <attDef ident="extender" usage="opt">
+        <desc xml:lang="en">Indicates the presence of an extension symbol, typically a line.</desc>
+        <datatype>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.BOOLEAN"/>
+        </datatype>
+      </attDef>
+    </attList>
+  </classSpec><classSpec rend="add" ident="att.horizontalAlign" module="MEI.shared" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that record horizontal alignment.</desc>
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="halign" usage="opt">
@@ -6182,16 +6191,6 @@
       <memberOf key="att.pitch"/>
       <memberOf key="att.octave"/>
     </classes>
-  </classSpec><classSpec rend="add" ident="att.placementOnStaff" module="MEI.shared" type="atts">
-    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes capturing placement on a staff.</desc>
-    <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-       <attDef ident="onstaff" usage="opt">
-          <desc xml:lang="en">Indicates the placement of the item within the staff. A value of '<val>true</val>' means on the staff, and '<val>false</val>' off the staff.</desc>
-          <datatype>
-             <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.BOOLEAN"/>
-          </datatype>
-       </attDef>
-    </attList>
   </classSpec><classSpec rend="add" ident="att.placementRelEvent" module="MEI.shared" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes capturing placement information with respect to an event.</desc>
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -7062,7 +7061,7 @@
       <memberOf key="att.common"/>
       
       <memberOf key="att.accid.log"/>
-      
+      <memberOf key="att.accid.vis"/>
       <memberOf key="att.accid.ges"/>
       
       <memberOf key="model.noteModifierLike"/>
@@ -8062,7 +8061,7 @@
       <p>The <att>startid</att> and <att>endid</att> attributes are used to indicate the <gi scheme="MEI">chordMember</gi> elements on which the barre starts and finishes respectively.
         The fret at which the barre should be created is recorded by the <att>fret</att>
         attribute.</p>
-    </remarks></elementSpec><classSpec rend="add" ident="att.arpeg.vis" module="MEI.visual" type="atts">
+    </remarks></elementSpec><classSpec rend="add" ident="att.accid.vis" module="MEI.visual" type="atts"><desc xml:lang="en">Visual domain attributes.</desc><classes><memberOf key="att.extSym"/><memberOf key="att.visualOffset.ho"/><memberOf key="att.visualOffset.vo"/></classes><attList/></classSpec><classSpec rend="add" ident="att.arpeg.vis" module="MEI.visual" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Visual domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       
@@ -8117,22 +8116,7 @@
         </datatype>
       </attDef>
     </attList>
-  </classSpec><classSpec rend="add" ident="att.artic.vis" module="MEI.visual" type="atts">
-    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Visual domain attributes.</desc>
-    <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-      
-      
-      
-      <memberOf key="att.extSym"/>
-       <memberOf key="att.placementOnStaff"/>       
-      <memberOf key="att.placementRelEvent"/>
-      
-      
-      <memberOf key="att.typography"/>
-      <memberOf key="att.visualOffset"/>
-      
-    </classes>
-  </classSpec><classSpec rend="add" ident="att.beam.vis" module="MEI.visual" type="atts">
+  </classSpec><classSpec rend="add" ident="att.artic.vis" module="MEI.visual" type="atts"><desc xml:lang="en">Visual domain attributes.</desc><classes><memberOf key="att.extSym"/><memberOf key="att.placementRelEvent"/><memberOf key="att.visualOffset"/></classes><attList/></classSpec><classSpec rend="add" ident="att.beam.vis" module="MEI.visual" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Visual domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       
@@ -8140,17 +8124,7 @@
       
       
     </classes>
-  </classSpec><classSpec rend="add" ident="att.beatRpt.vis" module="MEI.visual" type="atts">
-    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Visual domain attributes.</desc>
-    <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-      
-      
-      <memberOf key="att.expandable"/>
-      <memberOf key="att.extSym"/>
-      <memberOf key="att.typography"/>
-    </classes>
-    <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-      <attDef ident="slash" usage="req">
+  </classSpec><classSpec rend="add" ident="att.beatRpt.vis" module="MEI.visual" type="atts"><desc xml:lang="en">Visual domain attributes.</desc><classes><memberOf key="att.expandable"/><memberOf key="att.extSym"/></classes><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="slash" usage="req">
         <desc xml:lang="en">Indicates the number of slashes required to render the appropriate beat repeat symbol.
           When a single beat consisting of a single note or chord is repeated, the repetition symbol
           is a single thick, slanting slash; therefore, the value <val>1</val> should be used. When the beat
@@ -8160,40 +8134,12 @@
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.BEATRPT.REND"/>
         </datatype>
-      </attDef>
-    </attList>
-  </classSpec><classSpec rend="add" ident="att.breath.vis" module="MEI.visual" type="atts">
-    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Visual domain attributes.</desc>
-    <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-      
-      
-      <memberOf key="att.extSym"/>
-      <memberOf key="att.placementRelStaff"/>
-      
-      
-      <memberOf key="att.typography"/>
-      <memberOf key="att.visualOffset"/>
-      
-    </classes>
-  </classSpec><classSpec rend="add" ident="att.bTrem.vis" module="MEI.visual" type="atts">
+      </attDef></attList></classSpec><classSpec rend="add" ident="att.breath.vis" module="MEI.visual" type="atts"><desc xml:lang="en">Visual domain attributes.</desc><classes><memberOf key="att.extSym"/><memberOf key="att.visualOffset"/></classes><attList/></classSpec><classSpec rend="add" ident="att.bTrem.vis" module="MEI.visual" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Visual domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.numberPlacement"/>
     </classes>
-  </classSpec><classSpec rend="add" ident="att.caesura.vis" module="MEI.visual" type="atts">
-    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Visual domain attributes.</desc>
-    <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-      
-      
-      <memberOf key="att.extSym"/>
-      <memberOf key="att.placementRelStaff"/>
-      
-      
-      <memberOf key="att.typography"/>
-      <memberOf key="att.visualOffset"/>
-      
-    </classes>
-  </classSpec><classSpec rend="add" ident="att.clef.vis" module="MEI.visual" type="atts">
+  </classSpec><classSpec rend="add" ident="att.caesura.vis" module="MEI.visual" type="atts"><desc xml:lang="en">Visual domain attributes.</desc><classes><memberOf key="att.extSym"/><memberOf key="att.visualOffset"/></classes><attList/></classSpec><classSpec rend="add" ident="att.clef.vis" module="MEI.visual" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Visual domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       
@@ -8207,7 +8153,7 @@
   </classSpec><classSpec rend="add" ident="att.dir.vis" module="MEI.visual" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Visual domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-      
+      <memberOf key="att.extender"/>
       <memberOf key="att.placementRelStaff"/>
       
       <memberOf key="att.visualOffset"/>
@@ -8218,7 +8164,7 @@
   </classSpec><classSpec rend="add" ident="att.dynam.vis" module="MEI.visual" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Visual domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-      
+      <memberOf key="att.extender"/>
       <memberOf key="att.placementRelStaff"/>
       
       <memberOf key="att.visualOffset"/>
@@ -8235,7 +8181,7 @@
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Visual domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       
-      
+      <memberOf key="att.extender"/>
       <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.visualOffset"/>
       
@@ -8244,11 +8190,36 @@
       <p>If <att>tstamp2</att> is not provided, then the extender should be drawn based on the value
         of <att>tstamp2</att> on the harm ancestor.</p>
     </remarks>
-  </classSpec><classSpec rend="add" ident="att.fing.vis" module="MEI.visual" type="atts">
+  </classSpec><classSpec rend="add" ident="att.fermata.vis" module="MEI.visual" type="atts"><desc xml:lang="en">Visual domain attributes.</desc><classes><memberOf key="att.extSym"/><memberOf key="att.visualOffset"/></classes><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="form" usage="opt">
+        <desc xml:lang="en">Describes the visual appearance of the fermata; that is, whether it occurs as upright
+          or inverted.</desc>
+        <valList type="closed">
+          <valItem ident="inv">
+            <desc xml:lang="en">Inverted, <abbr>i.e.</abbr>, curve or bracket below the dot.</desc>
+          </valItem>
+          <valItem ident="norm">
+            <desc xml:lang="en">Upright; <abbr>i.e.</abbr>, curve or bracket above the dot.</desc>
+          </valItem>
+        </valList>
+      </attDef><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="shape" usage="opt">
+        <desc xml:lang="en">Describes the visual appearance of the fermata; that is, whether it has a curved,
+          square, or angular shape.</desc>
+        <valList type="closed">
+          <valItem ident="curved">
+            <desc xml:lang="en">A curve above or below the dot.</desc>
+          </valItem>
+          <valItem ident="square">
+            <desc xml:lang="en">A bracket above or below the dot.</desc>
+          </valItem>
+          <valItem ident="angular">
+            <desc xml:lang="en">A triangle above or below the dot.</desc>
+          </valItem>
+        </valList>
+      </attDef></attList></classSpec><classSpec rend="add" ident="att.fing.vis" module="MEI.visual" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Visual domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       
-      
+      <memberOf key="att.extender"/>
       <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.visualOffset"/>
       
@@ -8459,7 +8430,7 @@
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Visual domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       
-      
+      <memberOf key="att.extender"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.visualOffset2.ho"/>
       
@@ -8539,7 +8510,7 @@
   </classSpec><classSpec rend="add" ident="att.repeatMark.vis" module="MEI.visual" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Visual domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-      
+      <memberOf key="att.extender"/>
       <memberOf key="att.extSym"/>
       <memberOf key="att.placementRelStaff"/>
       
@@ -8548,7 +8519,7 @@
       
       
     </classes>
-  </classSpec><classSpec rend="add" ident="att.rest.vis" module="MEI.visual" type="atts"><desc>Visual domain attributes.</desc><classes><memberOf key="att.rest.vis.cmn"/><memberOf key="att.typography"/><memberOf key="att.visualOffset"/></classes><attList/></classSpec><classSpec rend="add" ident="att.sb.vis" module="MEI.visual" type="atts">
+  </classSpec><classSpec rend="add" ident="att.rest.vis" module="MEI.visual" type="atts"><desc>Visual domain attributes.</desc><classes><memberOf key="att.rest.vis.cmn"/><memberOf key="att.visualOffset"/></classes><attList/></classSpec><classSpec rend="add" ident="att.sb.vis" module="MEI.visual" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Visual domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       
@@ -8642,7 +8613,7 @@
   </classSpec><classSpec rend="add" ident="att.symbol.vis" module="MEI.visual" type="atts"><desc xml:lang="en">Visual domain attributes.</desc><classes><memberOf key="att.extSym"/><memberOf key="att.scalable"/><memberOf key="att.visualOffset"/></classes><attList/></classSpec><classSpec rend="add" ident="att.tempo.vis" module="MEI.visual" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Visual domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-      
+      <memberOf key="att.extender"/>
       <memberOf key="att.placementRelStaff"/>
       
       <memberOf key="att.visualOffset"/>
@@ -8672,7 +8643,7 @@
       
       
       
-      
+      <memberOf key="att.extender"/>
       <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.extSym"/>
       <memberOf key="att.typography"/>
