@@ -5,7 +5,7 @@
           xmlns:xlink="http://www.w3.org/1999/xlink"
           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
           ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2023-06-23T12:04:48Z. .
+Schema generated from ODD source 2023-06-27T07:03:10Z. .
 TEI Edition: Version 5.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -298,6 +298,16 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Drum clef (Unicode 1D125 or Unicode 1D126).</a:documentation>
          <value>TAB</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Tablature "clef"; i.e., usually "TAB" rendered vertically.</a:documentation>
+      </choice>
+   </define>
+   <define name="mei_data.CLUSTER">
+      <choice>
+         <value>white</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">White keys.</a:documentation>
+         <value>black</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Black keys.</a:documentation>
+         <value>chromatic</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Mixed black and white keys.</a:documentation>
       </choice>
    </define>
    <define name="mei_data.COLORNAMES">
@@ -1699,6 +1709,9 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
    </define>
    <define name="mei_att.chord.log.cmn.attributes">
       <ref name="mei_att.graced.attributes"/>
+   </define>
+   <define name="mei_att.chord.vis.cmn.attributes">
+      <ref name="mei_att.beamSecondary.attributes"/>
    </define>
    <define name="mei_att.cutout.attributes">
       <ref name="mei_att.cutout.attribute.cutout"/>
@@ -6394,6 +6407,7 @@ Suggested values include: 1] smufl</a:documentation>
          </zeroOrMore>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.chord.log.attributes"/>
+         <ref name="mei_att.chord.vis.attributes"/>
          <ref name="mei_att.chord.ges.attributes"/>
          <ref name="mei_att.stems.attributes"/>
          <empty/>
@@ -7544,6 +7558,21 @@ Suggested values include: 1] main; 2] subordinate; 3] abbreviated; 4] alternativ
    <define name="mei_att.caesura.vis.attributes">
       <ref name="mei_att.extSym.attributes"/>
       <ref name="mei_att.visualOffset.attributes"/>
+   </define>
+   <define name="mei_att.chord.vis.attributes">
+      <ref name="mei_att.extSym.attributes"/>
+      <ref name="mei_att.stems.attributes"/>
+      <ref name="mei_att.visualOffset.ho.attributes"/>
+      <ref name="mei_att.chord.vis.cmn.attributes"/>
+      <ref name="mei_att.chord.vis.attribute.cluster"/>
+   </define>
+   <define name="mei_att.chord.vis.attribute.cluster">
+      <optional>
+         <attribute name="cluster">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates a single, alternative note head should be displayed instead of individual note heads. The highest and lowest notes of the chord usually indicate the upper and lower boundaries of the cluster note head.</a:documentation>
+            <ref name="mei_data.CLUSTER"/>
+         </attribute>
+      </optional>
    </define>
    <define name="mei_att.clef.vis.attributes">
       <ref name="mei_att.extSym.attributes"/>
