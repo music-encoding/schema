@@ -5,7 +5,7 @@
           xmlns:xlink="http://www.w3.org/1999/xlink"
           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
           ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2023-06-27T07:03:21Z. .
+Schema generated from ODD source 2023-06-29T15:13:01Z. .
 TEI Edition: Version 5.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -8432,7 +8432,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
    </define>
    <define name="mei_app">
       <element name="app">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(apparatus) – Contains one or more alternative encodings.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(apparatus) Contains one or more alternative encodings.</a:documentation>
          <optional>
             <ref name="mei_lem"/>
          </optional>
@@ -8446,7 +8446,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
    </define>
    <define name="mei_lem">
       <element name="lem">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(lemma) – Contains the lemma, or base text, of a textual variation.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(lemma) Contains the lemma, or base text, of a textual variation.</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -8480,7 +8480,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
    </define>
    <define name="mei_rdg">
       <element name="rdg">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(reading) – Contains a single reading within a textual variation.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(reading) Contains a single reading within a textual variation.</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -10067,7 +10067,7 @@ Suggested values include: 1] smufl</a:documentation>
    </pattern>
    <define name="mei_genDesc">
       <element name="genDesc">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(genetic description) - Bundles information about the textual development of a work.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(genetic description) Bundles information about the textual development of a work.</a:documentation>
          <zeroOrMore>
             <choice>
                <ref name="mei_genDesc"/>
@@ -12217,7 +12217,7 @@ Suggested values include: 1] plaineAndEasie; 2] humdrumKern; 3] parsons</a:docum
    </define>
    <define name="mei_notesStmt">
       <element name="notesStmt">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(notes statement)– Collects any notes providing information about a text additional to that recorded in other parts of the bibliographic description.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(notes statement) Collects any notes providing information about a text additional to that recorded in other parts of the bibliographic description.</a:documentation>
          <zeroOrMore>
             <ref name="mei_model.headLike"/>
          </zeroOrMore>
@@ -12361,7 +12361,7 @@ Suggested values include: 1] glue; 2] thread; 3] needle; 4] tape; 5] staple</a:d
    </define>
    <define name="mei_perfResList">
       <element name="perfResList">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Several instrumental or vocal resources treated as a group.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(performance resources list) Several instrumental or vocal resources treated as a group.</a:documentation>
          <zeroOrMore>
             <ref name="mei_model.headLike"/>
          </zeroOrMore>
@@ -15095,7 +15095,7 @@ Suggested values include: 1] paper; 2] parch; 3] mixed</a:documentation>
    </define>
    <define name="mei_postBox">
       <element name="postBox">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(postal box or post office box) contains a number or other identifier for some postal delivery point other than a street address.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(postal box or post office box) Contains a number or other identifier for some postal delivery point other than a street address.</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -15111,7 +15111,7 @@ Suggested values include: 1] paper; 2] parch; 3] mixed</a:documentation>
    </define>
    <define name="mei_postCode">
       <element name="postCode">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(postal code) contains a numerical or alphanumeric code used as part of a postal address to simplify sorting or delivery of mail.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(postal code) Contains a numerical or alphanumeric code used as part of a postal address to simplify sorting or delivery of mail.</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -15678,7 +15678,7 @@ Suggested values include: 1] apostropha; 2] bistropha; 3] climacus; 4] clivis; 5
    </define>
    <define name="mei_ncGrp">
       <element name="ncGrp">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Collection of one or more neume components.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(neume component group) Collection of one or more neume components.</a:documentation>
          <zeroOrMore>
             <choice>
                <ref name="mei_model.appLike"/>

@@ -3883,7 +3883,7 @@
         <att>tstamp.real</att> attribute, while the ending point may be recorded by either a
         <att>dur</att>, <att>dur.ges</att>, <att>endid</att>, or <att>tstamp2</att> attribute. It is
         a semantic error not to specify one starting and one ending type of attribute.</p>
-    </remarks></elementSpec><elementSpec rend="add" ident="graceGrp" module="MEI.cmn"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">A container for a sequence of grace notes.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+    </remarks></elementSpec><elementSpec rend="add" ident="graceGrp" module="MEI.cmn"><gloss xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2023-06-16" xml:lang="en">grace group</gloss><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">A container for a sequence of grace notes.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       
       <memberOf key="att.graceGrp.log"/>
@@ -4543,7 +4543,7 @@
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="model.controlEventLike"/>
     </classes>
-  </classSpec><elementSpec rend="add" ident="fing" module="MEI.fingering"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">finger – An individual finger in a fingering indication.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+  </classSpec><elementSpec rend="add" ident="fing" module="MEI.fingering"><gloss xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2023-06-16" xml:lang="en">finger</gloss><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">An individual finger in a fingering indication.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       
       
@@ -4568,7 +4568,7 @@
             descendant of fing.</sch:assert>
         </sch:rule>
       </constraint>
-    </constraintSpec></elementSpec><elementSpec rend="add" ident="fingGrp" module="MEI.fingering"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">(finger group)– A group of individual fingers in a fingering indication.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+    </constraintSpec></elementSpec><elementSpec rend="add" ident="fingGrp" module="MEI.fingering"><gloss xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2023-06-16" xml:lang="en">finger group</gloss><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">A group of individual fingers in a fingering indication.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       
       

@@ -20,7 +20,7 @@
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href=../../../source/"validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2023-06-27T09:05:56.051171431+02:00-->
+<!--canonicalized: 2023-06-29T17:16:10.260019695+02:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -19832,6 +19832,7 @@
     </remarks>
   </elementSpec>
   <elementSpec ident="graceGrp" module="MEI.cmn">
+    <gloss versionDate="2023-06-16" xml:lang="en">grace group</gloss>
     <desc xml:lang="en">A container for a sequence of grace notes.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -21002,7 +21003,8 @@
     </classes>
   </classSpec>
   <elementSpec ident="app" module="MEI.critapp">
-    <desc xml:lang="en">(apparatus) – Contains one or more alternative encodings.</desc>
+    <gloss versionDate="2023-06-16" xml:lang="en">apparatus</gloss>
+    <desc xml:lang="en">Contains one or more alternative encodings.</desc>
     <classes>
       <memberOf key="att.common"/>
       <memberOf key="model.appLike"/>
@@ -21029,7 +21031,8 @@
     </remarks>
   </elementSpec>
   <elementSpec ident="lem" module="MEI.critapp">
-    <desc xml:lang="en">(lemma) – Contains the lemma, or base text, of a textual variation.</desc>
+    <gloss versionDate="2023-06-16" xml:lang="en">lemma</gloss>
+    <desc xml:lang="en">Contains the lemma, or base text, of a textual variation.</desc>
     <classes>
       <memberOf key="att.common"/>
       <memberOf key="att.crit"/>
@@ -21080,7 +21083,8 @@
     </remarks>
   </elementSpec>
   <elementSpec ident="rdg" module="MEI.critapp">
-    <desc xml:lang="en">(reading) – Contains a single reading within a textual variation.</desc>
+    <gloss versionDate="2023-06-16" xml:lang="en">reading</gloss>
+    <desc xml:lang="en">Contains a single reading within a textual variation.</desc>
     <classes>
       <memberOf key="att.common"/>
       <memberOf key="att.crit"/>
@@ -22883,7 +22887,8 @@
     </classes>
   </classSpec>
   <elementSpec ident="fing" module="MEI.fingering">
-    <desc xml:lang="en">finger – An individual finger in a fingering indication.</desc>
+    <gloss versionDate="2023-06-16" xml:lang="en">finger</gloss>
+    <desc xml:lang="en">An individual finger in a fingering indication.</desc>
     <classes>
       <memberOf key="att.common"/>
       <memberOf key="att.facsimile"/>
@@ -22922,7 +22927,8 @@
     </constraintSpec>
   </elementSpec>
   <elementSpec ident="fingGrp" module="MEI.fingering">
-    <desc xml:lang="en">(finger group)– A group of individual fingers in a fingering indication.</desc>
+    <gloss versionDate="2023-06-16" xml:lang="en">finger group</gloss>
+    <desc xml:lang="en">A group of individual fingers in a fingering indication.</desc>
     <classes>
       <memberOf key="att.common"/>
       <memberOf key="att.facsimile"/>
@@ -23441,7 +23447,8 @@
     </attList>
   </classSpec>
   <elementSpec ident="genDesc" module="MEI.genetic">
-    <desc xml:lang="en">(genetic description) - Bundles information about the textual development of a
+    <gloss versionDate="2023-06-16" xml:lang="en">genetic description</gloss>
+    <desc xml:lang="en">Bundles information about the textual development of a
       work.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -26456,7 +26463,8 @@
     </remarks>
   </elementSpec>
   <elementSpec ident="notesStmt" module="MEI.header">
-    <desc xml:lang="en">(notes statement)– Collects any notes providing information about a text additional to
+    <gloss versionDate="2023-06-16" xml:lang="en">notes statement</gloss>
+    <desc xml:lang="en">Collects any notes providing information about a text additional to
       that recorded in other parts of the bibliographic description.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -26658,6 +26666,7 @@
     </remarks>
   </elementSpec>
   <elementSpec ident="perfResList" module="MEI.header">
+    <gloss versionDate="2023-06-16" xml:lang="en">performance resources list</gloss>
     <desc xml:lang="en">Several instrumental or vocal resources treated as a group.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -30183,7 +30192,8 @@
     </remarks>
   </elementSpec>
   <elementSpec ident="postBox" module="MEI.namesdates">
-    <desc xml:lang="en">(postal box or post office box) contains a number or other identifier for some postal
+    <gloss versionDate="2023-06-16" xml:lang="en">postal box or post office box</gloss>
+    <desc xml:lang="en">Contains a number or other identifier for some postal
       delivery point other than a street address.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -30205,7 +30215,8 @@
     </remarks>
   </elementSpec>
   <elementSpec ident="postCode" module="MEI.namesdates">
-    <desc xml:lang="en">(postal code) contains a numerical or alphanumeric code used as part of a postal address
+    <gloss versionDate="2023-06-16" xml:lang="en">postal code</gloss>
+    <desc xml:lang="en">Contains a numerical or alphanumeric code used as part of a postal address
       to simplify sorting or delivery of mail.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -30732,6 +30743,7 @@
     </attList>
   </elementSpec>
   <elementSpec ident="ncGrp" module="MEI.neumes">
+    <gloss versionDate="2023-06-16" xml:lang="en">neume component group</gloss>
     <desc xml:lang="en">Collection of one or more neume components.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -40184,8 +40196,8 @@
     </remarks>
   </elementSpec>
   <elementSpec ident="seg" module="MEI.text">
-    <desc xml:lang="en">(arbitrary segment) represents any segmentation of text below the "text component"
-      level.</desc>
+    <gloss versionDate="2023-06-16" xml:lang="en">arbitrary segment</gloss>
+    <desc xml:lang="en">represents any segmentation of text below the "text component" level.</desc>
     <classes>
       <memberOf key="att.common"/>
       <memberOf key="att.facsimile"/>
@@ -40717,7 +40729,7 @@
       <memberOf key="att.color"/>
       <memberOf key="att.enclosingChars"/>
       <memberOf key="att.extSym"/>
-       <memberOf key="att.placementOnStaff"/>       
+      <memberOf key="att.placementOnStaff"/>
       <memberOf key="att.placementRelEvent"/>
       <memberOf key="att.staffLoc"/>
       <memberOf key="att.staffLoc.pitched"/>
@@ -42298,7 +42310,7 @@
           <rng:ref name="data.COLOR"/>
         </datatype>
         <remarks xml:lang="en">
-          <p>The value is structured; that is, it should contain a single color value or have 
+          <p>The value is structured; that is, it should contain a single color value or have
             the same number of space-separated values as the number of lines indicated by the
             lines attribute. The first value then applies to the lowest line of the staff.</p>
           <p>All values from data.COLOR are allowed.</p>
