@@ -20,7 +20,7 @@
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href=../../../source/"validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2023-06-29T17:16:10.260019695+02:00-->
+<!--canonicalized: 2023-06-29T22:42:05.220146051+02:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -41802,7 +41802,6 @@
       <memberOf key="att.staffLoc.pitched"/>
       <memberOf key="att.typography"/>
       <memberOf key="att.visualOffset"/>
-      <memberOf key="att.visibility"/>
       <memberOf key="att.xy"/>
     </classes>
   </classSpec>
@@ -41845,6 +41844,7 @@
       <memberOf key="att.staffLoc"/>
       <memberOf key="att.staffLoc.pitched"/>
       <memberOf key="att.typography"/>
+      <memberOf key="att.visibility"/>
       <memberOf key="att.width"/>
     </classes>
     <attList>

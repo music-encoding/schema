@@ -5,7 +5,7 @@
           xmlns:xlink="http://www.w3.org/1999/xlink"
           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
           ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2023-06-29T15:12:52Z. .
+Schema generated from ODD source 2023-06-29T20:39:18Z. .
 TEI Edition: Version 5.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -28816,7 +28816,6 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
       <ref name="mei_att.staffLoc.pitched.attributes"/>
       <ref name="mei_att.typography.attributes"/>
       <ref name="mei_att.visualOffset.attributes"/>
-      <ref name="mei_att.visibility.attributes"/>
       <ref name="mei_att.xy.attributes"/>
    </define>
    <define name="mei_att.mRpt.vis.attributes">
@@ -28847,6 +28846,7 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
       <ref name="mei_att.staffLoc.attributes"/>
       <ref name="mei_att.staffLoc.pitched.attributes"/>
       <ref name="mei_att.typography.attributes"/>
+      <ref name="mei_att.visibility.attributes"/>
       <ref name="mei_att.width.attributes"/>
       <ref name="mei_att.multiRest.vis.attribute.block"/>
    </define>
