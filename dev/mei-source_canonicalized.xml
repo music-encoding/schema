@@ -20,7 +20,7 @@
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href=../../../source/"validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2023-06-30T14:59:24.373168522+02:00-->
+<!--canonicalized: 2023-06-30T23:12:59.361268052+02:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -32455,6 +32455,17 @@
       </attDef>
     </attList>
   </classSpec>
+  <classSpec ident="att.formework" module="MEI.shared" type="atts">
+    <desc xml:lang="en">Attributes that record the function (i.e., placement) of forme work elements.</desc>
+    <attList>
+      <attDef ident="func" usage="opt">
+        <desc xml:lang="en">Records the function (i.e., placement) of a page header or footer.</desc>
+        <datatype>
+          <rng:ref name="data.PGFUNC"/>
+        </datatype>
+      </attDef>
+    </attList>
+  </classSpec>
   <classSpec ident="att.grpSym.log" module="MEI.shared" type="atts">
     <desc xml:lang="en">Logical domain attributes.</desc>
     <classes>
@@ -34032,17 +34043,6 @@
           data.DURATIONRESTS datatype.</desc>
         <datatype>
           <rng:ref name="data.DURATIONRESTS"/>
-        </datatype>
-      </attDef>
-    </attList>
-  </classSpec>
-  <classSpec ident="att.runningtext" module="MEI.shared" type="atts">
-    <desc xml:lang="en">Attributes that record the function (i.e., placement) of page running text elements.</desc>
-    <attList>
-      <attDef ident="func" usage="opt">
-        <desc xml:lang="en">Records the function (i.e., placement) of a page header or footer.</desc>
-        <datatype>
-          <rng:ref name="data.PGFUNC"/>
         </datatype>
       </attDef>
     </attList>
@@ -38142,8 +38142,8 @@
     <classes>
       <memberOf key="att.common"/>
       <memberOf key="att.facsimile"/>
+      <memberOf key="att.formework"/>
       <memberOf key="att.lang"/>
-      <memberOf key="att.runningtext"/>
     </classes>
     <content>
       <rng:zeroOrMore>
@@ -38180,8 +38180,8 @@
     <classes>
       <memberOf key="att.common"/>
       <memberOf key="att.facsimile"/>
+      <memberOf key="att.formework"/>
       <memberOf key="att.lang"/>
-      <memberOf key="att.runningtext"/>
     </classes>
     <content>
       <rng:zeroOrMore>
