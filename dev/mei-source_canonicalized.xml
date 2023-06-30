@@ -20,7 +20,7 @@
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href=../../../source/"validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2023-06-29T22:45:27.961632708+02:00-->
+<!--canonicalized: 2023-06-30T14:59:24.373168522+02:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -34036,6 +34036,17 @@
       </attDef>
     </attList>
   </classSpec>
+  <classSpec ident="att.runningtext" module="MEI.shared" type="atts">
+    <desc xml:lang="en">Attributes that record the function (i.e., placement) of page running text elements.</desc>
+    <attList>
+      <attDef ident="func" usage="opt">
+        <desc xml:lang="en">Records the function (i.e., placement) of a page header or footer.</desc>
+        <datatype>
+          <rng:ref name="data.PGFUNC"/>
+        </datatype>
+      </attDef>
+    </attList>
+  </classSpec>
   <classSpec ident="att.sb.log" module="MEI.shared" type="atts">
     <desc xml:lang="en">Logical domain attributes.</desc>
     <classes>
@@ -38132,6 +38143,7 @@
       <memberOf key="att.common"/>
       <memberOf key="att.facsimile"/>
       <memberOf key="att.lang"/>
+      <memberOf key="att.runningtext"/>
     </classes>
     <content>
       <rng:zeroOrMore>
@@ -38153,12 +38165,6 @@
           <rng:ref name="data.HORIZONTALALIGNMENT"/>
         </datatype>
       </attDef>
-      <attDef ident="func" usage="opt">
-        <desc xml:lang="en">Records the function (i.e., placement) of the page footer.</desc>
-        <datatype>
-          <rng:ref name="data.PGFUNC"/>
-        </datatype>
-      </attDef>
     </attList>
     <remarks xml:lang="en">
       <p>This element is used to capture the textual data that often appears in
@@ -38175,6 +38181,7 @@
       <memberOf key="att.common"/>
       <memberOf key="att.facsimile"/>
       <memberOf key="att.lang"/>
+      <memberOf key="att.runningtext"/>
     </classes>
     <content>
       <rng:zeroOrMore>
@@ -38194,12 +38201,6 @@
         <desc xml:lang="en">Records horizontal alignment of the page header.</desc>
         <datatype>
           <rng:ref name="data.HORIZONTALALIGNMENT"/>
-        </datatype>
-      </attDef>
-      <attDef ident="func" usage="opt">
-        <desc xml:lang="en">Records the function (i.e., placement) of the page header.</desc>
-        <datatype>
-          <rng:ref name="data.PGFUNC"/>
         </datatype>
       </attDef>
     </attList>
