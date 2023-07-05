@@ -20,7 +20,7 @@
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href=../../../source/"validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2023-07-05T16:33:11.435573841+02:00-->
+<!--canonicalized: 2023-07-05T23:27:31.908616504+02:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -38747,12 +38747,12 @@
       <rng:optional>
         <rng:ref name="model.meterSigLike"/>
       </rng:optional>
-      <rng:optional>
+      <rng:zeroOrMore>
         <rng:ref name="pgHead"/>
-      </rng:optional>
-      <rng:optional>
+      </rng:zeroOrMore>
+      <rng:zeroOrMore>
         <rng:ref name="pgFoot"/>
-      </rng:optional>
+      </rng:zeroOrMore>
       <rng:optional>
         <rng:ref name="instrGrp"/>
       </rng:optional>

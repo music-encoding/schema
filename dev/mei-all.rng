@@ -5,7 +5,7 @@
           xmlns:xlink="http://www.w3.org/1999/xlink"
           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
           ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2023-07-05T14:29:52Z. .
+Schema generated from ODD source 2023-07-05T21:23:37Z. .
 TEI Edition: Version 5.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -28058,12 +28058,12 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          <optional>
             <ref name="mei_model.meterSigLike"/>
          </optional>
-         <optional>
+         <zeroOrMore>
             <ref name="mei_pgHead"/>
-         </optional>
-         <optional>
+         </zeroOrMore>
+         <zeroOrMore>
             <ref name="mei_pgFoot"/>
-         </optional>
+         </zeroOrMore>
          <optional>
             <ref name="mei_instrGrp"/>
          </optional>

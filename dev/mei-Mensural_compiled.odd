@@ -14856,8 +14856,8 @@
       <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.symbolTableLike"/></optional>
       <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.keySigLike"/></optional>
       <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.meterSigLike"/></optional>
-      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="pgHead"/></optional>
-      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="pgFoot"/></optional>
+      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="pgHead"/></zeroOrMore>
+      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="pgFoot"/></zeroOrMore>
       <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="instrGrp"/></optional>
       <choice xmlns="http://relaxng.org/ns/structure/1.0"><optional><ref name="model.staffGrpLike"/></optional></choice>
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="grpSym"/></zeroOrMore>
