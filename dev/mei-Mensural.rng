@@ -5,11 +5,11 @@
           xmlns:xlink="http://www.w3.org/1999/xlink"
           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
           ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2023-07-04T13:45:31Z. .
+Schema generated from ODD source 2023-07-05T08:27:37Z. .
 TEI Edition: Version 5.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
---><!---->
+--><!--[https://opensource.org/license/ECL-2.0/] Licensed under the Educational Community License version 2.0-->
    <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron"
             prefix="tei"
             uri="http://www.tei-c.org/ns/1.0"/>
