@@ -20,7 +20,7 @@
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href=../../../source/"validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2023-07-05T10:31:17.999020312+02:00-->
+<!--canonicalized: 2023-07-05T16:33:11.435573841+02:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -8608,7 +8608,7 @@
                   </figure>
                </p>
                <p>A further complication is that while the music encoding aims to narrow down and capture the meaning of the neumes in a logical and coherent system, occasionally the significance of some neumes is under debate (<abbr>e.g.</abbr>, <gi scheme="MEI">quilisma</gi>) and, despite its aim for accuracy, the encoding must remain open for future interpretations. From all these challenges has arisen the need for an early music encoding standardisation, that is, a set of rules that work for the description of any neume across all early notations regardless of the different methodologies applied to the study of individual notations and their idiosyncrasies.</p>
-               <p>Broadly speaking, Western early notations belong to two categories. On one side we have notations where two or more notes were represented by a single pen-stroke, while on the other side there are notations where the notes are graphically separated by means of discrete dots or short pen-strokes. These distinctions have been described even within single notational styles as interrupted neumes `&lt;ineume&gt;` or uninterrupted `&lt;uneume&gt;` (Morent &amp; Schräder 2008; Morent 2011; MEI Guidelines v3, ch. 6: Neume Notation), and now as gapped or not gapped (Behrendt, Bain, &amp; Helsen 2017; MEI Guidelines v4, ch. 6: Neume Notation). To date, the MEI Neumes Module has been tested mainly on stroke notations (St. Gall, Old Hispanic, etc.), but also on Aquitanian point-notation.</p>
+               <p>Broadly speaking, Western early notations belong to two main categories. On one side we have notations where two or more notes were represented by a single pen-stroke, while on the other side there are notations where the notes are graphically separated by means of discrete dots or short pen-strokes. These distinctions have been described even within single notational styles as gapped or not gapped (Behrendt, Bain, &amp; Helsen 2017). To date, the MEI Neumes Module has been tested mainly on square notations and stroke notations (St. Gall, Old Hispanic, etc.), but also on Aquitanian point-notation.</p>
             </div>
             <div xml:id="neumesExamples" type="div2">
                <head>Samples of MEI encodings</head>
