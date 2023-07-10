@@ -5,7 +5,7 @@
           xmlns:xlink="http://www.w3.org/1999/xlink"
           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
           ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2023-07-07T20:27:00Z. .
+Schema generated from ODD source 2023-07-10T13:49:02Z. .
 TEI Edition: Version 5.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -8347,16 +8347,8 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
    </define>
    <define name="mei_att.keySig.anl.attributes">
       <ref name="mei_att.accidental.attributes"/>
+      <ref name="mei_att.keyMode.attributes"/>
       <ref name="mei_att.pitch.attributes"/>
-      <ref name="mei_att.keySig.anl.attribute.mode"/>
-   </define>
-   <define name="mei_att.keySig.anl.attribute.mode">
-      <optional>
-         <attribute name="mode">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates major, minor, or other tonality.</a:documentation>
-            <ref name="mei_data.MODE"/>
-         </attribute>
-      </optional>
    </define>
    <define name="mei_att.keySigDefault.anl.attributes">
       <ref name="mei_att.keySigDefault.anl.attribute.key.accid"/>
@@ -8800,20 +8792,7 @@ Suggested values include: 1] coloration; 2] cross-rhythm; 3] ligature</a:documen
       <ref name="mei_att.augmentDots.attributes"/>
       <ref name="mei_att.duration.log.attributes"/>
       <ref name="mei_att.numbered.attributes"/>
-      <ref name="mei_att.bTrem.log.attribute.form"/>
-   </define>
-   <define name="mei_att.bTrem.log.attribute.form">
-      <optional>
-         <attribute name="form">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates whether the tremolo is measured or unmeasured.</a:documentation>
-            <choice>
-               <value>meas</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Measured tremolo.</a:documentation>
-               <value>unmeas</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Unmeasured tremolo.</a:documentation>
-            </choice>
-         </attribute>
-      </optional>
+      <ref name="mei_att.tremForm.attributes"/>
    </define>
    <define name="mei_att.chord.anl.cmn.attributes">
       <ref name="mei_att.beamPresent.attributes"/>
@@ -8869,20 +8848,7 @@ Suggested values include: 1] coloration; 2] cross-rhythm; 3] ligature</a:documen
       <ref name="mei_att.event.attributes"/>
       <ref name="mei_att.augmentDots.attributes"/>
       <ref name="mei_att.duration.log.attributes"/>
-      <ref name="mei_att.fTrem.log.attribute.form"/>
-   </define>
-   <define name="mei_att.fTrem.log.attribute.form">
-      <optional>
-         <attribute name="form">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Describes the style of the tremolo.</a:documentation>
-            <choice>
-               <value>meas</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Measured tremolo.</a:documentation>
-               <value>unmeas</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Unmeasured tremolo.</a:documentation>
-            </choice>
-         </attribute>
-      </optional>
+      <ref name="mei_att.tremForm.attributes"/>
    </define>
    <define name="mei_att.glissPresent.attributes">
       <ref name="mei_att.glissPresent.attribute.gliss"/>
@@ -9352,19 +9318,11 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    </define>
    <define name="mei_att.scoreDef.vis.cmn.attributes">
       <ref name="mei_att.beaming.vis.attributes"/>
+      <ref name="mei_att.guitarGrid.vis.attributes"/>
       <ref name="mei_att.pianoPedals.attributes"/>
       <ref name="mei_att.rehearsal.attributes"/>
       <ref name="mei_att.slurRend.attributes"/>
       <ref name="mei_att.tieRend.attributes"/>
-      <ref name="mei_att.scoreDef.vis.cmn.attribute.grid.show"/>
-   </define>
-   <define name="mei_att.scoreDef.vis.cmn.attribute.grid.show">
-      <optional>
-         <attribute name="grid.show">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Determines whether to display guitar chord grids.</a:documentation>
-            <ref name="mei_data.BOOLEAN"/>
-         </attribute>
-      </optional>
    </define>
    <define name="mei_att.slur.log.attributes">
       <ref name="mei_att.controlEvent.attributes"/>
@@ -9443,6 +9401,22 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
          <attribute name="tie.lwidth">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
             <ref name="mei_data.LINEWIDTH"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.tremForm.attributes">
+      <ref name="mei_att.tremForm.attribute.form"/>
+   </define>
+   <define name="mei_att.tremForm.attribute.form">
+      <optional>
+         <attribute name="form">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Describes the style of the tremolo.</a:documentation>
+            <choice>
+               <value>meas</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Measured tremolo.</a:documentation>
+               <value>unmeas</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Unmeasured tremolo.</a:documentation>
+            </choice>
          </attribute>
       </optional>
    </define>
@@ -12369,6 +12343,7 @@ Suggested values include: 1] smufl</a:documentation>
             </sch:rule>
          </pattern>
          <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.coordinated.ul.attributes"/>
          <ref name="mei_att.dimensions.attributes"/>
          <ref name="mei_att.internetMedia.attributes"/>
          <ref name="mei_att.facsimile.attributes"/>
@@ -12376,18 +12351,6 @@ Suggested values include: 1] smufl</a:documentation>
          <ref name="mei_att.pointing.attributes"/>
          <ref name="mei_att.startId.attributes"/>
          <ref name="mei_att.visualOffset.attributes"/>
-         <optional>
-            <attribute name="ulx">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates the upper-left corner x coordinate.</a:documentation>
-               <data type="nonNegativeInteger"/>
-            </attribute>
-         </optional>
-         <optional>
-            <attribute name="uly">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates the upper-left corner y coordinate.</a:documentation>
-               <data type="nonNegativeInteger"/>
-            </attribute>
-         </optional>
          <empty/>
       </element>
    </define>
@@ -13027,6 +12990,17 @@ Suggested values include: 1] smufl</a:documentation>
    <define name="mei_att.attacca.ges.attributes">
       <ref name="mei_att.timestamp2.ges.attributes"/>
    </define>
+   <define name="mei_att.attacking.attributes">
+      <ref name="mei_att.attacking.attribute.attacca"/>
+   </define>
+   <define name="mei_att.attacking.attribute.attacca">
+      <optional>
+         <attribute name="attacca">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates that the performance of the next musical division should begin immediately following this one.</a:documentation>
+            <ref name="mei_data.BOOLEAN"/>
+         </attribute>
+      </optional>
+   </define>
    <define name="mei_att.barLine.ges.attributes">
       <empty/>
    </define>
@@ -13095,15 +13069,7 @@ Suggested values include: 1] smufl</a:documentation>
       <empty/>
    </define>
    <define name="mei_att.mdiv.ges.attributes">
-      <ref name="mei_att.mdiv.ges.attribute.attacca"/>
-   </define>
-   <define name="mei_att.mdiv.ges.attribute.attacca">
-      <optional>
-         <attribute name="attacca">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates that the performance of the next musical division should begin immediately following this one.</a:documentation>
-            <ref name="mei_data.BOOLEAN"/>
-         </attribute>
-      </optional>
+      <ref name="mei_att.attacking.attributes"/>
    </define>
    <define name="mei_att.dir.ges.attributes">
       <ref name="mei_att.duration.ges.attributes"/>
@@ -13302,11 +13268,9 @@ Suggested values include: 1] smufl</a:documentation>
       <ref name="mei_att.duration.ges.attributes"/>
       <ref name="mei_att.instrumentIdent.attributes"/>
       <ref name="mei_att.midiVelocity.attributes"/>
+      <ref name="mei_att.pitch.ges.attributes"/>
       <ref name="mei_att.stringtab.attributes"/>
       <ref name="mei_att.note.ges.attribute.extremis"/>
-      <ref name="mei_att.note.ges.attribute.oct.ges"/>
-      <ref name="mei_att.note.ges.attribute.pname.ges"/>
-      <ref name="mei_att.note.ges.attribute.pnum"/>
    </define>
    <define name="mei_att.note.ges.attribute.extremis">
       <optional>
@@ -13318,30 +13282,6 @@ Suggested values include: 1] smufl</a:documentation>
                <value>lowest</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Lowest note the performer can play.</a:documentation>
             </choice>
-         </attribute>
-      </optional>
-   </define>
-   <define name="mei_att.note.ges.attribute.oct.ges">
-      <optional>
-         <attribute name="oct.ges">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records performed octave information that differs from the written value.</a:documentation>
-            <ref name="mei_data.OCTAVE"/>
-         </attribute>
-      </optional>
-   </define>
-   <define name="mei_att.note.ges.attribute.pname.ges">
-      <optional>
-         <attribute name="pname.ges">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Contains a performed pitch name that differs from the written value.</a:documentation>
-            <ref name="mei_data.PITCHNAME.GESTURAL"/>
-         </attribute>
-      </optional>
-   </define>
-   <define name="mei_att.note.ges.attribute.pnum">
-      <optional>
-         <attribute name="pnum">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(pitch number) Holds a pitch-to-number mapping, a base-40 or MIDI note number, for example.</a:documentation>
-            <ref name="mei_data.PITCHNUMBER"/>
          </attribute>
       </optional>
    </define>
@@ -13406,6 +13346,35 @@ Suggested values include: 1] smufl</a:documentation>
       <ref name="mei_att.duration.ges.attributes"/>
       <ref name="mei_att.timestamp2.ges.attributes"/>
    </define>
+   <define name="mei_att.pitch.ges.attributes">
+      <ref name="mei_att.pitch.ges.attribute.oct.ges"/>
+      <ref name="mei_att.pitch.ges.attribute.pname.ges"/>
+      <ref name="mei_att.pitch.ges.attribute.pnum"/>
+   </define>
+   <define name="mei_att.pitch.ges.attribute.oct.ges">
+      <optional>
+         <attribute name="oct.ges">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records performed octave information that differs from the written value.</a:documentation>
+            <ref name="mei_data.OCTAVE"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.pitch.ges.attribute.pname.ges">
+      <optional>
+         <attribute name="pname.ges">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Contains a performed pitch name that differs from the written value.</a:documentation>
+            <ref name="mei_data.PITCHNAME.GESTURAL"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.pitch.ges.attribute.pnum">
+      <optional>
+         <attribute name="pnum">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(pitch number) Holds a pitch-to-number mapping, a base-40 or MIDI note number, for example.</a:documentation>
+            <ref name="mei_data.PITCHNUMBER"/>
+         </attribute>
+      </optional>
+   </define>
    <define name="mei_att.rdg.ges.attributes">
       <empty/>
    </define>
@@ -13436,15 +13405,7 @@ Suggested values include: 1] smufl</a:documentation>
       <ref name="mei_att.mmTempo.attributes"/>
    </define>
    <define name="mei_att.section.ges.attributes">
-      <ref name="mei_att.section.ges.attribute.attacca"/>
-   </define>
-   <define name="mei_att.section.ges.attribute.attacca">
-      <optional>
-         <attribute name="attacca">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates that the performance of the next section should begin immediately following this one.</a:documentation>
-            <ref name="mei_data.BOOLEAN"/>
-         </attribute>
-      </optional>
+      <ref name="mei_att.attacking.attributes"/>
    </define>
    <define name="mei_att.slur.ges.attributes">
       <ref name="mei_att.duration.ges.attributes"/>
@@ -14160,7 +14121,7 @@ Suggested values include: 1] smufl</a:documentation>
          </attribute>
          <optional>
             <attribute name="context">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Circumstances in which the element appears, an XPath expression.</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Circumstances in which the attribute appears, an XPath expression.</a:documentation>
                <data type="string"/>
             </attribute>
          </optional>
@@ -15003,13 +14964,8 @@ Suggested values include: 1] plaineAndEasie; 2] humdrumKern; 3] parsons</a:docum
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.accidental.attributes"/>
          <ref name="mei_att.bibl.attributes"/>
+         <ref name="mei_att.keyMode.attributes"/>
          <ref name="mei_att.pitch.attributes"/>
-         <optional>
-            <attribute name="mode">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates major, minor, or other tonality.</a:documentation>
-               <ref name="mei_data.MODE"/>
-            </attribute>
-         </optional>
          <empty/>
       </element>
    </define>
@@ -16664,6 +16620,17 @@ Suggested values include: 1] glue; 2] thread; 3] needle; 4] tape; 5] staple</a:d
                 componentList.</sch:assert>
       </sch:rule>
    </pattern>
+   <define name="mei_att.foliation.scheme.attributes">
+      <ref name="mei_att.foliation.scheme.attribute.scheme"/>
+   </define>
+   <define name="mei_att.foliation.scheme.attribute.scheme">
+      <optional>
+         <attribute name="scheme">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Identifies the foliation scheme in terms of which the location is being specified by pointing to some foliation element defining it, or to some other equivalent resource.</a:documentation>
+            <ref name="mei_data.URI"/>
+         </attribute>
+      </optional>
+   </define>
    <define name="mei_model.msInline">
       <choice>
          <ref name="mei_watermark"/>
@@ -16812,14 +16779,9 @@ Suggested values include: 1] glue; 2] thread; 3] needle; 4] tape; 5] staple</a:d
          </zeroOrMore>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.bibl.attributes"/>
+         <ref name="mei_att.contemporary.attributes"/>
          <ref name="mei_att.datable.attributes"/>
          <ref name="mei_att.lang.attributes"/>
-         <optional>
-            <attribute name="contemporary">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <ref name="mei_data.BOOLEAN"/>
-            </attribute>
-         </optional>
          <empty/>
       </element>
    </define>
@@ -17116,13 +17078,8 @@ Suggested values include: 1] glue; 2] thread; 3] needle; 4] tape; 5] staple</a:d
          </pattern>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.bibl.attributes"/>
+         <ref name="mei_att.foliation.scheme.attributes"/>
          <ref name="mei_att.lang.attributes"/>
-         <optional>
-            <attribute name="scheme">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Identifies the foliation scheme in terms of which the location is being specified by pointing to some foliation element defining it, or to some other equivalent resource.</a:documentation>
-               <ref name="mei_data.URI"/>
-            </attribute>
-         </optional>
          <optional>
             <attribute name="from">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Specifies the starting point of the location in a normalized form.</a:documentation>
@@ -17158,13 +17115,8 @@ Suggested values include: 1] glue; 2] thread; 3] needle; 4] tape; 5] staple</a:d
          </pattern>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.bibl.attributes"/>
+         <ref name="mei_att.foliation.scheme.attributes"/>
          <ref name="mei_att.lang.attributes"/>
-         <optional>
-            <attribute name="scheme">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Identifies the foliation scheme in terms of which the location is being specified by pointing to some foliation element defining it, or to some other equivalent resource.</a:documentation>
-               <ref name="mei_data.URI"/>
-            </attribute>
-         </optional>
          <empty/>
       </element>
    </define>
@@ -17253,14 +17205,9 @@ Suggested values include: 1] glue; 2] thread; 3] needle; 4] tape; 5] staple</a:d
          </choice>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.bibl.attributes"/>
+         <ref name="mei_att.contemporary.attributes"/>
          <ref name="mei_att.datable.attributes"/>
          <ref name="mei_att.lang.attributes"/>
-         <optional>
-            <attribute name="contemporary">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <ref name="mei_data.BOOLEAN"/>
-            </attribute>
-         </optional>
          <empty/>
       </element>
    </define>
@@ -18887,6 +18834,17 @@ Suggested values include: 1] paper; 2] parch; 3] mixed</a:documentation>
       <ref name="mei_att.responsibility.attributes"/>
       <ref name="mei_att.typed.attributes"/>
    </define>
+   <define name="mei_att.contemporary.attributes">
+      <ref name="mei_att.contemporary.attribute.contemporary"/>
+   </define>
+   <define name="mei_att.contemporary.attribute.contemporary">
+      <optional>
+         <attribute name="contemporary">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <ref name="mei_data.BOOLEAN"/>
+         </attribute>
+      </optional>
+   </define>
    <define name="mei_att.controlEvent.attributes">
       <ref name="mei_att.alignment.attributes"/>
       <ref name="mei_att.layerIdent.attributes"/>
@@ -18898,27 +18856,10 @@ Suggested values include: 1] paper; 2] parch; 3] mixed</a:documentation>
       <ref name="mei_att.timestamp.ges.attributes"/>
    </define>
    <define name="mei_att.coordinated.attributes">
-      <ref name="mei_att.coordinated.attribute.ulx"/>
-      <ref name="mei_att.coordinated.attribute.uly"/>
+      <ref name="mei_att.coordinated.ul.attributes"/>
       <ref name="mei_att.coordinated.attribute.lrx"/>
       <ref name="mei_att.coordinated.attribute.lry"/>
       <ref name="mei_att.coordinated.attribute.rotate"/>
-   </define>
-   <define name="mei_att.coordinated.attribute.ulx">
-      <optional>
-         <attribute name="ulx">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates the upper-left corner x coordinate.</a:documentation>
-            <data type="nonNegativeInteger"/>
-         </attribute>
-      </optional>
-   </define>
-   <define name="mei_att.coordinated.attribute.uly">
-      <optional>
-         <attribute name="uly">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates the upper-left corner y coordinate.</a:documentation>
-            <data type="nonNegativeInteger"/>
-         </attribute>
-      </optional>
    </define>
    <define name="mei_att.coordinated.attribute.lrx">
       <optional>
@@ -18943,6 +18884,26 @@ Suggested values include: 1] paper; 2] parch; 3] mixed</a:documentation>
                      a:defaultValue="0">
             <a:documentation>Indicates the amount by which the contents of this element have been rotated clockwise or, if applicable, how the orientation of the element self should be interpreted, with respect to the normal orientation of the parent surface. The orientation is expressed in arc degrees. </a:documentation>
             <ref name="mei_data.DEGREES"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.coordinated.ul.attributes">
+      <ref name="mei_att.coordinated.ul.attribute.ulx"/>
+      <ref name="mei_att.coordinated.ul.attribute.uly"/>
+   </define>
+   <define name="mei_att.coordinated.ul.attribute.ulx">
+      <optional>
+         <attribute name="ulx">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates the upper-left corner x coordinate.</a:documentation>
+            <data type="nonNegativeInteger"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.coordinated.ul.attribute.uly">
+      <optional>
+         <attribute name="uly">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates the upper-left corner y coordinate.</a:documentation>
+            <data type="nonNegativeInteger"/>
          </attribute>
       </optional>
    </define>
@@ -19449,17 +19410,6 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
          </attribute>
       </optional>
    </define>
-   <define name="mei_att.formework.attributes">
-      <ref name="mei_att.formework.attribute.func"/>
-   </define>
-   <define name="mei_att.formework.attribute.func">
-      <optional>
-         <attribute name="func">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records the function (i.e., placement) of a page header or footer.</a:documentation>
-            <ref name="mei_data.PGFUNC"/>
-         </attribute>
-      </optional>
-   </define>
    <define name="mei_att.grpSym.log.attributes">
       <ref name="mei_att.staffGroupingSym.attributes"/>
       <ref name="mei_att.startEndId.attributes"/>
@@ -19575,6 +19525,17 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
    <define name="mei_att.keyAccid.log.attributes">
       <ref name="mei_att.accidental.attributes"/>
       <ref name="mei_att.pitched.attributes"/>
+   </define>
+   <define name="mei_att.keyMode.attributes">
+      <ref name="mei_att.keyMode.attribute.mode"/>
+   </define>
+   <define name="mei_att.keyMode.attribute.mode">
+      <optional>
+         <attribute name="mode">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates major, minor, or other tonality.</a:documentation>
+            <ref name="mei_data.MODE"/>
+         </attribute>
+      </optional>
    </define>
    <define name="mei_att.keySig.log.attributes">
       <ref name="mei_att.keySig.log.attribute.sig"/>
@@ -19736,17 +19697,8 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
       </optional>
    </define>
    <define name="mei_att.lineRend.base.attributes">
-      <ref name="mei_att.lineRend.base.attribute.lform"/>
+      <ref name="mei_att.curveRend.attributes"/>
       <ref name="mei_att.lineRend.base.attribute.lsegs"/>
-      <ref name="mei_att.lineRend.base.attribute.lwidth"/>
-   </define>
-   <define name="mei_att.lineRend.base.attribute.lform">
-      <optional>
-         <attribute name="lform">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(line form) Describes the line style of a line.</a:documentation>
-            <ref name="mei_data.LINEFORM"/>
-         </attribute>
-      </optional>
    </define>
    <define name="mei_att.lineRend.base.attribute.lsegs">
       <optional>
@@ -19776,14 +19728,6 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
                 matching "dashed", "dotted", or "wavy" required.</sch:assert>
       </sch:rule>
    </pattern>
-   <define name="mei_att.lineRend.base.attribute.lwidth">
-      <optional>
-         <attribute name="lwidth">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Width of a line.</a:documentation>
-            <ref name="mei_data.LINEWIDTH"/>
-         </attribute>
-      </optional>
-   </define>
    <define name="mei_att.linking.attributes">
       <ref name="mei_att.linking.attribute.copyof"/>
       <ref name="mei_att.linking.attribute.corresp"/>
@@ -25914,12 +25858,18 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          </zeroOrMore>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.facsimile.attributes"/>
-         <ref name="mei_att.formework.attributes"/>
+         <ref name="mei_att.horizontalAlign.attributes"/>
          <ref name="mei_att.lang.attributes"/>
          <optional>
-            <attribute name="halign">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records horizontal alignment of the page footer.</a:documentation>
-               <ref name="mei_data.HORIZONTALALIGNMENT"/>
+            <attribute name="func">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records the function (i.e., placement) of the page footer.</a:documentation>
+               <ref name="mei_data.PGFUNC"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="func">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records the function (i.e., placement) of the page footer.</a:documentation>
+               <ref name="mei_data.PGFUNC"/>
             </attribute>
          </optional>
          <empty/>
@@ -25941,12 +25891,18 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          </zeroOrMore>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.facsimile.attributes"/>
-         <ref name="mei_att.formework.attributes"/>
+         <ref name="mei_att.horizontalAlign.attributes"/>
          <ref name="mei_att.lang.attributes"/>
          <optional>
-            <attribute name="halign">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records horizontal alignment of the page header.</a:documentation>
-               <ref name="mei_data.HORIZONTALALIGNMENT"/>
+            <attribute name="func">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records the function (i.e., placement) of the page header.</a:documentation>
+               <ref name="mei_data.PGFUNC"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="func">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records the function (i.e., placement) of the page header.</a:documentation>
+               <ref name="mei_data.PGFUNC"/>
             </attribute>
          </optional>
          <empty/>
@@ -28464,6 +28420,17 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
    <define name="mei_att.graceGrp.vis.attributes">
       <ref name="mei_att.color.attributes"/>
    </define>
+   <define name="mei_att.guitarGrid.vis.attributes">
+      <ref name="mei_att.guitarGrid.vis.attribute.grid.show"/>
+   </define>
+   <define name="mei_att.guitarGrid.vis.attribute.grid.show">
+      <optional>
+         <attribute name="grid.show">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Determines whether to display guitar chord grids.</a:documentation>
+            <ref name="mei_data.BOOLEAN"/>
+         </attribute>
+      </optional>
+   </define>
    <define name="mei_att.grpSym.vis.attributes">
       <ref name="mei_att.altSym.attributes"/>
       <ref name="mei_att.color.attributes"/>
@@ -29093,6 +29060,7 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
       <ref name="mei_att.barring.attributes"/>
       <ref name="mei_att.cleffing.vis.attributes"/>
       <ref name="mei_att.distances.attributes"/>
+      <ref name="mei_att.guitarGrid.vis.attributes"/>
       <ref name="mei_att.keySigDefault.vis.attributes"/>
       <ref name="mei_att.lyricStyle.attributes"/>
       <ref name="mei_att.meterSigDefault.vis.attributes"/>
@@ -29104,19 +29072,10 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
       <ref name="mei_att.textStyle.attributes"/>
       <ref name="mei_att.visibility.attributes"/>
       <ref name="mei_att.staffDef.vis.cmn.attributes"/>
-      <ref name="mei_att.staffDef.vis.attribute.grid.show"/>
       <ref name="mei_att.staffDef.vis.attribute.layerscheme"/>
       <ref name="mei_att.staffDef.vis.attribute.lines.color"/>
       <ref name="mei_att.staffDef.vis.attribute.lines.visible"/>
       <ref name="mei_att.staffDef.vis.attribute.spacing"/>
-   </define>
-   <define name="mei_att.staffDef.vis.attribute.grid.show">
-      <optional>
-         <attribute name="grid.show">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Determines whether to display guitar chord grids.</a:documentation>
-            <ref name="mei_data.BOOLEAN"/>
-         </attribute>
-      </optional>
    </define>
    <define name="mei_att.staffDef.vis.attribute.layerscheme">
       <optional>

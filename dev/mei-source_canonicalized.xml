@@ -20,7 +20,7 @@
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href=../../../source/"validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2023-07-07T22:30:32.355479956+02:00-->
+<!--canonicalized: 2023-07-10T15:52:34.79470992+02:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -8941,7 +8941,7 @@
                   </p>
                   <p>
                      <specList>
-                        <specDesc key="att.ncForm" atts="curve"/>
+                        <specDesc key="att.curvatureDirection" atts="curve"/>
                      </specList>
                   </p>
                   <table>
@@ -9383,7 +9383,7 @@
                   <head>Liquescent attributes</head>
                   <p>
                      <specList>
-                        <specDesc key="att.liquescent.vis" atts="curve"/>
+                        <specDesc key="att.curvatureDirection" atts="curve"/>
                         <specDesc key="att.liquescent.vis" atts="looped"/>
                      </specList>
                   </p>
@@ -17876,16 +17876,9 @@
     <desc xml:lang="en">Analytical domain attributes.</desc>
     <classes>
       <memberOf key="att.accidental"/>
+      <memberOf key="att.keyMode"/>
       <memberOf key="att.pitch"/>
     </classes>
-    <attList>
-      <attDef ident="mode" usage="opt">
-        <desc xml:lang="en">Indicates major, minor, or other tonality.</desc>
-        <datatype>
-          <rng:ref name="data.MODE"/>
-        </datatype>
-      </attDef>
-    </attList>
   </classSpec>
   <classSpec ident="att.keySigDefault.anl" module="MEI.analytical" type="atts">
     <desc xml:lang="en">Used by staffDef and scoreDef to provide default values for attributes in the analytical
@@ -18002,6 +17995,7 @@
       <memberOf key="att.harmonicFunction"/>
       <memberOf key="att.intervalMelodic"/>
       <memberOf key="att.melodicFunction"/>
+      <memberOf key="att.neumeType"/>
       <memberOf key="att.pitchClass"/>
       <memberOf key="att.solfa"/>
     </classes>
@@ -18011,6 +18005,9 @@
   </classSpec>
   <classSpec ident="att.neume.anl" module="MEI.analytical" type="atts">
     <desc xml:lang="en">Analytical domain attributes.</desc>
+    <classes>
+      <memberOf key="att.neumeType"/>
+    </classes>
   </classSpec>
   <classSpec ident="att.note.anl" module="MEI.analytical" type="atts">
     <desc xml:lang="en">Analytical domain attributes.</desc>
@@ -18584,20 +18581,8 @@
       <memberOf key="att.augmentDots"/>
       <memberOf key="att.duration.log"/>
       <memberOf key="att.numbered"/>
+      <memberOf key="att.tremForm"/>
     </classes>
-    <attList>
-      <attDef ident="form" usage="opt">
-        <desc xml:lang="en">Indicates whether the tremolo is measured or unmeasured.</desc>
-        <valList type="closed">
-          <valItem ident="meas">
-            <desc xml:lang="en">Measured tremolo.</desc>
-          </valItem>
-          <valItem ident="unmeas">
-            <desc xml:lang="en">Unmeasured tremolo.</desc>
-          </valItem>
-        </valList>
-      </attDef>
-    </attList>
   </classSpec>
   <classSpec ident="att.chord.anl.cmn" module="MEI.cmn" type="atts">
     <desc xml:lang="en">Analytical domain attributes in the CMN repertoire.</desc>
@@ -18673,20 +18658,8 @@
       <memberOf key="att.event"/>
       <memberOf key="att.augmentDots"/>
       <memberOf key="att.duration.log"/>
+      <memberOf key="att.tremForm"/>
     </classes>
-    <attList>
-      <attDef ident="form" usage="opt">
-        <desc xml:lang="en">Describes the style of the tremolo.</desc>
-        <valList type="closed">
-          <valItem ident="meas">
-            <desc xml:lang="en">Measured tremolo.</desc>
-          </valItem>
-          <valItem ident="unmeas">
-            <desc xml:lang="en">Unmeasured tremolo.</desc>
-          </valItem>
-        </valList>
-      </attDef>
-    </attList>
   </classSpec>
   <classSpec ident="att.glissPresent" module="MEI.cmn" type="atts">
     <desc xml:lang="en">Attributes that indicate whether an event participates in a glissando.</desc>
@@ -19245,19 +19218,12 @@
     <desc xml:lang="en">Visual domain attributes.</desc>
     <classes>
       <memberOf key="att.beaming.vis"/>
+      <memberOf key="att.guitarGrid.vis"/>
       <memberOf key="att.pianoPedals"/>
       <memberOf key="att.rehearsal"/>
       <memberOf key="att.slurRend"/>
       <memberOf key="att.tieRend"/>
     </classes>
-    <attList>
-      <attDef ident="grid.show" usage="opt">
-        <desc xml:lang="en">Determines whether to display guitar chord grids.</desc>
-        <datatype>
-          <rng:ref name="data.BOOLEAN"/>
-        </datatype>
-      </attDef>
-    </attList>
   </classSpec>
   <classSpec ident="att.slur.log" module="MEI.cmn" type="atts">
     <desc xml:lang="en">Logical domain attributes.</desc>
@@ -19344,6 +19310,22 @@
         <datatype>
           <rng:ref name="data.LINEWIDTH"/>
         </datatype>
+      </attDef>
+    </attList>
+  </classSpec>
+  <classSpec ident="att.tremForm" module="MEI.cmn" type="atts">
+    <desc>Attributes describing the form of a tremolo.</desc>
+    <attList>
+      <attDef ident="form" usage="opt">
+        <desc xml:lang="en">Describes the style of the tremolo.</desc>
+        <valList type="closed">
+          <valItem ident="meas">
+            <desc xml:lang="en">Measured tremolo.</desc>
+          </valItem>
+          <valItem ident="unmeas">
+            <desc xml:lang="en">Unmeasured tremolo.</desc>
+          </valItem>
+        </valList>
       </attDef>
     </attList>
   </classSpec>
@@ -22664,6 +22646,7 @@
     <desc xml:lang="en">Indicates the location of an inline graphic.</desc>
     <classes>
       <memberOf key="att.common"/>
+      <memberOf key="att.coordinated.ul"/>
       <memberOf key="att.dimensions"/>
       <memberOf key="att.internetMedia"/>
       <memberOf key="att.facsimile"/>
@@ -22696,20 +22679,6 @@
         </sch:rule>
       </constraint>
     </constraintSpec>
-    <attList>
-      <attDef ident="ulx" usage="opt">
-        <desc xml:lang="en">Indicates the upper-left corner x coordinate.</desc>
-        <datatype>
-          <rng:data type="nonNegativeInteger"/>
-        </datatype>
-      </attDef>
-      <attDef ident="uly" usage="opt">
-        <desc xml:lang="en">Indicates the upper-left corner y coordinate.</desc>
-        <datatype>
-          <rng:data type="nonNegativeInteger"/>
-        </datatype>
-      </attDef>
-    </attList>
     <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-graphic.html">graphic</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
@@ -23603,6 +23572,18 @@
       <memberOf key="att.timestamp2.ges"/>
     </classes>
   </classSpec>
+  <classSpec ident="att.attacking" module="MEI.gestural" type="atts">
+    <desc xml:lang="en">Attributes whether an element is performed "attacca".</desc>
+    <attList>
+      <attDef ident="attacca">
+        <desc xml:lang="en">Indicates that the performance of the next musical division should begin immediately
+          following this one.</desc>
+        <datatype>
+          <rng:ref name="data.BOOLEAN"/>
+        </datatype>
+      </attDef>
+    </attList>
+  </classSpec>
   <classSpec ident="att.barLine.ges" module="MEI.gestural" type="atts">
     <desc xml:lang="en">Gestural domain attributes.</desc>
   </classSpec>
@@ -23699,15 +23680,9 @@
   </classSpec>
   <classSpec ident="att.mdiv.ges" module="MEI.gestural" type="atts">
     <desc xml:lang="en">Gestural domain attributes.</desc>
-    <attList>
-      <attDef ident="attacca">
-        <desc xml:lang="en">Indicates that the performance of the next musical division should begin immediately
-          following this one.</desc>
-        <datatype>
-          <rng:ref name="data.BOOLEAN"/>
-        </datatype>
-      </attDef>
-    </attList>
+    <classes>
+      <memberOf key="att.attacking"/>
+    </classes>
   </classSpec>
   <classSpec ident="att.dir.ges" module="MEI.gestural" type="atts">
     <desc xml:lang="en">Gestural domain attributes.</desc>
@@ -23979,28 +23954,8 @@
       <memberOf key="att.duration.ges"/>
       <memberOf key="att.instrumentIdent"/>
       <memberOf key="att.midiVelocity"/>
+      <memberOf key="att.pitch.ges"/>
     </classes>
-    <attList>
-      <attDef ident="oct.ges" usage="opt">
-        <desc xml:lang="en">Records performed octave information that differs from the written value.</desc>
-        <datatype>
-          <rng:ref name="data.OCTAVE"/>
-        </datatype>
-      </attDef>
-      <attDef ident="pname.ges" usage="opt">
-        <desc xml:lang="en">Contains a performed pitch name that differs from the written value.</desc>
-        <datatype>
-          <rng:ref name="data.PITCHNAME.GESTURAL"/>
-        </datatype>
-      </attDef>
-      <attDef ident="pnum" usage="opt">
-        <gloss versionDate="2022-10-30" xml:lang="en">pitch number</gloss>
-        <desc xml:lang="en">Holds a pitch-to-number mapping, a base-40 or MIDI note number, for example.</desc>
-        <datatype>
-          <rng:ref name="data.PITCHNUMBER"/>
-        </datatype>
-      </attDef>
-    </attList>
   </classSpec>
   <classSpec ident="att.ncGrp.ges" module="MEI.gestural" type="atts">
     <desc xml:lang="en">Gestural domain attributes.</desc>
@@ -24023,6 +23978,7 @@
       <memberOf key="att.instrumentIdent"/>
       <memberOf key="att.midiVelocity"/>
       <memberOf key="att.note.ges.mensural"/>
+      <memberOf key="att.pitch.ges"/>
       <memberOf key="att.stringtab"/>
     </classes>
     <constraintSpec ident="extremis_disallows_gestural_pitch" scheme="schematron">
@@ -24051,25 +24007,6 @@
             <att>oct</att> or <att>ploc</att> and <att>oloc</att> or <att>loc</att> attributes is
             necessary to record the written pitch and octave of the symbol for this note.</p>
         </remarks>
-      </attDef>
-      <attDef ident="oct.ges" usage="opt">
-        <desc xml:lang="en">Records performed octave information that differs from the written value.</desc>
-        <datatype>
-          <rng:ref name="data.OCTAVE"/>
-        </datatype>
-      </attDef>
-      <attDef ident="pname.ges" usage="opt">
-        <desc xml:lang="en">Contains a performed pitch name that differs from the written value.</desc>
-        <datatype>
-          <rng:ref name="data.PITCHNAME.GESTURAL"/>
-        </datatype>
-      </attDef>
-      <attDef ident="pnum" usage="opt">
-        <gloss versionDate="2022-10-30" xml:lang="en">pitch number</gloss>
-        <desc xml:lang="en">Holds a pitch-to-number mapping, a base-40 or MIDI note number, for example.</desc>
-        <datatype>
-          <rng:ref name="data.PITCHNUMBER"/>
-        </datatype>
       </attDef>
     </attList>
   </classSpec>
@@ -24135,6 +24072,30 @@
       <memberOf key="att.timestamp2.ges"/>
     </classes>
   </classSpec>
+  <classSpec ident="att.pitch.ges" module="MEI.gestural" type="atts">
+    <desc xml:lang="en">Gestural attributes about pitch.</desc>
+    <attList>
+      <attDef ident="oct.ges" usage="opt">
+        <desc xml:lang="en">Records performed octave information that differs from the written value.</desc>
+        <datatype>
+          <rng:ref name="data.OCTAVE"/>
+        </datatype>
+      </attDef>
+      <attDef ident="pname.ges" usage="opt">
+        <desc xml:lang="en">Contains a performed pitch name that differs from the written value.</desc>
+        <datatype>
+          <rng:ref name="data.PITCHNAME.GESTURAL"/>
+        </datatype>
+      </attDef>
+      <attDef ident="pnum" usage="opt">
+        <gloss versionDate="2022-10-30" xml:lang="en">pitch number</gloss>
+        <desc xml:lang="en">Holds a pitch-to-number mapping, a base-40 or MIDI note number, for example.</desc>
+        <datatype>
+          <rng:ref name="data.PITCHNUMBER"/>
+        </datatype>
+      </attDef>
+    </attList>
+  </classSpec>
   <classSpec ident="att.plica.ges" module="MEI.gestural" type="atts">
     <desc xml:lang="en">Gestural domain attributes that describe the properties of a plica in the mensural repertoire.</desc>
   </classSpec>
@@ -24191,15 +24152,9 @@
   </classSpec>
   <classSpec ident="att.section.ges" module="MEI.gestural" type="atts">
     <desc xml:lang="en">Gestural domain attributes.</desc>
-    <attList>
-      <attDef ident="attacca">
-        <desc xml:lang="en">Indicates that the performance of the next section should begin immediately following
-          this one.</desc>
-        <datatype>
-          <rng:ref name="data.BOOLEAN"/>
-        </datatype>
-      </attDef>
-    </attList>
+    <classes>
+      <memberOf key="att.attacking"/>
+    </classes>
   </classSpec>
   <classSpec ident="att.signifLet.ges" module="MEI.gestural" type="atts">
     <desc xml:lang="en">Gestural domain attributes.</desc>
@@ -25120,7 +25075,7 @@
         </datatype>
       </attDef>
       <attDef ident="context" usage="opt">
-        <desc xml:lang="en">Circumstances in which the element appears, an XPath expression.</desc>
+        <desc xml:lang="en">Circumstances in which the attribute appears, an XPath expression.</desc>
         <datatype>
           <rng:data type="string"/>
         </datatype>
@@ -26221,20 +26176,13 @@
       <memberOf key="att.common"/>
       <memberOf key="att.accidental"/>
       <memberOf key="att.bibl"/>
+      <memberOf key="att.keyMode"/>
       <memberOf key="att.pitch"/>
       <memberOf key="model.workIdent"/>
     </classes>
     <content>
       <rng:text/>
     </content>
-    <attList>
-      <attDef ident="mode" usage="opt">
-        <desc xml:lang="en">Indicates major, minor, or other tonality.</desc>
-        <datatype>
-          <rng:ref name="data.MODE"/>
-        </datatype>
-      </attDef>
-    </attList>
     <remarks xml:lang="en">
       <p>This element is used exclusively within bibliographic descriptions. Do not confuse this
         element with <gi scheme="MEI">keySig</gi>, which is used within the body of an MEI file to
@@ -28888,6 +28836,19 @@
       </attDef>
     </attList>
   </classSpec>
+  <classSpec ident="att.foliation.scheme" type="atts" module="MEI.msDesc">
+    <desc xml:lang="en">Attributes that describe foliation schemes.</desc>
+    <attList>
+      <attDef ident="scheme" usage="opt">
+        <desc xml:lang="en">Identifies the foliation scheme in terms of which the location is being specified by
+          pointing to some foliation element defining it, or to some other equivalent
+          resource.</desc>
+        <datatype>
+          <rng:ref name="data.URI"/>
+        </datatype>
+      </attDef>
+    </attList>
+  </classSpec>
   <classSpec ident="model.msInline" type="model" module="MEI.msDesc">
     <desc xml:lang="en">Groups elements that may appear inline when the msdesc module is active.</desc>
     <classes>
@@ -28934,6 +28895,7 @@
     <classes>
       <memberOf key="att.common"/>
       <memberOf key="att.bibl"/>
+      <memberOf key="att.contemporary"/>
       <memberOf key="att.datable"/>
       <memberOf key="att.lang"/>
     </classes>
@@ -28950,13 +28912,6 @@
         </rng:choice>
       </rng:zeroOrMore>
     </content>
-    <attList>
-      <attDef ident="contemporary" usage="opt">
-        <datatype>
-          <rng:ref name="data.BOOLEAN"/>
-        </datatype>
-      </attDef>
-    </attList>
     <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-binding.html">binding</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
@@ -29295,6 +29250,7 @@
     <classes>
       <memberOf key="att.common"/>
       <memberOf key="att.bibl"/>
+      <memberOf key="att.foliation.scheme"/>
       <memberOf key="att.lang"/>
       <memberOf key="model.msInline"/>
     </classes>
@@ -29318,14 +29274,6 @@
       </constraint>
     </constraintSpec>
     <attList>
-      <attDef ident="scheme" usage="opt">
-        <desc xml:lang="en">Identifies the foliation scheme in terms of which the location is being specified by
-          pointing to some foliation element defining it, or to some other equivalent
-          resource.</desc>
-        <datatype>
-          <rng:ref name="data.URI"/>
-        </datatype>
-      </attDef>
       <attDef ident="from" usage="opt">
         <desc xml:lang="en">Specifies the starting point of the location in a normalized form.</desc>
         <datatype>
@@ -29350,6 +29298,7 @@
     <classes>
       <memberOf key="att.common"/>
       <memberOf key="att.bibl"/>
+      <memberOf key="att.foliation.scheme"/>
       <memberOf key="att.lang"/>
       <memberOf key="model.msInline"/>
     </classes>
@@ -29367,16 +29316,6 @@
         </sch:rule>
       </constraint>
     </constraintSpec>
-    <attList>
-      <attDef ident="scheme" usage="opt">
-        <desc xml:lang="en">Identifies the foliation scheme in terms of which the location is being specified by
-          pointing to some foliation element defining it, or to some other equivalent
-          resource.</desc>
-        <datatype>
-          <rng:ref name="data.URI"/>
-        </datatype>
-      </attDef>
-    </attList>
     <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-locusGrp.html">locusGrp</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
@@ -29468,6 +29407,7 @@
     <classes>
       <memberOf key="att.common"/>
       <memberOf key="att.bibl"/>
+      <memberOf key="att.contemporary"/>
       <memberOf key="att.datable"/>
       <memberOf key="att.lang"/>
     </classes>
@@ -29493,13 +29433,6 @@
         </rng:zeroOrMore>
       </rng:choice>
     </content>
-    <attList>
-      <attDef ident="contemporary">
-        <datatype>
-          <rng:ref name="data.BOOLEAN"/>
-        </datatype>
-      </attDef>
-    </attList>
     <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-seal.html">seal</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
@@ -30475,6 +30408,9 @@
   </classSpec>
   <classSpec ident="att.ncForm" module="MEI.neumes" type="atts">
     <desc xml:lang="en">Attributes that record visual details of neume notation.</desc>
+    <classes>
+      <memberOf key="att.curvatureDirection"/>
+    </classes>
     <attList>
       <attDef ident="angled" usage="opt">
         <desc/>
@@ -30494,17 +30430,6 @@
           </valItem>
           <valItem ident="e">
             <desc xml:lang="en">Extended.</desc>
-          </valItem>
-        </valList>
-      </attDef>
-      <attDef ident="curve" usage="opt">
-        <desc xml:lang="en">Records direction of curvature.</desc>
-        <valList type="closed">
-          <valItem ident="a">
-            <desc xml:lang="en">Anti-clockwise curvature.</desc>
-          </valItem>
-          <valItem ident="c">
-            <desc xml:lang="en">Clockwise curvature.</desc>
           </valItem>
         </valList>
       </attDef>
@@ -30567,6 +30492,42 @@
       <memberOf key="att.staffIdent"/>
       <memberOf key="att.sylText"/>
     </classes>
+  </classSpec>
+  <classSpec ident="att.neumeType" module="MEI.neumes" type="atts">
+    <desc xml:lang="en">Attributes that specify the type of neumes.</desc>
+    <attList>
+      <attDef ident="type" usage="opt">
+        <desc xml:lang="en">Designation which characterizes the element in some sense, using any convenient
+          classification scheme or typology that employs single-token labels.</desc>
+        <datatype maxOccurs="unbounded">
+          <rng:data type="NMTOKEN"/>
+        </datatype>
+        <valList type="semi">
+          <valItem ident="apostropha"/>
+          <valItem ident="bistropha"/>
+          <valItem ident="climacus"/>
+          <valItem ident="clivis"/>
+          <valItem ident="oriscus"/>
+          <valItem ident="pes"/>
+          <valItem ident="pessubpunctis"/>
+          <valItem ident="porrectus"/>
+          <valItem ident="porrectusflexus"/>
+          <valItem ident="pressusmaior"/>
+          <valItem ident="pressusmaior"/>
+          <valItem ident="pressusminor"/>
+          <valItem ident="pressusminor"/>
+          <valItem ident="punctum"/>
+          <valItem ident="quilisma"/>
+          <valItem ident="scandicus"/>
+          <valItem ident="strophicus"/>
+          <valItem ident="torculus"/>
+          <valItem ident="torculusresupinus"/>
+          <valItem ident="tristropha"/>
+          <valItem ident="virga"/>
+          <valItem ident="virgastrata"/>
+        </valList>
+      </attDef>
+    </attList>
   </classSpec>
   <classSpec ident="att.oriscus.log" module="MEI.neumes" type="atts">
     <desc xml:lang="en">Logical domain attributes.</desc>
@@ -30708,39 +30669,6 @@
         </rng:choice>
       </rng:zeroOrMore>
     </content>
-    <attList>
-      <attDef ident="type" usage="opt">
-        <desc xml:lang="en">Designation which characterizes the element in some sense, using any convenient
-          classification scheme or typology that employs single-token labels.</desc>
-        <datatype maxOccurs="unbounded">
-          <rng:data type="NMTOKEN"/>
-        </datatype>
-        <valList type="semi">
-          <valItem ident="apostropha"/>
-          <valItem ident="bistropha"/>
-          <valItem ident="climacus"/>
-          <valItem ident="clivis"/>
-          <valItem ident="oriscus"/>
-          <valItem ident="pes"/>
-          <valItem ident="pessubpunctis"/>
-          <valItem ident="porrectus"/>
-          <valItem ident="porrectusflexus"/>
-          <valItem ident="pressusmaior"/>
-          <valItem ident="pressusmaior"/>
-          <valItem ident="pressusminor"/>
-          <valItem ident="pressusminor"/>
-          <valItem ident="punctum"/>
-          <valItem ident="quilisma"/>
-          <valItem ident="scandicus"/>
-          <valItem ident="strophicus"/>
-          <valItem ident="torculus"/>
-          <valItem ident="torculusresupinus"/>
-          <valItem ident="tristropha"/>
-          <valItem ident="virga"/>
-          <valItem ident="virgastrata"/>
-        </valList>
-      </attDef>
-    </attList>
   </elementSpec>
   <elementSpec ident="ncGrp" module="MEI.neumes">
     <gloss versionDate="2023-06-16" xml:lang="en">neume component group</gloss>
@@ -30794,39 +30722,6 @@
         </rng:choice>
       </rng:zeroOrMore>
     </content>
-    <attList>
-      <attDef ident="type" usage="opt">
-        <desc xml:lang="en">Designation which characterizes the element in some sense, using any convenient
-          classification scheme or typology that employs single-token labels.</desc>
-        <datatype maxOccurs="unbounded">
-          <rng:data type="NMTOKEN"/>
-        </datatype>
-        <valList type="semi">
-          <valItem ident="apostropha"/>
-          <valItem ident="bistropha"/>
-          <valItem ident="climacus"/>
-          <valItem ident="clivis"/>
-          <valItem ident="oriscus"/>
-          <valItem ident="pes"/>
-          <valItem ident="pessubpunctis"/>
-          <valItem ident="porrectus"/>
-          <valItem ident="porrectusflexus"/>
-          <valItem ident="pressusmaior"/>
-          <valItem ident="pressusmaior"/>
-          <valItem ident="pressusminor"/>
-          <valItem ident="pressusminor"/>
-          <valItem ident="punctum"/>
-          <valItem ident="quilisma"/>
-          <valItem ident="scandicus"/>
-          <valItem ident="strophicus"/>
-          <valItem ident="torculus"/>
-          <valItem ident="torculusresupinus"/>
-          <valItem ident="tristropha"/>
-          <valItem ident="virga"/>
-          <valItem ident="virgastrata"/>
-        </valList>
-      </attDef>
-    </attList>
   </elementSpec>
   <elementSpec ident="oriscus" module="MEI.neumes">
     <desc xml:lang="en">Oriscus.</desc>
@@ -31908,6 +31803,16 @@
       <memberOf key="att.typed"/>
     </classes>
   </classSpec>
+  <classSpec ident="att.contemporary" module="MEI.shared" type="atts">
+    <desc xml:lang="en">Attributes specifying whether a feature is contemporary or historical.</desc>
+    <attList>
+      <attDef ident="contemporary" usage="opt">
+        <datatype>
+          <rng:ref name="data.BOOLEAN"/>
+        </datatype>
+      </attDef>
+    </attList>
+  </classSpec>
   <classSpec ident="att.controlEvent" module="MEI.shared" type="atts">
     <desc xml:lang="en">Attributes shared by events which rely on other events for their existence. For example, a
       slur/phrase marking must be drawn between or over a group of notes. The slur is therefore a
@@ -31926,19 +31831,10 @@
   <classSpec ident="att.coordinated" module="MEI.shared" type="atts">
     <desc xml:lang="en">This attribute class records the position of a feature within a two-dimensional coordinate
       system.</desc>
+    <classes>
+      <memberOf key="att.coordinated.ul"/>
+    </classes>
     <attList>
-      <attDef ident="ulx" usage="opt">
-        <desc xml:lang="en">Indicates the upper-left corner x coordinate.</desc>
-        <datatype>
-          <rng:data type="nonNegativeInteger"/>
-        </datatype>
-      </attDef>
-      <attDef ident="uly" usage="opt">
-        <desc xml:lang="en">Indicates the upper-left corner y coordinate.</desc>
-        <datatype>
-          <rng:data type="nonNegativeInteger"/>
-        </datatype>
-      </attDef>
       <attDef ident="lrx" usage="opt">
         <desc xml:lang="en">Indicates the lower-right corner x coordinate.</desc>
         <datatype>
@@ -31964,6 +31860,24 @@
         <remarks xml:lang="en">
           <p>This attribute is based on the TEI attribute of the same name.</p>
         </remarks>
+      </attDef>
+    </attList>
+  </classSpec>
+  <classSpec ident="att.coordinated.ul" module="MEI.shared" type="atts">
+    <desc xml:lang="en">This attribute class records the upper left position of a feature within a two-dimensional coordinate
+      system.</desc>
+    <attList>
+      <attDef ident="ulx" usage="opt">
+        <desc xml:lang="en">Indicates the upper-left corner x coordinate.</desc>
+        <datatype>
+          <rng:data type="nonNegativeInteger"/>
+        </datatype>
+      </attDef>
+      <attDef ident="uly" usage="opt">
+        <desc xml:lang="en">Indicates the upper-left corner y coordinate.</desc>
+        <datatype>
+          <rng:data type="nonNegativeInteger"/>
+        </datatype>
       </attDef>
     </attList>
   </classSpec>
@@ -32584,6 +32498,17 @@
       <memberOf key="att.pitched"/>
     </classes>
   </classSpec>
+  <classSpec ident="att.keyMode" module="MEI.shared" type="atts">
+    <desc xml:lang="en">Attributes for describing key mode.</desc>
+    <attList>
+      <attDef ident="mode" usage="opt">
+        <desc xml:lang="en">Indicates major, minor, or other tonality.</desc>
+        <datatype>
+          <rng:ref name="data.MODE"/>
+        </datatype>
+      </attDef>
+    </attList>
+  </classSpec>
   <classSpec ident="att.keySig.log" module="MEI.shared" type="atts">
     <desc xml:lang="en">Logical domain attributes.</desc>
     <attList>
@@ -32761,14 +32686,10 @@
   </classSpec>
   <classSpec ident="att.lineRend.base" module="MEI.shared" type="atts">
     <desc xml:lang="en">Attributes that record the basic visual rendition of lines.</desc>
+    <classes>
+      <memberOf key="att.curveRend"/>
+    </classes>
     <attList>
-      <attDef ident="lform" usage="opt">
-        <gloss versionDate="2022-10-18" xml:lang="en">line form</gloss>
-        <desc xml:lang="en">Describes the line style of a line.</desc>
-        <datatype>
-          <rng:ref name="data.LINEFORM"/>
-        </datatype>
-      </attDef>
       <!-- @llength not necessary:
             @llength implies we know the direction of the vector which we
             can't know without establishing an end point, which in turn makes
@@ -32792,12 +32713,6 @@
             </sch:rule>
           </constraint>
         </constraintSpec>
-      </attDef>
-      <attDef ident="lwidth" usage="opt">
-        <desc xml:lang="en">Width of a line.</desc>
-        <datatype>
-          <rng:ref name="data.LINEWIDTH"/>
-        </datatype>
       </attDef>
       <!-- Possible addition:
           <attDef ident="lwaveheight" usage="opt">
@@ -38143,6 +38058,7 @@
       <memberOf key="att.common"/>
       <memberOf key="att.facsimile"/>
       <memberOf key="att.formework"/>
+      <memberOf key="att.horizontalAlign"/>
       <memberOf key="att.lang"/>
     </classes>
     <content>
@@ -38159,10 +38075,10 @@
       </rng:zeroOrMore>
     </content>
     <attList>
-      <attDef ident="halign" usage="opt">
-        <desc xml:lang="en">Records horizontal alignment of the page footer.</desc>
+      <attDef ident="func" usage="opt">
+        <desc xml:lang="en">Records the function (i.e., placement) of the page footer.</desc>
         <datatype>
-          <rng:ref name="data.HORIZONTALALIGNMENT"/>
+          <rng:ref name="data.PGFUNC"/>
         </datatype>
       </attDef>
     </attList>
@@ -38181,6 +38097,7 @@
       <memberOf key="att.common"/>
       <memberOf key="att.facsimile"/>
       <memberOf key="att.formework"/>
+      <memberOf key="att.horizontalAlign"/>
       <memberOf key="att.lang"/>
     </classes>
     <content>
@@ -38197,10 +38114,10 @@
       </rng:zeroOrMore>
     </content>
     <attList>
-      <attDef ident="halign" usage="opt">
-        <desc xml:lang="en">Records horizontal alignment of the page header.</desc>
+      <attDef ident="func" usage="opt">
+        <desc xml:lang="en">Records the function (i.e., placement) of the page header.</desc>
         <datatype>
-          <rng:ref name="data.HORIZONTALALIGNMENT"/>
+          <rng:ref name="data.PGFUNC"/>
         </datatype>
       </attDef>
     </attList>
@@ -41013,6 +40930,22 @@
       <memberOf key="att.xy"/>
     </classes>
   </classSpec>
+  <classSpec ident="att.curvatureDirection" module="MEI.visual" type="atts">
+    <desc xml:lang="en">Attributes describing the direction of curvature.</desc>
+    <attList>
+      <attDef ident="curve" usage="opt">
+        <desc xml:lang="en">Records direction of curvature.</desc>
+        <valList type="closed">
+          <valItem ident="a">
+            <desc xml:lang="en">Anti-clockwise curvature.</desc>
+          </valItem>
+          <valItem ident="c">
+            <desc xml:lang="en">Clockwise curvature.</desc>
+          </valItem>
+        </valList>
+      </attDef>
+    </attList>
+  </classSpec>
   <classSpec ident="att.curve.vis" module="MEI.visual" type="atts">
     <desc xml:lang="en">Visual domain attributes.</desc>
     <classes>
@@ -41263,6 +41196,17 @@
     <classes>
       <memberOf key="att.color"/>
     </classes>
+  </classSpec>
+  <classSpec ident="att.guitarGrid.vis" module="MEI.visual" type="atts">
+    <desc xml:lang="en">Visual domain attributes</desc>
+    <attList>
+      <attDef ident="grid.show" usage="opt">
+        <desc xml:lang="en">Determines whether to display guitar chord grids.</desc>
+        <datatype>
+          <rng:ref name="data.BOOLEAN"/>
+        </datatype>
+      </attDef>
+    </attList>
   </classSpec>
   <classSpec ident="att.grpSym.vis" module="MEI.visual" type="atts">
     <desc xml:lang="en">Visual domain attributes.</desc>
@@ -41554,6 +41498,7 @@
     <classes>
       <memberOf key="att.altSym"/>
       <memberOf key="att.color"/>
+      <memberOf key="att.curvatureDirection"/>
       <memberOf key="att.enclosingChars"/>
       <memberOf key="att.extSym"/>
       <memberOf key="att.staffLoc"/>
@@ -41563,17 +41508,6 @@
       <memberOf key="att.xy"/>
     </classes>
     <attList>
-      <attDef ident="curve" usage="opt">
-        <desc xml:lang="en">Records direction of curvature.</desc>
-        <valList type="closed">
-          <valItem ident="a">
-            <desc xml:lang="en">Anti-clockwise curvature.</desc>
-          </valItem>
-          <valItem ident="c">
-            <desc xml:lang="en">Clockwise curvature.</desc>
-          </valItem>
-        </valList>
-      </attDef>
       <attDef ident="looped" usage="opt">
         <desc xml:lang="en">Indicates whether curve is closed.</desc>
         <datatype>
@@ -42279,6 +42213,7 @@
       <memberOf key="att.barring"/>
       <memberOf key="att.cleffing.vis"/>
       <memberOf key="att.distances"/>
+      <memberOf key="att.guitarGrid.vis"/>
       <memberOf key="att.keySigDefault.vis"/>
       <memberOf key="att.lyricStyle"/>
       <memberOf key="att.meterSigDefault.vis"/>
@@ -42293,12 +42228,6 @@
       <memberOf key="att.staffDef.vis.mensural"/>
     </classes>
     <attList>
-      <attDef ident="grid.show" usage="opt">
-        <desc xml:lang="en">Determines whether to display guitar chord grids.</desc>
-        <datatype>
-          <rng:ref name="data.BOOLEAN"/>
-        </datatype>
-      </attDef>
       <attDef ident="layerscheme" usage="opt">
         <desc xml:lang="en">Indicates the number of layers and their stem directions.</desc>
         <datatype>

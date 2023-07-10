@@ -3618,16 +3618,9 @@
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Analytical domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.accidental"/>
+      <memberOf key="att.keyMode"/>
       <memberOf key="att.pitch"/>
     </classes>
-    <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-      <attDef ident="mode" usage="opt">
-        <desc xml:lang="en">Indicates major, minor, or other tonality.</desc>
-        <datatype>
-          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.MODE"/>
-        </datatype>
-      </attDef>
-    </attList>
   </classSpec><classSpec rend="add" ident="att.keySigDefault.anl" module="MEI.analytical" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Used by staffDef and scoreDef to provide default values for attributes in the analytical
       domain that are related to key signatures.</desc>
@@ -3720,6 +3713,7 @@
       <memberOf key="att.harmonicFunction"/>
       <memberOf key="att.intervalMelodic"/>
       <memberOf key="att.melodicFunction"/>
+      <memberOf key="att.neumeType"/>
       <memberOf key="att.pitchClass"/>
       <memberOf key="att.solfa"/>
     </classes>
@@ -3727,6 +3721,9 @@
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Analytical domain attributes.</desc>
   </classSpec><classSpec rend="add" ident="att.neume.anl" module="MEI.analytical" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Analytical domain attributes.</desc>
+    <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <memberOf key="att.neumeType"/>
+    </classes>
   </classSpec><classSpec rend="add" ident="att.note.anl" module="MEI.analytical" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Analytical domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -4217,20 +4214,8 @@
       <memberOf key="att.augmentDots"/>
       <memberOf key="att.duration.log"/>
       <memberOf key="att.numbered"/>
+      <memberOf key="att.tremForm"/>
     </classes>
-    <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-      <attDef ident="form" usage="opt">
-        <desc xml:lang="en">Indicates whether the tremolo is measured or unmeasured.</desc>
-        <valList type="closed">
-          <valItem ident="meas">
-            <desc xml:lang="en">Measured tremolo.</desc>
-          </valItem>
-          <valItem ident="unmeas">
-            <desc xml:lang="en">Unmeasured tremolo.</desc>
-          </valItem>
-        </valList>
-      </attDef>
-    </attList>
   </classSpec><classSpec rend="add" ident="att.chord.anl.cmn" module="MEI.cmn" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Analytical domain attributes in the CMN repertoire.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -4297,20 +4282,8 @@
       <memberOf key="att.event"/>
       <memberOf key="att.augmentDots"/>
       <memberOf key="att.duration.log"/>
+      <memberOf key="att.tremForm"/>
     </classes>
-    <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-      <attDef ident="form" usage="opt">
-        <desc xml:lang="en">Describes the style of the tremolo.</desc>
-        <valList type="closed">
-          <valItem ident="meas">
-            <desc xml:lang="en">Measured tremolo.</desc>
-          </valItem>
-          <valItem ident="unmeas">
-            <desc xml:lang="en">Unmeasured tremolo.</desc>
-          </valItem>
-        </valList>
-      </attDef>
-    </attList>
   </classSpec><classSpec rend="add" ident="att.glissPresent" module="MEI.cmn" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that indicate whether an event participates in a glissando.</desc>
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -4834,19 +4807,12 @@
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Visual domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.beaming.vis"/>
+      <memberOf key="att.guitarGrid.vis"/>
       <memberOf key="att.pianoPedals"/>
       <memberOf key="att.rehearsal"/>
       <memberOf key="att.slurRend"/>
       <memberOf key="att.tieRend"/>
     </classes>
-    <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-      <attDef ident="grid.show" usage="opt">
-        <desc xml:lang="en">Determines whether to display guitar chord grids.</desc>
-        <datatype>
-          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.BOOLEAN"/>
-        </datatype>
-      </attDef>
-    </attList>
   </classSpec><classSpec rend="add" ident="att.slur.log" module="MEI.cmn" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Logical domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -4924,6 +4890,21 @@
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.LINEWIDTH"/>
         </datatype>
+      </attDef>
+    </attList>
+  </classSpec><classSpec rend="add" ident="att.tremForm" module="MEI.cmn" type="atts">
+    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">Attributes describing the form of a tremolo.</desc>
+    <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <attDef ident="form" usage="opt">
+        <desc xml:lang="en">Describes the style of the tremolo.</desc>
+        <valList type="closed">
+          <valItem ident="meas">
+            <desc xml:lang="en">Measured tremolo.</desc>
+          </valItem>
+          <valItem ident="unmeas">
+            <desc xml:lang="en">Unmeasured tremolo.</desc>
+          </valItem>
+        </valList>
       </attDef>
     </attList>
   </classSpec><classSpec rend="add" ident="att.tremMeasured" module="MEI.cmn" type="atts">
@@ -6969,6 +6950,7 @@
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-figDesc.html">figDesc</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="graphic" module="MEI.figtable"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Indicates the location of an inline graphic.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
+      <memberOf key="att.coordinated.ul"/>
       <memberOf key="att.dimensions"/>
       <memberOf key="att.internetMedia"/>
       <memberOf key="att.facsimile"/>
@@ -6996,17 +6978,7 @@
             attributes.</sch:assert>
         </sch:rule>
       </constraint>
-    </constraintSpec><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="ulx" usage="opt">
-        <desc xml:lang="en">Indicates the upper-left corner x coordinate.</desc>
-        <datatype>
-          <rng:data type="nonNegativeInteger"/>
-        </datatype>
-      </attDef><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="uly" usage="opt">
-        <desc xml:lang="en">Indicates the upper-left corner y coordinate.</desc>
-        <datatype>
-          <rng:data type="nonNegativeInteger"/>
-        </datatype>
-      </attDef></attList><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+    </constraintSpec><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-graphic.html">graphic</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="table" module="MEI.figtable"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Contains text displayed in tabular form.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
@@ -7530,6 +7502,17 @@
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.timestamp2.ges"/>
     </classes>
+  </classSpec><classSpec rend="add" ident="att.attacking" module="MEI.gestural" type="atts">
+    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes whether an element is performed "attacca".</desc>
+    <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <attDef ident="attacca">
+        <desc xml:lang="en">Indicates that the performance of the next musical division should begin immediately
+          following this one.</desc>
+        <datatype>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.BOOLEAN"/>
+        </datatype>
+      </attDef>
+    </attList>
   </classSpec><classSpec rend="add" ident="att.barLine.ges" module="MEI.gestural" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Gestural domain attributes.</desc>
   </classSpec><classSpec rend="add" ident="att.beam.ges" module="MEI.gestural" type="atts">
@@ -7609,15 +7592,9 @@
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Gestural domain attributes.</desc>
   </classSpec><classSpec rend="add" ident="att.mdiv.ges" module="MEI.gestural" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Gestural domain attributes.</desc>
-    <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-      <attDef ident="attacca">
-        <desc xml:lang="en">Indicates that the performance of the next musical division should begin immediately
-          following this one.</desc>
-        <datatype>
-          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.BOOLEAN"/>
-        </datatype>
-      </attDef>
-    </attList>
+    <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <memberOf key="att.attacking"/>
+    </classes>
   </classSpec><classSpec rend="add" ident="att.dir.ges" module="MEI.gestural" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Gestural domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -7845,28 +7822,8 @@
       <memberOf key="att.duration.ges"/>
       <memberOf key="att.instrumentIdent"/>
       <memberOf key="att.midiVelocity"/>
+      <memberOf key="att.pitch.ges"/>
     </classes>
-    <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-      <attDef ident="oct.ges" usage="opt">
-        <desc xml:lang="en">Records performed octave information that differs from the written value.</desc>
-        <datatype>
-          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.OCTAVE"/>
-        </datatype>
-      </attDef>
-      <attDef ident="pname.ges" usage="opt">
-        <desc xml:lang="en">Contains a performed pitch name that differs from the written value.</desc>
-        <datatype>
-          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.PITCHNAME.GESTURAL"/>
-        </datatype>
-      </attDef>
-      <attDef ident="pnum" usage="opt">
-        <gloss versionDate="2022-10-30" xml:lang="en">pitch number</gloss>
-        <desc xml:lang="en">Holds a pitch-to-number mapping, a base-40 or MIDI note number, for example.</desc>
-        <datatype>
-          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.PITCHNUMBER"/>
-        </datatype>
-      </attDef>
-    </attList>
   </classSpec><classSpec rend="add" ident="att.ncGrp.ges" module="MEI.gestural" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Gestural domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -7886,6 +7843,7 @@
       <memberOf key="att.instrumentIdent"/>
       <memberOf key="att.midiVelocity"/>
       <memberOf key="att.note.ges.mensural"/>
+      <memberOf key="att.pitch.ges"/>
       <memberOf key="att.stringtab"/>
     </classes>
     <constraintSpec xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="extremis_disallows_gestural_pitch" scheme="schematron">
@@ -7914,25 +7872,6 @@
             <att>oct</att> or <att>ploc</att> and <att>oloc</att> or <att>loc</att> attributes is
             necessary to record the written pitch and octave of the symbol for this note.</p>
         </remarks>
-      </attDef>
-      <attDef ident="oct.ges" usage="opt">
-        <desc xml:lang="en">Records performed octave information that differs from the written value.</desc>
-        <datatype>
-          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.OCTAVE"/>
-        </datatype>
-      </attDef>
-      <attDef ident="pname.ges" usage="opt">
-        <desc xml:lang="en">Contains a performed pitch name that differs from the written value.</desc>
-        <datatype>
-          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.PITCHNAME.GESTURAL"/>
-        </datatype>
-      </attDef>
-      <attDef ident="pnum" usage="opt">
-        <gloss versionDate="2022-10-30" xml:lang="en">pitch number</gloss>
-        <desc xml:lang="en">Holds a pitch-to-number mapping, a base-40 or MIDI note number, for example.</desc>
-        <datatype>
-          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.PITCHNUMBER"/>
-        </datatype>
       </attDef>
     </attList>
   </classSpec><classSpec rend="add" ident="att.octave.ges" module="MEI.gestural" type="atts">
@@ -7986,6 +7925,29 @@
       <memberOf key="att.duration.ges"/>
       <memberOf key="att.timestamp2.ges"/>
     </classes>
+  </classSpec><classSpec rend="add" ident="att.pitch.ges" module="MEI.gestural" type="atts">
+    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Gestural attributes about pitch.</desc>
+    <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <attDef ident="oct.ges" usage="opt">
+        <desc xml:lang="en">Records performed octave information that differs from the written value.</desc>
+        <datatype>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.OCTAVE"/>
+        </datatype>
+      </attDef>
+      <attDef ident="pname.ges" usage="opt">
+        <desc xml:lang="en">Contains a performed pitch name that differs from the written value.</desc>
+        <datatype>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.PITCHNAME.GESTURAL"/>
+        </datatype>
+      </attDef>
+      <attDef ident="pnum" usage="opt">
+        <gloss versionDate="2022-10-30" xml:lang="en">pitch number</gloss>
+        <desc xml:lang="en">Holds a pitch-to-number mapping, a base-40 or MIDI note number, for example.</desc>
+        <datatype>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.PITCHNUMBER"/>
+        </datatype>
+      </attDef>
+    </attList>
   </classSpec><classSpec rend="add" ident="att.plica.ges" module="MEI.gestural" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Gestural domain attributes that describe the properties of a plica in the mensural repertoire.</desc>
   </classSpec><classSpec rend="add" ident="att.proport.ges" module="MEI.gestural" type="atts">
@@ -8031,15 +7993,9 @@
     </classes>
   </classSpec><classSpec rend="add" ident="att.section.ges" module="MEI.gestural" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Gestural domain attributes.</desc>
-    <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-      <attDef ident="attacca">
-        <desc xml:lang="en">Indicates that the performance of the next section should begin immediately following
-          this one.</desc>
-        <datatype>
-          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.BOOLEAN"/>
-        </datatype>
-      </attDef>
-    </attList>
+    <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <memberOf key="att.attacking"/>
+    </classes>
   </classSpec><classSpec rend="add" ident="att.signifLet.ges" module="MEI.gestural" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Gestural domain attributes.</desc>
   </classSpec><classSpec rend="add" ident="att.slur.ges" module="MEI.gestural" type="atts">
@@ -8674,7 +8630,7 @@
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.NMTOKEN"/>
         </datatype>
       </attDef><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="context" usage="opt">
-        <desc xml:lang="en">Circumstances in which the element appears, an XPath expression.</desc>
+        <desc xml:lang="en">Circumstances in which the attribute appears, an XPath expression.</desc>
         <datatype>
           <rng:data type="string"/>
         </datatype>
@@ -9284,16 +9240,12 @@
       <memberOf key="att.common"/>
       <memberOf key="att.accidental"/>
       <memberOf key="att.bibl"/>
+      <memberOf key="att.keyMode"/>
       <memberOf key="att.pitch"/>
       <memberOf key="model.workIdent"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <rng:text/>
-    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="mode" usage="opt">
-        <desc xml:lang="en">Indicates major, minor, or other tonality.</desc>
-        <datatype>
-          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.MODE"/>
-        </datatype>
-      </attDef></attList><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+    </content><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>This element is used exclusively within bibliographic descriptions. Do not confuse this
         element with <gi scheme="MEI">keySig</gi>, which is used within the body of an MEI file to
         record this data.</p>
@@ -10915,6 +10867,18 @@
         </valList>
       </attDef>
     </attList>
+  </classSpec><classSpec rend="add" ident="att.foliation.scheme" type="atts" module="MEI.msDesc">
+    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that describe foliation schemes.</desc>
+    <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <attDef ident="scheme" usage="opt">
+        <desc xml:lang="en">Identifies the foliation scheme in terms of which the location is being specified by
+          pointing to some foliation element defining it, or to some other equivalent
+          resource.</desc>
+        <datatype>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.URI"/>
+        </datatype>
+      </attDef>
+    </attList>
   </classSpec><classSpec rend="add" predeclare="true" ident="model.msInline" type="model" module="MEI.msDesc">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Groups elements that may appear inline when the msdesc module is active.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -10944,16 +10908,13 @@
       applied to an item.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       <memberOf key="att.bibl"/>
+      <memberOf key="att.contemporary"/>
       <memberOf key="att.datable"/>
       <memberOf key="att.lang"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="head"/></zeroOrMore>
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="condition"/><ref name="decoNote"/><ref name="dimensions"/><ref name="p"/></choice></zeroOrMore>
-    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="contemporary" usage="opt">
-        <datatype>
-          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.BOOLEAN"/>
-        </datatype>
-      </attDef></attList><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+    </content><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-binding.html">binding</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="bindingDesc" module="MEI.msDesc"><gloss xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">binding description</gloss><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Describes the present and former bindings of an item.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
@@ -11131,6 +11092,7 @@
       discontinuous) sequence of folio references.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       <memberOf key="att.bibl"/>
+      <memberOf key="att.foliation.scheme"/>
       <memberOf key="att.lang"/>
       <memberOf key="model.msInline"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -11143,14 +11105,7 @@
             work.</sch:assert>
         </sch:rule>
       </constraint>
-    </constraintSpec><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="scheme" usage="opt">
-        <desc xml:lang="en">Identifies the foliation scheme in terms of which the location is being specified by
-          pointing to some foliation element defining it, or to some other equivalent
-          resource.</desc>
-        <datatype>
-          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.URI"/>
-        </datatype>
-      </attDef><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="from" usage="opt">
+    </constraintSpec><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="from" usage="opt">
         <desc xml:lang="en">Specifies the starting point of the location in a normalized form.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.WORD"/>
@@ -11166,6 +11121,7 @@
       within a manuscript or manuscript part, according to a specific foliation.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       <memberOf key="att.bibl"/>
+      <memberOf key="att.foliation.scheme"/>
       <memberOf key="att.lang"/>
       <memberOf key="model.msInline"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -11178,14 +11134,7 @@
             work.</sch:assert>
         </sch:rule>
       </constraint>
-    </constraintSpec><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="scheme" usage="opt">
-        <desc xml:lang="en">Identifies the foliation scheme in terms of which the location is being specified by
-          pointing to some foliation element defining it, or to some other equivalent
-          resource.</desc>
-        <datatype>
-          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.URI"/>
-        </datatype>
-      </attDef></attList><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+    </constraintSpec><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-locusGrp.html">locusGrp</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="rubric" module="MEI.msDesc"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Contains a string of words through which a manuscript signals the beginning or end of a
       text division, often with an assertion as to its author and title, which is in some way set
@@ -11231,15 +11180,12 @@
     </remarks></elementSpec><elementSpec rend="add" ident="seal" module="MEI.msDesc"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">A single seal or similar attachment.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       <memberOf key="att.bibl"/>
+      <memberOf key="att.contemporary"/>
       <memberOf key="att.datable"/>
       <memberOf key="att.lang"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <choice xmlns="http://relaxng.org/ns/structure/1.0"><group><zeroOrMore><ref name="head"/></zeroOrMore><zeroOrMore><choice><ref name="condition"/><ref name="decoNote"/><ref name="p"/></choice></zeroOrMore></group><zeroOrMore><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike.limited"/></choice></zeroOrMore></choice>
-    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="contemporary">
-        <datatype>
-          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.BOOLEAN"/>
-        </datatype>
-      </attDef></attList><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+    </content><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-seal.html">seal</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="sealDesc" module="MEI.msDesc"><gloss xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">seal description</gloss><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Describes the seals or similar external attachments applied to an
       item.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -11737,6 +11683,9 @@
     </attList>
   </classSpec><classSpec rend="add" ident="att.ncForm" module="MEI.neumes" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that record visual details of neume notation.</desc>
+    <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <memberOf key="att.curvatureDirection"/>
+    </classes>
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="angled" usage="opt">
         <desc/>
@@ -11756,17 +11705,6 @@
           </valItem>
           <valItem ident="e">
             <desc xml:lang="en">Extended.</desc>
-          </valItem>
-        </valList>
-      </attDef>
-      <attDef ident="curve" usage="opt">
-        <desc xml:lang="en">Records direction of curvature.</desc>
-        <valList type="closed">
-          <valItem ident="a">
-            <desc xml:lang="en">Anti-clockwise curvature.</desc>
-          </valItem>
-          <valItem ident="c">
-            <desc xml:lang="en">Clockwise curvature.</desc>
           </valItem>
         </valList>
       </attDef>
@@ -11827,6 +11765,41 @@
       <memberOf key="att.staffIdent"/>
       <memberOf key="att.sylText"/>
     </classes>
+  </classSpec><classSpec rend="add" ident="att.neumeType" module="MEI.neumes" type="atts">
+    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that specify the type of neumes.</desc>
+    <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <attDef ident="type" usage="opt">
+        <desc xml:lang="en">Designation which characterizes the element in some sense, using any convenient
+          classification scheme or typology that employs single-token labels.</desc>
+        <datatype maxOccurs="unbounded">
+          <rng:data type="NMTOKEN"/>
+        </datatype>
+        <valList type="semi">
+          <valItem ident="apostropha"/>
+          <valItem ident="bistropha"/>
+          <valItem ident="climacus"/>
+          <valItem ident="clivis"/>
+          <valItem ident="oriscus"/>
+          <valItem ident="pes"/>
+          <valItem ident="pessubpunctis"/>
+          <valItem ident="porrectus"/>
+          <valItem ident="porrectusflexus"/>
+          <valItem ident="pressusmaior"/>
+          <valItem ident="pressusmaior"/>
+          <valItem ident="pressusminor"/>
+          <valItem ident="pressusminor"/>
+          <valItem ident="punctum"/>
+          <valItem ident="quilisma"/>
+          <valItem ident="scandicus"/>
+          <valItem ident="strophicus"/>
+          <valItem ident="torculus"/>
+          <valItem ident="torculusresupinus"/>
+          <valItem ident="tristropha"/>
+          <valItem ident="virga"/>
+          <valItem ident="virgastrata"/>
+        </valList>
+      </attDef>
+    </attList>
   </classSpec><classSpec rend="add" ident="att.oriscus.log" module="MEI.neumes" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Logical domain attributes.</desc>
   </classSpec><classSpec rend="add" ident="att.quilisma.log" module="MEI.neumes" type="atts">
@@ -11915,37 +11888,7 @@
       <memberOf key="model.neumePart"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="model.appLike"/><ref name="model.editLike"/><ref name="model.neumeComponentModifierLike"/><ref name="model.neumeModifierLike"/><ref name="model.transcriptionLike"/></choice></zeroOrMore>
-    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="type" usage="opt">
-        <desc xml:lang="en">Designation which characterizes the element in some sense, using any convenient
-          classification scheme or typology that employs single-token labels.</desc>
-        <datatype maxOccurs="unbounded">
-          <rng:data type="NMTOKEN"/>
-        </datatype>
-        <valList type="semi">
-          <valItem ident="apostropha"/>
-          <valItem ident="bistropha"/>
-          <valItem ident="climacus"/>
-          <valItem ident="clivis"/>
-          <valItem ident="oriscus"/>
-          <valItem ident="pes"/>
-          <valItem ident="pessubpunctis"/>
-          <valItem ident="porrectus"/>
-          <valItem ident="porrectusflexus"/>
-          <valItem ident="pressusmaior"/>
-          <valItem ident="pressusmaior"/>
-          <valItem ident="pressusminor"/>
-          <valItem ident="pressusminor"/>
-          <valItem ident="punctum"/>
-          <valItem ident="quilisma"/>
-          <valItem ident="scandicus"/>
-          <valItem ident="strophicus"/>
-          <valItem ident="torculus"/>
-          <valItem ident="torculusresupinus"/>
-          <valItem ident="tristropha"/>
-          <valItem ident="virga"/>
-          <valItem ident="virgastrata"/>
-        </valList>
-      </attDef></attList></elementSpec><elementSpec rend="add" ident="ncGrp" module="MEI.neumes"><gloss xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2023-06-16" xml:lang="en">neume component group</gloss><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Collection of one or more neume components.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+    </content></elementSpec><elementSpec rend="add" ident="ncGrp" module="MEI.neumes"><gloss xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2023-06-16" xml:lang="en">neume component group</gloss><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Collection of one or more neume components.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       <memberOf key="att.facsimile"/>
       <memberOf key="att.ncGrp.anl"/>
@@ -11970,37 +11913,7 @@
       <memberOf key="model.eventLike.neumes"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="model.appLike"/><ref name="model.editLike"/><ref name="model.neumeModifierLike"/><ref name="model.neumePart"/><ref name="model.transcriptionLike"/></choice></zeroOrMore>
-    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="type" usage="opt">
-        <desc xml:lang="en">Designation which characterizes the element in some sense, using any convenient
-          classification scheme or typology that employs single-token labels.</desc>
-        <datatype maxOccurs="unbounded">
-          <rng:data type="NMTOKEN"/>
-        </datatype>
-        <valList type="semi">
-          <valItem ident="apostropha"/>
-          <valItem ident="bistropha"/>
-          <valItem ident="climacus"/>
-          <valItem ident="clivis"/>
-          <valItem ident="oriscus"/>
-          <valItem ident="pes"/>
-          <valItem ident="pessubpunctis"/>
-          <valItem ident="porrectus"/>
-          <valItem ident="porrectusflexus"/>
-          <valItem ident="pressusmaior"/>
-          <valItem ident="pressusmaior"/>
-          <valItem ident="pressusminor"/>
-          <valItem ident="pressusminor"/>
-          <valItem ident="punctum"/>
-          <valItem ident="quilisma"/>
-          <valItem ident="scandicus"/>
-          <valItem ident="strophicus"/>
-          <valItem ident="torculus"/>
-          <valItem ident="torculusresupinus"/>
-          <valItem ident="tristropha"/>
-          <valItem ident="virga"/>
-          <valItem ident="virgastrata"/>
-        </valList>
-      </attDef></attList></elementSpec><elementSpec rend="add" ident="oriscus" module="MEI.neumes"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Oriscus.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+    </content></elementSpec><elementSpec rend="add" ident="oriscus" module="MEI.neumes"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Oriscus.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       <memberOf key="att.facsimile"/>
       <memberOf key="att.oriscus.anl"/>
@@ -12782,6 +12695,15 @@
       <memberOf key="att.responsibility"/>
       <memberOf key="att.typed"/>
     </classes>
+  </classSpec><classSpec rend="add" ident="att.contemporary" module="MEI.shared" type="atts">
+    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes specifying whether a feature is contemporary or historical.</desc>
+    <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <attDef ident="contemporary" usage="opt">
+        <datatype>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.BOOLEAN"/>
+        </datatype>
+      </attDef>
+    </attList>
   </classSpec><classSpec rend="add" ident="att.controlEvent" module="MEI.shared" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes shared by events which rely on other events for their existence. For example, a
       slur/phrase marking must be drawn between or over a group of notes. The slur is therefore a
@@ -12799,19 +12721,10 @@
   </classSpec><classSpec rend="add" ident="att.coordinated" module="MEI.shared" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">This attribute class records the position of a feature within a two-dimensional coordinate
       system.</desc>
+    <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <memberOf key="att.coordinated.ul"/>
+    </classes>
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-      <attDef ident="ulx" usage="opt">
-        <desc xml:lang="en">Indicates the upper-left corner x coordinate.</desc>
-        <datatype>
-          <rng:data type="nonNegativeInteger"/>
-        </datatype>
-      </attDef>
-      <attDef ident="uly" usage="opt">
-        <desc xml:lang="en">Indicates the upper-left corner y coordinate.</desc>
-        <datatype>
-          <rng:data type="nonNegativeInteger"/>
-        </datatype>
-      </attDef>
       <attDef ident="lrx" usage="opt">
         <desc xml:lang="en">Indicates the lower-right corner x coordinate.</desc>
         <datatype>
@@ -12837,6 +12750,23 @@
         <remarks xml:lang="en">
           <p>This attribute is based on the TEI attribute of the same name.</p>
         </remarks>
+      </attDef>
+    </attList>
+  </classSpec><classSpec rend="add" ident="att.coordinated.ul" module="MEI.shared" type="atts">
+    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">This attribute class records the upper left position of a feature within a two-dimensional coordinate
+      system.</desc>
+    <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <attDef ident="ulx" usage="opt">
+        <desc xml:lang="en">Indicates the upper-left corner x coordinate.</desc>
+        <datatype>
+          <rng:data type="nonNegativeInteger"/>
+        </datatype>
+      </attDef>
+      <attDef ident="uly" usage="opt">
+        <desc xml:lang="en">Indicates the upper-left corner y coordinate.</desc>
+        <datatype>
+          <rng:data type="nonNegativeInteger"/>
+        </datatype>
       </attDef>
     </attList>
   </classSpec><classSpec rend="add" ident="att.cue" module="MEI.shared" type="atts">
@@ -13411,6 +13341,16 @@
       <memberOf key="att.accidental"/>
       <memberOf key="att.pitched"/>
     </classes>
+  </classSpec><classSpec rend="add" ident="att.keyMode" module="MEI.shared" type="atts">
+    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes for describing key mode.</desc>
+    <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <attDef ident="mode" usage="opt">
+        <desc xml:lang="en">Indicates major, minor, or other tonality.</desc>
+        <datatype>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.MODE"/>
+        </datatype>
+      </attDef>
+    </attList>
   </classSpec><classSpec rend="add" ident="att.keySig.log" module="MEI.shared" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Logical domain attributes.</desc>
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -13579,14 +13519,10 @@
     </attList>
   </classSpec><classSpec rend="add" ident="att.lineRend.base" module="MEI.shared" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that record the basic visual rendition of lines.</desc>
+    <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <memberOf key="att.curveRend"/>
+    </classes>
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-      <attDef ident="lform" usage="opt">
-        <gloss versionDate="2022-10-18" xml:lang="en">line form</gloss>
-        <desc xml:lang="en">Describes the line style of a line.</desc>
-        <datatype>
-          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.LINEFORM"/>
-        </datatype>
-      </attDef>
       
       <attDef ident="lsegs" usage="opt">
         <desc xml:lang="en">Describes the number of segments into which a dashed or dotted line may be divided, or
@@ -13607,12 +13543,6 @@
             </sch:rule>
           </constraint>
         </constraintSpec>
-      </attDef>
-      <attDef ident="lwidth" usage="opt">
-        <desc xml:lang="en">Width of a line.</desc>
-        <datatype>
-          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.LINEWIDTH"/>
-        </datatype>
       </attDef>
       
     </attList>
@@ -17570,13 +17500,14 @@
       <memberOf key="att.common"/>
       <memberOf key="att.facsimile"/>
       <memberOf key="att.formework"/>
+      <memberOf key="att.horizontalAlign"/>
       <memberOf key="att.lang"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textComponentLike"/><ref name="model.textPhraseLike.limited"/><ref name="model.editLike"/><ref name="model.transcriptionLike"/><ref name="model.appLike"/><ref name="anchoredText"/></choice></zeroOrMore>
-    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="halign" usage="opt">
-        <desc xml:lang="en">Records horizontal alignment of the page footer.</desc>
+    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="func" usage="opt">
+        <desc xml:lang="en">Records the function (i.e., placement) of the page footer.</desc>
         <datatype>
-          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.HORIZONTALALIGNMENT"/>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.PGFUNC"/>
         </datatype>
       </attDef></attList><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>This element is used to capture the textual data that often appears in
@@ -17588,13 +17519,14 @@
       <memberOf key="att.common"/>
       <memberOf key="att.facsimile"/>
       <memberOf key="att.formework"/>
+      <memberOf key="att.horizontalAlign"/>
       <memberOf key="att.lang"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textComponentLike"/><ref name="model.textPhraseLike.limited"/><ref name="model.editLike"/><ref name="model.transcriptionLike"/><ref name="model.appLike"/><ref name="anchoredText"/></choice></zeroOrMore>
-    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="halign" usage="opt">
-        <desc xml:lang="en">Records horizontal alignment of the page header.</desc>
+    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="func" usage="opt">
+        <desc xml:lang="en">Records the function (i.e., placement) of the page header.</desc>
         <datatype>
-          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.HORIZONTALALIGNMENT"/>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.PGFUNC"/>
         </datatype>
       </attDef></attList><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>This element is used to capture the textual data that often appears in
@@ -19453,6 +19385,21 @@
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.xy"/>
     </classes>
+  </classSpec><classSpec rend="add" ident="att.curvatureDirection" module="MEI.visual" type="atts">
+    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes describing the direction of curvature.</desc>
+    <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <attDef ident="curve" usage="opt">
+        <desc xml:lang="en">Records direction of curvature.</desc>
+        <valList type="closed">
+          <valItem ident="a">
+            <desc xml:lang="en">Anti-clockwise curvature.</desc>
+          </valItem>
+          <valItem ident="c">
+            <desc xml:lang="en">Clockwise curvature.</desc>
+          </valItem>
+        </valList>
+      </attDef>
+    </attList>
   </classSpec><classSpec rend="add" ident="att.curve.vis" module="MEI.visual" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Visual domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -19689,6 +19636,16 @@
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.color"/>
     </classes>
+  </classSpec><classSpec rend="add" ident="att.guitarGrid.vis" module="MEI.visual" type="atts">
+    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Visual domain attributes</desc>
+    <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <attDef ident="grid.show" usage="opt">
+        <desc xml:lang="en">Determines whether to display guitar chord grids.</desc>
+        <datatype>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.BOOLEAN"/>
+        </datatype>
+      </attDef>
+    </attList>
   </classSpec><classSpec rend="add" ident="att.grpSym.vis" module="MEI.visual" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Visual domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -19946,6 +19903,7 @@
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.altSym"/>
       <memberOf key="att.color"/>
+      <memberOf key="att.curvatureDirection"/>
       <memberOf key="att.enclosingChars"/>
       <memberOf key="att.extSym"/>
       <memberOf key="att.staffLoc"/>
@@ -19955,17 +19913,6 @@
       <memberOf key="att.xy"/>
     </classes>
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-      <attDef ident="curve" usage="opt">
-        <desc xml:lang="en">Records direction of curvature.</desc>
-        <valList type="closed">
-          <valItem ident="a">
-            <desc xml:lang="en">Anti-clockwise curvature.</desc>
-          </valItem>
-          <valItem ident="c">
-            <desc xml:lang="en">Clockwise curvature.</desc>
-          </valItem>
-        </valList>
-      </attDef>
       <attDef ident="looped" usage="opt">
         <desc xml:lang="en">Indicates whether curve is closed.</desc>
         <datatype>
@@ -20622,6 +20569,7 @@
       <memberOf key="att.barring"/>
       <memberOf key="att.cleffing.vis"/>
       <memberOf key="att.distances"/>
+      <memberOf key="att.guitarGrid.vis"/>
       <memberOf key="att.keySigDefault.vis"/>
       <memberOf key="att.lyricStyle"/>
       <memberOf key="att.meterSigDefault.vis"/>
@@ -20636,12 +20584,6 @@
       <memberOf key="att.staffDef.vis.mensural"/>
     </classes>
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-      <attDef ident="grid.show" usage="opt">
-        <desc xml:lang="en">Determines whether to display guitar chord grids.</desc>
-        <datatype>
-          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.BOOLEAN"/>
-        </datatype>
-      </attDef>
       <attDef ident="layerscheme" usage="opt">
         <desc xml:lang="en">Indicates the number of layers and their stem directions.</desc>
         <datatype>
