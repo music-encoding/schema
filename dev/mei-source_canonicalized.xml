@@ -20,7 +20,7 @@
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href=../../../source/"validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2023-07-10T16:22:22.314836207+02:00-->
+<!--canonicalized: 2023-07-11T14:15:38.422710637+02:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -13990,7 +13990,7 @@ or
                             </list>
                         </p>
                         <p>
-                            The value “none” may be used to indicate that the link is un-traversable and no other markup is provided to determine appropriate behavior; it may or may not render the link invisible to the user. When the value of <att>xlink:actuate</att> is “other”, an application must base a determination of appropriate behavior on factors other than the value of <att>xlink:actuate</att>.
+                            The value <val>none</val> may be used to indicate that the link is un-traversable and no other markup is provided to determine appropriate behavior; it may or may not render the link invisible to the user. When the value of <att>xlink:actuate</att> is <val>other</val>, an application must base a determination of appropriate behavior on factors other than the value of <att>xlink:actuate</att>.
                         </p>
                         <p>
                             The <att>xlink:show</att> attribute defines how a remote resource is to be rendered. The following values are permitted:
@@ -14010,7 +14010,7 @@ or
                             </list>
                         </p>
                         <p>
-                            The value “none” may be used to indicate a link that is not displayed or is not displayable and no other markup is provided to determine appropriate behavior. When the value of <att>xlink:show</att> is “other”, an application must base a determination of appropriate behavior on factors other than the value of <att>xlink:show</att>.
+                            The value <val>none</val> may be used to indicate a link that is not displayed or is not displayable and no other markup is provided to determine appropriate behavior. When the value of <att>xlink:show</att> is <val>other</val>, an application must base a determination of appropriate behavior on factors other than the value of <att>xlink:show</att>.
                         </p>
                         <p>
                             The following example illustrates a pointer that results in the automatic creation of a new window with the content of the target loaded in it:
@@ -17790,7 +17790,7 @@ or
     </content>
   </macroSpec>
   <macroSpec ident="data.STAFFLOC" module="MEI" type="dt">
-    <desc xml:lang="en">Staff location. The value '0' indicates the bottom line of the current staff; positive
+    <desc xml:lang="en">Staff location. The value <val>0</val> indicates the bottom line of the current staff; positive
       values are used for positions above the bottom line and negative values for the positions
       below. For example, in treble clef, 1 = F4, 2 = G4, 3 = A4, etc. and -1 = D4, -2 = C4, and so
       on.</desc>
@@ -35534,7 +35534,7 @@ or
       <attDef ident="xml:space" usage="opt">
         <desc xml:lang="en">Allows one to signal to an application whether an element’s white space is
           "significant". The behavior of xml:space cascades to all descendant elements, but it can
-          be turned off locally by setting the xml:space attribute to the value "default".</desc>
+          be turned off locally by setting the xml:space attribute to the value <val>default</val>.</desc>
         <valList type="closed">
           <valItem ident="default">
             <desc xml:lang="en">Allows the application to handle white space as necessary. Not including an

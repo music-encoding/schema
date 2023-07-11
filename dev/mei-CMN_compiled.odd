@@ -3029,7 +3029,7 @@
       </valList>
     </content>
   </macroSpec><macroSpec rend="add" ident="data.STAFFLOC" module="MEI" type="dt">
-    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Staff location. The value '0' indicates the bottom line of the current staff; positive
+    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Staff location. The value <val>0</val> indicates the bottom line of the current staff; positive
       values are used for positions above the bottom line and negative values for the positions
       below. For example, in treble clef, 1 = F4, 2 = G4, 3 = A4, etc. and -1 = D4, -2 = C4, and so
       on.</desc>
@@ -14732,7 +14732,7 @@
       <attDef ident="xml:space" usage="opt">
         <desc xml:lang="en">Allows one to signal to an application whether an element’s white space is
           "significant". The behavior of xml:space cascades to all descendant elements, but it can
-          be turned off locally by setting the xml:space attribute to the value "default".</desc>
+          be turned off locally by setting the xml:space attribute to the value <val>default</val>.</desc>
         <valList type="closed">
           <valItem ident="default">
             <desc xml:lang="en">Allows the application to handle white space as necessary. Not including an
