@@ -17504,12 +17504,7 @@
       <memberOf key="att.lang"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textComponentLike"/><ref name="model.textPhraseLike.limited"/><ref name="model.editLike"/><ref name="model.transcriptionLike"/><ref name="model.appLike"/><ref name="anchoredText"/></choice></zeroOrMore>
-    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="func" usage="opt">
-        <desc xml:lang="en">Records the function (i.e., placement) of the page footer.</desc>
-        <datatype>
-          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.PGFUNC"/>
-        </datatype>
-      </attDef></attList><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+    </content><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>This element is used to capture the textual data that often appears in
         printed music. It may also be used for similarly formatted material in manuscripts. When
         used within <gi scheme="MEI">pb</gi>, it records a temporary suspension of the pattern of
@@ -17523,12 +17518,7 @@
       <memberOf key="att.lang"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textComponentLike"/><ref name="model.textPhraseLike.limited"/><ref name="model.editLike"/><ref name="model.transcriptionLike"/><ref name="model.appLike"/><ref name="anchoredText"/></choice></zeroOrMore>
-    </content><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="func" usage="opt">
-        <desc xml:lang="en">Records the function (i.e., placement) of the page header.</desc>
-        <datatype>
-          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.PGFUNC"/>
-        </datatype>
-      </attDef></attList><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+    </content><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>This element is used to capture the textual data that often appears in
         printed music. It may also be used for similarly formatted material in manuscripts. When
         used within <gi scheme="MEI">pb</gi>, it records a temporary suspension of the pattern of

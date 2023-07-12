@@ -5,7 +5,7 @@
           xmlns:xlink="http://www.w3.org/1999/xlink"
           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
           ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2023-07-11T13:03:54Z. .
+Schema generated from ODD source 2023-07-12T19:13:40Z. .
 TEI Edition: Version 5.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -4741,6 +4741,17 @@ Suggested values include: 1] smufl</a:documentation>
          </attribute>
       </optional>
    </define>
+   <define name="mei_att.formework.attributes">
+      <ref name="mei_att.formework.attribute.func"/>
+   </define>
+   <define name="mei_att.formework.attribute.func">
+      <optional>
+         <attribute name="func">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records the function (i.e., placement) of a page header or footer.</a:documentation>
+            <ref name="mei_data.PGFUNC"/>
+         </attribute>
+      </optional>
+   </define>
    <define name="mei_att.horizontalAlign.attributes">
       <ref name="mei_att.horizontalAlign.attribute.halign"/>
    </define>
@@ -6376,7 +6387,6 @@ Suggested values include: 1] smufl</a:documentation>
          <ref name="mei_att.chord.log.attributes"/>
          <ref name="mei_att.chord.vis.attributes"/>
          <ref name="mei_att.chord.ges.attributes"/>
-         <ref name="mei_att.stems.attributes"/>
          <empty/>
       </element>
    </define>
@@ -6741,20 +6751,9 @@ Suggested values include: 1] smufl</a:documentation>
             </choice>
          </zeroOrMore>
          <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.formework.attributes"/>
          <ref name="mei_att.horizontalAlign.attributes"/>
          <ref name="mei_att.lang.attributes"/>
-         <optional>
-            <attribute name="func">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records the function (i.e., placement) of the page footer.</a:documentation>
-               <ref name="mei_data.PGFUNC"/>
-            </attribute>
-         </optional>
-         <optional>
-            <attribute name="func">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records the function (i.e., placement) of the page footer.</a:documentation>
-               <ref name="mei_data.PGFUNC"/>
-            </attribute>
-         </optional>
          <empty/>
       </element>
    </define>
@@ -6769,20 +6768,9 @@ Suggested values include: 1] smufl</a:documentation>
             </choice>
          </zeroOrMore>
          <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.formework.attributes"/>
          <ref name="mei_att.horizontalAlign.attributes"/>
          <ref name="mei_att.lang.attributes"/>
-         <optional>
-            <attribute name="func">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records the function (i.e., placement) of the page header.</a:documentation>
-               <ref name="mei_data.PGFUNC"/>
-            </attribute>
-         </optional>
-         <optional>
-            <attribute name="func">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records the function (i.e., placement) of the page header.</a:documentation>
-               <ref name="mei_data.PGFUNC"/>
-            </attribute>
-         </optional>
          <empty/>
       </element>
    </define>
