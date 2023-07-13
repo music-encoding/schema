@@ -8633,7 +8633,7 @@
             <desc xml:lang="en">Signals beginning of a text division.</desc>
           </valItem>
           <valItem ident="final">
-            <desc xml:lang="en">Makrs the end of a text division.</desc>
+            <desc xml:lang="en">Marks the end of a text division.</desc>
           </valItem>
         </valList>
       </attDef></attList><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">

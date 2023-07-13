@@ -20,7 +20,7 @@
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href=../../../source/"validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2023-07-13T12:44:45.499173574+02:00-->
+<!--canonicalized: 2023-07-13T14:42:38.98285653+02:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -29923,7 +29923,7 @@ or
             <desc xml:lang="en">Signals beginning of a text division.</desc>
           </valItem>
           <valItem ident="final">
-            <desc xml:lang="en">Makrs the end of a text division.</desc>
+            <desc xml:lang="en">Marks the end of a text division.</desc>
           </valItem>
         </valList>
       </attDef>
