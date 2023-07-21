@@ -20,7 +20,7 @@
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href=../../../source/"validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2023-07-21T10:22:00.704916238+02:00-->
+<!--canonicalized: 2023-07-21T16:59:16.101919498+02:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -36,7 +36,7 @@
                <name ref="https://orcid.org/0000-0001-7217-9167" xml:id="BB">Benjamin W. Bohl</name>
                <name ref="http://viaf.org/viaf/313473028" xml:id="AH">Andrew Hankinson</name>
                <name ref="http://viaf.org/viaf/254615230" xml:id="MH">Maja Hartwig</name>
-               <name xml:id="ZK">Zoltán Kömíves</name>
+               <name xml:id="ZK">Zoltán Kőmíves</name>
                <name ref="http://viaf.org/viaf/313473048" xml:id="LP">Laurent Pugin</name>
                <name ref="http://viaf.org/viaf/255324861" xml:id="KR">Kristina Richts</name>
                <name ref="http://viaf.org/viaf/86212637" xml:id="AG">Axel Teich Geertinger</name>
@@ -263,7 +263,7 @@
                      W. Bohl; Margrethe Bue; Donald Byrd; Irmlind Capelle; Tim Crawford; David A.
                      Day; Giuliano Di Bacco; Norbert Dubowy; Richard Freedman; Ichiro Fujinaga;
                      Andrew Hankinson; Maja Hartwig; Kristin Herold; Franz Kelnreiter; Johannes
-                     Kepper; Robert Klugseder; Zoltán Kömíves; David Lewis; Urs Liska; Elsa De Luca;
+                     Kepper; Robert Klugseder; Zoltán Kőmíves; David Lewis; Urs Liska; Elsa De Luca;
                      Erin Mayhood; Stefan Morent; Stefan Münnich; Markus Neuwirth; Kevin Page;
                      Daniel Pitti; Laurent Pugin; Klaus Rettinghaus; Kristina Richts; Daniel
                      Röwenstrunk; Perry Roland; Craig Sapp; Agnes Seipelt; Eleanor Selfridge-Field;
