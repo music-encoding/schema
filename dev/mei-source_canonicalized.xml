@@ -20,7 +20,7 @@
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href=../../../source/"validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2023-07-20T12:58:00.230169867+02:00-->
+<!--canonicalized: 2023-07-21T10:22:00.704916238+02:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -8781,7 +8781,7 @@ or
           &lt;/scoreDef&gt;
           &lt;section&gt;
             &lt;staff n="1"&gt;
-              &lt;layer&gt;
+              &lt;layer n="1"&gt;
                 &lt;note pname="b" oct="4" dur="brevis" /&gt;
                 &lt;note pname="b" oct="4" dur="brevis" /&gt;
                 &lt;note pname="a" oct="4" dur="brevis" /&gt;
@@ -8791,7 +8791,7 @@ or
               &lt;/layer&gt;
             &lt;/staff&gt;
             &lt;staff n="2"&gt;
-              &lt;layer&gt;
+              &lt;layer n="1"&gt;
                 &lt;note pname="g" oct="3" dur="brevis" /&gt;
                 &lt;note pname="b" oct="3" dur="brevis" /&gt;
                 &lt;note pname="c" oct="4" dur="brevis" /&gt;
@@ -8801,7 +8801,7 @@ or
               &lt;/layer&gt;
             &lt;/staff&gt;
             &lt;staff n="3"&gt;
-              &lt;layer&gt;
+              &lt;layer n="1"&gt;
                 &lt;note pname="d" oct="4" dur="brevis" /&gt;
                 &lt;note pname="d" oct="4" dur="brevis" /&gt;
                 &lt;note pname="f" oct="4" dur="brevis" /&gt;
@@ -8811,7 +8811,7 @@ or
               &lt;/layer&gt;
             &lt;/staff&gt;
             &lt;staff n="4"&gt;
-              &lt;layer&gt;
+              &lt;layer n="1"&gt;
                 &lt;note pname="g" oct="2" dur="brevis" /&gt;
                 &lt;note pname="g" oct="3" dur="brevis" /&gt;
                 &lt;note pname="g" oct="3" dur="brevis" /&gt;
