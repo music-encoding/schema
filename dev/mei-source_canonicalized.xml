@@ -20,7 +20,7 @@
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href=../../../source/"validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2023-07-21T16:59:16.101919498+02:00-->
+<!--canonicalized: 2023-07-24T09:41:21.23827101+02:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -14510,6 +14510,18 @@ or
         <valItem ident="nd">
           <desc xml:lang="en">Natural note lowered by quarter tone (natural modified by arrow).</desc>
         </valItem>
+        <valItem ident="xu">
+          <desc xml:lang="en">Double sharp note raised by quarter tone (double sharp modified by arrow).</desc>
+        </valItem>
+        <valItem ident="xd">
+          <desc xml:lang="en">Double sharp note lowered by quarter tone (double sharp modified by arrow).</desc>
+        </valItem>
+        <valItem ident="ffu">
+          <desc xml:lang="en">Double flat note raised by quarter tone (double flat modified by arrow).</desc>
+        </valItem>
+        <valItem ident="ffd">
+          <desc xml:lang="en">Double flat note lowered by quarter tone (double flat modified by arrow).</desc>
+        </valItem>
         <!-- 1qf, 3qf, 1qs, 3qs represent fixed symbols (Gould, p. 96) -->
         <valItem ident="1qf">
           <desc xml:lang="en">1/4-tone flat accidental.</desc>
@@ -14629,6 +14641,12 @@ or
         </valItem>
         <valItem ident="fd">
           <desc xml:lang="en">Three quarter-tones flat.</desc>
+        </valItem>
+        <valItem ident="xu">
+          <desc xml:lang="en">Five quarter-tones sharp.</desc>
+        </valItem>
+        <valItem ident="ffd">
+          <desc xml:lang="en">Five quarter-tones flat.</desc>
         </valItem>
       </valList>
     </content>

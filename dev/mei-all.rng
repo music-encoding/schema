@@ -5,7 +5,7 @@
           xmlns:xlink="http://www.w3.org/1999/xlink"
           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
           ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2023-07-21T14:59:21Z. .
+Schema generated from ODD source 2023-07-24T07:41:26Z. .
 TEI Edition: Version 5.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -5724,6 +5724,14 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Natural note raised by quarter tone (natural modified by arrow).</a:documentation>
          <value>nd</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Natural note lowered by quarter tone (natural modified by arrow).</a:documentation>
+         <value>xu</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Double sharp note raised by quarter tone (double sharp modified by arrow).</a:documentation>
+         <value>xd</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Double sharp note lowered by quarter tone (double sharp modified by arrow).</a:documentation>
+         <value>ffu</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Double flat note raised by quarter tone (double flat modified by arrow).</a:documentation>
+         <value>ffd</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Double flat note lowered by quarter tone (double flat modified by arrow).</a:documentation>
          <value>1qf</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">1/4-tone flat accidental.</a:documentation>
          <value>3qf</value>
@@ -5798,6 +5806,10 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Quarter-tone flat.</a:documentation>
          <value>fd</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Three quarter-tones flat.</a:documentation>
+         <value>xu</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Five quarter-tones sharp.</a:documentation>
+         <value>ffd</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Five quarter-tones flat.</a:documentation>
       </choice>
    </define>
    <define name="mei_data.ARTICULATION">
