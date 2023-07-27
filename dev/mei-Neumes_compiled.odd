@@ -9710,22 +9710,6 @@
         </valList>
       </attDef>
     </attList>
-  </classSpec><classSpec rend="add" ident="att.curveRend" module="MEI.shared" type="atts">
-    <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that record the visual rendition of curves.</desc>
-    <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-      <attDef ident="lform" usage="opt">
-        <desc xml:lang="en">Describes the line style of a curve.</desc>
-        <datatype>
-          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.LINEFORM"/>
-        </datatype>
-      </attDef>
-      <attDef ident="lwidth" usage="opt">
-        <desc xml:lang="en">Width of a curved line.</desc>
-        <datatype>
-          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.LINEWIDTH"/>
-        </datatype>
-      </attDef>
-    </attList>
   </classSpec><classSpec rend="add" ident="att.custos.log" module="MEI.shared" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Logical domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -10390,12 +10374,21 @@
     </attList>
   </classSpec><classSpec rend="add" ident="att.lineRend.base" module="MEI.shared" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that record the basic visual rendition of lines.</desc>
-    <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
-      <memberOf key="att.curveRend"/>
-    </classes>
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       
-      <attDef ident="lsegs" usage="opt">
+        <attDef ident="lform" usage="opt">
+          <desc xml:lang="en">Describes the style of a line.</desc>
+          <datatype>
+            <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.LINEFORM"/>
+          </datatype>
+        </attDef>
+        <attDef ident="lwidth" usage="opt">
+          <desc xml:lang="en">Width of a line.</desc>
+          <datatype>
+            <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.LINEWIDTH"/>
+          </datatype>
+        </attDef>
+        <attDef ident="lsegs" usage="opt">
         <desc xml:lang="en">Describes the number of segments into which a dashed or dotted line may be divided, or
           the number of "peaks" of a wavy line; a pair of space-separated values (minimum and
           maximum, respectively) provides a range between which a rendering system-supplied value
@@ -16002,7 +15995,7 @@
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.color"/>
       <memberOf key="att.curvature"/>
-      <memberOf key="att.curveRend"/>
+      <memberOf key="att.lineRend.base"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.visualOffset2"/>
       <memberOf key="att.xy"/>

@@ -5,7 +5,7 @@
           xmlns:xlink="http://www.w3.org/1999/xlink"
           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
           ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2023-07-24T08:22:03Z. .
+Schema generated from ODD source 2023-07-27T09:24:12Z. .
 TEI Edition: Version 5.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -4601,26 +4601,6 @@ Suggested values include: 1] smufl</a:documentation>
          </attribute>
       </optional>
    </define>
-   <define name="mei_att.curveRend.attributes">
-      <ref name="mei_att.curveRend.attribute.lform"/>
-      <ref name="mei_att.curveRend.attribute.lwidth"/>
-   </define>
-   <define name="mei_att.curveRend.attribute.lform">
-      <optional>
-         <attribute name="lform">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Describes the line style of a curve.</a:documentation>
-            <ref name="mei_data.LINEFORM"/>
-         </attribute>
-      </optional>
-   </define>
-   <define name="mei_att.curveRend.attribute.lwidth">
-      <optional>
-         <attribute name="lwidth">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Width of a curved line.</a:documentation>
-            <ref name="mei_data.LINEWIDTH"/>
-         </attribute>
-      </optional>
-   </define>
    <define name="mei_att.datable.attributes">
       <ref name="mei_att.datable.attribute.enddate"/>
       <ref name="mei_att.datable.attribute.isodate"/>
@@ -4910,8 +4890,25 @@ Suggested values include: 1] smufl</a:documentation>
       </optional>
    </define>
    <define name="mei_att.lineRend.base.attributes">
-      <ref name="mei_att.curveRend.attributes"/>
+      <ref name="mei_att.lineRend.base.attribute.lform"/>
+      <ref name="mei_att.lineRend.base.attribute.lwidth"/>
       <ref name="mei_att.lineRend.base.attribute.lsegs"/>
+   </define>
+   <define name="mei_att.lineRend.base.attribute.lform">
+      <optional>
+         <attribute name="lform">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Describes the style of a line.</a:documentation>
+            <ref name="mei_data.LINEFORM"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.lineRend.base.attribute.lwidth">
+      <optional>
+         <attribute name="lwidth">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Width of a line.</a:documentation>
+            <ref name="mei_data.LINEWIDTH"/>
+         </attribute>
+      </optional>
    </define>
    <define name="mei_att.lineRend.base.attribute.lsegs">
       <optional>
@@ -7720,10 +7717,10 @@ Suggested values include: 1] main; 2] subordinate; 3] abbreviated; 4] alternativ
       <empty/>
    </define>
    <define name="mei_att.lv.vis.attributes">
+      <ref name="mei_att.curvature.attributes"/>
+      <ref name="mei_att.lineRend.base.attributes"/>
       <ref name="mei_att.visualOffset.attributes"/>
       <ref name="mei_att.visualOffset2.attributes"/>
-      <ref name="mei_att.curvature.attributes"/>
-      <ref name="mei_att.curveRend.attributes"/>
    </define>
    <define name="mei_att.mNum.vis.attributes">
       <ref name="mei_att.placementRelStaff.attributes"/>
@@ -7867,10 +7864,10 @@ Suggested values include: 1] main; 2] subordinate; 3] abbreviated; 4] alternativ
       </optional>
    </define>
    <define name="mei_att.slur.vis.attributes">
+      <ref name="mei_att.curvature.attributes"/>
+      <ref name="mei_att.lineRend.base.attributes"/>
       <ref name="mei_att.visualOffset.attributes"/>
       <ref name="mei_att.visualOffset2.attributes"/>
-      <ref name="mei_att.curvature.attributes"/>
-      <ref name="mei_att.curveRend.attributes"/>
    </define>
    <define name="mei_att.space.vis.attributes">
       <ref name="mei_att.cutout.attributes"/>
@@ -7917,10 +7914,10 @@ Suggested values include: 1] main; 2] subordinate; 3] abbreviated; 4] alternativ
       <ref name="mei_att.visualOffset2.ho.attributes"/>
    </define>
    <define name="mei_att.tie.vis.attributes">
+      <ref name="mei_att.curvature.attributes"/>
+      <ref name="mei_att.lineRend.base.attributes"/>
       <ref name="mei_att.visualOffset.attributes"/>
       <ref name="mei_att.visualOffset2.attributes"/>
-      <ref name="mei_att.curvature.attributes"/>
-      <ref name="mei_att.curveRend.attributes"/>
    </define>
    <define name="mei_att.trill.vis.attributes">
       <ref name="mei_att.extender.attributes"/>
