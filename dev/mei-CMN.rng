@@ -5,7 +5,7 @@
           xmlns:xlink="http://www.w3.org/1999/xlink"
           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
           ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2023-07-28T07:41:16Z. .
+Schema generated from ODD source 2023-07-28T14:49:32Z. .
 TEI Edition: Version 5.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -20155,6 +20155,14 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
    </define>
    <define name="mei_att.mensur.log.attributes">
       <ref name="mei_att.duration.ratio.attributes"/>
+      <ref name="mei_att.mensur.log.attribute.level"/>
+   </define>
+   <define name="mei_att.mensur.log.attribute.level">
+      <optional>
+         <attribute name="level">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Level of duration at which the proportion given by the @num and @numbase ratio applies.</a:documentation>
+         </attribute>
+      </optional>
    </define>
    <define name="mei_att.meterConformance.attributes">
       <ref name="mei_att.meterConformance.attribute.metcon"/>

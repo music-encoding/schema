@@ -10950,6 +10950,14 @@
       <memberOf key="att.duration.ratio"/>
       <memberOf key="att.mensural.shared"/>
     </classes>
+    <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <attDef ident="level" usage="opt">
+        <desc>Level of duration at which the proportion given by the @num and @numbase ratio applies.</desc>
+        <datatype>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.DURATION.mensural"/>
+        </datatype>
+      </attDef>
+    </attList>
   </classSpec><classSpec rend="add" ident="att.meterConformance" module="MEI.shared" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that provide information about a structure’s conformance to the prevailing
       meter.</desc>

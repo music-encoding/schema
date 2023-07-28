@@ -20,7 +20,7 @@
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href=../../../source/"validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2023-07-28T09:41:00.916494556+02:00-->
+<!--canonicalized: 2023-07-28T16:49:21.933095309+02:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -8724,6 +8724,7 @@ or
 &lt;/mei&gt;</egXML>
                      </figure>
                   </p>
+                  <p><hi rend="bold">Sesquialtera</hi> is frequently used to change the mensuration. The effect of the sesquialtera on the mensuration can be encoded by using the <att>tempus</att> and <att>prolatio</att> attributes of <gi scheme="MEI">mensur</gi> (for example, when changing the tempus to perfect, the effect can be encoded in <att>tempus="3"</att>). The actual sesquialtera can be encoded using <att>num="3"</att>, <att>numbase="2"</att>, and <att>level</att> to define the note level the sesquialtera is applied to (<abbr>e.g.</abbr>, <att>level="semibrevis"</att>).</p>
                </div>
                <div xml:id="implicitmensuration" type="div3">
                   <head>Implicit mensuration</head>
@@ -9001,7 +9002,7 @@ or
                      <label>div</label>
                      <item>Value of the form attribute for a dot of division (this is a dot that modifies the perfect groupings of the notes, thus, changing some notes' duration in the process)</item>
                   </list>
-                  The actual effect of these dots (<hi rend="italic">augmenting</hi> a note and making it perfect, or dividing a sequence of notes in different groupings by <hi rend="italic">imperfecting</hi> some notes or <hi rend="italic">altering</hi> others) is encoded with the <att>dur.quality</att> attribute of the correspoding <gi scheme="MEI">note</gi> elements. Examples of the use of dots of division and augmentation can be found in the <ptr target="#mensuralRules"/> section.
+                  <p>The actual effect of these dots (<hi rend="italic">augmenting</hi> a note and making it perfect, or dividing a sequence of notes in different groupings by <hi rend="italic">imperfecting</hi> some notes or <hi rend="italic">altering</hi> others) is encoded with the <att>dur.quality</att> attribute of the correspoding <gi scheme="MEI">note</gi> elements. Examples of the use of dots of division and augmentation can be found in the <ptr target="#mensuralRules"/> section.</p>
                </div>
                <div xml:id="accidentals" type="div3">
                  <head>Accidentals</head>
@@ -33638,6 +33639,14 @@ or
       <memberOf key="att.duration.ratio"/>
       <memberOf key="att.mensural.shared"/>
     </classes>
+    <attList>
+      <attDef ident="level" usage="opt">
+        <desc>Level of duration at which the proportion given by the @num and @numbase ratio applies.</desc>
+        <datatype>
+          <rng:ref name="data.DURATION.mensural"/>
+        </datatype>
+      </attDef>
+    </attList>
   </classSpec>
   <classSpec ident="att.meterConformance" module="MEI.shared" type="atts">
     <desc xml:lang="en">Attributes that provide information about a structure’s conformance to the prevailing
