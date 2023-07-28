@@ -20,7 +20,7 @@
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href=../../../source/"validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2023-07-27T11:23:58.520881752+02:00-->
+<!--canonicalized: 2023-07-28T09:41:00.916494556+02:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -31109,8 +31109,6 @@ or
           <valItem ident="porrectus"/>
           <valItem ident="porrectusflexus"/>
           <valItem ident="pressusmaior"/>
-          <valItem ident="pressusmaior"/>
-          <valItem ident="pressusminor"/>
           <valItem ident="pressusminor"/>
           <valItem ident="punctum"/>
           <valItem ident="quilisma"/>
