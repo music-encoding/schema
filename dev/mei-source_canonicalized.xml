@@ -20,7 +20,7 @@
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href=../../../source/"validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2023-07-31T22:46:48.928971734+02:00-->
+<!--canonicalized: 2023-08-01T10:59:53.018242735+02:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -28140,14 +28140,6 @@ or
     <content>
       <rng:ref name="macro.struc-unstrucContent"/>
     </content>
-    <constraintSpec ident="check_watermark_inline" scheme="schematron">
-      <constraint>
-        <sch:rule context="mei:watermark">
-          <sch:assert test="ancestor::mei:physDesc">The watermark element may only appear as a
-            descendant of the physDesc element.</sch:assert>
-        </sch:rule>
-      </constraint>
-    </constraintSpec>
     <remarks xml:lang="en">
       <p>The <att>facs</att> attribute may be used to record the location of the watermark in a
         facsimile image.</p>
@@ -29815,14 +29807,6 @@ or
     <content>
       <rng:ref name="macro.struc-unstrucContent"/>
     </content>
-    <constraintSpec ident="check_heraldry_inline" scheme="schematron">
-      <constraint>
-        <sch:rule context="mei:heraldry">
-          <sch:assert test="ancestor::mei:physDesc">The heraldry element may only appear as a
-            descendant of the physDesc element.</sch:assert>
-        </sch:rule>
-      </constraint>
-    </constraintSpec>
     <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-heraldry.html">heraldry</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
@@ -29952,15 +29936,6 @@ or
         </rng:choice>
       </rng:zeroOrMore>
     </content>
-    <constraintSpec ident="check_locus_inline" scheme="schematron">
-      <constraint>
-        <sch:rule context="mei:locus">
-          <sch:assert test="ancestor::mei:physDesc or parent::mei:contentItem or              ancestor::mei:source[ancestor::mei:componentList[ancestor::mei:sourceDesc or              ancestor::mei:sourceList or ancestor::mei:workList]]">The locus element may only appear as a descendant of a physDesc element, a
-            contentItem element, or a source element that is a component of another source or
-            work.</sch:assert>
-        </sch:rule>
-      </constraint>
-    </constraintSpec>
     <attList>
       <attDef ident="from" usage="opt">
         <desc xml:lang="en">Specifies the starting point of the location in a normalized form.</desc>
