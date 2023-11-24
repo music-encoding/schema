@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xml:base="file:/opt/docker-mei/music-encoding/customizations/mei-basic.xml"><?TEIVERSION Version 5.0?>
+<?xml version="1.0" encoding="utf-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xml:base="file:/opt/docker-mei/music-encoding/customizations/mei-basic.xml"><?TEIVERSION Development Version?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -6024,10 +6024,10 @@
       </attDef>
       
     </attList>
-  </classSpec><classSpec rend="add" ident="att.meiVersion" module="MEI.shared" type="atts"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that record the version of MEI in use.</desc><classes/><attList><attDef ident="meiversion" usage="req"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Specifies a generic MEI version label.</desc><defaultVal xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">5.0</defaultVal><valList type="closed" mode="change"><valItem xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="5.0">
-            <desc xml:lang="en">MEI 5.0</desc>
-          </valItem><valItem xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="5.0+basic">
-              <desc>MEI 5.0+basic</desc>
+  </classSpec><classSpec rend="add" ident="att.meiVersion" module="MEI.shared" type="atts"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that record the version of MEI in use.</desc><classes/><attList><attDef ident="meiversion" usage="req"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Specifies a generic MEI version label.</desc><defaultVal xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">5.1-dev</defaultVal><valList type="closed" mode="change"><valItem xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="5.1-dev">
+            <desc xml:lang="en">Development version</desc>
+          </valItem><valItem xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="5.1-dev+basic">
+              <desc>Development version</desc>
           </valItem></valList></attDef></attList></classSpec><classSpec ident="att.meterConformance.bar" module="MEI.shared" type="atts" mode="replace">
                     <desc>Attributes that provide information about a measure's conformance to the prevailing
                         meter.</desc>

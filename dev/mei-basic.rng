@@ -5,8 +5,8 @@
           xmlns:xlink="http://www.w3.org/1999/xlink"
           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
           ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2023-10-25T09:16:47Z. .
-TEI Edition: Version 5.0
+Schema generated from ODD source 2023-11-24T16:22:34Z. .
+TEI Edition: Development Version
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
 --><!--[https://opensource.org/license/ECL-2.0/] Licensed under the Educational Community License version 2.0-->
@@ -4944,13 +4944,13 @@ Suggested values include: 1] smufl</a:documentation>
    <define name="mei_att.meiVersion.attribute.meiversion">
       <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                   name="meiversion"
-                  a:defaultValue="5.0">
+                  a:defaultValue="5.1-dev">
          <a:documentation>Specifies a generic MEI version label.</a:documentation>
          <choice>
-            <value>5.0</value>
-            <a:documentation>MEI 5.0</a:documentation>
-            <value>5.0+basic</value>
-            <a:documentation>MEI 5.0+basic</a:documentation>
+            <value>5.1-dev</value>
+            <a:documentation>Development version</a:documentation>
+            <value>5.1-dev+basic</value>
+            <a:documentation>Development version</a:documentation>
          </choice>
       </attribute>
    </define>
