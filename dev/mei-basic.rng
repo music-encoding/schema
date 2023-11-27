@@ -5,7 +5,7 @@
           xmlns:xlink="http://www.w3.org/1999/xlink"
           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
           ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2023-11-24T16:27:24Z. .
+Schema generated from ODD source 2023-11-27T22:49:22Z. .
 TEI Edition: Development Version
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -5306,6 +5306,26 @@ Suggested values include: 1] smufl</a:documentation>
          </attribute>
       </optional>
    </define>
+   <define name="mei_att.staffLoc.pitched.attributes">
+      <ref name="mei_att.staffLoc.pitched.attribute.ploc"/>
+      <ref name="mei_att.staffLoc.pitched.attribute.oloc"/>
+   </define>
+   <define name="mei_att.staffLoc.pitched.attribute.ploc">
+      <optional>
+         <attribute name="ploc">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Captures staff location in terms of written pitch name.</a:documentation>
+            <ref name="mei_data.PITCHNAME"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.staffLoc.pitched.attribute.oloc">
+      <optional>
+         <attribute name="oloc">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records staff location in terms of written octave.</a:documentation>
+            <ref name="mei_data.OCTAVE"/>
+         </attribute>
+      </optional>
+   </define>
    <define name="mei_att.startEndId.attributes">
       <ref name="mei_att.startId.attributes"/>
       <ref name="mei_att.startEndId.attribute.endid"/>
@@ -7742,6 +7762,7 @@ Suggested values include: 1] main; 2] subordinate; 3] abbreviated; 4] alternativ
       <ref name="mei_att.color.attributes"/>
       <ref name="mei_att.cutout.attributes"/>
       <ref name="mei_att.extSym.attributes"/>
+      <ref name="mei_att.staffLoc.pitched.attributes"/>
       <ref name="mei_att.typography.attributes"/>
       <ref name="mei_att.visualOffset.attributes"/>
    </define>
@@ -7756,6 +7777,7 @@ Suggested values include: 1] main; 2] subordinate; 3] abbreviated; 4] alternativ
       <ref name="mei_att.color.attributes"/>
       <ref name="mei_att.extSym.attributes"/>
       <ref name="mei_att.numberPlacement.attributes"/>
+      <ref name="mei_att.staffLoc.pitched.attributes"/>
       <ref name="mei_att.typography.attributes"/>
       <ref name="mei_att.width.attributes"/>
       <ref name="mei_att.multiRest.vis.attribute.block"/>
@@ -7850,6 +7872,7 @@ Suggested values include: 1] main; 2] subordinate; 3] abbreviated; 4] alternativ
    <define name="mei_att.rest.vis.attributes">
       <ref name="mei_att.color.attributes"/>
       <ref name="mei_att.rest.vis.cmn.attributes"/>
+      <ref name="mei_att.staffLoc.pitched.attributes"/>
       <ref name="mei_att.visualOffset.attributes"/>
    </define>
    <define name="mei_att.sb.vis.attributes">
