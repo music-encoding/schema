@@ -5,9 +5,9 @@
           xmlns:xlink="http://www.w3.org/1999/xlink"
           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
           ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2024-01-08T10:09:35Z. .
-TEI Edition: Development Version
-TEI Edition Location: https://www.tei-c.org/Vault/P5//
+Schema generated from ODD source 2024-01-18T09:04:20Z. . 
+TEI Edition: Development Version 
+TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
 --><!--[https://opensource.org/license/ECL-2.0/] Licensed under the Educational Community License version 2.0-->
    <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron"

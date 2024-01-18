@@ -13757,7 +13757,7 @@
       </attDef></attList><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>Often, the <gi scheme="MEI">head</gi> sub-element identifies the <gi scheme="MEI">div</gi>’s purpose. The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-div.html">div</ref> element of the Text Encoding Initiative
         (TEI).</p>
-    </remarks></elementSpec><elementSpec rend="add" ident="dot" module="MEI.shared"><desc rend="replace">Dot of augmentation or division.</desc><classes><memberOf key="att.common"/><memberOf key="att.facsimile"/><memberOf key="att.dot.log"/><memberOf key="att.dot.vis"/><memberOf key="att.dot.ges"/><memberOf key="att.dot.anl"/><memberOf key="model.eventLike.mensural"/></classes><content><rng:empty/></content><attList/><remarks>
+    </remarks></elementSpec><elementSpec rend="add" ident="dot" module="MEI.shared"><desc rend="replace">Dot of augmentation or division.</desc><classes><memberOf key="att.common"/><memberOf key="att.facsimile"/><memberOf key="att.dot.log"/><memberOf key="att.dot.vis"/><memberOf key="att.dot.ges"/><memberOf key="att.dot.anl"/><memberOf key="model.eventLike.mensural"/></classes><content><rng:empty/></content><remarks>
             <p>This element provides an alternative to the <att>dots</att> attribute on <gi scheme="MEI">note</gi> and <gi scheme="MEI">rest</gi> elements. It should be used when specific display
               info, such as size or color, needs to be recorded for the dot. This element may also be used
               for dots of division in the mensural repertoire.</p>

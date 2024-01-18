@@ -3853,7 +3853,7 @@
             attributes: startid, tstamp, tstamp.ges or tstamp.real.</sch:assert>
         </sch:rule>
       </constraint>
-    </constraintSpec><attList/><remarks>
+    </constraintSpec><remarks>
                         <p part="N">The <att scheme="TEI">shape</att> attribute may be used to record whether the
                             fermata is curved, square, or triangular, while <att scheme="TEI">form</att> may be used to
                             capture whether the fermata is "upright", i.e., has the curve or bracket above the dot, or
@@ -4017,7 +4017,7 @@
       <p>The lv element captures the graphical, "tie-like" symbol. Any associated text, such as
         "l.v.", must be captured using a <gi scheme="MEI">dir</gi> element.</p>
     </remarks></elementSpec><elementSpec rend="add" ident="measure" module="MEI.cmn"><desc rend="replace">Unit of musical time consisting of a fixed number of note values of a given type, as
-                        determined by the prevailing meter, and delimited in musical notation by bar lines.</desc><classes><memberOf key="att.common"/><memberOf key="att.measure.ges"/><memberOf key="att.measure.log"/><memberOf key="model.measureLike"/><memberOf key="att.nNumberLike" mode="add"/></classes><content><optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="mNum"/></optional><zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="model.annotLike"/><ref name="model.appLike"/><ref name="model.editLike"/><ref name="model.graphicPrimitiveLike"/><ref name="model.measurePart"/><ref name="model.milestoneLike.music"/><ref name="model.relationLike"/><ref name="model.transcriptionLike"/></choice></zeroOrMore></content><attList/><remarks>
+                        determined by the prevailing meter, and delimited in musical notation by bar lines.</desc><classes><memberOf key="att.common"/><memberOf key="att.measure.ges"/><memberOf key="att.measure.log"/><memberOf key="model.measureLike"/><memberOf key="att.nNumberLike" mode="add"/></classes><content><optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="mNum"/></optional><zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="model.annotLike"/><ref name="model.appLike"/><ref name="model.editLike"/><ref name="model.graphicPrimitiveLike"/><ref name="model.measurePart"/><ref name="model.milestoneLike.music"/><ref name="model.relationLike"/><ref name="model.transcriptionLike"/></choice></zeroOrMore></content><remarks>
                         <p>In MEI, the <gi scheme="MEI">measure</gi> element is a grouping mechanism for events and
                             control events. Pointing attributes make it possible to connect this element to other
                             internal or external entities, such as media objects or annotations. The <att>width</att>
@@ -4827,7 +4827,7 @@
       
       
     </classes>
-  </classSpec><classSpec rend="add" ident="att.rest.ges" module="MEI.gestural" type="atts"><desc>Gestural domain attributes.</desc><classes><memberOf key="att.instrumentIdent"/></classes><attList/></classSpec><classSpec rend="add" ident="att.score.ges" module="MEI.gestural" type="atts">
+  </classSpec><classSpec rend="add" ident="att.rest.ges" module="MEI.gestural" type="atts"><desc>Gestural domain attributes.</desc><classes><memberOf key="att.instrumentIdent"/></classes></classSpec><classSpec rend="add" ident="att.score.ges" module="MEI.gestural" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Gestural domain attributes.</desc>
   </classSpec><classSpec rend="add" ident="att.section.ges" module="MEI.gestural" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Gestural domain attributes.</desc>
@@ -5106,7 +5106,7 @@
         </valList>
       </attDef></attList><remarks>
                         <p part="N">For MEI Basic, an MEI header may contain a fileDesc element only.</p>
-                    </remarks></elementSpec><elementSpec rend="add" ident="pubStmt" module="MEI.header"><gloss xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">publication statement</gloss><desc rend="replace">(publication statement) – Container for information regarding the publication or distribution of a bibliographic item, including the publisher's name and address, the date of publication, and other relevant details.</desc><classes><memberOf key="att.common"/></classes><content><optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="publisher"/></optional><optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="pubPlace"/></optional><optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="date"/></optional><optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="availability"/></optional></content><attList/><remarks>
+                    </remarks></elementSpec><elementSpec rend="add" ident="pubStmt" module="MEI.header"><gloss xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">publication statement</gloss><desc rend="replace">(publication statement) – Container for information regarding the publication or distribution of a bibliographic item, including the publisher's name and address, the date of publication, and other relevant details.</desc><classes><memberOf key="att.common"/></classes><content><optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="publisher"/></optional><optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="pubPlace"/></optional><optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="date"/></optional><optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="availability"/></optional></content><remarks>
                         <p part="N">This element is modelled on an element in the Text Encoding Initiative (TEI) standard. 
                             In MEI Basic, it may contain only publisher, publishing place, date and availability information, in that order.</p>
                     </remarks></elementSpec><elementSpec rend="add" ident="titleStmt" module="MEI.header"><gloss xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">title statement</gloss><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Container for title and responsibility meta-data.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -5143,7 +5143,7 @@
       <p>The <gi scheme="MEI">lb</gi> element is allowed here in order to facilitate karaoke
         applications. The <att>func</att> attribute on <gi scheme="MEI">lb</gi> may be used to
         distinguish true line endings from those of line groups for these applications.</p>
-    </remarks></elementSpec><elementSpec rend="add" ident="verse" module="MEI.lyrics"><desc rend="replace" xml:lang="en">Division of a poem or song lyrics, sometimes having a fixed length, meter or rhyme scheme; a stanza.</desc><classes><memberOf key="att.common"/><memberOf key="att.verse.vis"/><memberOf key="model.verseLike"/><memberOf key="att.nNumberLike" mode="add"/></classes><content><zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="label"/></zeroOrMore><zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="labelAbbr"/></zeroOrMore><oneOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="volta"/><ref name="model.sylLike"/></choice></oneOrMore></content><attList/><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+    </remarks></elementSpec><elementSpec rend="add" ident="verse" module="MEI.lyrics"><desc rend="replace" xml:lang="en">Division of a poem or song lyrics, sometimes having a fixed length, meter or rhyme scheme; a stanza.</desc><classes><memberOf key="att.common"/><memberOf key="att.verse.vis"/><memberOf key="model.verseLike"/><memberOf key="att.nNumberLike" mode="add"/></classes><content><zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="label"/></zeroOrMore><zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="labelAbbr"/></zeroOrMore><oneOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="volta"/><ref name="model.sylLike"/></choice></oneOrMore></content><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The <gi scheme="MEI">lb</gi> element is allowed here in order to facilitate karaoke
         applications. The <att>func</att> attribute on <gi scheme="MEI">lb</gi> may be used to
         distinguish true line endings from those of line groups for these applications.</p>
@@ -5581,7 +5581,7 @@
                         and tuplet attributes may be used to indicate the attachment of these things to this chord. If
                         visual information about these things needs to be recorded, then either the elements
                         corresponding to these attributes or the attributes available in the att.vis.chord class should
-                        be employed.</desc><classes><memberOf key="att.augmentDots"/><memberOf key="att.chord.log.cmn"/><memberOf key="att.cue"/><memberOf key="att.duration.log"/><memberOf key="att.event"/></classes><attList/></classSpec><classSpec rend="add" ident="att.clef.log" module="MEI.shared" type="atts">
+                        be employed.</desc><classes><memberOf key="att.augmentDots"/><memberOf key="att.chord.log.cmn"/><memberOf key="att.cue"/><memberOf key="att.duration.log"/><memberOf key="att.event"/></classes></classSpec><classSpec rend="add" ident="att.clef.log" module="MEI.shared" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Logical domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.clefShape"/>
@@ -5670,7 +5670,7 @@
         </datatype>
       </attDef>
     </attList>
-  </classSpec><classSpec rend="add" ident="att.common" module="MEI.shared" type="atts"><desc>Attributes common to many elements.</desc><classes><memberOf key="att.id" mode="add"/><memberOf key="att.labelled" mode="add"/><memberOf key="att.typed" mode="add"/></classes><attList/></classSpec><classSpec rend="add" ident="att.controlEvent" module="MEI.shared" type="atts">
+  </classSpec><classSpec rend="add" ident="att.common" module="MEI.shared" type="atts"><desc>Attributes common to many elements.</desc><classes><memberOf key="att.id" mode="add"/><memberOf key="att.labelled" mode="add"/><memberOf key="att.typed" mode="add"/></classes></classSpec><classSpec rend="add" ident="att.controlEvent" module="MEI.shared" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes shared by events which rely on other events for their existence. For example, a
       slur/phrase marking must be drawn between or over a group of notes. The slur is therefore a
       control event.</desc>
@@ -5829,7 +5829,7 @@
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       
     </classes>
-  </classSpec><classSpec rend="add" ident="att.event" module="MEI.shared" type="atts"><desc>Attributes that apply to all written events, e.g., note, chord, rest, etc.</desc><classes><memberOf key="att.layerIdent" mode="add"/><memberOf key="att.staffIdent" mode="add"/></classes><attList/></classSpec><classSpec rend="add" ident="att.extender" module="MEI.shared" type="atts">
+  </classSpec><classSpec rend="add" ident="att.event" module="MEI.shared" type="atts"><desc>Attributes that apply to all written events, e.g., note, chord, rest, etc.</desc><classes><memberOf key="att.layerIdent" mode="add"/><memberOf key="att.staffIdent" mode="add"/></classes></classSpec><classSpec rend="add" ident="att.extender" module="MEI.shared" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that describe extension symbols, typically lines. Members of this class are
       also typically members of the att.lineRend class.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -6304,7 +6304,7 @@
         </valList>
       </attDef>
     </attList>
-  </classSpec><classSpec rend="add" ident="att.rest.log" module="MEI.shared" type="atts"><desc xml:lang="en">Logical domain attributes.</desc><classes><memberOf key="att.augmentDots"/><memberOf key="att.cue"/><memberOf key="att.duration.log"/><memberOf key="att.event"/></classes><attList/></classSpec><classSpec rend="add" ident="att.sb.log" module="MEI.shared" type="atts">
+  </classSpec><classSpec rend="add" ident="att.rest.log" module="MEI.shared" type="atts"><desc xml:lang="en">Logical domain attributes.</desc><classes><memberOf key="att.augmentDots"/><memberOf key="att.cue"/><memberOf key="att.duration.log"/><memberOf key="att.event"/></classes></classSpec><classSpec rend="add" ident="att.sb.log" module="MEI.shared" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Logical domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       
@@ -7271,7 +7271,7 @@
       <memberOf key="model.respLikePart"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike.limited"/></choice></zeroOrMore>
-    </content></elementSpec><elementSpec rend="add" ident="date" module="MEI.shared"><desc rend="replace">A string identifying a point in time or the time period between two such points.</desc><classes><memberOf key="att.common"/><memberOf key="att.calendared"/><memberOf key="att.datable"/><memberOf key="att.lang"/></classes><content><zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike"/></choice></zeroOrMore></content><attList/><remarks>
+    </content></elementSpec><elementSpec rend="add" ident="date" module="MEI.shared"><desc rend="replace">A string identifying a point in time or the time period between two such points.</desc><classes><memberOf key="att.common"/><memberOf key="att.calendared"/><memberOf key="att.datable"/><memberOf key="att.lang"/></classes><content><zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike"/></choice></zeroOrMore></content><remarks>
                         <p part="N">This element is modelled on elements in the Text Encoding Initiative (TEI) and Encoded Archival Description (EAD) standards.</p>
                     </remarks></elementSpec><elementSpec rend="add" ident="dir" module="MEI.shared"><gloss xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">directive</gloss><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">An instruction expressed as a combination of text and symbols, typically above,
       below, or between staves, but not on the staff — that is not encoded elsewhere in more specific
@@ -7466,7 +7466,7 @@
                                 <sch:assert test="not(@endid)">An element with @tstamp2 may not have @endid as well (and vice versa).</sch:assert>
                             </sch:rule>
                         </constraint>
-                    </constraintSpec><attList/></elementSpec><elementSpec rend="add" ident="note" module="MEI.shared"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">A single pitched event.  </desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+                    </constraintSpec></elementSpec><elementSpec rend="add" ident="note" module="MEI.shared"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">A single pitched event.  </desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       
       <memberOf key="att.note.log"/>
@@ -7667,7 +7667,7 @@
         of page beginnings, each of which points to a page image. <gi scheme="MEI">div</gi> elements
         are allowed preceding and following sections of music data in order to accommodate blocks of
         explanatory text.</p>
-    </remarks></elementSpec><elementSpec rend="add" ident="scoreDef" module="MEI.shared"><gloss xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">score definition</gloss><desc rend="replace">(score definition) – Container for score meta-information.</desc><classes><memberOf key="att.common"/><memberOf key="model.scoreDefLike"/><memberOf key="att.keySigDefault.log" mode="add"/><memberOf key="att.meterSigDefault.log" mode="add"/></classes><content><optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.symbolTableLike"/></optional><optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.keySigLike"/></optional><optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.meterSigLike"/></optional><optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="pgHead"/></optional><optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="pgFoot"/></optional><optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="instrGrp"/></optional><choice xmlns="http://relaxng.org/ns/structure/1.0"><optional><ref name="model.staffGrpLike"/></optional></choice></content><attList/></elementSpec><elementSpec rend="add" ident="section" module="MEI.shared"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Segment of music data.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+    </remarks></elementSpec><elementSpec rend="add" ident="scoreDef" module="MEI.shared"><gloss xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">score definition</gloss><desc rend="replace">(score definition) – Container for score meta-information.</desc><classes><memberOf key="att.common"/><memberOf key="model.scoreDefLike"/><memberOf key="att.keySigDefault.log" mode="add"/><memberOf key="att.meterSigDefault.log" mode="add"/></classes><content><optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.symbolTableLike"/></optional><optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.keySigLike"/></optional><optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.meterSigLike"/></optional><optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="pgHead"/></optional><optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="pgFoot"/></optional><optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="instrGrp"/></optional><choice xmlns="http://relaxng.org/ns/structure/1.0"><optional><ref name="model.staffGrpLike"/></optional></choice></content></elementSpec><elementSpec rend="add" ident="section" module="MEI.shared"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Segment of music data.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       
       
@@ -7875,7 +7875,7 @@
             for the n attribute.</sch:assert>
         </sch:rule>
       </constraint>
-    </constraintSpec><attList/><remarks>
+    </constraintSpec><remarks>
                         <p>System is the more proper name for this concept (Read, p. 37-38). Bracketed staff groups
                             may contain other bracketed or braced staff groups or single staves. See Read, p. 35-38,
                             examples p. 434, 438.</p>
@@ -8108,7 +8108,7 @@
       <p>The <att>startid</att> and <att>endid</att> attributes are used to indicate the <gi scheme="MEI">chordMember</gi> elements on which the barre starts and finishes respectively.
         The fret at which the barre should be created is recorded by the <att>fret</att>
         attribute.</p>
-    </remarks></elementSpec><classSpec rend="add" ident="att.accid.vis" module="MEI.visual" type="atts"><desc xml:lang="en">Visual domain attributes.</desc><classes><memberOf key="att.color"/><memberOf key="att.extSym"/><memberOf key="att.visualOffset.ho"/><memberOf key="att.visualOffset.vo"/></classes><attList/></classSpec><classSpec rend="add" ident="att.arpeg.vis" module="MEI.visual" type="atts">
+    </remarks></elementSpec><classSpec rend="add" ident="att.accid.vis" module="MEI.visual" type="atts"><desc xml:lang="en">Visual domain attributes.</desc><classes><memberOf key="att.color"/><memberOf key="att.extSym"/><memberOf key="att.visualOffset.ho"/><memberOf key="att.visualOffset.vo"/></classes></classSpec><classSpec rend="add" ident="att.arpeg.vis" module="MEI.visual" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Visual domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       
@@ -8152,7 +8152,7 @@
         </datatype>
       </attDef>
     </attList>
-  </classSpec><classSpec rend="add" ident="att.artic.vis" module="MEI.visual" type="atts"><desc xml:lang="en">Visual domain attributes.</desc><classes><memberOf key="att.color"/><memberOf key="att.extSym"/><memberOf key="att.placementRelEvent"/><memberOf key="att.visualOffset"/></classes><attList/></classSpec><classSpec rend="add" ident="att.beam.vis" module="MEI.visual" type="atts">
+  </classSpec><classSpec rend="add" ident="att.artic.vis" module="MEI.visual" type="atts"><desc xml:lang="en">Visual domain attributes.</desc><classes><memberOf key="att.color"/><memberOf key="att.extSym"/><memberOf key="att.placementRelEvent"/><memberOf key="att.visualOffset"/></classes></classSpec><classSpec rend="add" ident="att.beam.vis" module="MEI.visual" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Visual domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.color"/>
@@ -8170,12 +8170,12 @@
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.BEATRPT.REND"/>
         </datatype>
-      </attDef></attList></classSpec><classSpec rend="add" ident="att.breath.vis" module="MEI.visual" type="atts"><desc xml:lang="en">Visual domain attributes.</desc><classes><memberOf key="att.color"/><memberOf key="att.extSym"/><memberOf key="att.visualOffset"/></classes><attList/></classSpec><classSpec rend="add" ident="att.bTrem.vis" module="MEI.visual" type="atts">
+      </attDef></attList></classSpec><classSpec rend="add" ident="att.breath.vis" module="MEI.visual" type="atts"><desc xml:lang="en">Visual domain attributes.</desc><classes><memberOf key="att.color"/><memberOf key="att.extSym"/><memberOf key="att.visualOffset"/></classes></classSpec><classSpec rend="add" ident="att.bTrem.vis" module="MEI.visual" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Visual domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.numberPlacement"/>
     </classes>
-  </classSpec><classSpec rend="add" ident="att.caesura.vis" module="MEI.visual" type="atts"><desc xml:lang="en">Visual domain attributes.</desc><classes><memberOf key="att.color"/><memberOf key="att.extSym"/><memberOf key="att.visualOffset"/></classes><attList/></classSpec><classSpec rend="add" ident="att.chord.vis" module="MEI.visual" type="atts"><desc>Visual domain attributes for chord. The slur, slur.dir, slur.rend, tie, tie.dir, and tie.rend
+  </classSpec><classSpec rend="add" ident="att.caesura.vis" module="MEI.visual" type="atts"><desc xml:lang="en">Visual domain attributes.</desc><classes><memberOf key="att.color"/><memberOf key="att.extSym"/><memberOf key="att.visualOffset"/></classes></classSpec><classSpec rend="add" ident="att.chord.vis" module="MEI.visual" type="atts"><desc>Visual domain attributes for chord. The slur, slur.dir, slur.rend, tie, tie.dir, and tie.rend
                         attributes here are syntactic sugar for these attributes on each of the chord's individual
                         notes. The values here apply to all the notes in the chord. If some notes are slurred or tied
                         while others aren't, then the individual note attributes must be used.</desc><classes><memberOf key="att.color"/><memberOf key="att.extSym"/><memberOf key="att.stems"/><memberOf key="att.visualOffset.ho"/><memberOf key="att.chord.vis.cmn"/></classes><attList><attDef xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" ident="cluster" usage="opt">
@@ -8578,7 +8578,7 @@
       
       
     </classes>
-  </classSpec><classSpec rend="add" ident="att.rest.vis" module="MEI.visual" type="atts"><desc>Visual domain attributes.</desc><classes><memberOf key="att.color"/><memberOf key="att.rest.vis.cmn"/><memberOf key="att.staffLoc.pitched"/><memberOf key="att.visualOffset"/></classes><attList/></classSpec><classSpec rend="add" ident="att.sb.vis" module="MEI.visual" type="atts">
+  </classSpec><classSpec rend="add" ident="att.rest.vis" module="MEI.visual" type="atts"><desc>Visual domain attributes.</desc><classes><memberOf key="att.color"/><memberOf key="att.rest.vis.cmn"/><memberOf key="att.staffLoc.pitched"/><memberOf key="att.visualOffset"/></classes></classSpec><classSpec rend="add" ident="att.sb.vis" module="MEI.visual" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Visual domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       
@@ -8669,7 +8669,7 @@
     </classes>
     
     
-  </classSpec><classSpec rend="add" ident="att.symbol.vis" module="MEI.visual" type="atts"><desc xml:lang="en">Visual domain attributes.</desc><classes><memberOf key="att.color"/><memberOf key="att.extSym"/><memberOf key="att.scalable"/><memberOf key="att.visualOffset"/></classes><attList/></classSpec><classSpec rend="add" ident="att.tempo.vis" module="MEI.visual" type="atts">
+  </classSpec><classSpec rend="add" ident="att.symbol.vis" module="MEI.visual" type="atts"><desc xml:lang="en">Visual domain attributes.</desc><classes><memberOf key="att.color"/><memberOf key="att.extSym"/><memberOf key="att.scalable"/><memberOf key="att.visualOffset"/></classes></classSpec><classSpec rend="add" ident="att.tempo.vis" module="MEI.visual" type="atts">
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Visual domain attributes.</desc>
     <classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.extender"/>
