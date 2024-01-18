@@ -20,7 +20,7 @@
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href=../../../source/"validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2024-01-18T14:49:02.718385197+01:00-->
+<!--canonicalized: 2024-01-18T17:00:56.661162727+01:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -39475,10 +39475,9 @@ or
       </rng:zeroOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>Since the <gi scheme="MEI">measure</gi> element is optional, a score may consist entirely
-        of page beginnings, each of which points to a page image. <gi scheme="MEI">div</gi> elements
-        are allowed preceding and following sections of music data in order to accommodate blocks of
-        explanatory text.</p>
+      <p>A score may consist entirely of page beginnings, each of which points to a page
+      image. <gi scheme="MEI">div</gi> elements are allowed preceding and following sections
+      of music data in order to accommodate blocks of explanatory text.</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="scoreDef" module="MEI.shared">
