@@ -5,7 +5,7 @@
           xmlns:xlink="http://www.w3.org/1999/xlink"
           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
           ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2024-01-18T09:04:21Z. . 
+Schema generated from ODD source 2024-01-18T12:07:02Z. . 
 TEI Edition: Development Version 
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -20540,7 +20540,7 @@ Suggested values include: 1] smufl</a:documentation>
    <define name="mei_att.oneLineStaff.attribute.ontheline">
       <optional>
          <attribute name="ontheline">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Determines the placement of notes on a 1-line staff. A value of 'true' places all notes on the line, while a value of 'false' places stems-up notes above the line and stems-down notes below the line.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Determines the placement of notes on a 1-line staff. A value of true places all notes on the line, while a value of false places stems-up notes above the line and stems-down notes below the line.</a:documentation>
             <ref name="mei_data.BOOLEAN"/>
          </attribute>
       </optional>
@@ -20812,7 +20812,7 @@ Suggested values include: 1] smufl</a:documentation>
    <define name="mei_att.placementOnStaff.attribute.onstaff">
       <optional>
          <attribute name="onstaff">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates the placement of the item within the staff. A value of 'true' means on the staff, and 'false' off the staff.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates the placement of the item within the staff. A value of true means on the staff, and false off the staff.</a:documentation>
             <ref name="mei_data.BOOLEAN"/>
          </attribute>
       </optional>

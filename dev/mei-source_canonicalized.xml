@@ -20,7 +20,7 @@
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href=../../../source/"validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2024-01-18T10:04:12.925046405+01:00-->
+<!--canonicalized: 2024-01-18T13:06:54.144444136+01:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -34191,8 +34191,8 @@ or
     <desc xml:lang="en">Attributes that record placement of notes on a single-line staff.</desc>
     <attList>
       <attDef ident="ontheline" usage="opt">
-        <desc xml:lang="en">Determines the placement of notes on a 1-line staff. A value of '<val>true</val>' places all
-          notes on the line, while a value of '<val>false</val>' places stems-up notes above the line and
+        <desc xml:lang="en">Determines the placement of notes on a 1-line staff. A value of <val>true</val> places all
+          notes on the line, while a value of <val>false</val> places stems-up notes above the line and
           stems-down notes below the line.</desc>
         <datatype>
           <rng:ref name="data.BOOLEAN"/>
@@ -34448,7 +34448,7 @@ or
     <desc xml:lang="en">Attributes capturing placement on a staff.</desc>
     <attList>
        <attDef ident="onstaff" usage="opt">
-          <desc xml:lang="en">Indicates the placement of the item within the staff. A value of '<val>true</val>' means on the staff, and '<val>false</val>' off the staff.</desc>
+          <desc xml:lang="en">Indicates the placement of the item within the staff. A value of <val>true</val> means on the staff, and <val>false</val> off the staff.</desc>
           <datatype>
              <rng:ref name="data.BOOLEAN"/>
           </datatype>

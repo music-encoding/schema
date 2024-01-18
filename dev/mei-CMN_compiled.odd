@@ -13293,8 +13293,8 @@
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that record placement of notes on a single-line staff.</desc>
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="ontheline" usage="opt">
-        <desc xml:lang="en">Determines the placement of notes on a 1-line staff. A value of '<val>true</val>' places all
-          notes on the line, while a value of '<val>false</val>' places stems-up notes above the line and
+        <desc xml:lang="en">Determines the placement of notes on a 1-line staff. A value of <val>true</val> places all
+          notes on the line, while a value of <val>false</val> places stems-up notes above the line and
           stems-down notes below the line.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.BOOLEAN"/>
@@ -13526,7 +13526,7 @@
     <desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes capturing placement on a staff.</desc>
     <attList xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
        <attDef ident="onstaff" usage="opt">
-          <desc xml:lang="en">Indicates the placement of the item within the staff. A value of '<val>true</val>' means on the staff, and '<val>false</val>' off the staff.</desc>
+          <desc xml:lang="en">Indicates the placement of the item within the staff. A value of <val>true</val> means on the staff, and <val>false</val> off the staff.</desc>
           <datatype>
              <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.BOOLEAN"/>
           </datatype>
