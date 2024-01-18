@@ -20,7 +20,7 @@
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href=../../../source/"validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2024-01-18T13:09:46.446451926+01:00-->
+<!--canonicalized: 2024-01-18T14:41:08.603044607+01:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -31561,6 +31561,9 @@ or
         </rng:choice>
       </rng:zeroOrMore>
     </content>
+    <remarks xml:lang="en">
+      <p>The MEI Neumes customization restricts the use of this element. This customization disallows <gi scheme="MEI">neume</gi> as a direct child of <gi scheme="MEI">layer</gi>.</p>
+    </remarks>
   </elementSpec>
   <elementSpec ident="oriscus" module="MEI.neumes">
     <desc xml:lang="en">Oriscus.</desc>

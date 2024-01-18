@@ -11907,7 +11907,9 @@
       <memberOf key="model.eventLike.neumes"/>
     </classes><content xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="model.appLike"/><ref name="model.editLike"/><ref name="model.neumeModifierLike"/><ref name="model.neumePart"/><ref name="model.transcriptionLike"/></choice></zeroOrMore>
-    </content></elementSpec><elementSpec rend="add" ident="oriscus" module="MEI.neumes"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Oriscus.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+    </content><remarks xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+      <p>The MEI Neumes customization restricts the use of this element. This customization disallows <gi scheme="MEI">neume</gi> as a direct child of <gi scheme="MEI">layer</gi>.</p>
+    </remarks></elementSpec><elementSpec rend="add" ident="oriscus" module="MEI.neumes"><desc xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Oriscus.</desc><classes xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       <memberOf key="att.facsimile"/>
       <memberOf key="att.oriscus.anl"/>
