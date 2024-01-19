@@ -20,7 +20,7 @@
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href=../../../source/"validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2024-01-19T22:40:56.839062038+01:00-->
+<!--canonicalized: 2024-01-19T22:54:39.243014482+01:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -19672,7 +19672,7 @@ or
     <desc xml:lang="en">Logical domain attributes.</desc>
     <classes>
       <memberOf key="att.event"/>
-      <memberOf key="att.duration.log"/>
+      <memberOf key="att.duration.additive"/>
     </classes>
   </classSpec>
   <classSpec ident="att.harpPedal.log" module="MEI.cmn" type="atts">
