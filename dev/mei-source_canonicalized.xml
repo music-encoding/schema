@@ -20,7 +20,7 @@
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href=../../../source/"validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2024-01-19T09:53:10.555817813+01:00-->
+<!--canonicalized: 2024-01-19T10:48:37.208435869+01:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -1544,7 +1544,7 @@
               &lt;tempo staff="1" tstamp="1.000000"&gt;Andante con moto &lt;rend fontfam="smufl"&gt;&amp;#xE1D3;&lt;/rend&gt; = 70&lt;/tempo&gt;
               &lt;slur startid="#m0_s2_e1" endid="#m0_s2_e2" /&gt;
             &lt;/measure&gt;
-            &lt;?edit-start?&gt;
+            &lt;?edit-end?&gt;
             &lt;measure n="1"&gt;
               &lt;staff n="1"&gt;
                 &lt;layer n="1"&gt;
