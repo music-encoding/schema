@@ -4002,12 +4002,12 @@
         <constraintSpec ident="check_beam_place" scheme="schematron">
           <constraint>
             <sch:rule context="mei:beam[@place eq 'mixed' and not(descendant::mei:*[local-name() eq 'note' or local-name() eq 'chord'][@staff != ./@staff] or descendant::mei:*[local-name() eq 'note' or local-name() eq 'chord'][@staff != ancestor::mei:staff/@n])]">
-              <sch:assert test="count(descendant::mei:*[local-name() eq 'note' or local-name() eq 'chord'][@stem.dir]) = count(descendant::mei:*[local-name() eq 'note' or local-name() eq 'chord'])">Stem direction must be specified for all notes and chords under the
+              <sch:assert test="count(descendant::mei:*[local-name() eq 'note' or local-name() eq 'chord'][@stem.dir]) = count(descendant::mei:*[local-name() eq 'note' or local-name() eq 'chord'])" role="warning">Stem directions should be specified for all notes and chords under the
                 beam.</sch:assert>
-              <sch:assert test="count(distinct-values(descendant::mei:*[local-name() eq 'note' or local-name() eq 'chord']/@stem.dir)) &gt; 1">Opposing stem directions are required for a beam with @place="mixed".</sch:assert>
+              <sch:assert test="count(distinct-values(descendant::mei:*[local-name() eq 'note' or local-name() eq 'chord']/@stem.dir)) != 1">Opposing stem directions are required for a beam with @place="mixed".</sch:assert>
             </sch:rule>
-            <sch:rule context="mei:beam[@place eq 'mixed' and (descendant::mei:*[local-name() eq 'note' or local-name() eq 'chord'][@staff != ./@staff] or descendant::mei:*[local-name() eq 'note' or local-name() eq 'chord'][@staff != ancestor::mei:staff/@n])                 and count(descendant::mei:*[local-name() eq 'note' or local-name() eq 'chord'][@stem.dir]) = count(descendant::mei:*[local-name() eq 'note' or local-name() eq 'chord'])]">
-              <sch:assert test="count(distinct-values(descendant::mei:*[local-name() eq 'note' or local-name() eq 'chord']/@stem.dir)) &gt; 1">Opposing stem directions are required for a beam with @place="mixed".</sch:assert>
+            <sch:rule context="mei:beam[@place eq 'mixed' and (descendant::mei:*[local-name() eq 'note' or local-name() eq 'chord'][@staff != ./@staff] or descendant::mei:*[local-name() eq 'note' or local-name() eq 'chord'][@staff != ancestor::mei:staff/@n]) and count(descendant::mei:*[local-name() eq 'note' or local-name() eq 'chord']/@stem.dir) = count(descendant::mei:*[local-name() eq 'note' or local-name() eq 'chord'])]">
+              <sch:assert test="count(distinct-values(descendant::mei:*[local-name() eq 'note' or local-name() eq 'chord']/@stem.dir)) != 1">Opposing stem directions are required for a beam with @place="mixed".</sch:assert>
             </sch:rule>
           </constraint>
         </constraintSpec>

@@ -5,7 +5,7 @@
           xmlns:xlink="http://www.w3.org/1999/xlink"
           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
           ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2024-01-19T20:57:38Z. . 
+Schema generated from ODD source 2024-01-19T21:41:05Z. . 
 TEI Edition: Development Version 
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -8703,16 +8703,17 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
                  xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                  xmlns:xi="http://www.w3.org/2001/XInclude"
                  context="mei:beam[@place eq 'mixed' and not(descendant::mei:*[local-name() eq 'note' or local-name() eq 'chord'][@staff != ./@staff] or descendant::mei:*[local-name() eq 'note' or local-name() eq 'chord'][@staff != ancestor::mei:staff/@n])]">
-         <sch:assert test="count(descendant::mei:*[local-name() eq 'note' or local-name() eq 'chord'][@stem.dir]) = count(descendant::mei:*[local-name() eq 'note' or local-name() eq 'chord'])">Stem direction must be specified for all notes and chords under the
+         <sch:assert test="count(descendant::mei:*[local-name() eq 'note' or local-name() eq 'chord'][@stem.dir]) = count(descendant::mei:*[local-name() eq 'note' or local-name() eq 'chord'])"
+                      role="warning">Stem directions should be specified for all notes and chords under the
                 beam.</sch:assert>
-         <sch:assert test="count(distinct-values(descendant::mei:*[local-name() eq 'note' or local-name() eq 'chord']/@stem.dir)) &gt; 1">Opposing stem directions are required for a beam with @place="mixed".</sch:assert>
+         <sch:assert test="count(distinct-values(descendant::mei:*[local-name() eq 'note' or local-name() eq 'chord']/@stem.dir)) != 1">Opposing stem directions are required for a beam with @place="mixed".</sch:assert>
       </sch:rule>
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                  xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                  xmlns:xi="http://www.w3.org/2001/XInclude"
-                 context="mei:beam[@place eq 'mixed' and (descendant::mei:*[local-name() eq 'note' or local-name() eq 'chord'][@staff != ./@staff] or descendant::mei:*[local-name() eq 'note' or local-name() eq 'chord'][@staff != ancestor::mei:staff/@n])                 and count(descendant::mei:*[local-name() eq 'note' or local-name() eq 'chord'][@stem.dir]) = count(descendant::mei:*[local-name() eq 'note' or local-name() eq 'chord'])]">
-         <sch:assert test="count(distinct-values(descendant::mei:*[local-name() eq 'note' or local-name() eq 'chord']/@stem.dir)) &gt; 1">Opposing stem directions are required for a beam with @place="mixed".</sch:assert>
+                 context="mei:beam[@place eq 'mixed' and (descendant::mei:*[local-name() eq 'note' or local-name() eq 'chord'][@staff != ./@staff] or descendant::mei:*[local-name() eq 'note' or local-name() eq 'chord'][@staff != ancestor::mei:staff/@n]) and count(descendant::mei:*[local-name() eq 'note' or local-name() eq 'chord']/@stem.dir) = count(descendant::mei:*[local-name() eq 'note' or local-name() eq 'chord'])]">
+         <sch:assert test="count(distinct-values(descendant::mei:*[local-name() eq 'note' or local-name() eq 'chord']/@stem.dir)) != 1">Opposing stem directions are required for a beam with @place="mixed".</sch:assert>
       </sch:rule>
    </pattern>
    <define name="mei_att.beamRend.attribute.slash">
