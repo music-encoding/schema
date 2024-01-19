@@ -20,7 +20,7 @@
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href=../../../source/"validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2024-01-19T16:10:08.386490977+01:00-->
+<!--canonicalized: 2024-01-19T21:44:09.583411814+01:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -10659,7 +10659,7 @@ or
                   </figure>
                </p>
                <p>Optionally, it is possible to include an <gi scheme="MEI">lb</gi> element within <gi scheme="MEI">verse</gi> to explicitly encode line and line group endings. This is specifically meant to facilitate karaoke applications.</p>
-               <p>Finally, the <att>rhythm</att> attribute can be used to specify a rhythm for the syllable that differs from that of the notes on the staff.</p>
+               <p>Finally, the <att>rhythm</att> attribute on <gi scheme="MEI">l</gi> can be used to specify a rhythm for the syllable that differs from that of the notes on the staff (see <ptr target="#lyricsAfterEvents"/>).</p>
             </div>
             <div xml:id="lyricsAfterEvents" type="div2">
                <head>Vocally Performed Text Encoded Separately</head>
@@ -10677,26 +10677,71 @@ or
                   <figure>
                      <head/>
                      <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve" valid="feasible">
-                        &lt;staff n="1"&gt;
-   &lt;layer n="1"&gt;
-      &lt;tuplet num="3" numbase="2"&gt;
-         &lt;note dur="4" oct="3" pname="c" /&gt;
-         &lt;note dur="8" oct="3" pname="e" accid.ges="f" /&gt;
-      &lt;/tuplet&gt;
-      &lt;tuplet num="3" numbase="2"&gt;
-         &lt;note dur="4" oct="3" pname="g" /&gt;
-         &lt;note dur="8" oct="3" pname="g" /&gt;
-      &lt;/tuplet&gt;
-      &lt;note dur="4" oct="3" pname="g" /&gt;
-      &lt;note dur="4" oct="3" pname="b" accid.ges="f" /&gt;
-   &lt;/layer&gt;
-&lt;/staff&gt;
+                        &lt;measure metcon="false" n="1"&gt;
+    &lt;staff n="1"&gt;
+        &lt;layer n="1"&gt;
+            &lt;note dur="4" pname="e" oct="3" stem.dir="down"&gt;
+                &lt;verse n="1"&gt;
+                    &lt;syl&gt;Es&lt;/syl&gt;
+                &lt;/verse&gt;
+            &lt;/note&gt;
+        &lt;/layer&gt;
+    &lt;/staff&gt;
+&lt;/measure&gt;
+&lt;measure n="2"&gt;
+    &lt;staff n="1"&gt;
+        &lt;layer n="1"&gt;
+            &lt;note dur="2" pname="a" oct="3" stem.dir="down"&gt;
+                &lt;verse n="1"&gt;
+                    &lt;syl&gt;war&lt;/syl&gt;
+                &lt;/verse&gt;
+            &lt;/note&gt;
+            &lt;note dur="4" pname="a" oct="3" stem.dir="down"&gt;
+                &lt;verse n="1"&gt;
+                    &lt;syl&gt;ein&lt;/syl&gt;
+                &lt;/verse&gt;
+            &lt;/note&gt;
+            &lt;note dots="1" dur="4" pname="e" oct="3" stem.dir="down" xml:id="n8zcqth"&gt;
+                &lt;verse n="1"&gt;
+                    &lt;syl con="d" wordpos="i"&gt;Kö&lt;/syl&gt;
+                &lt;/verse&gt;
+            &lt;/note&gt;
+            &lt;note dur="8" pname="e" oct="3" stem.dir="down" xml:id="nibn3m21"&gt;
+                &lt;verse n="1"&gt;
+                    &lt;syl wordpos="t"&gt;nig&lt;/syl&gt;
+                &lt;/verse&gt;
+            &lt;/note&gt;
+            &lt;note dur="4" pname="e" oct="3" stem.dir="down"&gt;
+                &lt;verse n="1"&gt;
+                    &lt;syl&gt;in&lt;/syl&gt;
+                &lt;/verse&gt;
+            &lt;/note&gt;
+        &lt;/layer&gt;
+    &lt;/staff&gt;
+    &lt;tie endid="#nibn3m21" staff="1" startid="#n8zcqth" lform="dashed"/&gt;
+&lt;/measure&gt;
+&lt;measure n="3"&gt;
+    &lt;staff n="1"&gt;
+        &lt;layer n="1"&gt;
+            &lt;note dots="1" dur="2" pname="f" oct="3" stem.dir="down"&gt;
+                &lt;verse n="1"&gt;
+                    &lt;syl con="d" wordpos="i"&gt;Thu&lt;/syl&gt;
+                &lt;/verse&gt;
+            &lt;/note&gt;
+            &lt;note dur="2" pname="c" oct="3" stem.dir="up"&gt;
+                &lt;verse n="1"&gt;
+                    &lt;syl wordpos="t"&gt;le,&lt;/syl&gt;
+                &lt;/verse&gt;
+            &lt;/note&gt;
+        &lt;/layer&gt;
+    &lt;/staff&gt;
+&lt;/measure&gt;
 &lt;!-- later --&gt;
 &lt;div&gt;
-   &lt;lg staff="1"&gt;
-      &lt;l&gt;&lt;syl&gt;Or&lt;/syl&gt; &lt;syl&gt;let&lt;/syl&gt; &lt;syl con="d"&gt;Au&lt;/syl&gt;&lt;syl&gt;tumn&lt;/syl&gt; &lt;syl&gt;fall&lt;/syl&gt; &lt;syl&gt;on&lt;/syl&gt; &lt;syl&gt;me&lt;/syl&gt;&lt;/l&gt;
-      &lt;l&gt;&lt;syl&gt;Where&lt;/syl&gt; &lt;syl con="d"&gt;a&lt;/syl&gt;&lt;syl&gt;field&lt;/syl&gt; &lt;syl&gt;I&lt;/syl&gt; &lt;syl&gt;lin&lt;/syl&gt;&lt;syl&gt;ger&lt;/syl&gt;&lt;/l&gt;
-   &lt;/lg&gt;
+    &lt;lg staff="1"&gt;
+        &lt;l rhythm="4 2 4 2 4 2. 2"&gt; &lt;syl&gt;Es&lt;/syl&gt; &lt;syl&gt;ging&lt;/syl&gt; &lt;syl&gt;ihm&lt;/syl&gt; &lt;syl&gt;nichts&lt;/syl&gt; &lt;syl con="d" wordpos="i"&gt;dar&lt;/syl&gt; &lt;syl con="d" wordpos="m"&gt;ü&lt;/syl&gt; &lt;syl wordpos="t"&gt;ber,&lt;/syl&gt;
+        &lt;/l&gt;
+    &lt;/lg&gt;
 &lt;/div&gt;
 
                      </egXML>
