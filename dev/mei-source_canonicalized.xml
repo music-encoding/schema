@@ -20,7 +20,7 @@
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href=../../../source/"validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2024-01-19T22:54:39.243014482+01:00-->
+<!--canonicalized: 2024-01-20T12:03:36.815572925+01:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -6297,12 +6297,13 @@ or
 </egXML>
                      </figure>
                   </p>
-                  <p>The location of a dynamic marking in relation to a staff may be specified using the <att>place</att> attribute, which may be given as <val>above</val>, <val>within</val>, or <val>below</val> the staff:</p>
+                  <p>The location of a dynamic marking in relation to a staff may be specified using the <att>place</att> attribute, which may be given as <val>above</val>, <val>below</val> or <val>within</val> the staff or even <val>between</val> two staves:</p>
                   <p>
                      <figure>
                         <head/>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve" valid="true">&lt;dynam place="above" staff="1" tstamp="1"&gt;p&lt;/dynam&gt;
-</egXML>
+&lt;!-- or --&gt;
+&lt;dynam place="between" staff="1 2" tstamp="2"&gt;f&lt;/dynam&gt;</egXML>
                      </figure>
                   </p>
                   <p>Dynamics must also be associated with a particular time point in a measure, using the <att>tstamp</att>, or with a particular event, using the <att>startid</att> attribute. Linking a control event with measures and events is discussed in section <ptr target="#cmnTstamp"/>:</p>
