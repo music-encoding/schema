@@ -10017,8 +10017,7 @@
     </constraintSpec>
     <attList xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="midi.instrnum" usage="opt">
-        <desc xml:lang="en">Captures the General MIDI instrument number. Use an integer for a 0-based value. An
-          integer preceded by "in" indicates a 1-based value.</desc>
+        <desc xml:lang="en">Captures the General MIDI instrument number. Use an integer for a 0-based value.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.MIDIVALUE"/>
         </datatype>

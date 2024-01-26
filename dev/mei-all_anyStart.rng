@@ -5,7 +5,7 @@
           xmlns:xlink="http://www.w3.org/1999/xlink"
           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
           ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2024-01-26T15:22:49Z. . 
+Schema generated from ODD source 2024-01-26T15:36:48Z. . 
 TEI Edition: Development Version 
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -16994,7 +16994,7 @@ Suggested values include: 1] glue; 2] thread; 3] needle; 4] tape; 5] staple</a:d
    <define name="mei_att.midiInstrument.attribute.midi.instrnum">
       <optional>
          <attribute name="midi.instrnum">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Captures the General MIDI instrument number. Use an integer for a 0-based value. An integer preceded by "in" indicates a 1-based value.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Captures the General MIDI instrument number. Use an integer for a 0-based value.</a:documentation>
             <ref name="mei_data.MIDIVALUE"/>
          </attribute>
       </optional>
