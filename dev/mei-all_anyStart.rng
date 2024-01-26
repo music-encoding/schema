@@ -5,7 +5,7 @@
           xmlns:xlink="http://www.w3.org/1999/xlink"
           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
           ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2024-01-20T11:03:43Z. . 
+Schema generated from ODD source 2024-01-26T14:49:15Z. . 
 TEI Edition: Development Version 
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -21971,7 +21971,7 @@ Suggested values include: 1] smufl</a:documentation>
    <define name="mei_att.optimization.attribute.optimize">
       <optional>
          <attribute name="optimize">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates whether staves without notes, rests, etc. should be displayed. When the value is 'true', empty staves are displayed.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates whether staves without notes, rests, etc. should be displayed. When the value is 'true', empty staves are not displayed.</a:documentation>
             <ref name="mei_data.BOOLEAN"/>
          </attribute>
       </optional>
