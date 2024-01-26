@@ -20,7 +20,7 @@
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href=../../../source/"validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2024-01-26T15:52:48.797952046+01:00-->
+<!--canonicalized: 2024-01-26T16:19:42.679835319+01:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -13709,7 +13709,7 @@ or
                             <specDesc key="att.dataPointing" atts="data"/>
                         </specList>
                     </p>
-                    <p>To reference images, the <ident type="class">att.facsimile</ident> class provides an attribute for pointing to <gi>surface</gi> and <gi>zone</gi> elements:</p>
+                    <p>To reference images, the <ident type="class">att.facsimile</ident> class provides an attribute for pointing to <gi scheme="MEI">surface</gi> and <gi scheme="MEI">zone</gi> elements:</p>
                     <p>
                         <specList>
                             <specDesc key="att.facsimile" atts="facs"/>
@@ -20024,7 +20024,7 @@ or
       <attDef ident="func" usage="opt">
         <gloss versionDate="2022-10-18" xml:lang="en">function</gloss>
         <desc xml:lang="en">Indicates the function of the depressed pedal, but not necessarily the text associated
-          with its use. Use the <gi>dir</gi> element for such text.</desc>
+          with its use. Use the <gi scheme="MEI">dir</gi> element for such text.</desc>
         <datatype>
           <rng:data type="NMTOKEN"/>
         </datatype>
