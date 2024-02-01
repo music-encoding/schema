@@ -27,7 +27,7 @@
     <body>
 
       <!-- Limit the set of possible start elements -->
-      <schemaSpec ident="mei" ns="http://www.music-encoding.org/ns/mei" prefix="mei_" start="mei meiHead meiCorpus music" source="/opt/docker-mei/music-encoding/build/mei-source_canonicalized.xml"><macroSpec rend="add" ident="data.ACCIDENTAL.WRITTEN" module="MEI" type="dt">
+      <schemaSpec ident="mei" ns="http://www.music-encoding.org/ns/mei" prefix="mei_" start="mei meiHead meiCorpus music" source="/opt/docker-mei/music-encoding/build/mei-source_canonicalized_v5.1-dev.xml"><macroSpec rend="add" ident="data.ACCIDENTAL.WRITTEN" module="MEI" type="dt">
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Written accidental values.</desc>
     <content xmlns:xi="http://www.w3.org/2001/XInclude">
       <alternate minOccurs="1" maxOccurs="1"><macroRef key="data.ACCIDENTAL.WRITTEN.basic"/><macroRef key="data.ACCIDENTAL.WRITTEN.extended"/><macroRef key="data.ACCIDENTAL.aeu"/><macroRef key="data.ACCIDENTAL.persian"/></alternate>
@@ -7502,8 +7502,7 @@
     </constraintSpec>
     <attList xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="midi.instrnum" usage="opt">
-        <desc xml:lang="en">Captures the General MIDI instrument number. Use an integer for a 0-based value. An
-          integer preceded by "in" indicates a 1-based value.</desc>
+        <desc xml:lang="en">Captures the General MIDI instrument number. Use an integer for a 0-based value.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.MIDIVALUE"/>
         </datatype>
@@ -11086,7 +11085,7 @@
     <attList xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="optimize" usage="opt">
         <desc xml:lang="en">Indicates whether staves without notes, rests, etc. should be displayed. When the
-          value is 'true', empty staves are displayed.</desc>
+          value is 'true', empty staves are not displayed.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.BOOLEAN"/>
         </datatype>

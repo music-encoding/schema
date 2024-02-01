@@ -5,7 +5,7 @@
           xmlns:xlink="http://www.w3.org/1999/xlink"
           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
           ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2024-01-19T21:54:46Z. . 
+Schema generated from ODD source 2024-02-01T13:49:59Z. . 
 TEI Edition: Development Version 
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -4043,7 +4043,7 @@ Suggested values include: 1] smufl</a:documentation>
    <define name="mei_att.midiInstrument.attribute.midi.instrnum">
       <optional>
          <attribute name="midi.instrnum">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Captures the General MIDI instrument number. Use an integer for a 0-based value. An integer preceded by "in" indicates a 1-based value.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Captures the General MIDI instrument number. Use an integer for a 0-based value.</a:documentation>
             <ref name="mei_data.MIDIVALUE"/>
          </attribute>
       </optional>
