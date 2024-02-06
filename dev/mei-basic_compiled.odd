@@ -3745,7 +3745,7 @@
       
       <memberOf key="model.controlEventLike.cmn"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The modern arpeggiation symbol is a vertical wavy line preceding the chord. When the notes
         of the chord are to be performed from highest to lowest, an arrowhead may be added to the
@@ -3792,7 +3792,7 @@
       
       <memberOf key="model.eventLike.cmn"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p> <gi scheme="MEI">beatRpt</gi> may also be used in guitar or rhythm parts to indicate where
         chord changes occur. When these parts require durations longer or shorter than a beat;
@@ -3808,7 +3808,7 @@
       
       <memberOf key="model.controlEventLike.cmn"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><constraintSpec xmlns:xi="http://www.w3.org/2001/XInclude" ident="breath_start-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:breath">
@@ -3839,7 +3839,7 @@
       <choice xmlns="http://relaxng.org/ns/structure/1.0"><ref name="chord"/><ref name="note"/></choice>
     </content></elementSpec><elementSpec rend="add" ident="fermata" module="MEI.cmn"><desc rend="replace">An indication placed over a note or rest to indicate that it should be held longer than its
                         written value. May also occur over a bar line to indicate the end of a phrase or section.
-                        Sometimes called a 'hold' or 'pause'.</desc><classes><memberOf key="att.common"/><memberOf key="att.fermata.log"/><memberOf key="att.fermata.vis"/><memberOf key="model.controlEventLike.cmn"/></classes><content><rng:empty/></content><constraintSpec ident="fermata_start-type_attributes_required" scheme="schematron">
+                        Sometimes called a 'hold' or 'pause'.</desc><classes><memberOf key="att.common"/><memberOf key="att.fermata.log"/><memberOf key="att.fermata.vis"/><memberOf key="model.controlEventLike.cmn"/></classes><content autoPrefix="true"><empty/></content><constraintSpec ident="fermata_start-type_attributes_required" scheme="schematron">
                         <constraint>
                             <sch:rule context="mei:fermata">
                                 <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of
@@ -3936,7 +3936,7 @@
       
       <memberOf key="model.controlEventLike.cmn"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><constraintSpec xmlns:xi="http://www.w3.org/2001/XInclude" ident="hairpin_start-_and_end-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:hairpin">
@@ -3965,7 +3965,7 @@
       
       <memberOf key="model.eventLike.cmn"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content></elementSpec><elementSpec rend="add" ident="harpPedal" module="MEI.cmn"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">harp pedal</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Harp pedal diagram.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       
@@ -3975,7 +3975,7 @@
       
       <memberOf key="model.controlEventLike.cmn"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><constraintSpec xmlns:xi="http://www.w3.org/2001/XInclude" ident="harpPedal_start-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:harpPedal">
@@ -4046,7 +4046,7 @@
       
       <memberOf key="model.eventLike.measureFilling"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>Automatically-generated numbering of consecutive measures of rest may be controlled via the
         <att>multi.number</att> attribute on the <gi scheme="MEI">scoreDef</gi> or <gi scheme="MEI">staffDef</gi> elements.</p>
@@ -4059,7 +4059,7 @@
       
       <memberOf key="model.eventLike.measureFilling"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The automated numbering of consecutive measures of rest may be controlled via the
         <att>multi.number</att> attribute on the <gi scheme="MEI">scoreDef</gi> or <gi scheme="MEI">staffDef</gi> elements.</p>
@@ -4073,7 +4073,7 @@
       
       <memberOf key="model.eventLike.measureFilling"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content></elementSpec><elementSpec rend="add" ident="multiRpt" module="MEI.cmn"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">multiple repeat</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Multiple repeated measures.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       
@@ -4083,7 +4083,7 @@
       
       <memberOf key="model.eventLike.measureFilling"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>In modern publishing practice, repeats of more than two measures should be written out
         using repeat signs. This element, however, is provided for handling non-standard practices
@@ -4128,7 +4128,7 @@
       
       <memberOf key="model.controlEventLike.cmn"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><constraintSpec xmlns:xi="http://www.w3.org/2001/XInclude" ident="pedal_start-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:pedal">
@@ -4403,7 +4403,7 @@
       
       <memberOf key="model.ornamentLike.cmn"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><constraintSpec xmlns:xi="http://www.w3.org/2001/XInclude" ident="mordent_start-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:mordent">
@@ -4425,7 +4425,7 @@
       
       <memberOf key="model.ornamentLike.cmn"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><constraintSpec xmlns:xi="http://www.w3.org/2001/XInclude" ident="trill_start-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:trill">
@@ -4452,7 +4452,7 @@
       
       <memberOf key="model.ornamentLike.cmn"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><constraintSpec xmlns:xi="http://www.w3.org/2001/XInclude" ident="turn_start-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:turn">
@@ -4988,7 +4988,7 @@
       <memberOf key="att.chordMember.log"/>
       
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The <att>string</att>, <att>fret</att>, and <att>fing</att> attributes are provided in
         order to create displayable chord tablature grids. The <att>inth</att> (harmonic interval)
@@ -5357,7 +5357,7 @@
       
       <memberOf key="model.instrDefLike"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>This element provides a starting or default instrument declaration for a staff, a group of
         staves, or a layer. Following scoreDef, staffDef, layerDef, or MIDI prog elements may then
@@ -7119,7 +7119,7 @@
       <memberOf key="model.noteModifierLike"/>
       
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>An accidental may raise a pitch by one or two semitones or it may cancel a previous
         accidental or part of a key signature. This element provides an alternative to the
@@ -7149,7 +7149,7 @@
       <memberOf key="model.chordPart"/>
       <memberOf key="model.noteModifierLike"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>Articulations typically affect duration, such as staccato marks, or the force of attack,
         such as accents. This element provides an alternative to the <att>artic</att> attribute on
@@ -7180,7 +7180,7 @@
       <memberOf key="att.caesura.vis"/>
       <memberOf key="model.controlEventLike"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><constraintSpec xmlns:xi="http://www.w3.org/2001/XInclude" ident="caesura_start-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:caesura">
@@ -7226,7 +7226,7 @@
       <memberOf key="model.staffDefPart"/>
       
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><constraintSpec xmlns:xi="http://www.w3.org/2001/XInclude" ident="Clef_position_lines" scheme="schematron">
       <constraint>
         <sch:rule context="mei:clef[matches(@shape, '[FCG]')][ancestor::mei:staffDef[@lines]]">
@@ -7410,7 +7410,7 @@
       
       <memberOf key="model.lbLike"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The <att>n</att> attribute should be used to record a number associated with this textual
         line. See comment on <gi scheme="MEI">verse</gi> element for description of <att>func</att>
@@ -7647,7 +7647,7 @@
       <memberOf key="att.sb.vis"/>
       <memberOf key="model.milestoneLike.music"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>Do not confuse this element with the <gi scheme="MEI">lb</gi> element, which performs a
         similar function in prose.</p>
@@ -7702,7 +7702,7 @@
       
       <memberOf key="model.eventLike"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content></elementSpec><elementSpec rend="add" ident="staff" module="MEI.shared"><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">A group of equidistant horizontal lines on which notes are placed in order to represent
       pitch or a grouping element for individual 'strands' of notes, rests, etc. that may or may not
       actually be rendered on staff lines; that is, both diastematic and non-diastematic
@@ -7900,7 +7900,7 @@
       <memberOf key="att.symbol.vis"/>
       <memberOf key="model.textPhraseLike.limited"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><constraintSpec xmlns:xi="http://www.w3.org/2001/XInclude" ident="symbolDef_symbol_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:symbol[ancestor::mei:symbolDef]">
@@ -8091,7 +8091,7 @@
       <memberOf key="att.common"/>
       <memberOf key="att.startEndId"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><attList><attDef xmlns:xi="http://www.w3.org/2001/XInclude" ident="fret" usage="opt">
         <desc xml:lang="en">Records the location at which the strings should be stopped against a fret in a
           fretboard diagram. This may or may not be the same as the actual location on the fretboard

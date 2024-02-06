@@ -5004,7 +5004,7 @@
       <memberOf key="att.arpeg.anl"/>
       <memberOf key="model.controlEventLike.cmn"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The modern arpeggiation symbol is a vertical wavy line preceding the chord. When the notes
         of the chord are to be performed from highest to lowest, an arrowhead may be added to the
@@ -5078,7 +5078,7 @@
       <memberOf key="att.beamSpan.anl"/>
       <memberOf key="model.controlEventLike.cmn"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><constraintSpec xmlns:xi="http://www.w3.org/2001/XInclude" ident="beamspan_start-_and_end-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:beamSpan">
@@ -5105,7 +5105,7 @@
       <memberOf key="att.targetEval"/>
       <memberOf key="model.eventLike.cmn"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p> <gi scheme="MEI">beatRpt</gi> may also be used in guitar or rhythm parts to indicate where
         chord changes occur. When these parts require durations longer or shorter than a beat;
@@ -5121,7 +5121,7 @@
       <memberOf key="att.bend.anl"/>
       <memberOf key="model.controlEventLike"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><constraintSpec xmlns:xi="http://www.w3.org/2001/XInclude" ident="bend_start-_and_end-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:bend">
@@ -5167,7 +5167,7 @@
       <memberOf key="att.breath.anl"/>
       <memberOf key="model.controlEventLike.cmn"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><constraintSpec xmlns:xi="http://www.w3.org/2001/XInclude" ident="breath_start-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:breath">
@@ -5207,7 +5207,7 @@
       <memberOf key="att.fermata.anl"/>
       <memberOf key="model.controlEventLike.cmn"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><constraintSpec xmlns:xi="http://www.w3.org/2001/XInclude" ident="fermata_start-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:fermata">
@@ -5298,7 +5298,7 @@
       <memberOf key="att.hairpin.anl"/>
       <memberOf key="model.controlEventLike.cmn"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><constraintSpec xmlns:xi="http://www.w3.org/2001/XInclude" ident="hairpin_start-_and_end-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:hairpin">
@@ -5327,7 +5327,7 @@
       <memberOf key="att.halfmRpt.anl"/>
       <memberOf key="model.eventLike.cmn"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content></elementSpec><elementSpec rend="add" ident="harpPedal" module="MEI.cmn"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">harp pedal</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Harp pedal diagram.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       <memberOf key="att.facsimile"/>
@@ -5337,7 +5337,7 @@
       <memberOf key="att.harpPedal.anl"/>
       <memberOf key="model.controlEventLike.cmn"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><constraintSpec xmlns:xi="http://www.w3.org/2001/XInclude" ident="harpPedal_start-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:harpPedal">
@@ -5408,7 +5408,7 @@
       <memberOf key="att.meterSig.vis"/>
       <memberOf key="model.meterSigLike"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content></elementSpec><elementSpec rend="add" ident="meterSigGrp" module="MEI.cmn"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">meter signature group</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Used to capture alternating, interchanging, mixed or other non-standard meter signatures.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       <memberOf key="att.facsimile"/>
@@ -5449,7 +5449,7 @@
       <memberOf key="att.mRest.anl"/>
       <memberOf key="model.eventLike.measureFilling"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>Automatically-generated numbering of consecutive measures of rest may be controlled via the
         <att>multi.number</att> attribute on the <gi scheme="MEI">scoreDef</gi> or <gi scheme="MEI">staffDef</gi> elements.</p>
@@ -5462,7 +5462,7 @@
       <memberOf key="att.mRpt.anl"/>
       <memberOf key="model.eventLike.measureFilling"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The automated numbering of consecutive measures of rest may be controlled via the
         <att>multi.number</att> attribute on the <gi scheme="MEI">scoreDef</gi> or <gi scheme="MEI">staffDef</gi> elements.</p>
@@ -5476,7 +5476,7 @@
       <memberOf key="att.mRpt2.anl"/>
       <memberOf key="model.eventLike.measureFilling"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content></elementSpec><elementSpec rend="add" ident="mSpace" module="MEI.cmn"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">measure space</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">A measure containing only empty space in any meter.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       <memberOf key="att.facsimile"/>
@@ -5486,7 +5486,7 @@
       <memberOf key="att.mSpace.anl"/>
       <memberOf key="model.eventLike.measureFilling"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The automated numbering of consecutive measures of space may be controlled via the
         <att>multi.number</att> attribute on the <gi scheme="MEI">scoreDef</gi> or <gi scheme="MEI">staffDef</gi> elements.</p>
@@ -5500,7 +5500,7 @@
       <memberOf key="att.multiRest.anl"/>
       <memberOf key="model.eventLike.measureFilling"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content></elementSpec><elementSpec rend="add" ident="multiRpt" module="MEI.cmn"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">multiple repeat</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Multiple repeated measures.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       <memberOf key="att.facsimile"/>
@@ -5510,7 +5510,7 @@
       <memberOf key="att.multiRpt.anl"/>
       <memberOf key="model.eventLike.measureFilling"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>In modern publishing practice, repeats of more than two measures should be written out
         using repeat signs. This element, however, is provided for handling non-standard practices
@@ -5617,7 +5617,7 @@
       <memberOf key="att.pedal.anl"/>
       <memberOf key="model.controlEventLike.cmn"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><constraintSpec xmlns:xi="http://www.w3.org/2001/XInclude" ident="pedal_start-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:pedal">
@@ -5785,7 +5785,7 @@
       <memberOf key="att.tupletSpan.anl"/>
       <memberOf key="model.controlEventLike.cmn"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><constraintSpec xmlns:xi="http://www.w3.org/2001/XInclude" ident="tupletSpan_start-_and_end-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:tupletSpan">
@@ -5931,7 +5931,7 @@
       <memberOf key="att.mordent.anl"/>
       <memberOf key="model.ornamentLike.cmn"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><constraintSpec xmlns:xi="http://www.w3.org/2001/XInclude" ident="mordent_start-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:mordent">
@@ -5953,7 +5953,7 @@
       <memberOf key="att.trill.anl"/>
       <memberOf key="model.ornamentLike.cmn"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><constraintSpec xmlns:xi="http://www.w3.org/2001/XInclude" ident="trill_start-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:trill">
@@ -5980,7 +5980,7 @@
       <memberOf key="att.turn.anl"/>
       <memberOf key="model.ornamentLike.cmn"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><constraintSpec xmlns:xi="http://www.w3.org/2001/XInclude" ident="turn_start-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:turn">
@@ -6481,7 +6481,7 @@
       <memberOf key="att.reasonIdent"/>
       <memberOf key="model.transcriptionLike"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>When material is omitted because it is illegible or inaudible, <gi scheme="MEI">unclear</gi> should be used instead. Similarly, use <gi scheme="MEI">damage</gi> if the
         omission is due to damage and <gi scheme="MEI">del</gi> if the omission is because the
@@ -6507,7 +6507,7 @@
       <memberOf key="att.medium"/>
       <memberOf key="model.transcriptionLike"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><attList><attDef xmlns:xi="http://www.w3.org/2001/XInclude" ident="character" usage="opt">
         <desc xml:lang="en">Describes the character of the new hand.</desc>
         <datatype>
@@ -8241,7 +8241,7 @@
       <memberOf key="att.chordMember.log"/>
       <memberOf key="att.chordMember.vis"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The <att>string</att>, <att>fret</att>, and <att>fing</att> attributes are provided in
         order to create displayable chord tablature grids. The <att>inth</att> (harmonic interval)
@@ -10443,7 +10443,7 @@
       <memberOf key="model.eventLike.mensural"/>
       <memberOf key="model.staffDefPart.mensural"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The <gi scheme="MEI">mensur</gi> element is provided for the encoding of mensural notation.
         The <att>slash</att> attribute indicates the number lines added to the mensuration sign. For
@@ -10471,7 +10471,7 @@
       <memberOf key="model.eventLike.mensural"/>
       <memberOf key="model.staffDefPart.mensural"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The proport element is provided for the encoding of mensural notation. It allows the
         description of note durations as arithmetic ratios. While mensuration refers to the normal
@@ -10485,7 +10485,7 @@
       <memberOf key="att.stem.ges"/>
       <memberOf key="att.stem.anl"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><constraintSpec xmlns:xi="http://www.w3.org/2001/XInclude" ident="Check_stem" scheme="schematron">
       <constraint>
         <sch:rule context="mei:stem">
@@ -10710,7 +10710,7 @@
       <memberOf key="att.midiNumber"/>
       <memberOf key="att.midiValue"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The <att>num</att> attribute specifies a MIDI parameter number, while <att>val</att>
         contains the parameter value. Each must fall in the range 0-127.</p>
@@ -10718,7 +10718,7 @@
       <memberOf key="att.common"/>
       <memberOf key="att.midi.event"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><attList><attDef xmlns:xi="http://www.w3.org/2001/XInclude" ident="num" usage="req">
         <desc xml:lang="en">MIDI number in the range set by data.MIDICHANNEL.</desc>
         <datatype>
@@ -10729,7 +10729,7 @@
       <memberOf key="att.midi.event"/>
       <memberOf key="att.midiNumber"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The value of the <att>num</att> attribute must be in the range 0-127.</p>
     </remarks></elementSpec><elementSpec rend="add" ident="cue" module="MEI.midi"><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">MIDI cue point.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -10759,7 +10759,7 @@
       <memberOf key="att.instrDef.vis"/>
       <memberOf key="model.instrDefLike"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>This element provides a starting or default instrument declaration for a staff, a group of
         staves, or a layer. Following scoreDef, staffDef, layerDef, or MIDI prog elements may then
@@ -10796,30 +10796,30 @@
       <memberOf key="att.midi.event"/>
       <memberOf key="att.midiNumber"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content></elementSpec><elementSpec rend="add" ident="noteOn" module="MEI.midi"><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">MIDI note-on event.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       <memberOf key="att.midi.event"/>
       <memberOf key="att.midiNumber"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content></elementSpec><elementSpec rend="add" ident="port" module="MEI.midi"><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">MIDI port.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       <memberOf key="att.midi.event"/>
       <memberOf key="att.midiNumber"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content></elementSpec><elementSpec rend="add" ident="prog" module="MEI.midi"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">program</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">MIDI program change.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       <memberOf key="att.midi.event"/>
       <memberOf key="att.midiNumber"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content></elementSpec><elementSpec rend="add" ident="seqNum" module="MEI.midi"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">sequence number</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">MIDI sequence number.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       <memberOf key="att.midi.event"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><attList><attDef xmlns:xi="http://www.w3.org/2001/XInclude" ident="num" usage="req">
         <desc xml:lang="en">Number in the range 0-65535.</desc>
         <datatype>
@@ -10838,7 +10838,7 @@
       <memberOf key="att.midi.event"/>
       <memberOf key="att.midiNumber"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><attList><attDef xmlns:xi="http://www.w3.org/2001/XInclude" ident="form" usage="req">
         <desc xml:lang="en">Indicates whether this is note-on or note-off velocity data.</desc>
         <valList type="closed">
@@ -11856,7 +11856,7 @@
       <memberOf key="att.hispanTick.vis"/>
       <memberOf key="model.neumeModifierLike"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content></elementSpec><elementSpec rend="add" ident="liquescent" module="MEI.neumes"><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Liquescent.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       <memberOf key="att.facsimile"/>
@@ -12156,7 +12156,7 @@
       <memberOf key="att.targetEval"/>
       <memberOf key="model.locrefLike"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>Unlike the <gi scheme="MEI">ref</gi> element, <gi scheme="MEI">ptr</gi> cannot contain text
         or sub-elements to describe the referenced object.</p>
@@ -16024,7 +16024,7 @@
       <memberOf key="model.noteModifierLike"/>
       <memberOf key="model.syllablePart"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>An accidental may raise a pitch by one or two semitones or it may cancel a previous
         accidental or part of a key signature. This element provides an alternative to the
@@ -16083,7 +16083,7 @@
       <memberOf key="att.ambNote.ges"/>
       <memberOf key="att.ambNote.anl"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content></elementSpec><elementSpec rend="add" ident="analytic" module="MEI.shared"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">analytic level</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Contains bibliographic elements describing an item (<abbr>e.g.</abbr>, an article or
       poem) published within a monograph or journal and not as an independent publication.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
@@ -16155,7 +16155,7 @@
       <memberOf key="model.chordPart"/>
       <memberOf key="model.noteModifierLike"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>Articulations typically affect duration, such as staccato marks, or the force of attack,
         such as accents. This element provides an alternative to the <att>artic</att> attribute on
@@ -16187,7 +16187,7 @@
       <memberOf key="att.barLine.anl"/>
       <memberOf key="model.eventLike"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>This element is provided for repertoires, such as mensural notation, that lack measures.
         Because the <gi scheme="MEI">barLine</gi> element’s attributes, from which the logical and
@@ -16288,7 +16288,7 @@
       <memberOf key="att.caesura.vis"/>
       <memberOf key="model.controlEventLike"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><constraintSpec xmlns:xi="http://www.w3.org/2001/XInclude" ident="caesura_start-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:caesura">
@@ -16358,7 +16358,7 @@
       <memberOf key="model.milestoneLike.music"/>
       <memberOf key="model.milestoneLike.text"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><attList><attDef xmlns:xi="http://www.w3.org/2001/XInclude" ident="n" usage="req">
         <desc xml:lang="en">Records the column number.</desc>
         <datatype>
@@ -16402,7 +16402,7 @@
       <memberOf key="model.staffDefPart"/>
       <memberOf key="model.syllablePart"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><constraintSpec xmlns:xi="http://www.w3.org/2001/XInclude" ident="Clef_position_lines" scheme="schematron">
       <constraint>
         <sch:rule context="mei:clef[matches(@shape, '[FCG]')][ancestor::mei:staffDef[@lines]]">
@@ -16444,7 +16444,7 @@
       <memberOf key="model.milestoneLike.music"/>
       <memberOf key="model.milestoneLike.text"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><attList><attDef xmlns:xi="http://www.w3.org/2001/XInclude" ident="cols" usage="req">
         <desc xml:lang="en">Records the number of columns.</desc>
         <datatype>
@@ -16772,7 +16772,7 @@
       <memberOf key="model.noteModifierLike"/>
       <memberOf key="model.eventLike.mensural"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>This element provides an alternative to the <att>dots</att> attribute on <gi scheme="MEI">note</gi> and <gi scheme="MEI">rest</gi> elements. It should be used when specific display
         info, such as size or color, needs to be recorded for the dot. This element may also be used
@@ -16898,7 +16898,7 @@
       <memberOf key="att.source"/>
       <memberOf key="att.targetEval"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The <att>plist</att> attribute contains an ordered list of identifiers of descendant <gi scheme="MEI">section</gi>, <gi scheme="MEI">ending</gi>, <gi scheme="MEI">lem</gi>, or <gi scheme="MEI">rdg</gi> elements. For example, the sequence "#A #End1 #A #End2" indicates that
         the section labelled 'A' comes first, then the ending labelled 'End1', followed by the 'A'
@@ -17071,7 +17071,7 @@
       <memberOf key="att.keyAccid.vis"/>
       <memberOf key="model.keyAccidLike"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><constraintSpec xmlns:xi="http://www.w3.org/2001/XInclude" ident="Check_keyAccidPlacement" scheme="schematron">
       <constraint>
         <sch:rule context="mei:keyAccid">
@@ -17191,7 +17191,7 @@
       <memberOf key="att.source"/>
       <memberOf key="model.lbLike"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The <att>n</att> attribute should be used to record a number associated with this textual
         line. See comment on <gi scheme="MEI">verse</gi> element for description of <att>func</att>
@@ -17443,7 +17443,7 @@
       <memberOf key="att.pad.anl"/>
       <memberOf key="model.eventLike"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content></elementSpec><elementSpec rend="add" ident="part" module="MEI.shared"><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">An alternative visual rendition of the score from the point of view of a particular
       performer (or group of performers).</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
@@ -17647,7 +17647,7 @@
       <memberOf key="att.targetEval"/>
       <memberOf key="model.relationLike"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><constraintSpec xmlns:xi="http://www.w3.org/2001/XInclude" ident="FRBR_relation" scheme="schematron">
       <constraint>
         
@@ -17809,7 +17809,7 @@
       <memberOf key="att.sb.vis"/>
       <memberOf key="model.milestoneLike.music"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>Do not confuse this element with the <gi scheme="MEI">lb</gi> element, which performs a
         similar function in prose.</p>
@@ -17894,7 +17894,7 @@
       <memberOf key="att.space.anl"/>
       <memberOf key="model.eventLike"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content></elementSpec><elementSpec rend="add" ident="speaker" module="MEI.shared"><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Contains a specialized form of heading or label, giving the name of one or more speakers
       in a dramatic text or fragment.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
@@ -18150,7 +18150,7 @@
       <memberOf key="att.symbol.vis"/>
       <memberOf key="model.textPhraseLike.limited"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><constraintSpec xmlns:xi="http://www.w3.org/2001/XInclude" ident="symbolDef_symbol_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:symbol[ancestor::mei:symbolDef]">
@@ -18481,7 +18481,7 @@
       <memberOf key="att.common"/>
       <memberOf key="att.startEndId"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><attList><attDef xmlns:xi="http://www.w3.org/2001/XInclude" ident="fret" usage="opt">
         <desc xml:lang="en">Records the location at which the strings should be stopped against a fret in a
           fretboard diagram. This may or may not be the same as the actual location on the fretboard
@@ -18892,7 +18892,7 @@
       <memberOf key="att.facsimile"/>
       <memberOf key="model.graphicPrimitiveLike"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <rng:empty/>
+      <empty/>
     </content><constraintSpec xmlns:xi="http://www.w3.org/2001/XInclude" ident="symbolDef_curve_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:curve[ancestor::mei:symbolDef]">

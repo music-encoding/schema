@@ -20,7 +20,7 @@
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href=../../../source/"validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2024-02-01T14:49:52.195263271+01:00-->
+<!--canonicalized: 2024-02-06T16:05:20.809143407+01:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -20335,7 +20335,7 @@ or
       <memberOf key="model.controlEventLike.cmn"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
     <remarks xml:lang="en">
       <p>The modern arpeggiation symbol is a vertical wavy line preceding the chord. When the notes
@@ -20446,7 +20446,7 @@ or
       <memberOf key="model.controlEventLike.cmn"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
     <constraintSpec ident="beamspan_start-_and_end-type_attributes_required" scheme="schematron">
       <constraint>
@@ -20481,7 +20481,7 @@ or
       <memberOf key="model.eventLike.cmn"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
     <remarks xml:lang="en">
       <p> <gi scheme="MEI">beatRpt</gi> may also be used in guitar or rhythm parts to indicate where
@@ -20503,7 +20503,7 @@ or
       <memberOf key="model.controlEventLike"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
     <constraintSpec ident="bend_start-_and_end-type_attributes_required" scheme="schematron">
       <constraint>
@@ -20568,7 +20568,7 @@ or
       <memberOf key="model.controlEventLike.cmn"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
     <constraintSpec ident="breath_start-type_attributes_required" scheme="schematron">
       <constraint>
@@ -20624,7 +20624,7 @@ or
       <memberOf key="model.controlEventLike.cmn"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
     <constraintSpec ident="fermata_start-type_attributes_required" scheme="schematron">
       <constraint>
@@ -20778,7 +20778,7 @@ or
       <memberOf key="model.controlEventLike.cmn"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
     <constraintSpec ident="hairpin_start-_and_end-type_attributes_required" scheme="schematron">
       <constraint>
@@ -20815,7 +20815,7 @@ or
       <memberOf key="model.eventLike.cmn"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
   </elementSpec>
   <elementSpec ident="harpPedal" module="MEI.cmn">
@@ -20831,7 +20831,7 @@ or
       <memberOf key="model.controlEventLike.cmn"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
     <constraintSpec ident="harpPedal_start-type_attributes_required" scheme="schematron">
       <constraint>
@@ -20941,7 +20941,7 @@ or
       <memberOf key="model.meterSigLike"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
   </elementSpec>
   <elementSpec ident="meterSigGrp" module="MEI.cmn">
@@ -21010,7 +21010,7 @@ or
       <memberOf key="model.eventLike.measureFilling"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
     <remarks xml:lang="en">
       <p>Automatically-generated numbering of consecutive measures of rest may be controlled via the
@@ -21030,7 +21030,7 @@ or
       <memberOf key="model.eventLike.measureFilling"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
     <remarks xml:lang="en">
       <p>The automated numbering of consecutive measures of rest may be controlled via the
@@ -21051,7 +21051,7 @@ or
       <memberOf key="model.eventLike.measureFilling"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
   </elementSpec>
   <elementSpec ident="mSpace" module="MEI.cmn">
@@ -21067,7 +21067,7 @@ or
       <memberOf key="model.eventLike.measureFilling"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
     <remarks xml:lang="en">
       <p>The automated numbering of consecutive measures of space may be controlled via the
@@ -21088,7 +21088,7 @@ or
       <memberOf key="model.eventLike.measureFilling"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
     <!--<remarks xml:lang="en"><p>The num attribute can used to store a number to be rendered along with
         the note. See Read, p. 102-105.</p></remarks>-->
@@ -21106,7 +21106,7 @@ or
       <memberOf key="model.eventLike.measureFilling"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
     <remarks xml:lang="en">
       <p>In modern publishing practice, repeats of more than two measures should be written out
@@ -21289,7 +21289,7 @@ or
       <memberOf key="model.controlEventLike.cmn"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
     <constraintSpec ident="pedal_start-type_attributes_required" scheme="schematron">
       <constraint>
@@ -21529,7 +21529,7 @@ or
       <memberOf key="model.controlEventLike.cmn"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
     <constraintSpec ident="tupletSpan_start-_and_end-type_attributes_required" scheme="schematron">
       <constraint>
@@ -21711,7 +21711,7 @@ or
       <memberOf key="model.ornamentLike.cmn"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
     <constraintSpec ident="mordent_start-type_attributes_required" scheme="schematron">
       <constraint>
@@ -21740,7 +21740,7 @@ or
       <memberOf key="model.ornamentLike.cmn"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
     <constraintSpec ident="trill_start-type_attributes_required" scheme="schematron">
       <constraint>
@@ -21774,7 +21774,7 @@ or
       <memberOf key="model.ornamentLike.cmn"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
     <constraintSpec ident="turn_start-type_attributes_required" scheme="schematron">
       <constraint>
@@ -22728,7 +22728,7 @@ or
       <memberOf key="model.transcriptionLike"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
     <remarks xml:lang="en">
       <p>When material is omitted because it is illegible or inaudible, <gi scheme="MEI">unclear</gi> should be used instead. Similarly, use <gi scheme="MEI">damage</gi> if the
@@ -22761,7 +22761,7 @@ or
       <memberOf key="model.transcriptionLike"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
     <attList>
       <attDef ident="character" usage="opt">
@@ -25364,7 +25364,7 @@ or
       <memberOf key="att.chordMember.vis"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
     <remarks xml:lang="en">
       <p>The <att>string</att>, <att>fret</att>, and <att>fing</att> attributes are provided in
@@ -29098,7 +29098,7 @@ or
       <memberOf key="model.staffDefPart.mensural"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
     <remarks xml:lang="en">
       <p>The <gi scheme="MEI">mensur</gi> element is provided for the encoding of mensural notation.
@@ -29138,7 +29138,7 @@ or
       <memberOf key="model.staffDefPart.mensural"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
     <remarks xml:lang="en">
       <p>The proport element is provided for the encoding of mensural notation. It allows the
@@ -29158,7 +29158,7 @@ or
       <memberOf key="att.stem.anl"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
     <constraintSpec ident="Check_stem" scheme="schematron">
       <constraint>
@@ -29426,7 +29426,7 @@ or
       <memberOf key="att.midiValue"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
     <remarks xml:lang="en">
       <p>The <att>num</att> attribute specifies a MIDI parameter number, while <att>val</att>
@@ -29441,7 +29441,7 @@ or
       <memberOf key="att.midi.event"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
     <attList>
       <attDef ident="num" usage="req">
@@ -29461,7 +29461,7 @@ or
       <memberOf key="att.midiNumber"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
     <remarks xml:lang="en">
       <p>The value of the <att>num</att> attribute must be in the range 0-127.</p>
@@ -29509,7 +29509,7 @@ or
       <memberOf key="model.instrDefLike"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
     <remarks xml:lang="en">
       <p>This element provides a starting or default instrument declaration for a staff, a group of
@@ -29593,7 +29593,7 @@ or
       <memberOf key="att.midiNumber"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
   </elementSpec>
   <elementSpec ident="noteOn" module="MEI.midi">
@@ -29604,7 +29604,7 @@ or
       <memberOf key="att.midiNumber"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
   </elementSpec>
   <elementSpec ident="port" module="MEI.midi">
@@ -29615,7 +29615,7 @@ or
       <memberOf key="att.midiNumber"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
   </elementSpec>
   <elementSpec ident="prog" module="MEI.midi">
@@ -29627,7 +29627,7 @@ or
       <memberOf key="att.midiNumber"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
   </elementSpec>
   <elementSpec ident="seqNum" module="MEI.midi">
@@ -29638,7 +29638,7 @@ or
       <memberOf key="att.midi.event"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
     <attList>
       <attDef ident="num" usage="req">
@@ -29672,7 +29672,7 @@ or
       <memberOf key="att.midiNumber"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
     <attList>
       <attDef ident="form" usage="req">
@@ -31510,7 +31510,7 @@ or
       <memberOf key="model.neumeModifierLike"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
   </elementSpec>
   <elementSpec ident="liquescent" module="MEI.neumes">
@@ -32017,7 +32017,7 @@ or
       <memberOf key="model.locrefLike"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
     <remarks xml:lang="en">
       <p>Unlike the <gi scheme="MEI">ref</gi> element, <gi scheme="MEI">ptr</gi> cannot contain text
@@ -36301,7 +36301,7 @@ or
       <memberOf key="model.syllablePart"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
     <remarks xml:lang="en">
       <p>An accidental may raise a pitch by one or two semitones or it may cancel a previous
@@ -36412,7 +36412,7 @@ or
       <memberOf key="att.ambNote.anl"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
   </elementSpec>
   <elementSpec ident="analytic" module="MEI.shared">
@@ -36541,7 +36541,7 @@ or
       <memberOf key="model.noteModifierLike"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
     <remarks xml:lang="en">
       <p>Articulations typically affect duration, such as staccato marks, or the force of attack,
@@ -36590,7 +36590,7 @@ or
       <memberOf key="model.eventLike"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
     <remarks xml:lang="en">
       <p>This element is provided for repertoires, such as mensural notation, that lack measures.
@@ -36796,7 +36796,7 @@ or
       <memberOf key="model.controlEventLike"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
     <constraintSpec ident="caesura_start-type_attributes_required" scheme="schematron">
       <constraint>
@@ -36926,7 +36926,7 @@ or
       <memberOf key="model.milestoneLike.text"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
     <attList>
       <attDef ident="n" usage="req">
@@ -36993,7 +36993,7 @@ or
       <memberOf key="model.syllablePart"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
     <constraintSpec ident="Clef_position_lines" scheme="schematron">
       <constraint>
@@ -37052,7 +37052,7 @@ or
       <memberOf key="model.milestoneLike.text"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
     <attList>
       <attDef ident="cols" usage="req">
@@ -37555,7 +37555,7 @@ or
       <memberOf key="model.eventLike.mensural"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
     <remarks xml:lang="en">
       <p>This element provides an alternative to the <att>dots</att> attribute on <gi scheme="MEI">note</gi> and <gi scheme="MEI">rest</gi> elements. It should be used when specific display
@@ -37808,7 +37808,7 @@ or
       <memberOf key="att.targetEval"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
     <remarks xml:lang="en">
       <p>The <att>plist</att> attribute contains an ordered list of identifiers of descendant <gi scheme="MEI">section</gi>, <gi scheme="MEI">ending</gi>, <gi scheme="MEI">lem</gi>, or <gi scheme="MEI">rdg</gi> elements. For example, the sequence "#A #End1 #A #End2" indicates that
@@ -38153,7 +38153,7 @@ or
       <memberOf key="model.keyAccidLike"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
     <constraintSpec ident="Check_keyAccidPlacement" scheme="schematron">
       <constraint>
@@ -38354,7 +38354,7 @@ or
       <memberOf key="model.lbLike"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
     <remarks xml:lang="en">
       <p>The <att>n</att> attribute should be used to record a number associated with this textual
@@ -38840,7 +38840,7 @@ or
       <memberOf key="model.eventLike"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
   </elementSpec>
   <elementSpec ident="part" module="MEI.shared">
@@ -39207,7 +39207,7 @@ or
       <memberOf key="model.relationLike"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
     <constraintSpec ident="FRBR_relation" scheme="schematron">
       <constraint>
@@ -39484,7 +39484,7 @@ or
       <memberOf key="model.milestoneLike.music"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
     <remarks xml:lang="en">
       <p>Do not confuse this element with the <gi scheme="MEI">lb</gi> element, which performs a
@@ -39662,7 +39662,7 @@ or
       <memberOf key="model.eventLike"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
   </elementSpec>
   <elementSpec ident="speaker" module="MEI.shared">
@@ -40053,7 +40053,7 @@ or
       <memberOf key="model.textPhraseLike.limited"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
     <constraintSpec ident="symbolDef_symbol_attributes_required" scheme="schematron">
       <constraint>
@@ -40527,7 +40527,7 @@ or
       <memberOf key="att.startEndId"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
     <attList>
       <attDef ident="fret" usage="opt">
@@ -41190,7 +41190,7 @@ or
       <memberOf key="model.graphicPrimitiveLike"/>
     </classes>
     <content>
-      <rng:empty/>
+      <empty/>
     </content>
     <constraintSpec ident="symbolDef_curve_attributes_required" scheme="schematron">
       <constraint>
