@@ -20,7 +20,7 @@
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href=../../../source/"validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2024-02-09T14:54:12.080610361+01:00-->
+<!--canonicalized: 2024-02-20T08:46:10.664993544+01:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -5303,7 +5303,8 @@ or
                   <p>
                      <figure>
                         <head/>
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
 &lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
 &lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.1-dev"&gt;
   &lt;meiHead&gt;
@@ -5317,7 +5318,9 @@ or
           &lt;corpName&gt;Music Encoding Initiative (MEI) Board&lt;/corpName&gt;
         &lt;/respStmt&gt;
         &lt;availability&gt;
-          &lt;useRestrict label="license" auth="https://spdx.org/licenses/" codedval="ECL-2.0"&gt;
+          &lt;useRestrict label="license"
+            auth="https://spdx.org/licenses/"
+            codedval="ECL-2.0"&gt;
             &lt;p&gt;Educational Community License v2.0&lt;/p&gt;
           &lt;/useRestrict&gt;
         &lt;/availability&gt;
@@ -5341,19 +5344,19 @@ or
             &lt;/staffGrp&gt;
           &lt;/scoreDef&gt;
           &lt;section&gt;
-            &lt;measure right="dbl" n="1"&gt;
+            &lt;measure right="dbl"&gt;
               &lt;staff n="1"&gt;
                 &lt;layer n="1"&gt;
                   &lt;chord dur="1"&gt;
                     &lt;note oct="4" pname="a" accid.ges="f" /&gt;
-                    &lt;note oct="5" pname="c" accid.ges="f" /&gt;
+                    &lt;note oct="5" pname="c" /&gt;
                     &lt;note oct="5" pname="e" accid.ges="f" /&gt;
                   &lt;/chord&gt;
                 &lt;/layer&gt;
               &lt;/staff&gt;
             &lt;/measure&gt;
             &lt;scoreDef keysig="0" keysig.cancelaccid="none" /&gt;
-            &lt;measure right="dbl" n="4"&gt;
+            &lt;measure right="dbl"&gt;
               &lt;staff n="1"&gt;
                 &lt;layer n="1"&gt;
                   &lt;chord dur="1"&gt;
@@ -5365,7 +5368,7 @@ or
               &lt;/staff&gt;
             &lt;/measure&gt;
             &lt;scoreDef keysig="2s" keysig.cancelaccid="before" meter.sym="cut" /&gt;
-            &lt;measure n="2"&gt;
+            &lt;measure&gt;
               &lt;staff n="1"&gt;
                 &lt;layer n="1"&gt;
                   &lt;chord dur="1"&gt;
@@ -5376,27 +5379,30 @@ or
                 &lt;/layer&gt;
               &lt;/staff&gt;
             &lt;/measure&gt;
-            &lt;measure right="dbl" n="3"&gt;
+            &lt;measure right="dbl"&gt;
               &lt;staff n="1"&gt;
                 &lt;layer n="1"&gt;
                   &lt;multiRest num="3" /&gt;
                 &lt;/layer&gt;
               &lt;/staff&gt;
             &lt;/measure&gt;
-            &lt;scoreDef keysig.visible="false" keysig="5f" meter.count="4" meter.unit="4" /&gt;
-            &lt;measure right="dbl" n="5"&gt;
+            &lt;scoreDef keysig.visible="false"
+              keysig="5f"
+              meter.count="4"
+              meter.unit="4" /&gt;
+            &lt;measure right="dbl"&gt;
               &lt;staff n="1"&gt;
                 &lt;layer n="1"&gt;
                   &lt;chord dur="1"&gt;
-                    &lt;note oct="4" pname="g" /&gt;
+                    &lt;note oct="4" pname="g" accid.ges="f" /&gt;
                     &lt;note oct="4" pname="b" accid.ges="f" /&gt;
-                    &lt;note oct="5" pname="d" /&gt;
+                    &lt;note oct="5" pname="d" accid.ges="f" /&gt;
                   &lt;/chord&gt;
                 &lt;/layer&gt;
               &lt;/staff&gt;
             &lt;/measure&gt;
             &lt;scoreDef keysig="2s" keysig.cancelaccid="before-bar" /&gt;
-            &lt;measure right="end" n="2"&gt;
+            &lt;measure right="end"&gt;
               &lt;staff n="1"&gt;
                 &lt;layer n="1"&gt;
                   &lt;chord dur="1"&gt;
