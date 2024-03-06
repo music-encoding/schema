@@ -1109,6 +1109,24 @@
     <content xmlns:xi="http://www.w3.org/2001/XInclude">
       <choice xmlns="http://relaxng.org/ns/structure/1.0"><ref name="data.DURATION.cmn"/><ref name="data.DURATIONRESTS.mensural"/></choice>
     </content>
+  </macroSpec><macroSpec rend="add" ident="data.ENCLOSURE" module="MEI" type="dt">
+    <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Enclosures for editorial notes, accidentals, articulations, etc.</desc>
+    <content xmlns:xi="http://www.w3.org/2001/XInclude">
+      <valList type="closed">
+        <valItem ident="paren">
+          <desc xml:lang="en">Parentheses: ( and ).</desc>
+        </valItem>
+        <valItem ident="brack">
+          <desc xml:lang="en">Square brackets: [ and ].</desc>
+        </valItem>
+        <valItem ident="box">
+          <desc xml:lang="en">Box.</desc>
+        </valItem>
+        <valItem ident="none">
+          <desc xml:lang="en">None.</desc>
+        </valItem>
+      </valList>
+    </content>
   </macroSpec><macroSpec rend="add" ident="data.EVENTREL" module="MEI" type="dt">
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Location of musical material relative to a symbol on a staff instead of the staff.</desc>
     <content xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -5823,6 +5841,19 @@
       <memberOf key="att.startEndId"/>
       <memberOf key="att.timestamp2.log"/>
     </classes>
+  </classSpec><classSpec rend="add" ident="att.enclosingChars" module="MEI.shared" type="atts">
+    <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that capture characters used to enclose symbols having a cautionary or
+      editorial function.</desc>
+    <attList xmlns:xi="http://www.w3.org/2001/XInclude">
+      <attDef ident="enclose" usage="opt">
+        <desc xml:lang="en">Records the characters often used to mark accidentals, articulations, and sometimes
+          notes as having a cautionary or editorial function. For an example of cautionary
+          accidentals enclosed in parentheses, see Read, p. 131, ex. 9-14.</desc>
+        <datatype>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.ENCLOSURE"/>
+        </datatype>
+      </attDef>
+    </attList>
   </classSpec><classSpec rend="add" ident="att.ending.log" module="MEI.shared" type="atts">
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Logical domain attributes.</desc>
     <classes xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -8106,12 +8137,12 @@
       <p>The <att>startid</att> and <att>endid</att> attributes are used to indicate the <gi scheme="MEI">chordMember</gi> elements on which the barre starts and finishes respectively.
         The fret at which the barre should be created is recorded by the <att>fret</att>
         attribute.</p>
-    </remarks></elementSpec><classSpec rend="add" ident="att.accid.vis" module="MEI.visual" type="atts"><desc xml:lang="en">Visual domain attributes.</desc><classes><memberOf key="att.color"/><memberOf key="att.extSym"/><memberOf key="att.visualOffset.ho"/><memberOf key="att.visualOffset.vo"/></classes></classSpec><classSpec rend="add" ident="att.arpeg.vis" module="MEI.visual" type="atts">
+    </remarks></elementSpec><classSpec rend="add" ident="att.accid.vis" module="MEI.visual" type="atts"><desc xml:lang="en">Visual domain attributes.</desc><classes><memberOf key="att.color"/><memberOf key="att.enclosingChars"/><memberOf key="att.extSym"/><memberOf key="att.visualOffset.ho"/><memberOf key="att.visualOffset.vo"/></classes></classSpec><classSpec rend="add" ident="att.arpeg.vis" module="MEI.visual" type="atts">
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Visual domain attributes.</desc>
     <classes xmlns:xi="http://www.w3.org/2001/XInclude">
       
       <memberOf key="att.color"/>
-      
+      <memberOf key="att.enclosingChars"/>
       <memberOf key="att.extSym"/>
       <memberOf key="att.lineRend.base"/>
       <memberOf key="att.typography"/>
@@ -8150,7 +8181,7 @@
         </datatype>
       </attDef>
     </attList>
-  </classSpec><classSpec rend="add" ident="att.artic.vis" module="MEI.visual" type="atts"><desc xml:lang="en">Visual domain attributes.</desc><classes><memberOf key="att.color"/><memberOf key="att.extSym"/><memberOf key="att.placementRelEvent"/><memberOf key="att.visualOffset"/></classes></classSpec><classSpec rend="add" ident="att.beam.vis" module="MEI.visual" type="atts">
+  </classSpec><classSpec rend="add" ident="att.artic.vis" module="MEI.visual" type="atts"><desc xml:lang="en">Visual domain attributes.</desc><classes><memberOf key="att.color"/><memberOf key="att.enclosingChars"/><memberOf key="att.extSym"/><memberOf key="att.placementRelEvent"/><memberOf key="att.visualOffset"/></classes></classSpec><classSpec rend="add" ident="att.beam.vis" module="MEI.visual" type="atts">
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Visual domain attributes.</desc>
     <classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.color"/>
@@ -8176,7 +8207,7 @@
   </classSpec><classSpec rend="add" ident="att.caesura.vis" module="MEI.visual" type="atts"><desc xml:lang="en">Visual domain attributes.</desc><classes><memberOf key="att.color"/><memberOf key="att.extSym"/><memberOf key="att.visualOffset"/></classes></classSpec><classSpec rend="add" ident="att.chord.vis" module="MEI.visual" type="atts"><desc>Visual domain attributes for chord. The slur, slur.dir, slur.rend, tie, tie.dir, and tie.rend
                         attributes here are syntactic sugar for these attributes on each of the chord's individual
                         notes. The values here apply to all the notes in the chord. If some notes are slurred or tied
-                        while others aren't, then the individual note attributes must be used.</desc><classes><memberOf key="att.color"/><memberOf key="att.extSym"/><memberOf key="att.stems"/><memberOf key="att.visualOffset.ho"/><memberOf key="att.chord.vis.cmn"/></classes><attList><attDef xmlns:xi="http://www.w3.org/2001/XInclude" ident="cluster" usage="opt">
+                        while others aren't, then the individual note attributes must be used.</desc><classes><memberOf key="att.color"/><memberOf key="att.enclosingChars"/><memberOf key="att.extSym"/><memberOf key="att.stems"/><memberOf key="att.visualOffset.ho"/><memberOf key="att.chord.vis.cmn"/></classes><attList><attDef xmlns:xi="http://www.w3.org/2001/XInclude" ident="cluster" usage="opt">
         <desc xml:lang="en">Indicates a single, alternative note head should be displayed instead of individual
           note heads. The highest and lowest notes of the chord usually indicate the upper and lower
           boundaries of the cluster note head.</desc>
@@ -8188,7 +8219,7 @@
     <classes xmlns:xi="http://www.w3.org/2001/XInclude">
       
       <memberOf key="att.color"/>
-      
+      <memberOf key="att.enclosingChars"/>
       <memberOf key="att.extSym"/>
       <memberOf key="att.typography"/>
       
@@ -8405,7 +8436,7 @@
     <classes xmlns:xi="http://www.w3.org/2001/XInclude">
       
       <memberOf key="att.color"/>
-      
+      <memberOf key="att.enclosingChars"/>
       <memberOf key="att.extSym"/>
       <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.typography"/>
@@ -8470,7 +8501,7 @@
     <classes xmlns:xi="http://www.w3.org/2001/XInclude">
       
       <memberOf key="att.color"/>
-      
+      <memberOf key="att.enclosingChars"/>
       <memberOf key="att.extSym"/>
       
       
@@ -8498,7 +8529,7 @@
     <classes xmlns:xi="http://www.w3.org/2001/XInclude">
       
       <memberOf key="att.color"/>
-      
+      <memberOf key="att.enclosingChars"/>
       <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.visualOffset2.ho"/>
@@ -8576,7 +8607,7 @@
       
       
     </classes>
-  </classSpec><classSpec rend="add" ident="att.rest.vis" module="MEI.visual" type="atts"><desc>Visual domain attributes.</desc><classes><memberOf key="att.color"/><memberOf key="att.rest.vis.cmn"/><memberOf key="att.staffLoc.pitched"/><memberOf key="att.visualOffset"/></classes></classSpec><classSpec rend="add" ident="att.sb.vis" module="MEI.visual" type="atts">
+  </classSpec><classSpec rend="add" ident="att.rest.vis" module="MEI.visual" type="atts"><desc>Visual domain attributes.</desc><classes><memberOf key="att.color"/><memberOf key="att.enclosingChars"/><memberOf key="att.rest.vis.cmn"/><memberOf key="att.staffLoc.pitched"/><memberOf key="att.visualOffset"/></classes></classSpec><classSpec rend="add" ident="att.sb.vis" module="MEI.visual" type="atts">
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Visual domain attributes.</desc>
     <classes xmlns:xi="http://www.w3.org/2001/XInclude">
       
@@ -8699,7 +8730,7 @@
     <classes xmlns:xi="http://www.w3.org/2001/XInclude">
       
       <memberOf key="att.color"/>
-      
+      <memberOf key="att.enclosingChars"/>
       <memberOf key="att.extender"/>
       <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.extSym"/>
@@ -8752,7 +8783,7 @@
     <classes xmlns:xi="http://www.w3.org/2001/XInclude">
       
       <memberOf key="att.color"/>
-      
+      <memberOf key="att.enclosingChars"/>
       <memberOf key="att.extSym"/>
       <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.typography"/>
