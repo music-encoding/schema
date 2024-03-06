@@ -20,7 +20,7 @@
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href=../../../source/"validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2024-03-06T17:29:42.704916295+01:00-->
+<!--canonicalized: 2024-03-06T17:50:00.314163995+01:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -26125,7 +26125,8 @@ or
   </elementSpec>
   <elementSpec ident="catRel" module="MEI.header">
     <gloss versionDate="2022-05-18" xml:lang="en">category relationship</gloss>
-    <desc xml:lang="en">Contains the name of a related category.</desc>
+    <desc xml:lang="en">Contains the name, i.e., label, of a related
+        category.</desc>
     <classes>
       <memberOf key="att.authorized"/>
       <memberOf key="att.basic"/>
