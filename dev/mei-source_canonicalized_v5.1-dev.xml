@@ -20,7 +20,7 @@
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href=../../../source/"validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2024-03-06T17:22:45.021098823+01:00-->
+<!--canonicalized: 2024-03-06T17:24:44.042926249+01:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -5303,8 +5303,7 @@ or
                   <p>
                      <figure>
                         <head/>
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
 &lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
 &lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.1-dev"&gt;
   &lt;meiHead&gt;
@@ -5336,8 +5335,8 @@ or
   &lt;music&gt;
     &lt;body&gt;
       &lt;mdiv&gt;
+        &lt;?edit-start?&gt;
         &lt;score&gt;
-          &lt;?edit-start?&gt;
           &lt;scoreDef keysig="4f" meter.sym="common"&gt;
             &lt;staffGrp&gt;
               &lt;staffDef n="1" lines="5" clef.shape="G" clef.line="2" /&gt;
@@ -5414,8 +5413,8 @@ or
               &lt;/staff&gt;
             &lt;/measure&gt;
           &lt;/section&gt;
-          &lt;?edit-end?&gt;
         &lt;/score&gt;
+        &lt;?edit-end?&gt;
       &lt;/mdiv&gt;
     &lt;/body&gt;
   &lt;/music&gt;
