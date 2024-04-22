@@ -5,7 +5,7 @@
           xmlns:xlink="http://www.w3.org/1999/xlink"
           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
           ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2024-03-22T13:51:19Z. . 
+Schema generated from ODD source 2024-04-22T14:01:26Z. . 
 TEI Edition: Development Version 
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -18851,7 +18851,7 @@ Suggested values include: 1] paper; 2] parch; 3] mixed</a:documentation>
    <define name="mei_att.coordinated.attribute.lry">
       <optional>
          <attribute name="lry">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates the lower-left corner x coordinate.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates the lower-right corner y coordinate.</a:documentation>
             <data type="nonNegativeInteger"/>
          </attribute>
       </optional>
