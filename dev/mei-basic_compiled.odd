@@ -4415,10 +4415,10 @@
     </desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       
+      
+      
       <memberOf key="att.mordent.log"/>
       <memberOf key="att.mordent.vis"/>
-      
-      
       <memberOf key="model.ornamentLike.cmn"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
       <empty/>
@@ -4437,10 +4437,10 @@
       above).</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       
+      
+      <memberOf key="att.trill.ges"/>
       <memberOf key="att.trill.log"/>
       <memberOf key="att.trill.vis"/>
-      <memberOf key="att.trill.ges"/>
-      
       <memberOf key="model.ornamentLike.cmn"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
       <empty/>
@@ -4464,10 +4464,10 @@
       note, the lower neighbor, and the written note.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       
+      
+      
       <memberOf key="att.turn.log"/>
       <memberOf key="att.turn.vis"/>
-      
-      
       <memberOf key="model.ornamentLike.cmn"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
       <empty/>
@@ -5042,10 +5042,10 @@
       analysis, figured bass.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       
+      
+      
       <memberOf key="att.harm.log"/>
       <memberOf key="att.harm.vis"/>
-      
-      
       <memberOf key="model.harmLike"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike.limited"/><ref name="model.graphicPrimitiveLike"/><ref name="model.editLike"/><ref name="model.transcriptionLike"/><ref name="model.figbassLike"/></choice></zeroOrMore>
@@ -7143,10 +7143,10 @@
   </classSpec><elementSpec rend="add" ident="accid" module="MEI.shared"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">accidental</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Records a temporary alteration to the pitch of a note.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       
+      
+      <memberOf key="att.accid.ges"/>
       <memberOf key="att.accid.log"/>
       <memberOf key="att.accid.vis"/>
-      <memberOf key="att.accid.ges"/>
-      
       <memberOf key="model.noteModifierLike"/>
       
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -7173,10 +7173,10 @@
     </content></elementSpec><elementSpec rend="add" ident="artic" module="MEI.shared"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">articulation</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">An indication of how to play a note or chord.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       
+      
+      <memberOf key="att.artic.ges"/>
       <memberOf key="att.artic.log"/>
       <memberOf key="att.artic.vis"/>
-      <memberOf key="att.artic.ges"/>
-      
       <memberOf key="model.chordPart"/>
       <memberOf key="model.noteModifierLike"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -7237,10 +7237,10 @@
       duration*.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       
+      
+      <memberOf key="att.chord.ges"/>
       <memberOf key="att.chord.log"/>
       <memberOf key="att.chord.vis"/>
-      <memberOf key="att.chord.ges"/>
-      
       <memberOf key="model.eventLike"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="model.chordPart"/><ref name="model.appLike"/><ref name="model.editLike"/><ref name="model.sylLike"/><ref name="model.transcriptionLike"/><ref name="model.verseLike"/></choice></zeroOrMore>
@@ -7309,10 +7309,10 @@
       <memberOf key="att.common"/>
       
       <memberOf key="att.lang"/>
+      
+      
       <memberOf key="att.dir.log"/>
       <memberOf key="att.dir.vis"/>
-      
-      
       <memberOf key="model.controlEventLike"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike.limited"/><ref name="model.graphicPrimitiveLike"/><ref name="model.editLike"/><ref name="model.transcriptionLike"/></choice></zeroOrMore>
@@ -7333,12 +7333,12 @@
         a semantic error not to specify a starting point attribute.</p>
     </remarks></elementSpec><elementSpec rend="add" ident="dynam" module="MEI.shared"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">dynamic</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Indication of the volume of a note, phrase, or section of music.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
-      <memberOf key="att.dynam.log"/>
-      <memberOf key="att.dynam.vis"/>
-      
-      
       
       <memberOf key="att.lang"/>
+      
+      
+      <memberOf key="att.dynam.log"/>
+      <memberOf key="att.dynam.vis"/>
       <memberOf key="model.controlEventLike"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike.limited"/><ref name="model.editLike"/><ref name="model.transcriptionLike"/></choice></zeroOrMore>
@@ -7371,11 +7371,11 @@
       <memberOf key="att.common"/>
       
       
+      
+      
+      
       <memberOf key="att.ending.log"/>
       <memberOf key="att.ending.vis"/>
-      
-      
-      
       <memberOf key="model.endingLike"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="expansion"/></zeroOrMore>
@@ -7419,9 +7419,9 @@
       
       <memberOf key="att.typed"/>
       
+      
+      
       <memberOf key="att.layer.vis"/>
-      
-      
       <memberOf key="model.layerLike"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="model.annotLike"/><ref name="model.appLike"/><ref name="model.editLike"/><ref name="model.graphicPrimitiveLike"/><ref name="model.layerPart"/><ref name="model.milestoneLike.music"/><ref name="model.transcriptionLike"/><ref name="divLine"/></choice></zeroOrMore>
@@ -7499,10 +7499,10 @@
                     </constraintSpec></elementSpec><elementSpec rend="add" ident="note" module="MEI.shared"><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">A single pitched event.  </desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       
+      
+      <memberOf key="att.note.ges"/>
       <memberOf key="att.note.log"/>
       <memberOf key="att.note.vis"/>
-      <memberOf key="att.note.ges"/>
-      
       <memberOf key="model.chordPart"/>
       <memberOf key="model.eventLike"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -7521,10 +7521,10 @@
     </remarks></elementSpec><elementSpec rend="add" ident="ornam" module="MEI.shared"><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">An element indicating an ornament that is not a mordent, turn, or trill. </desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       
+      
+      <memberOf key="att.ornam.ges"/>
       <memberOf key="att.ornam.log"/>
       <memberOf key="att.ornam.vis"/>
-      <memberOf key="att.ornam.ges"/>
-      
       <memberOf key="model.controlEventLike"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike.limited"/><ref name="model.graphicPrimitiveLike"/><ref name="model.editLike"/><ref name="model.transcriptionLike"/></choice></zeroOrMore>
@@ -7649,10 +7649,10 @@
     </remarks></elementSpec><elementSpec rend="add" ident="rest" module="MEI.shared"><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">A non-sounding event found in the source being transcribed.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       
+      
+      <memberOf key="att.rest.ges"/>
       <memberOf key="att.rest.log"/>
       <memberOf key="att.rest.vis"/>
-      <memberOf key="att.rest.ges"/>
-      
       <memberOf key="model.eventLike"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="dot"/><ref name="model.appLike"/><ref name="model.editLike"/><ref name="model.transcriptionLike"/></choice></zeroOrMore>
@@ -7686,8 +7686,8 @@
       <memberOf key="att.common"/>
       
       
-      
       <memberOf key="att.score.ges"/>
+      
       
       <memberOf key="model.scoreLike"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -7702,10 +7702,10 @@
       
       
       
+      
       <memberOf key="att.section.ges"/>
       <memberOf key="att.section.log"/>
       <memberOf key="att.section.vis"/>
-      
       <memberOf key="model.sectionLike"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="expansion"/></zeroOrMore>
@@ -7775,9 +7775,9 @@
       <memberOf key="att.nInteger"/>
       
       <memberOf key="att.typed"/>
-      <memberOf key="att.staffDef.log"/>
       
       <memberOf key="att.staffDef.ges"/>
+      <memberOf key="att.staffDef.log"/>
       
       <memberOf key="model.staffDefLike"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -7912,10 +7912,10 @@
       <memberOf key="att.common"/>
       
       <memberOf key="att.lang"/>
+      
+      
       <memberOf key="att.syl.log"/>
       <memberOf key="att.syl.vis"/>
-      
-      
       <memberOf key="model.sylLike"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike.limited"/><ref name="model.appLike"/><ref name="model.editLike"/><ref name="model.transcriptionLike"/></choice></zeroOrMore>
@@ -7956,10 +7956,10 @@
       
       
       <memberOf key="att.lang"/>
+      
+      <memberOf key="att.tempo.ges"/>
       <memberOf key="att.tempo.log"/>
       <memberOf key="att.tempo.vis"/>
-      <memberOf key="att.tempo.ges"/>
-      
       <memberOf key="model.controlEventLike"/>
       
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -8228,6 +8228,7 @@
   </classSpec><classSpec rend="add" ident="att.dir.vis" module="MEI.visual" type="atts">
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Visual domain attributes.</desc>
     <classes xmlns:xi="http://www.w3.org/2001/XInclude">
+      <memberOf key="att.color"/>
       <memberOf key="att.extender"/>
       <memberOf key="att.placementRelStaff"/>
       
@@ -8239,6 +8240,7 @@
   </classSpec><classSpec rend="add" ident="att.dynam.vis" module="MEI.visual" type="atts">
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Visual domain attributes.</desc>
     <classes xmlns:xi="http://www.w3.org/2001/XInclude">
+      <memberOf key="att.color"/>
       <memberOf key="att.extender"/>
       <memberOf key="att.placementRelStaff"/>
       
@@ -8256,6 +8258,7 @@
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Visual domain attributes.</desc>
     <classes xmlns:xi="http://www.w3.org/2001/XInclude">
       
+      <memberOf key="att.color"/>
       <memberOf key="att.extender"/>
       <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.visualOffset"/>
@@ -8294,6 +8297,7 @@
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Visual domain attributes.</desc>
     <classes xmlns:xi="http://www.w3.org/2001/XInclude">
       
+      <memberOf key="att.color"/>
       <memberOf key="att.extender"/>
       <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.visualOffset"/>
@@ -8598,6 +8602,7 @@
   </classSpec><classSpec rend="add" ident="att.repeatMark.vis" module="MEI.visual" type="atts">
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Visual domain attributes.</desc>
     <classes xmlns:xi="http://www.w3.org/2001/XInclude">
+      <memberOf key="att.color"/>
       <memberOf key="att.extender"/>
       <memberOf key="att.extSym"/>
       <memberOf key="att.placementRelStaff"/>
@@ -8701,6 +8706,7 @@
   </classSpec><classSpec rend="add" ident="att.symbol.vis" module="MEI.visual" type="atts"><desc xml:lang="en">Visual domain attributes.</desc><classes><memberOf key="att.color"/><memberOf key="att.extSym"/><memberOf key="att.scalable"/><memberOf key="att.visualOffset"/></classes></classSpec><classSpec rend="add" ident="att.tempo.vis" module="MEI.visual" type="atts">
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Visual domain attributes.</desc>
     <classes xmlns:xi="http://www.w3.org/2001/XInclude">
+      <memberOf key="att.color"/>
       <memberOf key="att.extender"/>
       <memberOf key="att.placementRelStaff"/>
       
@@ -8732,8 +8738,8 @@
       <memberOf key="att.color"/>
       <memberOf key="att.enclosingChars"/>
       <memberOf key="att.extender"/>
-      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.extSym"/>
+      <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.typography"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.visualOffset2.ho"/>

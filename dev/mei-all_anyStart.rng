@@ -5,7 +5,7 @@
           xmlns:xlink="http://www.w3.org/1999/xlink"
           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
           ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2024-05-15T17:15:34Z. . 
+Schema generated from ODD source 2024-05-31T16:22:08Z. . 
 TEI Edition: Development Version 
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -10213,10 +10213,10 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.facsimile.attributes"/>
          <ref name="mei_att.lang.attributes"/>
+         <ref name="mei_att.attacca.anl.attributes"/>
+         <ref name="mei_att.attacca.ges.attributes"/>
          <ref name="mei_att.attacca.log.attributes"/>
          <ref name="mei_att.attacca.vis.attributes"/>
-         <ref name="mei_att.attacca.ges.attributes"/>
-         <ref name="mei_att.attacca.anl.attributes"/>
          <empty/>
       </element>
    </define>
@@ -11313,10 +11313,10 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
          </pattern>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.facsimile.attributes"/>
+         <ref name="mei_att.mordent.anl.attributes"/>
+         <ref name="mei_att.mordent.ges.attributes"/>
          <ref name="mei_att.mordent.log.attributes"/>
          <ref name="mei_att.mordent.vis.attributes"/>
-         <ref name="mei_att.mordent.ges.attributes"/>
-         <ref name="mei_att.mordent.anl.attributes"/>
          <empty/>
       </element>
    </define>
@@ -11337,10 +11337,10 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
          </pattern>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.facsimile.attributes"/>
+         <ref name="mei_att.trill.anl.attributes"/>
+         <ref name="mei_att.trill.ges.attributes"/>
          <ref name="mei_att.trill.log.attributes"/>
          <ref name="mei_att.trill.vis.attributes"/>
-         <ref name="mei_att.trill.ges.attributes"/>
-         <ref name="mei_att.trill.anl.attributes"/>
          <empty/>
       </element>
    </define>
@@ -11361,10 +11361,10 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
          </pattern>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.facsimile.attributes"/>
+         <ref name="mei_att.turn.anl.attributes"/>
+         <ref name="mei_att.turn.ges.attributes"/>
          <ref name="mei_att.turn.log.attributes"/>
          <ref name="mei_att.turn.vis.attributes"/>
-         <ref name="mei_att.turn.ges.attributes"/>
-         <ref name="mei_att.turn.anl.attributes"/>
          <empty/>
       </element>
    </define>
@@ -14109,10 +14109,10 @@ Suggested values include: 1] smufl</a:documentation>
          </pattern>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.facsimile.attributes"/>
+         <ref name="mei_att.harm.anl.attributes"/>
+         <ref name="mei_att.harm.ges.attributes"/>
          <ref name="mei_att.harm.log.attributes"/>
          <ref name="mei_att.harm.vis.attributes"/>
-         <ref name="mei_att.harm.ges.attributes"/>
-         <ref name="mei_att.harm.anl.attributes"/>
          <empty/>
       </element>
    </define>
@@ -25325,10 +25325,10 @@ Suggested values include: 1] smufl</a:documentation>
          <empty/>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.facsimile.attributes"/>
+         <ref name="mei_att.accid.anl.attributes"/>
+         <ref name="mei_att.accid.ges.attributes"/>
          <ref name="mei_att.accid.log.attributes"/>
          <ref name="mei_att.accid.vis.attributes"/>
-         <ref name="mei_att.accid.ges.attributes"/>
-         <ref name="mei_att.accid.anl.attributes"/>
          <empty/>
       </element>
    </define>
@@ -25402,10 +25402,10 @@ Suggested values include: 1] smufl</a:documentation>
          <empty/>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.facsimile.attributes"/>
+         <ref name="mei_att.ambNote.anl.attributes"/>
+         <ref name="mei_att.ambNote.ges.attributes"/>
          <ref name="mei_att.ambNote.log.attributes"/>
          <ref name="mei_att.ambNote.vis.attributes"/>
-         <ref name="mei_att.ambNote.ges.attributes"/>
-         <ref name="mei_att.ambNote.anl.attributes"/>
          <empty/>
       </element>
    </define>
@@ -25468,10 +25468,6 @@ Suggested values include: 1] smufl</a:documentation>
             </sch:rule>
          </pattern>
          <ref name="mei_att.common.attributes"/>
-         <ref name="mei_att.annot.log.attributes"/>
-         <ref name="mei_att.annot.vis.attributes"/>
-         <ref name="mei_att.annot.ges.attributes"/>
-         <ref name="mei_att.annot.anl.attributes"/>
          <ref name="mei_att.audience.attributes"/>
          <ref name="mei_att.bibl.attributes"/>
          <ref name="mei_att.dataPointing.attributes"/>
@@ -25480,6 +25476,10 @@ Suggested values include: 1] smufl</a:documentation>
          <ref name="mei_att.plist.attributes"/>
          <ref name="mei_att.source.attributes"/>
          <ref name="mei_att.targetEval.attributes"/>
+         <ref name="mei_att.annot.anl.attributes"/>
+         <ref name="mei_att.annot.ges.attributes"/>
+         <ref name="mei_att.annot.log.attributes"/>
+         <ref name="mei_att.annot.vis.attributes"/>
          <empty/>
       </element>
    </define>
@@ -25506,10 +25506,10 @@ Suggested values include: 1] smufl</a:documentation>
          <empty/>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.facsimile.attributes"/>
+         <ref name="mei_att.artic.anl.attributes"/>
+         <ref name="mei_att.artic.ges.attributes"/>
          <ref name="mei_att.artic.log.attributes"/>
          <ref name="mei_att.artic.vis.attributes"/>
-         <ref name="mei_att.artic.ges.attributes"/>
-         <ref name="mei_att.artic.anl.attributes"/>
          <empty/>
       </element>
    </define>
@@ -25538,10 +25538,10 @@ Suggested values include: 1] smufl</a:documentation>
          <ref name="mei_att.facsimile.attributes"/>
          <ref name="mei_att.pointing.attributes"/>
          <ref name="mei_att.targetEval.attributes"/>
+         <ref name="mei_att.barLine.anl.attributes"/>
+         <ref name="mei_att.barLine.ges.attributes"/>
          <ref name="mei_att.barLine.log.attributes"/>
          <ref name="mei_att.barLine.vis.attributes"/>
-         <ref name="mei_att.barLine.ges.attributes"/>
-         <ref name="mei_att.barLine.anl.attributes"/>
          <empty/>
       </element>
    </define>
@@ -25816,10 +25816,10 @@ Suggested values include: 1] smufl</a:documentation>
          </zeroOrMore>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.facsimile.attributes"/>
+         <ref name="mei_att.chord.anl.attributes"/>
+         <ref name="mei_att.chord.ges.attributes"/>
          <ref name="mei_att.chord.log.attributes"/>
          <ref name="mei_att.chord.vis.attributes"/>
-         <ref name="mei_att.chord.ges.attributes"/>
-         <ref name="mei_att.chord.anl.attributes"/>
          <empty/>
       </element>
    </define>
@@ -25870,10 +25870,10 @@ Suggested values include: 1] smufl</a:documentation>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.event.attributes"/>
          <ref name="mei_att.facsimile.attributes"/>
+         <ref name="mei_att.clefGrp.anl.attributes"/>
+         <ref name="mei_att.clefGrp.ges.attributes"/>
          <ref name="mei_att.clefGrp.log.attributes"/>
          <ref name="mei_att.clefGrp.vis.attributes"/>
-         <ref name="mei_att.clefGrp.ges.attributes"/>
-         <ref name="mei_att.clefGrp.anl.attributes"/>
          <empty/>
       </element>
    </define>
@@ -25971,10 +25971,10 @@ Suggested values include: 1] smufl</a:documentation>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.facsimile.attributes"/>
          <ref name="mei_att.source.attributes"/>
+         <ref name="mei_att.custos.anl.attributes"/>
+         <ref name="mei_att.custos.ges.attributes"/>
          <ref name="mei_att.custos.log.attributes"/>
          <ref name="mei_att.custos.vis.attributes"/>
-         <ref name="mei_att.custos.ges.attributes"/>
-         <ref name="mei_att.custos.anl.attributes"/>
          <empty/>
       </element>
    </define>
@@ -26156,10 +26156,10 @@ Suggested values include: 1] alt; 2] angle; 3] circum; 4] depth; 5] diameter; 6]
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.facsimile.attributes"/>
          <ref name="mei_att.lang.attributes"/>
+         <ref name="mei_att.dir.anl.attributes"/>
+         <ref name="mei_att.dir.ges.attributes"/>
          <ref name="mei_att.dir.log.attributes"/>
          <ref name="mei_att.dir.vis.attributes"/>
-         <ref name="mei_att.dir.ges.attributes"/>
-         <ref name="mei_att.dir.anl.attributes"/>
          <empty/>
       </element>
    </define>
@@ -26252,10 +26252,10 @@ Suggested values include: 1] abstract; 2] ack; 3] appendix; 4] bibliography; 5] 
          <empty/>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.facsimile.attributes"/>
+         <ref name="mei_att.dot.anl.attributes"/>
+         <ref name="mei_att.dot.ges.attributes"/>
          <ref name="mei_att.dot.log.attributes"/>
          <ref name="mei_att.dot.vis.attributes"/>
-         <ref name="mei_att.dot.ges.attributes"/>
-         <ref name="mei_att.dot.anl.attributes"/>
          <empty/>
       </element>
    </define>
@@ -26293,12 +26293,12 @@ Suggested values include: 1] abstract; 2] ack; 3] appendix; 4] bibliography; 5] 
             </sch:rule>
          </pattern>
          <ref name="mei_att.common.attributes"/>
-         <ref name="mei_att.dynam.log.attributes"/>
-         <ref name="mei_att.dynam.vis.attributes"/>
-         <ref name="mei_att.dynam.ges.attributes"/>
-         <ref name="mei_att.dynam.anl.attributes"/>
          <ref name="mei_att.facsimile.attributes"/>
          <ref name="mei_att.lang.attributes"/>
+         <ref name="mei_att.dynam.anl.attributes"/>
+         <ref name="mei_att.dynam.ges.attributes"/>
+         <ref name="mei_att.dynam.log.attributes"/>
+         <ref name="mei_att.dynam.vis.attributes"/>
          <empty/>
       </element>
    </define>
@@ -26360,13 +26360,13 @@ Suggested values include: 1] abstract; 2] ack; 3] appendix; 4] bibliography; 5] 
             </choice>
          </zeroOrMore>
          <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.facsimile.attributes"/>
+         <ref name="mei_att.pointing.attributes"/>
+         <ref name="mei_att.targetEval.attributes"/>
          <ref name="mei_att.ending.anl.attributes"/>
          <ref name="mei_att.ending.ges.attributes"/>
          <ref name="mei_att.ending.log.attributes"/>
          <ref name="mei_att.ending.vis.attributes"/>
-         <ref name="mei_att.facsimile.attributes"/>
-         <ref name="mei_att.pointing.attributes"/>
-         <ref name="mei_att.targetEval.attributes"/>
          <empty/>
       </element>
    </define>
@@ -26566,10 +26566,10 @@ Suggested values include: 1] abstract; 2] ack; 3] appendix; 4] bibliography; 5] 
          </pattern>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.facsimile.attributes"/>
+         <ref name="mei_att.grpSym.anl.attributes"/>
+         <ref name="mei_att.grpSym.ges.attributes"/>
          <ref name="mei_att.grpSym.log.attributes"/>
          <ref name="mei_att.grpSym.vis.attributes"/>
-         <ref name="mei_att.grpSym.ges.attributes"/>
-         <ref name="mei_att.grpSym.anl.attributes"/>
          <empty/>
       </element>
    </define>
@@ -26825,10 +26825,10 @@ Suggested values include: 1] abstract; 2] ack; 3] appendix; 4] bibliography; 5] 
          <ref name="mei_att.nInteger.attributes"/>
          <ref name="mei_att.responsibility.attributes"/>
          <ref name="mei_att.typed.attributes"/>
+         <ref name="mei_att.layer.anl.attributes"/>
+         <ref name="mei_att.layer.ges.attributes"/>
          <ref name="mei_att.layer.log.attributes"/>
          <ref name="mei_att.layer.vis.attributes"/>
-         <ref name="mei_att.layer.ges.attributes"/>
-         <ref name="mei_att.layer.anl.attributes"/>
          <empty/>
       </element>
    </define>
@@ -26854,10 +26854,10 @@ Suggested values include: 1] abstract; 2] ack; 3] appendix; 4] bibliography; 5] 
          <ref name="mei_att.nInteger.attributes"/>
          <ref name="mei_att.responsibility.attributes"/>
          <ref name="mei_att.typed.attributes"/>
+         <ref name="mei_att.layerDef.anl.attributes"/>
+         <ref name="mei_att.layerDef.ges.attributes"/>
          <ref name="mei_att.layerDef.log.attributes"/>
          <ref name="mei_att.layerDef.vis.attributes"/>
-         <ref name="mei_att.layerDef.ges.attributes"/>
-         <ref name="mei_att.layerDef.anl.attributes"/>
          <empty/>
       </element>
    </define>
@@ -26890,12 +26890,12 @@ Suggested values include: 1] abstract; 2] ack; 3] appendix; 4] bibliography; 5] 
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.facsimile.attributes"/>
          <ref name="mei_att.lang.attributes"/>
+         <ref name="mei_att.metadataPointing.attributes"/>
+         <ref name="mei_att.xy.attributes"/>
          <ref name="mei_att.lyrics.anl.attributes"/>
          <ref name="mei_att.lyrics.ges.attributes"/>
          <ref name="mei_att.lyrics.log.attributes"/>
          <ref name="mei_att.lyrics.vis.attributes"/>
-         <ref name="mei_att.metadataPointing.attributes"/>
-         <ref name="mei_att.xy.attributes"/>
          <empty/>
       </element>
    </define>
@@ -27143,10 +27143,10 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          </zeroOrMore>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.facsimile.attributes"/>
+         <ref name="mei_att.note.anl.attributes"/>
+         <ref name="mei_att.note.ges.attributes"/>
          <ref name="mei_att.note.log.attributes"/>
          <ref name="mei_att.note.vis.attributes"/>
-         <ref name="mei_att.note.ges.attributes"/>
-         <ref name="mei_att.note.anl.attributes"/>
          <empty/>
       </element>
    </define>
@@ -27200,10 +27200,10 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          </pattern>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.facsimile.attributes"/>
+         <ref name="mei_att.ornam.anl.attributes"/>
+         <ref name="mei_att.ornam.ges.attributes"/>
          <ref name="mei_att.ornam.log.attributes"/>
          <ref name="mei_att.ornam.vis.attributes"/>
-         <ref name="mei_att.ornam.ges.attributes"/>
-         <ref name="mei_att.ornam.anl.attributes"/>
          <empty/>
       </element>
    </define>
@@ -27229,10 +27229,10 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(padding) An indication of extra visual space between notational elements.</a:documentation>
          <empty/>
          <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.pad.anl.attributes"/>
+         <ref name="mei_att.pad.ges.attributes"/>
          <ref name="mei_att.pad.log.attributes"/>
          <ref name="mei_att.pad.vis.attributes"/>
-         <ref name="mei_att.pad.ges.attributes"/>
-         <ref name="mei_att.pad.anl.attributes"/>
          <empty/>
       </element>
    </define>
@@ -27255,10 +27255,10 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          </zeroOrMore>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.metadataPointing.attributes"/>
+         <ref name="mei_att.part.anl.attributes"/>
+         <ref name="mei_att.part.ges.attributes"/>
          <ref name="mei_att.part.log.attributes"/>
          <ref name="mei_att.part.vis.attributes"/>
-         <ref name="mei_att.part.ges.attributes"/>
-         <ref name="mei_att.part.anl.attributes"/>
          <empty/>
       </element>
    </define>
@@ -27270,10 +27270,10 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          </zeroOrMore>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.metadataPointing.attributes"/>
+         <ref name="mei_att.parts.anl.attributes"/>
+         <ref name="mei_att.parts.ges.attributes"/>
          <ref name="mei_att.parts.log.attributes"/>
          <ref name="mei_att.parts.vis.attributes"/>
-         <ref name="mei_att.parts.ges.attributes"/>
-         <ref name="mei_att.parts.anl.attributes"/>
          <empty/>
       </element>
    </define>
@@ -27388,10 +27388,10 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          </pattern>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.facsimile.attributes"/>
+         <ref name="mei_att.phrase.anl.attributes"/>
+         <ref name="mei_att.phrase.ges.attributes"/>
          <ref name="mei_att.phrase.log.attributes"/>
          <ref name="mei_att.phrase.vis.attributes"/>
-         <ref name="mei_att.phrase.ges.attributes"/>
-         <ref name="mei_att.phrase.anl.attributes"/>
          <empty/>
       </element>
    </define>
@@ -27658,10 +27658,10 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          </pattern>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.facsimile.attributes"/>
+         <ref name="mei_att.rest.anl.attributes"/>
+         <ref name="mei_att.rest.ges.attributes"/>
          <ref name="mei_att.rest.log.attributes"/>
          <ref name="mei_att.rest.vis.attributes"/>
-         <ref name="mei_att.rest.ges.attributes"/>
-         <ref name="mei_att.rest.anl.attributes"/>
          <empty/>
       </element>
    </define>
@@ -27729,10 +27729,10 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          </zeroOrMore>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.metadataPointing.attributes"/>
+         <ref name="mei_att.score.anl.attributes"/>
+         <ref name="mei_att.score.ges.attributes"/>
          <ref name="mei_att.score.log.attributes"/>
          <ref name="mei_att.score.vis.attributes"/>
-         <ref name="mei_att.score.ges.attributes"/>
-         <ref name="mei_att.score.anl.attributes"/>
          <empty/>
       </element>
    </define>
@@ -27770,10 +27770,10 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
             <ref name="mei_ambitus"/>
          </optional>
          <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.scoreDef.anl.attributes"/>
+         <ref name="mei_att.scoreDef.ges.attributes"/>
          <ref name="mei_att.scoreDef.log.attributes"/>
          <ref name="mei_att.scoreDef.vis.attributes"/>
-         <ref name="mei_att.scoreDef.ges.attributes"/>
-         <ref name="mei_att.scoreDef.anl.attributes"/>
          <empty/>
       </element>
    </define>
@@ -27812,11 +27812,11 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          <ref name="mei_att.facsimile.attributes"/>
          <ref name="mei_att.metadataPointing.attributes"/>
          <ref name="mei_att.pointing.attributes"/>
+         <ref name="mei_att.targetEval.attributes"/>
          <ref name="mei_att.section.anl.attributes"/>
          <ref name="mei_att.section.ges.attributes"/>
          <ref name="mei_att.section.log.attributes"/>
          <ref name="mei_att.section.vis.attributes"/>
-         <ref name="mei_att.targetEval.attributes"/>
          <empty/>
       </element>
    </define>
@@ -28128,10 +28128,10 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          <ref name="mei_att.nInteger.attributes"/>
          <ref name="mei_att.responsibility.attributes"/>
          <ref name="mei_att.typed.attributes"/>
+         <ref name="mei_att.staffDef.anl.attributes"/>
+         <ref name="mei_att.staffDef.ges.attributes"/>
          <ref name="mei_att.staffDef.log.attributes"/>
          <ref name="mei_att.staffDef.vis.attributes"/>
-         <ref name="mei_att.staffDef.ges.attributes"/>
-         <ref name="mei_att.staffDef.anl.attributes"/>
          <empty/>
       </element>
    </define>
@@ -28173,10 +28173,10 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.facsimile.attributes"/>
          <ref name="mei_att.metadataPointing.attributes"/>
+         <ref name="mei_att.staffGrp.anl.attributes"/>
+         <ref name="mei_att.staffGrp.ges.attributes"/>
          <ref name="mei_att.staffGrp.log.attributes"/>
          <ref name="mei_att.staffGrp.vis.attributes"/>
-         <ref name="mei_att.staffGrp.ges.attributes"/>
-         <ref name="mei_att.staffGrp.anl.attributes"/>
          <empty/>
       </element>
    </define>
@@ -28195,10 +28195,10 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.facsimile.attributes"/>
          <ref name="mei_att.lang.attributes"/>
+         <ref name="mei_att.syl.anl.attributes"/>
+         <ref name="mei_att.syl.ges.attributes"/>
          <ref name="mei_att.syl.log.attributes"/>
          <ref name="mei_att.syl.vis.attributes"/>
-         <ref name="mei_att.syl.ges.attributes"/>
-         <ref name="mei_att.syl.anl.attributes"/>
          <empty/>
       </element>
    </define>
@@ -28268,10 +28268,10 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          <ref name="mei_att.bibl.attributes"/>
          <ref name="mei_att.facsimile.attributes"/>
          <ref name="mei_att.lang.attributes"/>
+         <ref name="mei_att.tempo.anl.attributes"/>
+         <ref name="mei_att.tempo.ges.attributes"/>
          <ref name="mei_att.tempo.log.attributes"/>
          <ref name="mei_att.tempo.vis.attributes"/>
-         <ref name="mei_att.tempo.ges.attributes"/>
-         <ref name="mei_att.tempo.anl.attributes"/>
          <empty/>
       </element>
    </define>
@@ -29447,6 +29447,7 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
       <ref name="mei_att.xy.attributes"/>
    </define>
    <define name="mei_att.attacca.vis.attributes">
+      <ref name="mei_att.color.attributes"/>
       <ref name="mei_att.extender.attributes"/>
       <ref name="mei_att.placementRelStaff.attributes"/>
       <ref name="mei_att.verticalGroup.attributes"/>
@@ -29702,6 +29703,7 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
       <empty/>
    </define>
    <define name="mei_att.dir.vis.attributes">
+      <ref name="mei_att.color.attributes"/>
       <ref name="mei_att.extender.attributes"/>
       <ref name="mei_att.placementRelStaff.attributes"/>
       <ref name="mei_att.verticalGroup.attributes"/>
@@ -29722,6 +29724,7 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
       <ref name="mei_att.xy.attributes"/>
    </define>
    <define name="mei_att.dynam.vis.attributes">
+      <ref name="mei_att.color.attributes"/>
       <ref name="mei_att.extender.attributes"/>
       <ref name="mei_att.placementRelStaff.attributes"/>
       <ref name="mei_att.verticalGroup.attributes"/>
@@ -29769,6 +29772,7 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
    </define>
    <define name="mei_att.f.vis.attributes">
       <ref name="mei_att.altSym.attributes"/>
+      <ref name="mei_att.color.attributes"/>
       <ref name="mei_att.extender.attributes"/>
       <ref name="mei_att.placementRelStaff.attributes"/>
       <ref name="mei_att.visualOffset.attributes"/>
@@ -29816,6 +29820,7 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
    </define>
    <define name="mei_att.fing.vis.attributes">
       <ref name="mei_att.altSym.attributes"/>
+      <ref name="mei_att.color.attributes"/>
       <ref name="mei_att.extender.attributes"/>
       <ref name="mei_att.placementRelStaff.attributes"/>
       <ref name="mei_att.visualOffset.attributes"/>
@@ -29823,6 +29828,7 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
    </define>
    <define name="mei_att.fingGrp.vis.attributes">
       <ref name="mei_att.altSym.attributes"/>
+      <ref name="mei_att.color.attributes"/>
       <ref name="mei_att.extender.attributes"/>
       <ref name="mei_att.placementRelStaff.attributes"/>
       <ref name="mei_att.visualOffset.attributes"/>
@@ -29973,6 +29979,7 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
       <ref name="mei_att.visualOffset.attributes"/>
    </define>
    <define name="mei_att.harm.vis.attributes">
+      <ref name="mei_att.color.attributes"/>
       <ref name="mei_att.extender.attributes"/>
       <ref name="mei_att.placementRelStaff.attributes"/>
       <ref name="mei_att.visualOffset.attributes"/>
@@ -30328,6 +30335,7 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
       </optional>
    </define>
    <define name="mei_att.metaMark.vis.attributes">
+      <ref name="mei_att.color.attributes"/>
       <ref name="mei_att.placementRelStaff.attributes"/>
    </define>
    <define name="mei_att.meterSig.vis.attributes">
@@ -30654,6 +30662,7 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
       <ref name="mei_att.xy.attributes"/>
    </define>
    <define name="mei_att.repeatMark.vis.attributes">
+      <ref name="mei_att.color.attributes"/>
       <ref name="mei_att.extender.attributes"/>
       <ref name="mei_att.extSym.attributes"/>
       <ref name="mei_att.placementRelStaff.attributes"/>
@@ -30960,6 +30969,7 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
       <ref name="mei_att.xy.attributes"/>
    </define>
    <define name="mei_att.tempo.vis.attributes">
+      <ref name="mei_att.color.attributes"/>
       <ref name="mei_att.extender.attributes"/>
       <ref name="mei_att.placementRelStaff.attributes"/>
       <ref name="mei_att.verticalGroup.attributes"/>
@@ -30982,8 +30992,8 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
       <ref name="mei_att.color.attributes"/>
       <ref name="mei_att.enclosingChars.attributes"/>
       <ref name="mei_att.extender.attributes"/>
-      <ref name="mei_att.placementRelStaff.attributes"/>
       <ref name="mei_att.extSym.attributes"/>
+      <ref name="mei_att.placementRelStaff.attributes"/>
       <ref name="mei_att.typography.attributes"/>
       <ref name="mei_att.visualOffset.attributes"/>
       <ref name="mei_att.visualOffset2.ho.attributes"/>

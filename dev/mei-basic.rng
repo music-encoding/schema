@@ -5,7 +5,7 @@
           xmlns:xlink="http://www.w3.org/1999/xlink"
           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
           ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2024-05-15T17:15:35Z. . 
+Schema generated from ODD source 2024-05-31T16:22:09Z. . 
 TEI Edition: Development Version 
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -3143,9 +3143,9 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
             </sch:rule>
          </pattern>
          <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.trill.ges.attributes"/>
          <ref name="mei_att.trill.log.attributes"/>
          <ref name="mei_att.trill.vis.attributes"/>
-         <ref name="mei_att.trill.ges.attributes"/>
          <empty/>
       </element>
    </define>
@@ -6386,9 +6386,9 @@ Suggested values include: 1] smufl</a:documentation>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(accidental) Records a temporary alteration to the pitch of a note.</a:documentation>
          <empty/>
          <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.accid.ges.attributes"/>
          <ref name="mei_att.accid.log.attributes"/>
          <ref name="mei_att.accid.vis.attributes"/>
-         <ref name="mei_att.accid.ges.attributes"/>
          <empty/>
       </element>
    </define>
@@ -6411,9 +6411,9 @@ Suggested values include: 1] smufl</a:documentation>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(articulation) An indication of how to play a note or chord.</a:documentation>
          <empty/>
          <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.artic.ges.attributes"/>
          <ref name="mei_att.artic.log.attributes"/>
          <ref name="mei_att.artic.vis.attributes"/>
-         <ref name="mei_att.artic.ges.attributes"/>
          <empty/>
       </element>
    </define>
@@ -6462,9 +6462,9 @@ Suggested values include: 1] smufl</a:documentation>
             </choice>
          </zeroOrMore>
          <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.chord.ges.attributes"/>
          <ref name="mei_att.chord.log.attributes"/>
          <ref name="mei_att.chord.vis.attributes"/>
-         <ref name="mei_att.chord.ges.attributes"/>
          <empty/>
       </element>
    </define>
@@ -6603,9 +6603,9 @@ Suggested values include: 1] smufl</a:documentation>
             </sch:rule>
          </pattern>
          <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
          <ref name="mei_att.dynam.log.attributes"/>
          <ref name="mei_att.dynam.vis.attributes"/>
-         <ref name="mei_att.lang.attributes"/>
          <empty/>
       </element>
    </define>
@@ -6775,9 +6775,9 @@ Suggested values include: 1] smufl</a:documentation>
             </choice>
          </zeroOrMore>
          <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.note.ges.attributes"/>
          <ref name="mei_att.note.log.attributes"/>
          <ref name="mei_att.note.vis.attributes"/>
-         <ref name="mei_att.note.ges.attributes"/>
          <empty/>
       </element>
    </define>
@@ -6802,9 +6802,9 @@ Suggested values include: 1] smufl</a:documentation>
             </sch:rule>
          </pattern>
          <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.ornam.ges.attributes"/>
          <ref name="mei_att.ornam.log.attributes"/>
          <ref name="mei_att.ornam.vis.attributes"/>
-         <ref name="mei_att.ornam.ges.attributes"/>
          <empty/>
       </element>
    </define>
@@ -6940,9 +6940,9 @@ Suggested values include: 1] smufl</a:documentation>
             </sch:rule>
          </pattern>
          <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.rest.ges.attributes"/>
          <ref name="mei_att.rest.log.attributes"/>
          <ref name="mei_att.rest.vis.attributes"/>
-         <ref name="mei_att.rest.ges.attributes"/>
          <empty/>
       </element>
    </define>
@@ -7223,8 +7223,8 @@ Suggested values include: 1] smufl</a:documentation>
          <ref name="mei_att.labelled.attributes"/>
          <ref name="mei_att.nInteger.attributes"/>
          <ref name="mei_att.typed.attributes"/>
-         <ref name="mei_att.staffDef.log.attributes"/>
          <ref name="mei_att.staffDef.ges.attributes"/>
+         <ref name="mei_att.staffDef.log.attributes"/>
          <empty/>
       </element>
    </define>
@@ -7349,9 +7349,9 @@ Suggested values include: 1] smufl</a:documentation>
          </pattern>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.lang.attributes"/>
+         <ref name="mei_att.tempo.ges.attributes"/>
          <ref name="mei_att.tempo.log.attributes"/>
          <ref name="mei_att.tempo.vis.attributes"/>
-         <ref name="mei_att.tempo.ges.attributes"/>
          <empty/>
       </element>
    </define>
@@ -7613,12 +7613,14 @@ Suggested values include: 1] main; 2] subordinate; 3] abbreviated; 4] alternativ
       <ref name="mei_att.visualOffset.attributes"/>
    </define>
    <define name="mei_att.dir.vis.attributes">
+      <ref name="mei_att.color.attributes"/>
       <ref name="mei_att.extender.attributes"/>
       <ref name="mei_att.placementRelStaff.attributes"/>
       <ref name="mei_att.visualOffset.attributes"/>
       <ref name="mei_att.visualOffset2.ho.attributes"/>
    </define>
    <define name="mei_att.dynam.vis.attributes">
+      <ref name="mei_att.color.attributes"/>
       <ref name="mei_att.extender.attributes"/>
       <ref name="mei_att.placementRelStaff.attributes"/>
       <ref name="mei_att.visualOffset.attributes"/>
@@ -7628,6 +7630,7 @@ Suggested values include: 1] main; 2] subordinate; 3] abbreviated; 4] alternativ
       <ref name="mei_att.lineRend.attributes"/>
    </define>
    <define name="mei_att.f.vis.attributes">
+      <ref name="mei_att.color.attributes"/>
       <ref name="mei_att.extender.attributes"/>
       <ref name="mei_att.placementRelStaff.attributes"/>
       <ref name="mei_att.visualOffset.attributes"/>
@@ -7669,6 +7672,7 @@ Suggested values include: 1] main; 2] subordinate; 3] abbreviated; 4] alternativ
       </optional>
    </define>
    <define name="mei_att.fing.vis.attributes">
+      <ref name="mei_att.color.attributes"/>
       <ref name="mei_att.extender.attributes"/>
       <ref name="mei_att.placementRelStaff.attributes"/>
       <ref name="mei_att.visualOffset.attributes"/>
@@ -7894,6 +7898,7 @@ Suggested values include: 1] main; 2] subordinate; 3] abbreviated; 4] alternativ
       <ref name="mei_att.visualOffset.attributes"/>
    </define>
    <define name="mei_att.repeatMark.vis.attributes">
+      <ref name="mei_att.color.attributes"/>
       <ref name="mei_att.extender.attributes"/>
       <ref name="mei_att.extSym.attributes"/>
       <ref name="mei_att.placementRelStaff.attributes"/>
@@ -7981,6 +7986,7 @@ Suggested values include: 1] main; 2] subordinate; 3] abbreviated; 4] alternativ
       <ref name="mei_att.visualOffset.attributes"/>
    </define>
    <define name="mei_att.tempo.vis.attributes">
+      <ref name="mei_att.color.attributes"/>
       <ref name="mei_att.extender.attributes"/>
       <ref name="mei_att.placementRelStaff.attributes"/>
       <ref name="mei_att.visualOffset.attributes"/>
@@ -7997,8 +8003,8 @@ Suggested values include: 1] main; 2] subordinate; 3] abbreviated; 4] alternativ
       <ref name="mei_att.color.attributes"/>
       <ref name="mei_att.enclosingChars.attributes"/>
       <ref name="mei_att.extender.attributes"/>
-      <ref name="mei_att.placementRelStaff.attributes"/>
       <ref name="mei_att.extSym.attributes"/>
+      <ref name="mei_att.placementRelStaff.attributes"/>
       <ref name="mei_att.typography.attributes"/>
       <ref name="mei_att.visualOffset.attributes"/>
       <ref name="mei_att.visualOffset2.ho.attributes"/>
