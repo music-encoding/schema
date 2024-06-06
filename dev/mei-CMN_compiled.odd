@@ -18300,6 +18300,7 @@
       <memberOf key="att.color"/>
       <memberOf key="att.curvature"/>
       <memberOf key="att.lineRend.base"/>
+      <memberOf key="att.verticalGroup"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.visualOffset2"/>
       <memberOf key="att.xy"/>
@@ -18328,6 +18329,7 @@
       <memberOf key="att.staffLoc"/>
       <memberOf key="att.staffLoc.pitched"/>
       <memberOf key="att.typography"/>
+      <memberOf key="att.verticalGroup"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.xy"/>
     </classes>
@@ -18346,6 +18348,7 @@
       <memberOf key="att.staffLoc"/>
       <memberOf key="att.staffLoc.pitched"/>
       <memberOf key="att.typography"/>
+      <memberOf key="att.verticalGroup"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.xy"/>
     </classes>
@@ -18420,6 +18423,7 @@
       <memberOf key="att.extSym"/>
       <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.typography"/>
+      <memberOf key="att.verticalGroup"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.xy"/>
     </classes>
@@ -18511,6 +18515,7 @@
       <memberOf key="att.extSym"/>
       <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.typography"/>
+      <memberOf key="att.verticalGroup"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.xy"/>
     </classes>
@@ -18550,6 +18555,7 @@
       <memberOf key="att.color"/>
       <memberOf key="att.extender"/>
       <memberOf key="att.placementRelStaff"/>
+      <memberOf key="att.verticalGroup"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.xy"/>
     </classes>
@@ -18564,6 +18570,7 @@
       <memberOf key="att.color"/>
       <memberOf key="att.extender"/>
       <memberOf key="att.placementRelStaff"/>
+      <memberOf key="att.verticalGroup"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.xy"/>
     </classes>
@@ -18713,6 +18720,7 @@
       <memberOf key="att.color"/>
       <memberOf key="att.extender"/>
       <memberOf key="att.placementRelStaff"/>
+      <memberOf key="att.verticalGroup"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.visualOffset2.ho"/>
       <memberOf key="att.visualOffset2.to"/>
@@ -18742,6 +18750,7 @@
       <memberOf key="att.extSym"/>
       <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.typography"/>
+      <memberOf key="att.verticalGroup"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.xy"/>
     </classes>
@@ -18928,6 +18937,7 @@
     <classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.color"/>
       <memberOf key="att.placementRelStaff"/>
+      <memberOf key="att.verticalGroup"/>
     </classes>
   </classSpec><classSpec rend="add" ident="att.meterSig.vis" module="MEI.visual" type="atts">
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Visual domain attributes.</desc>
@@ -18991,6 +19001,7 @@
       <memberOf key="att.extSym"/>
       <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.typography"/>
+      <memberOf key="att.verticalGroup"/>
       <memberOf key="att.visualOffset"/>
     </classes>
   </classSpec><classSpec rend="add" ident="att.mRest.vis" module="MEI.visual" type="atts">
@@ -19086,6 +19097,7 @@
     <classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.color"/>
       <memberOf key="att.extender"/>
+      <memberOf key="att.verticalGroup"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.visualOffset2.ho"/>
       <memberOf key="att.visualOffset2.to"/>
@@ -19098,6 +19110,7 @@
       <memberOf key="att.color"/>
       <memberOf key="att.enclosingChars"/>
       <memberOf key="att.placementRelStaff"/>
+      <memberOf key="att.verticalGroup"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.visualOffset2.ho"/>
       <memberOf key="att.visualOffset2.to"/>
@@ -19460,6 +19473,7 @@
       <memberOf key="att.extSym"/>
       <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.typography"/>
+      <memberOf key="att.verticalGroup"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.visualOffset2.ho"/>
       <memberOf key="att.visualOffset2.to"/>
@@ -19517,6 +19531,7 @@
       <memberOf key="att.extSym"/>
       <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.typography"/>
+      <memberOf key="att.verticalGroup"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.xy"/>
     </classes>

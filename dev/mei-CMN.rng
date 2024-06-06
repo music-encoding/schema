@@ -5,7 +5,7 @@
           xmlns:xlink="http://www.w3.org/1999/xlink"
           datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
           ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2024-05-31T16:22:10Z. . 
+Schema generated from ODD source 2024-06-06T07:18:54Z. . 
 TEI Edition: Development Version 
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -28084,6 +28084,7 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
       <ref name="mei_att.color.attributes"/>
       <ref name="mei_att.curvature.attributes"/>
       <ref name="mei_att.lineRend.base.attributes"/>
+      <ref name="mei_att.verticalGroup.attributes"/>
       <ref name="mei_att.visualOffset.attributes"/>
       <ref name="mei_att.visualOffset2.attributes"/>
       <ref name="mei_att.xy.attributes"/>
@@ -28108,6 +28109,7 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
       <ref name="mei_att.staffLoc.attributes"/>
       <ref name="mei_att.staffLoc.pitched.attributes"/>
       <ref name="mei_att.typography.attributes"/>
+      <ref name="mei_att.verticalGroup.attributes"/>
       <ref name="mei_att.visualOffset.attributes"/>
       <ref name="mei_att.xy.attributes"/>
    </define>
@@ -28122,6 +28124,7 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
       <ref name="mei_att.staffLoc.attributes"/>
       <ref name="mei_att.staffLoc.pitched.attributes"/>
       <ref name="mei_att.typography.attributes"/>
+      <ref name="mei_att.verticalGroup.attributes"/>
       <ref name="mei_att.visualOffset.attributes"/>
       <ref name="mei_att.xy.attributes"/>
    </define>
@@ -28192,6 +28195,7 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
       <ref name="mei_att.extSym.attributes"/>
       <ref name="mei_att.placementRelStaff.attributes"/>
       <ref name="mei_att.typography.attributes"/>
+      <ref name="mei_att.verticalGroup.attributes"/>
       <ref name="mei_att.visualOffset.attributes"/>
       <ref name="mei_att.xy.attributes"/>
    </define>
@@ -28264,6 +28268,7 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
       <ref name="mei_att.extSym.attributes"/>
       <ref name="mei_att.placementRelStaff.attributes"/>
       <ref name="mei_att.typography.attributes"/>
+      <ref name="mei_att.verticalGroup.attributes"/>
       <ref name="mei_att.visualOffset.attributes"/>
       <ref name="mei_att.xy.attributes"/>
       <ref name="mei_att.fermata.vis.attribute.form"/>
@@ -28302,6 +28307,7 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
       <ref name="mei_att.color.attributes"/>
       <ref name="mei_att.extender.attributes"/>
       <ref name="mei_att.placementRelStaff.attributes"/>
+      <ref name="mei_att.verticalGroup.attributes"/>
       <ref name="mei_att.visualOffset.attributes"/>
       <ref name="mei_att.xy.attributes"/>
    </define>
@@ -28310,6 +28316,7 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
       <ref name="mei_att.color.attributes"/>
       <ref name="mei_att.extender.attributes"/>
       <ref name="mei_att.placementRelStaff.attributes"/>
+      <ref name="mei_att.verticalGroup.attributes"/>
       <ref name="mei_att.visualOffset.attributes"/>
       <ref name="mei_att.xy.attributes"/>
       <ref name="mei_att.fingGrp.vis.attribute.orient"/>
@@ -28461,6 +28468,7 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
       <ref name="mei_att.color.attributes"/>
       <ref name="mei_att.extender.attributes"/>
       <ref name="mei_att.placementRelStaff.attributes"/>
+      <ref name="mei_att.verticalGroup.attributes"/>
       <ref name="mei_att.visualOffset.attributes"/>
       <ref name="mei_att.visualOffset2.ho.attributes"/>
       <ref name="mei_att.visualOffset2.to.attributes"/>
@@ -28488,6 +28496,7 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
       <ref name="mei_att.extSym.attributes"/>
       <ref name="mei_att.placementRelStaff.attributes"/>
       <ref name="mei_att.typography.attributes"/>
+      <ref name="mei_att.verticalGroup.attributes"/>
       <ref name="mei_att.visualOffset.attributes"/>
       <ref name="mei_att.xy.attributes"/>
    </define>
@@ -28675,6 +28684,7 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
    <define name="mei_att.metaMark.vis.attributes">
       <ref name="mei_att.color.attributes"/>
       <ref name="mei_att.placementRelStaff.attributes"/>
+      <ref name="mei_att.verticalGroup.attributes"/>
    </define>
    <define name="mei_att.meterSig.vis.attributes">
       <ref name="mei_att.altSym.attributes"/>
@@ -28739,6 +28749,7 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
       <ref name="mei_att.extSym.attributes"/>
       <ref name="mei_att.placementRelStaff.attributes"/>
       <ref name="mei_att.typography.attributes"/>
+      <ref name="mei_att.verticalGroup.attributes"/>
       <ref name="mei_att.visualOffset.attributes"/>
    </define>
    <define name="mei_att.mRest.vis.attributes">
@@ -28817,6 +28828,7 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
    <define name="mei_att.octave.vis.attributes">
       <ref name="mei_att.color.attributes"/>
       <ref name="mei_att.extender.attributes"/>
+      <ref name="mei_att.verticalGroup.attributes"/>
       <ref name="mei_att.visualOffset.attributes"/>
       <ref name="mei_att.visualOffset2.ho.attributes"/>
       <ref name="mei_att.visualOffset2.to.attributes"/>
@@ -28827,6 +28839,7 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
       <ref name="mei_att.color.attributes"/>
       <ref name="mei_att.enclosingChars.attributes"/>
       <ref name="mei_att.placementRelStaff.attributes"/>
+      <ref name="mei_att.verticalGroup.attributes"/>
       <ref name="mei_att.visualOffset.attributes"/>
       <ref name="mei_att.visualOffset2.ho.attributes"/>
       <ref name="mei_att.visualOffset2.to.attributes"/>
@@ -29144,6 +29157,7 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
       <ref name="mei_att.extSym.attributes"/>
       <ref name="mei_att.placementRelStaff.attributes"/>
       <ref name="mei_att.typography.attributes"/>
+      <ref name="mei_att.verticalGroup.attributes"/>
       <ref name="mei_att.visualOffset.attributes"/>
       <ref name="mei_att.visualOffset2.ho.attributes"/>
       <ref name="mei_att.visualOffset2.to.attributes"/>
@@ -29204,6 +29218,7 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
       <ref name="mei_att.extSym.attributes"/>
       <ref name="mei_att.placementRelStaff.attributes"/>
       <ref name="mei_att.typography.attributes"/>
+      <ref name="mei_att.verticalGroup.attributes"/>
       <ref name="mei_att.visualOffset.attributes"/>
       <ref name="mei_att.xy.attributes"/>
    </define>

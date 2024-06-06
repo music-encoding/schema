@@ -20,7 +20,7 @@
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href=../../../source/"validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2024-05-31T18:22:01.762129528+02:00-->
+<!--canonicalized: 2024-06-06T09:18:46.632302426+02:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -41654,6 +41654,7 @@ or
       <memberOf key="att.color"/>
       <memberOf key="att.curvature"/>
       <memberOf key="att.lineRend.base"/>
+      <memberOf key="att.verticalGroup"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.visualOffset2"/>
       <memberOf key="att.xy"/>
@@ -41684,6 +41685,7 @@ or
       <memberOf key="att.staffLoc"/>
       <memberOf key="att.staffLoc.pitched"/>
       <memberOf key="att.typography"/>
+      <memberOf key="att.verticalGroup"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.xy"/>
     </classes>
@@ -41704,6 +41706,7 @@ or
       <memberOf key="att.staffLoc"/>
       <memberOf key="att.staffLoc.pitched"/>
       <memberOf key="att.typography"/>
+      <memberOf key="att.verticalGroup"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.xy"/>
     </classes>
@@ -41785,6 +41788,7 @@ or
       <memberOf key="att.extSym"/>
       <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.typography"/>
+      <memberOf key="att.verticalGroup"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.xy"/>
     </classes>
@@ -41935,6 +41939,7 @@ or
       <memberOf key="att.extSym"/>
       <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.typography"/>
+      <memberOf key="att.verticalGroup"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.xy"/>
     </classes>
@@ -41975,6 +41980,7 @@ or
       <memberOf key="att.color"/>
       <memberOf key="att.extender"/>
       <memberOf key="att.placementRelStaff"/>
+      <memberOf key="att.verticalGroup"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.xy"/>
     </classes>
@@ -41990,6 +41996,7 @@ or
       <memberOf key="att.color"/>
       <memberOf key="att.extender"/>
       <memberOf key="att.placementRelStaff"/>
+      <memberOf key="att.verticalGroup"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.xy"/>
     </classes>
@@ -42147,6 +42154,7 @@ or
       <memberOf key="att.color"/>
       <memberOf key="att.extender"/>
       <memberOf key="att.placementRelStaff"/>
+      <memberOf key="att.verticalGroup"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.visualOffset2.ho"/>
       <memberOf key="att.visualOffset2.to"/>
@@ -42177,6 +42185,7 @@ or
       <memberOf key="att.extSym"/>
       <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.typography"/>
+      <memberOf key="att.verticalGroup"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.xy"/>
     </classes>
@@ -42521,6 +42530,7 @@ or
     <classes>
       <memberOf key="att.color"/>
       <memberOf key="att.placementRelStaff"/>
+      <memberOf key="att.verticalGroup"/>
     </classes>
   </classSpec>
   <classSpec ident="att.meterSig.vis" module="MEI.visual" type="atts">
@@ -42589,6 +42599,7 @@ or
       <memberOf key="att.extSym"/>
       <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.typography"/>
+      <memberOf key="att.verticalGroup"/>
       <memberOf key="att.visualOffset"/>
     </classes>
   </classSpec>
@@ -42731,6 +42742,7 @@ or
     <classes>
       <memberOf key="att.color"/>
       <memberOf key="att.extender"/>
+      <memberOf key="att.verticalGroup"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.visualOffset2.ho"/>
       <memberOf key="att.visualOffset2.to"/>
@@ -42758,6 +42770,7 @@ or
       <memberOf key="att.color"/>
       <memberOf key="att.enclosingChars"/>
       <memberOf key="att.placementRelStaff"/>
+      <memberOf key="att.verticalGroup"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.visualOffset2.ho"/>
       <memberOf key="att.visualOffset2.to"/>
@@ -43301,6 +43314,7 @@ or
       <memberOf key="att.extSym"/>
       <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.typography"/>
+      <memberOf key="att.verticalGroup"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.visualOffset2.ho"/>
       <memberOf key="att.visualOffset2.to"/>
@@ -43361,6 +43375,7 @@ or
       <memberOf key="att.extSym"/>
       <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.typography"/>
+      <memberOf key="att.verticalGroup"/>
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.xy"/>
     </classes>

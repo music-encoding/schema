@@ -8300,6 +8300,7 @@
       <memberOf key="att.color"/>
       <memberOf key="att.extender"/>
       <memberOf key="att.placementRelStaff"/>
+      
       <memberOf key="att.visualOffset"/>
       
     </classes>
@@ -8402,6 +8403,7 @@
       <memberOf key="att.extSym"/>
       <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.typography"/>
+      
       <memberOf key="att.visualOffset"/>
       
     </classes>
@@ -8444,6 +8446,7 @@
       <memberOf key="att.extSym"/>
       <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.typography"/>
+      
       <memberOf key="att.visualOffset"/>
     </classes>
   </classSpec><classSpec rend="add" ident="att.mRest.vis" module="MEI.visual" type="atts">
@@ -8523,6 +8526,7 @@
     <classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.color"/>
       <memberOf key="att.extender"/>
+      
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.visualOffset2.ho"/>
       
@@ -8535,6 +8539,7 @@
       <memberOf key="att.color"/>
       <memberOf key="att.enclosingChars"/>
       <memberOf key="att.placementRelStaff"/>
+      
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.visualOffset2.ho"/>
       
@@ -8741,6 +8746,7 @@
       <memberOf key="att.extSym"/>
       <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.typography"/>
+      
       <memberOf key="att.visualOffset"/>
       <memberOf key="att.visualOffset2.ho"/>
       
@@ -8793,6 +8799,7 @@
       <memberOf key="att.extSym"/>
       <memberOf key="att.placementRelStaff"/>
       <memberOf key="att.typography"/>
+      
       <memberOf key="att.visualOffset"/>
       
     </classes>
