@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2024-07-18T14:14:33Z. . 
+Schema generated from ODD source 2024-07-18T14:26:49Z. . 
 TEI Edition: Development Version 
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -7225,6 +7225,7 @@ Suggested values include: 1] smufl</a:documentation>
          <ref name="mei_att.typed.attributes"/>
          <ref name="mei_att.staffDef.ges.attributes"/>
          <ref name="mei_att.staffDef.log.attributes"/>
+         <ref name="mei_att.staffDef.vis.attributes"/>
          <empty/>
       </element>
    </define>
@@ -7960,6 +7961,31 @@ Suggested values include: 1] main; 2] subordinate; 3] abbreviated; 4] alternativ
    </define>
    <define name="mei_att.staff.vis.attributes">
       <empty/>
+   </define>
+   <define name="mei_att.staffDef.vis.attributes">
+      <ref name="mei_att.scalable.attributes"/>
+      <ref name="mei_att.staffDef.vis.attribute.lines.color"/>
+      <ref name="mei_att.staffDef.vis.attribute.lines.visible"/>
+   </define>
+   <define name="mei_att.staffDef.vis.attribute.lines.color">
+      <optional>
+         <attribute name="lines.color">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Captures the colors of the staff lines.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <ref name="mei_data.COLOR"/>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.staffDef.vis.attribute.lines.visible">
+      <optional>
+         <attribute name="lines.visible">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records whether all staff lines are visible.</a:documentation>
+            <ref name="mei_data.BOOLEAN"/>
+         </attribute>
+      </optional>
    </define>
    <define name="mei_att.staffGrp.vis.attributes">
       <ref name="mei_att.staffGroupingSym.attributes"/>
