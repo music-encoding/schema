@@ -20,7 +20,7 @@
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href=../../../source/"validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2024-07-26T15:40:17.373437034+02:00-->
+<!--canonicalized: 2024-07-26T15:54:06.450353873+02:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -1508,18 +1508,9 @@
         &lt;title&gt;MEI guidelines examples&lt;/title&gt;
       &lt;/seriesStmt&gt;
       &lt;notesStmt&gt;
-        &lt;annot&gt;Verovio supports "tempo" elements. Horizontal positioning can be specified.
-          By default, tempi indications are placed above the staff. The "rend" element can
-          be used within the text, for example for specifying metronome values.&lt;/annot&gt;
+        &lt;annot&gt;Example taken from the Verovio Test Suite&lt;/annot&gt;
       &lt;/notesStmt&gt;
     &lt;/fileDesc&gt;
-    &lt;encodingDesc&gt;
-      &lt;appInfo&gt;
-        &lt;application version="0.9.13"&gt;
-          &lt;name&gt;Verovio&lt;/name&gt;
-        &lt;/application&gt;
-      &lt;/appInfo&gt;
-    &lt;/encodingDesc&gt;
   &lt;/meiHead&gt;
   &lt;music&gt;
     &lt;body&gt;
@@ -1532,7 +1523,7 @@
           &lt;/scoreDef&gt;
           &lt;section&gt;
             &lt;?edit-start?&gt;
-            &lt;measure n="0" type="upbeat"&gt;
+            &lt;measure metcon="false"&gt;
               &lt;staff n="1"&gt;
                 &lt;layer n="1"&gt;
                   &lt;beam&gt;
@@ -1541,7 +1532,7 @@
                   &lt;/beam&gt;
                 &lt;/layer&gt;
               &lt;/staff&gt;
-              &lt;tempo staff="1" tstamp="1.000000"&gt;Andante con moto &lt;rend fontfam="smufl"&gt;&amp;#xE1D3;&lt;/rend&gt; = 70&lt;/tempo&gt;
+              &lt;tempo staff="1" tstamp="1.0"&gt;Andante con moto &lt;rend fontfam="smufl"&gt;&amp;#xE1D3;&lt;/rend&gt; = 70&lt;/tempo&gt;
               &lt;slur startid="#m0_s2_e1" endid="#m0_s2_e2" /&gt;
             &lt;/measure&gt;
             &lt;?edit-end?&gt;
