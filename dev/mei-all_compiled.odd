@@ -12946,6 +12946,16 @@
         </constraintSpec>
       </attDef>
     </attList>
+  </classSpec><classSpec rend="add" ident="att.dataSelecting" module="MEI.shared" type="atts">
+    <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes for selecting data.</desc>
+    <attList xmlns:xi="http://www.w3.org/2001/XInclude">
+      <attDef ident="select" usage="opt">
+        <desc xml:lang="en">XPath used to select data to which an element or a property applies.</desc>
+        <datatype maxOccurs="1">
+          <rng:data type="token"/>
+        </datatype>
+      </attDef>
+    </attList>
   </classSpec><classSpec rend="add" ident="att.mdiv.log" module="MEI.shared" type="atts">
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Logical domain attributes.</desc>
     <classes xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -19174,6 +19184,7 @@
     </content></elementSpec><elementSpec rend="add" ident="symbolDef" module="MEI.usersymbols"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">symbol definition</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Declaration of an individual symbol in a symbolTable.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       <memberOf key="att.coordinated"/>
+      <memberOf key="att.dataSelecting"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
       <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="symName"/></optional>
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="symProp"/></zeroOrMore>

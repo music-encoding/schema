@@ -20,7 +20,7 @@
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href=../../../source/"validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2024-07-26T15:54:06.450353873+02:00-->
+<!--canonicalized: 2024-07-26T16:08:20.873952804+02:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -33035,6 +33035,17 @@ or
       </attDef>
     </attList>
   </classSpec>
+  <classSpec ident="att.dataSelecting" module="MEI.shared" type="atts">
+    <desc xml:lang="en">Attributes for selecting data.</desc>
+    <attList>
+      <attDef ident="select" usage="opt">
+        <desc xml:lang="en">XPath used to select data to which an element or a property applies.</desc>
+        <datatype maxOccurs="1">
+          <rng:data type="token"/>
+        </datatype>
+      </attDef>
+    </attList>
+  </classSpec>
   <classSpec ident="att.mdiv.log" module="MEI.shared" type="atts">
     <desc xml:lang="en">Logical domain attributes.</desc>
     <classes>
@@ -41653,6 +41664,7 @@ or
     <classes>
       <memberOf key="att.common"/>
       <memberOf key="att.coordinated"/>
+      <memberOf key="att.dataSelecting"/>
     </classes>
     <content>
       <rng:optional>

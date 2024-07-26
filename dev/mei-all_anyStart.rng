@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2024-07-26T13:54:13Z. . 
+Schema generated from ODD source 2024-07-26T14:08:27Z. . 
 TEI Edition: Development Version 
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -20527,6 +20527,17 @@ Suggested values include: 1] apostropha; 2] bistropha; 3] climacus; 4] clivis; 5
                 the music element.</sch:assert>
       </sch:rule>
    </pattern>
+   <define name="mei_att.dataSelecting.attributes">
+      <ref name="mei_att.dataSelecting.attribute.select"/>
+   </define>
+   <define name="mei_att.dataSelecting.attribute.select">
+      <optional>
+         <attribute name="select">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">XPath used to select data to which an element or a property applies.</a:documentation>
+            <data type="token"/>
+         </attribute>
+      </optional>
+   </define>
    <define name="mei_att.mdiv.log.attributes">
       <ref name="mei_att.alignment.attributes"/>
    </define>
@@ -29578,6 +29589,7 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
          </zeroOrMore>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.coordinated.attributes"/>
+         <ref name="mei_att.dataSelecting.attributes"/>
          <empty/>
       </element>
    </define>
