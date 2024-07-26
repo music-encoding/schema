@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2024-07-18T14:40:31Z. . 
+Schema generated from ODD source 2024-07-26T13:20:42Z. . 
 TEI Edition: Development Version 
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -7405,6 +7405,14 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Neumatic notation.</a:documentation>
          <value>tab</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Tablature notation.</a:documentation>
+         <value>tab.guitar</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Tablature notation for guitars (includes "spanish" lute tablature). Frets are indicated using numbers. Courses closest to the player's feet are at the top of the staff.</a:documentation>
+         <value>tab.lute.french</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">"French" tablature notation for lutes. Frets are indicated using letters. Courses closest to the player's feet are at the top of the staff.</a:documentation>
+         <value>tab.lute.italian</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">"Italian" tablature notation for lutes. Frets are indicated using numbers. Courses closest to the player's feet are at the bottom of the staff.</a:documentation>
+         <value>tab.lute.german</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">"German" tablature notation for lutes. Fret and course information is conveyed solely by choice of symbol (vertical position is not used for this).</a:documentation>
       </choice>
    </define>
    <define name="mei_data.NOTEHEADMODIFIER">
@@ -8142,6 +8150,27 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ISO 24-hour time format: HH:MM:SS.ss.</a:documentation>
       </choice>
    </define>
+   <define name="mei_data.COURSENUMBER">
+      <data type="positiveInteger"/>
+   </define>
+   <define name="mei_data.COURSETUNING">
+      <choice>
+         <value>guitar.standard</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Standard tuning for current guitars. The courses are tuned to E2 A2 D3 G3 B3 E4.</a:documentation>
+         <value>guitar.drop.D</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Drop D tuning for guitars. The lowest course is tuned down to D, while all other courses are kept to their regular pitches. D2 A2 D3 G3 B3 E4.</a:documentation>
+         <value>guitar.open.D</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Open D tuning for guitars. D2 A2 D3 F3s A3 D4.</a:documentation>
+         <value>guitar.open.G</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Open G tuning for guitars. D2 G2 D2 G2 B3 D4.</a:documentation>
+         <value>guitar.open.A</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Open A tuning for guitars. E2 A2 E3 A3 C4s E4.</a:documentation>
+         <value>lute.renaissance.6</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Renaissance tuning for lutes with 6 courses. G2 C3 F3 A3 D4 G4.</a:documentation>
+         <value>lute.baroque.d.minor</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Baroque tuning for lutes with 6 stable courses, and additional bass courses tuned to the key of D minor. A2 D3 F3 A3 D4 F4 for the main six courses, and bass courses descending in pitch from G2, F2, etc., depending on the size of the instrument. </a:documentation>
+      </choice>
+   </define>
    <define name="mei_att.notationType.attributes">
       <ref name="mei_att.notationType.attribute.notationtype"/>
       <ref name="mei_att.notationType.attribute.notationsubtype"/>
@@ -8237,6 +8266,9 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
       <empty/>
    </define>
    <define name="mei_att.clefGrp.anl.attributes">
+      <empty/>
+   </define>
+   <define name="mei_att.course.anl.attributes">
       <empty/>
    </define>
    <define name="mei_att.cpMark.anl.attributes">
@@ -8571,6 +8603,12 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
    <define name="mei_att.symbol.anl.attributes">
       <empty/>
    </define>
+   <define name="mei_att.tabDurSym.anl.attributes">
+      <empty/>
+   </define>
+   <define name="mei_att.tabGrp.anl.attributes">
+      <empty/>
+   </define>
    <define name="mei_att.tempo.anl.attributes">
       <empty/>
    </define>
@@ -8578,6 +8616,9 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
       <empty/>
    </define>
    <define name="mei_att.trill.anl.attributes">
+      <empty/>
+   </define>
+   <define name="mei_att.tuning.anl.attributes">
       <empty/>
    </define>
    <define name="mei_att.tuplet.anl.attributes">
@@ -13071,6 +13112,9 @@ Suggested values include: 1] smufl</a:documentation>
    <define name="mei_att.clefGrp.ges.attributes">
       <empty/>
    </define>
+   <define name="mei_att.course.ges.attributes">
+      <empty/>
+   </define>
    <define name="mei_att.cpMark.ges.attributes">
       <ref name="mei_att.duration.ges.attributes"/>
       <ref name="mei_att.timestamp2.ges.attributes"/>
@@ -13471,6 +13515,12 @@ Suggested values include: 1] smufl</a:documentation>
    <define name="mei_att.symbol.ges.attributes">
       <empty/>
    </define>
+   <define name="mei_att.tabDurSym.ges.attributes">
+      <empty/>
+   </define>
+   <define name="mei_att.tabGrp.ges.attributes">
+      <ref name="mei_att.duration.ges.attributes"/>
+   </define>
    <define name="mei_att.tempo.ges.attributes">
       <ref name="mei_att.midiTempo.attributes"/>
    </define>
@@ -13520,6 +13570,9 @@ Suggested values include: 1] smufl</a:documentation>
    <define name="mei_att.trill.ges.attributes">
       <ref name="mei_att.duration.ges.attributes"/>
       <ref name="mei_att.timestamp2.ges.attributes"/>
+   </define>
+   <define name="mei_att.tuning.ges.attributes">
+      <empty/>
    </define>
    <define name="mei_att.tuplet.ges.attributes">
       <ref name="mei_att.duration.ges.attributes"/>
@@ -21806,6 +21859,17 @@ Suggested values include: 1] smufl</a:documentation>
          </attribute>
       </optional>
    </define>
+   <define name="mei_att.tuning.log.attributes">
+      <ref name="mei_att.tuning.log.attribute.tuning.standard"/>
+   </define>
+   <define name="mei_att.tuning.log.attribute.tuning.standard">
+      <optional>
+         <attribute name="tuning.standard">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Describes the tuning standard used.</a:documentation>
+            <ref name="mei_data.COURSETUNING"/>
+         </attribute>
+      </optional>
+   </define>
    <define name="mei_att.tuning.attributes">
       <ref name="mei_att.tuning.attribute.tune.Hz"/>
       <ref name="mei_att.tuning.attribute.tune.pname"/>
@@ -22633,6 +22697,7 @@ Suggested values include: 1] smufl</a:documentation>
          <ref name="mei_pad"/>
          <ref name="mei_rest"/>
          <ref name="mei_space"/>
+         <ref name="mei_tabGrp"/>
       </choice>
    </define>
    <define name="mei_model.headLike">
@@ -23378,6 +23443,7 @@ Suggested values include: 1] smufl</a:documentation>
          <ref name="mei_model.meterSigLike"/>
          <ref name="mei_clef"/>
          <ref name="mei_clefGrp"/>
+         <ref name="mei_tuning"/>
       </choice>
    </define>
    <define name="mei_model.staffGrpLike">
@@ -23850,6 +23916,11 @@ Suggested values include: 1] smufl</a:documentation>
          <ref name="mei_argument"/>
          <ref name="mei_epigraph"/>
          <ref name="mei_imprimatur"/>
+      </choice>
+   </define>
+   <define name="mei_model.tuningPart">
+      <choice>
+         <ref name="mei_course"/>
       </choice>
    </define>
    <define name="mei_accid">
@@ -26272,9 +26343,9 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          <optional>
             <ref name="mei_model.chordTableLike"/>
          </optional>
-         <optional>
+         <zeroOrMore>
             <ref name="mei_model.symbolTableLike"/>
-         </optional>
+         </zeroOrMore>
          <optional>
             <ref name="mei_model.keySigLike"/>
          </optional>
@@ -27023,6 +27094,20 @@ Suggested values include: 1] alternative; 2] arrangement; 3] carrier; 4] date; 5
          <empty/>
       </element>
    </define>
+   <define name="mei_tuning">
+      <element name="tuning">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Describes the tuning of an instrument.</a:documentation>
+         <zeroOrMore>
+            <ref name="mei_model.tuningPart"/>
+         </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.tuning.log.attributes"/>
+         <ref name="mei_att.tuning.vis.attributes"/>
+         <ref name="mei_att.tuning.ges.attributes"/>
+         <ref name="mei_att.tuning.anl.attributes"/>
+         <empty/>
+      </element>
+   </define>
    <define name="mei_width">
       <element name="width">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Description of the horizontal size of an object.</a:documentation>
@@ -27039,15 +27124,32 @@ Suggested values include: 1] alternative; 2] arrangement; 3] carrier; 4] date; 5
          <empty/>
       </element>
    </define>
+   <define name="mei_att.course.log.attributes">
+      <ref name="mei_att.pitched.attributes"/>
+   </define>
+   <define name="mei_att.scoreDef.vis.tablature.attributes">
+      <empty/>
+   </define>
    <define name="mei_att.stringtab.attributes">
+      <ref name="mei_att.stringtab.attribute.tab.align"/>
       <ref name="mei_att.stringtab.attribute.tab.fing"/>
       <ref name="mei_att.stringtab.attribute.tab.fret"/>
+      <ref name="mei_att.stringtab.attribute.tab.line"/>
       <ref name="mei_att.stringtab.attribute.tab.string"/>
+      <ref name="mei_att.stringtab.attribute.tab.course"/>
+   </define>
+   <define name="mei_att.stringtab.attribute.tab.align">
+      <optional>
+         <attribute name="tab.align">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Attribute that describes the vertical alignment of tablature symbols. Only applicable in cases where the symbols' vertical position does not communicate other information, such as courses (i.e., only in German lute tablature). Typical values are top and bottom.</a:documentation>
+            <ref name="mei_data.VERTICALALIGNMENT"/>
+         </attribute>
+      </optional>
    </define>
    <define name="mei_att.stringtab.attribute.tab.fing">
       <optional>
          <attribute name="tab.fing">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates which finger, if any, should be used to play an individual string. The index, middle, ring, and little fingers are represented by the values 1-4, while t is for the thumb. The values x and o indicate muffled and open strings, respectively.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This attribute is deprecated and will be removed in a future version. Indicates which finger, if any, should be used to play an individual string. The index, middle, ring, and little fingers are represented by the values 1-4, while t is for the thumb. The values x and o indicate muffled and open strings, respectively.</a:documentation>
             <ref name="mei_data.FINGER.FRET"/>
          </attribute>
       </optional>
@@ -27060,11 +27162,27 @@ Suggested values include: 1] alternative; 2] arrangement; 3] carrier; 4] date; 5
          </attribute>
       </optional>
    </define>
+   <define name="mei_att.stringtab.attribute.tab.line">
+      <optional>
+         <attribute name="tab.line">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Used in German lute tablature in cases where vertical positioning deviates from the norm which can be specified by <code xmlns="http://www.w3.org/1999/xhtml">@tab.align</code>. Indicates the position of the note on one of the horizontal strands corresponding to the <code xmlns="http://www.w3.org/1999/xhtml">@lines</code> attribute on <code xmlns="http://www.w3.org/1999/xhtml">&lt;staffDef&gt;</code>. (Note that in this case, the lines are conceptual rather than visible).</a:documentation>
+            <ref name="mei_data.CLEFLINE"/>
+         </attribute>
+      </optional>
+   </define>
    <define name="mei_att.stringtab.attribute.tab.string">
       <optional>
          <attribute name="tab.string">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records which string is to be played.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This attribute is deprecated in favour of <code xmlns="http://www.w3.org/1999/xhtml">@tab.course</code> and will be removed in a future version. Records which string is to be played.</a:documentation>
             <ref name="mei_data.STRINGNUMBER"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.stringtab.attribute.tab.course">
+      <optional>
+         <attribute name="tab.course">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records which course is to be played.</a:documentation>
+            <ref name="mei_data.COURSENUMBER"/>
          </attribute>
       </optional>
    </define>
@@ -27081,11 +27199,12 @@ Suggested values include: 1] alternative; 2] arrangement; 3] carrier; 4] date; 5
    </define>
    <define name="mei_att.stringtab.tuning.attributes">
       <ref name="mei_att.stringtab.tuning.attribute.tab.strings"/>
+      <ref name="mei_att.stringtab.tuning.attribute.tab.courses"/>
    </define>
    <define name="mei_att.stringtab.tuning.attribute.tab.strings">
       <optional>
          <attribute name="tab.strings">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Provides a *written* pitch and octave for each open string or course of strings.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This attribute is deprecated in favour of the new <code xmlns="http://www.w3.org/1999/xhtml">&lt;tuning&gt;</code> element and will be removed in a future version. Provides a *written* pitch and octave for each open string or course of strings.</a:documentation>
             <list>
                <oneOrMore>
                   <data type="token">
@@ -27096,6 +27215,29 @@ Suggested values include: 1] alternative; 2] arrangement; 3] carrier; 4] date; 5
          </attribute>
       </optional>
    </define>
+   <define name="mei_att.stringtab.tuning.attribute.tab.courses">
+      <optional>
+         <attribute name="tab.courses">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This attribute is deprecated in favour of the new <code xmlns="http://www.w3.org/1999/xhtml">&lt;tuning&gt;</code> element and will be removed in a future version. Provides a *written* pitch and octave for each open string or course of strings.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <data type="token">
+                     <param name="pattern">[a-g][0-9](s|f|ss|x|ff|xs|sx|ts|tf|n|nf|ns|su|sd|fu|fd|nu|nd|1qf|3qf|1qs|3qs)?([a-g][0-9](s|f|ss|x|ff|xs|sx|ts|tf|n|nf|ns|su|sd|fu|fd|nu|nd|1qf|3qf|1qs|3qs)?)*</param>
+                  </data>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.tabDurSym.log.attributes">
+      <ref name="mei_att.layerIdent.attributes"/>
+      <ref name="mei_att.partIdent.attributes"/>
+   </define>
+   <define name="mei_att.tabGrp.log.attributes">
+      <ref name="mei_att.augmentDots.attributes"/>
+      <ref name="mei_att.duration.log.attributes"/>
+      <ref name="mei_att.event.attributes"/>
+   </define>
    <define name="mei_barre">
       <element name="barre">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A barre in a chord tablature grid.</a:documentation>
@@ -27104,13 +27246,79 @@ Suggested values include: 1] alternative; 2] arrangement; 3] carrier; 4] date; 5
          <ref name="mei_att.startEndId.attributes"/>
          <optional>
             <attribute name="fret">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records the location at which the strings should be stopped against a fret in a fretboard diagram. This may or may not be the same as the actual location on the fretboard of the instrument in performance.</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This attribute is deprecated in favour of <code xmlns="http://www.w3.org/1999/xhtml">@tab.fret</code>, and will be removed in a future version. Records the location at which the strings should be stopped against a fret in a fretboard diagram. This may or may not be the same as the actual location on the fretboard of the instrument in performance.</a:documentation>
                <data type="positiveInteger">
                   <param name="minInclusive">1</param>
                   <param name="maxInclusive">5</param>
                </data>
             </attribute>
          </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_course">
+      <element name="course">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(individual course tuning information) Describes the tuning of a course on a stringed instrument (e.g., guitar, lute).</a:documentation>
+         <zeroOrMore>
+            <ref name="mei_string"/>
+         </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.course.log.attributes"/>
+         <ref name="mei_att.course.vis.attributes"/>
+         <ref name="mei_att.course.ges.attributes"/>
+         <ref name="mei_att.course.anl.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_string">
+      <element name="string">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(individual string tuning information) Used to modify tuning information given by the course element. Describes the tuning of an individual string within a course on a stringed instrument (e.g., guitar, lute).</a:documentation>
+         <zeroOrMore>
+            <ref name="mei_string"/>
+         </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.course.log.attributes"/>
+         <ref name="mei_att.course.vis.attributes"/>
+         <ref name="mei_att.course.ges.attributes"/>
+         <ref name="mei_att.course.anl.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_tabDurSym">
+      <element name="tabDurSym">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A visual indication of the duration of a <code xmlns="http://www.w3.org/1999/xhtml">&lt;tabGrp&gt;</code>.</a:documentation>
+         <empty/>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.facsimile.attributes"/>
+         <ref name="mei_att.stringtab.attributes"/>
+         <ref name="mei_att.tabDurSym.log.attributes"/>
+         <ref name="mei_att.tabDurSym.vis.attributes"/>
+         <ref name="mei_att.tabDurSym.ges.attributes"/>
+         <ref name="mei_att.tabDurSym.anl.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_tabGrp">
+      <element name="tabGrp">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A group of simultaneous tab notes, comparable to a <code xmlns="http://www.w3.org/1999/xhtml">&lt;chord&gt;</code> in CMN. Rarely, may also contain rests, as in some "German" lute tablatures.</a:documentation>
+         <optional>
+            <ref name="mei_tabDurSym"/>
+         </optional>
+         <zeroOrMore>
+            <choice>
+               <ref name="mei_note"/>
+               <ref name="mei_model.transcriptionLike"/>
+               <ref name="mei_model.editLike"/>
+               <ref name="mei_model.appLike"/>
+               <ref name="mei_rest"/>
+            </choice>
+         </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.facsimile.attributes"/>
+         <ref name="mei_att.tabGrp.log.attributes"/>
+         <ref name="mei_att.tabGrp.vis.attributes"/>
+         <ref name="mei_att.tabGrp.ges.attributes"/>
+         <ref name="mei_att.tabGrp.anl.attributes"/>
          <empty/>
       </element>
    </define>
@@ -28188,6 +28396,9 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
    <define name="mei_att.clefGrp.vis.attributes">
       <empty/>
    </define>
+   <define name="mei_att.course.vis.attributes">
+      <empty/>
+   </define>
    <define name="mei_att.cpMark.vis.attributes">
       <ref name="mei_att.altSym.attributes"/>
       <ref name="mei_att.color.attributes"/>
@@ -28982,6 +29193,7 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
       <ref name="mei_att.systems.attributes"/>
       <ref name="mei_att.textStyle.attributes"/>
       <ref name="mei_att.scoreDef.vis.cmn.attributes"/>
+      <ref name="mei_att.scoreDef.vis.tablature.attributes"/>
       <ref name="mei_att.scoreDef.vis.attribute.vu.height"/>
    </define>
    <define name="mei_att.scoreDef.vis.attribute.vu.height">
@@ -29130,6 +29342,22 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
       <ref name="mei_att.visualOffset.attributes"/>
       <ref name="mei_att.xy.attributes"/>
    </define>
+   <define name="mei_att.tabDurSym.vis.attributes">
+      <ref name="mei_att.altSym.attributes"/>
+      <ref name="mei_att.color.attributes"/>
+      <ref name="mei_att.extSym.attributes"/>
+      <ref name="mei_att.placementRelStaff.attributes"/>
+      <ref name="mei_att.typography.attributes"/>
+      <ref name="mei_att.visibility.attributes"/>
+      <ref name="mei_att.visualOffset.attributes"/>
+      <ref name="mei_att.xy.attributes"/>
+   </define>
+   <define name="mei_att.tabGrp.vis.attributes">
+      <ref name="mei_att.visibility.attributes"/>
+      <ref name="mei_att.visualOffset.ho.attributes"/>
+      <ref name="mei_att.visualOffset.to.attributes"/>
+      <ref name="mei_att.xy.attributes"/>
+   </define>
    <define name="mei_att.tempo.vis.attributes">
       <ref name="mei_att.color.attributes"/>
       <ref name="mei_att.extender.attributes"/>
@@ -29162,6 +29390,9 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
       <ref name="mei_att.visualOffset2.ho.attributes"/>
       <ref name="mei_att.visualOffset2.to.attributes"/>
       <ref name="mei_att.xy.attributes"/>
+   </define>
+   <define name="mei_att.tuning.vis.attributes">
+      <empty/>
    </define>
    <define name="mei_att.tuplet.vis.attributes">
       <ref name="mei_att.color.attributes"/>

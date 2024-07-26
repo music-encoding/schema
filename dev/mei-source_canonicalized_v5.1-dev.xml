@@ -20,7 +20,7 @@
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href=../../../source/"validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href=../../../source/"validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2024-07-18T16:40:20.887200155+02:00-->
+<!--canonicalized: 2024-07-26T15:20:33.147335234+02:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -10417,54 +10417,163 @@ or
          </div>
          <div xml:id="tablature" type="div1">
             <head>Repertoire: String Tablature</head>
-            <p>This chapter describes the attribute classes that are part of the MEI.tablature module.</p>
-            <div xml:id="tablatureOverview" type="div2">
-               <head>Overview of the Tablature Module</head>
-               <p>The tablature module is used to record basic tablature notation. It is designed primarily for guitar and similar plucked-string instruments.</p>
-               <p>The <att>lines</att> attribute on the <gi scheme="MEI">staffDef</gi> element is used to define the number of lines, courses, or strings, present in the tablature. The <att>tab.strings</att> attribute is then used to enumerate the pitches of the open strings. It is important to note that this is given using the written pitch, not the sounding pitch. For example, the Western 6-string guitar, in standard tuning, sounds an octave below written pitch.</p>
-               <p>The <att>tab.strings</att> attribute gives the string tuning, ordered from highest to lowest pitch.</p>
-               <p>For standard guitar tuning, the <gi scheme="MEI">staffDef</gi> element might look like this:</p>
+            <p>This chapter describes the MEI.stringtab module (which will be renamed to MEI.tablature in a future version). The MEI.stringtab module is used to record basic tablature notation. It is designed primarily for plucked-string instruments, such as guitar and lute.</p>
+            <div xml:id="tablature-staffdef" type="div2">
+               <head>The Staff Definition</head>
+               <div xml:id="tablature-def" type="div3">
+                  <head>Defining the Notation</head>
+                  <p>Tablatures come in a variety of types or notations, varying according to instrument but also according to historical context. The notation used is defined on the <gi scheme="MEI">staffDef</gi> element using the <att>notationtype</att> attribute. Possible values are: <val>tab.guitar</val>, <val>tab.lute.italian</val>, <val>tab.lute.french</val> and <val>tab.lute.german</val>.</p>
+                  <p>The <att>lines</att> attribute on the <gi scheme="MEI">staffDef</gi> element is used to define the number of horizontal lines used in a staff.</p> 
+                  <p>
+                     <figure>
+                        <head/>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;staffDef lines="6" n="1" notationtype="tab.guitar"&gt;
+    ...
+&lt;/staffDef&gt;</egXML>
+                     </figure>
+                  </p>
+               </div>
+               <div xml:id="tablature-tuning" type="div3">
+                  <head>The Instrument Setup and Tuning</head>
+                  <p>Because string tablatures specify which frets and strings to play on the instrument, rather than abstract pitches, it is necessary to know the tuning and setup of the instrument.</p>
+                  <p>Guitar-like instruments can be described in terms of the number of strings they have, but often the strings are grouped and notated as if those groups were a single string. Examples include mandolins and 12-string guitars. To make this distinction explicit, we use "string" exclusively to refer to physical strings. To refer to the notated version, which may consist of one or more physical strings, we use the historical term, "course". Thus, both a 6-string and a 12-string guitar are 6-course instruments.</p>
+                  <p>The course tuning for 6- and 12-string guitars are the same – so they can both play from the same tablatures. Our tuning specification supports indicating course tunings on their own, or string tunings as well.</p>
+                  <p>The <gi scheme="MEI">tuning</gi> element is used inside <gi scheme="MEI">staffDef</gi> to describe the pitches of the open strings of the instrument. In the simplest cases, the tuning can be named from a standard list. For example, to specify the most common tuning of the guitar:</p> 
+                  <p>
+                     <figure>
+                        <head/>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;staffDef lines="6" n="1" notationtype="tab.guitar"&gt;
+    &lt;tuning tuning.standard="guitar.standard"/&gt;
+&lt;/staffDef&gt;</egXML>
+                     </figure>
+                  </p>
+                  <p>or, for six-course lute:</p>
+                  <p>
+                     <figure>
+                        <head/>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;staffDef lines="6" n="1" notationtype="tab.lute.french"&gt;
+    &lt;tuning tuning.standard="lute.renaissance.6"/&gt;
+&lt;/staffDef&gt;</egXML>
+                     </figure>
+                  </p>
+                  <p>Custom tuning may be needed when no existing <att>tuning.standard</att> value applies. The <gi scheme="MEI">course</gi> element gives the tuning of each course. <att>n</att> captures the course number (counting from the course closest to the player's feet when the instrument is played), <att>pname</att> the pitch information and <att>oct</att> the octave information.</p>                
+                  <p>For standard classical guitar tuning, the <gi scheme="MEI">tuning</gi> element might look like this:</p>
+                  <p>
+                     <figure>
+                        <head/>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;tuning&gt;
+  &lt;course n="1" pname="e" oct="4"/&gt;
+  &lt;course n="2" pname="b" oct="3"/&gt;
+  &lt;course n="3" pname="g" oct="3"/&gt;
+  &lt;course n="4" pname="d" oct="3"/&gt;
+  &lt;course n="5" pname="a" oct="2"/&gt;
+  &lt;course n="6" pname="e" oct="2"/&gt;
+&lt;/tuning&gt;</egXML>
+                     </figure>
+                  </p>
+                  <p>Chromatic alteration of the open string’s pitch may be indicated by adding the <att>accid</att>. For example, a guitar in E-flat tuning might look like this:</p>
+                  <p>
+                     <figure>
+                        <head/>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;staffDef lines="6" n="1" notationtype="tab.guitar"&gt;
+	&lt;tuning&gt;
+		&lt;course n="1" oct="5" pname="e" accid="f"/&gt;
+		&lt;course n="2" oct="4" pname="b" accid="f"/&gt;
+		&lt;course n="3" oct="4" pname="g" accid="f"/&gt;
+		&lt;course n="4" oct="4" pname="d" accid="f"/&gt;
+		&lt;course n="5" oct="3" pname="a" accid="f"/&gt;
+		&lt;course n="5" oct="3" pname="e" accid="f"/&gt;
+	&lt;/tuning&gt;
+&lt;/staffDef&gt;
+</egXML>
+                     </figure>
+                  </p>
+                  <p>Where the specific instrumental setup is important, the stringing of the instrument can also be specified. The example below is a common way to string and tune a 6-course renaissance lute. The pitch on <gi scheme="MEI">course</gi> indicates how the resulting note would normally be transcribed in score, and would often be derived from the lowest sounding pitch.</p>
+                  <p>
+                     <figure>
+                        <head/>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;tuning&gt;
+  &lt;course n="1" pname="g" oct="4"&gt;
+    &lt;string pname="g" oct="4"/&gt;
+  &lt;/course&gt;
+  &lt;course n="2" pname="d" oct="4"&gt;
+    &lt;string pname="d" oct="4"/&gt;
+  &lt;/course&gt;
+  &lt;course n="3" pname="a" oct="3"&gt;
+    &lt;string pname="a" oct="3"/&gt;
+    &lt;string pname="a" oct="3"/&gt;
+  &lt;/course&gt;
+  &lt;course n="4" pname="f" oct="3"&gt;
+    &lt;string pname="f" oct="4"/&gt;
+    &lt;string pname="f" oct="3"/&gt;
+  &lt;/course&gt;
+  &lt;course n="5" pname="c" oct="3"&gt;
+    &lt;string pname="c" oct="4"/&gt;
+    &lt;string pname="c" oct="3"/&gt;
+  &lt;/course&gt;
+  &lt;course n="6" pname="g" oct="2"&gt;
+    &lt;string pname="g" oct="3"/&gt;
+    &lt;string pname="g" oct="2"/&gt;
+  &lt;/course&gt;
+&lt;/tuning&gt;</egXML>
+                     </figure>
+                  </p>
+               </div>
+            </div>
+            <div xml:id="tablature-basics" type="div2">
+               <head>Encoding Tablatures</head>
+               <p>Unlike CMN, <gi scheme="MEI">note</gi> elements in tablature do not have an explicit pitch, but indicate playing instructions (<abbr>i.e.</abbr>, where to place fingers on the fingerboard and when to play the strings). The <att>tab.course</att> attribute is used to capture which course is to be struck, and <att>tab.fret</att> specifies on which fret of the fretboard the player should stop the course. A value of <val>0</val> for <att>tab.fret</att> refers to an unstopped, open course; a value of <val>1</val> refers to the first fret; and so on. Course order is the same as that given in the <gi scheme="MEI">course</gi> elements.</p>
                <p>
                   <figure>
                      <head/>
-                     <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;staffDef lines="6" n="1" tab.strings="e5 b4 g4 d4 a3 e3"/&gt;
+                     <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;note tab.course="6" tab.fret="5"/&gt;</egXML>
+                  </figure>
+               </p>               
+               <p>A set of vertically-aligned symbols is indicated by <gi scheme="MEI">tabGrp</gi>, <abbr>i.e.</abbr>, a chord whose notes are played at the same time, and have the same (minimum) notated duration. The duration of a <gi scheme="MEI">tabGrp</gi> may be indicated visually with a rhythm symbol, whose presence is encoded using the <gi scheme="MEI">tabDurSym</gi> element. In many cases, the rhythm sign is omitted where it would repeat the previous value. For this reason <gi scheme="MEI">tabDurSym</gi> is optional, and the durational value of the <gi scheme="MEI">tabGrp</gi> is encoded as <att>dur</att>.</p>
+               <p>
+                  <figure>
+                     <head/>
+                     <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;tabGrp dur="4"&gt;
+    &lt;tabDurSym/&gt;
+    &lt;note tab.course="4" tab.fret="2"/&gt;
+    &lt;note tab.course="6" tab.fret="0"/&gt;
+&lt;/tabGrp&gt;</egXML>
+                  </figure>
+               </p>
+               <p>As with CMN, rhythm flags joined together can be indicated using <gi scheme="MEI">beam</gi>. Since every note in a beam group always has a rhythm sign, <gi scheme="MEI">tabDurSym</gi> should be used for beamed notes.</p>
+               <p>
+                  <figure>
+                     <head/>
+                     <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;beam&gt;
+    &lt;tabGrp dur="8"&gt;
+        &lt;tabDurSym/&gt;
+        &lt;note tab.course="1" tab.fret="0"/&gt;
+    &lt;/tabGrp&gt;
+    &lt;tabGrp dur="8"&gt;
+        &lt;tabDurSym/&gt;
+        &lt;note tab.course="1" tab.fret="2"/&gt;
+    &lt;/tabGrp&gt;
+&lt;/beam&gt;
 </egXML>
                   </figure>
                </p>
-               <p>Chromatic alteration of the open string’s pitch may be indicated with the '-' or 'f' (flat), or the '#' or 's' (sharp). Multiple sharps and flats are not permitted.</p>
-               <p>A guitar in E-flat tuning might look like this:</p>
+               <p>Tablatures usually indicate a rest by a rhythm sign that has no symbols for notes underneath. We can encode this with a <gi scheme="MEI">tabDurSym</gi> that is the only element of a <gi scheme="MEI">tabGrp</gi>.</p>
+                  <p>
+                     <figure>
+                        <head/>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;tabGrp dur="4"&gt;
+    &lt;tabDurSym/&gt;
+&lt;/tabGrp&gt;</egXML>
+                     </figure>
+                  </p>
+               <p>In some rare cases, special rest symbols may also appear below the rhythm sign. This can be encoded by adding a <gi scheme="MEI">rest</gi> to the <gi scheme="MEI">tabGrp</gi>.</p>
                <p>
                   <figure>
                      <head/>
-                     <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;staffDef lines="6" n="1" tab.strings="ef5 bf4 gf4 df4 af3 ef3"/&gt;
-</egXML>
-                  </figure>
-               </p>
-               <p>Some instruments, like the 12-string guitar, have the four lowest strings tuned an octave above but are still written on a 6-line tablature staff. In this case, you may enumerate the open string pitches while maintaining 6 lines.</p>
-               <p>
-                  <figure>
-                     <head/>
-                     <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;staffDef lines="6" n="1" tab.strings="e4 e3 a4 a3 d4 d3 g5 g4 b4 b4 e5 e5"/&gt;
-</egXML>
-                  </figure>
-               </p>
-               <p>The <gi scheme="MEI">note</gi> element is used to capture the specific events in the tablature. The <att>tab.string</att> attribute is used to capture which string the note is to be played on. String order is the same as that given in the <att>tab.strings</att> attribute. This attribute takes a positive integer in the range of 1-9.</p>
-               <p>
-                  <figure>
-                     <head/>
-                     <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;note dur="4" oct="3" pname="a" tab.string="3"/&gt;
-</egXML>
-                  </figure>
-               </p>
-               <p>In the case of fretted instruments, the fret number may be captured using the <att>tab.fret</att> attribute. An open string may be indicated using the value <val>0</val> (zero).</p>
-               <p>
-                  <figure>
-                     <head/>
-                     <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;layer&gt;
-   &lt;note dur="4" oct="2" pname="a" tab.fret="5" tab.string="6"/&gt;
-   &lt;note dur="4" oct="2" pname="a" tab.fret="0" tab.string="5"/&gt;
-&lt;/layer&gt;
-</egXML>
+                     <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;tabGrp dur="4"&gt;
+    &lt;tabDurSym/&gt;
+    &lt;rest/&gt;
+&lt;/tabGrp&gt;</egXML>
                   </figure>
                </p>
             </div>
@@ -17715,6 +17824,18 @@ or
         <valItem ident="tab">
           <desc xml:lang="en">Tablature notation.</desc>
         </valItem>
+        <valItem ident="tab.guitar">
+          <desc xml:lang="en">Tablature notation for guitars (includes "spanish" lute tablature). Frets are indicated using numbers. Courses closest to the player's feet are at the top of the staff.</desc>
+        </valItem>
+        <valItem ident="tab.lute.french">
+          <desc xml:lang="en">"French" tablature notation for lutes. Frets are indicated using letters. Courses closest to the player's feet are at the top of the staff.</desc>
+        </valItem>
+        <valItem ident="tab.lute.italian">
+          <desc xml:lang="en">"Italian" tablature notation for lutes. Frets are indicated using numbers. Courses closest to the player's feet are at the bottom of the staff.</desc>
+        </valItem>
+        <valItem ident="tab.lute.german">
+          <desc xml:lang="en">"German" tablature notation for lutes. Fret and course information is conveyed solely by choice of symbol (vertical position is not used for this).</desc>
+        </valItem>     
       </valList>
     </content>
   </macroSpec>
@@ -18258,7 +18379,7 @@ or
     </content>
   </macroSpec>
   <macroSpec ident="data.STRINGNUMBER" module="MEI" type="dt">
-    <desc xml:lang="en">In string tablature, the number of the string to be played, <abbr>i.e.</abbr>, [1-9]+.</desc>
+    <desc xml:lang="en">This attribute is deprecated in favour of data.COURSENUMBER and will be removed in a future version. In string tablature, the number of the string to be played, <abbr>i.e.</abbr>, [1-9]+.</desc>
     <content>
       <rng:data type="positiveInteger"/>
     </content>
@@ -18626,6 +18747,9 @@ or
   </classSpec>
   <classSpec ident="att.clefGrp.anl" module="MEI.analytical" type="atts">
     <desc xml:lang="en">Analytical domain attributes.</desc>
+  </classSpec>
+  <classSpec ident="att.course.anl" module="MEI.analytical" type="atts">
+    <desc xml:lang="en">Analytical domain attributes.</desc>    
   </classSpec>
   <classSpec ident="att.cpMark.anl" module="MEI.analytical" type="atts">
     <desc xml:lang="en">Analytical domain attributes.</desc>
@@ -19067,6 +19191,15 @@ or
   <classSpec ident="att.symbol.anl" module="MEI.analytical" type="atts">
     <desc xml:lang="en">Analytical domain attributes.</desc>
   </classSpec>
+  <classSpec ident="att.tabDurSym.anl" module="MEI.analytical" type="atts">
+    <desc xml:lang="en">Analytical domain attributes.</desc>
+  </classSpec>
+  <classSpec ident="att.tabGrp.anl" module="MEI.analytical" type="atts">
+    <desc xml:lang="en">Analytical domain attributes.</desc>
+    <classes>
+      <!-- Would that be helpful? <memberOf key="att.fermataPresent"/>-->
+    </classes>
+  </classSpec>
   <classSpec ident="att.tempo.anl" module="MEI.analytical" type="atts">
     <desc xml:lang="en">Analytical domain attributes.</desc>
   </classSpec>
@@ -19074,6 +19207,9 @@ or
     <desc xml:lang="en">Analytical domain attributes.</desc>
   </classSpec>
   <classSpec ident="att.trill.anl" module="MEI.analytical" type="atts">
+    <desc xml:lang="en">Analytical domain attributes.</desc>
+  </classSpec>
+  <classSpec ident="att.tuning.anl" module="MEI.analytical" type="atts">
     <desc xml:lang="en">Analytical domain attributes.</desc>
   </classSpec>
   <classSpec ident="att.tuplet.anl" module="MEI.analytical" type="atts">
@@ -24560,6 +24696,9 @@ or
   <classSpec ident="att.clefGrp.ges" module="MEI.gestural" type="atts">
     <desc xml:lang="en">Gestural domain attributes.</desc>
   </classSpec>
+  <classSpec ident="att.course.ges" module="MEI.gestural" type="atts">
+    <desc xml:lang="en">Gestural domain attributes.</desc>    
+  </classSpec>
   <classSpec ident="att.cpMark.ges" module="MEI.gestural" type="atts">
     <desc xml:lang="en">Gestural domain attributes.</desc>
     <classes>
@@ -25137,6 +25276,16 @@ or
   <classSpec ident="att.symbol.ges" module="MEI.gestural" type="atts">
     <desc xml:lang="en">Gestural domain attributes.</desc>
   </classSpec>
+  <classSpec ident="att.tabDurSym.ges" module="MEI.gestural" type="atts">
+    <desc xml:lang="en">Gestural domain attributes.</desc>
+  </classSpec>  
+  <classSpec ident="att.tabGrp.ges" module="MEI.gestural" type="atts">
+    <desc xml:lang="en">Gestural domain attributes.</desc>
+    <classes>
+      <!-- Would that be helpful? <memberOf key="att.articulation.gestural"/>-->
+      <memberOf key="att.duration.ges"/>      
+    </classes>
+  </classSpec>
   <classSpec ident="att.tempo.ges" module="MEI.gestural" type="atts">
     <desc xml:lang="en">Gestural domain attributes.</desc>
     <classes>
@@ -25192,6 +25341,9 @@ or
       <memberOf key="att.duration.ges"/>
       <memberOf key="att.timestamp2.ges"/>
     </classes>
+  </classSpec>
+  <classSpec ident="att.tuning.ges" module="MEI.gestural" type="atts">
+    <desc xml:lang="en">Gestural domain attributes.</desc>
   </classSpec>
   <classSpec ident="att.tuplet.ges" module="MEI.gestural" type="atts">
     <desc xml:lang="en">Gestural domain attributes.</desc>
@@ -33932,7 +34084,7 @@ or
     </classes>
     <attList>
       <attDef ident="level" usage="opt">
-        <desc>Level of duration at which the proportion given by the @num and @numbase ratio applies.</desc>
+        <desc xml:lang="en">Level of duration at which the proportion given by the @num and @numbase ratio applies.</desc>
         <datatype>
           <rng:ref name="data.DURATION.mensural"/>
         </datatype>
@@ -35545,6 +35697,17 @@ or
         C to C♯ and one from C to D♭.</p>
     </remarks>
   </classSpec>
+  <classSpec ident="att.tuning.log" module="MEI.shared" type="atts">
+    <desc xml:lang="en">Logical domain attributes for tuning.</desc>
+    <attList>
+      <attDef ident="tuning.standard" usage="opt">
+        <desc xml:lang="en">Describes the tuning standard used.</desc>
+        <datatype>
+          <rng:ref name="data.COURSETUNING"/>
+        </datatype>
+      </attDef>
+    </attList>
+  </classSpec>
   <classSpec ident="att.tuning" module="MEI.shared" type="atts">
     <desc xml:lang="en">Attributes that describe tuning.</desc>
     <attList>
@@ -36270,6 +36433,9 @@ or
   </classSpec>
   <classSpec ident="model.titlePagePart" module="MEI.shared" type="model">
     <desc xml:lang="en">Groups elements that may appear as part of a title page transcription.</desc>
+  </classSpec>
+  <classSpec ident="model.tuningPart" module="MEI.shared" type="model">
+    <desc xml:lang="en">Groups elements that may appear inside the <gi scheme="MEI">tuning</gi> element.</desc>
   </classSpec>
   <elementSpec ident="accid" module="MEI.shared">
     <gloss versionDate="2022-05-18" xml:lang="en">accidental</gloss>
@@ -39524,9 +39690,9 @@ or
       <rng:optional>
         <rng:ref name="model.chordTableLike"/>
       </rng:optional>
-      <rng:optional>
+      <rng:zeroOrMore>
         <rng:ref name="model.symbolTableLike"/>
-      </rng:optional>
+      </rng:zeroOrMore>
       <rng:optional>
         <rng:ref name="model.keySigLike"/>
       </rng:optional>
@@ -40409,6 +40575,25 @@ or
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-titlePart.html">titlePart</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
+  <elementSpec ident="tuning" module="MEI.shared">
+    <desc xml:lang="en">Describes the tuning of an instrument.</desc>
+    <classes>
+      <memberOf key="att.common"/>
+      <memberOf key="att.tuning.log"/>
+      <memberOf key="att.tuning.vis"/>
+      <memberOf key="att.tuning.ges"/>
+      <memberOf key="att.tuning.anl"/>
+      <memberOf key="model.staffDefPart"/>
+    </classes>
+    <content>
+      <rng:zeroOrMore>
+        <rng:ref name="model.tuningPart"/>
+      </rng:zeroOrMore>
+    </content>
+    <remarks xml:lang="en">
+      <p>At this point, the tuning element has been worked out for string instruments only. However, as it seems applicable for other instruments, it's been made available in the MEI.shared module.</p>
+    </remarks>
+  </elementSpec>
   <elementSpec ident="width" module="MEI.shared">
     <desc xml:lang="en">Description of the horizontal size of an object.</desc>
     <classes>
@@ -40429,34 +40614,82 @@ or
   </elementSpec>
 </specGrp>
                <!-- 
-  NOTICE: Copyright (c) 2017-2023 by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
-
-  Licensed under the Educational Community License, Version 2.0 (the "License"); you may
-  not use this file except in compliance with the License. You may obtain a copy of the License
-  at https://opensource.org/licenses/ECL-2.0.
-  
-  Unless required by applicable law or agreed to in writing, software distributed under the
-  License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS
-  OF ANY KIND, either express or implied. See the License for the specific language
-  governing permissions and limitations under the License.
-  
-  This is a derivative work based on earlier versions of the schema © 2001-2006 Perry Roland
-  and the Rector and Visitors of the University of Virginia; licensed under the Educational
-  Community License version 1.0.
-  
-  CONTACT: info@music-encoding.org
+     NOTICE: Copyright (c) 2017-2024 by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
+     
+     Licensed under the Educational Community License, Version 2.0 (the "License"); you may
+     not use this file except in compliance with the License. You may obtain a copy of the License
+     at https://opensource.org/licenses/ECL-2.0.
+     
+     Unless required by applicable law or agreed to in writing, software distributed under the
+     License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS
+     OF ANY KIND, either express or implied. See the License for the specific language
+     governing permissions and limitations under the License.
+     
+     This is a derivative work based on earlier versions of the schema © 2001-2006 Perry Roland
+     and the Rector and Visitors of the University of Virginia; licensed under the Educational
+     Community License version 1.0.
+     
+     CONTACT: info@music-encoding.org
 --><specGrp xml:id="module.MEI.stringtab">
   <moduleSpec ident="MEI.stringtab">
     <desc xml:lang="en">Tablature component declarations.</desc>
   </moduleSpec>
+  <macroSpec ident="data.COURSENUMBER" module="MEI.stringtab" type="dt">
+    <desc xml:lang="en">In string tablature, the number of the course to be played, <abbr>i.e.</abbr>, [1-9]+.</desc>
+    <content>
+      <rng:data type="positiveInteger"/>
+    </content>
+  </macroSpec>
+  <macroSpec ident="data.COURSETUNING" module="MEI.stringtab" type="dt">
+    <desc xml:lang="en">Standard course tunings.</desc>
+    <content>
+      <valList type="semi">
+        <valItem ident="guitar.standard">
+          <desc xml:lang="en">Standard tuning for current guitars. The courses are tuned to E2 A2 D3 G3 B3 E4.</desc>
+        </valItem>
+        <valItem ident="guitar.drop.D">
+          <desc xml:lang="en">Drop D tuning for guitars. The lowest course is tuned down to D, while all other courses are kept to their regular pitches. D2 A2 D3 G3 B3 E4.</desc>
+        </valItem>
+        <valItem ident="guitar.open.D">
+          <desc xml:lang="en">Open D tuning for guitars. D2 A2 D3 F3s A3 D4.</desc>
+        </valItem>
+        <valItem ident="guitar.open.G">
+          <desc xml:lang="en">Open G tuning for guitars. D2 G2 D2 G2 B3 D4.</desc>
+        </valItem>
+        <valItem ident="guitar.open.A">
+          <desc xml:lang="en">Open A tuning for guitars. E2 A2 E3 A3 C4s E4.</desc>
+        </valItem>
+        <valItem ident="lute.renaissance.6">
+          <desc xml:lang="en">Renaissance tuning for lutes with 6 courses. G2 C3
+            F3 A3 D4 G4.</desc>
+        </valItem>
+        <valItem ident="lute.baroque.d.minor">
+          <desc xml:lang="en">Baroque tuning for lutes with 6 stable courses, and additional bass courses tuned to the key of D minor. A2 D3 F3 A3 D4 F4 for the main six courses, and bass courses descending in pitch from G2, F2, etc., depending on the size of the instrument. </desc>
+        </valItem>
+      </valList>
+    </content>
+  </macroSpec>
+  <classSpec ident="att.course.log" module="MEI.stringtab" type="atts">
+    <desc xml:lang="en">Logical domain attributes.</desc>
+    <classes>
+      <memberOf key="att.pitched"/>
+    </classes>
+  </classSpec>
+  <classSpec ident="att.scoreDef.vis.tablature" module="MEI.stringtab" type="atts">
+    <desc xml:lang="en">Visual domain attributes for scoreDef in the tablature repertoire.</desc>
+  </classSpec>
   <classSpec ident="att.stringtab" module="MEI.stringtab" type="atts">
     <desc xml:lang="en">String tablature string and fret information.</desc>
     <attList>
+      <attDef ident="tab.align" usage="opt">
+        <desc xml:lang="en">Attribute that describes the vertical alignment of tablature symbols. Only applicable in cases where the symbols' vertical position does not communicate other information, such as courses (<abbr>i.e.</abbr>, only in German lute tablature). Typical values are <val>top</val> and <val>bottom</val>.</desc>
+        <datatype>
+          <rng:ref name="data.VERTICALALIGNMENT"/>
+        </datatype>
+      </attDef>
+      <!-- Below here is unchecked / legacy -->
       <attDef ident="tab.fing" usage="opt">
-        <desc xml:lang="en">Indicates which finger, if any, should be used to play an individual string. The
-          index, middle, ring, and little fingers are represented by the values 1-4, while <val>t</val> is
-          for the thumb. The values <val>x</val> and <val>o</val> indicate muffled and open strings,
-          respectively.</desc>
+        <desc xml:lang="en">This attribute is deprecated and will be removed in a future version. Indicates which finger, if any, should be used to play an individual string. The index, middle, ring, and little fingers are represented by the values 1-4, while <val>t</val> is for the thumb. The values <val>x</val> and <val>o</val> indicate muffled and open strings, respectively.</desc>
         <datatype>
           <rng:ref name="data.FINGER.FRET"/>
         </datatype>
@@ -40467,10 +40700,22 @@ or
           <rng:ref name="data.FRETNUMBER"/>
         </datatype>
       </attDef>
+      <attDef ident="tab.line" usage="opt">
+        <desc xml:lang="en">Used in German lute tablature in cases where vertical positioning deviates from the norm which can be specified by <att>tab.align</att>. Indicates the position of the note on one of the horizontal strands corresponding to the <att>lines</att> attribute on <gi scheme="MEI">staffDef</gi>. (Note that in this case, the lines are conceptual rather than visible).</desc>
+        <datatype>
+          <rng:ref name="data.CLEFLINE"/>
+        </datatype>
+      </attDef>
       <attDef ident="tab.string" usage="opt">
-        <desc xml:lang="en">Records which string is to be played.</desc>
+        <desc xml:lang="en">This attribute is deprecated in favour of <att>tab.course</att> and will be removed in a future version. Records which string is to be played.</desc>
         <datatype>
           <rng:ref name="data.STRINGNUMBER"/>
+        </datatype>
+      </attDef>
+      <attDef ident="tab.course" usage="opt">
+        <desc xml:lang="en">Records which course is to be played.</desc>
+        <datatype>
+          <rng:ref name="data.COURSENUMBER"/>
         </datatype>
       </attDef>
     </attList>
@@ -40487,22 +40732,52 @@ or
     </attList>
   </classSpec>
   <classSpec ident="att.stringtab.tuning" module="MEI.stringtab" type="atts">
-    <desc xml:lang="en">String tablature tuning information.</desc>
+    <desc xml:lang="en">This collection of attributes is deprecated in favour of the new <gi scheme="MEI">tuning</gi> element and will be removed in a future version. String tablature tuning information.</desc>
     <attList>
       <attDef ident="tab.strings" usage="opt">
-        <desc xml:lang="en">Provides a *written* pitch and octave for each open string or course of
+        <desc xml:lang="en">This attribute is deprecated in favour of the new <gi scheme="MEI">tuning</gi> element and will be removed in a future version. Provides a *written* pitch and octave for each open string or course of
           strings.</desc>
         <datatype>
           <rng:list>
             <rng:oneOrMore>
               <rng:data type="token">
-                <rng:param name="pattern">[a-g][0-9](s|f|ss|x|ff|xs|sx|ts|tf|n|nf|ns|su|sd|fu|fd|nu|nd|1qf|3qf|1qs|3qs)?([a-g][0-9](s|f|ss|x|ff|xs|sx|ts|tf|n|nf|ns|su|sd|fu|fd|nu|nd|1qf|3qf|1qs|3qs)?)*</rng:param>
+                <rng:param name="pattern">
+                  [a-g][0-9](s|f|ss|x|ff|xs|sx|ts|tf|n|nf|ns|su|sd|fu|fd|nu|nd|1qf|3qf|1qs|3qs)?([a-g][0-9](s|f|ss|x|ff|xs|sx|ts|tf|n|nf|ns|su|sd|fu|fd|nu|nd|1qf|3qf|1qs|3qs)?)*</rng:param>
+              </rng:data>
+            </rng:oneOrMore>
+          </rng:list>
+        </datatype>
+      </attDef>
+      <attDef ident="tab.courses" usage="opt">
+        <desc xml:lang="en">This attribute is deprecated in favour of the new <gi scheme="MEI">tuning</gi> element and will be removed in a future version. Provides a *written* pitch and octave for each open string or course of strings.</desc>
+        <datatype>
+          <rng:list>
+            <rng:oneOrMore>
+              <rng:data type="token">
+                <rng:param name="pattern">
+                  [a-g][0-9](s|f|ss|x|ff|xs|sx|ts|tf|n|nf|ns|su|sd|fu|fd|nu|nd|1qf|3qf|1qs|3qs)?([a-g][0-9](s|f|ss|x|ff|xs|sx|ts|tf|n|nf|ns|su|sd|fu|fd|nu|nd|1qf|3qf|1qs|3qs)?)*</rng:param>
               </rng:data>
             </rng:oneOrMore>
           </rng:list>
         </datatype>
       </attDef>
     </attList>
+  </classSpec>
+  <classSpec ident="att.tabDurSym.log" module="MEI.stringtab" type="atts">
+    <desc xml:lang="en">Logical domain attributes.</desc>
+    <classes>
+      <memberOf key="att.layerIdent"/>
+      <memberOf key="att.partIdent"/>
+    </classes>
+  </classSpec>
+  <classSpec ident="att.tabGrp.log" module="MEI.stringtab" type="atts">
+    <desc xml:lang="en">Logical domain attributes.</desc>
+    <classes>
+      <!-- Would that be helpful? <memberOf key="att.articulation"/>-->
+      <memberOf key="att.augmentDots"/>
+      <memberOf key="att.duration.log"/>
+      <memberOf key="att.event"/>
+    </classes>
   </classSpec>
   <elementSpec ident="barre" module="MEI.stringtab">
     <desc xml:lang="en">A barre in a chord tablature grid.</desc>
@@ -40515,9 +40790,7 @@ or
     </content>
     <attList>
       <attDef ident="fret" usage="opt">
-        <desc xml:lang="en">Records the location at which the strings should be stopped against a fret in a
-          fretboard diagram. This may or may not be the same as the actual location on the fretboard
-          of the instrument in performance.</desc>
+        <desc xml:lang="en">This attribute is deprecated in favour of <att>tab.fret</att>, and will be removed in a future version. Records the location at which the strings should be stopped against a fret in a fretboard diagram. This may or may not be the same as the actual location on the fretboard of the instrument in performance.</desc>
         <datatype>
           <rng:data type="positiveInteger">
             <rng:param name="minInclusive">1</rng:param>
@@ -40527,10 +40800,89 @@ or
       </attDef>
     </attList>
     <remarks xml:lang="en">
-      <p>The <att>startid</att> and <att>endid</att> attributes are used to indicate the <gi scheme="MEI">chordMember</gi> elements on which the barre starts and finishes respectively.
-        The fret at which the barre should be created is recorded by the <att>fret</att>
+      <p>The <att>startid</att> and <att>endid</att> attributes are used to indicate the <gi scheme="MEI">chordMember</gi> elements on which the barre starts and finishes
+        respectively. The fret at which the barre should be created is recorded by the <att>fret</att>
         attribute.</p>
     </remarks>
+  </elementSpec>
+  <elementSpec ident="course" module="MEI.stringtab">
+    <gloss>individual course tuning information</gloss>
+    <desc xml:lang="en">Describes the tuning of a course on a stringed instrument (<abbr>e.g.</abbr>, guitar, lute).</desc>
+    <classes>
+      <memberOf key="att.common"/>
+      <memberOf key="att.course.log"/>
+      <memberOf key="att.course.vis"/>
+      <memberOf key="att.course.ges"/>
+      <memberOf key="att.course.anl"/>
+      <memberOf key="model.tuningPart"/>
+    </classes>
+    <content>
+      <rng:zeroOrMore>
+        <rng:ref name="string"/>
+      </rng:zeroOrMore>
+    </content>
+  </elementSpec>
+  <elementSpec ident="string" module="MEI.stringtab">
+    <gloss>individual string tuning information</gloss>
+    <desc xml:lang="en">Used to modify tuning information given by the course element. Describes the tuning of an individual string within a course on a stringed instrument (<abbr>e.g.</abbr>, guitar, lute).</desc>
+    <classes>
+      <memberOf key="att.common"/>
+      <memberOf key="att.course.log"/>
+      <memberOf key="att.course.vis"/>
+      <memberOf key="att.course.ges"/>
+      <memberOf key="att.course.anl"/>
+    </classes>
+    <content>
+      <rng:zeroOrMore>
+        <rng:ref name="string"/>
+      </rng:zeroOrMore>
+    </content>
+  </elementSpec>
+  <elementSpec ident="tabDurSym" module="MEI.stringtab">
+    <desc xml:lang="en">A visual indication of the duration of a <gi scheme="MEI">tabGrp</gi>.</desc>
+    <classes>
+      <memberOf key="att.common"/>
+      <memberOf key="att.facsimile"/>
+      <memberOf key="att.stringtab"/>
+      <memberOf key="att.tabDurSym.log"/>
+      <memberOf key="att.tabDurSym.vis"/>
+      <memberOf key="att.tabDurSym.ges"/>
+      <memberOf key="att.tabDurSym.anl"/>
+    </classes>
+    <content>
+      <empty/>
+    </content>
+    <!-- TODO Add constraint: note(s) and rest(s) should be mutually exclusive -->
+    <remarks xml:lang="en">
+      <p>The presence of a <gi scheme="MEI">tabDurSym</gi> indicates that there is a symbol rendered for the parent <gi scheme="MEI">tabGrp</gi>. If no additional attributes like <att>altsym</att>are given, a default symbol conforming to the current notation style or font is to be used. The absence of this elements indicates that the last provided duration symbol equally applies to the current tab group.</p>
+    </remarks>
+  </elementSpec>
+  <elementSpec ident="tabGrp" module="MEI.stringtab">
+    <desc xml:lang="en">A group of simultaneous tab notes, comparable to a <gi scheme="MEI">chord</gi> in CMN. Rarely, may also contain rests, as in some "German" lute tablatures.</desc>
+    <classes>
+      <memberOf key="att.common"/>
+      <memberOf key="att.facsimile"/>
+      <memberOf key="att.tabGrp.log"/>
+      <memberOf key="att.tabGrp.vis"/>
+      <memberOf key="att.tabGrp.ges"/>
+      <memberOf key="att.tabGrp.anl"/>
+      <memberOf key="model.eventLike"/>
+    </classes>
+    <content>
+      <rng:optional>
+        <rng:ref name="tabDurSym"/>
+      </rng:optional>
+      <rng:zeroOrMore>
+        <rng:choice>
+          <!-- alternative: model.chordPart – This would give note and artic -->
+          <rng:ref name="note"/>
+          <rng:ref name="model.transcriptionLike"/>
+          <rng:ref name="model.editLike"/>
+          <rng:ref name="model.appLike"/>
+          <rng:ref name="rest"/>
+        </rng:choice>
+      </rng:zeroOrMore>
+    </content>
   </elementSpec>
 </specGrp>
                <!-- 
@@ -41779,6 +42131,9 @@ or
   <classSpec ident="att.clefGrp.vis" module="MEI.visual" type="atts">
     <desc xml:lang="en">Visual domain attributes.</desc>
   </classSpec>
+  <classSpec ident="att.course.vis" module="MEI.visual" type="atts">
+    <desc xml:lang="en">Visual domain attributes.</desc>    
+  </classSpec>
   <classSpec ident="att.cpMark.vis" module="MEI.visual" type="atts">
     <desc xml:lang="en">Visual domain attributes.</desc>
     <classes>
@@ -42994,6 +43349,7 @@ or
       <memberOf key="att.textStyle"/>
       <memberOf key="att.scoreDef.vis.cmn"/>
       <memberOf key="att.scoreDef.vis.mensural"/>
+      <memberOf key="att.scoreDef.vis.tablature"/>
     </classes>
     <attList>
       <attDef ident="vu.height" usage="opt">
@@ -43274,6 +43630,30 @@ or
       <memberOf key="att.xy"/>
     </classes>
   </classSpec>
+  <classSpec ident="att.tabDurSym.vis" module="MEI.visual" type="atts">
+    <desc xml:lang="en">Visual domain attributes.</desc>
+    <classes>
+      <memberOf key="att.altSym"/>
+      <memberOf key="att.color"/>
+      <memberOf key="att.extSym"/>
+      <memberOf key="att.placementRelStaff"/>
+      <memberOf key="att.typography"/>
+      <memberOf key="att.visibility"/>
+      <memberOf key="att.visualOffset"/>
+      <memberOf key="att.xy"/>
+    </classes>
+  </classSpec>
+  <classSpec ident="att.tabGrp.vis" module="MEI.visual" type="atts">
+    <desc xml:lang="en">Visual domain attributes.</desc>
+    <classes>
+      <!--Would that be helpful? <memberOf key="att.altSym"/>-->
+      <!--Would that be helpful? <memberOf key="att.extSym"/>-->
+      <memberOf key="att.visibility"/>
+      <memberOf key="att.visualOffset.ho"/>
+      <memberOf key="att.visualOffset.to"/>
+      <memberOf key="att.xy"/>
+    </classes>
+  </classSpec>
   <classSpec ident="att.tempo.vis" module="MEI.visual" type="atts">
     <desc xml:lang="en">Visual domain attributes.</desc>
     <classes>
@@ -43320,6 +43700,9 @@ or
       <memberOf key="att.visualOffset2.to"/>
       <memberOf key="att.xy"/>
     </classes>
+  </classSpec>
+  <classSpec ident="att.tuning.vis" module="MEI.visual" type="atts">
+    <desc xml:lang="en">Visual domain attributes.</desc>
   </classSpec>
   <classSpec ident="att.tuplet.vis" module="MEI.visual" type="atts">
     <desc xml:lang="en">Visual domain attributes.</desc>

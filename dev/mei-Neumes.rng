@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2024-07-18T14:40:33Z. . 
+Schema generated from ODD source 2024-07-26T13:20:45Z. . 
 TEI Edition: Development Version 
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -7387,6 +7387,14 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Neumatic notation.</a:documentation>
          <value>tab</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Tablature notation.</a:documentation>
+         <value>tab.guitar</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Tablature notation for guitars (includes "spanish" lute tablature). Frets are indicated using numbers. Courses closest to the player's feet are at the top of the staff.</a:documentation>
+         <value>tab.lute.french</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">"French" tablature notation for lutes. Frets are indicated using letters. Courses closest to the player's feet are at the top of the staff.</a:documentation>
+         <value>tab.lute.italian</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">"Italian" tablature notation for lutes. Frets are indicated using numbers. Courses closest to the player's feet are at the bottom of the staff.</a:documentation>
+         <value>tab.lute.german</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">"German" tablature notation for lutes. Fret and course information is conveyed solely by choice of symbol (vertical position is not used for this).</a:documentation>
       </choice>
    </define>
    <define name="mei_data.NOTEHEADMODIFIER">
@@ -8371,6 +8379,9 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
       <empty/>
    </define>
    <define name="mei_att.tempo.anl.attributes">
+      <empty/>
+   </define>
+   <define name="mei_att.tuning.anl.attributes">
       <empty/>
    </define>
    <define name="mei_att.verse.anl.attributes">
@@ -10560,6 +10571,9 @@ Suggested values include: 1] smufl</a:documentation>
             <ref name="mei_data.ISOTIME"/>
          </attribute>
       </optional>
+   </define>
+   <define name="mei_att.tuning.ges.attributes">
+      <empty/>
    </define>
    <define name="mei_att.verse.ges.attributes">
       <empty/>
@@ -19299,6 +19313,16 @@ Suggested values include: 1] smufl</a:documentation>
          </attribute>
       </optional>
    </define>
+   <define name="mei_att.tuning.log.attributes">
+      <ref name="mei_att.tuning.log.attribute.tuning.standard"/>
+   </define>
+   <define name="mei_att.tuning.log.attribute.tuning.standard">
+      <optional>
+         <attribute name="tuning.standard">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Describes the tuning standard used.</a:documentation>
+         </attribute>
+      </optional>
+   </define>
    <define name="mei_att.tuning.attributes">
       <ref name="mei_att.tuning.attribute.tune.Hz"/>
       <ref name="mei_att.tuning.attribute.tune.pname"/>
@@ -20798,6 +20822,7 @@ Suggested values include: 1] smufl</a:documentation>
          <ref name="mei_model.meterSigLike"/>
          <ref name="mei_clef"/>
          <ref name="mei_clefGrp"/>
+         <ref name="mei_tuning"/>
       </choice>
    </define>
    <define name="mei_model.staffGrpLike">
@@ -21297,6 +21322,9 @@ Suggested values include: 1] smufl</a:documentation>
          <ref name="mei_epigraph"/>
          <ref name="mei_imprimatur"/>
       </choice>
+   </define>
+   <define name="mei_model.tuningPart">
+      <notAllowed/>
    </define>
    <define name="mei_accid">
       <element name="accid">
@@ -23719,9 +23747,9 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          <optional>
             <ref name="mei_model.chordTableLike"/>
          </optional>
-         <optional>
+         <zeroOrMore>
             <ref name="mei_model.symbolTableLike"/>
-         </optional>
+         </zeroOrMore>
          <optional>
             <ref name="mei_model.keySigLike"/>
          </optional>
@@ -24467,6 +24495,20 @@ Suggested values include: 1] alternative; 2] arrangement; 3] carrier; 4] date; 5
                </choice>
             </attribute>
          </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_tuning">
+      <element name="tuning">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Describes the tuning of an instrument.</a:documentation>
+         <zeroOrMore>
+            <ref name="mei_model.tuningPart"/>
+         </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.tuning.log.attributes"/>
+         <ref name="mei_att.tuning.vis.attributes"/>
+         <ref name="mei_att.tuning.ges.attributes"/>
+         <ref name="mei_att.tuning.anl.attributes"/>
          <empty/>
       </element>
    </define>
@@ -26216,6 +26258,9 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
       <ref name="mei_att.visualOffset2.ho.attributes"/>
       <ref name="mei_att.visualOffset2.to.attributes"/>
       <ref name="mei_att.xy.attributes"/>
+   </define>
+   <define name="mei_att.tuning.vis.attributes">
+      <empty/>
    </define>
    <define name="mei_att.verse.vis.attributes">
       <ref name="mei_att.color.attributes"/>
