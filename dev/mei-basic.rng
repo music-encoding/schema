@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <grammar xmlns="http://relaxng.org/ns/structure/1.0"
          xmlns:tei="http://www.tei-c.org/ns/1.0"
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2024-07-26T13:20:41Z. . 
+Schema generated from ODD source 2024-07-26T13:40:26Z. . 
 TEI Edition: Development Version 
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -2102,7 +2102,8 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
    <define name="mei_att.pedal.log.attribute.func">
       <optional>
          <attribute name="func">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(function) Indicates the function of the depressed pedal, but not necessarily the text associated with its use. Use the <code xmlns="http://www.w3.org/1999/xhtml">&lt;dir&gt;</code> element for such text.
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(function) Indicates the function of the depressed pedal, but not necessarily the text associated with its use. Use the <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;dir&gt;</code> element for such text.
 Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:documentation>
             <choice>
                <value>sustain</value>
@@ -2424,9 +2425,9 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="mei-basic-beam-When_not_copyof_beam_content-constraint-rule-5">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:beam[not(@copyof or @sameas)]">
@@ -2456,9 +2457,9 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(breath mark) An indication of a point at which the performer on an instrument requiring breath (including the voice) may breathe.</a:documentation>
          <empty/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="mei-basic-breath-breath_start-type_attributes_required-constraint-rule-6">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:breath">
@@ -2492,9 +2493,9 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">An indication placed over a note or rest to indicate that it should be held longer than its written value. May also occur over a bar line to indicate the end of a phrase or section. Sometimes called a 'hold' or 'pause'.</a:documentation>
          <empty/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="mei-basic-fermata-fermata_start-type_attributes_required-constraint-rule-7">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="mei:fermata">
                <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of
@@ -2502,9 +2503,9 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="mei-basic-fermata-fermata_start-type_attributes_required-constraint-rule-8">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:fermata">
@@ -2559,9 +2560,9 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="mei-basic-gliss-gliss_start-_and_end-type_attributes_required-constraint-rule-9">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:gliss">
@@ -2588,9 +2589,9 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="mei-basic-graceGrp-When_not_copyof_graceGrp_content-constraint-rule-10">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:graceGrp[not(@copyof)]">
@@ -2599,9 +2600,9 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="mei-basic-graceGrp-When_graced-constraint-rule-11">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:graceGrp[@grace]">
@@ -2620,9 +2621,9 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates continuous dynamics expressed on the score as wedge-shaped graphics, e.g., &lt; and &gt;.</a:documentation>
          <empty/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="mei-basic-hairpin-hairpin_start-_and_end-type_attributes_required-constraint-rule-12">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:hairpin">
@@ -2654,9 +2655,9 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(harp pedal) Harp pedal diagram.</a:documentation>
          <empty/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="mei-basic-harpPedal-harpPedal_start-type_attributes_required-constraint-rule-13">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:harpPedal">
@@ -2675,9 +2676,9 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
       <element name="lv">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(laissez vibrer) A "tie-like" indication that a note should ring beyond its written duration.</a:documentation>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="mei-basic-lv-lv_start-_and_end-type_attributes_required-constraint-rule-14">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:lv">
@@ -2686,9 +2687,9 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="mei-basic-lv-lv_containing_curve-constraint-rule-15">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:lv[mei:curve[@bezier or @bulge or @curvedir or @lform or @lwidth or @ho or @startho or @endho or @to or @startto or @endto or @vo or @startvo or              @endvo or @x or @y or @x2 or @y2]]">
@@ -2729,7 +2730,9 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    </define>
    <define name="mei_mNum">
       <element name="mNum">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(measure number) Designation, name, or label for a measure, often but not always consisting of digits. Use this element when the <code xmlns="http://www.w3.org/1999/xhtml">@n</code> attribute on <code xmlns="http://www.w3.org/1999/xhtml">&lt;measure&gt;</code> does not adequately capture the appearance or placement of the measure number/label.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(measure number) Designation, name, or label for a measure, often but not always consisting of digits. Use this element when the <code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">@n</code> attribute on <code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;measure&gt;</code> does not adequately capture the appearance or placement of the measure number/label.</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -2795,9 +2798,9 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="mei-basic-octave-octave_start-_and_end-type_attributes_required-constraint-rule-16">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:octave">
@@ -2819,9 +2822,9 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Piano pedal mark.</a:documentation>
          <empty/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="mei-basic-pedal-pedal_start-type_attributes_required-constraint-rule-17">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:pedal">
@@ -2863,9 +2866,9 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="mei-basic-repeatMark-repeatMark_start-type_attributes_required-constraint-rule-18">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:repeatMark">
@@ -2874,9 +2877,9 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="mei-basic-repeatMark-repeatMark_with_glyph_has_to_be_empty-constraint-rule-19">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:repeatMark[@glyph.num or @glyph.name]">
@@ -2896,9 +2899,9 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
       <element name="slur">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indication of 1) a "unified melodic idea" or 2) performance technique.</a:documentation>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="mei-basic-slur-slur_start-_and_end-type_attributes_required-constraint-rule-20">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:slur">
@@ -2909,9 +2912,9 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="mei-basic-slur-slur_containing_curve-constraint-rule-21">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:slur[mei:curve[@bezier or @bulge or @curvedir or @lform or @lwidth or @ho or @startho or @endho or @to or @startto or @endto or @vo or @startvo or @endvo or @x or @y or @x2 or @y2]]">
@@ -2933,9 +2936,9 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
       <element name="tie">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">An indication that two notes of the same pitch form a single note with their combined rhythmic values.</a:documentation>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="mei-basic-tie-tie_start-_and_end-type_attributes_required-constraint-rule-22">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:tie">
@@ -2946,9 +2949,9 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="mei-basic-tie-tie_containing_curve-constraint-rule-23">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:tie[mei:curve[@bezier or @bulge or @curvedir or @lform or @lwidth or @ho or @startho or @endho or @to or @startto or @endto or @vo or @startvo or @endvo or @x or @y or @x2 or @y2]]">
@@ -2992,7 +2995,10 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    <define name="mei_att.mordent.log.attribute.form">
       <optional>
          <attribute name="form">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records semantic meaning, i.e., intended performance, of the mordent. The <code xmlns="http://www.w3.org/1999/xhtml">@altsym</code>, <code xmlns="http://www.w3.org/1999/xhtml">@glyph.name</code>, or <code xmlns="http://www.w3.org/1999/xhtml">@glyph.num</code> attributes may be used to specify the appropriate symbol.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records semantic meaning, i.e., intended performance, of the mordent. The <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">@altsym</code>, <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">@glyph.name</code>, or <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">@glyph.num</code> attributes may be used to specify the appropriate symbol.</a:documentation>
             <choice>
                <value>lower</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Starts with the written note, followed by its lower neighbor, with a return to the written note. In modern practice, this is called an "inverted mordent" and indicated by a short wavy line with a vertical line through it.</a:documentation>
@@ -3056,7 +3062,10 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    <define name="mei_att.turn.log.attribute.form">
       <optional>
          <attribute name="form">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records meaning; i.e., intended performance, of the turn. The <code xmlns="http://www.w3.org/1999/xhtml">@altsym</code>, <code xmlns="http://www.w3.org/1999/xhtml">@glyph.name</code>, or <code xmlns="http://www.w3.org/1999/xhtml">@glyph.num</code> attributes may be used to specify the appropriate symbol.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records meaning; i.e., intended performance, of the turn. The <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">@altsym</code>, <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">@glyph.name</code>, or <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">@glyph.num</code> attributes may be used to specify the appropriate symbol.</a:documentation>
             <choice>
                <value>lower</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Begins on the note below the written note.</a:documentation>
@@ -3123,9 +3132,9 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">An ornament indicating rapid alternation of the main note with a secondary note, usually a step below, but sometimes a step above. </a:documentation>
          <empty/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="mei-basic-mordent-mordent_start-type_attributes_required-constraint-rule-24">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:mordent">
@@ -3144,9 +3153,9 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Rapid alternation of a note with another (usually at the interval of a second above).</a:documentation>
          <empty/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="mei-basic-trill-trill_start-type_attributes_required-constraint-rule-25">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:trill">
@@ -3166,9 +3175,9 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">An ornament consisting of four notes — the upper neighbor of the written note, the written note, the lower neighbor, and the written note.</a:documentation>
          <empty/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="mei-basic-turn-turn_start-type_attributes_required-constraint-rule-26">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:turn">
@@ -3189,7 +3198,9 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    <define name="mei_att.extSym.auth.attribute.glyph.auth">
       <optional>
          <attribute name="glyph.auth">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A name or label associated with the controlled vocabulary from which the value of <code xmlns="http://www.w3.org/1999/xhtml">@glyph.name</code> or <code xmlns="http://www.w3.org/1999/xhtml">@glyph.num</code> is taken, or the textual content of the element.
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A name or label associated with the controlled vocabulary from which the value of <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">@glyph.name</code> or <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">@glyph.num</code> is taken, or the textual content of the element.
 Suggested values include: 1] smufl</a:documentation>
             <choice>
                <value>smufl</value>
@@ -3202,7 +3213,9 @@ Suggested values include: 1] smufl</a:documentation>
    <define name="mei_att.extSym.auth.attribute.glyph.uri">
       <optional>
          <attribute name="glyph.uri">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The web-accessible location of the controlled vocabulary from which the value of <code xmlns="http://www.w3.org/1999/xhtml">@glyph.name</code> or <code xmlns="http://www.w3.org/1999/xhtml">@glyph.num</code> is taken, or the textual content of the element.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The web-accessible location of the controlled vocabulary from which the value of <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">@glyph.name</code> or <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">@glyph.num</code> is taken, or the textual content of the element.</a:documentation>
             <ref name="mei_data.URI"/>
          </attribute>
       </optional>
@@ -3331,9 +3344,9 @@ Suggested values include: 1] smufl</a:documentation>
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="mei-basic-fing-fing_start-type_attributes_required-constraint-rule-29">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:fing[not(ancestor::mei:fingGrp)]">
@@ -3342,9 +3355,9 @@ Suggested values include: 1] smufl</a:documentation>
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="mei-basic-fing-stack_exclusion-constraint-rule-30">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:fing">
@@ -3368,9 +3381,9 @@ Suggested values include: 1] smufl</a:documentation>
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="mei-basic-fingGrp-require_fingeringLike_children-constraint-rule-31">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:fingGrp">
@@ -3638,7 +3651,8 @@ Suggested values include: 1] smufl</a:documentation>
    <define name="mei_att.harm.log.attribute.chordref">
       <optional>
          <attribute name="chordref">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(chord reference) Contains a reference to a <code xmlns="http://www.w3.org/1999/xhtml">&lt;chordDef&gt;</code> element elsewhere in the document.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(chord reference) Contains a reference to a <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;chordDef&gt;</code> element elsewhere in the document.</a:documentation>
             <ref name="mei_data.URI"/>
          </attribute>
       </optional>
@@ -3739,7 +3753,8 @@ Suggested values include: 1] smufl</a:documentation>
    </define>
    <define name="mei_chordMember">
       <element name="chordMember">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">An individual pitch in a chord defined by a <code xmlns="http://www.w3.org/1999/xhtml">&lt;chordDef&gt;</code> element.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">An individual pitch in a chord defined by a <code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;chordDef&gt;</code> element.</a:documentation>
          <empty/>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.chordMember.ges.attributes"/>
@@ -3786,9 +3801,9 @@ Suggested values include: 1] smufl</a:documentation>
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="mei-basic-harm-harm_start-type_attributes_required-constraint-rule-36">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:harm">
@@ -3828,9 +3843,9 @@ Suggested values include: 1] smufl</a:documentation>
             </attribute>
          </optional>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="mei-basic-fileDesc-corresp-check_correspTarget-constraint-rule-37">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="@corresp">
                <sch:assert role="warning" test="not(normalize-space(.) eq '')">@corresp attribute should have content.</sch:assert>
@@ -3844,9 +3859,9 @@ Suggested values include: 1] smufl</a:documentation>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(MEI header) (MEI header) – Supplies the descriptive and declarative metadata prefixed to every MEI-conformant text.</a:documentation>
          <ref name="mei_fileDesc"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="mei-basic-meiHead-check_meiHead_type-constraint-rule-38">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:meiHead[@type eq 'music']">
@@ -3854,7 +3869,6 @@ Suggested values include: 1] smufl</a:documentation>
             only when the document element is "mei".</sch:assert>
             </sch:rule>
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:meiHead[@type eq 'corpus']">
@@ -3862,7 +3876,6 @@ Suggested values include: 1] smufl</a:documentation>
             'corpus' only when the document element is "meiCorpus".</sch:assert>
             </sch:rule>
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:meiHead[@type eq 'independent']">
@@ -4046,7 +4059,8 @@ Suggested values include: 1] smufl</a:documentation>
    <define name="mei_att.instrumentIdent.attribute.instr">
       <optional>
          <attribute name="instr">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Provides a way of pointing to a MIDI instrument definition. It must contain the ID of an <code xmlns="http://www.w3.org/1999/xhtml">&lt;instrDef&gt;</code> element elsewhere in the document.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Provides a way of pointing to a MIDI instrument definition. It must contain the ID of an <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;instrDef&gt;</code> element elsewhere in the document.</a:documentation>
             <ref name="mei_data.URI"/>
          </attribute>
       </optional>
@@ -4431,7 +4445,8 @@ Suggested values include: 1] smufl</a:documentation>
    <define name="mei_att.articulation.attribute.artic">
       <optional>
          <attribute name="artic">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Encodes the written articulation(s). Articulations are normally encoded in order from the note head outward; that is, away from the stem. See additional notes at att.vis.note. Only articulations should be encoded in the artic attribute; for example, fingerings should be encoded using the <code xmlns="http://www.w3.org/1999/xhtml">&lt;fing&gt;</code> element.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Encodes the written articulation(s). Articulations are normally encoded in order from the note head outward; that is, away from the stem. See additional notes at att.vis.note. Only articulations should be encoded in the artic attribute; for example, fingerings should be encoded using the <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;fing&gt;</code> element.</a:documentation>
             <list>
                <oneOrMore>
                   <ref name="mei_data.ARTICULATION"/>
@@ -6456,9 +6471,9 @@ Suggested values include: 1] smufl</a:documentation>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Break, pause, or interruption in the normal tempo of a composition. Typically indicated by "railroad tracks", i.e., two diagonal slashes.</a:documentation>
          <empty/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="mei-basic-caesura-caesura_start-type_attributes_required-constraint-rule-54">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:caesura">
@@ -6495,9 +6510,9 @@ Suggested values include: 1] smufl</a:documentation>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indication of the exact location of a particular note on the staff and, therefore, the other notes as well.</a:documentation>
          <empty/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="mei-basic-clef-Clef_position_lines-constraint-rule-55">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:clef[matches(@shape, '[FCG]')][ancestor::mei:staffDef[@lines]]">
@@ -6507,9 +6522,9 @@ Suggested values include: 1] smufl</a:documentation>
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="mei-basic-clef-Clef_position_nolines-constraint-rule-56">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:clef[ancestor::mei:staffDef[not(@lines)]]">
@@ -6568,7 +6583,10 @@ Suggested values include: 1] smufl</a:documentation>
    </define>
    <define name="mei_dir">
       <element name="dir">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(directive) An instruction expressed as a combination of text and symbols, typically above, below, or between staves, but not on the staff — that is not encoded elsewhere in more specific elements, like <code xmlns="http://www.w3.org/1999/xhtml">&lt;tempo&gt;</code>, <code xmlns="http://www.w3.org/1999/xhtml">&lt;dynam&gt;</code> or <code xmlns="http://www.w3.org/1999/xhtml">&lt;repeatMark&gt;</code>.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(directive) An instruction expressed as a combination of text and symbols, typically above, below, or between staves, but not on the staff — that is not encoded elsewhere in more specific elements, like <code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;tempo&gt;</code>, <code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;dynam&gt;</code> or <code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;repeatMark&gt;</code>.</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -6576,9 +6594,9 @@ Suggested values include: 1] smufl</a:documentation>
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="mei-basic-dir-dir_start-type_attributes_required-constraint-rule-57">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:dir[not(ancestor::mei:syllable)]">
@@ -6603,9 +6621,9 @@ Suggested values include: 1] smufl</a:documentation>
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="mei-basic-dynam-dynam_start-type_attributes_required-constraint-rule-58">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:dynam">
@@ -6614,9 +6632,9 @@ Suggested values include: 1] smufl</a:documentation>
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="mei-basic-dynam-dynam_end-type_attributes-constraint-rule-59">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:dynam[@val2]">
@@ -6653,7 +6671,8 @@ Suggested values include: 1] smufl</a:documentation>
    </define>
    <define name="mei_label">
       <element name="label">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A container for document text that identifies the feature to which it is attached. For a "tool tip" or other generated label, use the <code xmlns="http://www.w3.org/1999/xhtml">@label</code> attribute.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A container for document text that identifies the feature to which it is attached. For a "tool tip" or other generated label, use the <code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">@label</code> attribute.</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -6745,9 +6764,9 @@ Suggested values include: 1] smufl</a:documentation>
          <ref name="mei_meiHead"/>
          <ref name="mei_music"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="mei-basic-mei-Check_staff-constraint-rule-60">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:*[@staff]">
@@ -6768,15 +6787,14 @@ Suggested values include: 1] smufl</a:documentation>
          </zeroOrMore>
          <ref name="mei_macro.musicPart"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="mei-basic-music-check_controlEventLinking-constraint-rule-61">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="mei:*[@tstamp]">
                <sch:assert test="not(@startid)">An element with @tstamp may not have @startid as well (and vice versa).</sch:assert>
             </sch:rule>
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="mei:*[@tstamp2]">
                <sch:assert test="not(@endid)">An element with @tstamp2 may not have @endid as well (and vice versa).</sch:assert>
@@ -6813,9 +6831,9 @@ Suggested values include: 1] smufl</a:documentation>
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="mei-basic-ornam-ornam_start-type_attributes_required-constraint-rule-63">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:ornam">
@@ -6927,9 +6945,9 @@ Suggested values include: 1] smufl</a:documentation>
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="mei-basic-respStmt-check_respStmt-constraint-rule-64">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:respStmt[not(ancestor::mei:change)]">
@@ -6950,9 +6968,9 @@ Suggested values include: 1] smufl</a:documentation>
             <empty/>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="mei-basic-rest-Check_restline-constraint-rule-65">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:rest[@line]">
@@ -7032,9 +7050,9 @@ Suggested values include: 1] smufl</a:documentation>
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="mei-basic-section-Check_sectionexpansion-constraint-rule-66">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:section[mei:expansion]">
@@ -7074,9 +7092,9 @@ Suggested values include: 1] smufl</a:documentation>
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="mei-basic-staff-checkStaff_n-constraint-rule-67">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:staff[@n]">
@@ -7107,9 +7125,9 @@ Suggested values include: 1] smufl</a:documentation>
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="mei-basic-staffDef-Check_staffDefn-constraint-rule-68">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:staffDef[not(ancestor::mei:staff)]">
@@ -7123,9 +7141,9 @@ Suggested values include: 1] smufl</a:documentation>
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="mei-basic-staffDef-Check_ancestor_staff-constraint-rule-69">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:staffDef[ancestor::mei:staff and @n]">
@@ -7135,9 +7153,9 @@ Suggested values include: 1] smufl</a:documentation>
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="mei-basic-staffDef-Check_ancestor_staff_lines-constraint-rule-70">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:staffDef[ancestor::mei:staff and not(@n)]">
@@ -7148,9 +7166,9 @@ Suggested values include: 1] smufl</a:documentation>
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="mei-basic-staffDef-Check_clef_position_staffDef-constraint-rule-71">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:staffDef[@clef.line and @lines]">
@@ -7159,9 +7177,9 @@ Suggested values include: 1] smufl</a:documentation>
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="mei-basic-staffDef-Check_clef_position_staffDef_nolines-constraint-rule-72">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:staffDef[@clef.line and not(@lines)]">
@@ -7173,9 +7191,9 @@ Suggested values include: 1] smufl</a:documentation>
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="mei-basic-staffDef-Check_tab_strings_lines-constraint-rule-73">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:staffDef[@tab.strings and @lines]">
@@ -7186,9 +7204,9 @@ Suggested values include: 1] smufl</a:documentation>
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="mei-basic-staffDef-Check_tab_strings_nolines-constraint-rule-74">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:staffDef[@tab.strings and not(@lines)]">
@@ -7267,9 +7285,9 @@ Suggested values include: 1] smufl</a:documentation>
             </choice>
          </oneOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="mei-basic-staffGrp-Check_staffGrp_unique_staff_n_values-constraint-rule-79">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="mei:staffGrp">
                <sch:let name="countstaves" value="count(descendant::mei:staffDef)"/>
@@ -7280,9 +7298,9 @@ Suggested values include: 1] smufl</a:documentation>
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="mei-basic-staffGrp-Check_staffGrp_unique_staff_n_values-constraint-rule-80">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:staffGrp">
@@ -7320,9 +7338,9 @@ Suggested values include: 1] smufl</a:documentation>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A reference to a previously defined symbol.</a:documentation>
          <empty/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="mei-basic-symbol-symbolDef_symbol_attributes_required-constraint-rule-81">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:symbol[ancestor::mei:symbolDef]">
@@ -7348,9 +7366,9 @@ Suggested values include: 1] smufl</a:documentation>
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="mei-basic-tempo-tempo_in_header_disallow_most_attrs-constraint-rule-82">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:tempo[not(ancestor::mei:score or ancestor::mei:part)]">
@@ -7360,9 +7378,9 @@ Suggested values include: 1] smufl</a:documentation>
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="mei-basic-tempo-tempo_start-type_attributes_required-constraint-rule-83">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:tempo[not(ancestor::mei:syllable) and not(ancestor::mei:work) and not(ancestor::mei:expression) and not(count(ancestor::mei:*) = 0)]">
@@ -7478,7 +7496,10 @@ Suggested values include: 1] main; 2] subordinate; 3] abbreviated; 4] alternativ
    <define name="mei_att.stringtab.attribute.tab.line">
       <optional>
          <attribute name="tab.line">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Used in German lute tablature in cases where vertical positioning deviates from the norm which can be specified by <code xmlns="http://www.w3.org/1999/xhtml">@tab.align</code>. Indicates the position of the note on one of the horizontal strands corresponding to the <code xmlns="http://www.w3.org/1999/xhtml">@lines</code> attribute on <code xmlns="http://www.w3.org/1999/xhtml">&lt;staffDef&gt;</code>. (Note that in this case, the lines are conceptual rather than visible).</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Used in German lute tablature in cases where vertical positioning deviates from the norm which can be specified by <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">@tab.align</code>. Indicates the position of the note on one of the horizontal strands corresponding to the <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">@lines</code> attribute on <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;staffDef&gt;</code>. (Note that in this case, the lines are conceptual rather than visible).</a:documentation>
             <ref name="mei_data.CLEFLINE"/>
          </attribute>
       </optional>
@@ -7486,7 +7507,8 @@ Suggested values include: 1] main; 2] subordinate; 3] abbreviated; 4] alternativ
    <define name="mei_att.stringtab.attribute.tab.string">
       <optional>
          <attribute name="tab.string">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This attribute is deprecated in favour of <code xmlns="http://www.w3.org/1999/xhtml">@tab.course</code> and will be removed in a future version. Records which string is to be played.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This attribute is deprecated in favour of <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">@tab.course</code> and will be removed in a future version. Records which string is to be played.</a:documentation>
             <ref name="mei_data.STRINGNUMBER"/>
          </attribute>
       </optional>
@@ -7517,7 +7539,8 @@ Suggested values include: 1] main; 2] subordinate; 3] abbreviated; 4] alternativ
    <define name="mei_att.stringtab.tuning.attribute.tab.strings">
       <optional>
          <attribute name="tab.strings">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This attribute is deprecated in favour of the new <code xmlns="http://www.w3.org/1999/xhtml">&lt;tuning&gt;</code> element and will be removed in a future version. Provides a *written* pitch and octave for each open string or course of strings.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This attribute is deprecated in favour of the new <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;tuning&gt;</code> element and will be removed in a future version. Provides a *written* pitch and octave for each open string or course of strings.</a:documentation>
             <list>
                <oneOrMore>
                   <data type="token">
@@ -7531,7 +7554,8 @@ Suggested values include: 1] main; 2] subordinate; 3] abbreviated; 4] alternativ
    <define name="mei_att.stringtab.tuning.attribute.tab.courses">
       <optional>
          <attribute name="tab.courses">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This attribute is deprecated in favour of the new <code xmlns="http://www.w3.org/1999/xhtml">&lt;tuning&gt;</code> element and will be removed in a future version. Provides a *written* pitch and octave for each open string or course of strings.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This attribute is deprecated in favour of the new <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;tuning&gt;</code> element and will be removed in a future version. Provides a *written* pitch and octave for each open string or course of strings.</a:documentation>
             <list>
                <oneOrMore>
                   <data type="token">
@@ -7558,7 +7582,8 @@ Suggested values include: 1] main; 2] subordinate; 3] abbreviated; 4] alternativ
          <ref name="mei_att.startEndId.attributes"/>
          <optional>
             <attribute name="fret">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This attribute is deprecated in favour of <code xmlns="http://www.w3.org/1999/xhtml">@tab.fret</code>, and will be removed in a future version. Records the location at which the strings should be stopped against a fret in a fretboard diagram. This may or may not be the same as the actual location on the fretboard of the instrument in performance.</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This attribute is deprecated in favour of <code xmlns="http://www.w3.org/1999/xhtml"
+                        xmlns:rng="http://relaxng.org/ns/structure/1.0">@tab.fret</code>, and will be removed in a future version. Records the location at which the strings should be stopped against a fret in a fretboard diagram. This may or may not be the same as the actual location on the fretboard of the instrument in performance.</a:documentation>
                <data type="positiveInteger">
                   <param name="minInclusive">1</param>
                   <param name="maxInclusive">5</param>
@@ -7584,7 +7609,8 @@ Suggested values include: 1] main; 2] subordinate; 3] abbreviated; 4] alternativ
    </define>
    <define name="mei_tabDurSym">
       <element name="tabDurSym">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A visual indication of the duration of a <code xmlns="http://www.w3.org/1999/xhtml">&lt;tabGrp&gt;</code>.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A visual indication of the duration of a <code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;tabGrp&gt;</code>.</a:documentation>
          <empty/>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.stringtab.attributes"/>
@@ -7597,7 +7623,8 @@ Suggested values include: 1] main; 2] subordinate; 3] abbreviated; 4] alternativ
    </define>
    <define name="mei_tabGrp">
       <element name="tabGrp">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A group of simultaneous tab notes, comparable to a <code xmlns="http://www.w3.org/1999/xhtml">&lt;chord&gt;</code> in CMN. Rarely, may also contain rests, as in some "German" lute tablatures.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A group of simultaneous tab notes, comparable to a <code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;chord&gt;</code> in CMN. Rarely, may also contain rests, as in some "German" lute tablatures.</a:documentation>
          <optional>
             <ref name="mei_tabDurSym"/>
          </optional>
@@ -7983,7 +8010,8 @@ Suggested values include: 1] main; 2] subordinate; 3] abbreviated; 4] alternativ
    <define name="mei_att.pb.vis.attribute.folium">
       <optional>
          <attribute name="folium">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">States the side of a leaf (as in a manuscript) on which the content following the <code xmlns="http://www.w3.org/1999/xhtml">&lt;pb&gt;</code> element occurs.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">States the side of a leaf (as in a manuscript) on which the content following the <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;pb&gt;</code> element occurs.</a:documentation>
             <choice>
                <value>verso</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The back of a manuscript page.</a:documentation>
