@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 
-  NOTICE: Copyright (c) 2017-2023 by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
+  NOTICE: Copyright (c) by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
 
   Licensed under the Educational Community License, Version 2.0 (the "License"); you may
   not use this file except in compliance with the License. You may obtain a copy of the License
@@ -20,7 +20,7 @@
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../source/validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2024-08-12T14:27:13.985062574+02:00-->
+<!--canonicalized: 2024-09-27T14:35:22.028035895+02:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -78,12 +78,12 @@
             <edition>Development Version</edition>
          </editionStmt>
          <publicationStmt>
-            <distributor>Music Encoding Initiative (MEI) Council</distributor>
+            <distributor>Music Encoding Initiative (MEI) Board</distributor>
             <availability>
                <p>
                   <hi>Music Encoding Initiative (MEI)</hi>
                </p>
-               <p>NOTICE: Copyright (c) 2017–2023 by the Music Encoding Initiative (MEI) Council.</p>
+               <p>NOTICE: Copyright (c) by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").</p>
                <p>Licensed under the Educational Community License, Version 2.0 (the "License"); you may
             not use this file except in compliance with the License. You may obtain a copy of the
             License at <ref target="http://opensource.org/licenses/ECL-2.0">http://opensource.org/licenses/ECL-2.0</ref>.</p>
@@ -14807,7 +14807,7 @@ or
          <div>
             <schemaSpec ident="mei" ns="http://www.music-encoding.org/ns/mei" start="mei">
                <!-- 
-  NOTICE: Copyright (c) 2017-2023 by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
+  NOTICE: Copyright (c) by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
 
   Licensed under the Educational Community License, Version 2.0 (the "License"); you may
   not use this file except in compliance with the License. You may obtain a copy of the License
@@ -18644,7 +18644,7 @@ or
   </classSpec>
 </specGrp>
                <!-- 
-  NOTICE: Copyright (c) 2017-2023 by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
+  NOTICE: Copyright (c) by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
 
   Licensed under the Educational Community License, Version 2.0 (the "License"); you may
   not use this file except in compliance with the License. You may obtain a copy of the License
@@ -19223,7 +19223,7 @@ or
   </classSpec>
 </specGrp>
                <!-- 
-  NOTICE: Copyright (c) 2017-2023 by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
+  NOTICE: Copyright (c) by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
 
   Licensed under the Educational Community License, Version 2.0 (the "License"); you may
   not use this file except in compliance with the License. You may obtain a copy of the License
@@ -21661,7 +21661,7 @@ or
   </elementSpec>
 </specGrp>
                <!-- 
-  NOTICE: Copyright (c) 2017-2023 by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
+  NOTICE: Copyright (c) by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
 
   Licensed under the Educational Community License, Version 2.0 (the "License"); you may
   not use this file except in compliance with the License. You may obtain a copy of the License
@@ -21901,7 +21901,7 @@ or
   </elementSpec>
 </specGrp>
                <!-- 
-  NOTICE: Copyright (c) 2017-2023 by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
+  NOTICE: Copyright (c) by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
 
   Licensed under the Educational Community License, Version 2.0 (the "License"); you may
   not use this file except in compliance with the License. You may obtain a copy of the License
@@ -21948,7 +21948,7 @@ or
   </elementSpec>
 </specGrp>
                <!-- 
-  NOTICE: Copyright (c) 2017-2023 by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
+  NOTICE: Copyright (c) by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
 
   Licensed under the Educational Community License, Version 2.0 (the "License"); you may
   not use this file except in compliance with the License. You may obtain a copy of the License
@@ -22139,7 +22139,7 @@ or
   </elementSpec>
 </specGrp>
                <!-- 
-  NOTICE: Copyright (c) 2017-2023 by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
+  NOTICE: Copyright (c) by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
 
   Licensed under the Educational Community License, Version 2.0 (the "License"); you may
   not use this file except in compliance with the License. You may obtain a copy of the License
@@ -22311,7 +22311,7 @@ or
   </elementSpec>
 </specGrp>
                <!-- 
-  NOTICE: Copyright (c) 2017-2023 by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
+  NOTICE: Copyright (c) by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
 
   Licensed under the Educational Community License, Version 2.0 (the "License"); you may
   not use this file except in compliance with the License. You may obtain a copy of the License
@@ -23333,7 +23333,7 @@ or
   </elementSpec>
 </specGrp>
                <!-- 
-  NOTICE: Copyright (c) 2017-2023 by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
+  NOTICE: Copyright (c) by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
 
   Licensed under the Educational Community License, Version 2.0 (the "License"); you may
   not use this file except in compliance with the License. You may obtain a copy of the License
@@ -23420,7 +23420,7 @@ or
   </classSpec>
 </specGrp>
                <!-- 
-  NOTICE: Copyright (c) 2017-2023 by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
+  NOTICE: Copyright (c) by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
 
   Licensed under the Educational Community License, Version 2.0 (the "License"); you may
   not use this file except in compliance with the License. You may obtain a copy of the License
@@ -23546,7 +23546,7 @@ or
   </elementSpec>
 </specGrp>
                <!-- 
-  NOTICE: Copyright (c) 2017-2023 by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
+  NOTICE: Copyright (c) by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
 
   Licensed under the Educational Community License, Version 2.0 (the "License"); you may
   not use this file except in compliance with the License. You may obtain a copy of the License
@@ -23817,7 +23817,7 @@ or
   </elementSpec>
 </specGrp>
                <!-- 
-  NOTICE: Copyright (c) 2017-2023 by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
+  NOTICE: Copyright (c) by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
 
   Licensed under the Educational Community License, Version 2.0 (the "License"); you may
   not use this file except in compliance with the License. You may obtain a copy of the License
@@ -23964,7 +23964,7 @@ or
   </elementSpec>
 </specGrp>
                <!-- 
-  NOTICE: Copyright (c) 2017-2023 by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
+  NOTICE: Copyright (c) by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
 
   Licensed under the Educational Community License, Version 2.0 (the "License"); you may
   not use this file except in compliance with the License. You may obtain a copy of the License
@@ -24386,7 +24386,7 @@ or
   </elementSpec>
 </specGrp>
                <!-- 
-  NOTICE: Copyright (c) 2017-2023 by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
+  NOTICE: Copyright (c) by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
 
   Licensed under the Educational Community License, Version 2.0 (the "License"); you may
   not use this file except in compliance with the License. You may obtain a copy of the License
@@ -24506,7 +24506,7 @@ or
   </elementSpec>
 </specGrp>
                <!-- 
-  NOTICE: Copyright (c) 2017-2023 by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
+  NOTICE: Copyright (c) by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
 
   Licensed under the Educational Community License, Version 2.0 (the "License"); you may
   not use this file except in compliance with the License. You may obtain a copy of the License
@@ -25360,7 +25360,7 @@ or
   </classSpec>
 </specGrp>
                <!-- 
-  NOTICE: Copyright (c) 2017-2023 by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
+  NOTICE: Copyright (c) by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
 
   Licensed under the Educational Community License, Version 2.0 (the "License"); you may
   not use this file except in compliance with the License. You may obtain a copy of the License
@@ -25594,7 +25594,7 @@ or
   </elementSpec>
 </specGrp>
                <!-- 
-  NOTICE: Copyright (c) 2017-2023 by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
+  NOTICE: Copyright (c) by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
 
   Licensed under the Educational Community License, Version 2.0 (the "License"); you may
   not use this file except in compliance with the License. You may obtain a copy of the License
@@ -28601,7 +28601,7 @@ or
   </elementSpec>
 </specGrp>
                <!-- 
-  NOTICE: Copyright (c) 2017-2023 by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
+  NOTICE: Copyright (c) by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
 
   Licensed under the Educational Community License, Version 2.0 (the "License"); you may
   not use this file except in compliance with the License. You may obtain a copy of the License
@@ -28775,7 +28775,7 @@ or
   </elementSpec>
 </specGrp>
                <!-- 
-  NOTICE: Copyright (c) 2017-2023 by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
+  NOTICE: Copyright (c) by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
 
   Licensed under the Educational Community License, Version 2.0 (the "License"); you may
   not use this file except in compliance with the License. You may obtain a copy of the License
@@ -29304,7 +29304,7 @@ or
   </elementSpec>
 </specGrp>
                <!-- 
-  NOTICE: Copyright (c) 2017-2023 by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
+  NOTICE: Copyright (c) by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
 
   Licensed under the Educational Community License, Version 2.0 (the "License"); you may
   not use this file except in compliance with the License. You may obtain a copy of the License
@@ -29817,7 +29817,7 @@ or
   </elementSpec>
 </specGrp>
                <!-- 
-  NOTICE: Copyright (c) 2017-2023 by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
+  NOTICE: Copyright (c) by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
 
   Licensed under the Educational Community License, Version 2.0 (the "License"); you may
   not use this file except in compliance with the License. You may obtain a copy of the License
@@ -30706,7 +30706,7 @@ or
   </elementSpec>
 </specGrp>
                <!-- 
-  NOTICE: Copyright (c) 2017-2023 by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
+  NOTICE: Copyright (c) by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
 
   Licensed under the Educational Community License, Version 2.0 (the "License"); you may
   not use this file except in compliance with the License. You may obtain a copy of the License
@@ -31316,7 +31316,7 @@ or
   </elementSpec>
 </specGrp>
                <!-- 
-  NOTICE: Copyright (c) 2017-2023 by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
+  NOTICE: Copyright (c) by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
 
   Licensed under the Educational Community License, Version 2.0 (the "License"); you may
   not use this file except in compliance with the License. You may obtain a copy of the License
@@ -31850,7 +31850,7 @@ or
   </elementSpec>
 </specGrp>
                <!-- 
-  NOTICE: Copyright (c) 2017-2023 by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
+  NOTICE: Copyright (c) by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
 
   Licensed under the Educational Community License, Version 2.0 (the "License"); you may
   not use this file except in compliance with the License. You may obtain a copy of the License
@@ -32105,7 +32105,7 @@ or
   </elementSpec>
 </specGrp>
                <!-- 
-  NOTICE: Copyright (c) 2017-2023 by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
+  NOTICE: Copyright (c) by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
 
   Licensed under the Educational Community License, Version 2.0 (the "License"); you may
   not use this file except in compliance with the License. You may obtain a copy of the License
@@ -32187,7 +32187,7 @@ or
   </elementSpec>
 </specGrp>
                <!-- 
-  NOTICE: Copyright (c) 2017-2023 by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
+  NOTICE: Copyright (c) by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
 
   Licensed under the Educational Community License, Version 2.0 (the "License"); you may
   not use this file except in compliance with the License. You may obtain a copy of the License
@@ -40616,7 +40616,7 @@ or
   </elementSpec>
 </specGrp>
                <!-- 
-     NOTICE: Copyright (c) 2017-2024 by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
+     NOTICE: Copyright (c) by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
      
      Licensed under the Educational Community License, Version 2.0 (the "License"); you may
      not use this file except in compliance with the License. You may obtain a copy of the License
@@ -40888,7 +40888,7 @@ or
   </elementSpec>
 </specGrp>
                <!-- 
-  NOTICE: Copyright (c) 2017-2023 by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
+  NOTICE: Copyright (c) by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
 
   Licensed under the Educational Community License, Version 2.0 (the "License"); you may
   not use this file except in compliance with the License. You may obtain a copy of the License
@@ -41362,7 +41362,7 @@ or
   </elementSpec>
 </specGrp>
                <!-- 
-  NOTICE: Copyright (c) 2017-2023 by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
+  NOTICE: Copyright (c) by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
 
   Licensed under the Educational Community License, Version 2.0 (the "License"); you may
   not use this file except in compliance with the License. You may obtain a copy of the License
@@ -41739,7 +41739,7 @@ or
   </elementSpec>
 </specGrp>
                <!-- 
-  NOTICE: Copyright (c) 2017-2023 by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
+  NOTICE: Copyright (c) by the Music Encoding Initiative (MEI) Board (formerly known as "MEI Council").
 
   Licensed under the Educational Community License, Version 2.0 (the "License"); you may
   not use this file except in compliance with the License. You may obtain a copy of the License
