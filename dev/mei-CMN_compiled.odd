@@ -17937,6 +17937,7 @@
       <memberOf key="att.linking"/>
       <memberOf key="att.nNumberLike"/>
       <memberOf key="att.responsibility"/>
+      <memberOf key="att.textRendition"/>
       <memberOf key="model.qLike"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike"/></choice></zeroOrMore>
@@ -17986,6 +17987,7 @@
       <memberOf key="att.common"/>
       <memberOf key="att.facsimile"/>
       <memberOf key="att.lang"/>
+      <memberOf key="att.textRendition"/>
       <memberOf key="att.xy"/>
       <memberOf key="model.quoteLike"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">

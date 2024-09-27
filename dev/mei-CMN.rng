@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2024-09-27T12:44:06Z. . 
+Schema generated from ODD source 2024-09-27T12:52:02Z. . 
 TEI Edition: Development Version 
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -27787,6 +27787,7 @@ Suggested values include: 1] gloss; 2] index; 3] instructions; 4] litany; 5] syl
          <ref name="mei_att.linking.attributes"/>
          <ref name="mei_att.nNumberLike.attributes"/>
          <ref name="mei_att.responsibility.attributes"/>
+         <ref name="mei_att.textRendition.attributes"/>
          <optional>
             <attribute name="type">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
@@ -27835,6 +27836,7 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.facsimile.attributes"/>
          <ref name="mei_att.lang.attributes"/>
+         <ref name="mei_att.textRendition.attributes"/>
          <ref name="mei_att.xy.attributes"/>
          <empty/>
       </element>
