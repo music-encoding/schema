@@ -6492,7 +6492,7 @@
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.BOOLEAN"/>
         </datatype>
       </attDef></attList><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
-      <p>The <att>initial</att> attribute indicates whether this is the first or main hand of the
+      <p>The <att>initial</att> attribute indicates whether this is the first hand of the
         document. The <att>medium</att> attribute describes the writing medium, <abbr>e.g.</abbr>, 
         <val>pencil</val>, or the tint or type of ink, <abbr>e.g.</abbr>, <val>brown</val>. 
         The <att>resp</att> attribute contains an ID reference to an element containing the name of 

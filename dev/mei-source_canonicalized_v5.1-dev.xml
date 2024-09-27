@@ -20,7 +20,7 @@
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../source/validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2024-09-27T14:41:59.08608598+02:00-->
+<!--canonicalized: 2024-09-27T14:43:56.536086825+02:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -27033,7 +27033,7 @@ or
       </attDef>
     </attList>
     <remarks xml:lang="en">
-      <p>The <att>initial</att> attribute indicates whether this is the first or main hand of the
+      <p>The <att>initial</att> attribute indicates whether this is the first hand of the
         document. The <att>medium</att> attribute describes the writing medium, <abbr>e.g.</abbr>, 
         <val>pencil</val>, or the tint or type of ink, <abbr>e.g.</abbr>, <val>brown</val>. 
         The <att>resp</att> attribute contains an ID reference to an element containing the name of 
