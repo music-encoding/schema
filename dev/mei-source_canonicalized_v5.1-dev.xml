@@ -20,7 +20,7 @@
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../source/validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2024-09-27T14:35:22.028035895+02:00-->
+<!--canonicalized: 2024-09-27T14:41:59.08608598+02:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -18825,7 +18825,7 @@ or
     <desc xml:lang="en">Attributes describing the harmonic function of a single pitch.</desc>
     <attList>
       <attDef ident="deg" usage="opt">
-        <gloss versionDate="2022-10-18" xml:lang="en">degree</gloss>
+        <gloss xml:lang="en">degree</gloss>
         <desc xml:lang="en">Captures scale degree information using <ref target="https://www.humdrum.org/rep/deg/">Humdrum **deg syntax</ref> -- an optional indicator
           of melodic approach (^ = ascending approach, v = descending approach), a scale degree
           value (1 = tonic ... 7 = leading tone), and an optional indication of chromatic
@@ -18850,7 +18850,7 @@ or
     <desc xml:lang="en">Attributes that describe harmonic intervals.</desc>
     <attList>
       <attDef ident="inth" usage="opt">
-        <gloss versionDate="2022-10-18" xml:lang="en">interval harmonic</gloss>
+        <gloss xml:lang="en">interval harmonic</gloss>
         <desc xml:lang="en">Encodes the harmonic interval between pitches occurring at the same time.</desc>
         <datatype maxOccurs="unbounded">
           <rng:ref name="data.INTERVAL.HARMONIC"/>
@@ -18862,7 +18862,7 @@ or
     <desc xml:lang="en">Attributes that provide for description of intervallic content.</desc>
     <attList>
       <attDef ident="intm" usage="opt">
-        <gloss versionDate="2022-10-18" xml:lang="en">interval melodic</gloss>
+        <gloss xml:lang="en">interval melodic</gloss>
         <desc xml:lang="en">Encodes the melodic interval from the previous pitch. The value may be a general
           directional indication (u, d, s, etc.), an indication of diatonic interval direction,
           quality, and size, or a precise numeric value in half steps.</desc>
@@ -19071,7 +19071,7 @@ or
     <desc xml:lang="en">Attributes that describe pitch class.</desc>
     <attList>
       <attDef ident="pclass" usage="opt">
-        <gloss versionDate="2022-10-18" xml:lang="en">pitch class</gloss>
+        <gloss xml:lang="en">pitch class</gloss>
         <desc xml:lang="en">Holds pitch class information.</desc>
         <datatype>
           <rng:ref name="data.PITCHCLASS"/>
@@ -19134,7 +19134,7 @@ or
     <desc xml:lang="en">Attributes that specify pitch using sol-fa.</desc>
     <attList>
       <attDef ident="psolfa" usage="opt">
-        <gloss versionDate="2022-10-18" xml:lang="en">pitch sol-fa</gloss>
+        <gloss xml:lang="en">pitch sol-fa</gloss>
         <desc xml:lang="en">Contains sol-fa designation, <abbr>e.g.</abbr>, do, re, mi, etc., in either a fixed or movable Do
           system.</desc>
         <datatype>
@@ -19455,21 +19455,21 @@ or
         <desc xml:lang="en">Captures whether a beam is "feathered" and in which direction.</desc>
         <valList type="closed">
           <valItem ident="acc">
-            <gloss versionDate="2022-05-18" xml:lang="en">accelerando</gloss>
+            <gloss xml:lang="en">accelerando</gloss>
             <desc xml:lang="en">means that the secondary beams become progressively more distant
               toward the end of the beam.</desc>
           </valItem>
           <valItem ident="mixed">
-            <gloss versionDate="2022-05-18" xml:lang="en">mixed acc and rit</gloss>
+            <gloss xml:lang="en">mixed acc and rit</gloss>
             <desc xml:lang="en">for beams that are "feathered" in both directions.</desc>
           </valItem>
           <valItem ident="rit">
-            <gloss versionDate="2022-05-18" xml:lang="en">ritardando</gloss>
+            <gloss xml:lang="en">ritardando</gloss>
             <desc xml:lang="en">indicates that the secondary beams get progressively closer together
             toward the end of the beam.</desc>
           </valItem>
           <valItem ident="norm">
-            <gloss versionDate="2022-05-18" xml:lang="en">normal</gloss>
+            <gloss xml:lang="en">normal</gloss>
             <desc xml:lang="en">indicates that the secondary beams are equidistant along the course of
               the beam.</desc>
           </valItem>
@@ -19566,7 +19566,7 @@ or
     </classes>
     <attList>
       <attDef ident="func" usage="req">
-        <gloss versionDate="2022-10-18" xml:lang="en">function</gloss>
+        <gloss xml:lang="en">function</gloss>
         <desc xml:lang="en">Describes the function of the bracketed event sequence.</desc>
         <datatype>
           <rng:data type="NMTOKENS"/>
@@ -19687,7 +19687,7 @@ or
     <desc xml:lang="en">Attributes that indicate whether an event participates in a glissando.</desc>
     <attList>
       <attDef ident="gliss" usage="opt">
-        <gloss versionDate="2022-10-18" xml:lang="en">glissando</gloss>
+        <gloss xml:lang="en">glissando</gloss>
         <desc xml:lang="en">Indicates that this element participates in a glissando. If visual information about
           the glissando needs to be recorded, then a <gi scheme="MEI">gliss</gi> element should be
           employed instead.</desc>
@@ -19961,7 +19961,7 @@ or
     <desc xml:lang="en">Logical domain attributes.</desc>
     <attList>
       <attDef ident="func" usage="req">
-        <gloss versionDate="2022-10-18" xml:lang="en">function</gloss>
+        <gloss xml:lang="en">function</gloss>
         <desc xml:lang="en">Function of the meter signature group.</desc>
         <valList type="closed">
           <valItem ident="alternating">
@@ -20052,7 +20052,7 @@ or
     <desc xml:lang="en">Attributes that record numbers to be displayed with a feature.</desc>
     <attList>
       <attDef ident="num" usage="opt">
-        <gloss versionDate="2022-10-18" xml:lang="en">number</gloss>
+        <gloss xml:lang="en">number</gloss>
         <desc xml:lang="en">Records a number or count accompanying a notational feature.</desc>
         <datatype>
           <rng:data type="positiveInteger"/>
@@ -20065,7 +20065,7 @@ or
       tremolo or tuplet.</desc>
     <attList>
       <attDef ident="num.place" usage="opt">
-        <gloss versionDate="2022-10-30" xml:lang="en">number placement</gloss>
+        <gloss xml:lang="en">number placement</gloss>
         <desc xml:lang="en">States where the tuplet number will be placed in relation to the note heads.</desc>
         <datatype>
           <rng:ref name="data.STAFFREL.basic"/>
@@ -20114,7 +20114,7 @@ or
     </classes>
     <attList>
       <attDef ident="dir" usage="req">
-        <gloss versionDate="2022-10-30" xml:lang="en">direction</gloss>
+        <gloss xml:lang="en">direction</gloss>
         <desc xml:lang="en">Records the position of the piano damper pedal.</desc>
         <valList type="closed">
           <valItem ident="down">
@@ -20132,7 +20132,7 @@ or
         </valList>
       </attDef>
       <attDef ident="func" usage="opt">
-        <gloss versionDate="2022-10-18" xml:lang="en">function</gloss>
+        <gloss xml:lang="en">function</gloss>
         <desc xml:lang="en">Indicates the function of the depressed pedal, but not necessarily the text associated
           with its use. Use the <gi scheme="MEI">dir</gi> element for such text.</desc>
         <datatype>
@@ -20432,7 +20432,7 @@ or
     </classes>
   </classSpec>
   <elementSpec ident="arpeg" module="MEI.cmn">
-    <gloss versionDate="2022-05-18" xml:lang="en">arpeggiation</gloss>
+    <gloss xml:lang="en">arpeggiation</gloss>
     <desc xml:lang="en">Indicates that the notes of a chord are to be performed successively
       rather than simultaneously, usually from lowest to highest. Sometimes called a "roll".</desc>
     <classes>
@@ -20543,7 +20543,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="beamSpan" module="MEI.cmn">
-    <gloss versionDate="2022-05-18" xml:lang="en">beam span</gloss>
+    <gloss xml:lang="en">beam span</gloss>
     <desc xml:lang="en">Alternative element for explicitly encoding beams, particularly those which
       extend across bar lines.</desc>
     <classes>
@@ -20577,7 +20577,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="beatRpt" module="MEI.cmn">
-    <gloss versionDate="2022-05-18" xml:lang="en">beat repeat</gloss>
+    <gloss xml:lang="en">beat repeat</gloss>
     <desc xml:lang="en">An indication that material on a preceding beat should be repeated.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -20665,7 +20665,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="breath" module="MEI.cmn">
-    <gloss versionDate="2022-05-18" xml:lang="en">breath mark</gloss>
+    <gloss xml:lang="en">breath mark</gloss>
     <desc xml:lang="en">An indication of a point at which the performer on an instrument requiring
       breath (including the voice) may breathe.</desc>
     <classes>
@@ -20702,7 +20702,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="bTrem" module="MEI.cmn">
-    <gloss versionDate="2022-05-18" xml:lang="en">bowed tremolo</gloss>
+    <gloss xml:lang="en">bowed tremolo</gloss>
     <desc xml:lang="en">A rapid alternation on a single pitch or chord.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -20755,7 +20755,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="fTrem" module="MEI.cmn">
-    <gloss versionDate="2022-05-18" xml:lang="en">fingered tremolo</gloss>
+    <gloss xml:lang="en">fingered tremolo</gloss>
     <desc xml:lang="en">A rapid alternation between a pair of notes (or chords or perhaps
       between a note and a chord) that are (usually) farther apart than a major second.</desc>
     <classes>
@@ -20793,7 +20793,7 @@ or
     </content>
   </elementSpec>
   <elementSpec ident="gliss" module="MEI.cmn">
-    <gloss versionDate="2022-05-18" xml:lang="en">glissando</gloss>
+    <gloss xml:lang="en">glissando</gloss>
     <desc xml:lang="en">A continuous or sliding movement from one pitch to another, usually
       indicated by a straight or wavy line.</desc>
     <classes>
@@ -20836,7 +20836,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="graceGrp" module="MEI.cmn">
-    <gloss versionDate="2023-06-16" xml:lang="en">grace group</gloss>
+    <gloss xml:lang="en">grace group</gloss>
     <desc xml:lang="en">A container for a sequence of grace notes.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -20913,7 +20913,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="halfmRpt" module="MEI.cmn">
-    <gloss versionDate="2022-05-18" xml:lang="en">half-measure repeat</gloss>
+    <gloss xml:lang="en">half-measure repeat</gloss>
     <desc xml:lang="en">A half-measure repeat in any meter.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -20929,7 +20929,7 @@ or
     </content>
   </elementSpec>
   <elementSpec ident="harpPedal" module="MEI.cmn">
-    <gloss versionDate="2022-05-18" xml:lang="en">harp pedal</gloss>
+    <gloss xml:lang="en">harp pedal</gloss>
     <desc xml:lang="en">Harp pedal diagram.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -20958,7 +20958,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="lv" module="MEI.cmn">
-    <gloss versionDate="2022-05-18" xml:lang="en">laissez vibrer</gloss>
+    <gloss xml:lang="en">laissez vibrer</gloss>
     <desc xml:lang="en">A "tie-like" indication that a note should ring beyond its written duration.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -21039,7 +21039,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="meterSig" module="MEI.cmn">
-    <gloss versionDate="2022-05-18" xml:lang="en">meter signature</gloss>
+    <gloss xml:lang="en">meter signature</gloss>
     <desc xml:lang="en">Written meter signature.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -21055,7 +21055,7 @@ or
     </content>
   </elementSpec>
   <elementSpec ident="meterSigGrp" module="MEI.cmn">
-    <gloss versionDate="2022-05-18" xml:lang="en">meter signature group</gloss>
+    <gloss xml:lang="en">meter signature group</gloss>
     <desc xml:lang="en">Used to capture alternating, interchanging, mixed or other non-standard meter signatures.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -21081,7 +21081,7 @@ or
     </constraintSpec>
   </elementSpec>
   <elementSpec ident="mNum" module="MEI.cmn">
-    <gloss versionDate="2022-05-18" xml:lang="en">measure number</gloss>
+    <gloss xml:lang="en">measure number</gloss>
     <desc xml:lang="en">Designation, name, or label for a measure, often but not always
       consisting of digits. Use this element when the <att>n</att> attribute on <gi scheme="MEI">measure</gi> does not adequately capture the appearance or placement of the measure
       number/label.</desc>
@@ -21108,7 +21108,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="mRest" module="MEI.cmn">
-    <gloss versionDate="2022-05-18" xml:lang="en">measure rest</gloss>
+    <gloss xml:lang="en">measure rest</gloss>
     <desc xml:lang="en">Complete measure rest in any meter. <!-- (Read, p. 97-98). --> </desc>
     <classes>
       <memberOf key="att.common"/>
@@ -21128,7 +21128,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="mRpt" module="MEI.cmn">
-    <gloss versionDate="2022-05-18" xml:lang="en">measure repeat</gloss>
+    <gloss xml:lang="en">measure repeat</gloss>
     <desc xml:lang="en">An indication that the previous measure should be repeated.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -21148,7 +21148,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="mRpt2" module="MEI.cmn">
-    <gloss versionDate="2022-05-18" xml:lang="en">2-measure repeat</gloss>
+    <gloss xml:lang="en">2-measure repeat</gloss>
     <desc xml:lang="en">An indication that the previous two measures should be
       repeated.</desc>
     <classes>
@@ -21165,7 +21165,7 @@ or
     </content>
   </elementSpec>
   <elementSpec ident="mSpace" module="MEI.cmn">
-    <gloss versionDate="2022-05-18" xml:lang="en">measure space</gloss>
+    <gloss xml:lang="en">measure space</gloss>
     <desc xml:lang="en">A measure containing only empty space in any meter.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -21185,7 +21185,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="multiRest" module="MEI.cmn">
-    <gloss versionDate="2022-05-18" xml:lang="en">multiple rest</gloss>
+    <gloss xml:lang="en">multiple rest</gloss>
     <desc xml:lang="en">Multiple measures of rest compressed into a single symbol, frequently
       found in performer parts.</desc>
     <classes>
@@ -21204,7 +21204,7 @@ or
         the note. See Read, p. 102-105.</p></remarks>-->
   </elementSpec>
   <elementSpec ident="multiRpt" module="MEI.cmn">
-    <gloss versionDate="2022-05-18" xml:lang="en">multiple repeat</gloss>
+    <gloss xml:lang="en">multiple repeat</gloss>
     <desc xml:lang="en">Multiple repeated measures.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -21268,7 +21268,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="oLayer" module="MEI.cmn">
-    <gloss versionDate="2022-05-18" xml:lang="en">ossia layer</gloss>
+    <gloss xml:lang="en">ossia layer</gloss>
     <desc xml:lang="en">A layer that contains an alternative to material in another layer.</desc>
     <classes>
       <memberOf key="att.basic"/>
@@ -21354,7 +21354,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="oStaff" module="MEI.cmn">
-    <gloss versionDate="2022-05-18" xml:lang="en">ossia staff</gloss>
+    <gloss xml:lang="en">ossia staff</gloss>
     <desc xml:lang="en">A staff that holds an alternative passage which may be played instead of
       the original material.</desc>
     <classes>
@@ -21416,7 +21416,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="reh" module="MEI.cmn">
-    <gloss versionDate="2022-05-18" xml:lang="en">rehearsal mark</gloss>
+    <gloss xml:lang="en">rehearsal mark</gloss>
     <desc xml:lang="en">In an orchestral score and its corresponding parts, a mark indicating a
       convenient point from which to resume rehearsal after a break.</desc>
     <classes>
@@ -21445,7 +21445,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="repeatMark" module="MEI.cmn">
-    <gloss versionDate="2022-05-18" xml:lang="en">repetition mark</gloss>
+    <gloss xml:lang="en">repetition mark</gloss>
     <desc xml:lang="en">
       An instruction expressed as a combination of text and symbols – segno and coda – typically above, 
       below, or between staves, but not on the staff.</desc>
@@ -21626,7 +21626,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="tupletSpan" module="MEI.cmn">
-    <gloss versionDate="2022-05-18" xml:lang="en">tuplet span</gloss>
+    <gloss xml:lang="en">tuplet span</gloss>
     <desc xml:lang="en">Alternative element for encoding tuplets, especially useful for tuplets
       that extend across bar lines.</desc>
     <classes>
@@ -21752,7 +21752,7 @@ or
     <desc xml:lang="en">Attributes for marking the presence of an ornament.</desc>
     <attList>
       <attDef ident="ornam" usage="opt">
-        <gloss versionDate="2022-10-30" xml:lang="en">ornament</gloss>
+        <gloss xml:lang="en">ornament</gloss>
         <desc xml:lang="en">Indicates that this element has an attached ornament. If visual information about the
           ornament is needed, then one of the elements that represents an ornament (mordent, trill,
           or turn) should be employed.</desc>
@@ -21925,7 +21925,7 @@ or
     <desc xml:lang="en">Groups elements that may be document elements when the corpus module is invoked.</desc>
   </classSpec>
   <elementSpec ident="meiCorpus" module="MEI.corpus">
-    <gloss versionDate="2022-05-18" xml:lang="en">MEI corpus</gloss>
+    <gloss xml:lang="en">MEI corpus</gloss>
     <desc xml:lang="en">A group of related MEI documents, consisting of a header for the group, and
       one or more <gi scheme="MEI">mei</gi> elements, each with its own complete header.</desc>
     <classes>
@@ -22007,7 +22007,7 @@ or
     </classes>
   </classSpec>
   <elementSpec ident="app" module="MEI.critapp">
-    <gloss versionDate="2023-06-16" xml:lang="en">apparatus</gloss>
+    <gloss xml:lang="en">apparatus</gloss>
     <desc xml:lang="en">Contains one or more alternative encodings.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -22035,7 +22035,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="lem" module="MEI.critapp">
-    <gloss versionDate="2023-06-16" xml:lang="en">lemma</gloss>
+    <gloss xml:lang="en">lemma</gloss>
     <desc xml:lang="en">Contains the lemma, or base text, of a textual variation.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -22087,7 +22087,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="rdg" module="MEI.critapp">
-    <gloss versionDate="2023-06-16" xml:lang="en">reading</gloss>
+    <gloss xml:lang="en">reading</gloss>
     <desc xml:lang="en">Contains a single reading within a textual variation.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -22183,7 +22183,7 @@ or
     </classes>
   </classSpec>
   <elementSpec ident="sp" module="MEI.drama">
-    <gloss versionDate="2022-05-18" xml:lang="en">speech</gloss>
+    <gloss xml:lang="en">speech</gloss>
     <desc xml:lang="en">Contains an individual speech in a performance text.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -22261,7 +22261,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="stageDir" module="MEI.drama">
-    <gloss versionDate="2022-05-18" xml:lang="en">stage direction</gloss>
+    <gloss xml:lang="en">stage direction</gloss>
     <desc xml:lang="en">Contains any kind of stage direction within a dramatic text or
       fragment.</desc>
     <classes>
@@ -22431,7 +22431,7 @@ or
     </classes>
   </classSpec>
   <elementSpec ident="abbr" module="MEI.edittrans" ns="http://www.music-encoding.org/ns/mei">
-    <gloss versionDate="2022-05-18" xml:lang="en">abbreviation</gloss>
+    <gloss xml:lang="en">abbreviation</gloss>
     <desc xml:lang="en">A generic element for 1) a shortened form of a word, including an acronym
       or 2) a shorthand notation.</desc>
     <classes>
@@ -22481,7 +22481,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="add" module="MEI.edittrans">
-    <gloss versionDate="2022-05-18" xml:lang="en">addition</gloss>
+    <gloss xml:lang="en">addition</gloss>
     <desc xml:lang="en">Marks an addition to the text.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -22561,7 +22561,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="corr" module="MEI.edittrans">
-    <gloss versionDate="2022-05-18" xml:lang="en">correction</gloss>
+    <gloss xml:lang="en">correction</gloss>
     <desc xml:lang="en">Contains the correct form of an apparent erroneous passage.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -22609,7 +22609,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="cpMark" module="MEI.edittrans">
-    <gloss versionDate="2022-05-18" xml:lang="en">copy/colla parte mark</gloss>
+    <gloss xml:lang="en">copy/colla parte mark</gloss>
     <desc xml:lang="en">A verbal or graphical indication to copy musical material
       written elsewhere.</desc>
     <classes>
@@ -22725,7 +22725,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="del" module="MEI.edittrans">
-    <gloss versionDate="2022-05-18" xml:lang="en">deletion</gloss>
+    <gloss xml:lang="en">deletion</gloss>
     <desc xml:lang="en">Contains information deleted, marked as deleted, or otherwise indicated as
       superfluous or spurious in the copy text by an author, scribe, annotator, or corrector.</desc>
     <classes>
@@ -22776,7 +22776,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="expan" module="MEI.edittrans">
-    <gloss versionDate="2022-05-18" xml:lang="en">expansion</gloss>
+    <gloss xml:lang="en">expansion</gloss>
     <desc xml:lang="en">Contains the expansion of an abbreviation.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -22809,7 +22809,7 @@ or
     </content>
     <attList>
       <attDef ident="abbr" usage="opt">
-        <gloss versionDate="2022-10-30" xml:lang="en">abbreviation</gloss>
+        <gloss xml:lang="en">abbreviation</gloss>
         <desc xml:lang="en">Captures the abbreviated form of the text.</desc>
         <datatype>
           <rng:data type="string"/>
@@ -23011,7 +23011,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="orig" module="MEI.edittrans">
-    <gloss versionDate="2022-05-18" xml:lang="en">original</gloss>
+    <gloss xml:lang="en">original</gloss>
     <desc xml:lang="en">Contains material which is marked as following the original, rather than
       being normalized or corrected.</desc>
     <classes>
@@ -23059,7 +23059,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="reg" module="MEI.edittrans">
-    <gloss versionDate="2022-05-18" xml:lang="en">regularization</gloss>
+    <gloss xml:lang="en">regularization</gloss>
     <desc xml:lang="en">Contains material which has been regularized or normalized in some
       sense.</desc>
     <classes>
@@ -23143,7 +23143,7 @@ or
     </content>
     <attList>
       <attDef ident="desc" usage="opt">
-        <gloss versionDate="2022-10-30" xml:lang="en">description</gloss>
+        <gloss xml:lang="en">description</gloss>
         <desc xml:lang="en">Provides a description of the means of restoration, <val>stet</val> or <val>strike-down</val>, 
           for example.</desc>
         <datatype>
@@ -23204,7 +23204,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="subst" module="MEI.edittrans">
-    <gloss versionDate="2022-05-18" xml:lang="en">substitution</gloss>
+    <gloss xml:lang="en">substitution</gloss>
     <desc xml:lang="en">Groups transcriptional elements when the combination is to be regarded as
       a single intervention in the text.</desc>
     <classes>
@@ -23444,8 +23444,8 @@ or
     <desc xml:lang="en">Attributes that associate a feature corresponding with all or part of an image.</desc>
     <attList>
       <attDef ident="facs" usage="opt">
-        <gloss versionDate="2022-10-18" xml:lang="en">facsimile</gloss>
-        <desc versionDate="2022-10-18" xml:lang="en">Points to one or more images, portions of an image, or surfaces which correspond to the current element.</desc>
+        <gloss xml:lang="en">facsimile</gloss>
+        <desc xml:lang="en">Points to one or more images, portions of an image, or surfaces which correspond to the current element.</desc>
         <datatype minOccurs="1" maxOccurs="unbounded">
           <rng:ref name="data.URI"/>
         </datatype>
@@ -23606,7 +23606,7 @@ or
     </classes>
   </classSpec>
   <elementSpec ident="fig" module="MEI.figtable">
-    <gloss versionDate="2022-05-18" xml:lang="en">figure</gloss>
+    <gloss xml:lang="en">figure</gloss>
     <desc xml:lang="en">Groups elements representing or containing graphic information such as an
       illustration or figure.</desc>
     <classes>
@@ -23632,7 +23632,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="figDesc" module="MEI.figtable">
-    <gloss versionDate="2022-05-18" xml:lang="en">figure description</gloss>
+    <gloss xml:lang="en">figure description</gloss>
     <desc xml:lang="en">Contains a brief prose description of the appearance or content of
       a graphic figure, for use when documenting an image without displaying it.</desc>
     <classes>
@@ -23731,7 +23731,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="td" module="MEI.figtable">
-    <gloss versionDate="2022-05-18" xml:lang="en">table data</gloss>
+    <gloss xml:lang="en">table data</gloss>
     <desc xml:lang="en">Designates a table cell that contains data as opposed to a cell that
       contains column or row heading information.</desc>
     <classes>
@@ -23761,7 +23761,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="th" module="MEI.figtable">
-    <gloss versionDate="2022-05-18" xml:lang="en">table header</gloss>
+    <gloss xml:lang="en">table header</gloss>
     <desc xml:lang="en">Designates a table cell containing column or row heading information as
       opposed to one containing data.</desc>
     <classes>
@@ -23791,7 +23791,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="tr" module="MEI.figtable">
-    <gloss versionDate="2022-05-18" xml:lang="en">table row</gloss>
+    <gloss xml:lang="en">table row</gloss>
     <desc xml:lang="en">A formatting element that contains one or more cells (intersection of a row
       and a column) in a <gi scheme="MEI">table</gi>.</desc>
     <classes>
@@ -23878,7 +23878,7 @@ or
     </classes>
   </classSpec>
   <elementSpec ident="fing" module="MEI.fingering">
-    <gloss versionDate="2023-06-16" xml:lang="en">finger</gloss>
+    <gloss xml:lang="en">finger</gloss>
     <desc xml:lang="en">An individual finger in a fingering indication.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -23918,7 +23918,7 @@ or
     </constraintSpec>
   </elementSpec>
   <elementSpec ident="fingGrp" module="MEI.fingering">
-    <gloss versionDate="2023-06-16" xml:lang="en">finger group</gloss>
+    <gloss xml:lang="en">finger group</gloss>
     <desc xml:lang="en">A group of individual fingers in a fingering indication.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -24438,7 +24438,7 @@ or
     </attList>
   </classSpec>
   <elementSpec ident="genDesc" module="MEI.genetic">
-    <gloss versionDate="2023-06-16" xml:lang="en">genetic description</gloss>
+    <gloss xml:lang="en">genetic description</gloss>
     <desc xml:lang="en">Bundles information about the textual development of a
       work.</desc>
     <classes>
@@ -25113,7 +25113,7 @@ or
         </datatype>
       </attDef>
       <attDef ident="pnum" usage="opt">
-        <gloss versionDate="2022-10-30" xml:lang="en">pitch number</gloss>
+        <gloss xml:lang="en">pitch number</gloss>
         <desc xml:lang="en">Holds a pitch-to-number mapping, a base-40 or MIDI note number, for example.</desc>
         <datatype>
           <rng:ref name="data.PITCHNUMBER"/>
@@ -25413,7 +25413,7 @@ or
     </classes>
     <attList>
       <attDef ident="chordref" usage="opt">
-        <gloss versionDate="2022-10-30" xml:lang="en">chord reference</gloss>
+        <gloss xml:lang="en">chord reference</gloss>
         <desc xml:lang="en">Contains a reference to a <gi scheme="MEI">chordDef</gi> element elsewhere in the
           document.</desc>
         <datatype>
@@ -25455,7 +25455,7 @@ or
     </classes>
   </classSpec>
   <elementSpec ident="chordDef" module="MEI.harmony">
-    <gloss versionDate="2022-05-18" xml:lang="en">chord definition</gloss>
+    <gloss xml:lang="en">chord definition</gloss>
     <desc xml:lang="en">Chord tablature definition.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -25517,7 +25517,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="f" module="MEI.harmony">
-    <gloss versionDate="2022-05-18" xml:lang="en">figure</gloss>
+    <gloss xml:lang="en">figure</gloss>
     <desc xml:lang="en">Single element of a figured bass indication.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -25540,7 +25540,7 @@ or
     </content>
   </elementSpec>
   <elementSpec ident="fb" module="MEI.harmony">
-    <gloss versionDate="2022-05-18" xml:lang="en">figured bass</gloss>
+    <gloss xml:lang="en">figured bass</gloss>
     <desc xml:lang="en">Symbols added to a bass line that indicate harmony. Used to improvise a
       chordal accompaniment. Sometimes called Generalbass, thoroughbass, or basso continuo.</desc>
     <classes>
@@ -25559,7 +25559,7 @@ or
     </content>
   </elementSpec>
   <elementSpec ident="harm" module="MEI.harmony">
-    <gloss versionDate="2022-05-18" xml:lang="en">harmony</gloss>
+    <gloss xml:lang="en">harmony</gloss>
     <desc xml:lang="en">An indication of harmony, <abbr>e.g.</abbr>, chord names, tablature grids, harmonic
       analysis, figured bass.</desc>
     <classes>
@@ -25954,7 +25954,7 @@ or
     <desc xml:lang="en">Collects work-like elements.</desc>
   </classSpec>
   <elementSpec ident="accessRestrict" module="MEI.header">
-    <gloss versionDate="2022-05-18" xml:lang="en">access restriction</gloss>
+    <gloss xml:lang="en">access restriction</gloss>
     <desc xml:lang="en">Describes the conditions that affect the accessibility of
       material.</desc>
     <classes>
@@ -26012,7 +26012,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="altId" module="MEI.header">
-    <gloss versionDate="2022-05-18" xml:lang="en">alternative identifier</gloss>
+    <gloss xml:lang="en">alternative identifier</gloss>
     <desc xml:lang="en">May contain a bibliographic identifier that does not fit within
       the meiHead element’s id attribute, for example because the identifier does not fit the
       definition of an XML id or because multiple identifiers are needed.</desc>
@@ -26034,7 +26034,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="appInfo" module="MEI.header">
-    <gloss versionDate="2022-05-18" xml:lang="en">application information</gloss>
+    <gloss xml:lang="en">application information</gloss>
     <desc xml:lang="en">Groups information about applications which have acted upon
       the MEI file.</desc>
     <classes>
@@ -26199,7 +26199,7 @@ or
     </content>
   </elementSpec>
   <elementSpec ident="captureMode" module="MEI.header">
-    <gloss versionDate="2022-05-18" xml:lang="en">capture mode</gloss>
+    <gloss xml:lang="en">capture mode</gloss>
     <desc xml:lang="en">The means used to record notation, sound, or images in the production of
       a source/manifestation (<abbr>e.g.</abbr>, analogue, acoustic, electric, digital, optical etc.).</desc>
     <classes>
@@ -26214,7 +26214,7 @@ or
     </content>
   </elementSpec>
   <elementSpec ident="carrierForm" module="MEI.header">
-    <gloss versionDate="2022-05-18" xml:lang="en">carrier form</gloss>
+    <gloss xml:lang="en">carrier form</gloss>
     <desc xml:lang="en">The specific class of material to which the physical carrier of the
       source/manifestation belongs (<abbr>e.g.</abbr>, sound cassette, videodisc, microfilm cartridge,
       transparency, etc.). The carrier for a manifestation comprising multiple physical components
@@ -26267,7 +26267,7 @@ or
     </constraintSpec>
   </elementSpec>
   <elementSpec ident="catRel" module="MEI.header">
-    <gloss versionDate="2022-05-18" xml:lang="en">category relationship</gloss>
+    <gloss xml:lang="en">category relationship</gloss>
     <desc xml:lang="en">Contains the name, i.e., label, of a related
         category.</desc>
     <classes>
@@ -26351,7 +26351,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="changeDesc" module="MEI.header">
-    <gloss versionDate="2022-05-18" xml:lang="en">change description</gloss>
+    <gloss xml:lang="en">change description</gloss>
     <desc xml:lang="en">Description of a revision of the MEI file.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -26734,7 +26734,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="domainsDecl" module="MEI.header">
-    <gloss versionDate="2022-05-18" xml:lang="en">domains declaration</gloss>
+    <gloss xml:lang="en">domains declaration</gloss>
     <desc xml:lang="en">Indicates which domains are included in the encoding.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -26759,7 +26759,7 @@ or
     </attList>
   </elementSpec>
   <elementSpec ident="editionStmt" module="MEI.header">
-    <gloss versionDate="2022-05-18" xml:lang="en">edition statement</gloss>
+    <gloss xml:lang="en">edition statement</gloss>
     <desc xml:lang="en">Container for meta-data pertaining to a particular edition of the
       material being described.</desc>
     <classes>
@@ -26787,7 +26787,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="editorialDecl" module="MEI.header">
-    <gloss versionDate="2022-05-18" xml:lang="en">editorial declaration</gloss>
+    <gloss xml:lang="en">editorial declaration</gloss>
     <desc xml:lang="en">Used to provide details of editorial principles and practices
       applied during the encoding of musical text.</desc>
     <classes>
@@ -26820,7 +26820,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="encodingDesc" module="MEI.header">
-    <gloss versionDate="2022-05-18" xml:lang="en">encoding description</gloss>
+    <gloss xml:lang="en">encoding description</gloss>
     <desc xml:lang="en">Documents the relationship between an electronic file and the
       source or sources from which it was derived as well as applications used in the
       encoding/editing process.</desc>
@@ -26860,7 +26860,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="exhibHist" module="MEI.header">
-    <gloss versionDate="2022-05-18" xml:lang="en">exhibition history</gloss>
+    <gloss xml:lang="en">exhibition history</gloss>
     <desc xml:lang="en">A record of public exhibitions, including dates, venues,
       etc.</desc>
     <classes>
@@ -26895,7 +26895,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="extMeta" module="MEI.header">
-    <gloss versionDate="2022-05-18" xml:lang="en">extended metadata</gloss>
+    <gloss xml:lang="en">extended metadata</gloss>
     <desc xml:lang="en">Provides a container element for non-MEI metadata formats.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -26914,7 +26914,7 @@ or
     </content>
   </elementSpec>
   <elementSpec ident="fileChar" module="MEI.header">
-    <gloss versionDate="2022-05-18" xml:lang="en">file characteristics</gloss>
+    <gloss xml:lang="en">file characteristics</gloss>
     <desc xml:lang="en">Standards or schemes used to encode the file (<abbr>e.g.</abbr>, ASCII, SGML,
       etc.), physical characteristics of the file (<abbr>e.g.</abbr>, recording density, parity, blocking, etc.),
       and other characteristics that have a bearing on how the file can be processed.</desc>
@@ -26929,7 +26929,7 @@ or
     </content>
   </elementSpec>
   <elementSpec ident="fileDesc" module="MEI.header">
-    <gloss versionDate="2022-05-18" xml:lang="en">file description</gloss>
+    <gloss xml:lang="en">file description</gloss>
     <desc xml:lang="en">Contains a full bibliographic description of the MEI file.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -27257,7 +27257,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="langUsage" module="MEI.header">
-    <gloss versionDate="2022-05-18" xml:lang="en">language usage</gloss>
+    <gloss xml:lang="en">language usage</gloss>
     <desc xml:lang="en">Groups elements describing the languages, sub-languages, dialects,
       etc., represented within the encoded resource.</desc>
     <classes>
@@ -27278,7 +27278,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="meiHead" module="MEI.header">
-    <gloss versionDate="2022-05-18" xml:lang="en">MEI header</gloss>
+    <gloss xml:lang="en">MEI header</gloss>
     <desc xml:lang="en">Supplies the descriptive and declarative metadata prefixed to every
       MEI-conformant text.</desc>
     <classes>
@@ -27450,7 +27450,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="notesStmt" module="MEI.header">
-    <gloss versionDate="2023-06-16" xml:lang="en">notes statement</gloss>
+    <gloss xml:lang="en">notes statement</gloss>
     <desc xml:lang="en">Collects any notes providing information about a text additional to
       that recorded in other parts of the bibliographic description.</desc>
     <classes>
@@ -27470,7 +27470,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="otherChar" module="MEI.header">
-    <gloss versionDate="2022-05-18" xml:lang="en">other distinguishing characteristic</gloss>
+    <gloss xml:lang="en">other distinguishing characteristic</gloss>
     <desc xml:lang="en">Any characteristic that serves to differentiate a
       work or expression from another.</desc>
     <classes>
@@ -27568,7 +27568,7 @@ or
           </remarks>-->
   </elementSpec>
   <elementSpec ident="perfDuration" module="MEI.header">
-    <gloss versionDate="2022-05-18" xml:lang="en">performance duration</gloss>
+    <gloss xml:lang="en">performance duration</gloss>
     <desc xml:lang="en">Used to express the duration of performance of printed or
       manuscript music or the playing time for a sound recording, videorecording, etc.</desc>
     <classes>
@@ -27596,7 +27596,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="perfMedium" module="MEI.header">
-    <gloss versionDate="2022-05-18" xml:lang="en">performance medium</gloss>
+    <gloss xml:lang="en">performance medium</gloss>
     <desc xml:lang="en">Indicates the number and character of the performing forces used in
       a musical composition.</desc>
     <classes>
@@ -27625,7 +27625,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="perfRes" module="MEI.header">
-    <gloss versionDate="2022-05-18" xml:lang="en">performance resource</gloss>
+    <gloss xml:lang="en">performance resource</gloss>
     <desc xml:lang="en">Name of an instrument on which a performer plays, a performer's
       voice range, or a standard performing ensemble designation.</desc>
     <classes>
@@ -27653,7 +27653,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="perfResList" module="MEI.header">
-    <gloss versionDate="2023-06-16" xml:lang="en">performance resources list</gloss>
+    <gloss xml:lang="en">performance resources list</gloss>
     <desc xml:lang="en">Several instrumental or vocal resources treated as a group.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -27681,7 +27681,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="physDesc" module="MEI.header">
-    <gloss versionDate="2022-05-18" xml:lang="en">physical description</gloss>
+    <gloss xml:lang="en">physical description</gloss>
     <desc xml:lang="en">Container for information about the appearance, construction, or
       handling of physical materials, such as their dimension, quantity, color, style, and technique
       of creation.</desc>
@@ -27710,7 +27710,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="physMedium" module="MEI.header">
-    <gloss versionDate="2022-05-18" xml:lang="en">physical medium</gloss>
+    <gloss xml:lang="en">physical medium</gloss>
     <desc xml:lang="en">Records the physical materials used in the source, such as ink and
       paper.</desc>
     <classes>
@@ -27733,7 +27733,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="plateNum" module="MEI.header">
-    <gloss versionDate="2022-05-18" xml:lang="en">plate number</gloss>
+    <gloss xml:lang="en">plate number</gloss>
     <desc xml:lang="en">Designation assigned to a resource by a music publisher, usually printed
       at the bottom of each page, and sometimes appearing also on the title page.</desc>
     <classes>
@@ -27808,7 +27808,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="projectDesc" module="MEI.header">
-    <gloss versionDate="2022-05-18" xml:lang="en">project description</gloss>
+    <gloss xml:lang="en">project description</gloss>
     <desc xml:lang="en">Project-level meta-data describing the aim or purpose for which
       the electronic file was encoded, funding agencies, etc. together with any other relevant
       information concerning the process by which it was assembled or collected.</desc>
@@ -27866,7 +27866,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="pubStmt" module="MEI.header">
-    <gloss versionDate="2022-05-18" xml:lang="en">publication statement</gloss>
+    <gloss xml:lang="en">publication statement</gloss>
     <desc xml:lang="en">Container for information regarding the publication or
       distribution of a bibliographic item, including the publisher’s name and address, the date of
       publication, and other relevant details.</desc>
@@ -27895,7 +27895,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="revisionDesc" module="MEI.header">
-    <gloss versionDate="2022-05-18" xml:lang="en">revision description</gloss>
+    <gloss xml:lang="en">revision description</gloss>
     <desc xml:lang="en">Container for information about alterations that have been made
       to an MEI file.</desc>
     <classes>
@@ -27919,7 +27919,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="samplingDecl" module="MEI.header">
-    <gloss versionDate="2022-05-18" xml:lang="en">sampling declaration</gloss>
+    <gloss xml:lang="en">sampling declaration</gloss>
     <desc xml:lang="en">Contains a prose description of the rationale and methods used in
       sampling texts in the creation of a corpus or collection.</desc>
     <classes>
@@ -27978,7 +27978,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="seriesStmt" module="MEI.header">
-    <gloss versionDate="2022-05-18" xml:lang="en">series statement</gloss>
+    <gloss xml:lang="en">series statement</gloss>
     <desc xml:lang="en">Groups information about the series, if any, to which a publication
       belongs.</desc>
     <classes>
@@ -28017,7 +28017,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="soundChan" module="MEI.header">
-    <gloss versionDate="2022-05-18" xml:lang="en">sound channels</gloss>
+    <gloss xml:lang="en">sound channels</gloss>
     <desc xml:lang="en">Reflects the number of apparent sound channels in the playback of a
       recording (monaural, stereophonic, quadraphonic, etc.).</desc>
     <classes>
@@ -28103,7 +28103,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="sourceDesc" module="MEI.header">
-    <gloss versionDate="2022-05-18" xml:lang="en">source description</gloss>
+    <gloss xml:lang="en">source description</gloss>
     <desc xml:lang="en">A container for the descriptions of the source(s) used in the
       creation of the electronic file.</desc>
     <classes>
@@ -28123,7 +28123,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="specRepro" module="MEI.header">
-    <gloss versionDate="2022-05-18" xml:lang="en">special reproduction characteristic</gloss>
+    <gloss xml:lang="en">special reproduction characteristic</gloss>
     <desc xml:lang="en">The equalization system, noise reduction system,
       etc. used in making the recording (<abbr>e.g.</abbr>, NAB, DBX, Dolby, etc.).</desc>
     <classes>
@@ -28138,7 +28138,7 @@ or
     </content>
   </elementSpec>
   <elementSpec ident="stdVals" module="MEI.header">
-    <gloss versionDate="2022-05-18" xml:lang="en">standard values</gloss>
+    <gloss xml:lang="en">standard values</gloss>
     <desc xml:lang="en">Specifies the format used when standardized date or number values are
       supplied.</desc>
     <classes>
@@ -28161,7 +28161,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="sysReq" module="MEI.header">
-    <gloss versionDate="2022-05-18" xml:lang="en">system requirements</gloss>
+    <gloss xml:lang="en">system requirements</gloss>
     <desc xml:lang="en">System requirements for using the electronic item.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -28174,7 +28174,7 @@ or
     </content>
   </elementSpec>
   <elementSpec ident="tagsDecl" module="MEI.header">
-    <gloss versionDate="2022-05-18" xml:lang="en">tagging declaration</gloss>
+    <gloss xml:lang="en">tagging declaration</gloss>
     <desc xml:lang="en">Provides detailed information about the tagging applied to a
       document.</desc>
     <classes>
@@ -28306,7 +28306,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="titleStmt" module="MEI.header">
-    <gloss versionDate="2022-05-18" xml:lang="en">title statement</gloss>
+    <gloss xml:lang="en">title statement</gloss>
     <desc xml:lang="en">Container for title and responsibility meta-data.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -28330,7 +28330,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="trackConfig" module="MEI.header">
-    <gloss versionDate="2022-05-18" xml:lang="en">track configuration</gloss>
+    <gloss xml:lang="en">track configuration</gloss>
     <desc xml:lang="en">Number of physical/input tracks on a sound medium (<abbr>e.g.</abbr>, eight
       track, twelve track).</desc>
     <classes>
@@ -28361,7 +28361,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="treatHist" module="MEI.header">
-    <gloss versionDate="2022-05-18" xml:lang="en">treatment history</gloss>
+    <gloss xml:lang="en">treatment history</gloss>
     <desc xml:lang="en">A record of the treatment the item has undergone (<abbr>e.g.</abbr>,
       de-acidification, restoration, etc.).</desc>
     <classes>
@@ -28400,7 +28400,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="treatSched" module="MEI.header">
-    <gloss versionDate="2022-05-18" xml:lang="en">treatment scheduled</gloss>
+    <gloss xml:lang="en">treatment scheduled</gloss>
     <desc xml:lang="en">Scheduled treatment, <abbr>e.g.</abbr>, de-acidification, restoration, etc., for
       an item.</desc>
     <classes>
@@ -28435,7 +28435,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="unpub" module="MEI.header">
-    <gloss versionDate="2022-05-18" xml:lang="en">unpublished</gloss>
+    <gloss xml:lang="en">unpublished</gloss>
     <desc xml:lang="en">Used to explicitly indicate that a bibliographic resource is
       unpublished.</desc>
     <classes>
@@ -28453,7 +28453,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="useRestrict" module="MEI.header">
-    <gloss versionDate="2022-05-18" xml:lang="en">usage restrictions</gloss>
+    <gloss xml:lang="en">usage restrictions</gloss>
     <desc xml:lang="en">Container for information about the conditions that affect use of a
       bibliographic item after access has been granted.</desc>
     <classes>
@@ -28583,7 +28583,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="workList" module="MEI.header">
-    <gloss versionDate="2022-05-18" xml:lang="en">work list</gloss>
+    <gloss xml:lang="en">work list</gloss>
     <desc xml:lang="en">Grouping mechanism for information describing non-bibliographic aspects of a
       text.</desc>
     <classes>
@@ -29211,7 +29211,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="mensur" module="MEI.mensural">
-    <gloss versionDate="2022-05-18" xml:lang="en">mensuration</gloss>
+    <gloss xml:lang="en">mensuration</gloss>
     <desc xml:lang="en">Collects information about the metrical relationship between a note value
       and the next smaller value; that is, either triple or duple.</desc>
     <classes>
@@ -29252,7 +29252,7 @@ or
     </constraintSpec>
   </elementSpec>
   <elementSpec ident="proport" module="MEI.mensural">
-    <gloss versionDate="2022-05-18" xml:lang="en">proportion</gloss>
+    <gloss xml:lang="en">proportion</gloss>
     <desc xml:lang="en">Description of note duration as arithmetic ratio.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -29459,7 +29459,7 @@ or
     <desc xml:lang="en">Attributes that record MIDI numbers.</desc>
     <attList>
       <attDef ident="num" usage="req">
-        <gloss versionDate="2022-10-30" xml:lang="en">number</gloss>
+        <gloss xml:lang="en">number</gloss>
         <desc xml:lang="en">MIDI number in the range set by data.MIDIVALUE.</desc>
         <datatype>
           <rng:ref name="data.MIDIVALUE"/>
@@ -29544,7 +29544,7 @@ or
     </classes>
   </classSpec>
   <elementSpec ident="cc" module="MEI.midi">
-    <gloss versionDate="2022-05-18" xml:lang="en">control change</gloss>
+    <gloss xml:lang="en">control change</gloss>
     <desc xml:lang="en">MIDI parameter/control change.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -29561,7 +29561,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="chan" module="MEI.midi">
-    <gloss versionDate="2022-05-18" xml:lang="en">channel</gloss>
+    <gloss xml:lang="en">channel</gloss>
     <desc xml:lang="en">MIDI channel assignment.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -29580,7 +29580,7 @@ or
     </attList>
   </elementSpec>
   <elementSpec ident="chanPr" module="MEI.midi">
-    <gloss versionDate="2022-05-18" xml:lang="en">channel pressure</gloss>
+    <gloss xml:lang="en">channel pressure</gloss>
     <desc xml:lang="en">MIDI channel pressure/after touch.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -29619,7 +29619,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="instrDef" module="MEI.midi">
-    <gloss versionDate="2022-05-18" xml:lang="en">instrument definition</gloss>
+    <gloss xml:lang="en">instrument definition</gloss>
     <desc xml:lang="en">MIDI instrument declaration.</desc>
     <classes>
       <memberOf key="att.basic"/>
@@ -29645,7 +29645,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="instrGrp" module="MEI.midi">
-    <gloss versionDate="2022-05-18" xml:lang="en">instrument group</gloss>
+    <gloss xml:lang="en">instrument group</gloss>
     <desc xml:lang="en">Collects MIDI instrument definitions.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -29746,7 +29746,7 @@ or
     </content>
   </elementSpec>
   <elementSpec ident="prog" module="MEI.midi">
-    <gloss versionDate="2022-05-18" xml:lang="en">program</gloss>
+    <gloss xml:lang="en">program</gloss>
     <desc xml:lang="en">MIDI program change.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -29758,7 +29758,7 @@ or
     </content>
   </elementSpec>
   <elementSpec ident="seqNum" module="MEI.midi">
-    <gloss versionDate="2022-05-18" xml:lang="en">sequence number</gloss>
+    <gloss xml:lang="en">sequence number</gloss>
     <desc xml:lang="en">MIDI sequence number.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -29779,7 +29779,7 @@ or
     </attList>
   </elementSpec>
   <elementSpec ident="trkName" module="MEI.midi">
-    <gloss versionDate="2022-05-18" xml:lang="en">track name</gloss>
+    <gloss xml:lang="en">track name</gloss>
     <desc xml:lang="en">MIDI track/sequence name.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -29791,7 +29791,7 @@ or
     </content>
   </elementSpec>
   <elementSpec ident="vel" module="MEI.midi">
-    <gloss versionDate="2022-05-18" xml:lang="en">velocity</gloss>
+    <gloss xml:lang="en">velocity</gloss>
     <desc xml:lang="en">MIDI Note-on/off velocity.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -29902,7 +29902,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="addDesc" module="MEI.msDesc">
-    <gloss versionDate="2022-05-18" xml:lang="en">addition description</gloss>
+    <gloss xml:lang="en">addition description</gloss>
     <desc xml:lang="en">Provides a description of significant additions found within an
       item, such as marginalia or other annotations.</desc>
     <classes>
@@ -29919,7 +29919,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="binding" module="MEI.msDesc">
-    <gloss versionDate="2022-05-18" xml:lang="en">binding</gloss>
+    <gloss xml:lang="en">binding</gloss>
     <desc xml:lang="en">Contains a description of one binding, <abbr>i.e.</abbr>, type of covering, boards, etc.
       applied to an item.</desc>
     <classes>
@@ -29947,7 +29947,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="bindingDesc" module="MEI.msDesc">
-    <gloss versionDate="2022-05-18" xml:lang="en">binding description</gloss>
+    <gloss xml:lang="en">binding description</gloss>
     <desc xml:lang="en">Describes the present and former bindings of an item.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -30042,7 +30042,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="decoDesc" module="MEI.msDesc">
-    <gloss versionDate="2022-05-18" xml:lang="en">decoration description</gloss>
+    <gloss xml:lang="en">decoration description</gloss>
     <desc xml:lang="en">Contains a description of the decoration of an item.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -30077,7 +30077,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="decoNote" module="MEI.msDesc">
-    <gloss versionDate="2022-05-18" xml:lang="en">decoration note</gloss>
+    <gloss xml:lang="en">decoration note</gloss>
     <desc xml:lang="en">Contains a description of one or more decorative features of an
       item.</desc>
     <classes>
@@ -30233,7 +30233,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="layoutDesc" module="MEI.msDesc">
-    <gloss versionDate="2022-05-18" xml:lang="en">layout description</gloss>
+    <gloss xml:lang="en">layout description</gloss>
     <desc xml:lang="en">Collects layout descriptions.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -30305,7 +30305,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="locusGrp" module="MEI.msDesc">
-    <gloss versionDate="2022-05-18" xml:lang="en">locus group</gloss>
+    <gloss xml:lang="en">locus group</gloss>
     <desc xml:lang="en">Groups locations which together form a distinct but discontinuous item
       within a manuscript or manuscript part, according to a specific foliation.</desc>
     <classes>
@@ -30365,7 +30365,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="scriptDesc" module="MEI.msDesc">
-    <gloss versionDate="2022-05-18" xml:lang="en">script description</gloss>
+    <gloss xml:lang="en">script description</gloss>
     <desc xml:lang="en">Contains a description of the letters or characters used in an
       autographic item.</desc>
     <classes>
@@ -30400,7 +30400,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="scriptNote" module="MEI.msDesc">
-    <gloss versionDate="2022-05-18" xml:lang="en">script note</gloss>
+    <gloss xml:lang="en">script note</gloss>
     <desc xml:lang="en">Describes a particular script distinguished within the description of an
       autographic item.</desc>
     <classes>
@@ -30451,7 +30451,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="sealDesc" module="MEI.msDesc">
-    <gloss versionDate="2022-05-18" xml:lang="en">seal description</gloss>
+    <gloss xml:lang="en">seal description</gloss>
     <desc xml:lang="en">Describes the seals or similar external attachments applied to an
       item.</desc>
     <classes>
@@ -30492,7 +30492,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="secFolio" module="MEI.msDesc">
-    <gloss versionDate="2022-05-18" xml:lang="en">second folio</gloss>
+    <gloss xml:lang="en">second folio</gloss>
     <desc xml:lang="en">Marks the word or words taken from a fixed point in a codex (typically
       the beginning of the second leaf) in order to provide a unique identifier for the item.</desc>
     <classes>
@@ -30586,7 +30586,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="supportDesc" module="MEI.msDesc">
-    <gloss versionDate="2022-05-18" xml:lang="en">support description</gloss>
+    <gloss xml:lang="en">support description</gloss>
     <desc xml:lang="en">Groups elements describing the physical support material of an
       item.</desc>
     <classes>
@@ -30654,7 +30654,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="typeDesc" module="MEI.msDesc">
-    <gloss versionDate="2022-05-18" xml:lang="en">type description</gloss>
+    <gloss xml:lang="en">type description</gloss>
     <desc xml:lang="en">Contains a description of the typefaces or other aspects of the
       printing of a printed source.</desc>
     <classes>
@@ -30689,7 +30689,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="typeNote" module="MEI.msDesc">
-    <gloss versionDate="2022-05-18" xml:lang="en">type note</gloss>
+    <gloss xml:lang="en">type note</gloss>
     <desc xml:lang="en">Describes a particular font or other significant typographic feature of a
       printed resource.</desc>
     <classes>
@@ -30768,7 +30768,7 @@ or
     <desc xml:lang="en">Groups elements which form part of a personal name.</desc>
   </classSpec>
   <elementSpec ident="addName" module="MEI.namesdates">
-    <gloss versionDate="2022-05-18" xml:lang="en">additional name</gloss>
+    <gloss xml:lang="en">additional name</gloss>
     <desc xml:lang="en">Contains an additional name component, such as a nickname, epithet, or
       alias, or any other descriptive phrase used within a personal name.</desc>
     <classes>
@@ -30821,7 +30821,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="corpName" module="MEI.namesdates">
-    <gloss versionDate="2022-05-18" xml:lang="en">corporate name</gloss>
+    <gloss xml:lang="en">corporate name</gloss>
     <desc xml:lang="en">Identifies an organization or group of people that acts as a single
       entity.</desc>
     <classes>
@@ -30909,7 +30909,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="famName" module="MEI.namesdates">
-    <gloss versionDate="2022-05-18" xml:lang="en">family name</gloss>
+    <gloss xml:lang="en">family name</gloss>
     <desc xml:lang="en">Contains a family (inherited) name, as opposed to a given, baptismal, or
       nick name.</desc>
     <classes>
@@ -30959,7 +30959,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="genName" module="MEI.namesdates">
-    <gloss versionDate="2022-05-18" xml:lang="en">generational name component</gloss>
+    <gloss xml:lang="en">generational name component</gloss>
     <desc xml:lang="en">Contains a name component used to distinguish otherwise
       similar names on the basis of the relative ages or generations of the persons named.</desc>
     <classes>
@@ -30986,7 +30986,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="geogFeat" module="MEI.namesdates">
-    <gloss versionDate="2022-05-18" xml:lang="en">geographical feature name</gloss>
+    <gloss xml:lang="en">geographical feature name</gloss>
     <desc xml:lang="en">Contains a common noun identifying a geographical
       feature.</desc>
     <classes>
@@ -31013,7 +31013,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="geogName" module="MEI.namesdates">
-    <gloss versionDate="2022-05-18" xml:lang="en">geographic name</gloss>
+    <gloss xml:lang="en">geographic name</gloss>
     <desc xml:lang="en">The proper noun designation for a place, natural feature, or political
       jurisdiction.</desc>
     <classes>
@@ -31049,7 +31049,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="nameLink" module="MEI.namesdates">
-    <gloss versionDate="2022-05-18" xml:lang="en">name link</gloss>
+    <gloss xml:lang="en">name link</gloss>
     <desc xml:lang="en">Contains a connecting phrase or link used within a name but not regarded as
       part of it, such as "van der" or "of", "from", etc.</desc>
     <classes>
@@ -31076,7 +31076,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="periodName" module="MEI.namesdates">
-    <gloss versionDate="2022-05-18" xml:lang="en">period name</gloss>
+    <gloss xml:lang="en">period name</gloss>
     <desc xml:lang="en">A label that describes a period of time, such as 'Baroque' or '3rd Style
       period'.</desc>
     <classes>
@@ -31104,7 +31104,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="persName" module="MEI.namesdates">
-    <gloss versionDate="2022-05-18" xml:lang="en">personal name</gloss>
+    <gloss xml:lang="en">personal name</gloss>
     <desc xml:lang="en">Designation for an individual, including any or all of that individual's
       forenames, surnames, honorific titles, and added names.</desc>
     <classes>
@@ -31138,7 +31138,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="postBox" module="MEI.namesdates">
-    <gloss versionDate="2023-06-16" xml:lang="en">postal box or post office box</gloss>
+    <gloss xml:lang="en">postal box or post office box</gloss>
     <desc xml:lang="en">Contains a number or other identifier for some postal
       delivery point other than a street address.</desc>
     <classes>
@@ -31161,7 +31161,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="postCode" module="MEI.namesdates">
-    <gloss versionDate="2023-06-16" xml:lang="en">postal code</gloss>
+    <gloss xml:lang="en">postal code</gloss>
     <desc xml:lang="en">Contains a numerical or alphanumeric code used as part of a postal address
       to simplify sorting or delivery of mail.</desc>
     <classes>
@@ -31210,7 +31210,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="roleName" module="MEI.namesdates">
-    <gloss versionDate="2022-05-18" xml:lang="en">role name</gloss>
+    <gloss xml:lang="en">role name</gloss>
     <desc xml:lang="en">Contains a name component which indicates that the referent has a particular
       role or position in society, such as an official title or rank.</desc>
     <classes>
@@ -31286,7 +31286,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="styleName" module="MEI.namesdates">
-    <gloss versionDate="2022-05-18" xml:lang="en">style name</gloss>
+    <gloss xml:lang="en">style name</gloss>
     <desc xml:lang="en">A label for a characteristic style of writing or performance, such as
       'bebop' or 'rock-n-roll'.</desc>
     <classes>
@@ -31409,7 +31409,7 @@ or
         </datatype>
       </attDef>
       <attDef ident="pname" usage="opt">
-        <gloss versionDate="2022-10-18" xml:lang="en">pitch name</gloss>
+        <gloss xml:lang="en">pitch name</gloss>
         <desc xml:lang="en">Contains a written pitch name.</desc>
         <datatype>
           <rng:data type="token">
@@ -31682,7 +31682,7 @@ or
     </content>
   </elementSpec>
   <elementSpec ident="ncGrp" module="MEI.neumes">
-    <gloss versionDate="2023-06-16" xml:lang="en">neume component group</gloss>
+    <gloss xml:lang="en">neume component group</gloss>
     <desc xml:lang="en">Collection of one or more neume components.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -31894,7 +31894,7 @@ or
     </attList>
   </classSpec>
   <elementSpec ident="avFile" module="MEI.performance">
-    <gloss versionDate="2022-05-18" xml:lang="en">audio/video file</gloss>
+    <gloss xml:lang="en">audio/video file</gloss>
     <desc xml:lang="en">References an external digital audio or video file.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -32132,7 +32132,7 @@ or
     </classes>
   </classSpec>
   <elementSpec ident="ptr" module="MEI.ptrref">
-    <gloss versionDate="2022-05-18" xml:lang="en">pointer</gloss>
+    <gloss xml:lang="en">pointer</gloss>
     <desc xml:lang="en">Defines a traversible pointer to another location, using only attributes to
       describe the destination.</desc>
     <classes>
@@ -32156,7 +32156,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="ref" module="MEI.ptrref">
-    <gloss versionDate="2022-05-18" xml:lang="en">reference</gloss>
+    <gloss xml:lang="en">reference</gloss>
     <desc xml:lang="en">Defines a traversible reference to another location. May contain text and
       sub-elements that describe the destination.</desc>
     <classes>
@@ -33153,7 +33153,7 @@ or
     <desc xml:lang="en">Attributes that permit total duration to be represented by multiple values.</desc>
     <attList>
       <attDef ident="dur" usage="opt">
-        <gloss versionDate="2022-10-18" xml:lang="en">duration</gloss>
+        <gloss xml:lang="en">duration</gloss>
         <desc xml:lang="en">When a duration cannot be represented as a single power-of-two value, multiple
           space-separated values that add up to the total duration may be used.</desc>
         <datatype maxOccurs="unbounded">
@@ -33192,7 +33192,7 @@ or
     <desc xml:lang="en">Attributes that express duration in musical terms.</desc>
     <attList>
       <attDef ident="dur" usage="opt">
-        <gloss versionDate="2022-10-18" xml:lang="en">duration</gloss>
+        <gloss xml:lang="en">duration</gloss>
         <desc xml:lang="en">Records the duration of a feature using the relative durational values provided by the
           data.DURATION datatype.</desc>
         <datatype>
@@ -33205,7 +33205,7 @@ or
     <desc xml:lang="en">Attributes that describe duration as a ratio.</desc>
     <attList>
       <attDef ident="num" usage="opt">
-        <gloss versionDate="2022-10-18" xml:lang="en">number</gloss>
+        <gloss xml:lang="en">number</gloss>
         <desc xml:lang="en">Along with numbase, describes duration as a ratio. num is the first value in the
           ratio, while numbase is the second.</desc>
         <datatype>
@@ -33665,7 +33665,7 @@ or
     <attList>
       <!-- additional visual characteristics of the line -->
       <attDef ident="lendsym" usage="opt">
-        <gloss versionDate="2022-11-11" xml:lang="en">line end symbol</gloss>
+        <gloss xml:lang="en">line end symbol</gloss>
         <desc xml:lang="en">Symbol rendered at end of line.</desc>
         <datatype>
           <rng:ref name="data.LINESTARTENDSYMBOL"/>
@@ -33678,7 +33678,7 @@ or
         </datatype>
       </attDef>
       <attDef ident="lstartsym" usage="opt">
-        <gloss versionDate="2022-11-11" xml:lang="en">line start symbol</gloss>
+        <gloss xml:lang="en">line start symbol</gloss>
         <desc xml:lang="en">Symbol rendered at start of line.</desc>
         <datatype>
           <rng:ref name="data.LINESTARTENDSYMBOL"/>
@@ -34098,7 +34098,7 @@ or
       meter.</desc>
     <attList>
       <attDef ident="metcon" usage="opt">
-        <gloss versionDate="2022-11-11" xml:lang="en">meter conformance</gloss>
+        <gloss xml:lang="en">meter conformance</gloss>
         <desc xml:lang="en">Indicates the relationship between the content of a staff or layer and the prevailing
           meter.</desc>
         <valList type="closed">
@@ -34120,7 +34120,7 @@ or
       meter.</desc>
     <attList>
       <attDef ident="metcon" usage="opt">
-        <gloss versionDate="2022-11-11" xml:lang="en">meter conformance</gloss>
+        <gloss xml:lang="en">meter conformance</gloss>
         <desc xml:lang="en">Indicates the relationship between the content of a measure and the prevailing
           meter.</desc>
         <datatype>
@@ -34153,7 +34153,7 @@ or
         </datatype>
       </attDef>
       <attDef ident="sym" usage="opt">
-        <gloss versionDate="2022-11-11" xml:lang="en">symbol</gloss>
+        <gloss xml:lang="en">symbol</gloss>
         <desc xml:lang="en">Indicates the use of a meter symbol instead of a numeric meter signature, that is, 'C'
           for common time or 'C' with a slash for cut time.</desc>
         <datatype>
@@ -34432,7 +34432,7 @@ or
     <desc xml:lang="en">Attributes that record written octave.</desc>
     <attList>
       <attDef ident="oct" usage="opt">
-        <gloss versionDate="2022-10-18" xml:lang="en">octave</gloss>
+        <gloss xml:lang="en">octave</gloss>
         <desc xml:lang="en">Captures written octave information.</desc>
         <datatype>
           <rng:ref name="data.OCTAVE"/>
@@ -34606,28 +34606,28 @@ or
         </datatype>
       </attDef>
       <attDef ident="page.topmar" usage="opt">
-        <gloss versionDate="2022-11-11" xml:lang="en">page top margin</gloss>
+        <gloss xml:lang="en">page top margin</gloss>
         <desc xml:lang="en">Indicates the amount of whitespace at the top of a page.</desc>
         <datatype>
           <rng:ref name="data.MEASUREMENTUNSIGNED"/>
         </datatype>
       </attDef>
       <attDef ident="page.botmar" usage="opt">
-        <gloss versionDate="2022-11-11" xml:lang="en">page bottom margin</gloss>
+        <gloss xml:lang="en">page bottom margin</gloss>
         <desc xml:lang="en">Indicates the amount of whitespace at the bottom of a page.</desc>
         <datatype>
           <rng:ref name="data.MEASUREMENTUNSIGNED"/>
         </datatype>
       </attDef>
       <attDef ident="page.leftmar" usage="opt">
-        <gloss versionDate="2022-11-11" xml:lang="en">page left margin</gloss>
+        <gloss xml:lang="en">page left margin</gloss>
         <desc xml:lang="en">Indicates the amount of whitespace at the left side of a page.</desc>
         <datatype>
           <rng:ref name="data.MEASUREMENTUNSIGNED"/>
         </datatype>
       </attDef>
       <attDef ident="page.rightmar" usage="opt">
-        <gloss versionDate="2022-11-11" xml:lang="en">page right margin</gloss>
+        <gloss xml:lang="en">page right margin</gloss>
         <desc xml:lang="en">Indicates the amount of whitespace at the right side of a page.</desc>
         <datatype>
           <rng:ref name="data.MEASUREMENTUNSIGNED"/>
@@ -34711,7 +34711,7 @@ or
     <desc xml:lang="en">Attributes that record written pitch name.</desc>
     <attList>
       <attDef ident="pname" usage="opt">
-        <gloss versionDate="2022-10-18" xml:lang="en">pitch name</gloss>
+        <gloss xml:lang="en">pitch name</gloss>
         <desc xml:lang="en">Contains a written pitch name.</desc>
         <datatype>
           <rng:ref name="data.PITCHNAME"/>
@@ -35585,7 +35585,7 @@ or
         </datatype>
       </attDef>
       <attDef ident="rend" usage="opt">
-        <gloss versionDate="2022-10-18" xml:lang="en">rendition</gloss>
+        <gloss xml:lang="en">rendition</gloss>
         <desc xml:lang="en">Captures the appearance of the element’s contents using MEI-defined
           descriptors.</desc>
         <datatype maxOccurs="unbounded">
@@ -35651,7 +35651,7 @@ or
       part].</desc>
     <attList>
       <attDef ident="tstamp" usage="opt">
-        <gloss versionDate="2022-10-18" xml:lang="en">time stamp</gloss>
+        <gloss xml:lang="en">time stamp</gloss>
         <desc xml:lang="en">Encodes the onset time in terms of musical time, <abbr>i.e.</abbr>, beats[.fractional beat part],
           as expressed in the written time signature.</desc>
         <datatype>
@@ -35677,7 +35677,7 @@ or
     <desc xml:lang="en">Attributes that describe transposition.</desc>
     <attList>
       <attDef ident="trans.diat" usage="opt">
-        <gloss versionDate="2022-10-18" xml:lang="en">transposition (diatonic)</gloss>
+        <gloss xml:lang="en">transposition (diatonic)</gloss>
         <desc xml:lang="en">Records the amount of diatonic pitch shift, <abbr>e.g.</abbr>, C to C♯ = 0, C to D♭ = 1, necessary
           to calculate the sounded pitch from the written one.</desc>
         <datatype>
@@ -35685,7 +35685,7 @@ or
         </datatype>
       </attDef>
       <attDef ident="trans.semi" usage="opt">
-        <gloss versionDate="2022-10-18" xml:lang="en">transposition (semitones)</gloss>
+        <gloss xml:lang="en">transposition (semitones)</gloss>
         <desc xml:lang="en">Records the amount of pitch shift in semitones, <abbr>e.g.</abbr>, C to C♯ = 1, C to D♭ = 1,
           necessary to calculate the sounded pitch from the written one.</desc>
         <datatype>
@@ -36440,7 +36440,7 @@ or
     <desc xml:lang="en">Groups elements that may appear inside the <gi scheme="MEI">tuning</gi> element.</desc>
   </classSpec>
   <elementSpec ident="accid" module="MEI.shared">
-    <gloss versionDate="2022-05-18" xml:lang="en">accidental</gloss>
+    <gloss xml:lang="en">accidental</gloss>
     <desc xml:lang="en">Records a temporary alteration to the pitch of a note.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -36511,7 +36511,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="addrLine" module="MEI.shared">
-    <gloss versionDate="2022-05-18" xml:lang="en">address line</gloss>
+    <gloss xml:lang="en">address line</gloss>
     <desc xml:lang="en">Single line of a postal address.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -36568,7 +36568,7 @@ or
     </content>
   </elementSpec>
   <elementSpec ident="analytic" module="MEI.shared">
-    <gloss versionDate="2022-05-18" xml:lang="en">analytic level</gloss>
+    <gloss xml:lang="en">analytic level</gloss>
     <desc xml:lang="en">Contains bibliographic elements describing an item (<abbr>e.g.</abbr>, an article or
       poem) published within a monograph or journal and not as an independent publication.</desc>
     <classes>
@@ -36597,7 +36597,7 @@ or
     </content>
   </elementSpec>
   <elementSpec ident="annot" module="MEI.shared">
-    <gloss versionDate="2022-05-18" xml:lang="en">annotation</gloss>
+    <gloss xml:lang="en">annotation</gloss>
     <desc xml:lang="en">Provides a statement explaining the text or indicating the basis for an
       assertion.</desc>
     <classes>
@@ -36680,7 +36680,7 @@ or
     </content>
   </elementSpec>
   <elementSpec ident="artic" module="MEI.shared">
-    <gloss versionDate="2022-05-18" xml:lang="en">articulation</gloss>
+    <gloss xml:lang="en">articulation</gloss>
     <desc xml:lang="en">An indication of how to play a note or chord.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -36753,7 +36753,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="bibl" module="MEI.shared">
-    <gloss versionDate="2022-05-18" xml:lang="en">bibliographic reference</gloss>
+    <gloss xml:lang="en">bibliographic reference</gloss>
     <desc xml:lang="en">Provides a loosely-structured bibliographic citation in which
       the sub-components may or may not be explicitly marked.</desc>
     <classes>
@@ -36838,7 +36838,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="biblScope" module="MEI.shared">
-    <gloss versionDate="2022-05-18" xml:lang="en">scope of citation</gloss>
+    <gloss xml:lang="en">scope of citation</gloss>
     <desc xml:lang="en">Defines the scope of a bibliographic reference, for example as a
       list of page numbers, or a named subdivision of a larger work.</desc>
     <classes>
@@ -36876,7 +36876,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="biblStruct" module="MEI.shared">
-    <gloss versionDate="2022-05-18" xml:lang="en">structured bibliographic citation</gloss>
+    <gloss xml:lang="en">structured bibliographic citation</gloss>
     <desc xml:lang="en">Contains a bibliographic citation in which
       bibliographic sub-elements must appear in a specified order.</desc>
     <classes>
@@ -36994,7 +36994,7 @@ or
     </content>
   </elementSpec>
   <elementSpec ident="castGrp" module="MEI.shared">
-    <gloss versionDate="2022-05-18" xml:lang="en">cast group</gloss>
+    <gloss xml:lang="en">cast group</gloss>
     <desc xml:lang="en">Groups one or more individual castItem elements within a cast list.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -37063,7 +37063,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="cb" module="MEI.shared">
-    <gloss versionDate="2022-05-18" xml:lang="en">column beginning</gloss>
+    <gloss xml:lang="en">column beginning</gloss>
     <desc xml:lang="en">An empty formatting element that forces text to begin in a new
       column.</desc>
     <classes>
@@ -37174,7 +37174,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="clefGrp" module="MEI.shared">
-    <gloss versionDate="2022-05-18" xml:lang="en">clef group</gloss>
+    <gloss xml:lang="en">clef group</gloss>
     <desc xml:lang="en">A set of simultaneously-occurring clefs.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -37194,7 +37194,7 @@ or
     </content>
   </elementSpec>
   <elementSpec ident="colLayout" module="MEI.shared">
-    <gloss versionDate="2022-05-18" xml:lang="en">column layout</gloss>
+    <gloss xml:lang="en">column layout</gloss>
     <desc xml:lang="en">An empty formatting element that signals the start of columnar
       layout.</desc>
     <classes>
@@ -37397,7 +37397,7 @@ or
     </content>
   </elementSpec>
   <elementSpec ident="desc" module="MEI.shared">
-    <gloss versionDate="2022-05-18" xml:lang="en">description</gloss>
+    <gloss xml:lang="en">description</gloss>
     <desc xml:lang="en">Container for text that briefly describes the feature to which it is
       attached, including its intended usage, purpose, or application as appropriate.</desc>
     <classes>
@@ -37423,7 +37423,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="dim" module="MEI.shared">
-    <gloss versionDate="2022-05-18" xml:lang="en">dimension</gloss>
+    <gloss xml:lang="en">dimension</gloss>
     <desc xml:lang="en">Any single dimensional specification.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -37531,7 +37531,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="dir" module="MEI.shared">
-    <gloss versionDate="2022-05-18" xml:lang="en">directive</gloss>
+    <gloss xml:lang="en">directive</gloss>
     <desc xml:lang="en">An instruction expressed as a combination of text and symbols, typically above,
       below, or between staves, but not on the staff — that is not encoded elsewhere in more specific
       elements, like <gi scheme="MEI">tempo</gi>, <gi scheme="MEI">dynam</gi>  or <gi scheme="MEI">repeatMark</gi>.</desc>
@@ -37598,7 +37598,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="div" module="MEI.shared">
-    <gloss versionDate="2022-05-18" xml:lang="en">division</gloss>
+    <gloss xml:lang="en">division</gloss>
     <desc xml:lang="en">Major structural division of text, such as a preface, chapter or
       section.</desc>
     <classes>
@@ -37716,7 +37716,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="dynam" module="MEI.shared">
-    <gloss versionDate="2022-05-18" xml:lang="en">dynamic</gloss>
+    <gloss xml:lang="en">dynamic</gloss>
     <desc xml:lang="en">Indication of the volume of a note, phrase, or section of music.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -37767,7 +37767,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="edition" module="MEI.shared">
-    <gloss versionDate="2022-05-18" xml:lang="en">edition designation</gloss>
+    <gloss xml:lang="en">edition designation</gloss>
     <desc xml:lang="en">A word or text phrase that indicates a difference in either
       content or form between the item being described and a related item previously issued by the
       same publisher/distributor (<abbr>e.g.</abbr>, 2nd edition, version 2.0, etc.), or simultaneously issued by
@@ -37997,7 +37997,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="extData" module="MEI.shared">
-    <gloss versionDate="2023-05-23" xml:lang="en">extended data</gloss>
+    <gloss xml:lang="en">extended data</gloss>
     <desc xml:lang="en">Provides a container element for non-MEI data formats.</desc>
     <classes>
       <memberOf key="att.basic"/>
@@ -38096,7 +38096,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="grpSym" module="MEI.shared">
-    <gloss versionDate="2022-05-18" xml:lang="en">group symbol</gloss>
+    <gloss xml:lang="en">group symbol</gloss>
     <desc xml:lang="en">A brace or bracket used to group two or more staves of a score or
       part.</desc>
     <classes>
@@ -38135,7 +38135,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="head" module="MEI.shared">
-    <gloss versionDate="2022-05-18" xml:lang="en">heading</gloss>
+    <gloss xml:lang="en">heading</gloss>
     <desc xml:lang="en">Contains any heading, for example, the title of a section of text, or the
       heading of a list.</desc>
     <classes>
@@ -38233,7 +38233,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="incip" module="MEI.shared">
-    <gloss versionDate="2022-05-18" xml:lang="en">incipit</gloss>
+    <gloss xml:lang="en">incipit</gloss>
     <desc xml:lang="en">The opening music and/or words of a musical or textual work.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -38293,7 +38293,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="keyAccid" module="MEI.shared">
-    <gloss versionDate="2022-05-18" xml:lang="en">key accidental</gloss>
+    <gloss xml:lang="en">key accidental</gloss>
     <desc xml:lang="en">Accidental in a key signature.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -38336,7 +38336,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="keySig" module="MEI.shared">
-    <gloss versionDate="2022-05-18" xml:lang="en">key signature</gloss>
+    <gloss xml:lang="en">key signature</gloss>
     <desc xml:lang="en">Written key signature.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -38464,7 +38464,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="layerDef" module="MEI.shared">
-    <gloss versionDate="2022-05-18" xml:lang="en">layer definition</gloss>
+    <gloss xml:lang="en">layer definition</gloss>
     <desc xml:lang="en">Container for layer meta-information.</desc>
     <classes>
       <memberOf key="att.basic"/>
@@ -38496,7 +38496,7 @@ or
     </content>
   </elementSpec>
   <elementSpec ident="lb" module="MEI.shared">
-    <gloss versionDate="2022-05-18" xml:lang="en">line beginning</gloss>
+    <gloss xml:lang="en">line beginning</gloss>
     <desc xml:lang="en">An empty formatting element that forces text to begin on a new
       line.</desc>
     <classes>
@@ -38519,7 +38519,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="lg" module="MEI.shared">
-    <gloss versionDate="2022-05-18" xml:lang="en">line group</gloss>
+    <gloss xml:lang="en">line group</gloss>
     <desc xml:lang="en">May be used for any section of text that is organized as a group of lines;
       however, it is most often used for a group of verse lines functioning as a formal unit, <abbr>e.g.</abbr>, a
       stanza, refrain, verse paragraph, etc.</desc>
@@ -38593,7 +38593,7 @@ or
     </content>
   </elementSpec>
   <elementSpec ident="mdiv" module="MEI.shared">
-    <gloss versionDate="2022-05-18" xml:lang="en">musical division</gloss>
+    <gloss xml:lang="en">musical division</gloss>
     <desc xml:lang="en">Contains a subdivision of the body of a musical text.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -38661,7 +38661,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="monogr" module="MEI.shared">
-    <gloss versionDate="2022-05-18" xml:lang="en">monograph level</gloss>
+    <gloss xml:lang="en">monograph level</gloss>
     <desc xml:lang="en">Contains bibliographic elements describing an item, for example, a
       published book or journal, score, recording, or an unpublished manuscript.</desc>
     <classes>
@@ -38880,7 +38880,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="num" module="MEI.shared">
-    <gloss versionDate="2022-05-18" xml:lang="en">number</gloss>
+    <gloss xml:lang="en">number</gloss>
     <desc xml:lang="en">Numeric information in any form.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -38953,7 +38953,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="p" module="MEI.shared">
-    <gloss versionDate="2022-05-18" xml:lang="en">paragraph</gloss>
+    <gloss xml:lang="en">paragraph</gloss>
     <desc xml:lang="en">One or more text phrases that form a logical prose passage.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -38981,7 +38981,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="pad" module="MEI.shared">
-    <gloss versionDate="2022-05-18" xml:lang="en">padding</gloss>
+    <gloss xml:lang="en">padding</gloss>
     <desc xml:lang="en">An indication of extra visual space between notational elements.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -39052,7 +39052,7 @@ or
     </content>
   </elementSpec>
   <elementSpec ident="pb" module="MEI.shared">
-    <gloss versionDate="2022-05-18" xml:lang="en">page beginning</gloss>
+    <gloss xml:lang="en">page beginning</gloss>
     <desc xml:lang="en">An empty formatting element that forces text to begin on a new
       page.</desc>
     <classes>
@@ -39080,7 +39080,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="pgDesc" module="MEI.shared">
-    <gloss versionDate="2022-05-18" xml:lang="en">page description</gloss>
+    <gloss xml:lang="en">page description</gloss>
     <desc xml:lang="en">Contains a brief prose description of the appearance or description
       of the content of a physical page.</desc>
     <classes>
@@ -39106,7 +39106,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="pgFoot" module="MEI.shared">
-    <gloss versionDate="2022-05-18" xml:lang="en">page footer</gloss>
+    <gloss xml:lang="en">page footer</gloss>
     <desc xml:lang="en">A running footer.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -39137,7 +39137,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="pgHead" module="MEI.shared">
-    <gloss versionDate="2022-05-18" xml:lang="en">page header</gloss>
+    <gloss xml:lang="en">page header</gloss>
     <desc xml:lang="en">A running header.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -39221,7 +39221,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="physLoc" module="MEI.shared">
-    <gloss versionDate="2022-05-18" xml:lang="en">physical location</gloss>
+    <gloss xml:lang="en">physical location</gloss>
     <desc xml:lang="en">Groups information about the current physical location of a
       bibliographic item, such as the repository in which it is located and its shelf mark(s), and
       its previous locations.</desc>
@@ -39274,7 +39274,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="pubPlace" module="MEI.shared">
-    <gloss versionDate="2022-05-18" xml:lang="en">publication place</gloss>
+    <gloss xml:lang="en">publication place</gloss>
     <desc xml:lang="en">Name of the place where a bibliographic item was published.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -39316,7 +39316,7 @@ or
     </content>
   </elementSpec>
   <elementSpec ident="relatedItem" module="MEI.shared">
-    <gloss versionDate="2022-05-18" xml:lang="en">related item</gloss>
+    <gloss xml:lang="en">related item</gloss>
     <desc xml:lang="en">Contains or references another bibliographic item which is related to the
       present one.</desc>
     <classes>
@@ -39415,7 +39415,7 @@ or
     </content>
   </elementSpec>
   <elementSpec ident="rend" module="MEI.shared">
-    <gloss versionDate="2022-05-18" xml:lang="en">render</gloss>
+    <gloss xml:lang="en">render</gloss>
     <desc xml:lang="en">A formatting element indicating special visual rendering, <abbr>e.g.</abbr>, bold or
       italicized, of a text word or phrase.</desc>
     <classes>
@@ -39484,7 +39484,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="resp" module="MEI.shared">
-    <gloss versionDate="2022-05-18" xml:lang="en">responsibility</gloss>
+    <gloss xml:lang="en">responsibility</gloss>
     <desc xml:lang="en">A phrase describing the nature of intellectual responsibility.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -39511,7 +39511,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="respStmt" module="MEI.shared">
-    <gloss versionDate="2022-05-18" xml:lang="en">responsibility statement</gloss>
+    <gloss xml:lang="en">responsibility statement</gloss>
     <desc xml:lang="en">Transcription of text that names one or more individuals,
       groups, or in rare cases, mechanical processes, responsible for creation, realization,
       production, funding, or distribution of the intellectual or artistic content.</desc>
@@ -39602,7 +39602,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="roleDesc" module="MEI.shared">
-    <gloss versionDate="2022-05-18" xml:lang="en">role description</gloss>
+    <gloss xml:lang="en">role description</gloss>
     <desc xml:lang="en">Describes a character’s role in a drama.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -39622,7 +39622,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="sb" module="MEI.shared">
-    <gloss versionDate="2022-05-18" xml:lang="en">system beginning</gloss>
+    <gloss xml:lang="en">system beginning</gloss>
     <desc xml:lang="en">An empty formatting element that forces musical notation to begin on
       a new line.</desc>
     <classes>
@@ -39678,7 +39678,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="scoreDef" module="MEI.shared">
-    <gloss versionDate="2022-05-18" xml:lang="en">score definition</gloss>
+    <gloss xml:lang="en">score definition</gloss>
     <desc xml:lang="en">Container for score meta-information.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -39865,7 +39865,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="stack" module="MEI.shared">
-    <gloss versionDate="2022-05-18" xml:lang="en">stacked text</gloss>
+    <gloss xml:lang="en">stacked text</gloss>
     <desc xml:lang="en">An inline table with a single column.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -39971,7 +39971,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="staffDef" module="MEI.shared">
-    <gloss versionDate="2022-05-18" xml:lang="en">staff definition</gloss>
+    <gloss xml:lang="en">staff definition</gloss>
     <desc xml:lang="en">Container for staff meta-information.</desc>
     <classes>
       <memberOf key="att.basic"/>
@@ -40116,7 +40116,7 @@ or
     </constraintSpec>
   </elementSpec>
   <elementSpec ident="staffGrp" module="MEI.shared">
-    <gloss versionDate="2022-05-18" xml:lang="en">staff group</gloss>
+    <gloss xml:lang="en">staff group</gloss>
     <desc xml:lang="en">A group of bracketed or braced staves.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -40165,7 +40165,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="syl" module="MEI.shared">
-    <gloss versionDate="2022-05-18" xml:lang="en">syllable</gloss>
+    <gloss xml:lang="en">syllable</gloss>
     <desc xml:lang="en">Individual lyric syllable.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -40311,7 +40311,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="textLang" module="MEI.shared">
-    <gloss versionDate="2022-05-18" xml:lang="en">text language</gloss>
+    <gloss xml:lang="en">text language</gloss>
     <desc xml:lang="en">Identifies the languages and writing systems within the work described
       by a bibliographic description, not the language of the description.</desc>
     <classes>
@@ -40985,7 +40985,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="back" module="MEI.text">
-    <gloss versionDate="2022-05-18" xml:lang="en">back matter</gloss>
+    <gloss xml:lang="en">back matter</gloss>
     <desc xml:lang="en">Contains any appendixes, advertisements, indexes, etc. following the main
       body of a musical text.</desc>
     <classes>
@@ -41032,7 +41032,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="front" module="MEI.text">
-    <gloss versionDate="2022-05-18" xml:lang="en">front matter</gloss>
+    <gloss xml:lang="en">front matter</gloss>
     <desc xml:lang="en">Bundles prefatory text found before the start of the musical text.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -41084,7 +41084,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="l" module="MEI.text">
-    <gloss versionDate="2022-05-18" xml:lang="en">line of text</gloss>
+    <gloss xml:lang="en">line of text</gloss>
     <desc xml:lang="en">Contains a single line of text within a line group.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -41123,7 +41123,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="li" module="MEI.text">
-    <gloss versionDate="2022-05-18" xml:lang="en">list item</gloss>
+    <gloss xml:lang="en">list item</gloss>
     <desc xml:lang="en">Single item in a <gi scheme="MEI">list</gi>.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -41238,7 +41238,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="q" module="MEI.text">
-    <gloss versionDate="2022-05-18" xml:lang="en">quoted</gloss>
+    <gloss xml:lang="en">quoted</gloss>
     <desc xml:lang="en">Contains material which is distinguished from the surrounding phrase-level text
       using quotation marks or a similar method. Use <gi scheme="MEI">quote</gi> for block-level
       quotations.</desc>
@@ -41307,7 +41307,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="quote" module="MEI.text">
-    <gloss versionDate="2022-05-18" xml:lang="en">quoted material</gloss>
+    <gloss xml:lang="en">quoted material</gloss>
     <desc xml:lang="en">Contains a paragraph-like block of text attributed to an external
       source, normally set off from the surrounding text by spacing or other typographic
       distinction.</desc>
@@ -41337,7 +41337,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="seg" module="MEI.text">
-    <gloss versionDate="2023-06-16" xml:lang="en">arbitrary segment</gloss>
+    <gloss xml:lang="en">arbitrary segment</gloss>
     <desc xml:lang="en">represents any segmentation of text below the "text component" level.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -41622,7 +41622,7 @@ or
     </content>
   </elementSpec>
   <elementSpec ident="propName" module="MEI.usersymbols">
-    <gloss versionDate="2022-05-18" xml:lang="en">property name</gloss>
+    <gloss xml:lang="en">property name</gloss>
     <desc xml:lang="en">Name of a property of the symbol.</desc>
     <classes>
       <memberOf key="att.basic"/>
@@ -41649,7 +41649,7 @@ or
     </attList>
   </elementSpec>
   <elementSpec ident="propValue" module="MEI.usersymbols">
-    <gloss versionDate="2022-05-18" xml:lang="en">property value</gloss>
+    <gloss xml:lang="en">property value</gloss>
     <desc xml:lang="en">A single property value.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -41659,7 +41659,7 @@ or
     </content>
   </elementSpec>
   <elementSpec ident="symbolDef" module="MEI.usersymbols">
-    <gloss versionDate="2022-05-18" xml:lang="en">symbol definition</gloss>
+    <gloss xml:lang="en">symbol definition</gloss>
     <desc xml:lang="en">Declaration of an individual symbol in a symbolTable.</desc>
     <classes>
       <memberOf key="att.common"/>
@@ -41699,7 +41699,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="symName" module="MEI.usersymbols">
-    <gloss versionDate="2022-05-18" xml:lang="en">symbol name</gloss>
+    <gloss xml:lang="en">symbol name</gloss>
     <desc xml:lang="en">Contains the name of a symbol, expressed following Unicode
       conventions.</desc>
     <classes>
@@ -41710,7 +41710,7 @@ or
     </content>
   </elementSpec>
   <elementSpec ident="symProp" module="MEI.usersymbols">
-    <gloss versionDate="2022-05-18" xml:lang="en">symbol property</gloss>
+    <gloss xml:lang="en">symbol property</gloss>
     <desc xml:lang="en">Provides a name and value for some property of the parent
       symbol.</desc>
     <classes>
@@ -41893,7 +41893,7 @@ or
     </classes>
     <attList>
       <attDef ident="len" usage="opt">
-        <gloss versionDate="2022-10-30" xml:lang="en">length</gloss>
+        <gloss xml:lang="en">length</gloss>
         <desc xml:lang="en">States the length of bar lines in virtual units. The value must be greater than 0 and
           is typically equal to 2 times (the number of staff lines - 1); <abbr>e.g.</abbr>, a value of <val>8</val> for a
           5-line staff.</desc>
@@ -42360,7 +42360,7 @@ or
     </classes>
     <attList>
       <attDef ident="orient" usage="opt">
-        <gloss versionDate="2022-10-30" xml:lang="en">orientation</gloss>
+        <gloss xml:lang="en">orientation</gloss>
         <valList type="closed">
           <valItem ident="horiz">
             <desc xml:lang="en">Combination expressed horizontally, as for brass instruments.</desc>
@@ -43203,14 +43203,14 @@ or
     <desc xml:lang="en">Visual domain attributes that describe the properties of a plica stem in the mensural repertoire.</desc>
     <attList>
       <attDef ident="dir" usage="opt">
-        <gloss versionDate="2022-10-30" xml:lang="en">direction</gloss>
+        <gloss xml:lang="en">direction</gloss>
         <desc xml:lang="en">Describes the direction of a stem.</desc>
         <datatype>
           <rng:ref name="data.STEMDIRECTION.basic"/>
         </datatype>
       </attDef>
       <attDef ident="len" usage="opt">
-        <gloss versionDate="2022-10-30" xml:lang="en">length</gloss>
+        <gloss xml:lang="en">length</gloss>
         <desc xml:lang="en">Encodes the stem length.</desc>
         <datatype>
           <rng:ref name="data.MEASUREMENTUNSIGNED"/>
@@ -43510,7 +43510,7 @@ or
     </classes>
     <attList>
       <attDef ident="bar.thru" usage="opt">
-        <gloss versionDate="2022-10-18" xml:lang="en">bar lines through</gloss>
+        <gloss xml:lang="en">bar lines through</gloss>
         <desc xml:lang="en">Indicates whether bar lines go across the space between staves (true) or are only
           drawn across the lines of each staff (false).</desc>
         <datatype>
@@ -43543,14 +43543,14 @@ or
     </classes>
     <attList>
       <attDef ident="pos" usage="opt">
-        <gloss versionDate="2022-10-30" xml:lang="en">position</gloss>
+        <gloss xml:lang="en">position</gloss>
         <desc xml:lang="en">Records the position of the stem in relation to the note head(s).</desc>
         <datatype>
           <rng:ref name="data.STEMPOSITION"/>
         </datatype>
       </attDef>
       <attDef ident="len" usage="opt">
-        <gloss versionDate="2022-10-30" xml:lang="en">length</gloss>
+        <gloss xml:lang="en">length</gloss>
         <desc xml:lang="en">Encodes the stem length.</desc>
         <datatype>
           <rng:ref name="data.MEASUREMENTUNSIGNED"/>
@@ -43563,7 +43563,7 @@ or
         </datatype>
       </attDef>
       <attDef ident="dir" usage="opt">
-        <gloss versionDate="2022-10-30" xml:lang="en">direction</gloss>
+        <gloss xml:lang="en">direction</gloss>
         <desc xml:lang="en">Describes the direction of a stem.</desc>
         <datatype>
           <rng:ref name="data.STEMDIRECTION"/>

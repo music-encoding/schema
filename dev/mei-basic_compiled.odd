@@ -3549,7 +3549,7 @@
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that record numbers to be displayed with a feature.</desc>
     <attList xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="num" usage="opt">
-        <gloss versionDate="2022-10-18" xml:lang="en">number</gloss>
+        <gloss xml:lang="en">number</gloss>
         <desc xml:lang="en">Records a number or count accompanying a notational feature.</desc>
         <datatype>
           <rng:data type="positiveInteger"/>
@@ -3561,7 +3561,7 @@
       tremolo or tuplet.</desc>
     <attList xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="num.place" usage="opt">
-        <gloss versionDate="2022-10-30" xml:lang="en">number placement</gloss>
+        <gloss xml:lang="en">number placement</gloss>
         <desc xml:lang="en">States where the tuplet number will be placed in relation to the note heads.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.STAFFREL.basic"/>
@@ -3605,7 +3605,7 @@
     </classes>
     <attList xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="dir" usage="req">
-        <gloss versionDate="2022-10-30" xml:lang="en">direction</gloss>
+        <gloss xml:lang="en">direction</gloss>
         <desc xml:lang="en">Records the position of the piano damper pedal.</desc>
         <valList type="closed">
           <valItem ident="down">
@@ -3623,7 +3623,7 @@
         </valList>
       </attDef>
       <attDef ident="func" usage="opt">
-        <gloss versionDate="2022-10-18" xml:lang="en">function</gloss>
+        <gloss xml:lang="en">function</gloss>
         <desc xml:lang="en">Indicates the function of the depressed pedal, but not necessarily the text associated
           with its use. Use the <gi scheme="MEI">dir</gi> element for such text.</desc>
         <datatype>
@@ -3762,7 +3762,7 @@
     <classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="model.sectionPart"/>
     </classes>
-  </classSpec><elementSpec rend="add" ident="arpeg" module="MEI.cmn"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">arpeggiation</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Indicates that the notes of a chord are to be performed successively
+  </classSpec><elementSpec rend="add" ident="arpeg" module="MEI.cmn"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">arpeggiation</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Indicates that the notes of a chord are to be performed successively
       rather than simultaneously, usually from lowest to highest. Sometimes called a "roll".</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       
@@ -3808,7 +3808,7 @@
         notes or chords under the beam. Automated beaming, as opposed to explicitly marked beams,
         may be indicated for an entire score, part or section by using the <att>beam.group</att> and
         <att>beam.rests</att> attributes on these elements.</p>
-    </remarks></elementSpec><elementSpec rend="add" ident="beatRpt" module="MEI.cmn"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">beat repeat</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">An indication that material on a preceding beat should be repeated.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
+    </remarks></elementSpec><elementSpec rend="add" ident="beatRpt" module="MEI.cmn"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">beat repeat</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">An indication that material on a preceding beat should be repeated.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       
       <memberOf key="att.beatRpt.log"/>
@@ -3825,7 +3825,7 @@
         chord changes occur. When these parts require durations longer or shorter than a beat;
         however, <gi scheme="MEI">note</gi> elements with appropriately-shaped note heads should be
         employed.</p>
-    </remarks></elementSpec><elementSpec rend="add" ident="breath" module="MEI.cmn"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">breath mark</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">An indication of a point at which the performer on an instrument requiring
+    </remarks></elementSpec><elementSpec rend="add" ident="breath" module="MEI.cmn"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">breath mark</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">An indication of a point at which the performer on an instrument requiring
       breath (including the voice) may breathe.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       
@@ -3854,7 +3854,7 @@
       <p>The default value for <att>place</att> for a breath mark is "above". Unless indicated by
         other attributes, a breath mark will be rendered as a comma-like symbol above the top line
         of the staff.</p>
-    </remarks></elementSpec><elementSpec rend="add" ident="bTrem" module="MEI.cmn"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">bowed tremolo</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">A rapid alternation on a single pitch or chord.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
+    </remarks></elementSpec><elementSpec rend="add" ident="bTrem" module="MEI.cmn"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">bowed tremolo</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">A rapid alternation on a single pitch or chord.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       
       <memberOf key="att.bTrem.log"/>
@@ -3888,7 +3888,7 @@
                             be indicated via the <att scheme="TEI">altsym</att> attribute. The starting point of the
                             fermata may be indicated by either a <att scheme="TEI">startid</att>, <att scheme="TEI">tstamp</att>, <att scheme="TEI">tstamp.ges</att>, or <att scheme="TEI">tstamp.real</att> attribute. It is a semantic error not to specify a starting point
                             attribute.</p>
-                    </remarks></elementSpec><elementSpec rend="add" ident="fTrem" module="MEI.cmn"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">fingered tremolo</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">A rapid alternation between a pair of notes (or chords or perhaps
+                    </remarks></elementSpec><elementSpec rend="add" ident="fTrem" module="MEI.cmn"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">fingered tremolo</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">A rapid alternation between a pair of notes (or chords or perhaps
       between a note and a chord) that are (usually) farther apart than a major second.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       
@@ -3899,7 +3899,7 @@
       <memberOf key="model.eventLike.cmn"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
       <choice xmlns="http://relaxng.org/ns/structure/1.0"><group><ref name="chord"/><optional><ref name="clef"/></optional><choice><ref name="chord"/><ref name="note"/></choice></group><group><ref name="note"/><optional><ref name="clef"/></optional><choice><ref name="chord"/><ref name="note"/></choice></group></choice>
-    </content></elementSpec><elementSpec rend="add" ident="gliss" module="MEI.cmn"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">glissando</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">A continuous or sliding movement from one pitch to another, usually
+    </content></elementSpec><elementSpec rend="add" ident="gliss" module="MEI.cmn"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">glissando</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">A continuous or sliding movement from one pitch to another, usually
       indicated by a straight or wavy line.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       
@@ -3929,7 +3929,7 @@
         <att>tstamp.real</att> attribute, while the ending point may be recorded by either a
         <att>dur</att>, <att>dur.ges</att>, <att>endid</att>, or <att>tstamp2</att> attribute. It is
         a semantic error not to specify one starting and one ending type of attribute.</p>
-    </remarks></elementSpec><elementSpec rend="add" ident="graceGrp" module="MEI.cmn"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2023-06-16" xml:lang="en">grace group</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">A container for a sequence of grace notes.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
+    </remarks></elementSpec><elementSpec rend="add" ident="graceGrp" module="MEI.cmn"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">grace group</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">A container for a sequence of grace notes.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       
       <memberOf key="att.graceGrp.log"/>
@@ -3983,7 +3983,7 @@
         a semantic error not to specify one starting and one ending type of attribute. MIDI values
         associated with the graphical dynamic sign may be recorded in the <att>val</att> and
         <att>val2</att> attributes.</p>
-    </remarks></elementSpec><elementSpec rend="add" ident="halfmRpt" module="MEI.cmn"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">half-measure repeat</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">A half-measure repeat in any meter.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
+    </remarks></elementSpec><elementSpec rend="add" ident="halfmRpt" module="MEI.cmn"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">half-measure repeat</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">A half-measure repeat in any meter.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       
       <memberOf key="att.halfmRpt.log"/>
@@ -3993,7 +3993,7 @@
       <memberOf key="model.eventLike.cmn"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
       <empty/>
-    </content></elementSpec><elementSpec rend="add" ident="harpPedal" module="MEI.cmn"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">harp pedal</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Harp pedal diagram.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
+    </content></elementSpec><elementSpec rend="add" ident="harpPedal" module="MEI.cmn"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">harp pedal</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Harp pedal diagram.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       
       <memberOf key="att.harpPedal.log"/>
@@ -4014,7 +4014,7 @@
       <p>The starting point of the harp pedal diagram may be indicated by either a
         <att>tstamp</att>, <att>tstamp.ges</att>, <att>tstamp.real</att> or <att>startid</att>
         attribute. It is a semantic error not to specify a starting point attribute.</p>
-    </remarks></elementSpec><elementSpec rend="add" ident="lv" module="MEI.cmn"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">laissez vibrer</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">A "tie-like" indication that a note should ring beyond its written duration.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
+    </remarks></elementSpec><elementSpec rend="add" ident="lv" module="MEI.cmn"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">laissez vibrer</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">A "tie-like" indication that a note should ring beyond its written duration.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       
       <memberOf key="att.lv.log"/>
@@ -4050,7 +4050,7 @@
                             internal or external entities, such as media objects or annotations. The <att>width</att>
                             attribute may be used to capture the width of the measure for interchange with music
                             printing systems that utilize this information for printing.</p>
-                    </remarks></elementSpec><elementSpec rend="add" ident="mNum" module="MEI.cmn"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">measure number</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Designation, name, or label for a measure, often but not always
+                    </remarks></elementSpec><elementSpec rend="add" ident="mNum" module="MEI.cmn"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">measure number</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Designation, name, or label for a measure, often but not always
       consisting of digits. Use this element when the <att>n</att> attribute on <gi scheme="MEI">measure</gi> does not adequately capture the appearance or placement of the measure
       number/label.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
@@ -4064,7 +4064,7 @@
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.lbLike"/><ref name="model.rendLike"/></choice></zeroOrMore>
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p> <gi scheme="MEI">mNum</gi> uses a subset of model.textPhraseLike.limited.</p>
-    </remarks></elementSpec><elementSpec rend="add" ident="mRest" module="MEI.cmn"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">measure rest</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Complete measure rest in any meter.  </desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
+    </remarks></elementSpec><elementSpec rend="add" ident="mRest" module="MEI.cmn"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">measure rest</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Complete measure rest in any meter.  </desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       
       <memberOf key="att.mRest.log"/>
@@ -4077,7 +4077,7 @@
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>Automatically-generated numbering of consecutive measures of rest may be controlled via the
         <att>multi.number</att> attribute on the <gi scheme="MEI">scoreDef</gi> or <gi scheme="MEI">staffDef</gi> elements.</p>
-    </remarks></elementSpec><elementSpec rend="add" ident="mRpt" module="MEI.cmn"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">measure repeat</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">An indication that the previous measure should be repeated.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
+    </remarks></elementSpec><elementSpec rend="add" ident="mRpt" module="MEI.cmn"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">measure repeat</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">An indication that the previous measure should be repeated.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       
       <memberOf key="att.mRpt.log"/>
@@ -4090,7 +4090,7 @@
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The automated numbering of consecutive measures of rest may be controlled via the
         <att>multi.number</att> attribute on the <gi scheme="MEI">scoreDef</gi> or <gi scheme="MEI">staffDef</gi> elements.</p>
-    </remarks></elementSpec><elementSpec rend="add" ident="multiRest" module="MEI.cmn"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">multiple rest</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Multiple measures of rest compressed into a single symbol, frequently
+    </remarks></elementSpec><elementSpec rend="add" ident="multiRest" module="MEI.cmn"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">multiple rest</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Multiple measures of rest compressed into a single symbol, frequently
       found in performer parts.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       
@@ -4101,7 +4101,7 @@
       <memberOf key="model.eventLike.measureFilling"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
       <empty/>
-    </content></elementSpec><elementSpec rend="add" ident="multiRpt" module="MEI.cmn"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">multiple repeat</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Multiple repeated measures.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
+    </content></elementSpec><elementSpec rend="add" ident="multiRpt" module="MEI.cmn"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">multiple repeat</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Multiple repeated measures.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       
       <memberOf key="att.multiRpt.log"/>
@@ -4167,7 +4167,7 @@
       <p>The starting point of the pedal mark may be indicated by either a <att>startid</att>,
         <att>tstamp</att>, <att>tstamp.ges</att>, or <att>tstamp.real</att> attribute. It is a
         semantic error not to specify one of these attributes.</p>
-    </remarks></elementSpec><elementSpec rend="add" ident="reh" module="MEI.cmn"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">rehearsal mark</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">In an orchestral score and its corresponding parts, a mark indicating a
+    </remarks></elementSpec><elementSpec rend="add" ident="reh" module="MEI.cmn"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">rehearsal mark</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">In an orchestral score and its corresponding parts, a mark indicating a
       convenient point from which to resume rehearsal after a break.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       
@@ -4183,7 +4183,7 @@
       <p>It may also be called a "rehearsal figure", or when numbers are used instead of letters, a
         "rehearsal number". See Read, p. 443. <gi scheme="MEI">reh</gi> uses a subset of
         model.textPhraseLike.limited.</p>
-    </remarks></elementSpec><elementSpec rend="add" ident="repeatMark" module="MEI.cmn"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">repetition mark</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+    </remarks></elementSpec><elementSpec rend="add" ident="repeatMark" module="MEI.cmn"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">repetition mark</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       An instruction expressed as a combination of text and symbols – segno and coda – typically above, 
       below, or between staves, but not on the staff.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
@@ -4589,7 +4589,7 @@
     <classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="model.controlEventLike"/>
     </classes>
-  </classSpec><elementSpec rend="add" ident="fing" module="MEI.fingering"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2023-06-16" xml:lang="en">finger</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">An individual finger in a fingering indication.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
+  </classSpec><elementSpec rend="add" ident="fing" module="MEI.fingering"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">finger</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">An individual finger in a fingering indication.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       
       
@@ -4614,7 +4614,7 @@
             descendant of fing.</sch:assert>
         </sch:rule>
       </constraint>
-    </constraintSpec></elementSpec><elementSpec rend="add" ident="fingGrp" module="MEI.fingering"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2023-06-16" xml:lang="en">finger group</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">A group of individual fingers in a fingering indication.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
+    </constraintSpec></elementSpec><elementSpec rend="add" ident="fingGrp" module="MEI.fingering"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">finger group</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">A group of individual fingers in a fingering indication.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       
       
@@ -4970,7 +4970,7 @@
     </classes>
     <attList xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="chordref" usage="opt">
-        <gloss versionDate="2022-10-30" xml:lang="en">chord reference</gloss>
+        <gloss xml:lang="en">chord reference</gloss>
         <desc xml:lang="en">Contains a reference to a <gi scheme="MEI">chordDef</gi> element elsewhere in the
           document.</desc>
         <datatype>
@@ -5003,7 +5003,7 @@
     <classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="model.controlEventLike.harmony"/>
     </classes>
-  </classSpec><elementSpec rend="add" ident="chordDef" module="MEI.harmony"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">chord definition</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Chord tablature definition.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
+  </classSpec><elementSpec rend="add" ident="chordDef" module="MEI.harmony"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">chord definition</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Chord tablature definition.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       
       
@@ -5040,7 +5040,7 @@
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>A chordTable may be shared between MEI instances through the use of an external parsed
         entity containing the look-up table to be shared.</p>
-    </remarks></elementSpec><elementSpec rend="add" ident="f" module="MEI.harmony"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">figure</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Single element of a figured bass indication.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
+    </remarks></elementSpec><elementSpec rend="add" ident="f" module="MEI.harmony"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">figure</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Single element of a figured bass indication.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       
       
@@ -5050,14 +5050,14 @@
       <memberOf key="model.fLike"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike.limited"/><ref name="model.editLike"/><ref name="model.transcriptionLike"/></choice></zeroOrMore>
-    </content></elementSpec><elementSpec rend="add" ident="fb" module="MEI.harmony"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">figured bass</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Symbols added to a bass line that indicate harmony. Used to improvise a
+    </content></elementSpec><elementSpec rend="add" ident="fb" module="MEI.harmony"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">figured bass</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Symbols added to a bass line that indicate harmony. Used to improvise a
       chordal accompaniment. Sometimes called Generalbass, thoroughbass, or basso continuo.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       
       <memberOf key="model.figbassLike"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="model.fLike"/><ref name="model.editLike"/><ref name="model.transcriptionLike"/></choice></zeroOrMore>
-    </content></elementSpec><elementSpec rend="add" ident="harm" module="MEI.harmony"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">harmony</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">An indication of harmony, <abbr>e.g.</abbr>, chord names, tablature grids, harmonic
+    </content></elementSpec><elementSpec rend="add" ident="harm" module="MEI.harmony"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">harmony</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">An indication of harmony, <abbr>e.g.</abbr>, chord names, tablature grids, harmonic
       analysis, figured bass.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       
@@ -5094,7 +5094,7 @@
       <p>When used within the <gi scheme="MEI">fileDesc</gi> element, <gi scheme="MEI">availability</gi> indicates access to the MEI-encoded document itself.</p>
     </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-availability.html">availability</ref> element of the Text Encoding Initiative (TEI).</p>
-    </remarks></elementSpec><elementSpec rend="add" ident="fileDesc" module="MEI.header"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">file description</gloss><desc rend="replace">(file description) – Contains a full bibliographic description of the MEI file.</desc><classes><memberOf key="att.common"/></classes><content><ref xmlns="http://relaxng.org/ns/structure/1.0" name="titleStmt"/><ref xmlns="http://relaxng.org/ns/structure/1.0" name="pubStmt"/></content><attList org="group"><attDef ident="corresp" usage="opt">
+    </remarks></elementSpec><elementSpec rend="add" ident="fileDesc" module="MEI.header"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">file description</gloss><desc rend="replace">(file description) – Contains a full bibliographic description of the MEI file.</desc><classes><memberOf key="att.common"/></classes><content><ref xmlns="http://relaxng.org/ns/structure/1.0" name="titleStmt"/><ref xmlns="http://relaxng.org/ns/structure/1.0" name="pubStmt"/></content><attList org="group"><attDef ident="corresp" usage="opt">
                             <desc>Used to point to other elements that correspond to this one in a generic fashion.</desc>
                             <datatype maxOccurs="unbounded" minOccurs="1">
                                 <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.URI"/>
@@ -5110,7 +5110,7 @@
                         <p part="N">The @corresp attribute on fileDesc may point to a more complete version of this content in a less restricted version of MEI.</p>
                     </remarks><remarks>
                         <p part="N">This element is modelled on elements in the Text Encoding Initiative (TEI) and Encoded Archival Description (EAD) standards.</p>
-                    </remarks></elementSpec><elementSpec rend="add" ident="meiHead" module="MEI.header"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">MEI header</gloss><desc rend="replace">(MEI header) – Supplies the descriptive and declarative metadata prefixed to every
+                    </remarks></elementSpec><elementSpec rend="add" ident="meiHead" module="MEI.header"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">MEI header</gloss><desc rend="replace">(MEI header) – Supplies the descriptive and declarative metadata prefixed to every
                         MEI-conformant text.</desc><classes><memberOf key="att.basic"/><memberOf key="att.labelled"/><memberOf key="att.lang"/></classes><content><ref xmlns="http://relaxng.org/ns/structure/1.0" name="fileDesc"/></content><constraintSpec xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_meiHead_type" scheme="schematron">
       <constraint>
         <sch:rule context="mei:meiHead[@type eq 'music']">
@@ -5143,10 +5143,10 @@
         </valList>
       </attDef></attList><remarks>
                         <p part="N">For MEI Basic, an MEI header may contain a fileDesc element only.</p>
-                    </remarks></elementSpec><elementSpec rend="add" ident="pubStmt" module="MEI.header"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">publication statement</gloss><desc rend="replace">(publication statement) – Container for information regarding the publication or distribution of a bibliographic item, including the publisher's name and address, the date of publication, and other relevant details.</desc><classes><memberOf key="att.common"/></classes><content><optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="publisher"/></optional><optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="pubPlace"/></optional><optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="date"/></optional><optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="availability"/></optional></content><remarks>
+                    </remarks></elementSpec><elementSpec rend="add" ident="pubStmt" module="MEI.header"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">publication statement</gloss><desc rend="replace">(publication statement) – Container for information regarding the publication or distribution of a bibliographic item, including the publisher's name and address, the date of publication, and other relevant details.</desc><classes><memberOf key="att.common"/></classes><content><optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="publisher"/></optional><optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="pubPlace"/></optional><optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="date"/></optional><optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="availability"/></optional></content><remarks>
                         <p part="N">This element is modelled on an element in the Text Encoding Initiative (TEI) standard. 
                             In MEI Basic, it may contain only publisher, publishing place, date and availability information, in that order.</p>
-                    </remarks></elementSpec><elementSpec rend="add" ident="titleStmt" module="MEI.header"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">title statement</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Container for title and responsibility meta-data.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
+                    </remarks></elementSpec><elementSpec rend="add" ident="titleStmt" module="MEI.header"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">title statement</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Container for title and responsibility meta-data.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -5380,7 +5380,7 @@
       <memberOf key="model.measurePart"/>
       
     </classes>
-  </classSpec><elementSpec rend="add" ident="instrDef" module="MEI.midi"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">instrument definition</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">MIDI instrument declaration.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
+  </classSpec><elementSpec rend="add" ident="instrDef" module="MEI.midi"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">instrument definition</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">MIDI instrument declaration.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.basic"/>
       <memberOf key="att.labelled"/>
       
@@ -5433,7 +5433,7 @@
     </classes>
   </classSpec><classSpec rend="add" predeclare="true" ident="model.persNamePart" module="MEI.namesdates" type="model">
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Groups elements which form part of a personal name.</desc>
-  </classSpec><elementSpec rend="add" ident="persName" module="MEI.namesdates"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">personal name</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Designation for an individual, including any or all of that individual's
+  </classSpec><elementSpec rend="add" ident="persName" module="MEI.namesdates"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">personal name</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Designation for an individual, including any or all of that individual's
       forenames, surnames, honorific titles, and added names.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       
@@ -5813,7 +5813,7 @@
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that permit total duration to be represented by multiple values.</desc>
     <attList xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="dur" usage="opt">
-        <gloss versionDate="2022-10-18" xml:lang="en">duration</gloss>
+        <gloss xml:lang="en">duration</gloss>
         <desc xml:lang="en">When a duration cannot be represented as a single power-of-two value, multiple
           space-separated values that add up to the total duration may be used.</desc>
         <datatype maxOccurs="unbounded">
@@ -5825,7 +5825,7 @@
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that express duration in musical terms.</desc>
     <attList xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="dur" usage="opt">
-        <gloss versionDate="2022-10-18" xml:lang="en">duration</gloss>
+        <gloss xml:lang="en">duration</gloss>
         <desc xml:lang="en">Records the duration of a feature using the relative durational values provided by the
           data.DURATION datatype.</desc>
         <datatype>
@@ -5837,7 +5837,7 @@
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that describe duration as a ratio.</desc>
     <attList xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="num" usage="opt">
-        <gloss versionDate="2022-10-18" xml:lang="en">number</gloss>
+        <gloss xml:lang="en">number</gloss>
         <desc xml:lang="en">Along with numbase, describes duration as a ratio. num is the first value in the
           ratio, while numbase is the second.</desc>
         <datatype>
@@ -6009,7 +6009,7 @@
     <attList xmlns:xi="http://www.w3.org/2001/XInclude">
       
       <attDef ident="lendsym" usage="opt">
-        <gloss versionDate="2022-11-11" xml:lang="en">line end symbol</gloss>
+        <gloss xml:lang="en">line end symbol</gloss>
         <desc xml:lang="en">Symbol rendered at end of line.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.LINESTARTENDSYMBOL"/>
@@ -6022,7 +6022,7 @@
         </datatype>
       </attDef>
       <attDef ident="lstartsym" usage="opt">
-        <gloss versionDate="2022-11-11" xml:lang="en">line start symbol</gloss>
+        <gloss xml:lang="en">line start symbol</gloss>
         <desc xml:lang="en">Symbol rendered at start of line.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.LINESTARTENDSYMBOL"/>
@@ -6223,7 +6223,7 @@
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that record written octave.</desc>
     <attList xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="oct" usage="opt">
-        <gloss versionDate="2022-10-18" xml:lang="en">octave</gloss>
+        <gloss xml:lang="en">octave</gloss>
         <desc xml:lang="en">Captures written octave information.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.OCTAVE"/>
@@ -6264,7 +6264,7 @@
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that record written pitch name.</desc>
     <attList xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="pname" usage="opt">
-        <gloss versionDate="2022-10-18" xml:lang="en">pitch name</gloss>
+        <gloss xml:lang="en">pitch name</gloss>
         <desc xml:lang="en">Contains a written pitch name.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.PITCHNAME"/>
@@ -6626,7 +6626,7 @@
         </datatype>
       </attDef>
       <attDef ident="rend" usage="opt">
-        <gloss versionDate="2022-10-18" xml:lang="en">rendition</gloss>
+        <gloss xml:lang="en">rendition</gloss>
         <desc xml:lang="en">Captures the appearance of the element’s contents using MEI-defined
           descriptors.</desc>
         <datatype maxOccurs="unbounded">
@@ -6639,7 +6639,7 @@
       part].</desc>
     <attList xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="tstamp" usage="opt">
-        <gloss versionDate="2022-10-18" xml:lang="en">time stamp</gloss>
+        <gloss xml:lang="en">time stamp</gloss>
         <desc xml:lang="en">Encodes the onset time in terms of musical time, <abbr>i.e.</abbr>, beats[.fractional beat part],
           as expressed in the written time signature.</desc>
         <datatype>
@@ -6663,7 +6663,7 @@
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that describe transposition.</desc>
     <attList xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="trans.diat" usage="opt">
-        <gloss versionDate="2022-10-18" xml:lang="en">transposition (diatonic)</gloss>
+        <gloss xml:lang="en">transposition (diatonic)</gloss>
         <desc xml:lang="en">Records the amount of diatonic pitch shift, <abbr>e.g.</abbr>, C to C♯ = 0, C to D♭ = 1, necessary
           to calculate the sounded pitch from the written one.</desc>
         <datatype>
@@ -6671,7 +6671,7 @@
         </datatype>
       </attDef>
       <attDef ident="trans.semi" usage="opt">
-        <gloss versionDate="2022-10-18" xml:lang="en">transposition (semitones)</gloss>
+        <gloss xml:lang="en">transposition (semitones)</gloss>
         <desc xml:lang="en">Records the amount of pitch shift in semitones, <abbr>e.g.</abbr>, C to C♯ = 1, C to D♭ = 1,
           necessary to calculate the sounded pitch from the written one.</desc>
         <datatype>
@@ -7159,7 +7159,7 @@
       <memberOf key="model.textPhraseLike.limited"/>
       
     </classes>
-  </classSpec><elementSpec rend="add" ident="accid" module="MEI.shared"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">accidental</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Records a temporary alteration to the pitch of a note.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
+  </classSpec><elementSpec rend="add" ident="accid" module="MEI.shared"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">accidental</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Records a temporary alteration to the pitch of a note.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       
       
@@ -7189,7 +7189,7 @@
       <memberOf key="model.respLikePart"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike.limited"/></choice></zeroOrMore>
-    </content></elementSpec><elementSpec rend="add" ident="artic" module="MEI.shared"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">articulation</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">An indication of how to play a note or chord.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
+    </content></elementSpec><elementSpec rend="add" ident="artic" module="MEI.shared"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">articulation</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">An indication of how to play a note or chord.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       
       
@@ -7299,7 +7299,7 @@
         needs to be recorded for the clef or when multiple, simultaneous clefs occur on a single
         staff. This element may also be used within the staff context to indicate changes of
         clef.</p>
-    </remarks></elementSpec><elementSpec rend="add" ident="clefGrp" module="MEI.shared"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">clef group</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">A set of simultaneously-occurring clefs.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
+    </remarks></elementSpec><elementSpec rend="add" ident="clefGrp" module="MEI.shared"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">clef group</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">A set of simultaneously-occurring clefs.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       <memberOf key="att.event"/>
       
@@ -7322,7 +7322,7 @@
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike.limited"/></choice></zeroOrMore>
     </content></elementSpec><elementSpec rend="add" ident="date" module="MEI.shared"><desc rend="replace">A string identifying a point in time or the time period between two such points.</desc><classes><memberOf key="att.common"/><memberOf key="att.calendared"/><memberOf key="att.datable"/><memberOf key="att.lang"/></classes><content><zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike"/></choice></zeroOrMore></content><remarks>
                         <p part="N">This element is modelled on elements in the Text Encoding Initiative (TEI) and Encoded Archival Description (EAD) standards.</p>
-                    </remarks></elementSpec><elementSpec rend="add" ident="dir" module="MEI.shared"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">directive</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">An instruction expressed as a combination of text and symbols, typically above,
+                    </remarks></elementSpec><elementSpec rend="add" ident="dir" module="MEI.shared"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">directive</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">An instruction expressed as a combination of text and symbols, typically above,
       below, or between staves, but not on the staff — that is not encoded elsewhere in more specific
       elements, like <gi scheme="MEI">tempo</gi>, <gi scheme="MEI">dynam</gi>  or <gi scheme="MEI">repeatMark</gi>.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
@@ -7350,7 +7350,7 @@
         or <att>tstamp.real</att> attribute, while the ending point may be recorded by either a
         <att>dur</att>, <att>dur.ges</att>, <att>endid</att>, or <att>tstamp2</att> attribute. It is
         a semantic error not to specify a starting point attribute.</p>
-    </remarks></elementSpec><elementSpec rend="add" ident="dynam" module="MEI.shared"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">dynamic</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Indication of the volume of a note, phrase, or section of music.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
+    </remarks></elementSpec><elementSpec rend="add" ident="dynam" module="MEI.shared"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">dynamic</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Indication of the volume of a note, phrase, or section of music.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       
       <memberOf key="att.lang"/>
@@ -7453,7 +7453,7 @@
         <att>n</att> attribute. If neither <att>def</att> nor <att>n</att> attributes are present,
         then encoding order of the layers is presumed to match the encoding order of the layer
         definitions.</p>
-    </remarks></elementSpec><elementSpec rend="add" ident="lb" module="MEI.shared"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">line beginning</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">An empty formatting element that forces text to begin on a new
+    </remarks></elementSpec><elementSpec rend="add" ident="lb" module="MEI.shared"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">line beginning</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">An empty formatting element that forces text to begin on a new
       line.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       
@@ -7477,7 +7477,7 @@
       <memberOf key="model.respLikePart"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike.limited"/></choice></zeroOrMore>
-    </content></elementSpec><elementSpec rend="add" ident="mdiv" module="MEI.shared"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">musical division</gloss><desc rend="replace">(musical division) – Contains a subdivision of the body of a musical text.</desc><classes><memberOf key="att.common"/><memberOf key="att.mdiv.ges"/><memberOf key="model.mdivLike"/></classes><content><choice xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.scoreLike"/><zeroOrMore><ref name="model.mdivLike"/></zeroOrMore></choice></content><attList org="group"><attDef ident="n" usage="opt">
+    </content></elementSpec><elementSpec rend="add" ident="mdiv" module="MEI.shared"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">musical division</gloss><desc rend="replace">(musical division) – Contains a subdivision of the body of a musical text.</desc><classes><memberOf key="att.common"/><memberOf key="att.mdiv.ges"/><memberOf key="model.mdivLike"/></classes><content><choice xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.scoreLike"/><zeroOrMore><ref name="model.mdivLike"/></zeroOrMore></choice></content><attList org="group"><attDef ident="n" usage="opt">
                             <desc>Provides a number-like designation that indicates an element's position in a sequence of similar elements. May not contain space characters.</desc>
                             <datatype maxOccurs="1" minOccurs="1">
                                 <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.WORD"/>
@@ -7560,7 +7560,7 @@
         The starting point of the ornament may be indicated by either a <att>startid</att>,
         <att>tstamp</att>, <att>tstamp.ges</att>, or <att>tstamp.real</att> attribute. It is a semantic
         error not to specify one of these attributes.</p>
-    </remarks></elementSpec><elementSpec rend="add" ident="pb" module="MEI.shared"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">page beginning</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">An empty formatting element that forces text to begin on a new
+    </remarks></elementSpec><elementSpec rend="add" ident="pb" module="MEI.shared"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">page beginning</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">An empty formatting element that forces text to begin on a new
       page.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       
@@ -7580,7 +7580,7 @@
         score context, a page beginning implies an accompanying system beginning.</p>
     </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-pb.html">pb</ref> element of the Text Encoding Initiative (TEI).</p>
-    </remarks></elementSpec><elementSpec rend="add" ident="pgFoot" module="MEI.shared"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">page footer</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">A running footer.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
+    </remarks></elementSpec><elementSpec rend="add" ident="pgFoot" module="MEI.shared"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">page footer</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">A running footer.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       
       <memberOf key="att.formework"/>
@@ -7594,7 +7594,7 @@
         used within <gi scheme="MEI">pb</gi>, it records a temporary suspension of the pattern of
         page footers established by the use of <gi scheme="MEI">pgFoot</gi> within a previous <gi scheme="MEI">scoreDef</gi>. Auto-generated page numbers may be indicated with a processing
         instruction. The pgHead and pgFoot elements should <hi rend="bold">*not*</hi> be used to encode textual notes/annotations.</p>
-    </remarks></elementSpec><elementSpec rend="add" ident="pgHead" module="MEI.shared"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">page header</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">A running header.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
+    </remarks></elementSpec><elementSpec rend="add" ident="pgHead" module="MEI.shared"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">page header</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">A running header.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       
       <memberOf key="att.formework"/>
@@ -7608,7 +7608,7 @@
         used within <gi scheme="MEI">pb</gi>, it records a temporary suspension of the pattern of
         page headers established by the use of <gi scheme="MEI">pgHead</gi> within a previous <gi scheme="MEI">scoreDef</gi>. Auto-generated page numbers may be indicated with a processing
         instruction. The pgHead and pgFoot elements should <hi rend="bold">*not*</hi> be used to encode textual notes/annotations.</p>
-    </remarks></elementSpec><elementSpec rend="add" ident="pubPlace" module="MEI.shared"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">publication place</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Name of the place where a bibliographic item was published.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
+    </remarks></elementSpec><elementSpec rend="add" ident="pubPlace" module="MEI.shared"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">publication place</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Name of the place where a bibliographic item was published.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       
       
@@ -7619,7 +7619,7 @@
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike.limited"/></choice></zeroOrMore>
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-pubPlace.html">pubPlace</ref> element of the Text Encoding Initiative (TEI).</p>
-    </remarks></elementSpec><elementSpec rend="add" ident="rend" module="MEI.shared"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">render</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">A formatting element indicating special visual rendering, <abbr>e.g.</abbr>, bold or
+    </remarks></elementSpec><elementSpec rend="add" ident="rend" module="MEI.shared"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">render</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">A formatting element indicating special visual rendering, <abbr>e.g.</abbr>, bold or
       italicized, of a text word or phrase.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.color"/>
       <memberOf key="att.common"/>
@@ -7644,7 +7644,7 @@
         be used instead of the <gi scheme="MEI">rend</gi> element. The <att>glyph.auth</att> and <att>glyph.uri</att>
         attributes may be used to specify an external authority, <abbr>e.g.,</abbr> SMuFL, to be used for
         displaying code points in the textual content of the element.</p>
-    </remarks></elementSpec><elementSpec rend="add" ident="respStmt" module="MEI.shared"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">responsibility statement</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Transcription of text that names one or more individuals,
+    </remarks></elementSpec><elementSpec rend="add" ident="respStmt" module="MEI.shared"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">responsibility statement</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Transcription of text that names one or more individuals,
       groups, or in rare cases, mechanical processes, responsible for creation, realization,
       production, funding, or distribution of the intellectual or artistic content.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
@@ -7686,7 +7686,7 @@
     </constraintSpec><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>See (Read, p. 96-102). Do not confuse this element with the <gi scheme="MEI">space</gi>
         element, which is used as an aid for visual alignment.</p>
-    </remarks></elementSpec><elementSpec rend="add" ident="sb" module="MEI.shared"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">system beginning</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">An empty formatting element that forces musical notation to begin on
+    </remarks></elementSpec><elementSpec rend="add" ident="sb" module="MEI.shared"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">system beginning</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">An empty formatting element that forces musical notation to begin on
       a new line.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       
@@ -7715,7 +7715,7 @@
       <p>A score may consist entirely of page beginnings, each of which points to a page
       image. <gi scheme="MEI">div</gi> elements are allowed preceding and following sections
       of music data in order to accommodate blocks of explanatory text.</p>
-    </remarks></elementSpec><elementSpec rend="add" ident="scoreDef" module="MEI.shared"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">score definition</gloss><desc rend="replace">(score definition) – Container for score meta-information.</desc><classes><memberOf key="att.common"/><memberOf key="model.scoreDefLike"/><memberOf key="att.keySigDefault.log" mode="add"/><memberOf key="att.meterSigDefault.log" mode="add"/></classes><content><optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.symbolTableLike"/></optional><optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.keySigLike"/></optional><optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.meterSigLike"/></optional><optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="pgHead"/></optional><optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="pgFoot"/></optional><optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="instrGrp"/></optional><choice xmlns="http://relaxng.org/ns/structure/1.0"><optional><ref name="model.staffGrpLike"/></optional></choice></content></elementSpec><elementSpec rend="add" ident="section" module="MEI.shared"><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Segment of music data.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
+    </remarks></elementSpec><elementSpec rend="add" ident="scoreDef" module="MEI.shared"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">score definition</gloss><desc rend="replace">(score definition) – Container for score meta-information.</desc><classes><memberOf key="att.common"/><memberOf key="model.scoreDefLike"/><memberOf key="att.keySigDefault.log" mode="add"/><memberOf key="att.meterSigDefault.log" mode="add"/></classes><content><optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.symbolTableLike"/></optional><optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.keySigLike"/></optional><optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.meterSigLike"/></optional><optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="pgHead"/></optional><optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="pgFoot"/></optional><optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="instrGrp"/></optional><choice xmlns="http://relaxng.org/ns/structure/1.0"><optional><ref name="model.staffGrpLike"/></optional></choice></content></elementSpec><elementSpec rend="add" ident="section" module="MEI.shared"><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Segment of music data.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       
       
@@ -7786,7 +7786,7 @@
         contain a staffDef element that defines it. If neither <att>def</att> nor <att>n</att>
         attributes are present, then the encoding order of the staves is presumed to match the
         encoding order of the staff definitions.</p>
-    </remarks></elementSpec><elementSpec rend="add" ident="staffDef" module="MEI.shared"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">staff definition</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Container for staff meta-information.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
+    </remarks></elementSpec><elementSpec rend="add" ident="staffDef" module="MEI.shared"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">staff definition</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Container for staff meta-information.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.basic"/>
       <memberOf key="att.labelled"/>
       
@@ -7905,7 +7905,7 @@
           </sch:rule>
         </sch:pattern>
       </constraint>
-    </constraintSpec></elementSpec><elementSpec rend="add" ident="staffGrp" module="MEI.shared"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">staff group</gloss><desc rend="replace">(staff group) – A group of bracketed or braced staves.</desc><classes><memberOf key="att.common"/><memberOf key="att.staffGrp.vis"/><memberOf key="att.staffGrp.ges"/><memberOf key="model.staffGrpLike"/></classes><content><zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="model.labelLike"/></choice></zeroOrMore><zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.instrDefLike"/></zeroOrMore><oneOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="model.staffGrpLike"/><ref name="model.staffDefLike"/></choice></oneOrMore></content><constraintSpec ident="Check_staffGrp_unique_staff_n_values" scheme="schematron">
+    </constraintSpec></elementSpec><elementSpec rend="add" ident="staffGrp" module="MEI.shared"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">staff group</gloss><desc rend="replace">(staff group) – A group of bracketed or braced staves.</desc><classes><memberOf key="att.common"/><memberOf key="att.staffGrp.vis"/><memberOf key="att.staffGrp.ges"/><memberOf key="model.staffGrpLike"/></classes><content><zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="model.labelLike"/></choice></zeroOrMore><zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.instrDefLike"/></zeroOrMore><oneOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="model.staffGrpLike"/><ref name="model.staffDefLike"/></choice></oneOrMore></content><constraintSpec ident="Check_staffGrp_unique_staff_n_values" scheme="schematron">
                         <constraint>
                             <sch:rule context="mei:staffGrp">
                                 <sch:let name="countstaves" value="count(descendant::mei:staffDef)"/>
@@ -7927,7 +7927,7 @@
                         <p>System is the more proper name for this concept (Read, p. 37-38). Bracketed staff groups
                             may contain other bracketed or braced staff groups or single staves. See Read, p. 35-38,
                             examples p. 434, 438.</p>
-                    </remarks></elementSpec><elementSpec rend="add" ident="syl" module="MEI.shared"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2022-05-18" xml:lang="en">syllable</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Individual lyric syllable.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
+                    </remarks></elementSpec><elementSpec rend="add" ident="syl" module="MEI.shared"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">syllable</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Individual lyric syllable.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       
       <memberOf key="att.lang"/>
@@ -8850,7 +8850,7 @@
     </classes>
     <attList xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="bar.thru" usage="opt">
-        <gloss versionDate="2022-10-18" xml:lang="en">bar lines through</gloss>
+        <gloss xml:lang="en">bar lines through</gloss>
         <desc xml:lang="en">Indicates whether bar lines go across the space between staves (true) or are only
           drawn across the lines of each staff (false).</desc>
         <datatype>
