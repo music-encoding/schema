@@ -20,7 +20,7 @@
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../source/validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2024-10-18T10:22:16.922970513+02:00-->
+<!--canonicalized: 2024-10-18T10:35:45.433170364+02:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -21626,9 +21626,9 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="multiRest" module="MEI.cmn">
-    <gloss xml:lang="en">multiple rest</gloss>
-    <desc xml:lang="en">Multiple measures of rest compressed into a single symbol, frequently
-      found in performer parts.</desc>
+    <gloss xml:lang="en">multimeasure rest</gloss>
+    <desc xml:lang="en">Multiple full measure rests compressed into a single bar, 
+      frequently found in performer parts.</desc>
     <classes>
       <memberOf key="att.common"/>
       <memberOf key="att.facsimile"/>

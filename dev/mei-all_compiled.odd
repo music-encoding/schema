@@ -5502,8 +5502,8 @@
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The automated numbering of consecutive measures of space may be controlled via the
         <att>multi.number</att> attribute on the <gi scheme="MEI">scoreDef</gi> or <gi scheme="MEI">staffDef</gi> elements.</p>
-    </remarks></elementSpec><elementSpec rend="add" ident="multiRest" module="MEI.cmn"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">multiple rest</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Multiple measures of rest compressed into a single symbol, frequently
-      found in performer parts.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
+    </remarks></elementSpec><elementSpec rend="add" ident="multiRest" module="MEI.cmn"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">multimeasure rest</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Multiple full measure rests compressed into a single bar, 
+      frequently found in performer parts.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       <memberOf key="att.facsimile"/>
       <memberOf key="att.multiRest.log"/>

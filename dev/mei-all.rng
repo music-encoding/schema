@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2024-10-18T08:22:20Z. . 
+Schema generated from ODD source 2024-10-18T08:35:49Z. . 
 TEI Edition: Development Version 
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -10818,7 +10818,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
    </define>
    <define name="mei_multiRest">
       <element name="multiRest">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(multiple rest) Multiple measures of rest compressed into a single symbol, frequently found in performer parts.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(multimeasure rest) Multiple full measure rests compressed into a single bar, frequently found in performer parts.</a:documentation>
          <empty/>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.facsimile.attributes"/>
