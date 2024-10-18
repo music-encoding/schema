@@ -20,7 +20,7 @@
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../source/validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2024-10-18T09:47:47.693675734+02:00-->
+<!--canonicalized: 2024-10-18T10:18:32.00879922+02:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -1241,7 +1241,7 @@
                         <specDesc key="colLayout"/>
                      </specList>
                   </p>
-                  <p>In order to force a system break in the musical text <gi scheme="MEI">sb</gi> can be used.</p>
+                  <p>In order to force the beginning of a new system in the musical text <gi scheme="MEI">sb</gi> can be used.</p>
                   <p>
                      <specList>
                         <specDesc key="sb"/>
@@ -4164,7 +4164,7 @@
                            <specDesc key="lg"/>
                         </specList>
                      </p>
-                     <p>The following example shows the encoding of the title page of Vaughan Williams' <hi rend="italic">On Wenlock Edge</hi>. Note the use of the <gi scheme="MEI">lb</gi> element to mark the line breaks present in the original.</p>
+                     <p>The following example shows the encoding of the title page of <name ref="https://en.wikipedia.org/wiki/Ralph_Vaughan_Williams">Vaughan Williams'</name> <hi rend="italic">On Wenlock Edge</hi>. Note the use of the <gi scheme="MEI">lb</gi> element to mark the beginning of new lines present in the original.</p>
                      <p>
                         <figure>
                            <head/>
@@ -11205,7 +11205,7 @@ or
 &lt;/section&gt;</egXML>
                   </figure>
                </p>
-               <p>Optionally, it is possible to include an <gi scheme="MEI">lb</gi> element within <gi scheme="MEI">verse</gi> to explicitly encode line and line group endings. This is specifically meant to facilitate karaoke applications.</p>
+               <p>Optionally, it is possible to include an <gi scheme="MEI">lb</gi> element within <gi scheme="MEI">verse</gi> to explicitly encode line and line group beginnings. This is specifically meant to facilitate karaoke applications.</p>
                <p>Finally, the <att>rhythm</att> attribute on <gi scheme="MEI">l</gi> can be used to specify a rhythm for the syllable that differs from that of the notes on the staff (see <ptr target="#lyricsAfterEvents"/>).</p>
             </div>
             <div xml:id="lyricsAfterEvents" type="div2">
@@ -11478,7 +11478,7 @@ or
 </egXML>
                         </figure>
                      </p>
-                     <p>Alternatively, the pointers in the table of contents might link to the page breaks at which a song begins, assuming that these have been included in the markup:</p>
+                     <p>Alternatively, the pointers in the table of contents might link to the page beginnings at which a song begins, assuming that these have been included in the markup:</p>
                      <p>
                         <figure>
                            <head/>
@@ -11547,7 +11547,7 @@ or
 </egXML>
                         </figure>
                      </p>
-                     <p>Note that if the page breaks in the original source have also been explicitly encoded, and given identifiers, the references to them in the above index can more usefully be recorded as links. For example, assuming that the encoding of page 77 of the original source starts like this:</p>
+                     <p>Note that if the page beginnings in the original source have also been explicitly encoded, and given identifiers, the references to them in the above index can more usefully be recorded as links. For example, assuming that the encoding of page 77 of the original source starts like this:</p>
                      <p>
                         <figure>
                            <head/>
@@ -14549,7 +14549,7 @@ or
 </egXML>
                         </figure>
                     </p>
-                    <p>The <att>next</att> and <att>prev</att> attributes may also be useful to clarify a sequence of entities which occurs across some form of interruption, in this case, notes before and after a system or page break where there is no custos or direct in the source:</p>
+                    <p>The <att>next</att> and <att>prev</att> attributes may also be useful to clarify a sequence of entities which occurs across some form of interruption, in this case, notes before and after a new system or page beginning where there is no custos or direct in the source:</p>
                     <p>
                         <figure>
                             <head/>
@@ -14599,7 +14599,7 @@ or
                         </specList>
                     </p>
                     <p>
-                        The <gi scheme="MEI">ptr</gi> element is a traversible pointer to another location. It is an empty linking element that uses only attributes to describe its link destination. It cannot contain text or sub-elements to describe the referenced object. The next example shows the use of the <gi scheme="MEI">ptr</gi> element to target a certain identifier (here <abbr>e.g.</abbr>, a page number, or more precisely, page break elements, <gi scheme="MEI">pb</gi>, bearing these identifiers) from within a <gi scheme="MEI">list</gi> of item descriptions:
+                        The <gi scheme="MEI">ptr</gi> element is a traversible pointer to another location. It is an empty linking element that uses only attributes to describe its link destination. It cannot contain text or sub-elements to describe the referenced object. The next example shows the use of the <gi scheme="MEI">ptr</gi> element to target a certain identifier (here <abbr>e.g.</abbr>, a page number, or more precisely, page beginning elements, <gi scheme="MEI">pb</gi>, bearing these identifiers) from within a <gi scheme="MEI">list</gi> of item descriptions:
                     </p>
                     <p>
                         <figure>
