@@ -3689,7 +3689,7 @@
       <memberOf key="att.timestamp2.log"/>
     </classes>
   </classSpec><classSpec rend="add" ident="att.tremForm" module="MEI.cmn" type="atts">
-    <desc xmlns:xi="http://www.w3.org/2001/XInclude">Attributes describing the form of a tremolo.</desc>
+    <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes describing the form of a tremolo.</desc>
     <attList xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="form" usage="opt">
         <desc xml:lang="en">Describes the style of the tremolo.</desc>
@@ -5092,7 +5092,6 @@
       <ref xmlns="http://relaxng.org/ns/structure/1.0" name="macro.availabilityPart"/>
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>When used within the <gi scheme="MEI">fileDesc</gi> element, <gi scheme="MEI">availability</gi> indicates access to the MEI-encoded document itself.</p>
-    </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-availability.html">availability</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="fileDesc" module="MEI.header"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">file description</gloss><desc rend="replace">(file description) – Contains a full bibliographic description of the MEI file.</desc><classes><memberOf key="att.common"/></classes><content><ref xmlns="http://relaxng.org/ns/structure/1.0" name="titleStmt"/><ref xmlns="http://relaxng.org/ns/structure/1.0" name="pubStmt"/></content><attList org="group"><attDef ident="corresp" usage="opt">
                             <desc>Used to point to other elements that correspond to this one in a generic fashion.</desc>
@@ -5449,7 +5448,6 @@
         For greater specificity, however, use foreName, famName, genName, addName, genName,
         nameLink, and roleName elements. The name of the list from which a controlled value for
         persName is taken may be recorded using the <att>auth</att> attribute.</p>
-    </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-persname">persname</ref> element of the Encoded Archival Description (EAD).</p>
     </remarks></elementSpec><macroSpec rend="add" ident="macro.metaLike.page" module="MEI.shared" type="pe">
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Groups elements that contain meta-data about a single page.</desc>

@@ -20,7 +20,7 @@
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../source/validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2024-10-18T09:36:56.252070506+02:00-->
+<!--canonicalized: 2024-10-18T09:47:47.693675734+02:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -20777,7 +20777,7 @@ or
     </attList>
   </classSpec>
   <classSpec ident="att.tremForm" module="MEI.cmn" type="atts">
-    <desc>Attributes describing the form of a tremolo.</desc>
+    <desc xml:lang="en">Attributes describing the form of a tremolo.</desc>
     <attList>
       <attDef ident="form" usage="opt">
         <desc xml:lang="en">Describes the style of the tremolo.</desc>
@@ -22470,8 +22470,6 @@ or
         note, phrase, measure, etc.), its text-critical significance (<abbr>e.g.</abbr>, significant, accidental,
         unclear), or the nature of the variation or the principles required to understand it (<abbr>e.g.</abbr>,
         lectio difficilior, usus auctoris, etc.).</p>
-    </remarks>
-    <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-app.html">app</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
@@ -22522,8 +22520,6 @@ or
         permitted to occur within the parent of its own <gi scheme="MEI">app</gi> ancestor. For
         example, when used as a descendent of <gi scheme="MEI">verse</gi>, <gi scheme="MEI">lem</gi>
         should only contain those elements allowed within <gi scheme="MEI">verse</gi>.</p>
-    </remarks>
-    <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-lem.html">lem</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
@@ -22567,14 +22563,10 @@ or
         is allowed so that a reading may have its own meta-data without incurring the overhead of
         child <gi scheme="MEI">section</gi> elements. The <gi scheme="MEI">app</gi> sub-element is
         permitted in order to allow nested sub-variants.</p>
-    </remarks>
-    <remarks xml:lang="en">
       <p>In no case should <gi scheme="MEI">rdg</gi> contain elements that would not otherwise be
         permitted to occur within the parent of its own <gi scheme="MEI">app</gi> ancestor. For
         example, when used as a descendent of <gi scheme="MEI">verse</gi>, <gi scheme="MEI">rdg</gi>
         should only contain those elements allowed within <gi scheme="MEI">verse</gi>.</p>
-    </remarks>
-    <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-rdg.html">rdg</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
@@ -22696,8 +22688,6 @@ or
       <p>In a musical context <gi scheme="MEI">sp</gi> must have a start-type attribute when it's
         not a descendant of <gi scheme="MEI">sp</gi>. In a textual content <gi scheme="MEI">sp</gi>
         must NOT have any musical attributes.</p>
-    </remarks>
-    <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-sp.html">sp</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
@@ -22745,8 +22735,6 @@ or
     <remarks xml:lang="en">
       <p>In a musical context <gi scheme="MEI">stageDir</gi> must have a start-type attribute when
         it’s not a descendant of <gi scheme="MEI">sp</gi>. In a textual content <gi scheme="MEI">stageDir</gi> must NOT have any musical attributes.</p>
-    </remarks>
-    <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-stage.html">stage</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
@@ -22915,8 +22903,6 @@ or
       <p>In no case should <gi scheme="MEI">abbr</gi> contain elements that would not otherwise be
         permitted to occur within the parent of its own <gi scheme="MEI">app</gi> ancestor. For
         example, when used as a descendent of <gi scheme="MEI">verse</gi>, <gi scheme="MEI">abbr</gi> should only contain those elements allowed within <gi scheme="MEI">verse</gi>.</p>
-    </remarks>
-    <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-abbr.html">abbr</ref> element of the Text Encoding Initiative (TEI) and the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-abbr">abbr</ref> element of the Encoded
         Archival Description (EAD).</p>
     </remarks>
@@ -22972,8 +22958,6 @@ or
         permitted to occur within the parent of its own <gi scheme="MEI">app</gi> ancestor. For
         example, when used as a descendent of <gi scheme="MEI">verse</gi>, <gi scheme="MEI">add</gi>
         should only contain those elements allowed within <gi scheme="MEI">verse</gi>.</p>
-    </remarks>
-    <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-add.html">add</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
@@ -22996,8 +22980,6 @@ or
         However, there may be cases where a full representation of a text requires the alternative
         encodings to be considered as parallel. Note also that <gi scheme="MEI">choice</gi> elements
         may be recursively nested.</p>
-    </remarks>
-    <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-choice.html">choice</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
@@ -23044,8 +23026,6 @@ or
       <p>In no case should <gi scheme="MEI">corr</gi> contain elements that would not otherwise be
         permitted to occur within the parent of its own <gi scheme="MEI">app</gi> ancestor. For
         example, when used as a descendent of <gi scheme="MEI">verse</gi>, <gi scheme="MEI">corr</gi> should only contain those elements allowed within <gi scheme="MEI">verse</gi>.</p>
-    </remarks>
-    <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-corr.html">corr</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
@@ -23160,8 +23140,6 @@ or
       <p>In no case should <gi scheme="MEI">damage</gi> contain elements that would not otherwise be
         permitted to occur within the parent of its own <gi scheme="MEI">app</gi> ancestor. For
         example, when used as a descendent of <gi scheme="MEI">verse</gi>, <gi scheme="MEI">damage</gi> should only contain those elements allowed within <gi scheme="MEI">verse</gi>.</p>
-    </remarks>
-    <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-damage.html">damage</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
@@ -23211,8 +23189,6 @@ or
         permitted to occur within the parent of its own <gi scheme="MEI">app</gi> ancestor. For
         example, when used as a descendent of <gi scheme="MEI">verse</gi>, <gi scheme="MEI">del</gi>
         should only contain those elements allowed within <gi scheme="MEI">verse</gi>.</p>
-    </remarks>
-    <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-del.html">del</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
@@ -23261,8 +23237,6 @@ or
       <p>In no case should <gi scheme="MEI">expan</gi> contain elements that would not otherwise be
         permitted to occur within the parent of its own <gi scheme="MEI">app</gi> ancestor. For
         example, when used as a descendent of <gi scheme="MEI">verse</gi>, <gi scheme="MEI">expan</gi> should only contain those elements allowed within <gi scheme="MEI">verse</gi>.</p>
-    </remarks>
-    <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-expan.html">expan</ref> element of the Text Encoding Initiative (TEI) and the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-expan">expan</ref> element of the Encoded
         Archival Description (EAD).</p>
     </remarks>
@@ -23296,8 +23270,6 @@ or
         the deletion in the case of text omitted from the transcription because of deliberate
         deletion by an identifiable hand. The <att>cert</att> attribute signifies the degree of
         certainty ascribed to the identification of the extent of the missing material.</p>
-    </remarks>
-    <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-gap.html">gap</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
@@ -23366,8 +23338,6 @@ or
         editor or transcriber responsible for identifying the change of hand. The <att>cert</att>
         attribute signifies the degree of certainty ascribed to the identification of the new
         hand.</p>
-    </remarks>
-    <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-handShift.html">handShift</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
@@ -23494,8 +23464,6 @@ or
       <p>In no case should <gi scheme="MEI">orig</gi> contain elements that would not otherwise be
         permitted to occur within the parent of its own <gi scheme="MEI">app</gi> ancestor. For
         example, when used as a descendent of <gi scheme="MEI">verse</gi>, <gi scheme="MEI">orig</gi> should only contain those elements allowed within <gi scheme="MEI">verse</gi>.</p>
-    </remarks>
-    <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-orig.html">orig</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
@@ -23544,8 +23512,6 @@ or
         permitted to occur within the parent of its own <gi scheme="MEI">app</gi> ancestor. For
         example, when used as a descendent of <gi scheme="MEI">verse</gi>, <gi scheme="MEI">reg</gi>
         should only contain those elements allowed within <gi scheme="MEI">verse</gi>.</p>
-    </remarks>
-    <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-reg.html">reg</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
@@ -23596,8 +23562,6 @@ or
       <p>In no case should <gi scheme="MEI">restore</gi> contain elements that would not otherwise
         be permitted to occur within the parent of its own <gi scheme="MEI">app</gi> ancestor. For
         example, when used as a descendent of <gi scheme="MEI">verse</gi>, <gi scheme="MEI">restore</gi> should only contain those elements allowed within <gi scheme="MEI">verse</gi>.</p>
-    </remarks>
-    <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-restore.html">restore</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
@@ -23639,8 +23603,6 @@ or
         permitted to occur within the parent of its own <gi scheme="MEI">app</gi> ancestor. For
         example, when used as a descendent of <gi scheme="MEI">verse</gi>, <gi scheme="MEI">sic</gi>
         should only contain those elements allowed within <gi scheme="MEI">verse</gi>.</p>
-    </remarks>
-    <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-sic.html">sic</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
@@ -23712,8 +23674,6 @@ or
       <p>In no case should <gi scheme="MEI">supplied</gi> contain elements that would not otherwise
         be permitted to occur within the parent of its own <gi scheme="MEI">app</gi> ancestor. For
         example, when used as a descendent of <gi scheme="MEI">verse</gi>, <gi scheme="MEI">supplied</gi> should only contain those elements allowed within <gi scheme="MEI">verse</gi>.</p>
-    </remarks>
-    <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-supplied.html">supplied</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
@@ -23767,8 +23727,6 @@ or
       <p>In no case should <gi scheme="MEI">unclear</gi> contain elements that would not otherwise
         be permitted to occur within the parent of its own <gi scheme="MEI">app</gi> ancestor. For
         example, when used as a descendent of <gi scheme="MEI">verse</gi>, <gi scheme="MEI">unclear</gi> should only contain those elements allowed within <gi scheme="MEI">verse</gi>.</p>
-    </remarks>
-    <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-unclear.html">unclear</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
@@ -23927,8 +23885,6 @@ or
         element for each page.</p>
       <p>The <att>decls</att> attribute may be used to link the collection of images with a
         particular source described in the header.</p>
-    </remarks>
-    <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-facsimile.html">facsimile</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
@@ -23959,8 +23915,6 @@ or
         model.</p>
       <p>The <att>startid</att> attribute may be used to hold a reference to the first feature
         occurring on this surface.</p>
-    </remarks>
-    <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-surface.html">surface</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
@@ -24100,8 +24054,6 @@ or
       <p>Best practice suggests the use of controlled vocabulary for figure descriptions. Don't
         confuse this entity with a figure caption. A caption is text primarily intended for display
         with an illustration. It may or may not function as a description of the illustration.</p>
-    </remarks>
-    <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-figDesc.html">figDesc</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
@@ -24196,8 +24148,6 @@ or
     <remarks xml:lang="en">
       <p>The <att>colspan</att> and <att>rowspan</att> attributes record tabular display rendering
         information.</p>
-    </remarks>
-    <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://html.spec.whatwg.org/#the-td-element">td</ref> element of <abbr>HTML</abbr>.</p>
     </remarks>
   </elementSpec>
@@ -24226,8 +24176,6 @@ or
     <remarks xml:lang="en">
       <p>The <att>colspan</att> and <att>rowspan</att> attributes record tabular display rendering
         information.</p>
-    </remarks>
-    <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://html.spec.whatwg.org/#the-th-element">th</ref> element of <abbr>HTML</abbr>.</p>
     </remarks>
   </elementSpec>
@@ -24251,8 +24199,6 @@ or
     </content>
     <remarks xml:lang="en">
       <p>More precise rendition of the table and its cells can be specified in a style sheet.</p>
-    </remarks>
-    <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://html.spec.whatwg.org/#the-tr-element">tr</ref> element of <abbr>HTML</abbr>.</p>
     </remarks>
   </elementSpec>
@@ -26413,8 +26359,6 @@ or
         element with <gi scheme="MEI">useRestrict</gi> (usage restrictions), which captures
         information about limitations on the <hi rend="bold">use</hi> of material, such as those
         afforded by copyright.</p>
-    </remarks>
-    <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-accessrestrict">accessrestrict</ref> element of the Encoded Archival Description (EAD).</p>
     </remarks>
   </elementSpec>
@@ -26590,8 +26534,6 @@ or
     </content>
     <remarks xml:lang="en">
       <p>When used within the <gi scheme="MEI">fileDesc</gi> element, <gi scheme="MEI">availability</gi> indicates access to the MEI-encoded document itself.</p>
-    </remarks>
-    <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-availability.html">availability</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
@@ -26786,8 +26728,6 @@ or
         person/entity responsible for change. The <gi scheme="MEI">edition</gi> element can be used
         to designate an MEI encoding that has been so substantively changed that it constitutes a
         new version that supersedes earlier versions.</p>
-    </remarks>
-    <remarks xml:lang="en">
       <p>The model of this element is based on the respective element of the Encoded Archival Description (EAD).</p>
     </remarks>
   </elementSpec>
@@ -27131,8 +27071,6 @@ or
         remaining upper half. If, in contrast, only the lower right quarter of the page has been
         cut, these attributes still indicate the size of the full page (assuming that the removed
         section was a regular rectangle).</p>
-    </remarks>
-    <remarks xml:lang="en">
       <p>The dimensions (@width, @height) on <gi scheme="MEI">cutout</gi> itself are only to be used
         when there is a "gap" in the manuscript that allows to specify the dimensions of that
         missing part. In this case, the bounding box dimensions are given, together with @x and @y
@@ -27397,8 +27335,6 @@ or
     </content>
     <remarks xml:lang="en">
       <p>Extent in this context represents file size.</p>
-    </remarks>
-    <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-fileDesc.html">fileDesc</ref> element of the Text Encoding Initiative (TEI) and the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-filedesc">filedesc</ref> element of the Encoded
         Archival Description (EAD).</p>
     </remarks>
@@ -27482,8 +27418,6 @@ or
         hand, particularly those related to the quality of the writing, such as <val>shaky</val>, 
         <val>thick</val>, etc. may be described within the content of the <gi scheme="MEI">hand</gi> 
         element.</p>
-    </remarks>
-    <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-handNote.html">handNote</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
@@ -27691,8 +27625,6 @@ or
         ISO639-2b, to the same value as this element’s codedval attribute. The name and web location
         of the authorizing list may be encoded in the <att>auth</att> attribute and the
         <att>auth.uri</att> attribute, respectively.</p>
-    </remarks>
-    <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-language.html">language</ref> element of the Text Encoding Initiative (TEI) and the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-language">language</ref> element of the Encoded
         Archival Description (EAD).</p>
     </remarks>
@@ -28088,8 +28020,6 @@ or
     </content>
     <remarks xml:lang="en">
       <p>In the context of a performance resource the attribute <att>adlib</att> marks a resource as optional.</p>
-    </remarks>
-    <remarks xml:lang="en">
       <p>To indicate the tuning of an instrument, the attribute <att>trans.diat</att> can be used.</p>
     </remarks>
   </elementSpec>
@@ -28145,8 +28075,6 @@ or
       <p>Dedicatory text and title page features may also be encoded here when they are not
         transcribed as part of the front or back matter; <abbr>i.e.</abbr>, when they are considered to be
         meta-data rather than a transcription.</p>
-    </remarks>
-    <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-physdesc">physdesc</ref> element of the Encoded Archival Description (EAD).</p>
     </remarks>
   </elementSpec>
@@ -28167,8 +28095,6 @@ or
     <remarks xml:lang="en">
       <p>All materials may be described in a single <gi scheme="MEI">physMedium</gi> element or
         multiple elements may be used, one for each medium.</p>
-    </remarks>
-    <remarks xml:lang="en">
       <p>The model of this element is based on respective elements of the Encoded Archival Description (EAD). It
         has the same function as the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-material.html">material</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
@@ -28330,8 +28256,6 @@ or
     </content>
     <remarks xml:lang="en">
       <p>When an item is unpublished, use only the <gi scheme="MEI">unpub</gi> sub-element.</p>
-    </remarks>
-    <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-publicationStmt.html">publicationStmt</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
@@ -28354,8 +28278,6 @@ or
     <remarks xml:lang="en">
       <p>It is recommended that changes be recorded in reverse chronological order, with the most
         recent alteration first.</p>
-    </remarks>
-    <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-revisionDesc.html">revisionDesc</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
@@ -28452,8 +28374,6 @@ or
       <p>The <gi scheme="MEI">title</gi> sub-element records the series title, the <gi scheme="MEI">respStmt</gi> element records the person or group responsible for the series, and the <gi scheme="MEI">identifier</gi> element contains a series identifier. The <gi scheme="MEI">contents</gi> element should be used when it is necessary to enumerate the content of the
         series, but not describe each component. The <gi scheme="MEI">seriesStmt</gi> element is
         provided within seriesStmt for the description of a sub-series.</p>
-    </remarks>
-    <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-seriesStmt.html">seriesStmt</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
@@ -28537,8 +28457,6 @@ or
         element.</p>
       <p>The <att>data</att> attribute may be used to reference one or more musical features found
         in the content of this particular source.</p>
-    </remarks>
-    <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-source.html">source</ref> element of the Text Encoding Initiative (TEI) and the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-source">source</ref> element of the Encoded
         Archival Description (EAD).</p>
     </remarks>
@@ -28835,8 +28753,6 @@ or
     <remarks xml:lang="en">
       <p>Treatment history may also comprise details of the treatment process (<abbr>e.g.</abbr>, chemical
         solutions used, techniques applied, etc.), the date the treatment was applied, etc.</p>
-    </remarks>
-    <remarks xml:lang="en">
       <p>The model of this element is based on the respective element of the Encoded Archival Description (EAD).</p>
     </remarks>
   </elementSpec>
@@ -28914,8 +28830,6 @@ or
         such as when rights have been ceded to the public domain. Do not confuse this element with
         the <gi scheme="MEI">accessRestrict</gi> element, which holds information about conditions
         affecting the availability of the material.</p>
-    </remarks>
-    <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-userestrict">userestrict</ref> element of the Encoded Archival Description (EAD).</p>
     </remarks>
   </elementSpec>
@@ -28935,8 +28849,6 @@ or
     <remarks xml:lang="en">
       <p>The <att>facs</att> attribute may be used to record the location of the watermark in a
         facsimile image.</p>
-    </remarks>
-    <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-watermark.html">watermark</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
@@ -31291,8 +31203,6 @@ or
         ships. Usually, secondary name parts are encoded in <gi scheme="MEI">corpName</gi>
         sub-elements. The name of the list from which a controlled value is taken may be recorded
         using the <att>auth</att> attribute.</p>
-    </remarks>
-    <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-corpname">corpname</ref> element of the Encoded Archival Description (EAD).</p>
     </remarks>
   </elementSpec>
@@ -31484,8 +31394,6 @@ or
         sub-elements. The name of the list from which a controlled value is taken, such as the
         Thesaurus of Geographic Names (TGN), may be recorded using the <att>auth</att>
         attribute.</p>
-    </remarks>
-    <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-geogname">geogname</ref> element of the Encoded Archival Description (EAD).</p>
     </remarks>
   </elementSpec>
@@ -31573,8 +31481,6 @@ or
         For greater specificity, however, use foreName, famName, genName, addName, genName,
         nameLink, and roleName elements. The name of the list from which a controlled value for
         persName is taken may be recorded using the <att>auth</att> attribute.</p>
-    </remarks>
-    <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-persname">persname</ref> element of the Encoded Archival Description (EAD).</p>
     </remarks>
   </elementSpec>
@@ -32590,8 +32496,6 @@ or
     <remarks xml:lang="en">
       <p>Unlike the <gi scheme="MEI">ref</gi> element, <gi scheme="MEI">ptr</gi> cannot contain text
         or sub-elements to describe the referenced object.</p>
-    </remarks>
-    <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-ptr">ptr</ref> element of the Encoded Archival Description (EAD) and the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-ptr.html">ptr</ref> element of the Text
         Encoding Initiative (TEI).</p>
     </remarks>
@@ -32620,8 +32524,6 @@ or
     <remarks xml:lang="en">
       <p>Unlike the <gi scheme="MEI">ptr</gi> element, <gi scheme="MEI">ref</gi> may contain text
         and sub-elements to describe the destination.</p>
-    </remarks>
-    <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-ref">ref</ref> element of the Encoded Archival Description (EAD) and the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-ref.html">ref</ref> element of the Text
         Encoding Initiative (TEI).</p>
     </remarks>
@@ -41503,8 +41405,6 @@ or
         front matter structures, such as a preface, dedication, or table of contents, may be encoded
         as textual divisions; that is, as <gi scheme="MEI">div</gi> elements, with an optional <gi scheme="MEI">head</gi> sub-element describing the nature of the division. The <gi scheme="MEI">pb</gi> element is allowed here in order to accommodate page images, <abbr>e.g.</abbr>,
         cover, endpapers, etc. before and after the actual textual matter.</p>
-    </remarks>
-    <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-front.html">front</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
@@ -41564,8 +41464,6 @@ or
     <remarks xml:lang="en">
       <p>Do not confuse this element with the <gi scheme="MEI">line</gi> element, which is used for
         graphical lines that occur in music notation.</p>
-    </remarks>
-    <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-l.html">l</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
@@ -41749,8 +41647,6 @@ or
         speech or thought, technical terms or jargon, authorial distance, quotations from elsewhere,
         and passages that are mentioned but not used.</p>
       <p>Do not confuse this element, used to capture phrase-level quotations, and <gi scheme="MEI">quote</gi>, intended for block quotations.</p>
-    </remarks>
-    <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://html.spec.whatwg.org/#the-q-element">q</ref> element of <abbr>HTML</abbr> and the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-q.html">q</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
@@ -41780,8 +41676,6 @@ or
     <remarks xml:lang="en">
       <p>The source for the quote may be included in a <gi scheme="MEI">bibl</gi> sub-element.</p>
       <p>Do not confuse this element, used to capture block-level quotations, and <gi scheme="MEI">q</gi>, intended for inline quotations.</p>
-    </remarks>
-    <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-quote.html">quote</ref> element of the Text Encoding Initiative (TEI) and the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-quote">quote</ref> element of the Encoded Archival Description (EAD).</p>
     </remarks>
   </elementSpec>

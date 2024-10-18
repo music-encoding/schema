@@ -3688,7 +3688,6 @@
         note, phrase, measure, etc.), its text-critical significance (<abbr>e.g.</abbr>, significant, accidental,
         unclear), or the nature of the variation or the principles required to understand it (<abbr>e.g.</abbr>,
         lectio difficilior, usus auctoris, etc.).</p>
-    </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-app.html">app</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="lem" module="MEI.critapp"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">lemma</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Contains the lemma, or base text, of a textual variation.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
@@ -3713,7 +3712,6 @@
         permitted to occur within the parent of its own <gi scheme="MEI">app</gi> ancestor. For
         example, when used as a descendent of <gi scheme="MEI">verse</gi>, <gi scheme="MEI">lem</gi>
         should only contain those elements allowed within <gi scheme="MEI">verse</gi>.</p>
-    </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-lem.html">lem</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="rdg" module="MEI.critapp"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">reading</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Contains a single reading within a textual variation.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
@@ -3731,12 +3729,10 @@
         is allowed so that a reading may have its own meta-data without incurring the overhead of
         child <gi scheme="MEI">section</gi> elements. The <gi scheme="MEI">app</gi> sub-element is
         permitted in order to allow nested sub-variants.</p>
-    </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>In no case should <gi scheme="MEI">rdg</gi> contain elements that would not otherwise be
         permitted to occur within the parent of its own <gi scheme="MEI">app</gi> ancestor. For
         example, when used as a descendent of <gi scheme="MEI">verse</gi>, <gi scheme="MEI">rdg</gi>
         should only contain those elements allowed within <gi scheme="MEI">verse</gi>.</p>
-    </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-rdg.html">rdg</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks></elementSpec><classSpec rend="add" ident="att.sp.log" module="MEI.drama" type="atts">
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Logical domain attributes.</desc>
@@ -3791,7 +3787,6 @@
       <p>In a musical context <gi scheme="MEI">sp</gi> must have a start-type attribute when it's
         not a descendant of <gi scheme="MEI">sp</gi>. In a textual content <gi scheme="MEI">sp</gi>
         must NOT have any musical attributes.</p>
-    </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-sp.html">sp</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="stageDir" module="MEI.drama"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">stage direction</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Contains any kind of stage direction within a dramatic text or
       fragment.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -3823,7 +3818,6 @@
     </constraintSpec><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>In a musical context <gi scheme="MEI">stageDir</gi> must have a start-type attribute when
         it’s not a descendant of <gi scheme="MEI">sp</gi>. In a textual content <gi scheme="MEI">stageDir</gi> must NOT have any musical attributes.</p>
-    </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-stage.html">stage</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks></elementSpec><classSpec rend="add" ident="att.agentIdent" module="MEI.edittrans" type="atts">
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes for the identification of a causative agent.</desc>
@@ -3931,7 +3925,6 @@
       <p>In no case should <gi scheme="MEI">abbr</gi> contain elements that would not otherwise be
         permitted to occur within the parent of its own <gi scheme="MEI">app</gi> ancestor. For
         example, when used as a descendent of <gi scheme="MEI">verse</gi>, <gi scheme="MEI">abbr</gi> should only contain those elements allowed within <gi scheme="MEI">verse</gi>.</p>
-    </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-abbr.html">abbr</ref> element of the Text Encoding Initiative (TEI) and the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-abbr">abbr</ref> element of the Encoded
         Archival Description (EAD).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="add" module="MEI.edittrans"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">addition</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Marks an addition to the text.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -3962,7 +3955,6 @@
         permitted to occur within the parent of its own <gi scheme="MEI">app</gi> ancestor. For
         example, when used as a descendent of <gi scheme="MEI">verse</gi>, <gi scheme="MEI">add</gi>
         should only contain those elements allowed within <gi scheme="MEI">verse</gi>.</p>
-    </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-add.html">add</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="choice" module="MEI.edittrans"><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Groups a number of alternative encodings for the same point in a text.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
@@ -3975,7 +3967,6 @@
         However, there may be cases where a full representation of a text requires the alternative
         encodings to be considered as parallel. Note also that <gi scheme="MEI">choice</gi> elements
         may be recursively nested.</p>
-    </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-choice.html">choice</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="corr" module="MEI.edittrans"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">correction</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Contains the correct form of an apparent erroneous passage.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
@@ -3997,7 +3988,6 @@
       <p>In no case should <gi scheme="MEI">corr</gi> contain elements that would not otherwise be
         permitted to occur within the parent of its own <gi scheme="MEI">app</gi> ancestor. For
         example, when used as a descendent of <gi scheme="MEI">verse</gi>, <gi scheme="MEI">corr</gi> should only contain those elements allowed within <gi scheme="MEI">verse</gi>.</p>
-    </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-corr.html">corr</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="cpMark" module="MEI.edittrans"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">copy/colla parte mark</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">A verbal or graphical indication to copy musical material
       written elsewhere.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -4067,7 +4057,6 @@
       <p>In no case should <gi scheme="MEI">damage</gi> contain elements that would not otherwise be
         permitted to occur within the parent of its own <gi scheme="MEI">app</gi> ancestor. For
         example, when used as a descendent of <gi scheme="MEI">verse</gi>, <gi scheme="MEI">damage</gi> should only contain those elements allowed within <gi scheme="MEI">verse</gi>.</p>
-    </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-damage.html">damage</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="del" module="MEI.edittrans"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">deletion</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Contains information deleted, marked as deleted, or otherwise indicated as
       superfluous or spurious in the copy text by an author, scribe, annotator, or corrector.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -4092,7 +4081,6 @@
         permitted to occur within the parent of its own <gi scheme="MEI">app</gi> ancestor. For
         example, when used as a descendent of <gi scheme="MEI">verse</gi>, <gi scheme="MEI">del</gi>
         should only contain those elements allowed within <gi scheme="MEI">verse</gi>.</p>
-    </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-del.html">del</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="expan" module="MEI.edittrans"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">expansion</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Contains the expansion of an abbreviation.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
@@ -4114,7 +4102,6 @@
       <p>In no case should <gi scheme="MEI">expan</gi> contain elements that would not otherwise be
         permitted to occur within the parent of its own <gi scheme="MEI">app</gi> ancestor. For
         example, when used as a descendent of <gi scheme="MEI">verse</gi>, <gi scheme="MEI">expan</gi> should only contain those elements allowed within <gi scheme="MEI">verse</gi>.</p>
-    </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-expan.html">expan</ref> element of the Text Encoding Initiative (TEI) and the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-expan">expan</ref> element of the Encoded
         Archival Description (EAD).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="gap" module="MEI.edittrans"><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Indicates a point where material has been omitted in a transcription, whether as part of
@@ -4142,7 +4129,6 @@
         the deletion in the case of text omitted from the transcription because of deliberate
         deletion by an identifiable hand. The <att>cert</att> attribute signifies the degree of
         certainty ascribed to the identification of the extent of the missing material.</p>
-    </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-gap.html">gap</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="handShift" module="MEI.edittrans"><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Marks the beginning of a passage written in a new hand, or of a change in the scribe,
       writing style, ink or character of the document hand.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -4200,7 +4186,6 @@
         editor or transcriber responsible for identifying the change of hand. The <att>cert</att>
         attribute signifies the degree of certainty ascribed to the identification of the new
         hand.</p>
-    </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-handShift.html">handShift</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="metaMark" module="MEI.edittrans"><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">A graphical or textual statement with additional / explanatory information about the
       musical text. The textual consequences of this intervention are encoded independently via
@@ -4284,7 +4269,6 @@
       <p>In no case should <gi scheme="MEI">orig</gi> contain elements that would not otherwise be
         permitted to occur within the parent of its own <gi scheme="MEI">app</gi> ancestor. For
         example, when used as a descendent of <gi scheme="MEI">verse</gi>, <gi scheme="MEI">orig</gi> should only contain those elements allowed within <gi scheme="MEI">verse</gi>.</p>
-    </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-orig.html">orig</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="reg" module="MEI.edittrans"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">regularization</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Contains material which has been regularized or normalized in some
       sense.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -4308,7 +4292,6 @@
         permitted to occur within the parent of its own <gi scheme="MEI">app</gi> ancestor. For
         example, when used as a descendent of <gi scheme="MEI">verse</gi>, <gi scheme="MEI">reg</gi>
         should only contain those elements allowed within <gi scheme="MEI">verse</gi>.</p>
-    </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-reg.html">reg</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="restore" module="MEI.edittrans"><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Indicates restoration of material to an earlier state by cancellation of an editorial or
       authorial marking or instruction.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -4332,7 +4315,6 @@
       <p>In no case should <gi scheme="MEI">restore</gi> contain elements that would not otherwise
         be permitted to occur within the parent of its own <gi scheme="MEI">app</gi> ancestor. For
         example, when used as a descendent of <gi scheme="MEI">verse</gi>, <gi scheme="MEI">restore</gi> should only contain those elements allowed within <gi scheme="MEI">verse</gi>.</p>
-    </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-restore.html">restore</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="sic" module="MEI.edittrans"><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Contains apparently incorrect or inaccurate material.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
@@ -4350,7 +4332,6 @@
         permitted to occur within the parent of its own <gi scheme="MEI">app</gi> ancestor. For
         example, when used as a descendent of <gi scheme="MEI">verse</gi>, <gi scheme="MEI">sic</gi>
         should only contain those elements allowed within <gi scheme="MEI">verse</gi>.</p>
-    </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-sic.html">sic</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="subst" module="MEI.edittrans"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">substitution</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Groups transcriptional elements when the combination is to be regarded as
       a single intervention in the text.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -4389,7 +4370,6 @@
       <p>In no case should <gi scheme="MEI">supplied</gi> contain elements that would not otherwise
         be permitted to occur within the parent of its own <gi scheme="MEI">app</gi> ancestor. For
         example, when used as a descendent of <gi scheme="MEI">verse</gi>, <gi scheme="MEI">supplied</gi> should only contain those elements allowed within <gi scheme="MEI">verse</gi>.</p>
-    </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-supplied.html">supplied</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="unclear" module="MEI.edittrans"><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Contains material that cannot be transcribed with certainty because it is illegible or
       inaudible in the source.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -4419,7 +4399,6 @@
       <p>In no case should <gi scheme="MEI">unclear</gi> contain elements that would not otherwise
         be permitted to occur within the parent of its own <gi scheme="MEI">app</gi> ancestor. For
         example, when used as a descendent of <gi scheme="MEI">verse</gi>, <gi scheme="MEI">unclear</gi> should only contain those elements allowed within <gi scheme="MEI">verse</gi>.</p>
-    </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-unclear.html">unclear</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks></elementSpec><classSpec rend="add" ident="att.extSym.auth" module="MEI.externalsymbols" type="atts">
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that point to an external symbol authority.</desc>
@@ -4520,7 +4499,6 @@
         element for each page.</p>
       <p>The <att>decls</att> attribute may be used to link the collection of images with a
         particular source described in the header.</p>
-    </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-facsimile.html">facsimile</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="surface" module="MEI.facsimile"><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Defines a writing surface in terms of a rectangular coordinate space, optionally grouping
       one or more graphic representations of that space, and rectangular zones of interest within
@@ -4539,7 +4517,6 @@
         model.</p>
       <p>The <att>startid</att> attribute may be used to hold a reference to the first feature
         occurring on this surface.</p>
-    </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-surface.html">surface</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="zone" module="MEI.facsimile"><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Defines an area of interest within a <gi scheme="MEI">surface</gi> or graphic file.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
@@ -4609,7 +4586,6 @@
       <p>Best practice suggests the use of controlled vocabulary for figure descriptions. Don't
         confuse this entity with a figure caption. A caption is text primarily intended for display
         with an illustration. It may or may not function as a description of the illustration.</p>
-    </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-figDesc.html">figDesc</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="graphic" module="MEI.figtable"><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Indicates the location of an inline graphic.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
@@ -4668,7 +4644,6 @@
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The <att>colspan</att> and <att>rowspan</att> attributes record tabular display rendering
         information.</p>
-    </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://html.spec.whatwg.org/#the-td-element">td</ref> element of <abbr>HTML</abbr>.</p>
     </remarks></elementSpec><elementSpec rend="add" ident="th" module="MEI.figtable"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">table header</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Designates a table cell containing column or row heading information as
       opposed to one containing data.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -4682,7 +4657,6 @@
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The <att>colspan</att> and <att>rowspan</att> attributes record tabular display rendering
         information.</p>
-    </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://html.spec.whatwg.org/#the-th-element">th</ref> element of <abbr>HTML</abbr>.</p>
     </remarks></elementSpec><elementSpec rend="add" ident="tr" module="MEI.figtable"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">table row</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">A formatting element that contains one or more cells (intersection of a row
       and a column) in a <gi scheme="MEI">table</gi>.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -4694,7 +4668,6 @@
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="th"/><ref name="td"/></choice></zeroOrMore>
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>More precise rendition of the table and its cells can be specified in a style sheet.</p>
-    </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://html.spec.whatwg.org/#the-tr-element">tr</ref> element of <abbr>HTML</abbr>.</p>
     </remarks></elementSpec><macroSpec rend="add" ident="data.FRBRRELATIONSHIP" module="MEI.frbr" type="dt">
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Relationships between FRBR entities.</desc>
@@ -5926,7 +5899,6 @@
         element with <gi scheme="MEI">useRestrict</gi> (usage restrictions), which captures
         information about limitations on the <hi rend="bold">use</hi> of material, such as those
         afforded by copyright.</p>
-    </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-accessrestrict">accessrestrict</ref> element of the Encoded Archival Description (EAD).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="acquisition" module="MEI.header"><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Records information concerning the process by which an item was acquired by the holding
       institution.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -6013,7 +5985,6 @@
       <ref xmlns="http://relaxng.org/ns/structure/1.0" name="macro.availabilityPart"/>
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>When used within the <gi scheme="MEI">fileDesc</gi> element, <gi scheme="MEI">availability</gi> indicates access to the MEI-encoded document itself.</p>
-    </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-availability.html">availability</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="bifolium" module="MEI.header"><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Describes a folded sheet of paper.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
@@ -6129,7 +6100,6 @@
         person/entity responsible for change. The <gi scheme="MEI">edition</gi> element can be used
         to designate an MEI encoding that has been so substantively changed that it constitutes a
         new version that supersedes earlier versions.</p>
-    </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the respective element of the Encoded Archival Description (EAD).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="changeDesc" module="MEI.header"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">change description</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Description of a revision of the MEI file.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
@@ -6342,7 +6312,6 @@
         remaining upper half. If, in contrast, only the lower right quarter of the page has been
         cut, these attributes still indicate the size of the full page (assuming that the removed
         section was a regular rectangle).</p>
-    </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The dimensions (@width, @height) on <gi scheme="MEI">cutout</gi> itself are only to be used
         when there is a "gap" in the manuscript that allows to specify the dimensions of that
         missing part. In this case, the bounding box dimensions are given, together with @x and @y
@@ -6454,7 +6423,6 @@
       <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="sourceDesc"/></optional>
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>Extent in this context represents file size.</p>
-    </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-fileDesc.html">fileDesc</ref> element of the Text Encoding Initiative (TEI) and the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-filedesc">filedesc</ref> element of the Encoded
         Archival Description (EAD).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="foliaDesc" module="MEI.header"><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Describes the order of folia and bifolia making up the text block of a manuscript or
@@ -6500,7 +6468,6 @@
         hand, particularly those related to the quality of the writing, such as <val>shaky</val>, 
         <val>thick</val>, etc. may be described within the content of the <gi scheme="MEI">hand</gi> 
         element.</p>
-    </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-handNote.html">handNote</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="handList" module="MEI.header"><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Container for one or more hand elements.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
@@ -6622,7 +6589,6 @@
         ISO639-2b, to the same value as this element’s codedval attribute. The name and web location
         of the authorizing list may be encoded in the <att>auth</att> attribute and the
         <att>auth.uri</att> attribute, respectively.</p>
-    </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-language.html">language</ref> element of the Text Encoding Initiative (TEI) and the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-language">language</ref> element of the Encoded
         Archival Description (EAD).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="langUsage" module="MEI.header"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">language usage</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Groups elements describing the languages, sub-languages, dialects,
@@ -6869,7 +6835,6 @@
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike.limited"/><ref name="perfRes"/></choice></zeroOrMore>
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>In the context of a performance resource the attribute <att>adlib</att> marks a resource as optional.</p>
-    </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>To indicate the tuning of an instrument, the attribute <att>trans.diat</att> can be used.</p>
     </remarks></elementSpec><elementSpec rend="add" ident="perfResList" module="MEI.header"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">performance resources list</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Several instrumental or vocal resources treated as a group.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
@@ -6897,7 +6862,6 @@
       <p>Dedicatory text and title page features may also be encoded here when they are not
         transcribed as part of the front or back matter; <abbr>i.e.</abbr>, when they are considered to be
         meta-data rather than a transcription.</p>
-    </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-physdesc">physdesc</ref> element of the Encoded Archival Description (EAD).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="physMedium" module="MEI.header"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">physical medium</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Records the physical materials used in the source, such as ink and
       paper.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -6911,7 +6875,6 @@
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>All materials may be described in a single <gi scheme="MEI">physMedium</gi> element or
         multiple elements may be used, one for each medium.</p>
-    </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on respective elements of the Encoded Archival Description (EAD). It
         has the same function as the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-material.html">material</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="plateNum" module="MEI.header"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">plate number</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Designation assigned to a resource by a music publisher, usually printed
@@ -6993,7 +6956,6 @@
       <choice xmlns="http://relaxng.org/ns/structure/1.0"><optional><ref name="unpub"/></optional><zeroOrMore><ref name="model.pubStmtPart"/></zeroOrMore></choice>
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>When an item is unpublished, use only the <gi scheme="MEI">unpub</gi> sub-element.</p>
-    </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-publicationStmt.html">publicationStmt</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="revisionDesc" module="MEI.header"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">revision description</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Container for information about alterations that have been made
       to an MEI file.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -7005,7 +6967,6 @@
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>It is recommended that changes be recorded in reverse chronological order, with the most
         recent alteration first.</p>
-    </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-revisionDesc.html">revisionDesc</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="samplingDecl" module="MEI.header"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">sampling declaration</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Contains a prose description of the rationale and methods used in
       sampling texts in the creation of a corpus or collection.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -7053,7 +7014,6 @@
       <p>The <gi scheme="MEI">title</gi> sub-element records the series title, the <gi scheme="MEI">respStmt</gi> element records the person or group responsible for the series, and the <gi scheme="MEI">identifier</gi> element contains a series identifier. The <gi scheme="MEI">contents</gi> element should be used when it is necessary to enumerate the content of the
         series, but not describe each component. The <gi scheme="MEI">seriesStmt</gi> element is
         provided within seriesStmt for the description of a sub-series.</p>
-    </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-seriesStmt.html">seriesStmt</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="soundChan" module="MEI.header"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">sound channels</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Reflects the number of apparent sound channels in the playback of a
       recording (monaural, stereophonic, quadraphonic, etc.).</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -7104,7 +7064,6 @@
         element.</p>
       <p>The <att>data</att> attribute may be used to reference one or more musical features found
         in the content of this particular source.</p>
-    </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-source.html">source</ref> element of the Text Encoding Initiative (TEI) and the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-source">source</ref> element of the Encoded
         Archival Description (EAD).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="sourceDesc" module="MEI.header"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">source description</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">A container for the descriptions of the source(s) used in the
@@ -7257,7 +7216,6 @@
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>Treatment history may also comprise details of the treatment process (<abbr>e.g.</abbr>, chemical
         solutions used, techniques applied, etc.), the date the treatment was applied, etc.</p>
-    </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the respective element of the Encoded Archival Description (EAD).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="treatSched" module="MEI.header"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">treatment scheduled</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Scheduled treatment, <abbr>e.g.</abbr>, de-acidification, restoration, etc., for
       an item.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -7296,7 +7254,6 @@
         such as when rights have been ceded to the public domain. Do not confuse this element with
         the <gi scheme="MEI">accessRestrict</gi> element, which holds information about conditions
         affecting the availability of the material.</p>
-    </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-userestrict">userestrict</ref> element of the Encoded Archival Description (EAD).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="watermark" module="MEI.header"><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Contains a description of a watermark or similar device.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
@@ -7310,7 +7267,6 @@
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The <att>facs</att> attribute may be used to record the location of the watermark in a
         facsimile image.</p>
-    </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-watermark.html">watermark</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="work" module="MEI.header"><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Provides a detailed description of a work — a distinct intellectual or artistic creation —
       specifically its history, language use, and high-level musical attributes (<abbr>e.g.</abbr>, key, tempo,
@@ -8308,7 +8264,6 @@
         ships. Usually, secondary name parts are encoded in <gi scheme="MEI">corpName</gi>
         sub-elements. The name of the list from which a controlled value is taken may be recorded
         using the <att>auth</att> attribute.</p>
-    </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-corpname">corpname</ref> element of the Encoded Archival Description (EAD).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="country" module="MEI.namesdates"><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Contains the name of a geopolitical unit, such as a nation, country, colony, or
       commonwealth, larger than or administratively superior to a region and smaller than a
@@ -8405,7 +8360,6 @@
         sub-elements. The name of the list from which a controlled value is taken, such as the
         Thesaurus of Geographic Names (TGN), may be recorded using the <att>auth</att>
         attribute.</p>
-    </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-geogname">geogname</ref> element of the Encoded Archival Description (EAD).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="nameLink" module="MEI.namesdates"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">name link</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Contains a connecting phrase or link used within a name but not regarded as
       part of it, such as "van der" or "of", "from", etc.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -8450,7 +8404,6 @@
         For greater specificity, however, use foreName, famName, genName, addName, genName,
         nameLink, and roleName elements. The name of the list from which a controlled value for
         persName is taken may be recorded using the <att>auth</att> attribute.</p>
-    </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-persname">persname</ref> element of the Encoded Archival Description (EAD).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="postBox" module="MEI.namesdates"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">postal box or post office box</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Contains a number or other identifier for some postal
       delivery point other than a street address.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -9094,7 +9047,6 @@
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>Unlike the <gi scheme="MEI">ref</gi> element, <gi scheme="MEI">ptr</gi> cannot contain text
         or sub-elements to describe the referenced object.</p>
-    </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-ptr">ptr</ref> element of the Encoded Archival Description (EAD) and the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-ptr.html">ptr</ref> element of the Text
         Encoding Initiative (TEI).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="ref" module="MEI.ptrref"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">reference</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Defines a traversible reference to another location. May contain text and
@@ -9111,7 +9063,6 @@
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>Unlike the <gi scheme="MEI">ptr</gi> element, <gi scheme="MEI">ref</gi> may contain text
         and sub-elements to describe the destination.</p>
-    </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-ref">ref</ref> element of the Encoded Archival Description (EAD) and the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-ref.html">ref</ref> element of the Text
         Encoding Initiative (TEI).</p>
     </remarks></elementSpec><macroSpec rend="add" ident="macro.anyXML" module="MEI.shared" type="pe">
@@ -15343,7 +15294,6 @@
         front matter structures, such as a preface, dedication, or table of contents, may be encoded
         as textual divisions; that is, as <gi scheme="MEI">div</gi> elements, with an optional <gi scheme="MEI">head</gi> sub-element describing the nature of the division. The <gi scheme="MEI">pb</gi> element is allowed here in order to accommodate page images, <abbr>e.g.</abbr>,
         cover, endpapers, etc. before and after the actual textual matter.</p>
-    </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-front.html">front</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="imprimatur" module="MEI.text"><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Contains a formal statement authorizing the publication of a work, sometimes required to
       appear on a title page or its verso.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -15372,7 +15322,6 @@
       </attDef></attList><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>Do not confuse this element with the <gi scheme="MEI">line</gi> element, which is used for
         graphical lines that occur in music notation.</p>
-    </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-l.html">l</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="li" module="MEI.text"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">list item</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Single item in a <gi scheme="MEI">list</gi>.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
@@ -15508,7 +15457,6 @@
         speech or thought, technical terms or jargon, authorial distance, quotations from elsewhere,
         and passages that are mentioned but not used.</p>
       <p>Do not confuse this element, used to capture phrase-level quotations, and <gi scheme="MEI">quote</gi>, intended for block quotations.</p>
-    </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://html.spec.whatwg.org/#the-q-element">q</ref> element of <abbr>HTML</abbr> and the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-q.html">q</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="quote" module="MEI.text"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">quoted material</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Contains a paragraph-like block of text attributed to an external
       source, normally set off from the surrounding text by spacing or other typographic
@@ -15524,7 +15472,6 @@
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The source for the quote may be included in a <gi scheme="MEI">bibl</gi> sub-element.</p>
       <p>Do not confuse this element, used to capture block-level quotations, and <gi scheme="MEI">q</gi>, intended for inline quotations.</p>
-    </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-quote.html">quote</ref> element of the Text Encoding Initiative (TEI) and the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-quote">quote</ref> element of the Encoded Archival Description (EAD).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="seg" module="MEI.text"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">arbitrary segment</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">represents any segmentation of text below the "text component" level.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
