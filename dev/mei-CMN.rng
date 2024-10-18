@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2024-10-18T07:34:20Z. . 
+Schema generated from ODD source 2024-10-18T07:37:06Z. . 
 TEI Edition: Development Version 
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -27250,7 +27250,7 @@ Suggested values include: 1] alternative; 2] arrangement; 3] carrier; 4] date; 5
    <define name="mei_att.stringtab.attribute.tab.string">
       <optional>
          <attribute name="tab.string">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This attribute is deprecated in favour of <code xmlns="http://www.w3.org/1999/xhtml"
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This attribute is deprecated in favor of <code xmlns="http://www.w3.org/1999/xhtml"
                      xmlns:rng="http://relaxng.org/ns/structure/1.0">@tab.course</code> and will be removed in a future version. Records which string is to be played.</a:documentation>
             <ref name="mei_data.STRINGNUMBER"/>
          </attribute>
@@ -27282,7 +27282,7 @@ Suggested values include: 1] alternative; 2] arrangement; 3] carrier; 4] date; 5
    <define name="mei_att.stringtab.tuning.attribute.tab.strings">
       <optional>
          <attribute name="tab.strings">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This attribute is deprecated in favour of the new <code xmlns="http://www.w3.org/1999/xhtml"
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This attribute is deprecated in favor of the new <code xmlns="http://www.w3.org/1999/xhtml"
                      xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;tuning&gt;</code> element and will be removed in a future version. Provides a *written* pitch and octave for each open string or course of strings.</a:documentation>
             <list>
                <oneOrMore>
@@ -27297,7 +27297,7 @@ Suggested values include: 1] alternative; 2] arrangement; 3] carrier; 4] date; 5
    <define name="mei_att.stringtab.tuning.attribute.tab.courses">
       <optional>
          <attribute name="tab.courses">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This attribute is deprecated in favour of the new <code xmlns="http://www.w3.org/1999/xhtml"
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This attribute is deprecated in favor of the new <code xmlns="http://www.w3.org/1999/xhtml"
                      xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;tuning&gt;</code> element and will be removed in a future version. Provides a *written* pitch and octave for each open string or course of strings.</a:documentation>
             <list>
                <oneOrMore>
@@ -27326,7 +27326,7 @@ Suggested values include: 1] alternative; 2] arrangement; 3] carrier; 4] date; 5
          <ref name="mei_att.startEndId.attributes"/>
          <optional>
             <attribute name="fret">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This attribute is deprecated in favour of <code xmlns="http://www.w3.org/1999/xhtml"
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This attribute is deprecated in favor of <code xmlns="http://www.w3.org/1999/xhtml"
                         xmlns:rng="http://relaxng.org/ns/structure/1.0">@tab.fret</code>, and will be removed in a future version. Records the location at which the strings should be stopped against a fret in a fretboard diagram. This may or may not be the same as the actual location on the fretboard of the instrument in performance.</a:documentation>
                <data type="positiveInteger">
                   <param name="minInclusive">1</param>
