@@ -18488,6 +18488,7 @@
   </macroSpec><classSpec rend="add" ident="att.course.log" module="MEI.stringtab" type="atts">
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Logical domain attributes.</desc>
     <classes xmlns:xi="http://www.w3.org/2001/XInclude">
+      <memberOf key="att.accidental"/>
       <memberOf key="att.pitched"/>
     </classes>
   </classSpec><classSpec rend="add" ident="att.scoreDef.vis.tablature" module="MEI.stringtab" type="atts">

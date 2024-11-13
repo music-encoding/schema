@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2024-11-13T08:59:03Z. . 
+Schema generated from ODD source 2024-11-13T09:06:49Z. . 
 TEI Edition: Development Version 
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -28658,6 +28658,7 @@ Suggested values include: 1] alternative; 2] arrangement; 3] carrier; 4] date; 5
       </element>
    </define>
    <define name="mei_att.course.log.attributes">
+      <ref name="mei_att.accidental.attributes"/>
       <ref name="mei_att.pitched.attributes"/>
    </define>
    <define name="mei_att.scoreDef.vis.tablature.attributes">

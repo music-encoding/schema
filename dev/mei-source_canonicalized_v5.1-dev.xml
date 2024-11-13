@@ -20,7 +20,7 @@
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../source/validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2024-11-13T09:58:56.749604359+01:00-->
+<!--canonicalized: 2024-11-13T10:06:43.21523158+01:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -41020,6 +41020,7 @@ or
   <classSpec ident="att.course.log" module="MEI.stringtab" type="atts">
     <desc xml:lang="en">Logical domain attributes.</desc>
     <classes>
+      <memberOf key="att.accidental"/>
       <memberOf key="att.pitched"/>
     </classes>
   </classSpec>
