@@ -20,7 +20,7 @@
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../source/validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2024-11-13T10:06:43.21523158+01:00-->
+<!--canonicalized: 2024-11-13T10:20:54.378784582+01:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -5274,6 +5274,286 @@ or
 &lt;/staffGrp&gt;</egXML>
                      </figure>
                   </p>
+                     <p>When multiple time signatures appear next to each other the <gi scheme="MEI">meterSigGrp</gi> element has to be used.</p>
+                     <p>
+                        <figure>
+                           <head>Alternating meters in Tchaikovsky's String Quartet in F major</head>
+                           <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-CMN.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
+&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-CMN.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
+&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.1-dev"&gt;
+   &lt;meiHead&gt;
+      &lt;fileDesc&gt;
+         &lt;titleStmt&gt;
+            &lt;title&gt;Scherzo from Tchaikovsky's String Quartet No. 2 (excerpt)&lt;/title&gt;
+         &lt;/titleStmt&gt;
+         &lt;pubStmt&gt;
+            &lt;date isodate="2024"&gt;2024&lt;/date&gt;
+            &lt;respStmt&gt;
+               &lt;corpName&gt;Music Encoding Initiative (MEI) Board&lt;/corpName&gt;
+            &lt;/respStmt&gt;
+            &lt;availability&gt;
+               &lt;useRestrict label="license" auth="https://spdx.org/licenses/" codedval="ECL-2.0"&gt;
+                  &lt;p&gt;Educational Community License v2.0&lt;/p&gt;
+               &lt;/useRestrict&gt;
+            &lt;/availability&gt;
+         &lt;/pubStmt&gt;
+         &lt;seriesStmt&gt;
+            &lt;title&gt;MEI guidelines examples&lt;/title&gt;
+         &lt;/seriesStmt&gt;
+      &lt;/fileDesc&gt;
+   &lt;/meiHead&gt;
+   &lt;music&gt;
+      &lt;body&gt;
+         &lt;mdiv&gt;
+            &lt;score&gt;
+               &lt;scoreDef&gt;
+                  &lt;staffGrp symbol="bracket"&gt;
+                     &lt;staffDef n="1" lines="5" keysig="5f"&gt;
+                        &lt;clef shape="G" line="2" /&gt;
+                        &lt;?edit-start?&gt;
+                        &lt;meterSigGrp func="alternating"&gt;
+                           &lt;meterSig count="6" unit="8" /&gt;
+                           &lt;meterSig count="9" unit="8" /&gt;
+                        &lt;/meterSigGrp&gt;
+                        &lt;?edit-end?&gt;
+                     &lt;/staffDef&gt;
+                     &lt;staffDef n="2" lines="5" keysig="5f"&gt;
+                        &lt;clef shape="G" line="2" /&gt;
+                        &lt;meterSigGrp func="alternating"&gt;
+                           &lt;meterSig count="6" unit="8" /&gt;
+                           &lt;meterSig count="9" unit="8" /&gt;
+                        &lt;/meterSigGrp&gt;
+                     &lt;/staffDef&gt;
+                     &lt;staffDef n="3" lines="5" keysig="5f"&gt;
+                        &lt;clef shape="C" line="3" /&gt;
+                        &lt;meterSigGrp func="alternating"&gt;
+                           &lt;meterSig count="6" unit="8" /&gt;
+                           &lt;meterSig count="9" unit="8" /&gt;
+                        &lt;/meterSigGrp&gt;
+                     &lt;/staffDef&gt;
+                     &lt;staffDef n="4" lines="5" keysig="5f"&gt;
+                        &lt;clef shape="F" line="4" /&gt;
+                        &lt;meterSigGrp func="alternating"&gt;
+                           &lt;meterSig count="6" unit="8" /&gt;
+                           &lt;meterSig count="9" unit="8" /&gt;
+                        &lt;/meterSigGrp&gt;
+                     &lt;/staffDef&gt;
+                  &lt;/staffGrp&gt;
+               &lt;/scoreDef&gt;
+               &lt;section xml:id="s1"&gt;
+                  &lt;pb /&gt;
+                  &lt;measure n="1"&gt;
+                     &lt;staff n="1"&gt;
+                        &lt;layer n="1"&gt;
+                           &lt;beam&gt;
+                              &lt;note xml:id="n2apf6t" dur="8" pname="f" oct="5"&gt;
+                                 &lt;artic artic="stacc" /&gt;
+                              &lt;/note&gt;
+                              &lt;note xml:id="n1v0onrr" dur="8" pname="f" oct="5"&gt;
+                                 &lt;artic artic="stacc" /&gt;
+                              &lt;/note&gt;
+                              &lt;note xml:id="nmdfv6m" dur="8" pname="f" oct="5"&gt;
+                                 &lt;artic artic="stacc" /&gt;
+                              &lt;/note&gt;
+                           &lt;/beam&gt;
+                           &lt;note xml:id="n1v2c23j" dur="4" pname="e" oct="5"&gt;
+                              &lt;artic artic="ten" /&gt;
+                              &lt;accid accid.ges="f" /&gt;
+                           &lt;/note&gt;
+                           &lt;note xml:id="nz8c5kj" dur="8" pname="d" oct="5"&gt;
+                              &lt;accid accid.ges="f" /&gt;
+                           &lt;/note&gt;
+                        &lt;/layer&gt;
+                     &lt;/staff&gt;
+                     &lt;staff n="2"&gt;
+                        &lt;layer n="1"&gt;
+                           &lt;rest xml:id="r12gwbz0" dur="4" /&gt;
+                           &lt;rest xml:id="r1e6h2le" dur="8" /&gt;
+                           &lt;chord xml:id="c1xfnie3" dots="1" dur="4"&gt;
+                              &lt;note xml:id="n9stwxq" pname="d" oct="4"&gt;
+                                 &lt;accid accid.ges="f" /&gt;
+                              &lt;/note&gt;
+                              &lt;note xml:id="n103nrpj" pname="a" oct="4"&gt;
+                                 &lt;accid accid.ges="f" /&gt;
+                              &lt;/note&gt;
+                           &lt;/chord&gt;
+                        &lt;/layer&gt;
+                     &lt;/staff&gt;
+                     &lt;staff n="3"&gt;
+                        &lt;layer n="1"&gt;
+                           &lt;rest xml:id="r1mvgy0y" dur="4" /&gt;
+                           &lt;rest xml:id="rdxb3ed" dur="8" /&gt;
+                           &lt;chord xml:id="coaoa77" dots="1" dur="4"&gt;
+                              &lt;note xml:id="nzxzmqv" pname="a" oct="3"&gt;
+                                 &lt;accid accid.ges="f" /&gt;
+                              &lt;/note&gt;
+                              &lt;note xml:id="n13ezv8b" pname="f" oct="4" /&gt;
+                           &lt;/chord&gt;
+                        &lt;/layer&gt;
+                     &lt;/staff&gt;
+                     &lt;staff n="4"&gt;
+                        &lt;layer n="1"&gt;
+                           &lt;rest xml:id="r16osj9l" dur="4" /&gt;
+                           &lt;rest xml:id="r1d3bkrz" dur="8" /&gt;
+                           &lt;note xml:id="n1oazq7y" dots="1" dur="4" pname="d" oct="3"&gt;
+                              &lt;accid accid.ges="f" /&gt;
+                           &lt;/note&gt;
+                        &lt;/layer&gt;
+                     &lt;/staff&gt;
+                     &lt;tempo startid="#n2apf6t"&gt;Allegro giusto&lt;/tempo&gt;
+                     &lt;dynam startid="#n2apf6t"&gt;p&lt;/dynam&gt;
+                     &lt;hairpin form="cres" startid="#n2apf6t" endid="#nz8c5kj" /&gt;
+                     &lt;slur startid="#n2apf6t" endid="#nmdfv6m" /&gt;
+                     &lt;slur startid="#n1v2c23j" endid="#nz8c5kj" /&gt;
+                     &lt;dynam startid="#c1xfnie3"&gt;p&lt;/dynam&gt;
+                     &lt;dynam startid="#coaoa77"&gt;p&lt;/dynam&gt;
+                     &lt;dynam startid="#n1oazq7y"&gt;p&lt;/dynam&gt;
+                  &lt;/measure&gt;
+                  &lt;measure n="2"&gt;
+                     &lt;staff n="1"&gt;
+                        &lt;layer n="1"&gt;
+                           &lt;beam&gt;
+                              &lt;note xml:id="nan1okp" dur="8" pname="b" oct="4"&gt;
+                                 &lt;artic artic="stacc" /&gt;
+                                 &lt;accid accid.ges="f" /&gt;
+                              &lt;/note&gt;
+                              &lt;note xml:id="nmhyqwo" dur="8" pname="b" oct="4"&gt;
+                                 &lt;artic artic="stacc" /&gt;
+                                 &lt;accid accid.ges="f" /&gt;
+                              &lt;/note&gt;
+                              &lt;note xml:id="nrwyx5f" dur="8" pname="b" oct="4"&gt;
+                                 &lt;artic artic="stacc" /&gt;
+                                 &lt;accid accid.ges="f" /&gt;
+                              &lt;/note&gt;
+                           &lt;/beam&gt;
+                           &lt;note xml:id="n16xnlnh" dur="4" pname="c" oct="5"&gt;
+                              &lt;artic artic="ten" /&gt;
+                           &lt;/note&gt;
+                           &lt;note xml:id="nfnijk8" dur="8" pname="d" oct="5"&gt;
+                              &lt;accid accid.ges="f" /&gt;
+                           &lt;/note&gt;
+                        &lt;/layer&gt;
+                     &lt;/staff&gt;
+                     &lt;staff n="2"&gt;
+                        &lt;layer n="1"&gt;
+                           &lt;rest xml:id="r176694i" dots="1" dur="4" /&gt;
+                           &lt;chord xml:id="cto373k" dots="1" dur="4"&gt;
+                              &lt;note xml:id="n1jlp1q2" pname="c" oct="4"&gt;
+                                 &lt;accid accid="s" /&gt;
+                              &lt;/note&gt;
+                              &lt;note xml:id="ndcmoqe" pname="a" oct="4"&gt;
+                                 &lt;accid accid.ges="f" /&gt;
+                              &lt;/note&gt;
+                           &lt;/chord&gt;
+                        &lt;/layer&gt;
+                     &lt;/staff&gt;
+                     &lt;staff n="3"&gt;
+                        &lt;layer n="1"&gt;
+                           &lt;rest xml:id="r1tk1ck5" dots="1" dur="4" /&gt;
+                           &lt;chord xml:id="c1gchhku" dots="1" dur="4"&gt;
+                              &lt;note xml:id="n1175x08" pname="a" oct="3"&gt;
+                                 &lt;accid accid.ges="f" /&gt;
+                              &lt;/note&gt;
+                              &lt;note xml:id="n1q1lkl9" pname="f" oct="4" /&gt;
+                           &lt;/chord&gt;
+                        &lt;/layer&gt;
+                     &lt;/staff&gt;
+                     &lt;staff n="4"&gt;
+                        &lt;layer n="1"&gt;
+                           &lt;rest xml:id="r1j4frj4" dots="1" dur="4" /&gt;
+                           &lt;note xml:id="n1h0fegz" dots="1" dur="4" pname="d" oct="3"&gt;
+                              &lt;accid accid.ges="f" /&gt;
+                           &lt;/note&gt;
+                        &lt;/layer&gt;
+                     &lt;/staff&gt;
+                     &lt;slur startid="#nan1okp" endid="#nrwyx5f" /&gt;
+                     &lt;slur startid="#n16xnlnh" endid="#nfnijk8" /&gt;
+                  &lt;/measure&gt;
+                  &lt;measure n="3"&gt;
+                     &lt;staff n="1"&gt;
+                        &lt;layer n="1"&gt;
+                           &lt;note xml:id="n2epqtj" dots="1" dur="4" pname="c" oct="5"&gt;
+                              &lt;artic artic="acc" /&gt;
+                           &lt;/note&gt;
+                           &lt;note xml:id="n1r7gnwc" dur="4" pname="a" oct="4"&gt;
+                              &lt;accid accid.ges="f" /&gt;
+                           &lt;/note&gt;
+                           &lt;rest xml:id="ruly5ba" dur="8" /&gt;
+                           &lt;note xml:id="n1ne7wug" dur="4" pname="a" oct="4"&gt;
+                              &lt;accid accid.ges="f" /&gt;
+                           &lt;/note&gt;
+                           &lt;rest xml:id="rl5b8tj" dur="8" /&gt;
+                        &lt;/layer&gt;
+                     &lt;/staff&gt;
+                     &lt;staff n="2"&gt;
+                        &lt;layer n="1"&gt;
+                           &lt;chord xml:id="c8kn0ob" dots="1" dur="4"&gt;
+                              &lt;artic artic="acc" /&gt;
+                              &lt;note xml:id="n1ao12g4" pname="a" oct="3"&gt;
+                                 &lt;accid accid.ges="f" /&gt;
+                              &lt;/note&gt;
+                              &lt;note xml:id="n1wm5qw9" pname="f" oct="4" /&gt;
+                           &lt;/chord&gt;
+                           &lt;chord xml:id="crdll1f" dur="4"&gt;
+                              &lt;note xml:id="n1pll3wi" pname="a" oct="3"&gt;
+                                 &lt;accid accid.ges="f" /&gt;
+                              &lt;/note&gt;
+                              &lt;note xml:id="n1bemu9" pname="f" oct="4" /&gt;
+                           &lt;/chord&gt;
+                           &lt;rest xml:id="raqomnj" dur="8" /&gt;
+                           &lt;chord xml:id="c1td3dqd" dur="4"&gt;
+                              &lt;note xml:id="n1sv524p" pname="a" oct="3"&gt;
+                                 &lt;accid accid.ges="f" /&gt;
+                              &lt;/note&gt;
+                              &lt;note xml:id="nqm4ker" pname="f" oct="4" /&gt;
+                           &lt;/chord&gt;
+                           &lt;rest xml:id="r1u9ez1g" dur="8" /&gt;
+                        &lt;/layer&gt;
+                     &lt;/staff&gt;
+                     &lt;staff n="3"&gt;
+                        &lt;layer n="1"&gt;
+                           &lt;note xml:id="n2ajvkm" dots="1" dur="4" pname="c" oct="4"&gt;
+                              &lt;artic artic="acc" /&gt;
+                           &lt;/note&gt;
+                           &lt;note xml:id="n1h0hgte" dur="4" pname="d" oct="4"&gt;
+                              &lt;accid accid.ges="f" /&gt;
+                           &lt;/note&gt;
+                           &lt;rest xml:id="r1dwu9k9" dur="8" /&gt;
+                           &lt;note xml:id="ncuhk1s" dur="4" pname="d" oct="4"&gt;
+                              &lt;accid accid.ges="f" /&gt;
+                           &lt;/note&gt;
+                           &lt;rest xml:id="rx9fpiz" dur="8" /&gt;
+                        &lt;/layer&gt;
+                     &lt;/staff&gt;
+                     &lt;staff n="4"&gt;
+                        &lt;layer n="1"&gt;
+                           &lt;note xml:id="ni3fhhf" dots="1" dur="4" pname="a" oct="2"&gt;
+                              &lt;artic artic="acc" /&gt;
+                              &lt;accid accid.ges="f" /&gt;
+                           &lt;/note&gt;
+                           &lt;note xml:id="n1iydcft" dots="1" dur="4" pname="d" oct="3"&gt;
+                              &lt;accid accid.ges="f" /&gt;
+                           &lt;/note&gt;
+                           &lt;note xml:id="ntxmihg" dur="4" pname="d" oct="3"&gt;
+                              &lt;accid accid.ges="f" /&gt;
+                           &lt;/note&gt;
+                           &lt;rest xml:id="r1haogp0" dur="8" /&gt;
+                        &lt;/layer&gt;
+                     &lt;/staff&gt;
+                     &lt;slur startid="#n2epqtj" endid="#n1r7gnwc" /&gt;
+                     &lt;slur startid="#c8kn0ob" curvedir="above" endid="#crdll1f" /&gt;
+                     &lt;slur startid="#c8kn0ob" curvedir="below" endid="#crdll1f" /&gt;
+                     &lt;slur startid="#n2ajvkm" endid="#n1h0hgte" /&gt;
+                     &lt;slur startid="#ni3fhhf" endid="#n1iydcft" /&gt;
+                  &lt;/measure&gt;
+               &lt;/section&gt;
+            &lt;/score&gt;
+         &lt;/mdiv&gt;
+      &lt;/body&gt;
+   &lt;/music&gt;
+&lt;/mei&gt;</egXML>
+                        </figure>
+                     </p>
                </div>
                <div xml:id="cmnReDef" type="div3">
                   <head>Re-definition of Score Parameters</head>
@@ -6577,7 +6857,7 @@ or
                      <p>For the repetition of a single note or chord, MEI offers the <gi scheme="MEI">bTrem</gi> (bowed tremolo) element, which is a member of the <ident type="class">model.eventLike.cmn</ident> class, meaning it is encoded following the normal course of musical events within a <gi scheme="MEI">layer</gi>. It holds exactly one <gi scheme="MEI">note</gi> or <gi scheme="MEI">chord</gi> element that is to be repeated.</p>
                      <p>
                         <figure>
-                           <head>Bowed tremolandi in Schubert’s last string quartet</head>
+                           <head>Bowed tremolandi in Schubert’s last String Quartet</head>
                            <graphic url="../images/ExampleImages/SchubertD887.png"/>
                         </figure>
                         <figure>
@@ -6689,7 +6969,7 @@ or
                      <p>In MEI, fermatas may be encoded using an attribute on elements like <gi scheme="MEI">note</gi>, <gi scheme="MEI">chord</gi> or <gi scheme="MEI">rest</gi>. This attribute allows placement of a fermata above or below the element to which it’s attached.</p>
                      <p>
                         <figure>
-                           <head>Fermatas in Mozart’s String quartet K. 428 indicating general pauses</head>
+                           <head>Fermatas in Mozart’s String Quartet K. 428 indicating general pauses</head>
                            <graphic url="../images/ExampleImages/MozartK428.4.png"/>
                         </figure>
                      </p>
@@ -21511,18 +21791,17 @@ or
       <memberOf key="model.meterSigLike"/>
     </classes>
     <content>
-      <rng:zeroOrMore>
+      <rng:choice>
         <rng:ref name="meterSig"/>
-      </rng:zeroOrMore>
+        <rng:ref name="meterSigGrp"/>
+      </rng:choice>
+      <rng:oneOrMore>
+        <rng:choice>
+          <rng:ref name="meterSig"/>
+          <rng:ref name="meterSigGrp"/>
+        </rng:choice>
+      </rng:oneOrMore>
     </content>
-    <constraintSpec ident="check_meterSigGrpContent" scheme="schematron">
-      <constraint>
-        <sch:rule context="mei:meterSigGrp[not(@copyof)]">
-          <sch:assert test="count(mei:meterSig) &gt; 1">meterSigGrp must have at least 2 child
-            meterSig elements.</sch:assert>
-        </sch:rule>
-      </constraint>
-    </constraintSpec>
   </elementSpec>
   <elementSpec ident="mNum" module="MEI.cmn">
     <gloss xml:lang="en">measure number</gloss>
@@ -43289,6 +43568,10 @@ or
   </classSpec>
   <classSpec ident="att.meterSigGrp.vis" module="MEI.visual" type="atts">
     <desc xml:lang="en">Visual domain attributes.</desc>
+    <classes>
+      <memberOf key="att.enclosingChars"/>
+      <memberOf key="att.visibility"/>
+    </classes>
   </classSpec>
   <classSpec ident="att.mNum.vis" module="MEI.visual" type="atts">
     <desc xml:lang="en">Visual domain attributes.</desc>
