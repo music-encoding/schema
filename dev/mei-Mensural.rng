@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2024-10-21T15:33:42Z. . 
+Schema generated from ODD source 2024-11-13T08:59:07Z. . 
 TEI Edition: Development Version 
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -24673,16 +24673,11 @@ Suggested values include: 1] alternative; 2] arrangement; 3] carrier; 4] date; 5
    <define name="mei_att.scoreDef.vis.tablature.attributes">
       <empty/>
    </define>
-   <define name="mei_att.stringtab.attributes">
-      <ref name="mei_att.stringtab.attribute.tab.align"/>
-      <ref name="mei_att.stringtab.attribute.tab.anchorline"/>
-      <ref name="mei_att.stringtab.attribute.tab.fing"/>
-      <ref name="mei_att.stringtab.attribute.tab.fret"/>
-      <ref name="mei_att.stringtab.attribute.tab.line"/>
-      <ref name="mei_att.stringtab.attribute.tab.string"/>
-      <ref name="mei_att.stringtab.attribute.tab.course"/>
+   <define name="mei_att.staffDef.vis.tablature.attributes">
+      <ref name="mei_att.staffDef.vis.tablature.attribute.tab.align"/>
+      <ref name="mei_att.staffDef.vis.tablature.attribute.tab.anchorline"/>
    </define>
-   <define name="mei_att.stringtab.attribute.tab.align">
+   <define name="mei_att.staffDef.vis.tablature.attribute.tab.align">
       <optional>
          <attribute name="tab.align">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Attribute that describes the vertical alignment of tablature symbols. Only applicable in cases where the symbols' vertical position does not communicate other information, such as courses (i.e., only in German lute tablature). Typical values are top and bottom.</a:documentation>
@@ -24690,7 +24685,7 @@ Suggested values include: 1] alternative; 2] arrangement; 3] carrier; 4] date; 5
          </attribute>
       </optional>
    </define>
-   <define name="mei_att.stringtab.attribute.tab.anchorline">
+   <define name="mei_att.staffDef.vis.tablature.attribute.tab.anchorline">
       <optional>
          <attribute name="tab.anchorline">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Used in German lute tablature where the vertical alignment of tab notes is consistent but cannot be identified using a typical value of <code xmlns="http://www.w3.org/1999/xhtml"
@@ -24700,6 +24695,13 @@ Suggested values include: 1] alternative; 2] arrangement; 3] carrier; 4] date; 5
             <ref name="mei_data.CLEFLINE"/>
          </attribute>
       </optional>
+   </define>
+   <define name="mei_att.stringtab.attributes">
+      <ref name="mei_att.stringtab.attribute.tab.fing"/>
+      <ref name="mei_att.stringtab.attribute.tab.fret"/>
+      <ref name="mei_att.stringtab.attribute.tab.line"/>
+      <ref name="mei_att.stringtab.attribute.tab.string"/>
+      <ref name="mei_att.stringtab.attribute.tab.course"/>
    </define>
    <define name="mei_att.stringtab.attribute.tab.fing">
       <optional>
@@ -26499,6 +26501,7 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
       <ref name="mei_att.textStyle.attributes"/>
       <ref name="mei_att.visibility.attributes"/>
       <ref name="mei_att.staffDef.vis.mensural.attributes"/>
+      <ref name="mei_att.staffDef.vis.tablature.attributes"/>
       <ref name="mei_att.staffDef.vis.attribute.layerscheme"/>
       <ref name="mei_att.staffDef.vis.attribute.lines.color"/>
       <ref name="mei_att.staffDef.vis.attribute.lines.visible"/>
