@@ -20,7 +20,7 @@
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../source/validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2024-11-15T10:09:46.055583677+01:00-->
+<!--canonicalized: 2024-11-15T11:34:39.642406304+01:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -29319,9 +29319,7 @@ or
       </rng:zeroOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>The <gi scheme="MEI">lb</gi> element is allowed here in order to facilitate karaoke
-        applications. The <att>func</att> attribute on <gi scheme="MEI">lb</gi> may be used to
-        distinguish true line endings from those of line groups for these applications.</p>
+      <p>The <gi scheme="MEI">lb</gi> element is allowed here in order to facilitate karaoke applications.</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="verse" module="MEI.lyrics">
@@ -39135,8 +39133,8 @@ or
     </content>
     <remarks xml:lang="en">
       <p>The <att>n</att> attribute should be used to record a number associated with this textual
-        line. See comment on <gi scheme="MEI">verse</gi> element for description of <att>func</att>
-        attribute. Do not confuse this element with the <gi scheme="MEI">sb</gi> element, which
+        line.</p>
+      <p>Do not confuse this element with the <gi scheme="MEI">sb</gi> element, which
         performs a similar function for musical notation.</p>
     </remarks>
     <remarks xml:lang="en">

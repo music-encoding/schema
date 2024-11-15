@@ -9879,9 +9879,7 @@
       <oneOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="volta"/><ref name="model.sylLike"/><ref name="model.appLike"/><ref name="model.editLike"/></choice></oneOrMore>
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.lbLike"/></zeroOrMore>
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
-      <p>The <gi scheme="MEI">lb</gi> element is allowed here in order to facilitate karaoke
-        applications. The <att>func</att> attribute on <gi scheme="MEI">lb</gi> may be used to
-        distinguish true line endings from those of line groups for these applications.</p>
+      <p>The <gi scheme="MEI">lb</gi> element is allowed here in order to facilitate karaoke applications.</p>
     </remarks></elementSpec><elementSpec rend="add" ident="verse" module="MEI.lyrics"><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Division of a poem or song lyrics, sometimes having a fixed length, meter or rhyme scheme;
       a stanza.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
@@ -16242,8 +16240,8 @@
       <empty/>
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The <att>n</att> attribute should be used to record a number associated with this textual
-        line. See comment on <gi scheme="MEI">verse</gi> element for description of <att>func</att>
-        attribute. Do not confuse this element with the <gi scheme="MEI">sb</gi> element, which
+        line.</p>
+      <p>Do not confuse this element with the <gi scheme="MEI">sb</gi> element, which
         performs a similar function for musical notation.</p>
     </remarks><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-lb.html">lb</ref> element of the Text Encoding Initiative (TEI).</p>
