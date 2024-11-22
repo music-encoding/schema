@@ -20,7 +20,7 @@
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../source/validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2024-11-22T10:35:43.933528883+01:00-->
+<!--canonicalized: 2024-11-22T11:01:16.187455672+01:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -12865,22 +12865,22 @@ or
                            <head/>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;chordDef xml:id="harmonychordA2"&gt;
    &lt;chordMember oct="2" pname="a"/&gt;
-   &lt;chordMember inth="7"/&gt;
-   &lt;chordMember inth="16"/&gt;
-   &lt;chordMember inth="19"/&gt;
-   &lt;chordMember inth="24"/&gt;
+   &lt;chordMember inth="P5"/&gt;
+   &lt;chordMember inth="M10"/&gt;
+   &lt;chordMember inth="P12"/&gt;
+   &lt;chordMember inth="P15"/&gt;
 &lt;/chordDef&gt;
 </egXML>
                         </figure>
                      </p>
-                     <p>The preceding encoding possibilities provide the detailed information necessary to create playable chord annotations. For more generic uses, however, the encoding can be taken one step further; that is, it can be reduced to its minimum intervallic content by eliminating octave duplications and expressing all chord members, including the bass note, using intervals above the bass. Of course, the <att>inth</att> attribute for the bass note itself should be set to 0. For example:</p>
+                     <p>The preceding encoding possibilities provide the detailed information necessary to create playable chord annotations. For more generic uses, however, the encoding can be taken one step further; that is, it can be reduced to its minimum intervallic content by eliminating octave duplications and expressing all chord members, including the bass note, using intervals above the bass. Of course, the <att>inth</att> attribute for the bass note itself should be set to P1. For example:</p>
                      <p>
                         <figure>
                            <head/>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;chordDef xml:id="harmonychordA3"&gt;
-   &lt;chordMember inth="0"/&gt;
-   &lt;chordMember inth="4"/&gt;
-   &lt;chordMember inth="7"/&gt;
+   &lt;chordMember inth="P1"/&gt;
+   &lt;chordMember inth="M3"/&gt;
+   &lt;chordMember inth="P5"/&gt;
 &lt;/chordDef&gt;
 </egXML>
                         </figure>
@@ -17182,14 +17182,26 @@ or
     </content>
   </macroSpec>-->
   <macroSpec ident="data.INTERVAL.HARMONIC" module="MEI" type="dt">
-    <desc xml:lang="en">A token indicating diatonic interval quality and size.</desc>
+    <desc xml:lang="en">A token indicating diatonic interval quality and size in shorthand notation.</desc>
     <content>
       <rng:choice>
         <rng:data type="token">
-          <rng:param name="pattern">[AdMmP][0-9]+</rng:param>
+          <rng:param name="pattern">[AdMmP][1-9][0-9]*</rng:param>
         </rng:data>
       </rng:choice>
     </content>
+    <remarks xml:lang="en">
+      <p>
+        <list>
+          <head>Interval qualities:</head>
+          <item>A = augmented,</item>
+          <item>d = diminished,</item>
+          <item>M = major,</item>
+          <item>m = minor,</item>
+          <item>P = perfect</item>
+        </list>
+      </p>
+    </remarks>
   </macroSpec>
   <macroSpec ident="data.INTERVAL.MELODIC" module="MEI" type="dt">
     <desc xml:lang="en">A token indicating direction of the interval but not its precise value, a diatonic
@@ -26165,8 +26177,8 @@ or
       <p>The <att>string</att>, <att>fret</att>, and <att>fing</att> attributes are provided in
         order to create displayable chord tablature grids. The <att>inth</att> (harmonic interval)
         attribute may be used to facilitate automated performance of a chord. It gives the number of
-        1/2 steps above the bass. Of course, for the bass note itself, <att>inth</att> should be set
-        to <val>0</val>.</p>
+        diatonic steps above the bass. Of course, for the bass note itself, <att>inth</att> should be set
+        to <val>P1</val>.</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="chordTable" module="MEI.harmony">

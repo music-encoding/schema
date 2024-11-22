@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2024-11-22T09:36:08Z. . 
+Schema generated from ODD source 2024-11-22T10:01:41Z. . 
 TEI Edition: Development Version 
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -6685,7 +6685,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
    </define>
    <define name="mei_data.INTERVAL.HARMONIC">
       <data type="token">
-         <param name="pattern">[AdMmP][0-9]+</param>
+         <param name="pattern">[AdMmP][1-9][0-9]*</param>
       </data>
    </define>
    <define name="mei_data.INTERVAL.MELODIC">
