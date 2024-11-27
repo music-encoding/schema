@@ -6214,7 +6214,7 @@
       <memberOf key="model.transcriptionLike"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.divLike"/><ref name="model.editLike"/><ref name="model.editTransPart"/><ref name="model.fLike"/><ref name="model.graphicPrimitiveLike"/><ref name="model.keyAccidLike"/><ref name="model.layerPart"/><ref name="model.milestoneLike.music"/><ref name="model.sectionPart"/><ref name="model.staffGrpLike"/><ref name="model.transcriptionLike"/></choice></zeroOrMore>
-    </content><attList><attDef xmlns:xi="http://www.w3.org/2001/XInclude" ident="place">
+    </content><attList><attDef xmlns:xi="http://www.w3.org/2001/XInclude" ident="place" usage="opt">
         <desc xml:lang="en">Location of the addition.</desc>
         <datatype maxOccurs="unbounded">
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.PLACEMENT"/>
@@ -6485,7 +6485,7 @@
             attributes: startid, tstamp, tstamp.ges or tstamp.real</sch:assert>
         </sch:rule>
       </constraint>
-    </constraintSpec><attList><attDef xmlns:xi="http://www.w3.org/2001/XInclude" ident="function">
+    </constraintSpec><attList><attDef xmlns:xi="http://www.w3.org/2001/XInclude" ident="function" usage="opt">
         <desc xml:lang="en">Describes the purpose of the metaMark.</desc>
         <datatype>
           <rng:data type="NMTOKEN"/>
@@ -7277,7 +7277,7 @@
           <sch:assert test="not(mei:availability)">Availability is only permitted when @singleton equals "true".</sch:assert>
         </sch:rule>
       </constraint>
-    </constraintSpec><attList><attDef xmlns:xi="http://www.w3.org/2001/XInclude" ident="singleton">
+    </constraintSpec><attList><attDef xmlns:xi="http://www.w3.org/2001/XInclude" ident="singleton" usage="opt">
         <desc xml:lang="en">Indicates the manifestation is a unique physical object.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.BOOLEAN"/>
@@ -7303,14 +7303,14 @@
       </constraint>
     </constraintSpec>
     <attList xmlns:xi="http://www.w3.org/2001/XInclude">
-      <attDef ident="instant">
+      <attDef ident="instant" usage="opt">
         <desc xml:lang="en">The @instant attribute is syntactic sugar for classifying a scribal intervention as an
           ad-hoc modification; that is, one which does not interrupt the writing process.</desc>
         <datatype>
           <choice xmlns="http://relaxng.org/ns/structure/1.0"><ref name="data.BOOLEAN"/><value>unknown</value></choice>
         </datatype>
       </attDef>
-      <attDef ident="state">
+      <attDef ident="state" usage="opt">
         <desc xml:lang="en">Points to the genetic state that results from this modification.</desc>
         <datatype maxOccurs="unbounded">
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.URI"/>
@@ -7324,7 +7324,7 @@
       <memberOf key="model.resourceLike"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="genDesc"/><ref name="genState"/></choice></zeroOrMore>
-    </content><attList><attDef xmlns:xi="http://www.w3.org/2001/XInclude" ident="ordered">
+    </content><attList><attDef xmlns:xi="http://www.w3.org/2001/XInclude" ident="ordered" usage="opt">
         <desc xml:lang="en">When set to "true" the child elements are known to be in chronological order. When set
           to "false" or when not provided, the order of child elements is unknown.</desc>
         <datatype>
@@ -7418,7 +7418,7 @@
   </classSpec><classSpec rend="add" ident="att.attacking" module="MEI.gestural" type="atts">
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes whether an element is performed "attacca".</desc>
     <attList xmlns:xi="http://www.w3.org/2001/XInclude">
-      <attDef ident="attacca">
+      <attDef ident="attacca" usage="opt">
         <desc xml:lang="en">Indicates that the performance of the next musical division should begin immediately
           following this one.</desc>
         <datatype>
@@ -8274,7 +8274,7 @@
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that define the characteristics and components of the bibliographic
       description.</desc>
     <attList xmlns:xi="http://www.w3.org/2001/XInclude">
-      <attDef ident="recordtype">
+      <attDef ident="recordtype" usage="opt">
         <valList type="closed">
           <valItem ident="a">
             <desc xml:lang="en">Language material.</desc>
@@ -10573,7 +10573,7 @@
       <memberOf key="model.physDescPart"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
       <ref xmlns="http://relaxng.org/ns/structure/1.0" name="macro.struc-unstrucContent"/>
-    </content><attList><attDef xmlns:xi="http://www.w3.org/2001/XInclude" ident="func">
+    </content><attList><attDef xmlns:xi="http://www.w3.org/2001/XInclude" ident="func" usage="opt">
         <valList type="closed">
           <valItem ident="initial">
             <desc xml:lang="en">Signals beginning of a text division.</desc>
@@ -11799,7 +11799,7 @@
           <rng:data type="nonNegativeInteger"/>
         </datatype>
       </attDef>
-      <attDef ident="rotate">
+      <attDef ident="rotate" usage="opt">
         <desc xml:lang="en">
           Indicates the amount by which the contents of this element have been rotated clockwise or, if applicable, how the orientation of
           the element self should be interpreted, with respect to the normal orientation of the parent surface.
@@ -14001,21 +14001,21 @@
   </classSpec><classSpec rend="add" ident="att.staffItems" module="MEI.shared" type="atts">
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that describe items printed near (above, below, or between) staves</desc>
     <attList xmlns:xi="http://www.w3.org/2001/XInclude">
-      <attDef ident="aboveorder">
+      <attDef ident="aboveorder" usage="opt">
         <desc xml:lang="en">Describes vertical order of items printed above a staff, from closest to farthest away
           from the staff.</desc>
         <datatype maxOccurs="unbounded">
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.STAFFITEM"/>
         </datatype>
       </attDef>
-      <attDef ident="beloworder">
+      <attDef ident="beloworder" usage="opt">
         <desc xml:lang="en">Describes vertical order of items printed below a staff, from closest to farthest away
           from the staff.</desc>
         <datatype maxOccurs="unbounded">
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.STAFFITEM"/>
         </datatype>
       </attDef>
-      <attDef ident="betweenorder">
+      <attDef ident="betweenorder" usage="opt">
         <desc xml:lang="en">Describes vertical order of items printed between staves, from top to bottom.</desc>
         <datatype maxOccurs="unbounded">
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.STAFFITEM"/>
@@ -14306,7 +14306,7 @@
       <memberOf key="att.timestamp2.log"/>
     </classes>
     <attList xmlns:xi="http://www.w3.org/2001/XInclude">
-      <attDef ident="func">
+      <attDef ident="func" usage="opt">
         <desc xml:lang="en">Records the function of a tempo indication.</desc>
         <valList type="closed">
           <valItem ident="continuous">

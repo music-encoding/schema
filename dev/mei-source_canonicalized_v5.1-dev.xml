@@ -20,7 +20,7 @@
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../source/validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2024-11-22T11:01:16.187455672+01:00-->
+<!--canonicalized: 2024-11-27T10:47:00.193290312+01:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -23232,7 +23232,7 @@ or
       </rng:zeroOrMore>
     </content>
     <attList>
-      <attDef ident="place">
+      <attDef ident="place" usage="opt">
         <desc xml:lang="en">Location of the addition.</desc>
         <datatype maxOccurs="unbounded">
           <rng:ref name="data.PLACEMENT"/>
@@ -23670,7 +23670,7 @@ or
       </constraint>
     </constraintSpec>
     <attList>
-      <attDef ident="function">
+      <attDef ident="function" usage="opt">
         <desc xml:lang="en">Describes the purpose of the metaMark.</desc>
         <datatype>
           <rng:data type="NMTOKEN"/>
@@ -25040,7 +25040,7 @@ or
       </constraint>
     </constraintSpec>
     <attList>
-      <attDef ident="singleton">
+      <attDef ident="singleton" usage="opt">
         <desc xml:lang="en">Indicates the manifestation is a unique physical object.</desc>
         <datatype>
           <rng:ref name="data.BOOLEAN"/>
@@ -25100,7 +25100,7 @@ or
       </constraint>
     </constraintSpec>
     <attList>
-      <attDef ident="instant">
+      <attDef ident="instant" usage="opt">
         <desc xml:lang="en">The @instant attribute is syntactic sugar for classifying a scribal intervention as an
           ad-hoc modification; that is, one which does not interrupt the writing process.</desc>
         <datatype>
@@ -25110,7 +25110,7 @@ or
           </rng:choice>
         </datatype>
       </attDef>
-      <attDef ident="state">
+      <attDef ident="state" usage="opt">
         <desc xml:lang="en">Points to the genetic state that results from this modification.</desc>
         <datatype maxOccurs="unbounded">
           <rng:ref name="data.URI"/>
@@ -25136,7 +25136,7 @@ or
       </rng:zeroOrMore>
     </content>
     <attList>
-      <attDef ident="ordered">
+      <attDef ident="ordered" usage="opt">
         <desc xml:lang="en">When set to "true" the child elements are known to be in chronological order. When set
           to "false" or when not provided, the order of child elements is unknown.</desc>
         <datatype>
@@ -25278,7 +25278,7 @@ or
   <classSpec ident="att.attacking" module="MEI.gestural" type="atts">
     <desc xml:lang="en">Attributes whether an element is performed "attacca".</desc>
     <attList>
-      <attDef ident="attacca">
+      <attDef ident="attacca" usage="opt">
         <desc xml:lang="en">Indicates that the performance of the next musical division should begin immediately
           following this one.</desc>
         <datatype>
@@ -26459,7 +26459,7 @@ or
     <desc xml:lang="en">Attributes that define the characteristics and components of the bibliographic
       description.</desc>
     <attList>
-      <attDef ident="recordtype">
+      <attDef ident="recordtype" usage="opt">
         <valList type="closed">
           <valItem ident="a">
             <desc xml:lang="en">Language material.</desc>
@@ -30994,7 +30994,7 @@ or
       <rng:ref name="macro.struc-unstrucContent"/>
     </content>
     <attList>
-      <attDef ident="func">
+      <attDef ident="func" usage="opt">
         <valList type="closed">
           <valItem ident="initial">
             <desc xml:lang="en">Signals beginning of a text division.</desc>
@@ -33496,7 +33496,7 @@ or
           <rng:data type="nonNegativeInteger"/>
         </datatype>
       </attDef>
-      <attDef ident="rotate">
+      <attDef ident="rotate" usage="opt">
         <desc xml:lang="en">
           Indicates the amount by which the contents of this element have been rotated clockwise or, if applicable, how the orientation of
           the element self should be interpreted, with respect to the normal orientation of the parent surface.
@@ -35869,21 +35869,21 @@ or
   <classSpec ident="att.staffItems" module="MEI.shared" type="atts">
     <desc xml:lang="en">Attributes that describe items printed near (above, below, or between) staves</desc>
     <attList>
-      <attDef ident="aboveorder">
+      <attDef ident="aboveorder" usage="opt">
         <desc xml:lang="en">Describes vertical order of items printed above a staff, from closest to farthest away
           from the staff.</desc>
         <datatype maxOccurs="unbounded">
           <rng:ref name="data.STAFFITEM"/>
         </datatype>
       </attDef>
-      <attDef ident="beloworder">
+      <attDef ident="beloworder" usage="opt">
         <desc xml:lang="en">Describes vertical order of items printed below a staff, from closest to farthest away
           from the staff.</desc>
         <datatype maxOccurs="unbounded">
           <rng:ref name="data.STAFFITEM"/>
         </datatype>
       </attDef>
-      <attDef ident="betweenorder">
+      <attDef ident="betweenorder" usage="opt">
         <desc xml:lang="en">Describes vertical order of items printed between staves, from top to bottom.</desc>
         <datatype maxOccurs="unbounded">
           <rng:ref name="data.STAFFITEM"/>
@@ -36185,7 +36185,7 @@ or
       <memberOf key="att.timestamp2.log"/>
     </classes>
     <attList>
-      <attDef ident="func">
+      <attDef ident="func" usage="opt">
         <desc xml:lang="en">Records the function of a tempo indication.</desc>
         <valList type="closed">
           <valItem ident="continuous">

@@ -4679,7 +4679,7 @@
   </classSpec><classSpec rend="add" ident="att.attacking" module="MEI.gestural" type="atts">
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes whether an element is performed "attacca".</desc>
     <attList xmlns:xi="http://www.w3.org/2001/XInclude">
-      <attDef ident="attacca">
+      <attDef ident="attacca" usage="opt">
         <desc xml:lang="en">Indicates that the performance of the next musical division should begin immediately
           following this one.</desc>
         <datatype>
@@ -6591,7 +6591,7 @@
       <memberOf key="att.timestamp2.log"/>
     </classes>
     <attList xmlns:xi="http://www.w3.org/2001/XInclude">
-      <attDef ident="func">
+      <attDef ident="func" usage="opt">
         <desc xml:lang="en">Records the function of a tempo indication.</desc>
         <valList type="closed">
           <valItem ident="continuous">
