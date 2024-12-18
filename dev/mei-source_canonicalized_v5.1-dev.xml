@@ -20,7 +20,7 @@
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../source/validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2024-12-04T11:28:12.797573496+01:00-->
+<!--canonicalized: 2024-12-18T10:25:34.355589094+01:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -2320,6 +2320,12 @@
                      </figure>
                   </p>
                </div>
+               <div xml:id="headerAssociatingMetadataAndData" type="div3">
+                  <head>Associating Metadata and Data</head>
+                  <p>In the MEI header, the <att>data</att> attribute may be used to associate metadata with related notational elements.</p>
+                  <p>Similarly, in the body of the MEI document, the <att>decls</att> attribute may be used to associate parts of the encoded text with related metadata.</p>
+                  <p>The most useful associations of this type are between the bibliographic description of a source and the material taken from it.</p>
+               </div>
             </div>
             <div xml:id="meifile" type="div2">
                <head>Information about an MEI file</head>
@@ -2728,12 +2734,6 @@
                            <specDesc key="biblStruct"/>
                         </specList>
                      </p>
-                     <div xml:id="headerAssociatingMetadataAndData" type="div5">
-                        <head>Associating Metadata and Data</head>
-                        <p>In the MEI header, the <att>data</att> attribute may be used to associate metadata with related notational elements.</p>
-                        <p>Similarly, in the body of the MEI document, the <att>decls</att> attribute may be used to associate parts of the encoded text with related metadata.</p>
-                        <p>The most useful associations of this type are between the bibliographic description of a source and the material taken from it.</p>
-                     </div>
                   </div>
                </div>
                <div xml:id="headerEncodingDescription" type="div3">
