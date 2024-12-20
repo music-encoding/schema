@@ -20,7 +20,7 @@
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../source/validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2024-12-18T10:44:39.202907105+01:00-->
+<!--canonicalized: 2024-12-20T09:08:30.486445606+01:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -12017,7 +12017,7 @@ or
                            <item>Currently the most widely supported raster image format, especially for black and white images, TIFF is also one of the few formats commonly supported on more than one operating system. The drawback to TIFF is that it actually is a wrapper for several formats, and some TIFF-supporting software does not support all variants. TIFF files may use LZW, CCITT Group 4, or PackBits compression methods, or may use no compression at all. Also, TIFF files may be monochrome, greyscale, or polychromatic. All such options should be specified in prose at the end of the encodingDesc section of the MEI header for any document including TIFF images. TIFF is owned by Aldus Corporation. Documentation on TIFF is available from the owner at Craigcook Castle, Craigcook Road, Edinburgh EH4 3UH, Scotland, or 411 First Avenue South, Seattle, Washington 98104 USA.</item>
                            <label>GIF (Graphics Interchange Format)</label>
                            <item>Raster images are widely available in this form, which was created by CompuServe Information Services, but has by now been implemented for many other systems as well. Documentation is copyright by, and is available from, CompuServe Incorporated, Graphics Technology Department, 5000 Arlington Center Boulevard, Columbus, Ohio 43220 USA.</item>
-                           <label>PBM (Portable Bit Map</label>
+                           <label>PBM (Portable Bit Map)</label>
                            <item>PBM files are easy to process, eschewing all compression in favor of transparency of file format. PBM files can, of course, be compressed by generic file-compression tools for storage and transfer. Public domain software exists which will convert many other formats to and from PBM. Documentation of PBM is copyright by Jeff Poskanzer, and is available widely on the Internet.</item>
                            <label>PCX (IBM PC raster format)</label>
                            <item>This format is used by most IBM PC paint programs, and supports both monochrome and polychromatic images. Documentation is available from ZSoft Corporation, Technical Support Department, ATTN: Technical Reference Manual, 450 Franklin Rd. Suite 100, Marietta, GA 30067 USA.</item>
@@ -12318,14 +12318,541 @@ or
                </div>
                <div xml:id="sharedNames" type="div3">
                   <head>Names</head>
-                  <p>The <gi scheme="MEI">name</gi> element may be used to mark up portions of a text that function as name.</p>
-                  <p>
-                     <specList>
-                        <specDesc key="name"/>
-                     </specList>
-                  </p>
-                  <p>The <gi scheme="MEI">name</gi> element is intended for generic applications and may be used to identify any named entity, such as a person, item, application, place, etc. Sometimes, however, a more specific encoding is desired, identifying the type of entity by using dedicated elements. MEI offers an (optional) module for this, which provides such elements for various types of names.</p>
+                  <p>The following section begins by discussing the elements provided for the encoding
+                     of names (<gi scheme="MEI">name</gi>) in general and finishes by addressing more
+                     specific elements for corporate names (<gi scheme="MEI">corpName</gi>), geographic
+                     names (<gi scheme="MEI">geogName</gi>), period names (<gi scheme="MEI">periodName</gi>),
+                     personal names (<gi scheme="MEI">persName</gi>), and style names (<gi scheme="MEI">styleName</gi>). 
+                     In general it is recommended to use standardized forms of proper
+                     nouns and to record the names and web-accessible locations of the controlled
+                     vocabularies used. There are several commonly-referenced authority files,
+                     especially for geographical, organizational and personal names, such as the
+                     <name ref="https://www.dnb.de/EN/Professionell/Standardisierung/GND/gnd_node.html">Gemeinsame Normdatei (GND)</name>,
+                     the <name ref="https://authorities.loc.gov">Library of Congress Authorities</name>,
+                     the <name ref="https://www.getty.edu/research/tools/vocabularies/tgn/">Getty Thesaurus of Geographic Names (TGN)</name>,
+                     and the <name ref="https://www.loc.gov/marc/relators/">MARC code list for relators</name>.
+                     Recommendations on which standards could be used can be found in the descriptions
+                     of the individual elements.</p>
+
+                  <div xml:id="namesBasic" type="div4">
+                     <head>Basic Elements for Names</head>
+                     <p>The basic element for capturing names and is defined in the shared module:</p>
+                     <p>
+                        <specList>
+                           <specDesc key="name"/>
+                        </specList>
+                     </p>
+                     <p>The <gi scheme="MEI">name</gi> element contains the name of an entity that is
+                        difficult to tag more specifically as a <gi scheme="MEI">corpName</gi>, <gi scheme="MEI">geogName</gi>, <gi scheme="MEI">persName</gi>, or <gi scheme="MEI">title</gi>. The <gi scheme="MEI">name</gi> element may be used
+                        in place of the more specific elements when it is not known what kind of name
+                        is being described or when a high degree of precision is not necessary. For
+                        example, the <gi scheme="MEI">name</gi> element might be used when it is not
+                        clear whether the name “Bach” refers to a person or a geographic feature. When
+                        name parts are needed, use <gi scheme="MEI">name</gi> sub-elements. The
+                        recommended values for the <att>type</att> attribute are:</p>
+                     <list type="gloss">
+                        <label>pers</label>
+                        <item>a personal name</item>
+                        <label>corp</label>
+                        <item>the name of a corporate entity</item>
+                        <label>place</label>
+                        <item>a geographic name</item>
+                        <label>process</label>
+                        <item>the name of a process or mechanical agent</item>
+                     </list>
+
+                     <p>Examples of the use of the <att>type</att> attribute within the <gi scheme="MEI">name</gi> element:</p>
+                     <p>
+                        <figure>
+                           <head/>
+                           <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;p&gt;
+   &lt;name type="pers"&gt;Henry VIII, King of England&lt;/name&gt;
+   &lt;name type="corp"&gt;The Beatles&lt;/name&gt;
+   &lt;name type="place"&gt;Orbach&lt;/name&gt;
+   &lt;name type="process"&gt;OMR software&lt;/name&gt;
+&lt;/p&gt;</egXML>
+                        </figure>
+                     </p>
+                     <p>The date sub-element is available within <gi scheme="MEI">name</gi> in order to
+                        record any dates associated with the name, for example, creation and
+                        dissolution in the case of a corporate entity or place or birth and death dates
+                        in the case of an individual. The name of the list from which a controlled
+                        value is taken, such as the 
+                        <name>Library of Congress Name Authority File (LCNAF)</name>, may be recorded using the <att>auth</att> attribute.</p>
+                  </div>
+
+                  <div xml:id="namesspecialized" type="div4">
+                     <head>Specialized Name Elements</head>
+                     <p>In addition to the generic <gi scheme="MEI">name</gi> and <gi scheme="MEI">date</gi>
+                        elements provided by the shared module, the 'MEI.namesdates' module provides
+                        for the markup of the specialized cases described below.</p>
+
+                     <div xml:id="namesdatesCorpNames" type="div5">
+                        <head>Corporate Names</head>
+                        <p>
+                           <specList>
+                              <specDesc key="corpName"/>
+                           </specList>
+                        </p>
+                        <p>Corporate names are non-personal names which refer to structured bodies
+                           of one or more persons that act as a single entity. Typical examples
+                           include associations, businesses, projects or institutions (<abbr>e.g.</abbr>, ‘the
+                           Royal College of Music’ or ‘the BBC’), but political factions or other
+                           groupings where these are regarded as forming a single agency.
+                           Organization names typically include some type of indicator or pattern or
+                           words that help identify them as non-personal names.</p>
+                        <p>The <gi scheme="MEI">corpName</gi> element is frequently used within the of
+                           an MEI document. It is typically found in the <gi scheme="MEI">respStmt</gi> element:</p>
+                        <p>
+                           <figure>
+                              <head/>
+                              <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;respStmt&gt;
+   &lt;corpName&gt;Library of Congress&lt;/corpName&gt;
+&lt;/respStmt&gt;</egXML>
+                           </figure>
+                        </p>
+                        <p>It may also be used wherever it is necessary to mark a corporate name,
+                           for example when a corporation is responsible for a certain event in the
+                           history of a musical work:</p>
+                        <p>
+                           <figure>
+                              <head/>
+                              <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;history&gt;
+   &lt;eventList&gt;
+      &lt;event&gt;
+         &lt;p&gt;First performance by &lt;corpName&gt;The Boston Symphony Orchestra&lt;/corpName&gt;, &lt;date&gt;October 22, 1881&lt;/date&gt;.&lt;/p&gt;
+      &lt;/event&gt;
+   &lt;/eventList&gt;
+&lt;/history&gt;</egXML>
+                           </figure>
+                        </p>
+                        <p>When it is necessary to provide structure for a name, the separate parts of
+                           the name may be encoded in <gi scheme="MEI">corpName</gi> sub-elements, for
+                           example:</p>
+                        <p>
+                           <figure>
+                              <head/>
+                              <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;corpName&gt;Federal Research Division,
+   &lt;corpName&gt;Library of Congress&lt;/corpName&gt;
+&lt;/corpName&gt;
+</egXML>
+                           </figure>
+                        </p>
+                        <p>Standard designations for corporate bodies can be taken from a controlled
+                           vocabulary, such as the Gemeinsame Normdatei (GND). If a controlled value
+                           is used, the list from which it is taken should be recorded. In this
+                           case, the following attributes are particularly relevant:</p>
+                        <p>
+                           <specList>
+                              <specDesc key="att.authorized" atts="auth auth.uri"/>
+                              <specDesc key="att.canonical" atts="codedval"/>
+                           </specList>
+                        </p>
+                     </div>
+                     <div xml:id="namesdatesGeogNames" type="div5">
+                        <head>Geographic Names</head>
+                        <p>
+                           <specList>
+                              <specDesc key="geogName"/>
+                           </specList>
+                        </p>
+                        <p>Geographic names are proper noun designations for places (<abbr>e.g.</abbr>,
+                           Baltimore, Maryland), natural features (<abbr>e.g.</abbr>, Black Forest) or
+                           political jurisdictions (<abbr>e.g.</abbr>, Quartier Latin, Paris).</p>
+                        <p>The element can be used, <abbr>e.g.</abbr>, to label geographical names in titles:</p>
+                        <p>
+                           <figure>
+                              <head/>
+                              <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;title&gt;
+   &lt;geogName&gt;Bohemia&lt;/geogName&gt;: Folk Songs
+&lt;/title&gt;
+</egXML>
+                           </figure>
+                           <figure>
+                              <head/>
+                              <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;title&gt;Music in the
+   &lt;geogName&gt;German Democratic Republic&lt;/geogName&gt;
+&lt;/title&gt;
+</egXML>
+                           </figure>
+                        </p>
+                        <p>Geographic name sub-parts may be encoded in <gi scheme="MEI">geogName</gi>
+                           sub-elements. For example:</p>
+                        <p>
+                           <figure>
+                              <head/>
+                              <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;p&gt;
+   &lt;geogName&gt;
+      &lt;geogName&gt;Baltimore&lt;/geogName&gt;,
+      &lt;geogName&gt;Maryland&lt;/geogName&gt;
+   &lt;/geogName&gt;
+   &lt;geogName&gt;
+      &lt;geogName&gt;French Quarter&lt;/geogName&gt;,
+      &lt;geogName&gt;New Orleans&lt;/geogName&gt;,
+      &lt;geogName&gt;Louisiana&lt;/geogName&gt;
+   &lt;/geogName&gt;
+&lt;/p&gt;
+</egXML>
+                           </figure>
+                        </p>
+                        <p>Alternatively, geographic name sub-parts may be encoded using the
+                           following more specific elements:</p>
+                        <p>
+                           <specList>
+                              <specDesc key="bloc"/>
+                              <specDesc key="country"/>
+                              <specDesc key="district"/>
+                              <specDesc key="geogFeat"/>
+                              <specDesc key="postBox"/>
+                              <specDesc key="postCode"/>
+                              <specDesc key="region"/>
+                              <specDesc key="settlement"/>
+                              <specDesc key="street"/>
+                           </specList>
+                        </p>
+                        <p>In contrast to the way <gi scheme="MEI">addrLine</gi> is used to mark
+                           the physical arrangement of the parts of an address, these elements
+                           can be used to mark the semantic components of an address. For
+                           example:</p>
+                        <p>
+                           <figure>
+                              <head/>
+                              <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;address&gt;
+   &lt;street&gt;21 Jump Street&lt;/street&gt;
+   &lt;settlement&gt;My Town&lt;/settlement&gt;
+   &lt;region&gt;My Prefecture&lt;/region&gt;
+   &lt;region&gt;My Province&lt;/region&gt;
+   &lt;country&gt;My Country&lt;/country&gt;
+   &lt;postCode&gt;A123B456C&lt;/postCode&gt;
+&lt;/address&gt;
+</egXML>
+                           </figure>
+                        </p>
+                        <p>They may also be used to identify place name components within textual content:</p>
+                        <p>
+                           <figure>
+                              <head/>
+                              <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;annot&gt;Holmes and Watson live at
+   &lt;street&gt;
+      &lt;num&gt;221&lt;/num&gt;Baker St.
+   &lt;/street&gt;in
+   &lt;settlement&gt;London&lt;/settlement&gt;,
+   &lt;country&gt;England&lt;/country&gt;.
+&lt;/annot&gt;
+</egXML>
+                           </figure>
+                           <figure>
+                              <head/>
+                              <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;list&gt;
+   &lt;head&gt;
+      Oh, the places I want to go
+   &lt;/head&gt;
+   &lt;li&gt;
+      &lt;settlement&gt;London&lt;/settlement&gt;
+   &lt;/li&gt;
+   &lt;li&gt;
+      &lt;country&gt;France&lt;/country&gt;
+   &lt;/li&gt;
+   &lt;li&gt;
+      &lt;region&gt;Napa Valley&lt;/region&gt;
+   &lt;/li&gt;
+&lt;/list&gt;
+</egXML>
+                           </figure>
+                        </p>
+                        <p>To enable localization of an organization, or to specify names of
+                           places with identical names, the use of controlled vocabulary is
+                           recommend for names of administrative divisions, such as cities,
+                           states, and countries. In this case, the following attributes are
+                           particularly relevant:</p>
+                        <p>
+                           <specList>
+                              <specDesc key="att.authorized" atts="auth auth.uri"/>
+                              <specDesc key="att.canonical" atts="codedval"/>
+                           </specList>
+                        </p>
+                        <p>The encoder may use these attributes in combination. In case of the
+                           German city of Frankfurt, for example, a clarification whether
+                           Frankfurt am Main or Frankfurt an der Oder is meant can be achieved by
+                           referring to the ID of the TGN entry:</p>
+                        <p>
+                           <figure>
+                              <head/>
+                              <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;!-- Frankfurt am Main --&gt;
+&lt;geogName authURI="www.getty.edu/research/tools/vocabularies/tgn" authority="TGN" codedval="7005293"&gt;Frankfurt&lt;/geogName&gt;
+
+&lt;!-- Frankfurt an der Oder --&gt;
+&lt;geogName authURI="www.getty.edu/research/tools/vocabularies/tgn" authority="TGN" codedval="7005972"&gt;Frankfurt&lt;/geogName&gt;
+</egXML>
+                           </figure>
+                        </p>
+                        <p>The names of places given within addresses can be marked with <gi scheme="MEI">geogName</gi> elements, for example:</p>
+                        <p>
+                           <figure>
+                              <head/>
+                              <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;p&gt;
+   &lt;corpName authURI="http://d-nb.info/gnd" authority="GND" codedval="2007744-0"&gt;German Research Foundation&lt;/corpName&gt;
+   &lt;address&gt;
+      &lt;addrLine&gt;Kennedyallee 40&lt;/addrLine&gt;
+      &lt;addrLine&gt;53175
+         &lt;geogName authURI="www.getty.edu/research/tools/vocabularies/tgn" authority="TGN" codedval="7005090"&gt;Bonn&lt;/geogName&gt;
+      &lt;/addrLine&gt;
+      &lt;addrLine&gt;
+         &lt;geogName authURI="www.getty.edu/research/tools/vocabularies/tgn" authority="TGN" codedval="7000084"&gt;Germany&lt;/geogName&gt;
+      &lt;/addrLine&gt;
+   &lt;/address&gt;
+&lt;/p&gt;
+</egXML>
+                           </figure>
+                        </p>
+                     </div>
+                     <div xml:id="namesdatesPeriodNames" type="div5">
+                        <head>Time Period Names</head>
+                        <p>
+                           <specList>
+                              <specDesc key="periodName"/>
+                           </specList>
+                        </p>
+                        <p>The <gi scheme="MEI">periodName</gi> element is for names which
+                           describe a particular period of time, for example, those which
+                           characterize obvious similarities in style, such as ‘Baroque’ or
+                           ‘3rd Style Period’:</p>
+                        <p>
+                           <figure>
+                              <head/>
+                              <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;periodName&gt;Baroque&lt;/periodName&gt;
+</egXML>
+                           </figure>
+                        </p>
+                        <p>The date sub-element is available within <gi scheme="MEI">periodName</gi> in order to record any dates associated with the name that should be captured in the text, for example, start and end dates of the named period:</p>
+                        <p>
+                           <figure>
+                              <head/>
+                              <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;periodName&gt;Baroque (
+   &lt;date&gt;1600&lt;/date&gt;-
+   &lt;date&gt;1750&lt;/date&gt;)
+&lt;/periodName&gt;
+</egXML>
+                           </figure>
+                        </p>
+                        <p>Recording start and end points of a certain period using the <att>startdate</att> and <att>enddate</att> attributes may prove to be better for machine processing:</p>
+                        <p>
+                           <figure>
+                              <head/>
+                              <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;periodName enddate="1750" startdate="1600"&gt;Baroque&lt;/periodName&gt;
+</egXML>
+                           </figure>
+                        </p>
+                        <p>If a controlled value is used, the list from which it is taken should be recorded. In this case the following attributes are relevant:</p>
+                        <p>
+                           <specList>
+                              <specDesc key="att.authorized" atts="auth auth.uri"/>
+                              <specDesc key="att.canonical" atts="codedval"/>
+                           </specList>
+                        </p>
+                     </div>
+                     <div xml:id="namesdatesPersNames" type="div5">
+                        <head>Personal Names</head>
+                        <p>
+                           <specList>
+                              <specDesc key="persName"/>
+                           </specList>
+                        </p>
+                        <p>Personal names within an MEI document may simply be marked with
+                           the <gi scheme="MEI">persName</gi> element containing a proper
+                           noun or proper noun phrase referring to an individual. For example:</p>
+                        <p>
+                           <figure>
+                              <head/>
+                              <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;sourceDesc&gt;
+   &lt;source&gt;
+      &lt;titleStmt&gt;
+         &lt;title&gt;Im wunderschönen Monat Mai&lt;/title&gt;
+         &lt;respStmt&gt;
+            &lt;persName role="composer"&gt;Robert Schumann&lt;/persName&gt;
+         &lt;/respStmt&gt;
+      &lt;/titleStmt&gt;
+   &lt;/source&gt;
+&lt;/sourceDesc&gt;
+</egXML>
+                           </figure>
+                        </p>
+                        <p>Apart from the composer or originator of a musical work, there
+                           could be many other persons involved in the genesis of a musical
+                           work, such as librettists, lyricists, arrangers, editors,
+                           transcribers, printers, publishers, etc. In addition, sometimes
+                           a single individual may have multiple functions with regard to a
+                           musical work, <abbr>e.g.</abbr>, composer and librettist. The <att>role</att>
+                           attribute on <gi scheme="MEI">persName</gi> may be used to
+                           capture a person’s responsibility. For example:</p>
+                        <p>
+                           <figure>
+                              <head/>
+                              <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;persName role="arranger"&gt;Wolfgang Amadeus Mozart&lt;/persName&gt;
+</egXML>
+                           </figure>
+                           <figure>
+                              <head/>
+                              <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;persName role="lyricist"&gt;Heinrich Heine&lt;/persName&gt;
+</egXML>
+                           </figure>
+                        </p>
+                        <p>The <name ref="http://www.loc.gov/marc/relators/relaterm.html">Marc code list for relators</name> offers a
+                           variety of controlled terms that may serve as values for this
+                           use of <att>role</att>.</p>
+                        <p>Personal names often consist of several components, such as
+                           given names, surnames, inherited or life-time titles of
+                           nobility, honorific or academic prefixes, military ranks, and
+                           other traditional descriptive phrases. These components can be
+                           marked using <gi scheme="MEI">persName</gi> sub-elements, the
+                           function of which may be indicated using the <att>type</att>
+                           attribute with the following values:</p>
+                        <list type="gloss">
+                           <label>forename</label>
+                           <item>contains a forename</item>
+                           <label>surname</label>
+                           <item>a family (inherited) name, as opposed to a given, baptismal, or nick name</item>
+                           <label>rolename</label>
+                           <item>contains a name component which indicates that the referent has a particular role or position in society, such as an official title or rank</item>
+                           <label>addname (additional name)</label>
+                           <item>contains an additional name component, such as a nickname, epithet, or alias, or any other descriptive phrase used within a personal name</item>
+                           <label>namelink (name link)</label>
+                           <item>contains a connecting phrase or link used within a name but not regarded as part of it, such as van der or of</item>
+                           <label>genname (generational name)</label>
+                           <item>contains a name component used to distinguish otherwise similar names on the basis of the relative ages or generations of the persons named</item>
+                        </list>
+                        <p>However, the recommended practice is to employ the following
+                           sub-elements provided by the namesdates module:</p>
+                        <p>
+                           <specList>
+                              <specDesc key="addName"/>
+                              <specDesc key="famName"/>
+                              <specDesc key="foreName"/>
+                              <specDesc key="genName"/>
+                              <specDesc key="roleName"/>
+                           </specList>
+                        </p>
+                        <p>For example,</p>
+                        <p>
+                           <figure>
+                              <head/>
+                              <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;persName&gt;
+   &lt;foreName&gt;Rob&lt;/foreName&gt;
+   &lt;addName&gt;The Bold&lt;/addName&gt;
+   &lt;famName&gt;Stark&lt;/famName&gt;
+   &lt;genName&gt;I&lt;/genName&gt;
+   &lt;nameLink&gt;of&lt;/nameLink&gt;
+   &lt;geogName&gt;Winterfell&lt;/geogName&gt;
+   &lt;roleName&gt;King in the North&lt;/roleName&gt;
+&lt;/persName&gt;
+</egXML>
+                           </figure>
+                        </p>
+                        <p>In the case of individuals with more than one forename, it is often sufficient to place all given names within a single <gi scheme="MEI">foreName</gi> element:</p>
+                        <p>
+                           <figure>
+                              <head/>
+                              <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;persName&gt;
+   &lt;famName&gt;Mozart&lt;/famName&gt;,
+   &lt;foreName&gt;Johannes Chrysostomus Wolfgangus Theophilus&lt;/foreName&gt;
+&lt;/persName&gt;
+</egXML>
+                           </figure>
+                        </p>
+                        <p>However, the advantage of marking names with specific name part
+                           elements instead of nested <gi scheme="MEI">persName</gi>
+                           elements, is that it becomes possible to use the <att>type</att>
+                           attribute to distinguish between multiple instances of the same
+                           generic name component. The following example indicates the
+                           function of each of the given names of Wolfgang Mozart:</p>
+                        <p>
+                           <figure>
+                              <head/>
+                              <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;persName&gt;
+   &lt;famName&gt;Mozart&lt;/famName&gt;,
+   &lt;foreName type="baptismal"&gt;Johannes&lt;/foreName&gt;
+   &lt;foreName type="baptismal"&gt;Chrysostomus&lt;/foreName&gt;
+   &lt;foreName type="familiar"&gt;Wolfgangus&lt;/foreName&gt;
+   &lt;foreName type="baptismal"&gt;Theophilus&lt;/foreName&gt;
+&lt;/persName&gt;
+</egXML>
+                           </figure>
+                        </p>
+                        <p>The use of a controlled list, such as the Gemeinsame Normdatei
+                           (GND) or the Library of Congress Name Authorities, is
+                           recommended for names, especially those occurring within the
+                           metadata header. When a controlled value is used, information
+                           about the the value should be recorded. The following attributes
+                           are provided for this purpose:</p>
+                        <p>
+                           <specList>
+                              <specDesc key="att.authorized" atts="auth auth.uri"/>
+                              <specDesc key="att.canonical" atts="codedval"/>
+                           </specList>
+                        </p>
+                        <p>For maximal machine-processability, these three attributes may be used in combination. For example:</p>
+                        <p>
+                           <figure>
+                              <head/>
+                              <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;persName authURI="http://d-nb.info/gnd" authority="GND" codedval="118584596" role="composer"&gt;Wolfgang Amadeus Mozart&lt;/persName&gt;
+</egXML>
+                           </figure>
+                        </p>
+                     </div>
+                     <div xml:id="namesdatesStyleNames" type="div5">
+                        <head>Style Names</head>
+                        <p>
+                           <specList>
+                              <specDesc key="styleName"/>
+                           </specList>
+                        </p>
+                        <p>Music can be divided into different styles, genres, and
+                           forms. The term style denotes a mode of expression, or more
+                           particularly, the manner in which a work of art is executed:</p>
+                        <p>“In the discussion of music, which is orientated towards
+                           relationships rather than meanings, the term raises special
+                           difficulties; it may be used to denote music characterized of
+                           an individual composer, of a period, of a geographical area
+                           or center, or of a society or social function. For the
+                           aesthetician style concerns surface or appearance, though in
+                           music appearance and essence are ultimately inseparable. For
+                           the historian a style is a distinguishing and ordering
+                           concept, both consistent of and denoting generalities; he or
+                           she groups examples of music according to similarities
+                           between them.” (Source: “Style”, Grove Music Online,
+                           accessed: April 27, 2012)</p>
+                        <p>The name of a musical style can be marked by the <gi scheme="MEI">styleName</gi> element, for example:</p>
+                        <p>
+                           <figure>
+                              <head/>
+                              <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;styleName&gt;bebop&lt;/styleName&gt;
+</egXML>
+                           </figure>
+                        </p>
+                        <p>It may be, <abbr>e.g.</abbr>, used for recording a style name within a title:</p>
+                        <p>
+                           <figure>
+                              <head/>
+                              <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;title&gt;La voix du
+   &lt;styleName&gt;bebop&lt;/styleName&gt;
+&lt;/title&gt;
+</egXML>
+                           </figure>
+                        </p>
+                        <p>or to record a style of a certain epoch by using the <gi scheme="MEI">styleName</gi> sub-element:</p>
+                        <p>
+                           <figure>
+                              <head/>
+                              <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;periodName&gt;Modern
+   &lt;styleName&gt;Jazz&lt;/styleName&gt;
+&lt;/periodName&gt;
+</egXML>
+                           </figure>
+                        </p>
+                        <p>Musical forms and genres must be distinguished from musical style. Form and genre are typically indicated using the <gi scheme="MEI">classification</gi> element, described in chapter <ptr target="#metadata"/>.</p>
+                  </div>
                </div>
+            </div>
                <div xml:id="dates" type="div3">
                   <head>Dates</head>
                   <p>The <gi scheme="MEI">date</gi> element may be used to mark up portions of a text that denote a date.</p>
