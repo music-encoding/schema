@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xml:base="file:/opt/docker-mei/music-encoding/customizations/mei-Mensural.xml"><?TEIVERSION Development Version?>
+<?xml version="1.0" encoding="utf-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xml:base="file:/opt/docker-mei/music-encoding/customizations/mei-Mensural.xml"><?TEIVERSION MEI 5.1-dev?>
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -10918,10 +10918,17 @@
         </datatype>
       </attDef>
     </attList>
-  </classSpec><classSpec rend="add" ident="att.meiVersion" module="MEI.shared" type="atts"><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that record the version of MEI in use.</desc><classes/><attList><attDef ident="meiversion" usage="rec"><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Specifies a generic MEI version label.</desc><defaultVal>5.1-dev+Mensural</defaultVal><valList type="closed" mode="change"><valItem xmlns:xi="http://www.w3.org/2001/XInclude" ident="5.1-dev">
-            <desc xml:lang="en">Development version</desc>
+  </classSpec><classSpec rend="add" ident="att.meiVersion" module="MEI.shared" type="atts"><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that record the version of MEI in use.</desc><classes/><constraintSpec xmlns:xi="http://www.w3.org/2001/XInclude" ident="meiVersion.onlyRoot" scheme="schematron">
+      <desc>Prohibit meiversion attribute on non root elements.</desc>
+      <constraint>
+        <sch:rule context="/mei:*//*">
+          <sch:report test="@meiversion">The @meiversion attribute is not allowed on elements that are not the document root element.</sch:report>
+        </sch:rule>
+      </constraint>
+    </constraintSpec><attList><attDef ident="meiversion" usage="rec"><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Specifies a generic MEI version label.</desc><valList type="closed" mode="change"><valItem xmlns:xi="http://www.w3.org/2001/XInclude" ident="5.1-dev">
+            <desc xml:lang="en">Version of MEI</desc>
           </valItem><valItem xmlns:xi="http://www.w3.org/2001/XInclude" ident="5.1-dev+Mensural">
-            <desc>Development version</desc>
+            <desc>Version of MEI mensural customization</desc>
           </valItem></valList></attDef></attList></classSpec><classSpec rend="add" ident="att.mensur.log" module="MEI.shared" type="atts">
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Logical domain attributes.</desc>
     <classes xmlns:xi="http://www.w3.org/2001/XInclude">
