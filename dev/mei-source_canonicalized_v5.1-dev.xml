@@ -20,7 +20,7 @@
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../source/validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2024-12-20T10:12:09.445623547+01:00-->
+<!--canonicalized: 2024-12-20T10:35:30.547374206+01:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -20859,6 +20859,9 @@ or
           </valItem>
           <valItem ident="ligature">
             <desc xml:lang="en">Represents a ligature in the mensural notation source material.</desc>
+          </valItem>
+          <valItem ident="unspecified">
+            <desc xml:lang="en">Unspecified bracket.</desc>
           </valItem>
         </valList>
       </attDef>

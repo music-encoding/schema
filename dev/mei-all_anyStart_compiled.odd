@@ -4274,6 +4274,9 @@
           <valItem ident="ligature">
             <desc xml:lang="en">Represents a ligature in the mensural notation source material.</desc>
           </valItem>
+          <valItem ident="unspecified">
+            <desc xml:lang="en">Unspecified bracket.</desc>
+          </valItem>
         </valList>
       </attDef>
     </attList>
