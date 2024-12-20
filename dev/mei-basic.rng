@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2024-12-20T08:08:57Z. . 
+Schema generated from ODD source 2024-12-20T09:08:28Z. . 
 TEI Edition: Development Version 
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -1602,6 +1602,16 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">2048th note.</a:documentation>
       </choice>
    </define>
+   <define name="mei_data.HARPPEDALPOSITION">
+      <choice>
+         <value>f</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Flat.</a:documentation>
+         <value>n</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Natural.</a:documentation>
+         <value>s</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sharp.</a:documentation>
+      </choice>
+   </define>
    <define name="mei_macro.availabilityPart">
       <choice>
          <group>
@@ -1865,14 +1875,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
                     name="c"
                     a:defaultValue="n">
             <a:documentation>Indicates the pedal setting for the harp’s C strings.</a:documentation>
-            <choice>
-               <value>f</value>
-               <a:documentation>Flat.</a:documentation>
-               <value>n</value>
-               <a:documentation>Natural.</a:documentation>
-               <value>s</value>
-               <a:documentation>Sharp.</a:documentation>
-            </choice>
+            <ref name="mei_data.HARPPEDALPOSITION"/>
          </attribute>
       </optional>
    </define>
@@ -1882,14 +1885,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
                     name="d"
                     a:defaultValue="n">
             <a:documentation>Indicates the pedal setting for the harp’s D strings.</a:documentation>
-            <choice>
-               <value>f</value>
-               <a:documentation>Flat.</a:documentation>
-               <value>n</value>
-               <a:documentation>Natural.</a:documentation>
-               <value>s</value>
-               <a:documentation>Sharp.</a:documentation>
-            </choice>
+            <ref name="mei_data.HARPPEDALPOSITION"/>
          </attribute>
       </optional>
    </define>
@@ -1899,14 +1895,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
                     name="e"
                     a:defaultValue="n">
             <a:documentation>Indicates the pedal setting for the harp’s E strings.</a:documentation>
-            <choice>
-               <value>f</value>
-               <a:documentation>Flat.</a:documentation>
-               <value>n</value>
-               <a:documentation>Natural.</a:documentation>
-               <value>s</value>
-               <a:documentation>Sharp.</a:documentation>
-            </choice>
+            <ref name="mei_data.HARPPEDALPOSITION"/>
          </attribute>
       </optional>
    </define>
@@ -1916,14 +1905,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
                     name="f"
                     a:defaultValue="n">
             <a:documentation>Indicates the pedal setting for the harp’s F strings.</a:documentation>
-            <choice>
-               <value>f</value>
-               <a:documentation>Flat.</a:documentation>
-               <value>n</value>
-               <a:documentation>Natural.</a:documentation>
-               <value>s</value>
-               <a:documentation>Sharp.</a:documentation>
-            </choice>
+            <ref name="mei_data.HARPPEDALPOSITION"/>
          </attribute>
       </optional>
    </define>
@@ -1933,14 +1915,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
                     name="g"
                     a:defaultValue="n">
             <a:documentation>Indicates the pedal setting for the harp’s G strings.</a:documentation>
-            <choice>
-               <value>f</value>
-               <a:documentation>Flat.</a:documentation>
-               <value>n</value>
-               <a:documentation>Natural.</a:documentation>
-               <value>s</value>
-               <a:documentation>Sharp.</a:documentation>
-            </choice>
+            <ref name="mei_data.HARPPEDALPOSITION"/>
          </attribute>
       </optional>
    </define>
@@ -1950,14 +1925,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
                     name="a"
                     a:defaultValue="n">
             <a:documentation>Indicates the pedal setting for the harp’s A strings.</a:documentation>
-            <choice>
-               <value>f</value>
-               <a:documentation>Flat.</a:documentation>
-               <value>n</value>
-               <a:documentation>Natural.</a:documentation>
-               <value>s</value>
-               <a:documentation>Sharp.</a:documentation>
-            </choice>
+            <ref name="mei_data.HARPPEDALPOSITION"/>
          </attribute>
       </optional>
    </define>
@@ -1967,14 +1935,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
                     name="b"
                     a:defaultValue="n">
             <a:documentation>Indicates the pedal setting for the harp’s B strings.</a:documentation>
-            <choice>
-               <value>f</value>
-               <a:documentation>Flat.</a:documentation>
-               <value>n</value>
-               <a:documentation>Natural.</a:documentation>
-               <value>s</value>
-               <a:documentation>Sharp.</a:documentation>
-            </choice>
+            <ref name="mei_data.HARPPEDALPOSITION"/>
          </attribute>
       </optional>
    </define>

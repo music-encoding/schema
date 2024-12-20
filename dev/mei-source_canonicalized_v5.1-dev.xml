@@ -20,7 +20,7 @@
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../source/validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2024-12-20T09:08:30.486445606+01:00-->
+<!--canonicalized: 2024-12-20T10:08:01.797209895+01:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -20555,6 +20555,22 @@ or
       </valList>
     </content>
   </macroSpec>
+  <macroSpec ident="data.HARPPEDALPOSITION" module="MEI.cmn" type="dt">
+    <desc xml:lang="en">Indicates the pedal setting for a harp strings.</desc>
+    <content>
+      <valList type="closed">
+        <valItem ident="f">
+          <desc xml:lang="en">Flat.</desc>
+        </valItem>
+        <valItem ident="n">
+          <desc xml:lang="en">Natural.</desc>
+        </valItem>
+        <valItem ident="s">
+          <desc xml:lang="en">Sharp.</desc>
+        </valItem>
+      </valList>
+    </content>
+  </macroSpec>
   <macroSpec ident="data.STAFFITEM.cmn" module="MEI.cmn" type="dt">
     <desc xml:lang="en">Items in the CMN repertoire that may be printed near a staff.</desc>
     <content>
@@ -21059,108 +21075,52 @@ or
     <attList>
       <attDef ident="c" usage="opt">
         <desc xml:lang="en">Indicates the pedal setting for the harp’s C strings.</desc>
+        <datatype>
+          <rng:ref name="data.HARPPEDALPOSITION"/>
+        </datatype>
         <defaultVal>n</defaultVal>
-        <valList type="closed">
-          <valItem ident="f">
-            <desc xml:lang="en">Flat.</desc>
-          </valItem>
-          <valItem ident="n">
-            <desc xml:lang="en">Natural.</desc>
-          </valItem>
-          <valItem ident="s">
-            <desc xml:lang="en">Sharp.</desc>
-          </valItem>
-        </valList>
       </attDef>
       <attDef ident="d" usage="opt">
         <desc xml:lang="en">Indicates the pedal setting for the harp’s D strings.</desc>
+        <datatype>
+          <rng:ref name="data.HARPPEDALPOSITION"/>
+        </datatype>
         <defaultVal>n</defaultVal>
-        <valList type="closed">
-          <valItem ident="f">
-            <desc xml:lang="en">Flat.</desc>
-          </valItem>
-          <valItem ident="n">
-            <desc xml:lang="en">Natural.</desc>
-          </valItem>
-          <valItem ident="s">
-            <desc xml:lang="en">Sharp.</desc>
-          </valItem>
-        </valList>
       </attDef>
       <attDef ident="e" usage="opt">
         <desc xml:lang="en">Indicates the pedal setting for the harp’s E strings.</desc>
+        <datatype>
+          <rng:ref name="data.HARPPEDALPOSITION"/>
+        </datatype>
         <defaultVal>n</defaultVal>
-        <valList type="closed">
-          <valItem ident="f">
-            <desc xml:lang="en">Flat.</desc>
-          </valItem>
-          <valItem ident="n">
-            <desc xml:lang="en">Natural.</desc>
-          </valItem>
-          <valItem ident="s">
-            <desc xml:lang="en">Sharp.</desc>
-          </valItem>
-        </valList>
       </attDef>
       <attDef ident="f" usage="opt">
         <desc xml:lang="en">Indicates the pedal setting for the harp’s F strings.</desc>
+        <datatype>
+          <rng:ref name="data.HARPPEDALPOSITION"/>
+        </datatype>
         <defaultVal>n</defaultVal>
-        <valList type="closed">
-          <valItem ident="f">
-            <desc xml:lang="en">Flat.</desc>
-          </valItem>
-          <valItem ident="n">
-            <desc xml:lang="en">Natural.</desc>
-          </valItem>
-          <valItem ident="s">
-            <desc xml:lang="en">Sharp.</desc>
-          </valItem>
-        </valList>
       </attDef>
       <attDef ident="g" usage="opt">
         <desc xml:lang="en">Indicates the pedal setting for the harp’s G strings.</desc>
+        <datatype>
+          <rng:ref name="data.HARPPEDALPOSITION"/>
+        </datatype>
         <defaultVal>n</defaultVal>
-        <valList type="closed">
-          <valItem ident="f">
-            <desc xml:lang="en">Flat.</desc>
-          </valItem>
-          <valItem ident="n">
-            <desc xml:lang="en">Natural.</desc>
-          </valItem>
-          <valItem ident="s">
-            <desc xml:lang="en">Sharp.</desc>
-          </valItem>
-        </valList>
       </attDef>
       <attDef ident="a" usage="opt">
         <desc xml:lang="en">Indicates the pedal setting for the harp’s A strings.</desc>
+        <datatype>
+          <rng:ref name="data.HARPPEDALPOSITION"/>
+        </datatype>
         <defaultVal>n</defaultVal>
-        <valList type="closed">
-          <valItem ident="f">
-            <desc xml:lang="en">Flat.</desc>
-          </valItem>
-          <valItem ident="n">
-            <desc xml:lang="en">Natural.</desc>
-          </valItem>
-          <valItem ident="s">
-            <desc xml:lang="en">Sharp.</desc>
-          </valItem>
-        </valList>
       </attDef>
       <attDef ident="b" usage="opt">
         <desc xml:lang="en">Indicates the pedal setting for the harp’s B strings.</desc>
+        <datatype>
+          <rng:ref name="data.HARPPEDALPOSITION"/>
+        </datatype>
         <defaultVal>n</defaultVal>
-        <valList type="closed">
-          <valItem ident="f">
-            <desc xml:lang="en">Flat.</desc>
-          </valItem>
-          <valItem ident="n">
-            <desc xml:lang="en">Natural.</desc>
-          </valItem>
-          <valItem ident="s">
-            <desc xml:lang="en">Sharp.</desc>
-          </valItem>
-        </valList>
       </attDef>
     </attList>
   </classSpec>
