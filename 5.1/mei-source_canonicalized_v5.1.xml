@@ -20,7 +20,7 @@
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../source/validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2025-01-22T11:50:53.034645348+01:00-->
+<!--canonicalized: 2025-01-22T22:18:44.719340824+01:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -1709,7 +1709,7 @@
                   <p>While <att>xml:lang</att> attribute may be used to encode the language of an element's contents, the <att>xml:space</att> attribute lets you define the handling of whitespace, <abbr>i.e.</abbr>, whitespace being important content (<val>preserve</val>) or negligible (<val>default</val>). With the latter also being the default value if no <att>xml:space</att> attribute is present.</p>
                </div>
                <div xml:id="sharedLabellingAttributes" type="div3">
-                  <head>Label Attributes</head> 
+                  <head>Label Attributes</head>
                   <p>
                      <specList>
                         <specDesc key="att.labelled" atts="label"/>
@@ -4747,7 +4747,7 @@ or
          &lt;address&gt;
              &lt;addrLine&gt;Unter den Linden 8&lt;/addrLine&gt;
              &lt;addrLine&gt;
-                 &lt;postCode&gt;10117&lt;/postCode&gt; 
+                 &lt;postCode&gt;10117&lt;/postCode&gt;
                  &lt;geogName auth="geonames" auth.uri="http://www.geonames.org/" codedval="2950159"&gt;Berlin&lt;/geogName&gt;
              &lt;/addrLine&gt;
          &lt;/address&gt;
@@ -5604,7 +5604,7 @@ or
                      <item>between sections and endings; that is, directly within a <gi scheme="MEI">score</gi> or <gi scheme="MEI">part</gi>.</item>
                   </list>
                   <p>It is also possible to include <gi scheme="MEI">scoreDef</gi> and <gi scheme="MEI">staffDef</gi> in staves and layers when the MEI All schema is in use; however, this practice is not recommended for the CMN repertoire.</p>
-                  <p>The following example shows how to change the key and meter signatures within a score. The <att>keysig.cancelaccid</att> attribute may be used to control the position of the cancellation accidentals of the key signature change, while the <att>keysig.visible</att> can be used to hide the key signature entirely.</p>  
+                  <p>The following example shows how to change the key and meter signatures within a score. The <att>keysig.cancelaccid</att> attribute may be used to control the position of the cancellation accidentals of the key signature change, while the <att>keysig.visible</att> can be used to hide the key signature entirely.</p>
                   <p>
                      <figure>
                         <head/>
@@ -9439,7 +9439,7 @@ or
                </div>
                <div xml:id="dots" type="div3">
                   <head>Dots</head>
-                  <p>Dots of division and augmentation can be encoded by using the <gi scheme="MEI">dot</gi> element (provided by the MEI.shared module). This element is meant to be used as a child of <gi scheme="MEI">layer</gi> following the <gi scheme="MEI">note</gi> or <gi scheme="MEI">rest</gi> after which it appears in the original source.</p> 
+                  <p>Dots of division and augmentation can be encoded by using the <gi scheme="MEI">dot</gi> element (provided by the MEI.shared module). This element is meant to be used as a child of <gi scheme="MEI">layer</gi> following the <gi scheme="MEI">note</gi> or <gi scheme="MEI">rest</gi> after which it appears in the original source.</p>
                   <p>Dots in mensural notation are not encoded as children of notes or rests, but rather as a sibling of these. They are also not encoded as attributes (the use of the <att>dot</att> attribute in a <gi scheme="MEI">note</gi> or <gi scheme="MEI">rest</gi> element is only acceptable in Common Music Notation, not mensural).</p>
                   <p>To indicate the nature of the dot (as a dot of division or augmentation), the <gi scheme="MEI">dot</gi> element has an attribute <att>form</att>, which can take on the following values:</p>
                   <list type="gloss">
@@ -10728,7 +10728,7 @@ or
                <div xml:id="tablature-def" type="div3">
                   <head>Defining the Notation</head>
                   <p>Tablatures come in a variety of types or notations, varying according to instrument but also according to historical context. The notation used is defined on the <gi scheme="MEI">staffDef</gi> element using the <att>notationtype</att> attribute. Possible values are: <val>tab.guitar</val>, <val>tab.lute.italian</val>, <val>tab.lute.french</val> and <val>tab.lute.german</val>.</p>
-                  <p>The <att>lines</att> attribute on the <gi scheme="MEI">staffDef</gi> element is used to define the number of horizontal lines used in a staff.</p> 
+                  <p>The <att>lines</att> attribute on the <gi scheme="MEI">staffDef</gi> element is used to define the number of horizontal lines used in a staff.</p>
                   <p>
                      <figure>
                         <head/>
@@ -10743,7 +10743,7 @@ or
                   <p>Because string tablatures specify which frets and strings to play on the instrument, rather than abstract pitches, it is necessary to know the tuning and setup of the instrument.</p>
                   <p>Guitar-like instruments can be described in terms of the number of strings they have, but often the strings are grouped and notated as if those groups were a single string. Examples include mandolins and 12-string guitars. To make this distinction explicit, we use "string" exclusively to refer to physical strings. To refer to the notated version, which may consist of one or more physical strings, we use the historical term, "course". Thus, both a 6-string and a 12-string guitar are 6-course instruments.</p>
                   <p>The course tuning for 6- and 12-string guitars are the same — so they can both play from the same tablatures. Our tuning specification supports indicating course tunings on their own, or string tunings as well.</p>
-                  <p>The <gi scheme="MEI">tuning</gi> element is used inside <gi scheme="MEI">staffDef</gi> to describe the pitches of the open strings of the instrument. In the simplest cases, the tuning can be named from a standard list. For example, to specify the most common tuning of the guitar:</p> 
+                  <p>The <gi scheme="MEI">tuning</gi> element is used inside <gi scheme="MEI">staffDef</gi> to describe the pitches of the open strings of the instrument. In the simplest cases, the tuning can be named from a standard list. For example, to specify the most common tuning of the guitar:</p>
                   <p>
                      <figure>
                         <head/>
@@ -10761,7 +10761,7 @@ or
 &lt;/staffDef&gt;</egXML>
                      </figure>
                   </p>
-                  <p>Custom tuning may be needed when no existing <att>tuning.standard</att> value applies. The <gi scheme="MEI">course</gi> element gives the tuning of each course. <att>n</att> captures the course number (counting from the course closest to the player’s feet when the instrument is played), <att>pname</att> the pitch information and <att>oct</att> the octave information.</p>                
+                  <p>Custom tuning may be needed when no existing <att>tuning.standard</att> value applies. The <gi scheme="MEI">course</gi> element gives the tuning of each course. <att>n</att> captures the course number (counting from the course closest to the player’s feet when the instrument is played), <att>pname</att> the pitch information and <att>oct</att> the octave information.</p>
                   <p>For standard classical guitar tuning, the <gi scheme="MEI">tuning</gi> element might look like this:</p>
                   <p>
                      <figure>
@@ -11043,7 +11043,7 @@ or
 &lt;beam&gt;
     &lt;tabGrp dur="16"&gt;
         &lt;tabDurSym/&gt;
-        &lt;note tab.course="2" tab.fret="2"/&gt;    
+        &lt;note tab.course="2" tab.fret="2"/&gt;
         &lt;note tab.course="3" tab.fret="3"/&gt;
         &lt;note tab.course="5" tab.fret="0"/&gt;
     &lt;/tabGrp&gt;
@@ -11055,7 +11055,7 @@ or
 &lt;beam&gt;
     &lt;tabGrp dur="32"&gt;
         &lt;tabDurSym/&gt;
-        &lt;note tab.course="2" tab.fret="2"/&gt;    
+        &lt;note tab.course="2" tab.fret="2"/&gt;
     &lt;/tabGrp&gt;
     &lt;tabGrp dur="32"&gt;
         &lt;tabDurSym/&gt;
@@ -11106,9 +11106,9 @@ or
     &lt;/tabGrp&gt;
     &lt;tabGrp dur="8"&gt;
         &lt;tabDurSym/&gt;
-        &lt;note tab.course="1" tab.fret="2"/&gt;    
+        &lt;note tab.course="1" tab.fret="2"/&gt;
         &lt;note tab.course="2" tab.fret="3"/&gt;
-        &lt;note tab.course="4" tab.fret="0"/&gt;    
+        &lt;note tab.course="4" tab.fret="0"/&gt;
     &lt;/tabGrp&gt;
     &lt;tabGrp dur="8"&gt;
         &lt;tabDurSym/&gt;
@@ -15066,7 +15066,7 @@ or
     &lt;/extData&gt;
 &lt;/when&gt;</egXML>
                      </figure>
-                  </p>  
+                  </p>
                </div>
             </div>
          </div>
@@ -16517,16 +16517,16 @@ or
         </valItem>
         <valItem ident="dblheavy">
           <desc xml:lang="en">Heavy double bar line (SMuFL E035).</desc>
-        </valItem> 
+        </valItem>
         <valItem ident="dblsegno">
           <desc xml:lang="en">Segno serpent with vertical lines (SMuFL E04B).</desc>
-        </valItem> 
+        </valItem>
         <valItem ident="end">
           <desc xml:lang="en">End bar line (SMuFL E032 and Unicode 1D102).</desc>
         </valItem>
         <valItem ident="heavy">
           <desc xml:lang="en">Heavy bar line (SMuFL E034).</desc>
-        </valItem> 
+        </valItem>
         <valItem ident="invis">
           <desc xml:lang="en">Bar line not rendered.</desc>
         </valItem>
@@ -19123,7 +19123,7 @@ or
         </valItem>
         <valItem ident="tab.lute.german">
           <desc xml:lang="en">"German" tablature notation for lutes. Fret and course information is conveyed solely by choice of symbol (vertical position is not used for this).</desc>
-        </valItem>     
+        </valItem>
       </valList>
     </content>
   </macroSpec>
@@ -20037,7 +20037,7 @@ or
     <desc xml:lang="en">Analytical domain attributes.</desc>
   </classSpec>
   <classSpec ident="att.course.anl" module="MEI.analytical" type="atts">
-    <desc xml:lang="en">Analytical domain attributes.</desc>    
+    <desc xml:lang="en">Analytical domain attributes.</desc>
   </classSpec>
   <classSpec ident="att.cpMark.anl" module="MEI.analytical" type="atts">
     <desc xml:lang="en">Analytical domain attributes.</desc>
@@ -25887,7 +25887,7 @@ or
     <desc xml:lang="en">Gestural domain attributes.</desc>
   </classSpec>
   <classSpec ident="att.course.ges" module="MEI.gestural" type="atts">
-    <desc xml:lang="en">Gestural domain attributes.</desc>    
+    <desc xml:lang="en">Gestural domain attributes.</desc>
   </classSpec>
   <classSpec ident="att.cpMark.ges" module="MEI.gestural" type="atts">
     <desc xml:lang="en">Gestural domain attributes.</desc>
@@ -26468,12 +26468,12 @@ or
   </classSpec>
   <classSpec ident="att.tabDurSym.ges" module="MEI.gestural" type="atts">
     <desc xml:lang="en">Gestural domain attributes.</desc>
-  </classSpec>  
+  </classSpec>
   <classSpec ident="att.tabGrp.ges" module="MEI.gestural" type="atts">
     <desc xml:lang="en">Gestural domain attributes.</desc>
     <classes>
       <!-- Would that be helpful? <memberOf key="att.articulation.gestural"/>-->
-      <memberOf key="att.duration.ges"/>      
+      <memberOf key="att.duration.ges"/>
     </classes>
   </classSpec>
   <classSpec ident="att.tempo.ges" module="MEI.gestural" type="atts">
@@ -35896,7 +35896,7 @@ or
           </datatype>
        </attDef>
     </attList>
-  </classSpec>   
+  </classSpec>
   <classSpec ident="att.placementRelEvent" module="MEI.shared" type="atts">
     <desc xml:lang="en">Attributes capturing placement information with respect to an event.</desc>
     <attList>
@@ -43303,7 +43303,7 @@ or
     <desc xml:lang="en">Visual domain attributes.</desc>
   </classSpec>
   <classSpec ident="att.course.vis" module="MEI.visual" type="atts">
-    <desc xml:lang="en">Visual domain attributes.</desc>    
+    <desc xml:lang="en">Visual domain attributes.</desc>
   </classSpec>
   <classSpec ident="att.cpMark.vis" module="MEI.visual" type="atts">
     <desc xml:lang="en">Visual domain attributes.</desc>

@@ -414,16 +414,16 @@
         </valItem>
         <valItem ident="dblheavy">
           <desc xml:lang="en">Heavy double bar line (SMuFL E035).</desc>
-        </valItem> 
+        </valItem>
         <valItem ident="dblsegno">
           <desc xml:lang="en">Segno serpent with vertical lines (SMuFL E04B).</desc>
-        </valItem> 
+        </valItem>
         <valItem ident="end">
           <desc xml:lang="en">End bar line (SMuFL E032 and Unicode 1D102).</desc>
         </valItem>
         <valItem ident="heavy">
           <desc xml:lang="en">Heavy bar line (SMuFL E034).</desc>
-        </valItem> 
+        </valItem>
         <valItem ident="invis">
           <desc xml:lang="en">Bar line not rendered.</desc>
         </valItem>
@@ -2682,7 +2682,7 @@
         </valItem>
         <valItem ident="tab.lute.german">
           <desc xml:lang="en">"German" tablature notation for lutes. Fret and course information is conveyed solely by choice of symbol (vertical position is not used for this).</desc>
-        </valItem>     
+        </valItem>
       </valList>
     </content>
   </macroSpec><macroSpec rend="add" ident="data.NOTEHEADMODIFIER" module="MEI" type="dt">

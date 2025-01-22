@@ -418,16 +418,16 @@
         </valItem>
         <valItem ident="dblheavy">
           <desc xml:lang="en">Heavy double bar line (SMuFL E035).</desc>
-        </valItem> 
+        </valItem>
         <valItem ident="dblsegno">
           <desc xml:lang="en">Segno serpent with vertical lines (SMuFL E04B).</desc>
-        </valItem> 
+        </valItem>
         <valItem ident="end">
           <desc xml:lang="en">End bar line (SMuFL E032 and Unicode 1D102).</desc>
         </valItem>
         <valItem ident="heavy">
           <desc xml:lang="en">Heavy bar line (SMuFL E034).</desc>
-        </valItem> 
+        </valItem>
         <valItem ident="invis">
           <desc xml:lang="en">Bar line not rendered.</desc>
         </valItem>
@@ -3024,7 +3024,7 @@
       </rng:data>
     </content>
   </macroSpec><classSpec rend="add" ident="att.course.anl" module="MEI.analytical" type="atts">
-    <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Analytical domain attributes.</desc>    
+    <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Analytical domain attributes.</desc>
   </classSpec><classSpec rend="add" ident="att.repeatMark.anl" module="MEI.analytical" type="atts">
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Analytical domain attributes.</desc>
   </classSpec><classSpec rend="add" ident="att.tabDurSym.anl" module="MEI.analytical" type="atts">
@@ -4676,7 +4676,7 @@
       <memberOf key="att.accidental.ges"/>
     </classes>
   </classSpec><classSpec rend="add" ident="att.course.ges" module="MEI.gestural" type="atts">
-    <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Gestural domain attributes.</desc>    
+    <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Gestural domain attributes.</desc>
   </classSpec><classSpec rend="add" ident="att.mdiv.ges" module="MEI.gestural" type="atts">
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Gestural domain attributes.</desc>
     <classes xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -4879,7 +4879,7 @@
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Gestural domain attributes.</desc>
     <classes xmlns:xi="http://www.w3.org/2001/XInclude">
       
-            
+      
     </classes>
   </classSpec><classSpec rend="add" ident="att.tempo.ges" module="MEI.gestural" type="atts">
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Gestural domain attributes.</desc>
@@ -8322,7 +8322,7 @@
       <memberOf key="att.visualOffset"/>
     </classes>
   </classSpec><classSpec rend="add" ident="att.course.vis" module="MEI.visual" type="atts">
-    <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Visual domain attributes.</desc>    
+    <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Visual domain attributes.</desc>
   </classSpec><classSpec rend="add" ident="att.dir.vis" module="MEI.visual" type="atts">
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Visual domain attributes.</desc>
     <classes xmlns:xi="http://www.w3.org/2001/XInclude">

@@ -414,16 +414,16 @@
         </valItem>
         <valItem ident="dblheavy">
           <desc xml:lang="en">Heavy double bar line (SMuFL E035).</desc>
-        </valItem> 
+        </valItem>
         <valItem ident="dblsegno">
           <desc xml:lang="en">Segno serpent with vertical lines (SMuFL E04B).</desc>
-        </valItem> 
+        </valItem>
         <valItem ident="end">
           <desc xml:lang="en">End bar line (SMuFL E032 and Unicode 1D102).</desc>
         </valItem>
         <valItem ident="heavy">
           <desc xml:lang="en">Heavy bar line (SMuFL E034).</desc>
-        </valItem> 
+        </valItem>
         <valItem ident="invis">
           <desc xml:lang="en">Bar line not rendered.</desc>
         </valItem>
@@ -2744,7 +2744,7 @@
         </valItem>
         <valItem ident="tab.lute.german">
           <desc xml:lang="en">"German" tablature notation for lutes. Fret and course information is conveyed solely by choice of symbol (vertical position is not used for this).</desc>
-        </valItem>     
+        </valItem>
       </valList>
     </content>
   </macroSpec><macroSpec rend="add" ident="data.NOTEHEADMODIFIER" module="MEI" type="dt">
@@ -3456,7 +3456,7 @@
   </classSpec><classSpec rend="add" ident="att.clefGrp.anl" module="MEI.analytical" type="atts">
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Analytical domain attributes.</desc>
   </classSpec><classSpec rend="add" ident="att.course.anl" module="MEI.analytical" type="atts">
-    <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Analytical domain attributes.</desc>    
+    <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Analytical domain attributes.</desc>
   </classSpec><classSpec rend="add" ident="att.cpMark.anl" module="MEI.analytical" type="atts">
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Analytical domain attributes.</desc>
   </classSpec><classSpec rend="add" ident="att.curve.anl" module="MEI.analytical" type="atts">
@@ -5258,7 +5258,7 @@
   </classSpec><classSpec rend="add" ident="att.clefGrp.ges" module="MEI.gestural" type="atts">
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Gestural domain attributes.</desc>
   </classSpec><classSpec rend="add" ident="att.course.ges" module="MEI.gestural" type="atts">
-    <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Gestural domain attributes.</desc>    
+    <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Gestural domain attributes.</desc>
   </classSpec><classSpec rend="add" ident="att.cpMark.ges" module="MEI.gestural" type="atts">
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Gestural domain attributes.</desc>
     <classes xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -5593,7 +5593,7 @@
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Gestural domain attributes.</desc>
     <classes xmlns:xi="http://www.w3.org/2001/XInclude">
       
-      <memberOf key="att.duration.ges"/>      
+      <memberOf key="att.duration.ges"/>
     </classes>
   </classSpec><classSpec rend="add" ident="att.tempo.ges" module="MEI.gestural" type="atts">
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Gestural domain attributes.</desc>
@@ -16385,7 +16385,7 @@
   </classSpec><classSpec rend="add" ident="att.clefGrp.vis" module="MEI.visual" type="atts">
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Visual domain attributes.</desc>
   </classSpec><classSpec rend="add" ident="att.course.vis" module="MEI.visual" type="atts">
-    <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Visual domain attributes.</desc>    
+    <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Visual domain attributes.</desc>
   </classSpec><classSpec rend="add" ident="att.cpMark.vis" module="MEI.visual" type="atts">
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Visual domain attributes.</desc>
     <classes xmlns:xi="http://www.w3.org/2001/XInclude">
