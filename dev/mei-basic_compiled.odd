@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xml:base="file:/opt/docker-mei/music-encoding/customizations/mei-basic.xml"><?TEIVERSION MEI 5.1-dev?>
+<?xml version="1.0" encoding="utf-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xml:base="file:/opt/docker-mei/music-encoding/customizations/mei-basic.xml"><?TEIVERSION MEI 5.1?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -47,7 +47,7 @@
     </teiHeader>
     <text>
         <body>
-            <schemaSpec ident="mei-basic" start="mei" prefix="mei_" ns="http://www.music-encoding.org/ns/mei" source="/opt/docker-mei/music-encoding/build/mei-source_canonicalized_v5.1-dev.xml"><macroSpec rend="add" ident="data.ACCIDENTAL.WRITTEN" module="MEI" type="dt">
+            <schemaSpec ident="mei-basic" start="mei" prefix="mei_" ns="http://www.music-encoding.org/ns/mei" source="/opt/docker-mei/music-encoding/build/mei-source_canonicalized_v5.1.xml"><macroSpec rend="add" ident="data.ACCIDENTAL.WRITTEN" module="MEI" type="dt">
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Written accidental values.</desc>
     <content xmlns:xi="http://www.w3.org/2001/XInclude">
       <alternate minOccurs="1" maxOccurs="1"><macroRef key="data.ACCIDENTAL.WRITTEN.basic"/><macroRef key="data.ACCIDENTAL.WRITTEN.extended"/><macroRef key="data.ACCIDENTAL.aeu"/><macroRef key="data.ACCIDENTAL.persian"/></alternate>
@@ -418,16 +418,16 @@
         </valItem>
         <valItem ident="dblheavy">
           <desc xml:lang="en">Heavy double bar line (SMuFL E035).</desc>
-        </valItem> 
+        </valItem>
         <valItem ident="dblsegno">
           <desc xml:lang="en">Segno serpent with vertical lines (SMuFL E04B).</desc>
-        </valItem> 
+        </valItem>
         <valItem ident="end">
           <desc xml:lang="en">End bar line (SMuFL E032 and Unicode 1D102).</desc>
         </valItem>
         <valItem ident="heavy">
           <desc xml:lang="en">Heavy bar line (SMuFL E034).</desc>
-        </valItem> 
+        </valItem>
         <valItem ident="invis">
           <desc xml:lang="en">Bar line not rendered.</desc>
         </valItem>
@@ -3024,7 +3024,7 @@
       </rng:data>
     </content>
   </macroSpec><classSpec rend="add" ident="att.course.anl" module="MEI.analytical" type="atts">
-    <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Analytical domain attributes.</desc>    
+    <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Analytical domain attributes.</desc>
   </classSpec><classSpec rend="add" ident="att.repeatMark.anl" module="MEI.analytical" type="atts">
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Analytical domain attributes.</desc>
   </classSpec><classSpec rend="add" ident="att.tabDurSym.anl" module="MEI.analytical" type="atts">
@@ -4676,7 +4676,7 @@
       <memberOf key="att.accidental.ges"/>
     </classes>
   </classSpec><classSpec rend="add" ident="att.course.ges" module="MEI.gestural" type="atts">
-    <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Gestural domain attributes.</desc>    
+    <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Gestural domain attributes.</desc>
   </classSpec><classSpec rend="add" ident="att.mdiv.ges" module="MEI.gestural" type="atts">
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Gestural domain attributes.</desc>
     <classes xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -4879,7 +4879,7 @@
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Gestural domain attributes.</desc>
     <classes xmlns:xi="http://www.w3.org/2001/XInclude">
       
-            
+      
     </classes>
   </classSpec><classSpec rend="add" ident="att.tempo.ges" module="MEI.gestural" type="atts">
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Gestural domain attributes.</desc>
@@ -6038,9 +6038,9 @@
           <sch:report test="@meiversion">The @meiversion attribute is not allowed on elements that are not the document root element.</sch:report>
         </sch:rule>
       </constraint>
-    </constraintSpec><attList><attDef ident="meiversion" usage="req"><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Specifies a generic MEI version label.</desc><valList type="closed" mode="change"><valItem xmlns:xi="http://www.w3.org/2001/XInclude" ident="5.1-dev">
+    </constraintSpec><attList><attDef ident="meiversion" usage="req"><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Specifies a generic MEI version label.</desc><valList type="closed" mode="change"><valItem xmlns:xi="http://www.w3.org/2001/XInclude" ident="5.1">
             <desc xml:lang="en">Version of MEI</desc>
-          </valItem><valItem xmlns:xi="http://www.w3.org/2001/XInclude" ident="5.1-dev+basic">
+          </valItem><valItem xmlns:xi="http://www.w3.org/2001/XInclude" ident="5.1+basic">
               <desc>Version of MEI basic customization</desc>
           </valItem></valList></attDef></attList></classSpec><classSpec ident="att.meterConformance.bar" module="MEI.shared" type="atts" mode="replace">
                     <desc>Attributes that provide information about a measure's conformance to the prevailing
@@ -8322,7 +8322,7 @@
       <memberOf key="att.visualOffset"/>
     </classes>
   </classSpec><classSpec rend="add" ident="att.course.vis" module="MEI.visual" type="atts">
-    <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Visual domain attributes.</desc>    
+    <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Visual domain attributes.</desc>
   </classSpec><classSpec rend="add" ident="att.dir.vis" module="MEI.visual" type="atts">
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Visual domain attributes.</desc>
     <classes xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -8480,7 +8480,7 @@
       <memberOf key="att.typography"/>
       <memberOf key="att.visualOffset"/>
     </classes>
-  </classSpec><classSpec rend="add" ident="att.harm.vis" module="MEI.visual" type="atts"><desc xml:lang="en">Visual domain attributes.</desc><classes><memberOf key="att.extender"/><memberOf key="att.placementRelStaff"/><memberOf key="att.visualOffset"/><memberOf key="att.visualOffset2.ho"/></classes><attList><attDef xmlns:xi="http://www.w3.org/2001/XInclude" ident="rendgrid" usage="opt">
+  </classSpec><classSpec rend="add" ident="att.harm.vis" module="MEI.visual" type="atts"><desc xml:lang="en">Visual domain attributes.</desc><classes><memberOf key="att.color"/><memberOf key="att.extender"/><memberOf key="att.placementRelStaff"/><memberOf key="att.visualOffset"/><memberOf key="att.visualOffset2.ho"/></classes><attList><attDef xmlns:xi="http://www.w3.org/2001/XInclude" ident="rendgrid" usage="opt">
         <desc xml:lang="en">Describes how the harmonic indication should be rendered.</desc>
         <valList type="closed">
           <valItem ident="grid">
