@@ -20,7 +20,7 @@
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../source/validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2025-02-06T16:01:56.813957098+01:00-->
+<!--canonicalized: 2025-02-06T16:11:05.190061629+01:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -75,7 +75,7 @@
             </respStmt>
          </titleStmt>
          <editionStmt>
-            <edition>MEI 6.0</edition>
+            <edition>MEI 6.0-dev</edition>
          </editionStmt>
          <publicationStmt>
             <distributor>Music Encoding Initiative (MEI) Board</distributor>
