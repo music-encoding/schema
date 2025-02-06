@@ -20,7 +20,7 @@
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../source/validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2025-02-06T16:11:05.190061629+01:00-->
+<!--canonicalized: 2025-02-06T16:45:54.995172659+01:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -14627,8 +14627,8 @@ or
                </div>
             </div>
          </div>
-         <div xml:id="facsimilesrecordings" type="div1">
-            <head>Facsimiles and Recordings</head>
+         <div xml:id="facsimilesperformances" type="div1">
+            <head>Facsimiles and Performances</head>
             <p>MEI can be used to connect an encoding of some sort – either a transcription of existing material, or the specification of some expected output in some form – with existing sources. This existing material may be in different formats – music notation in any combination of print and manuscript, or audio or video footage. The concepts for establishing such connections between encoded music and source material is described in the following chapters.</p>
             <div xml:id="facsimiles" type="div2">
                <head>Facsimiles</head>
