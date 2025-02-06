@@ -20,7 +20,7 @@
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../source/validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2025-01-22T23:30:23.630703549+01:00-->
+<!--canonicalized: 2025-02-06T12:57:40.373784705+01:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -75,7 +75,7 @@
             </respStmt>
          </titleStmt>
          <editionStmt>
-            <edition>MEI 5.1</edition>
+            <edition>MEI 6.0</edition>
          </editionStmt>
          <publicationStmt>
             <distributor>Music Encoding Initiative (MEI) Board</distributor>
@@ -841,7 +841,7 @@
                   <p>
                      <figure>
                         <head/>
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.1"&gt;
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="6.0-dev"&gt;
    &lt;meiHead&gt;
       &lt;!-- metadata goes here --&gt;
    &lt;/meiHead&gt;
@@ -863,7 +863,7 @@
                   <p>
                      <figure>
                         <head/>
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;music xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.1"&gt;
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;music xmlns="http://www.music-encoding.org/ns/mei" meiversion="6.0-dev"&gt;
    &lt;!-- description of musical text goes here --&gt;
 &lt;/music&gt;
 </egXML>
@@ -880,7 +880,7 @@
                   <p>
                      <figure>
                         <head/>
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;meiCorpus xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.1"&gt;
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;meiCorpus xmlns="http://www.music-encoding.org/ns/mei" meiversion="6.0-dev"&gt;
    &lt;meiHead&gt;
       &lt;!-- metadata on the corpus goes here --&gt;
    &lt;/meiHead&gt;
@@ -922,7 +922,7 @@
                   <p>
                      <figure>
                         <head/>
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;meiHead xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.1"&gt;
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;meiHead xmlns="http://www.music-encoding.org/ns/mei" meiversion="6.0-dev"&gt;
    &lt;!-- metadata goes here --&gt;
 &lt;/meiHead&gt;
 </egXML>
@@ -1396,9 +1396,9 @@
                      <p>
                         <figure>
                            <head/>
-                           <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/5.1/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
-&lt;?xml-model href="https://music-encoding.org/schema/5.1/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
-&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.1"&gt;
+                           <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
+&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
+&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="6.0-dev"&gt;
   &lt;meiHead&gt;
     &lt;fileDesc&gt;
       &lt;titleStmt&gt;
@@ -1519,9 +1519,9 @@
                      <p>
                         <figure>
                            <head/>
-                           <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/5.1/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
-&lt;?xml-model href="https://music-encoding.org/schema/5.1/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
-&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.1"&gt;
+                           <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
+&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
+&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="6.0-dev"&gt;
   &lt;meiHead&gt;
     &lt;fileDesc&gt;
       &lt;titleStmt&gt;
@@ -5312,9 +5312,9 @@ or
                      <p>
                         <figure>
                            <head>Alternating meters in Tchaikovsky's String Quartet in F major</head>
-                           <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/5.1/mei-CMN.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
-&lt;?xml-model href="https://music-encoding.org/schema/5.1/mei-CMN.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
-&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.1"&gt;
+                           <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-CMN.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
+&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-CMN.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
+&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="6.0-dev"&gt;
    &lt;meiHead&gt;
       &lt;fileDesc&gt;
          &lt;titleStmt&gt;
@@ -5608,9 +5608,9 @@ or
                   <p>
                      <figure>
                         <head/>
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/5.1/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
-&lt;?xml-model href="https://music-encoding.org/schema/5.1/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
-&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.1"&gt;
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
+&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
+&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="6.0-dev"&gt;
   &lt;meiHead&gt;
     &lt;fileDesc&gt;
       &lt;titleStmt&gt;
@@ -7038,9 +7038,9 @@ or
                      <p>
                         <figure>
                            <head/>
-                           <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/5.1/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
-&lt;?xml-model href="https://music-encoding.org/schema/5.1/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
-&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.1"&gt;
+                           <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
+&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
+&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="6.0-dev"&gt;
   &lt;meiHead&gt;
     &lt;fileDesc&gt;
       &lt;titleStmt&gt;
@@ -8231,9 +8231,9 @@ or
                <p>
                   <figure>
                      <head>The upper staff shows the different mensural note shapes and the lower staff shows the different mensural rests</head>
-                     <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/5.1/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
-&lt;?xml-model href="https://music-encoding.org/schema/5.1/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
-&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.1"&gt;
+                     <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
+&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
+&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="6.0-dev"&gt;
   &lt;meiHead&gt;
     &lt;fileDesc&gt;
       &lt;titleStmt&gt;
@@ -8395,9 +8395,9 @@ or
                   <p>The last three values are to be used exclusively in <hi rend="italic">Ars antiqua</hi> mensural notation, where <val>maior</val> and <val>minor</val> refer to types of <hi rend="italic">semibreves</hi>, and <val>duplex</val> refers to a type of <hi rend="italic">longa</hi>. Examples of each of these six values are presented below. In these examples, the ‘voice’ staff renders the notes in the code snippet, and the ‘reference’ staff, together with the dotted bar lines, are shown to help to visualize the relative values of the notes in the ‘voice’ staff.</p>
                   <p>The following example illustrates an <hi rend="italic">alteration</hi> (the second <hi rend="italic">brevis</hi>) in <hi rend="italic">modus minor perfectus</hi>. Notice that the second <hi rend="italic">brevis</hi> has doubled its regular value, it has been altered, unlike the first one. <figure>
                         <head>Example of alteration (The bottom staff, together with the dotted barlines, is used here to help visualizing the durational values of the notes in the upper staff)</head>
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/5.1/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
-&lt;?xml-model href="https://music-encoding.org/schema/5.1/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
-&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.1"&gt;
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
+&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
+&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="6.0-dev"&gt;
   &lt;meiHead&gt;
     &lt;fileDesc&gt;
       &lt;titleStmt&gt;
@@ -8487,9 +8487,9 @@ or
                      </figure> The same applies to the examples that follow.</p>
                   <p>The following example illustrates an <hi rend="italic">imperfection</hi> (the two <hi rend="italic">longae</hi>) in <hi rend="italic">modus minor perfectus</hi> with the same <hi rend="italic">longa</hi>-<hi rend="italic">brevis</hi>-<hi rend="italic">brevis</hi>-<hi rend="italic">longa</hi> sequence but with an additional <hi rend="italic">dot of division</hi> between the two <hi rend="italic">breves</hi> (see <ptr target="#dots"/> for more details). Notice that here the <hi rend="italic">longae</hi> have been imperfected, unlike the previous example in which they kept the perfect value indicated by the mensuration. <figure>
                         <head>Example of imperfection (The bottom staff, together with the dotted barlines, is used here to help visualizing the durational values of the notes in the upper staff)</head>
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/5.1/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
-&lt;?xml-model href="https://music-encoding.org/schema/5.1/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
-&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.1"&gt;
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
+&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
+&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="6.0-dev"&gt;
   &lt;meiHead&gt;
     &lt;fileDesc&gt;
       &lt;titleStmt&gt;
@@ -8566,9 +8566,9 @@ or
                   </p>
                   <p>The following example in <hi rend="italic">modus minor imperfectus</hi> illustrates the use of a dot of augmentation following the <hi rend="italic">longa</hi> (see <ptr target="#dots"/> for more details). Notice that the <hi rend="italic">longa</hi>, which is supposed to be imperfect according to the mensuration, has a perfect value due to the augmentation dot. <figure>
                         <head>Example of augmentation (The bottom staff, together with the dotted barlines, is used here to help visualizing the durational values of the notes in the upper staff)</head>
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/5.1/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
-&lt;?xml-model href="https://music-encoding.org/schema/5.1/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
-&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.1"&gt;
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
+&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
+&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="6.0-dev"&gt;
   &lt;meiHead&gt;
     &lt;fileDesc&gt;
       &lt;titleStmt&gt;
@@ -8637,9 +8637,9 @@ or
                   </p>
                   <p>Finally, the following example illustrates the <att>dur.quality</att> values related to the <hi rend="italic">Ars antiqua</hi> style, for <hi rend="italic">perfect modus</hi>, with the breve equivalents notated in the lower staff for reference (as in the previous examples). <figure>
                         <head>Example of ars antiqua related values for perfect modus (The bottom staff, together with the dotted barlines, is used here to help visualizing the durational values of the notes in the upper staff)</head>
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/5.1/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
-&lt;?xml-model href="https://music-encoding.org/schema/5.1/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
-&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.1"&gt;
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
+&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
+&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="6.0-dev"&gt;
   &lt;meiHead&gt;
     &lt;fileDesc&gt;
       &lt;titleStmt&gt;
@@ -8754,9 +8754,9 @@ or
                   <p>
                      <figure>
                         <head>Example of "partial imperfection of an immediate part" (ad partem propinquam)</head>
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/5.1/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
-&lt;?xml-model href="https://music-encoding.org/schema/5.1/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
-&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.1"&gt;
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
+&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
+&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="6.0-dev"&gt;
   &lt;meiHead&gt;
     &lt;fileDesc&gt;
       &lt;titleStmt&gt;
@@ -8828,9 +8828,9 @@ or
                   <p>
                      <figure>
                         <head>Example of "partial imperfection" from both sides (ad partes)</head>
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/5.1/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
-&lt;?xml-model href="https://music-encoding.org/schema/5.1/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
-&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.1"&gt;
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
+&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
+&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="6.0-dev"&gt;
   &lt;meiHead&gt;
     &lt;fileDesc&gt;
       &lt;titleStmt&gt;
@@ -8904,9 +8904,9 @@ or
                   <p>
                      <figure>
                         <head>Example of "partial imperfection of a remote part" (ad partem remotam)</head>
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/5.1/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
-&lt;?xml-model href="https://music-encoding.org/schema/5.1/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
-&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.1"&gt;
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
+&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
+&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="6.0-dev"&gt;
   &lt;meiHead&gt;
     &lt;fileDesc&gt;
       &lt;titleStmt&gt;
@@ -8988,9 +8988,9 @@ or
                   <p>
                      <figure>
                         <head>Example of "partial imperfection of a remote part" (ad partem remotam)</head>
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/5.1/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
-&lt;?xml-model href="https://music-encoding.org/schema/5.1/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
-&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.1"&gt;
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
+&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
+&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="6.0-dev"&gt;
   &lt;meiHead&gt;
     &lt;fileDesc&gt;
       &lt;titleStmt&gt;
@@ -9115,9 +9115,9 @@ or
                   <head>Change in mensuration</head>
                   <p>The following example illustrates a <hi rend="italic">change in mensuration</hi>. In this case, the element <gi scheme="MEI">mensur</gi> is used within the <gi scheme="MEI">layer</gi> element, preceding the stream of notes affected by the new mensuration defined by it. <figure>
                         <head>Example of a change in mensuration</head>
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/5.1/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
-&lt;?xml-model href="https://music-encoding.org/schema/5.1/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
-&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.1"&gt;
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
+&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
+&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="6.0-dev"&gt;
   &lt;meiHead&gt;
     &lt;fileDesc&gt;
       &lt;titleStmt&gt;
@@ -9176,9 +9176,9 @@ or
                   <head>Implicit mensuration</head>
                   <p>It is common in <hi rend="italic">Ars antiqua</hi> and some <hi rend="italic">Ars nova</hi> pieces to have no mensuration signs. In this case, the mensuration—the division levels corresponding to <hi rend="italic">modus maior</hi>, <hi rend="italic">modus minor</hi>, <hi rend="italic">tempus</hi>, and <hi rend="italic">prolatio</hi>—is given by the context. The next example shows the incipit of a four-voice piece, Josquin’s <hi rend="italic">Tu solus qui facis mirabilia</hi>, where only two of the voices (<hi rend="italic">Cantus</hi> and <hi rend="italic">Tenor</hi>) have a mensuration sign. The other two (<hi rend="italic">Altus</hi> and <hi rend="italic">Bassus</hi>) have <hi rend="italic">no mensuration signs</hi>, and the <hi rend="italic">mensura is given by the context</hi>. Therefore, while only the <hi rend="italic">Cantus</hi> and the <hi rend="italic">Tenor</hi> have attributes for encoding the mensuration sign (in this case, <att>mensur.sign</att> and <att>mensur.slash</att>), all four voices include attributes to encode the <hi rend="italic">mensura</hi> (<att>tempus</att> and <att>prolatio</att>). <figure>
                         <head>Example of omitted mensuration signs</head>
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/5.1/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
-&lt;?xml-model href="https://music-encoding.org/schema/5.1/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
-&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.1"&gt;
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
+&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
+&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="6.0-dev"&gt;
   &lt;meiHead&gt;
     &lt;fileDesc&gt;
       &lt;titleStmt&gt;
@@ -10633,7 +10633,7 @@ or
                   <p>
                      <figure>
                         <head/>
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;music xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.1"&gt;
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;music xmlns="http://www.music-encoding.org/ns/mei" meiversion="6.0-dev"&gt;
    &lt;body&gt;
       &lt;mdiv&gt;
          &lt;score&gt;
@@ -15219,9 +15219,9 @@ or
                     <p>One possible usage of <att>corresp</att> is to link related editorial markup. Because of the hierarchical nature of XML it may be necessary to split related editorial markup into multiple elements. In the following example, <att>corresp</att> is used to encode the relationship between those elements.</p>
                     <figure>
                         <head/>
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/5.1/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
-&lt;?xml-model href="https://music-encoding.org/schema/5.1/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
-&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.1"&gt;
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
+&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
+&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="6.0-dev"&gt;
   &lt;meiHead&gt;
     &lt;fileDesc&gt;
       &lt;titleStmt&gt;
@@ -15799,7 +15799,7 @@ or
                <p>
                   <figure>
                      <head/>
-                     <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code noBase noLang" xml:space="preserve"><music xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.1">
+                     <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code noBase noLang" xml:space="preserve"><music xmlns="http://www.music-encoding.org/ns/mei" meiversion="6.0-dev">
   <facsimile>
     <?edit-start?>
     <surface lrx="3000" lry="2000" ulx="0" uly="0">
@@ -35216,22 +35216,22 @@ or
       <attDef ident="meiversion" usage="opt">
         <desc xml:lang="en">Specifies a generic MEI version label.</desc>
         <valList type="closed">
-          <valItem ident="5.1">
+          <valItem ident="6.0-dev">
             <desc xml:lang="en">Version of MEI</desc>
           </valItem>
-          <valItem ident="5.1+anyStart">
+          <valItem ident="6.0-dev+anyStart">
             <desc>Version of MEI all_anyStart customization</desc>
           </valItem>
-          <valItem ident="5.1+basic">
+          <valItem ident="6.0-dev+basic">
               <desc>Version of MEI basic customization</desc>
           </valItem>
-          <valItem ident="5.1+CMN">
+          <valItem ident="6.0-dev+CMN">
             <desc>Version of MEI cmn customization</desc>
           </valItem>
-          <valItem ident="5.1+Mensural">
+          <valItem ident="6.0-dev+Mensural">
             <desc>Version of MEI mensural customization</desc>
           </valItem>
-          <valItem ident="5.1+Neumes">
+          <valItem ident="6.0-dev+Neumes">
             <desc>Version of MEI neumes customization</desc>
           </valItem>
         </valList>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xml:base="file:/opt/docker-mei/music-encoding/customizations/mei-Neumes.xml"><?TEIVERSION MEI 5.1?>
+<?xml version="1.0" encoding="utf-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xml:base="file:/opt/docker-mei/music-encoding/customizations/mei-Neumes.xml"><?TEIVERSION MEI 6.0?>
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -27,7 +27,7 @@
     <body>
 
       <!-- Limit the set of possible start elements -->
-      <schemaSpec ident="mei-Neumes" ns="http://www.music-encoding.org/ns/mei" prefix="mei_" start="mei meiHead meiCorpus music" source="/opt/docker-mei/music-encoding/build/mei-source_canonicalized_v5.1.xml"><macroSpec rend="add" ident="data.ACCIDENTAL.WRITTEN" module="MEI" type="dt">
+      <schemaSpec ident="mei-Neumes" ns="http://www.music-encoding.org/ns/mei" prefix="mei_" start="mei meiHead meiCorpus music" source="/opt/docker-mei/music-encoding/build/mei-source_canonicalized_v6.0-dev.xml"><macroSpec rend="add" ident="data.ACCIDENTAL.WRITTEN" module="MEI" type="dt">
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Written accidental values.</desc>
     <content xmlns:xi="http://www.w3.org/2001/XInclude">
       <alternate minOccurs="1" maxOccurs="1"><macroRef key="data.ACCIDENTAL.WRITTEN.basic"/><macroRef key="data.ACCIDENTAL.WRITTEN.extended"/><macroRef key="data.ACCIDENTAL.aeu"/><macroRef key="data.ACCIDENTAL.persian"/></alternate>
@@ -10687,9 +10687,9 @@
           <sch:report test="@meiversion">The @meiversion attribute is not allowed on elements that are not the document root element.</sch:report>
         </sch:rule>
       </constraint>
-    </constraintSpec><attList><attDef ident="meiversion" usage="rec"><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Specifies a generic MEI version label.</desc><valList type="closed" mode="change"><valItem xmlns:xi="http://www.w3.org/2001/XInclude" ident="5.1">
+    </constraintSpec><attList><attDef ident="meiversion" usage="rec"><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Specifies a generic MEI version label.</desc><valList type="closed" mode="change"><valItem xmlns:xi="http://www.w3.org/2001/XInclude" ident="6.0-dev">
             <desc xml:lang="en">Version of MEI</desc>
-          </valItem><valItem xmlns:xi="http://www.w3.org/2001/XInclude" ident="5.1+Neumes">
+          </valItem><valItem xmlns:xi="http://www.w3.org/2001/XInclude" ident="6.0-dev+Neumes">
             <desc>Version of MEI neumes customization</desc>
           </valItem></valList></attDef></attList></classSpec><classSpec rend="add" ident="att.mensur.log" module="MEI.shared" type="atts">
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Logical domain attributes.</desc>
