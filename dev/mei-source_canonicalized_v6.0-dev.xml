@@ -20,7 +20,7 @@
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../source/validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2025-02-06T13:01:18.13372679+01:00-->
+<!--canonicalized: 2025-02-06T14:28:34.059472727+01:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -2462,7 +2462,7 @@
                   </div>
                   <div xml:id="headerFileExtent" type="div4">
                      <head>Extent of the File</head>
-                     <p>The third component of the fileDesc is a description of the physical qualities of the file. The <gi scheme="MEI">extent</gi> element is provided for this purpose.</p>
+                     <p>The third component of the <gi scheme="MEI">fileDesc</gi> is a description of the physical qualities of the file. The <gi scheme="MEI">extent</gi> element is provided for this purpose.</p>
                      <p>
                         <specList>
                            <specDesc key="extent"/>
