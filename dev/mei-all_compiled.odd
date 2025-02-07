@@ -1509,9 +1509,9 @@
   </macroSpec><macroSpec rend="add" ident="data.INTERVAL.HARMONIC" module="MEI" type="dt">
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">A token indicating diatonic interval quality and size in shorthand notation.</desc>
     <content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <choice xmlns="http://relaxng.org/ns/structure/1.0"><rng:data xmlns="http://www.tei-c.org/ns/1.0" type="token">
-          <rng:param name="pattern">[AdMmP][1-9][0-9]*</rng:param>
-        </rng:data></choice>
+      <rng:data type="token">
+        <rng:param name="pattern">[AdMmP][1-9][0-9]*</rng:param>
+      </rng:data>
     </content>
     <remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>
@@ -2967,7 +2967,7 @@
   </macroSpec><macroSpec rend="add" ident="data.PGSCALE" module="MEI" type="dt">
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Page scale factor; a percentage of the values in page.height and page.width.</desc>
     <content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <choice xmlns="http://relaxng.org/ns/structure/1.0"><ref name="data.PERCENT"/></choice>
+      <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.PERCENT"/>
     </content>
   </macroSpec><macroSpec rend="add" ident="data.PITCHCLASS" module="MEI" type="dt">
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Pclass (pitch class) attribute values.</desc>
@@ -6305,7 +6305,7 @@
       <memberOf key="att.common"/>
       <memberOf key="model.editLike"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="model.choicePart"/></choice></zeroOrMore>
+      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.choicePart"/></zeroOrMore>
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>Because the children of a <gi scheme="MEI">choice</gi> element all represent alternative
         ways of encoding the same sequence, it is natural to think of them as mutually exclusive.
@@ -6926,7 +6926,7 @@
       <memberOf key="att.lang"/>
       <memberOf key="model.figDescLike"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <choice xmlns="http://relaxng.org/ns/structure/1.0"><zeroOrMore><choice><ref name="model.textComponentLike"/></choice></zeroOrMore><zeroOrMore><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike.limited"/></choice></zeroOrMore></choice>
+      <choice xmlns="http://relaxng.org/ns/structure/1.0"><zeroOrMore><ref name="model.textComponentLike"/></zeroOrMore><zeroOrMore><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike.limited"/></choice></zeroOrMore></choice>
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>Best practice suggests the use of controlled vocabulary for figure descriptions. Don't
         confuse this entity with a figure caption. A caption is text primarily intended for display
@@ -8786,7 +8786,7 @@
       <memberOf key="att.dataPointing"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.headLike"/></zeroOrMore>
-      <oneOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="termList"/></choice></oneOrMore>
+      <oneOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="termList"/></oneOrMore>
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>Although the use of names and terms from locally controlled vocabularies is possible, best
         practice suggests that terms should come from standard national or international
@@ -9708,7 +9708,7 @@
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.headLike"/></zeroOrMore>
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="locus"/><ref name="locusGrp"/></choice></zeroOrMore>
-      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="model.biblLike"/></choice></zeroOrMore>
+      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.biblLike"/></zeroOrMore>
     </content><constraintSpec xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_source_target" scheme="schematron">
       <constraint>
         <sch:rule context="mei:source/@target">
@@ -9842,7 +9842,7 @@
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.headLike"/></zeroOrMore>
       <oneOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.titleLike"/></oneOrMore>
-      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="model.respLike"/></choice></zeroOrMore>
+      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.respLike"/></zeroOrMore>
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-titleStmt.html">titleStmt</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="trackConfig" module="MEI.header"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">track configuration</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Number of physical/input tracks on a sound medium (<abbr>e.g.</abbr>, eight
@@ -16039,7 +16039,7 @@
       <memberOf key="att.lang"/>
       <memberOf key="model.addressLike"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <choice xmlns="http://relaxng.org/ns/structure/1.0"><oneOrMore><ref name="addrLine"/></oneOrMore><oneOrMore><choice><ref name="model.addressPart"/></choice></oneOrMore></choice>
+      <choice xmlns="http://relaxng.org/ns/structure/1.0"><oneOrMore><ref name="addrLine"/></oneOrMore><oneOrMore><ref name="model.addressPart"/></oneOrMore></choice>
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-address.html">address</ref> element of the Text Encoding Initiative (TEI) and the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-address">address</ref> element of the Encoded
         Archival Description (EAD).</p>
@@ -17628,7 +17628,7 @@
       <memberOf key="att.targetEval"/>
       <memberOf key="model.biblPart"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="model.biblLike"/></choice></zeroOrMore>
+      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.biblLike"/></zeroOrMore>
     </content><attList><attDef xmlns:xi="http://www.w3.org/2001/XInclude" ident="rel" usage="req">
         <desc xml:lang="en">Describes the relationship between the entity identified by the <gi scheme="MEI">relatedItem</gi> element and the resource described in the parent element, <abbr>i.e.</abbr>, <gi scheme="MEI">bibl</gi>, <gi scheme="MEI">source</gi> or <gi scheme="MEI">relatedItem</gi>.</desc>
         <datatype>
@@ -17840,7 +17840,7 @@
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="pgHead"/></zeroOrMore>
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="pgFoot"/></zeroOrMore>
       <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="instrGrp"/></optional>
-      <choice xmlns="http://relaxng.org/ns/structure/1.0"><optional><ref name="model.staffGrpLike"/></optional></choice>
+      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.staffGrpLike"/></optional>
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="grpSym"/></zeroOrMore>
       <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="ambitus"/></optional>
     </content></elementSpec><elementSpec rend="add" ident="section" module="MEI.shared"><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Segment of music data.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -18736,7 +18736,7 @@
       <memberOf key="att.lang"/>
       <memberOf key="model.lLike"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <choice xmlns="http://relaxng.org/ns/structure/1.0"><zeroOrMore><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.editLike"/><ref name="model.sylLike"/><ref name="model.textPhraseLike"/><ref name="model.transcriptionLike"/></choice></zeroOrMore></choice>
+        <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.editLike"/><ref name="model.sylLike"/><ref name="model.textPhraseLike"/><ref name="model.transcriptionLike"/></choice></zeroOrMore>
     </content><attList><attDef xmlns:xi="http://www.w3.org/2001/XInclude" ident="rhythm" usage="opt">
         <desc xml:lang="en">Used to specify a rhythm for the lyric syllables that differs from that of the notes
           on the staff, <abbr>e.g.</abbr>, '4,4,4,4' when the rhythm of the notes is '4.,8,4.,8'.</desc>

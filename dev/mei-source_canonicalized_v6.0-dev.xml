@@ -20,7 +20,7 @@
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../source/validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2025-02-07T11:43:57.864995487+01:00-->
+<!--canonicalized: 2025-02-07T15:09:38.513128846+01:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -17756,11 +17756,9 @@ or
   <macroSpec ident="data.INTERVAL.HARMONIC" module="MEI" type="dt">
     <desc xml:lang="en">A token indicating diatonic interval quality and size in shorthand notation.</desc>
     <content>
-      <rng:choice>
-        <rng:data type="token">
-          <rng:param name="pattern">[AdMmP][1-9][0-9]*</rng:param>
-        </rng:data>
-      </rng:choice>
+      <rng:data type="token">
+        <rng:param name="pattern">[AdMmP][1-9][0-9]*</rng:param>
+      </rng:data>
     </content>
     <remarks xml:lang="en">
       <p>
@@ -19321,9 +19319,7 @@ or
   <macroSpec ident="data.PGSCALE" module="MEI" type="dt">
     <desc xml:lang="en">Page scale factor; a percentage of the values in page.height and page.width.</desc>
     <content>
-      <rng:choice>
-        <rng:ref name="data.PERCENT"/>
-      </rng:choice>
+      <rng:ref name="data.PERCENT"/>
     </content>
   </macroSpec>
   <macroSpec ident="data.PITCHCLASS" module="MEI" type="dt">
@@ -23792,9 +23788,7 @@ or
     </classes>
     <content>
       <rng:zeroOrMore>
-        <rng:choice>
-          <rng:ref name="model.choicePart"/>
-        </rng:choice>
+        <rng:ref name="model.choicePart"/>
       </rng:zeroOrMore>
     </content>
     <remarks xml:lang="en">
@@ -24861,9 +24855,7 @@ or
     <content>
       <rng:choice>
         <rng:zeroOrMore>
-          <rng:choice>
-            <rng:ref name="model.textComponentLike"/>
-          </rng:choice>
+          <rng:ref name="model.textComponentLike"/>
         </rng:zeroOrMore>
         <rng:zeroOrMore>
           <rng:choice>
@@ -27602,9 +27594,7 @@ or
         <rng:ref name="model.headLike"/>
       </rng:zeroOrMore>
       <rng:oneOrMore>
-        <rng:choice>
-          <rng:ref name="termList"/>
-        </rng:choice>
+        <rng:ref name="termList"/>
       </rng:oneOrMore>
     </content>
     <remarks xml:lang="en">
@@ -29258,9 +29248,7 @@ or
         </rng:choice>
       </rng:zeroOrMore>
       <rng:zeroOrMore>
-        <rng:choice>
-          <rng:ref name="model.biblLike"/>
-        </rng:choice>
+        <rng:ref name="model.biblLike"/>
       </rng:zeroOrMore>
     </content>
     <constraintSpec ident="check_source_target" scheme="schematron">
@@ -29502,9 +29490,7 @@ or
         <rng:ref name="model.titleLike"/>
       </rng:oneOrMore>
       <rng:zeroOrMore>
-        <rng:choice>
-          <rng:ref name="model.respLike"/>
-        </rng:choice>
+        <rng:ref name="model.respLike"/>
       </rng:zeroOrMore>
     </content>
     <remarks xml:lang="en">
@@ -37670,9 +37656,7 @@ or
           <rng:ref name="addrLine"/>
         </rng:oneOrMore>
         <rng:oneOrMore>
-          <rng:choice>
-            <rng:ref name="model.addressPart"/>
-          </rng:choice>
+          <rng:ref name="model.addressPart"/>
         </rng:oneOrMore>
       </rng:choice>
     </content>
@@ -40501,10 +40485,8 @@ or
     </classes>
     <content>
       <rng:zeroOrMore>
-        <rng:choice>
-          <rng:ref name="model.biblLike"/>
+        <rng:ref name="model.biblLike"/>
           <!-- ptr/ref children aren't necessary as relatedItem is a member of att.pointing. -->
-        </rng:choice>
       </rng:zeroOrMore>
     </content>
     <attList>
@@ -40881,11 +40863,9 @@ or
       <rng:optional>
         <rng:ref name="instrGrp"/>
       </rng:optional>
-      <rng:choice>
-        <rng:optional>
+      <rng:optional>
           <rng:ref name="model.staffGrpLike"/>
         </rng:optional>
-      </rng:choice>
       <rng:zeroOrMore>
         <rng:ref name="grpSym"/>
       </rng:zeroOrMore>
@@ -42276,7 +42256,6 @@ or
       <memberOf key="model.lLike"/>
     </classes>
     <content>
-      <rng:choice>
         <rng:zeroOrMore>
           <rng:choice>
             <rng:text/>
@@ -42286,7 +42265,6 @@ or
             <rng:ref name="model.transcriptionLike"/>
           </rng:choice>
         </rng:zeroOrMore>
-      </rng:choice>
     </content>
     <attList>
       <attDef ident="rhythm" usage="opt">
