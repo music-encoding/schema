@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2025-02-06T15:46:21Z. . 
+Schema generated from ODD source 2025-02-07T10:44:23Z. . 
 TEI Edition: MEI 6.0-dev 
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -13425,7 +13425,7 @@ Suggested values include: 1] smufl</a:documentation>
    <define name="mei_att.duration.ges.attribute.dur.ges">
       <optional>
          <attribute name="dur.ges">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records performed duration information that differs from the written duration.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records performed duration information that differs from the written duration; @dur.ges allows the same datatypes as @dur. Values of @dur.ges that require dots should also use @dots.ges.</a:documentation>
             <ref name="mei_data.DURATION.GESTURAL"/>
          </attribute>
       </optional>
