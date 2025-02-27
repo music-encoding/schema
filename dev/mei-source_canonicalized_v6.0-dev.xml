@@ -20,7 +20,7 @@
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../source/validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2025-02-27T14:54:40.390075483+01:00-->
+<!--canonicalized: 2025-02-27T14:57:08.241258439+01:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -12327,24 +12327,17 @@ or
                </div>
                <div xml:id="textQuote" type="div3">
                   <head>Quotation</head>
-                  <p>It is common, in many types of texts, to find quotations. A quotation is typically attributed to another text other than the one being encoded. Often, the quoted material is typographically distinct from the surrounding text; <abbr>i.e.</abbr>, surrounded by so-called ‘quote marks’ or rendered as a separate block of text. The <gi scheme="MEI">quote</gi> element is used to mark this function:</p>
+                  <p>It is common, in many types of texts, to find quotations. A quotation is typically attributed to another text other than the one being encoded. Often, the quoted material is typographically distinct from the surrounding text; <abbr>i.e.</abbr>, surrounded by so-called ‘quote marks’ or rendered as a separate block of text.</p>
+                  <p>The <gi scheme="MEI">quote</gi> element marks a quotation as a separate block of text.</p>
                   <p>
                      <specList>
                         <specDesc key="quote"/>
                      </specList>
                   </p>
-                  <p>The following examples show the use of <gi scheme="MEI">quote</gi>.</p>
-                  <p>
-                     <figure>
-                        <head/>
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;p&gt;Hugh MacDonald has argued that Liszt's Symphonic Poems were meant to
-   &lt;quote&gt;display the traditional logic of symphonic thought&lt;/quote&gt;.
-&lt;/p&gt;
-</egXML>
-                     </figure>
-                     <figure>
-                        <head/>
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;p&gt;The majority of the works represented in this catalogue were purchased in Paris and
+                  <p>The following example shows the use of <gi scheme="MEI">quote</gi>.</p>
+                  <figure>
+                     <head/>
+                     <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;p&gt;The majority of the works represented in this catalogue were purchased in Paris and
    London between 1928 and 1934. After graduating from Harvard in 1924, Mackay-Smith
    spent several years in Europe:
    &lt;quote&gt;
@@ -12358,7 +12351,22 @@ or
    &lt;/quote&gt;
 &lt;/p&gt;
 </egXML>
+                  </figure>
+                  <p>The <gi scheme="MEI">q</gi> element is used for phrase-level text.</p>
+                  <p>
+                     <specList>
+                        <specDesc key="q"/>
+                     </specList>
+                  </p>
+                  <p>
+                     <figure>
+                        <head/>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;p&gt;Hugh MacDonald has argued that Liszt's Symphonic Poems were meant to
+   &lt;q&gt;display the traditional logic of symphonic thought&lt;/q&gt;.
+&lt;/p&gt;
+</egXML>
                      </figure>
+                     
                   </p>
                </div>
                <div xml:id="textPoetry" type="div3">
