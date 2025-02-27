@@ -20,7 +20,7 @@
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../source/validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2025-02-27T15:00:46.091753368+01:00-->
+<!--canonicalized: 2025-02-27T15:46:32.129585014+01:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -1462,7 +1462,8 @@
       &lt;/mdiv&gt;
     &lt;/body&gt;
   &lt;/music&gt;
-&lt;/mei&gt;</egXML>
+&lt;/mei&gt;
+</egXML>
                         </figure>
                      </p>
                   </div>
@@ -1589,7 +1590,8 @@
       &lt;/mdiv&gt;
     &lt;/body&gt;
   &lt;/music&gt;
-&lt;/mei&gt;</egXML>
+&lt;/mei&gt;
+</egXML>
                         </figure>
                      </p>
                   </div>
@@ -5585,7 +5587,8 @@ or
          &lt;/mdiv&gt;
       &lt;/body&gt;
    &lt;/music&gt;
-&lt;/mei&gt;</egXML>
+&lt;/mei&gt;
+</egXML>
                         </figure>
                      </p>
                </div>
@@ -5723,7 +5726,8 @@ or
       &lt;/mdiv&gt;
     &lt;/body&gt;
   &lt;/music&gt;
-&lt;/mei&gt;</egXML>
+&lt;/mei&gt;
+</egXML>
                      </figure>
                   </p>
                </div>
@@ -7208,7 +7212,8 @@ or
       &lt;/mdiv&gt;
     &lt;/body&gt;
   &lt;/music&gt;
-&lt;/mei&gt;</egXML>
+&lt;/mei&gt;
+</egXML>
                         </figure>
                      </p>
                      <p>Its <att>dis</att> and <att>dis.place</att> attributes record the amount and direction of displacement, respectively. The <att>lform</att> attribute captures the appearance of the continuation line associated with the octave displacement. The starting point of the octave displacement may be indicated by either a <att>tstamp</att>, <att>tstamp.ges</att>, <att>tstamp.real</att> or <att>startid</att> attribute, while the ending point may be recorded by either a <att>tstamp2</att>, <att>dur</att>, <att>dur.ges</att> or <att>endid</att> attribute. It is a semantic error not to specify one starting-type attribute and one ending-type attribute.</p>
@@ -7619,7 +7624,8 @@ or
          &lt;/mdiv&gt;
       &lt;/body&gt;
    &lt;/music&gt;
-&lt;/mei&gt;</egXML>
+&lt;/mei&gt;
+</egXML>
                         </figure>
                      </p>
                      <p>The <gi scheme="MEI">halfmRpt</gi> element represents the incorrect, but frequently found, use of the measure repeat (or similar) sign to indicate repetition of half of a measure. This practice mostly occurs in hand-written notation and usually involves the repetition of the second half of a measure in duple time. This element is necessary because the function of the symbol, not the visual symbol itself, is of primary importance. The following example from the beginning of Beethoven’s <hi rend="italic">Waldstein</hi> sonata illustrates such usage:</p>
@@ -8339,7 +8345,8 @@ or
       &lt;/mdiv&gt;
     &lt;/body&gt;
   &lt;/music&gt;
-&lt;/mei&gt;</egXML>
+&lt;/mei&gt;
+</egXML>
                   </figure>
                </p>
                <p>Normally, <hi rend="italic">longa</hi> rests are vertical strokes occupying two or three spaces in the staff, depending on the mensuration. For instance, in <att>modusminor</att>="3", they take up three spaces; and in <att>modusminor</att>="2", they take two. However, there are situations where both types of <hi rend="italic">longa</hi> rests can be present in the same piece, regardless of the <hi rend="italic">modus minor</hi>. For this reason, the <att>dur</att> attribute can take on two other values when used within <gi scheme="MEI">rest</gi> elements:</p>
@@ -8509,7 +8516,8 @@ or
       &lt;/mdiv&gt;
     &lt;/body&gt;
   &lt;/music&gt;
-&lt;/mei&gt;</egXML>
+&lt;/mei&gt;
+</egXML>
                      </figure>
                   </p>
                   <p>It is possible to omit the <att>dur.quality</att> attribute in a note when the performed duration of the note is the default value provided by the mensuration. In this case, the <hi rend="italic">longas</hi> are perfect, just as the mensuration (<hi rend="italic">perfect modus minor</hi>) indicates. Therefore, the <att>dur.quality</att> attribute can be omitted for the two <hi rend="italic">longas</hi>. <figure>
@@ -8599,7 +8607,8 @@ or
       &lt;/mdiv&gt;
     &lt;/body&gt;
   &lt;/music&gt;
-&lt;/mei&gt;</egXML>
+&lt;/mei&gt;
+</egXML>
                      </figure>
                   </p>
                   <p>The following example in <hi rend="italic">modus minor imperfectus</hi> illustrates the use of a dot of augmentation following the <hi rend="italic">longa</hi> (see <ptr target="#dots"/> for more details). Notice that the <hi rend="italic">longa</hi>, which is supposed to be imperfect according to the mensuration, has a perfect value due to the augmentation dot. <figure>
@@ -8670,7 +8679,8 @@ or
       &lt;/mdiv&gt;
     &lt;/body&gt;
   &lt;/music&gt;
-&lt;/mei&gt;</egXML>
+&lt;/mei&gt;
+</egXML>
                      </figure>
                   </p>
                   <p>Finally, the following example illustrates the <att>dur.quality</att> values related to the <hi rend="italic">Ars antiqua</hi> style, for <hi rend="italic">perfect modus</hi>, with the breve equivalents notated in the lower staff for reference (as in the previous examples). <figure>
@@ -8762,7 +8772,8 @@ or
       &lt;/mdiv&gt;
     &lt;/body&gt;
   &lt;/music&gt;
-&lt;/mei&gt;</egXML>
+&lt;/mei&gt;
+</egXML>
                      </figure>
                   </p>
                   <p>
@@ -8859,7 +8870,8 @@ or
       &lt;/mdiv&gt;
     &lt;/body&gt;
   &lt;/music&gt;
-&lt;/mei&gt;</egXML>
+&lt;/mei&gt;
+</egXML>
                      </figure>
                   </p>
                   <p>Partial imperfection can also happen from both sides of a note at once, as shown below:</p>
@@ -8935,7 +8947,8 @@ or
       &lt;/mdiv&gt;
     &lt;/body&gt;
   &lt;/music&gt;
-&lt;/mei&gt;</egXML>
+&lt;/mei&gt;
+</egXML>
                      </figure>
                   </p>
                   <p>An example of partial imperfection caused by a note three orders apart is given next. Here the <hi rend="italic">longa</hi> is partially imperfected by a <hi rend="italic">minima</hi> (instead of by a <hi rend="italic">semibrevis</hi>).</p>
@@ -9019,7 +9032,8 @@ or
       &lt;/mdiv&gt;
     &lt;/body&gt;
   &lt;/music&gt;
-&lt;/mei&gt;</egXML>
+&lt;/mei&gt;
+</egXML>
                      </figure>
                   </p>
                   <p>In the next example, the <hi rend="italic">longa</hi> is also imperfected by a <hi rend="italic">minima</hi>. However, the <att>num</att> and <att>numbase</att> ratio is different from the example above because the default value of the <hi rend="italic">longa</hi> here (18 <hi rend="italic">minimas</hi>) is different from that of the previous example (12 <hi rend="italic">minimas</hi>).</p>
@@ -9111,7 +9125,8 @@ or
       &lt;/mdiv&gt;
     &lt;/body&gt;
   &lt;/music&gt;
-&lt;/mei&gt;</egXML>
+&lt;/mei&gt;
+</egXML>
                      </figure>
                   </p>
                </div>
@@ -9205,7 +9220,8 @@ or
       &lt;/mdiv&gt;
     &lt;/body&gt;
   &lt;/music&gt;
-&lt;/mei&gt;</egXML>
+&lt;/mei&gt;
+</egXML>
                      </figure>
                   </p>
                   <p><hi rend="bold">Sesquialtera</hi> is frequently used to change the mensuration. The effect of the sesquialtera on the mensuration can be encoded by using the <att>tempus</att> and <att>prolatio</att> attributes of <gi scheme="MEI">mensur</gi> (for example, when changing the tempus to perfect, the effect can be encoded in <att>tempus</att>="3"). The actual sesquialtera can be encoded using <att>num</att>="3", <att>numbase</att>="2", and <att>level</att> to define the note level the sesquialtera is applied to (<abbr>e.g.</abbr>, <att>level</att>="semibrevis").</p>
@@ -9311,7 +9327,8 @@ or
       &lt;/mdiv&gt;
     &lt;/body&gt;
   &lt;/music&gt;
-&lt;/mei&gt;</egXML>
+&lt;/mei&gt;
+</egXML>
                      </figure>
                   </p>
                </div>
@@ -15341,7 +15358,8 @@ or
       &lt;/mdiv&gt;
     &lt;/body&gt;
   &lt;/music&gt;
-&lt;/mei&gt;</egXML>
+&lt;/mei&gt;
+</egXML>
                     </figure>
                     <p>A one-to-many relationship between the current element and the entities being referred to can be expressed by using a list of space-separated URIs in <att>corresp</att>.</p>
                     <p>The <att>next</att> and <att>prev</att> attributes point to elements which follow or precede the current element in some fashion other than that indicated by encoding order. The use of these attributes helps to avoid confusion in the sequence of events, for example, in voice leading across layers or staves, when the encoding reflects the physical arrangement of voices. In the second measure of the following example, the target of the next attribute occurs after the pointing element in time, but before it in encoding order:</p>
