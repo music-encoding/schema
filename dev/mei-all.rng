@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2025-02-27T13:46:18Z. . 
+Schema generated from ODD source 2025-02-27T13:55:03Z. . 
 TEI Edition: MEI 6.0-dev 
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -9475,7 +9475,7 @@ Suggested values include: 1] coloration; 2] cross-rhythm; 3] ligature; 4] unspec
    <define name="mei_att.numberPlacement.attribute.num.place">
       <optional>
          <attribute name="num.place">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(number placement) States where the tuplet number will be placed in relation to the note heads.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(number placement) States where the number will be placed in relation to the notational feature.</a:documentation>
             <ref name="mei_data.STAFFREL.basic"/>
          </attribute>
       </optional>
@@ -9483,7 +9483,7 @@ Suggested values include: 1] coloration; 2] cross-rhythm; 3] ligature; 4] unspec
    <define name="mei_att.numberPlacement.attribute.num.visible">
       <optional>
          <attribute name="num.visible">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Determines if the tuplet number is visible.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Determines if the number is visible.</a:documentation>
             <ref name="mei_data.BOOLEAN"/>
          </attribute>
       </optional>
