@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2025-02-27T14:47:04Z. . 
+Schema generated from ODD source 2025-02-27T16:19:26Z. . 
 TEI Edition: MEI 6.0-dev 
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -24116,6 +24116,7 @@ Suggested values include: 1] smufl</a:documentation>
          <ref name="mei_pad"/>
          <ref name="mei_rest"/>
          <ref name="mei_space"/>
+         <ref name="mei_tabDurSym"/>
          <ref name="mei_tabGrp"/>
       </choice>
    </define>
@@ -28728,6 +28729,8 @@ Suggested values include: 1] alternative; 2] arrangement; 3] carrier; 4] date; 5
       </optional>
    </define>
    <define name="mei_att.tabDurSym.log.attributes">
+      <ref name="mei_att.augmentDots.attributes"/>
+      <ref name="mei_att.duration.log.attributes"/>
       <ref name="mei_att.layerIdent.attributes"/>
       <ref name="mei_att.partIdent.attributes"/>
    </define>
@@ -28805,15 +28808,33 @@ Suggested values include: 1] alternative; 2] arrangement; 3] carrier; 4] date; 5
          <optional>
             <ref name="mei_tabDurSym"/>
          </optional>
-         <zeroOrMore>
+         <interleave>
             <choice>
-               <ref name="mei_note"/>
-               <ref name="mei_model.transcriptionLike"/>
-               <ref name="mei_model.editLike"/>
-               <ref name="mei_model.appLike"/>
-               <ref name="mei_rest"/>
+               <zeroOrMore>
+                  <ref name="mei_note"/>
+               </zeroOrMore>
+               <optional>
+                  <ref name="mei_rest"/>
+               </optional>
             </choice>
-         </zeroOrMore>
+            <zeroOrMore>
+               <choice>
+                  <ref name="mei_model.transcriptionLike"/>
+                  <ref name="mei_model.editLike"/>
+                  <ref name="mei_model.appLike"/>
+               </choice>
+            </zeroOrMore>
+         </interleave>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="mei-all-tabGrp-check_tabGrp_in_beam-constraint-rule-184">
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
+                      context="mei:tabGrp[ancestor::mei:beam]">
+               <sch:assert test="count(mei:tabDurSym) = 1" role="warning">A tabGrp inside of a beam must contain one tabDurSym.</sch:assert>
+            </sch:rule>
+         </pattern>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.facsimile.attributes"/>
          <ref name="mei_att.tabGrp.log.attributes"/>
@@ -29143,7 +29164,7 @@ Suggested values include: 1] alternative; 2] arrangement; 3] carrier; 4] date; 5
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-all-list-list_type_constraint-constraint-rule-184">
+                  id="mei-all-list-list_type_constraint-constraint-rule-185">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -29302,7 +29323,7 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-all-att.altSym-altsym-check_altsymTarget-constraint-rule-185">
+            id="mei-all-att.altSym-altsym-check_altsymTarget-constraint-rule-186">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -29415,7 +29436,7 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
          <empty/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-all-curve-symbolDef_curve_attributes_required-constraint-rule-186">
+                  id="mei-all-curve-symbolDef_curve_attributes_required-constraint-rule-187">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -29448,7 +29469,7 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-all-line-line_start-_and_end-type_attributes_required-constraint-rule-187">
+                  id="mei-all-line-line_start-_and_end-type_attributes_required-constraint-rule-188">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -30130,7 +30151,7 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-all-att.fTrem.vis-beams.float-check_beams.floating-constraint-rule-189">
+            id="mei-all-att.fTrem.vis-beams.float-check_beams.floating-constraint-rule-190">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"

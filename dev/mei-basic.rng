@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2025-02-27T14:47:09Z. . 
+Schema generated from ODD source 2025-02-27T16:19:31Z. . 
 TEI Edition: MEI 6.0-dev 
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -5960,6 +5960,7 @@ Suggested values include: 1] smufl</a:documentation>
          <ref name="mei_note"/>
          <ref name="mei_rest"/>
          <ref name="mei_space"/>
+         <ref name="mei_tabDurSym"/>
          <ref name="mei_tabGrp"/>
       </choice>
    </define>
@@ -7528,6 +7529,8 @@ Suggested values include: 1] main; 2] subordinate; 3] abbreviated; 4] alternativ
       </optional>
    </define>
    <define name="mei_att.tabDurSym.log.attributes">
+      <ref name="mei_att.augmentDots.attributes"/>
+      <ref name="mei_att.duration.log.attributes"/>
       <ref name="mei_att.layerIdent.attributes"/>
    </define>
    <define name="mei_att.tabGrp.log.attributes">
@@ -7589,12 +7592,29 @@ Suggested values include: 1] main; 2] subordinate; 3] abbreviated; 4] alternativ
          <optional>
             <ref name="mei_tabDurSym"/>
          </optional>
-         <zeroOrMore>
+         <interleave>
             <choice>
-               <ref name="mei_note"/>
-               <ref name="mei_rest"/>
+               <zeroOrMore>
+                  <ref name="mei_note"/>
+               </zeroOrMore>
+               <optional>
+                  <ref name="mei_rest"/>
+               </optional>
             </choice>
-         </zeroOrMore>
+            <zeroOrMore>
+               <empty/>
+            </zeroOrMore>
+         </interleave>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="mei-basic-tabGrp-check_tabGrp_in_beam-constraint-rule-85">
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
+                      context="mei:tabGrp[ancestor::mei:beam]">
+               <sch:assert test="count(mei:tabDurSym) = 1" role="warning">A tabGrp inside of a beam must contain one tabDurSym.</sch:assert>
+            </sch:rule>
+         </pattern>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.tabGrp.log.attributes"/>
          <ref name="mei_att.tabGrp.vis.attributes"/>
