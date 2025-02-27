@@ -20,7 +20,7 @@
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../source/validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2025-02-27T14:28:34.989343995+01:00-->
+<!--canonicalized: 2025-02-27T14:34:17.48918729+01:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -44885,12 +44885,6 @@ or
       </attDef>
       <attDef ident="bracket.visible" usage="opt">
         <desc xml:lang="en">States whether a bracket should be rendered with a tuplet.</desc>
-        <datatype>
-          <rng:ref name="data.BOOLEAN"/>
-        </datatype>
-      </attDef>
-      <attDef ident="dur.visible" usage="opt">
-        <desc xml:lang="en">Determines if the tuplet duration is visible.</desc>
         <datatype>
           <rng:ref name="data.BOOLEAN"/>
         </datatype>
