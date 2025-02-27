@@ -20,7 +20,7 @@
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../source/validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2025-02-27T14:34:17.48918729+01:00-->
+<!--canonicalized: 2025-02-27T14:37:53.987272002+01:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -7537,51 +7537,89 @@ or
                      <p>
                         <figure>
                            <head>Measure repetition</head>
-                           <graphic url="../images/ExampleImages/mrpt-20100510.png"/>
-                        </figure>
-                        <figure>
-                           <head/>
-                           <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;section&gt;
-   &lt;measure&gt;
-      &lt;staff&gt;
-         &lt;layer&gt;
-            &lt;beam&gt;
-               &lt;note dur="8" oct="4" pname="f"/&gt;
-               &lt;note dur="16" pname="a"/&gt;
-               &lt;note oct="5" pname="c"/&gt;
-               &lt;note dur="8" oct="4" pname="a"/&gt;
-            &lt;/beam&gt;
-            &lt;beam&gt;
-               &lt;note dur="8" oct="5" pname="c"/&gt;
-               &lt;note oct="4" pname="a"/&gt;
-               &lt;note pname="g"/&gt;
-            &lt;/beam&gt;
-         &lt;/layer&gt;
-      &lt;/staff&gt;
-   &lt;/measure&gt;
-   &lt;measure&gt;
-      &lt;staff&gt;
-         &lt;layer&gt;
-            &lt;mRpt/&gt;
-         &lt;/layer&gt;
-      &lt;/staff&gt;
-   &lt;/measure&gt;
-   &lt;measure&gt;
-      &lt;staff&gt;
-         &lt;layer&gt;
-            &lt;mRpt/&gt;
-         &lt;/layer&gt;
-      &lt;/staff&gt;
-   &lt;/measure&gt;
-   &lt;measure&gt;
-      &lt;staff&gt;
-         &lt;layer&gt;
-            &lt;mRpt/&gt;
-         &lt;/layer&gt;
-      &lt;/staff&gt;
-   &lt;/measure&gt;
-&lt;/section&gt;
-</egXML>
+                           <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
+&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
+&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="6.0-dev"&gt;
+   &lt;meiHead&gt;
+      &lt;fileDesc&gt;
+         &lt;titleStmt&gt;
+            &lt;title&gt;Example of measure repetition&lt;/title&gt;
+            &lt;editor&gt;
+               &lt;persName auth="0000-0003-1898-2543" auth.uri="https://orcid.org/"&gt;Klaus Rettinghaus&lt;/persName&gt;
+            &lt;/editor&gt;
+         &lt;/titleStmt&gt;
+         &lt;pubStmt&gt;
+            &lt;date isodate="2025"&gt;2025&lt;/date&gt;
+            &lt;respStmt&gt;
+               &lt;corpName&gt;Music Encoding Initiative (MEI) Board&lt;/corpName&gt;
+            &lt;/respStmt&gt;
+            &lt;availability&gt;
+               &lt;useRestrict label="license" auth="https://spdx.org/licenses/" codedval="ECL-2.0"&gt;
+                  &lt;p&gt;Educational Community License v2.0&lt;/p&gt;
+               &lt;/useRestrict&gt;
+            &lt;/availability&gt;
+         &lt;/pubStmt&gt;
+         &lt;seriesStmt&gt;
+            &lt;title&gt;MEI guidelines examples&lt;/title&gt;
+         &lt;/seriesStmt&gt;
+      &lt;/fileDesc&gt;
+   &lt;/meiHead&gt;
+   &lt;music&gt;
+      &lt;body&gt;
+         &lt;mdiv&gt;
+            &lt;score&gt;
+               &lt;scoreDef&gt;
+                  &lt;staffGrp&gt;
+                     &lt;staffDef n="1" lines="5" clef.shape="G" clef.line="2" meter.count="6" meter.unit="8" /&gt;
+                  &lt;/staffGrp&gt;
+               &lt;/scoreDef&gt;
+               &lt;?edit-start?&gt;
+               &lt;section&gt;
+                  &lt;measure&gt;
+                     &lt;staff&gt;
+                        &lt;layer&gt;
+                           &lt;beam&gt;
+                              &lt;note dur="8" oct="4" pname="f" /&gt;
+                              &lt;note dur="16" oct="4" pname="a" /&gt;
+                              &lt;note dur="16" oct="5" pname="c" /&gt;
+                              &lt;note dur="8" oct="4" pname="a" /&gt;
+                           &lt;/beam&gt;
+                           &lt;beam&gt;
+                              &lt;note dur="8" oct="5" pname="c" /&gt;
+                              &lt;note dur="8" oct="4" pname="a" /&gt;
+                              &lt;note dur="8" oct="4" pname="g" /&gt;
+                           &lt;/beam&gt;
+                        &lt;/layer&gt;
+                     &lt;/staff&gt;
+                  &lt;/measure&gt;
+                  &lt;measure&gt;
+                     &lt;staff&gt;
+                        &lt;layer&gt;
+                           &lt;mRpt /&gt;
+                        &lt;/layer&gt;
+                     &lt;/staff&gt;
+                  &lt;/measure&gt;
+                  &lt;measure&gt;
+                     &lt;staff&gt;
+                        &lt;layer&gt;
+                           &lt;mRpt /&gt;
+                        &lt;/layer&gt;
+                     &lt;/staff&gt;
+                  &lt;/measure&gt;
+                  &lt;measure&gt;
+                     &lt;staff&gt;
+                        &lt;layer&gt;
+                           &lt;mRpt /&gt;
+                        &lt;/layer&gt;
+                     &lt;/staff&gt;
+                  &lt;/measure&gt;
+               &lt;/section&gt;
+               &lt;?edit-end?&gt;
+            &lt;/score&gt;
+         &lt;/mdiv&gt;
+      &lt;/body&gt;
+   &lt;/music&gt;
+&lt;/mei&gt;</egXML>
                         </figure>
                      </p>
                      <p>The <gi scheme="MEI">halfmRpt</gi> element represents the incorrect, but frequently found, use of the measure repeat (or similar) sign to indicate repetition of half of a measure. This practice mostly occurs in hand-written notation and usually involves the repetition of the second half of a measure in duple time. This element is necessary because the function of the symbol, not the visual symbol itself, is of primary importance. The following example from the beginning of Beethoven’s <hi rend="italic">Waldstein</hi> sonata illustrates such usage:</p>
