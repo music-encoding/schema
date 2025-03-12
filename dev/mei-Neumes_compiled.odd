@@ -5862,7 +5862,8 @@
       </p>
     </remarks>
   </classSpec><classSpec rend="add" ident="att.regularMethod" module="MEI.header" type="atts">
-    <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Attributes that describe correction and normalization methods.</desc>
+    <gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en" versionDate="2024-07-22">regularization method</gloss>
+    <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en" versionDate="2024-07-22">Attributes that describe correction and normalization methods.</desc>
     <attList xmlns:xi="http://www.w3.org/2001/XInclude">
       <attDef ident="method" usage="opt">
         <desc xml:lang="en">Indicates the method employed to mark corrections and normalizations.</desc>
@@ -5870,8 +5871,8 @@
           <valItem ident="silent">
             <desc xml:lang="en">Corrections and normalizations made silently.</desc>
           </valItem>
-          <valItem ident="tags">
-            <desc xml:lang="en">Corrections and normalizations indicated using elements.</desc>
+          <valItem ident="markup">
+            <desc xml:lang="en">Corrections and normalizations represented using markup.</desc>
           </valItem>
         </valList>
       </attDef>
