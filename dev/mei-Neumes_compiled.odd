@@ -7271,14 +7271,29 @@
         the <gi scheme="MEI">accessRestrict</gi> element, which holds information about conditions
         affecting the availability of the material.</p>
       <p>The model of this element is based on the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-userestrict">userestrict</ref> element of the Encoded Archival Description (EAD).</p>
-    </remarks></elementSpec><elementSpec rend="add" ident="watermark" module="MEI.header"><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Contains a description of a watermark or similar device.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
+    </remarks></elementSpec><elementSpec rend="add" ident="watermarkDesc" module="MEI.header"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">watermark description</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Contains a description of the watermark(s) of an item.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
+      <memberOf key="att.common"/>
+      <memberOf key="att.bibl"/>
+      <memberOf key="att.lang"/>
+      <memberOf key="model.physDescPart"/>
+    </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
+      <choice xmlns="http://relaxng.org/ns/structure/1.0"><group><zeroOrMore><ref name="head"/></zeroOrMore><zeroOrMore><choice><ref name="watermarkList"/><ref name="watermark"/><ref name="p"/></choice></zeroOrMore></group></choice>
+    </content></elementSpec><elementSpec rend="add" ident="watermarkList" module="MEI.header"><gloss xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">list of watermarks</gloss><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Grouping several watermarks.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
+      <memberOf key="att.common"/>
+      <memberOf key="att.authorized"/>
+      <memberOf key="att.bibl"/>
+      <memberOf key="att.edit"/>
+      <memberOf key="att.lang"/>
+    </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
+      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.headLike"/></zeroOrMore>
+      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="annot"/><ref name="watermark"/></choice></zeroOrMore>
+    </content></elementSpec><elementSpec rend="add" ident="watermark" module="MEI.header"><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Contains a description of a watermark or similar device.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>
       <memberOf key="att.bibl"/>
       <memberOf key="att.facsimile"/>
       <memberOf key="att.lang"/>
-      <memberOf key="model.physDescPart"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
-      <ref xmlns="http://relaxng.org/ns/structure/1.0" name="macro.struc-unstrucContent"/>
+      <oneOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="macro.watermark"/><rng:text xmlns="http://www.tei-c.org/ns/1.0"/></choice></oneOrMore>
     </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The <att>facs</att> attribute may be used to record the location of the watermark in a
         facsimile image.</p>
@@ -9117,6 +9132,32 @@
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Groups elements that may appear as part of a bibliographic title.</desc>
     <content xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="model.addressLike"/><ref name="model.addressPart"/><ref name="model.annotLike"/><ref name="model.biblLike"/><ref name="model.dateLike"/><ref name="model.editorialLike"/><ref name="model.figureLike"/><ref name="model.identifierLike"/><ref name="model.lbLike"/><ref name="model.locrefLike"/><ref name="model.measurementLike"/><ref name="model.nameLike"/><ref name="model.nameLike.label"/><ref name="model.pbLike"/><ref name="model.rendLike"/><ref name="symbol"/></choice></zeroOrMore>
+    </content>
+  </macroSpec><macroSpec rend="add" ident="macro.watermark" module="MEI.shared" type="pe">
+    <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Groups elements that contain meta-data about a watermark.</desc>
+    <content xmlns:xi="http://www.w3.org/2001/XInclude">
+      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.addressLike"/></optional>
+      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.annotLike"/></optional>
+      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.biblLike"/></optional>
+      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.dateLike"/></optional>
+      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.dimLike"/></optional>
+      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.figureLike"/></optional>
+      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.geogNamePart"/></optional>
+      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.identifierLike"/></optional>
+      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.locrefLike"/></optional>
+      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.measurementLike"/></optional>
+      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.nameLike.geogName"/></optional>
+      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.qLike"/></optional>
+      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.relationLike"/></optional>
+      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.rendLike"/></optional>
+      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.titleLike"/></optional>
+      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="biblList"/></optional>
+      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="dimensions"/></optional>
+      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="extent"/></optional>
+      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="heraldry"/></optional>
+      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="locus"/></optional>
+      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="locusGrp"/></optional>
+      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="term"/></optional>
     </content>
   </macroSpec><macroSpec rend="add" ident="data.BETYPE" module="MEI.shared" type="dt">
     <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">Datatypes for values in begin, end, abstype and inttype attributes.</desc>
@@ -14542,16 +14583,9 @@
       <memberOf key="model.respLike"/>
     </classes><content xmlns:xi="http://www.w3.org/2001/XInclude">
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.headLike"/></zeroOrMore>
-      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="name"/><ref name="resp"/><ref name="model.nameLike.agent"/></choice></zeroOrMore>
-    </content><constraintSpec xmlns:xi="http://www.w3.org/2001/XInclude" ident="check_respStmt" scheme="schematron">
-      <constraint>
-        <sch:rule context="mei:respStmt[not(ancestor::mei:change)]">
-          <sch:assert test="(mei:resp and (mei:name or mei:corpName or mei:persName)) or             count(mei:*[@role]) = count(mei:*) and count(mei:*) &gt; 0" role="warning">At least one element pair (a resp element and a name-like element) is
-            recommended. Alternatively, each name-like element may have a @role
-            attribute.</sch:assert>
-        </sch:rule>
-      </constraint>
-    </constraintSpec><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+      <choice xmlns="http://relaxng.org/ns/structure/1.0"><group><oneOrMore><oneOrMore><ref name="resp"/></oneOrMore><oneOrMore><choice><ref name="model.nameLike.agent"/><ref name="name"/></choice></oneOrMore></oneOrMore></group><group><oneOrMore><oneOrMore><choice><ref name="model.nameLike.agent"/><ref name="name"/></choice></oneOrMore><oneOrMore><ref name="resp"/></oneOrMore></oneOrMore></group><oneOrMore><choice><ref name="model.nameLike.agent"/><ref name="name"/></choice></oneOrMore></choice>
+      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="annot"/></zeroOrMore>
+    </content><remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-respStmt.html">respStmt</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="rest" module="MEI.shared"><desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">A non-sounding event found in the source being transcribed.</desc><classes xmlns:xi="http://www.w3.org/2001/XInclude">
       <memberOf key="att.common"/>

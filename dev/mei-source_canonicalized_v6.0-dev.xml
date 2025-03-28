@@ -20,7 +20,7 @@
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../source/validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2025-03-28T15:12:32.44670518+01:00-->
+<!--canonicalized: 2025-03-28T15:28:19.09081165+01:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -4239,6 +4239,8 @@
                            <specDesc key="extent"/>
                            <specDesc key="dimensions"/>
                            <specDesc key="dim"/>
+                           <specDesc key="watermarkDesc"/>
+                           <specDesc key="watermarkList"/>
                            <specDesc key="watermark"/>
                            <specDesc key="stamp"/>
                            <specDesc key="physMedium"/>
@@ -4294,8 +4296,20 @@
                         </figure>
                      </p>
                      <p><specList>
-                        <specDesc key="watermark"/>
+                        <specDesc key="watermarkDesc"/>
                      </specList></p>
+                     <p>The <gi scheme="MEI">watermarkDesc</gi> element is a container is an optional element, the purpose of which is to enable the recording of information characterizing various descriptive aspects of watermarks.</p>
+                     <p>
+                        <specList>
+                           <specDesc key="watermarkList"/>
+                        </specList>
+                     </p>
+                     <p>Within <gi scheme="MEI">watermarkList</gi>, the <gi scheme="MEI">watermark</gi> element is used to hold information for each resource being described. The <gi scheme="MEI">watermarkList</gi> is also optional. If information on only one <gi scheme="MEI">watermark</gi> is goint to be recorded the element can be used in <gi scheme="MEI">watermarkDesc</gi> without <gi scheme="MEI">watermarkList</gi>.</p>
+                     <p>
+                        <specList>
+                           <specDesc key="watermark"/>
+                        </specList>
+                     </p>
                      <p> The element <gi scheme="MEI">watermark</gi> can be used to describe watermarks or similar devices of filigranology. It is important to distinguish whether the watermark to be described consists of only one sign or is composed of main and countermarks. The completeness of the watermark, its positioning on the page, and the time period of the paper's production and use also play a role.</p>
                      <p>It is recommended to use at least the elements <gi scheme="MEI">title</gi>, <gi scheme="MEI">date</gi>, <gi scheme="MEI">annot</gi> and <gi scheme="MEI">locus</gi> in the description:</p>
                      <p>
@@ -29705,6 +29719,54 @@ or
       <p>The model of this element is based on the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-userestrict">userestrict</ref> element of the Encoded Archival Description (EAD).</p>
     </remarks>
   </elementSpec>
+  <elementSpec ident="watermarkDesc" module="MEI.header">
+    <gloss xml:lang="en">watermark description</gloss>
+    <desc xml:lang="en">Contains a description of the watermark(s) of an item.</desc>
+    <classes>
+      <memberOf key="att.common"/>
+      <memberOf key="att.bibl"/>
+      <memberOf key="att.lang"/>
+      <memberOf key="model.physDescPart"/>
+    </classes>
+    <content>
+      <rng:choice>
+        <rng:group>
+          <rng:zeroOrMore>
+            <rng:ref name="head"/>
+          </rng:zeroOrMore>
+          <rng:zeroOrMore>
+            <rng:choice>
+              <rng:ref name="watermarkList"/>
+              <rng:ref name="watermark"/>
+              <rng:ref name="p"/>
+            </rng:choice>
+          </rng:zeroOrMore>
+        </rng:group>
+      </rng:choice>
+    </content>
+  </elementSpec>
+  <elementSpec ident="watermarkList" module="MEI.header">
+    <gloss xml:lang="en">list of watermarks</gloss>
+    <desc xml:lang="en">Grouping several watermarks.</desc>
+    <classes>
+      <memberOf key="att.common"/>
+      <memberOf key="att.authorized"/>
+      <memberOf key="att.bibl"/>
+      <memberOf key="att.edit"/>
+      <memberOf key="att.lang"/>
+    </classes>
+    <content>
+      <rng:zeroOrMore>
+        <rng:ref name="model.headLike"/>
+      </rng:zeroOrMore>
+      <rng:zeroOrMore>
+        <rng:choice>
+          <rng:ref name="annot"/>
+          <rng:ref name="watermark"/>
+        </rng:choice>
+      </rng:zeroOrMore>
+    </content>
+  </elementSpec>
   <elementSpec ident="watermark" module="MEI.header">
     <desc xml:lang="en">Contains a description of a watermark or similar device.</desc>
     <classes>
@@ -29712,10 +29774,14 @@ or
       <memberOf key="att.bibl"/>
       <memberOf key="att.facsimile"/>
       <memberOf key="att.lang"/>
-      <memberOf key="model.physDescPart"/>
     </classes>
     <content>
-      <rng:ref name="macro.struc-unstrucContent"/>
+      <rng:oneOrMore>
+        <rng:choice>
+          <rng:ref name="macro.watermark"/>
+          <rng:text/>
+        </rng:choice>
+      </rng:oneOrMore>
     </content>
     <remarks xml:lang="en">
       <p>The <att>facs</att> attribute may be used to record the location of the watermark in a
@@ -33518,6 +33584,77 @@ or
           <rng:ref name="symbol"/>
         </rng:choice>
       </rng:zeroOrMore>
+    </content>
+  </macroSpec>
+  <macroSpec ident="macro.watermark" module="MEI.shared" type="pe">
+    <desc xml:lang="en">Groups elements that contain meta-data about a watermark.</desc>
+    <content>
+      <rng:optional>
+        <rng:ref name="model.addressLike"/>
+      </rng:optional>
+      <rng:optional>
+        <rng:ref name="model.annotLike"/>
+      </rng:optional>
+      <rng:optional>
+        <rng:ref name="model.biblLike"/>
+      </rng:optional>
+      <rng:optional>
+        <rng:ref name="model.dateLike"/>
+      </rng:optional>
+      <rng:optional>
+        <rng:ref name="model.dimLike"/>
+      </rng:optional>
+      <rng:optional>
+        <rng:ref name="model.figureLike"/>
+      </rng:optional>
+      <rng:optional>
+        <rng:ref name="model.geogNamePart"/>
+      </rng:optional>
+      <rng:optional>
+        <rng:ref name="model.identifierLike"/>
+      </rng:optional>
+      <rng:optional>
+        <rng:ref name="model.locrefLike"/>
+      </rng:optional>
+      <rng:optional>
+        <rng:ref name="model.measurementLike"/>
+      </rng:optional>
+      <rng:optional>
+        <rng:ref name="model.nameLike.geogName"/>
+      </rng:optional>
+      <rng:optional>
+        <rng:ref name="model.qLike"/>
+      </rng:optional>
+      <rng:optional>
+        <rng:ref name="model.relationLike"/>
+      </rng:optional>
+      <rng:optional>
+        <rng:ref name="model.rendLike"/>
+      </rng:optional>
+      <rng:optional>
+        <rng:ref name="model.titleLike"/>
+      </rng:optional>
+      <rng:optional>
+        <rng:ref name="biblList"/>
+      </rng:optional>
+      <rng:optional>
+        <rng:ref name="dimensions"/>
+      </rng:optional>
+      <rng:optional>
+        <rng:ref name="extent"/>
+      </rng:optional>
+      <rng:optional>
+        <rng:ref name="heraldry"/>
+      </rng:optional>
+      <rng:optional>
+        <rng:ref name="locus"/>
+      </rng:optional>
+      <rng:optional>
+        <rng:ref name="locusGrp"/>
+      </rng:optional>
+      <rng:optional>
+        <rng:ref name="term"/>
+      </rng:optional>
     </content>
   </macroSpec>
   <macroSpec ident="data.BETYPE" module="MEI.shared" type="dt">
@@ -40742,23 +40879,44 @@ or
       <rng:zeroOrMore>
         <rng:ref name="model.headLike"/>
       </rng:zeroOrMore>
+      <rng:choice>
+        <rng:group>
+          <rng:oneOrMore>
+            <rng:oneOrMore>
+              <rng:ref name="resp"/>
+            </rng:oneOrMore>
+            <rng:oneOrMore>
+              <rng:choice>
+                <rng:ref name="model.nameLike.agent"/>
+                <rng:ref name="name"/>
+              </rng:choice>
+            </rng:oneOrMore>
+          </rng:oneOrMore>
+        </rng:group>
+        <rng:group>
+          <rng:oneOrMore>
+            <rng:oneOrMore>
+              <rng:choice>
+                <rng:ref name="model.nameLike.agent"/>
+                <rng:ref name="name"/>
+              </rng:choice>
+            </rng:oneOrMore>
+            <rng:oneOrMore>
+              <rng:ref name="resp"/>
+            </rng:oneOrMore>
+          </rng:oneOrMore>
+        </rng:group>
+        <rng:oneOrMore>
+          <rng:choice>
+            <rng:ref name="model.nameLike.agent"/>
+            <rng:ref name="name"/>
+          </rng:choice>
+        </rng:oneOrMore>
+      </rng:choice>
       <rng:zeroOrMore>
-        <rng:choice>
-          <rng:ref name="name"/>
-          <rng:ref name="resp"/>
-          <rng:ref name="model.nameLike.agent"/>
-        </rng:choice>
+        <rng:ref name="annot"/>
       </rng:zeroOrMore>
     </content>
-    <constraintSpec ident="check_respStmt" scheme="schematron">
-      <constraint>
-        <sch:rule context="mei:respStmt[not(ancestor::mei:change)]">
-          <sch:assert test="(mei:resp and (mei:name or mei:corpName or mei:persName)) or             count(mei:*[@role]) = count(mei:*) and count(mei:*) &gt; 0" role="warning">At least one element pair (a resp element and a name-like element) is
-            recommended. Alternatively, each name-like element may have a @role
-            attribute.</sch:assert>
-        </sch:rule>
-      </constraint>
-    </constraintSpec>
     <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-respStmt.html">respStmt</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
