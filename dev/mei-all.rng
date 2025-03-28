@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2025-03-28T13:45:54Z. . 
+Schema generated from ODD source 2025-03-28T14:12:55Z. . 
 TEI Edition: MEI 6.0-dev 
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -17459,7 +17459,6 @@ Suggested values include: 1] glue; 2] thread; 3] needle; 4] tape; 5] staple</a:d
    </define>
    <define name="mei_model.msInline">
       <choice>
-         <ref name="mei_watermark"/>
          <ref name="mei_catchwords"/>
          <ref name="mei_heraldry"/>
          <ref name="mei_locus"/>
@@ -17471,7 +17470,6 @@ Suggested values include: 1] glue; 2] thread; 3] needle; 4] tape; 5] staple</a:d
    </define>
    <define name="mei_model.msInline_alternation">
       <choice>
-         <ref name="mei_watermark"/>
          <ref name="mei_catchwords"/>
          <ref name="mei_heraldry"/>
          <ref name="mei_locus"/>
@@ -17482,7 +17480,6 @@ Suggested values include: 1] glue; 2] thread; 3] needle; 4] tape; 5] staple</a:d
       </choice>
    </define>
    <define name="mei_model.msInline_sequence">
-      <ref name="mei_watermark"/>
       <ref name="mei_catchwords"/>
       <ref name="mei_heraldry"/>
       <ref name="mei_locus"/>
@@ -17492,9 +17489,6 @@ Suggested values include: 1] glue; 2] thread; 3] needle; 4] tape; 5] staple</a:d
       <ref name="mei_stamp"/>
    </define>
    <define name="mei_model.msInline_sequenceOptional">
-      <optional>
-         <ref name="mei_watermark"/>
-      </optional>
       <optional>
          <ref name="mei_catchwords"/>
       </optional>
@@ -17519,9 +17513,6 @@ Suggested values include: 1] glue; 2] thread; 3] needle; 4] tape; 5] staple</a:d
    </define>
    <define name="mei_model.msInline_sequenceOptionalRepeatable">
       <zeroOrMore>
-         <ref name="mei_watermark"/>
-      </zeroOrMore>
-      <zeroOrMore>
          <ref name="mei_catchwords"/>
       </zeroOrMore>
       <zeroOrMore>
@@ -17544,9 +17535,6 @@ Suggested values include: 1] glue; 2] thread; 3] needle; 4] tape; 5] staple</a:d
       </zeroOrMore>
    </define>
    <define name="mei_model.msInline_sequenceRepeatable">
-      <oneOrMore>
-         <ref name="mei_watermark"/>
-      </oneOrMore>
       <oneOrMore>
          <ref name="mei_catchwords"/>
       </oneOrMore>
