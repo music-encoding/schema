@@ -20,7 +20,7 @@
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../source/validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2025-03-28T14:39:20.250295234+01:00-->
+<!--canonicalized: 2025-03-28T14:41:08.636809401+01:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -11267,7 +11267,7 @@ or
                     &lt;note tab.course="4" tab.fret="0" tab.line="1"/&gt;
                 &lt;/tabGrp&gt;
             &lt;/beam&gt;
-            &lt;tabGrp dur="8" dot="1"&gt;
+            &lt;tabGrp dur="8" dots="1"&gt;
                 &lt;tabDurSym/&gt;
                 &lt;note tab.course="1" tab.fret="3" tab.line="4"/&gt;
                 &lt;note tab.course="2" tab.fret="3" tab.line="3"/&gt;
@@ -11338,7 +11338,7 @@ or
                     &lt;note tab.course="4" tab.fret="0" tab.line="1" layer="4"/&gt;
                 &lt;/tabGrp&gt;
             &lt;/beam&gt;
-            &lt;tabGrp dur="8" dot="1"&gt;
+            &lt;tabGrp dur="8" dots="1"&gt;
                 &lt;tabDurSym/&gt;
                 &lt;note tab.course="1" tab.fret="3" tab.line="4" layer="1"/&gt;
                 &lt;note tab.course="2" tab.fret="3" tab.line="3" layer="2"/&gt;
