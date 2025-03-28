@@ -20,7 +20,7 @@
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../source/validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2025-03-28T14:09:42.89199797+01:00-->
+<!--canonicalized: 2025-03-28T14:39:20.250295234+01:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -569,7 +569,7 @@
                      end.</p>
                   <p>
                      <figure>
-                        <head/>
+                        <head>The <gi scheme="MEI">dynam</gi> element uses <att>startid</att> to reference the <att>xml:id</att> of the second quarter in the given measure</head>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;measure n="10"&gt;
    &lt;staff n="1"&gt;
       &lt;layer&gt;
@@ -607,7 +607,7 @@
                      mechanism is illustrated in the following example:</p>
                   <p>
                      <figure>
-                        <head/>
+                        <head>The <gi scheme="MEI">dynam</gi> element uses <att>staff</att>, <att>layer</att> and <att>tstamp</att> to indicate the place of the dynamic</head>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;measure n="10"&gt;
    &lt;staff n="1"&gt;
       &lt;layer n="1"&gt;
@@ -689,11 +689,10 @@
                         <specDesc key="att.timestamp2.log" atts="tstamp2"/>
                      </specList>
                   </p>
-                  <p>The following example contains a number of <gi scheme="MEI">slur</gi> examples
-                     illustrating durations expressed by timestamps.</p>
                   <p>
                      <figure>
-                        <head/>
+                        <head>The encoding contains a number of <gi scheme="MEI">slur</gi> examples
+                           illustrating durations expressed by timestamps</head>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;!-- slur starting on timestamp 1, ending on timestamp 4 of the same measure --&gt;
 &lt;slur tstamp="1" tstamp2="0m+4"/&gt;
 
@@ -840,7 +839,7 @@
                   <p>The below example shows the basic structure of an MEI file with <gi scheme="MEI">mei</gi> as root element. Please be aware that this example still does not represent a valid MEI file:</p>
                   <p>
                      <figure>
-                        <head/>
+                        <head>Basic structure of an MEI file</head>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="6.0-dev"&gt;
    &lt;meiHead&gt;
       &lt;!-- metadata goes here --&gt;
@@ -862,7 +861,7 @@
                   <p>The below example shows the basic structure of an MEI file with <gi scheme="MEI">music</gi> as root element. Basically this already represents a valid MEI file, although without any contents:</p>
                   <p>
                      <figure>
-                        <head/>
+                        <head>Basic structure of an MEI file with <gi scheme="MEI">music</gi> as root element</head>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;music xmlns="http://www.music-encoding.org/ns/mei" meiversion="6.0-dev"&gt;
    &lt;!-- description of musical text goes here --&gt;
 &lt;/music&gt;
@@ -879,7 +878,7 @@
                   <p>The below example shows the basic structure of an MEI file with <gi scheme="MEI">meiCorpus</gi> as root element. Please be aware that this example still does not represent a valid MEI file:</p>
                   <p>
                      <figure>
-                        <head/>
+                        <head>Basic structure of an MEI file with <gi scheme="MEI">meiCorpus</gi> as root element</head>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;meiCorpus xmlns="http://www.music-encoding.org/ns/mei" meiversion="6.0-dev"&gt;
    &lt;meiHead&gt;
       &lt;!-- metadata on the corpus goes here --&gt;
@@ -921,7 +920,7 @@
                   <p>The below example shows the basic structure of an MEI file with <gi scheme="MEI">meiHead</gi> as root element. Please be aware that this example still does not represent a valid MEI file:</p>
                   <p>
                      <figure>
-                        <head/>
+                        <head>Basic structure of an MEI file with <gi scheme="MEI">meiHead</gi> as root element</head>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;meiHead xmlns="http://www.music-encoding.org/ns/mei" meiversion="6.0-dev"&gt;
    &lt;!-- metadata goes here --&gt;
 &lt;/meiHead&gt;
@@ -953,10 +952,9 @@
                   <p>While <gi scheme="MEI">body</gi> holds the contents of a single musical text, <gi scheme="MEI">group</gi> allows the textual body to consists of a series of (subordinate) musical texts or other <abbr>e.g.</abbr>, to represent a collection of independent musical texts which is to be regarded as a single unit for processing or other purposes. It is provided to simplify the encoding of collections, anthologies, and cyclic works. It can also be used to record the potentially complex internal structure of corpora, covered more fully in chapter <ptr target="#corpus"/>. Whether the musical text being encoded should be structured one way or the other is not to be decided here. For example, a collection of songs might be regarded as a single item in some circumstances, or as a number of distinct items in others. In such borderline cases, the encoder must choose whether to treat the text as unitary or composite; each option may have advantages and disadvantages.</p>
                   <p>There are several more possible child elements of the <gi scheme="MEI">music</gi> element defined in other modules of MEI, such as <gi scheme="MEI">front</gi> and <gi scheme="MEI">back</gi> elements (defined in MEI.text module, cf. <ptr target="#text"/>), <gi scheme="MEI">performance</gi> (defined in MEI.performance module, cf. <ptr target="#performances"/>), <gi scheme="MEI">genDesc</gi> (defined in MEI.genetic module, cf. <ptr target="#genetic"/>), <gi scheme="MEI">facsimile</gi> (defined in MEI.facsimile module, cf. <ptr target="#facsimiles"/>).</p>
                   <p>Please be aware that the following examples still do not reflect valid MEI files as they are missing some required elements not defined in the MEI.shared module.</p>
-                  <p>The basic structure of a unitary musical text:</p>
                   <p>
                      <figure>
-                        <head/>
+                        <head>The basic structure of a unitary musical text</head>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;mei&gt;
    &lt;meiHead&gt;
       &lt;!-- metadata goes here --&gt;
@@ -980,7 +978,7 @@
                   <p>For example, the overall structure of a collection of songs might be encoded as follows:</p>
                   <p>
                      <figure>
-                        <head/>
+                        <head>The <gi scheme="MEI">group</gi> element groups together a sequence of distinct musical texts</head>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;music&gt;
    &lt;group&gt;
       &lt;music&gt;
@@ -998,7 +996,7 @@
                   <p>A group of musical texts may contain other unitary and grouped texts:</p>
                   <p>
                      <figure>
-                        <head/>
+                        <head>The <gi scheme="MEI">group</gi> element contains unitary and grouped texts</head>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;music&gt;
    &lt;group&gt;
       &lt;music&gt;
@@ -1033,7 +1031,7 @@
                      <p>To accommodate "divisions within divisions", an <gi scheme="MEI">mdiv</gi> element may contain additional <gi scheme="MEI">mdiv</gi> sub-elements nested to any level required. For example, the encoding of a multi-movement work, such as a symphony, might have the following structure:</p>
                      <p>
                         <figure>
-                           <head/>
+                           <head>The <gi scheme="MEI">mdiv</gi> element contains additional <gi scheme="MEI">mdiv</gi> sub-elements</head>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;body&gt;
    &lt;mdiv type="symphony"&gt;
       &lt;mdiv n="1" type="movement"&gt;
@@ -1056,7 +1054,7 @@
                      <p>While dramatic works, such as Verdi's opera, <hi rend="italic">Il Trovatore</hi>, often exhibit a more deeply-nested structure:</p>
                      <p>
                         <figure>
-                           <head/>
+                           <head>The use of <gi scheme="MEI">mdiv</gi> elements can create a deeply-nested structure</head>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;body&gt;
    &lt;mdiv type="opera"&gt;
       &lt;mdiv n="I" type="act"&gt;
@@ -1128,7 +1126,7 @@
                      <p>The <gi scheme="MEI">score</gi> element represents notation in which all the parts of an ensemble are arranged on vertically aligned staves, while the <gi scheme="MEI">parts</gi> element collects the individually notated parts for each performer or group of performers. The explicit encoding of these two ‘views’ is necessary because it is not always possible or desirable to automatically derive one view from the other. In addition, separating scores and parts can eliminate a great deal of markup complexity.</p>
                      <p>
                         <figure>
-                           <head/>
+                           <head>The contents of <gi scheme="MEI">mdiv</gi> organized by <gi scheme="MEI">score</gi> and <gi scheme="MEI">parts</gi> elements</head>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;body&gt;
    &lt;mdiv n="1" type="movement"&gt;
       &lt;score&gt;
@@ -1152,7 +1150,7 @@
                      </p>
                      <p>A <gi scheme="MEI">part</gi> is effectively a small-scale score, allowing all the encoding features of a full score, such as multiple staves, performance directives, and so on. A group of <gi scheme="MEI">part</gi> elements is useful for encoding performing parts when there is no score, such as in early music part books; when the parts have non-aligning bar lines; when different layout features, such as page turns, are needed for the score and parts; or for accommodating software that requires part-by-part encoding.</p>
                      <p>Please note that <gi scheme="MEI">part</gi> elements in MEI are not an indication of voice leading or staff grouping. Voice leading can be encoded using the <att>next</att> attribute, available on all the members of the <ident type="class">model.eventLike</ident> class. The <gi scheme="MEI">staffGrp</gi> element handles grouping of staves in the score context. <figure>
-                           <head/>
+                           <head>The collective <gi scheme="MEI">parts</gi> element with a group of <gi scheme="MEI">part</gi> elements</head>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;parts&gt;
    &lt;part label="Violin 1"&gt;
       &lt;!-- first performer’s part --&gt;
@@ -1183,7 +1181,7 @@
                      <p>The most common (non-analytical, non-editorial) use of <gi scheme="MEI">section</gi> and <gi scheme="MEI">ending</gi> elements is illustrated below:</p>
                      <p>
                         <figure>
-                           <head/>
+                           <head>The content of <gi scheme="MEI">score</gi> organized with <gi scheme="MEI">section</gi> and <gi scheme="MEI">ending</gi> elements</head>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;music&gt;
    &lt;body&gt;
       &lt;mdiv&gt;
@@ -1220,7 +1218,7 @@
                      <p>In the following example, <gi scheme="MEI">expansion</gi> is used to indicate how the notated sections should be ordered in a "through-composed" rendition, for example for machine performance or analysis. The <att>plist</att> attribute contains an ordered list of identifiers of descendant <gi scheme="MEI">section</gi>, <gi scheme="MEI">ending</gi>, <gi scheme="MEI">lem</gi>, or <gi scheme="MEI">rdg</gi> elements. The sequence of values in the <att>plist</att> attribute indicates that the section labelled 'A' comes first, then the section labelled 'B', followed by the 'A' section again. This mechanism must be specified independently of any textual directives, such as "Da capo" or "D.S. al Fine", that may be present in the document.</p>
                      <p>
                         <figure>
-                           <head/>
+                           <head>The <gi scheme="MEI">expansion</gi> element uses the content of <att>plist</att> to indicate how the notated sections should be ordered</head>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;music&gt;
    &lt;body&gt;
       &lt;mdiv&gt;
@@ -1395,7 +1393,7 @@
                      </p>
                      <p>
                         <figure>
-                           <head/>
+                           <head>Accidentals encoded as <gi scheme="MEI">accid</gi> elements, independently from a <gi scheme="MEI">note</gi> element (instead of <att>accid</att>)</head>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
 &lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
 &lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="6.0-dev"&gt;
@@ -1519,7 +1517,7 @@
                      </p>
                      <p>
                         <figure>
-                           <head/>
+                           <head>Example of <gi scheme="MEI">tempo</gi></head>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
 &lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
 &lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="6.0-dev"&gt;
@@ -1645,7 +1643,7 @@
                   <p>The <att>xml:id</att> attribute may take values similar to the following:</p>
                   <p>
                      <figure>
-                        <head/>
+                        <head>Valid values for <att>xml:id</att></head>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;!-- The following are all valid IDs. --&gt;
 &lt;note xml:id="n1"/&gt;
 &lt;note xml:id="_n1"/&gt;
@@ -1656,7 +1654,7 @@
                   <p>This is an example of an incorrectly-formulated <att>xml:id</att> value:</p>
                   <p>
                      <figure>
-                        <head/>
+                        <head>Invalid value for <att>xml:id</att></head>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve" valid="false">&lt;!-- xml:id not valid as IDs are not allowed to start with a number. --&gt;&lt;note xml:id="1"/&gt;
 </egXML>
                      </figure>
@@ -1669,7 +1667,7 @@
                   <p>At many locations in an MEI file one can reference internal or external references. E.g. the following example defines a graphic and references an external image (entity) by means of the <att>target</att> attribute:</p>
                   <p>
                      <figure>
-                        <head/>
+                        <head>The <gi scheme="MEI">graphic</gi> element uses <att>target</att></head>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;graphic target="myImage.jpg"/&gt;
 </egXML>
                      </figure>
@@ -1678,7 +1676,7 @@
                   <p>The <att>xml:base</att> attribute may be used “to specify a base URI other than the base URI of the document or external entity.” (Marsch, Jonathan; Tobin, Richard: XML Base (Second Edition). W3C Recommendation 28 January 2009. online at: <ref target="http://www.w3.org/TR/2009/REC-xmlbase-20090128/">http://www.w3.org/TR/2009/REC-xmlbase-20090128/</ref>).</p>
                   <p>
                      <figure>
-                        <head/>
+                        <head>The <gi scheme="MEI">graphic</gi> element uses <att>target</att> and <att>xml:base</att></head>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;graphic target="myImage.jpg" xml:base="http://www.mySite.org/images/"/&gt;
 </egXML>
                      </figure>
@@ -1686,7 +1684,7 @@
                   <p>The value of <att>xml:base</att> can be inherited from an ancestor. This is relevant for resolving relative links or URIs within the document. A comprehensible use case can be illustrated by the following example: the values of the graphic elements' <att>target</att> attribute can be completed by the <att>xml:base</att> value specified for the ancestor <gi scheme="MEI">facsimile</gi> element:</p>
                   <p>
                      <figure>
-                        <head/>
+                        <head>Value of <att>xml:base</att> inherits from the ancestor <gi scheme="MEI">facsimile</gi> element</head>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;facsimile xml:base="http://www.mySite.org/images/"&gt;
    &lt;surface&gt;
       &lt;graphic target="myImage.jpg"/&gt;
@@ -1722,7 +1720,7 @@
                   <p>The <att>label</att> and <att>n</att> attributes both serve a labeling function; however, they differ in the values they allow. The <att>n</att> attribute must be a single token, while <att>label</att> may contain a string value that includes spaces. This makes <att>label</att> useful for the capture of free-text labels, but a name or number specified with <att>n</att> may be easier to process.</p>
                   <p>
                      <figure>
-                        <head/>
+                        <head>Example of <att>label</att> and <att>n</att></head>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;!-- Example of a @label containing whitespace: --&gt;
 &lt;mdiv label="Allegro moderato"&gt;
    &lt;!-- … --&gt;
@@ -1897,7 +1895,7 @@
                         </figure>
                      </p>
                      <p>The corresponding encoding would be as follows: <figure>
-                           <head>Encoding of above example</head>
+                           <head>Encoding of above example of percussion instruments using pictograms. Inside <gi scheme="MEI">symbolTable</gi> the triangle and cowbell are encoded with <gi scheme="MEI">symbolDef</gi> elements.</head>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve" valid="true">&lt;section&gt;
    &lt;scoreDef meter.count="4" meter.unit="4"&gt;
       &lt;symbolTable&gt;
@@ -2198,7 +2196,7 @@
                   <p>The <gi scheme="MEI">title</gi> element contains the chief name of the electronic work. Its content takes the form considered appropriate by its creator. The element may be repeated, if the work has more than one title (perhaps in different languages). Where the electronic work is derived from an existing source text, it is strongly recommended that the title for the former should be derived from the latter, but clearly distinguishable from it, for example by the addition of a phrase such as ‘: an electronic transcription’ or ‘a digital edition’. This will distinguish the electronic work from the source text in citations and in catalogs, which contain descriptions of both types of material.</p>
                   <p>
                      <figure>
-                        <head/>
+                        <head>Encoding of title informations</head>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;titleStmt xmlns="http://www.music-encoding.org/ns/mei"
            xmlns:rng="http://relaxng.org/ns/structure/1.0"
            xmlns:sch="http://purl.oclc.org/dsdl/schematron"&gt;
@@ -2215,7 +2213,7 @@
                   <p>The <att>type</att> attribute is provided for convenience in analyzing titles and processing them according to their type; where such specialized processing is not necessary, there is no need for such analysis, and the entire title, including subtitles and any parallel titles, may be enclosed within a single <gi scheme="MEI">title</gi> element, as in the following example:</p>
                   <p>
                      <figure>
-                        <head/>
+                        <head>Example of a <gi scheme="MEI">title</gi> element</head>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;title&gt;Symphony No. 5 in C Minor : an electronic transcription&lt;/title&gt;
 </egXML>
                      </figure>
@@ -2248,7 +2246,7 @@
                   <p>In traditional bibliographic practice, those with primary creative responsibility are given special prominence. MEI accommodates this approach by providing responsibility-role elements. For example:</p>
                   <p>
                      <figure>
-                        <head/>
+                        <head>Encoding of primary creative responsibility</head>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;titleStmt&gt;
    &lt;title&gt;Auf dem Hügel sitz ich spähend : an electronic transcription&lt;/title&gt;
    &lt;composer&gt;Ludwig van Beethoven&lt;/composer&gt;
@@ -2260,7 +2258,7 @@
                   <p>Secondary intellectual responsibility in this case is encoded using <gi scheme="MEI">respStmt</gi>. The <gi scheme="MEI">respStmt</gi> element has two subcomponents: a <gi scheme="MEI">name</gi> element identifying a responsible individual or organization, and a <gi scheme="MEI">resp</gi> element indicating the nature of the responsibility. All names should be stated in the form in which the persons or bodies wish to be publicly cited. This will usually be the fullest form of the name, including first names. No specific recommendations are made at this time as to appropriate content for <gi scheme="MEI">resp</gi>. However, it should make clear the nature of the responsibility.</p>
                   <p>
                      <figure>
-                        <head/>
+                        <head>Encoding of secondary intellectual responsibility</head>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;titleStmt&gt;
    &lt;title&gt;Auf dem Hügel sitz ich spähend : an electronic transcription&lt;/title&gt;
    &lt;composer&gt;Ludwig van Beethoven&lt;/composer&gt;
@@ -2285,7 +2283,7 @@
                   <p>These elements allow for more precise identification of the entity associated with the name than is permitted by the simpler <gi scheme="MEI">name</gi> element. The following example shows how a precise date range can be associated with a personal or corporate name.</p>
                   <p>
                      <figure>
-                        <head/>
+                        <head>Example of <gi scheme="MEI">respStmt</gi></head>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;respStmt&gt;
    &lt;resp&gt;Machine-readable transcription by:&lt;/resp&gt;
    &lt;persName enddate="1940-11-06" startdate="1860-01-01"&gt;John Doe&lt;/persName&gt;
@@ -2297,7 +2295,7 @@
                   <p>In addition to, or instead of the <gi scheme="MEI">resp</gi> element, the <att>role</att> attribute on <gi scheme="MEI">name</gi>, <gi scheme="MEI">persName</gi>, and <gi scheme="MEI">corpName</gi> may be used to capture the nature of responsibility. While <gi scheme="MEI">resp</gi> accommodates capturing the wide variety of text that may occur in responsibility statements, use of the <att>role</att> attribute provides the possibility of recording a controlled value independently of the textual content of <gi scheme="MEI">resp</gi>.</p>
                   <p>
                      <figure>
-                        <head/>
+                        <head>The <att>role</att> attribute captures the nature of responsibility</head>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;respStmt&gt;
    &lt;resp&gt;Encoded by&lt;/resp&gt;
    &lt;corpName role="encoder"&gt;Members of the Local Symphony Orchestra&lt;/corpName&gt;
@@ -2309,7 +2307,7 @@
                   <p>Where it is necessary to group responsibilities and names, multiple responsibility statements may be used. For example:</p>
                   <p>
                      <figure>
-                        <head/>
+                        <head>Group responsibilities with multiple <gi scheme="MEI">respStmt</gi></head>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;titleStmt&gt;
    &lt;title&gt;Symphony No. 5 in C Minor : an electronic transcription&lt;/title&gt;
    &lt;respStmt&gt;
@@ -2328,7 +2326,7 @@
                   <p>It is often desirable to mix primary and secondary intellectual responsibility information. Treating all intellectual roles the same way can allow literal transcription of existing responsibility statements and simplify programmatic processing. The following example demonstrates how a responsibility statement may be transcribed using interleaved <gi scheme="MEI">resp</gi> and <gi scheme="MEI">persName</gi> elements:</p>
                   <p>
                      <figure>
-                        <head/>
+                        <head>Mix primary and secondary intellectual responsibility information</head>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;titleStmt&gt;
    &lt;title&gt;Symphony No. 5 in C Minor : an electronic transcription&lt;/title&gt;
    &lt;respStmt&gt;
@@ -2344,7 +2342,7 @@
                   <p>However, eliminating explanatory text and relying on standardized values for <att>role</att>, as in the following example, allows data creation and processing tools of the greatest simplicity.</p>
                   <p>
                      <figure>
-                        <head/>
+                        <head>Standardized values for <att>role</att></head>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;titleStmt&gt;
    &lt;title&gt;Symphony No. 5 in C Minor : an electronic transcription&lt;/title&gt;
    &lt;respStmt&gt;
@@ -2389,7 +2387,7 @@
                   <p>A complete file description will resemble the following example:</p>
                   <p>
                      <figure>
-                        <head/>
+                        <head>Structure of a complete file description</head>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve" valid="feasible">&lt;fileDesc&gt;
    &lt;titleStmt&gt;
       &lt;!-- title of the resource --&gt;
@@ -2441,14 +2439,14 @@
                      <p>Some examples follow:</p>
                      <p>
                         <figure>
-                           <head/>
+                           <head>Example of <gi scheme="MEI">editionStmt</gi></head>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;editionStmt&gt;
    &lt;edition n="Draft2"&gt;Second draft, substantially extended, revised, and corrected.&lt;/edition&gt;
 &lt;/editionStmt&gt;
 </egXML>
                         </figure>
                         <figure>
-                           <head/>
+                           <head><gi scheme="MEI">respStmt</gi> within <gi scheme="MEI">editionStmt</gi></head>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;editionStmt&gt;
    &lt;edition&gt;Student's edition,
       &lt;date&gt;June 1987&lt;/date&gt;
@@ -2487,7 +2485,7 @@
                      <p>The use of standard abbreviations for units of quantity is recommended where applicable, here as elsewhere (see <ref target="http://physics.nist.gov/cuu/Units/binary.html">http://physics.nist.gov/cuu/Units/binary.html</ref>).</p>
                      <p>
                         <figure>
-                           <head/>
+                           <head>Example of <gi scheme="MEI">extent</gi></head>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;extent&gt;between 1 MB and 2 MB&lt;/extent&gt;
 &lt;!-- or --&gt;
 &lt;extent&gt;4.2 MiB&lt;/extent&gt;
@@ -2502,7 +2500,7 @@
                      <p>For ease of processability, the use of the <att>unit</att> attribute is recommended whenever possible, as in the following example:</p>
                      <p>
                         <figure>
-                           <head/>
+                           <head><gi scheme="MEI">extent</gi> uses the <att>unit</att> attribute to ease the processability</head>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;extent unit="byte"&gt;65535&lt;/extent&gt;
 </egXML>
                         </figure>
@@ -2544,7 +2542,7 @@
                      </p>
                      <p>
                         <figure>
-                           <head/>
+                           <head>Detailed example of <gi scheme="MEI">pubStmt</gi> with <gi scheme="MEI">publisher</gi></head>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;pubStmt xmlns="http://www.music-encoding.org/ns/mei"
          xmlns:rng="http://relaxng.org/ns/structure/1.0"
          xmlns:sch="http://purl.oclc.org/dsdl/schematron"&gt;
@@ -2568,7 +2566,7 @@
 </egXML>
                         </figure>
                         <figure>
-                           <head/>
+                           <head>Detailed example of <gi scheme="MEI">pubStmt</gi> with <gi scheme="MEI">publisher</gi> and <gi scheme="MEI">distributor</gi></head>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;pubStmt xmlns="http://www.music-encoding.org/ns/mei"
          xmlns:rng="http://relaxng.org/ns/structure/1.0"
          xmlns:sch="http://purl.oclc.org/dsdl/schematron"&gt;
@@ -2596,7 +2594,7 @@
                      <p>Here, as in the description of intellectual responsibility described above, the <gi scheme="MEI">respStmt</gi> element may be used to contain all statements of responsibility regarding publication and distribution when uniformity is desired regardless of the role of participants in the publication process:</p>
                      <p>
                         <figure>
-                           <head/>
+                           <head><gi scheme="MEI">respStmt</gi> element contains all statements of responsibility regarding publication</head>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;respStmt xmlns="http://www.music-encoding.org/ns/mei"
           xmlns:rng="http://relaxng.org/ns/structure/1.0"
           xmlns:sch="http://purl.oclc.org/dsdl/schematron"&gt;
@@ -2642,7 +2640,7 @@
                      <p>The <gi scheme="MEI">title</gi>, <gi scheme="MEI">editor</gi> and <gi scheme="MEI">identifier</gi> elements have the same function described above: identification of the item, in this case the series, and the individuals or groups responsible for its creation. The <gi scheme="MEI">title</gi> element is required within <gi scheme="MEI">seriesStmt</gi>.</p>
                      <p>
                         <figure>
-                           <head/>
+                           <head>Example of <gi scheme="MEI">seriesStmt</gi></head>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;seriesStmt&gt;
    &lt;title&gt;MEI Sample Collection&lt;/title&gt;
 &lt;/seriesStmt&gt;
@@ -2652,7 +2650,7 @@
                      <p>The <gi scheme="MEI">identifier</gi> element may be used to supply any identifying number associated with the series, including both standard numbers such as an ISSN and particular issue numbers. Its <att>type</att> attribute is used to categorize the number further, taking the value 'ISSN' for an ISSN, for example.</p>
                      <p>
                         <figure>
-                           <head/>
+                           <head>Example of <gi scheme="MEI">seriesStmt</gi> with <gi scheme="MEI">identifier</gi></head>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;seriesStmt&gt;
    &lt;title level="s"&gt;Studies in Ornamentation&lt;/title&gt;
    &lt;editor&gt;Jacques Composeur&lt;/editor&gt;
@@ -2664,7 +2662,7 @@
                      <p>The contents of the series may be enumerated using the <gi scheme="MEI">contents</gi> element. Use of this element should be determined by the complexity of the resource and whether or not the information is readily available. The <gi scheme="MEI">contents</gi> element may consist of a single paragraph when unstructured information is sufficient.</p>
                      <p>
                         <figure>
-                           <head/>
+                           <head>Example of <gi scheme="MEI">contents</gi></head>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;contents&gt;
    &lt;p&gt;On Wenlock Edge -- From Far, From Eve and Morning -- Is My Team Ploughing? -- Oh,
       When I Was In Love With You -- Bredon Hill -- Clun
@@ -2676,7 +2674,7 @@
                      <p>Alternatively, <gi scheme="MEI">contentItem</gi> elements may be used to provide structure for the content description.</p>
                      <p>
                         <figure>
-                           <head/>
+                           <head>Example of <gi scheme="MEI">contents</gi> with <gi scheme="MEI">contentItem</gi></head>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;contents&gt;
    &lt;head&gt;Contents&lt;/head&gt;
    &lt;contentItem&gt;On Wenlock Edge&lt;/contentItem&gt;
@@ -2692,7 +2690,7 @@
                      <p>Finally, using the <att>target</att> attribute, a link to an external table of contents may be supplied in lieu of or in addition to the child elements of <gi scheme="MEI">contents</gi>.</p>
                      <p>
                         <figure>
-                           <head/>
+                           <head>Example of <gi scheme="MEI">contents</gi> using the <att>target</att> attribute</head>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;contents target="http://www.series.content/12345"/&gt;
 </egXML>
                         </figure>
@@ -2724,7 +2722,7 @@
                      <p>Each such item of information may be tagged using the general-purpose <gi scheme="MEI">annot</gi> element. Groups of annotations are contained within the <gi scheme="MEI">notesStmt</gi> element, as in the following example:</p>
                      <p>
                         <figure>
-                           <head/>
+                           <head>Groups of annotations are contained within the <gi scheme="MEI">notesStmt</gi> element</head>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;notesStmt&gt;
    &lt;annot&gt;Historical commentary provided by John Smith.&lt;/annot&gt;
    &lt;annot&gt;OCR scanning performed at University of Virginia.&lt;/annot&gt;
@@ -2735,7 +2733,7 @@
                      <p>There are advantages, however, to encoding such information with more precise elements elsewhere in the MEI header, when such elements are available. For example, the notes above might be encoded as follows:</p>
                      <p>
                         <figure>
-                           <head/>
+                           <head>Notes encoded with more precise elements</head>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;titleStmt&gt;
    &lt;title&gt;…&lt;/title&gt;
    &lt;respStmt&gt;
@@ -2812,7 +2810,7 @@
                      <p>The following example shows how these elements might be used to record the fact that version 1.5 of an application called ‘Music Markup Tool’ has an interest in two parts of a document. The parts concerned are accessible at the URLs given as targets of the two <gi scheme="MEI">ptr</gi> elements. When used on <gi scheme="MEI">application</gi>, the <att>date</att> attribute specifies when the application was employed, in this case June 6, 2011. Version information for the application should be placed in <att>version</att>.</p>
                      <p>
                         <figure>
-                           <head/>
+                           <head>Example of <gi scheme="MEI">application</gi></head>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;appInfo&gt;
    &lt;application isodate="2011-06-06" version="1.5" xml:id="header.MusicMarkupTool"&gt;
       &lt;name&gt;Music Markup Tool&lt;/name&gt;
@@ -2844,7 +2842,7 @@
                      <p>Experience shows that a full record should be kept of decisions relating to editorial principles and encoding practice, both for future users of the text and for the project which produced the text in the first instance. Any information about the editorial principles applied not falling under one of the above headings may be recorded as additional prose following the special-use elements.</p>
                      <p>
                         <figure>
-                           <head/>
+                           <head>Example of <gi scheme="MEI">editorialDecl</gi></head>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;editorialDecl&gt;
    &lt;segmentation&gt;
       &lt;p&gt;Separate mdiv elements have been created for each movement of the work.&lt;/p&gt;
@@ -2882,7 +2880,7 @@
                      <p>For example:</p>
                      <p>
                         <figure>
-                           <head/>
+                           <head>Example of <gi scheme="MEI">projectDesc</gi></head>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;encodingDesc&gt;
    &lt;projectDesc&gt;
       &lt;p&gt;Texts collected for use in the MEI Summer Workshop, Aug. 2012.&lt;/p&gt;
@@ -2909,7 +2907,7 @@
                      </list>
                      <p>
                         <figure>
-                           <head/>
+                           <head>Example of <gi scheme="MEI">samplingDecl</gi></head>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;samplingDecl&gt;
    &lt;p&gt;Encoding contains 40 randomly-selected measures.&lt;/p&gt;
 &lt;/samplingDecl&gt;
@@ -2919,7 +2917,7 @@
                      <p>It may also include a simple description of any parts of the source text included or excluded:</p>
                      <p>
                         <figure>
-                           <head/>
+                           <head>Example of <gi scheme="MEI">samplingDecl</gi> with some description</head>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;samplingDecl&gt;
    &lt;p&gt;Only the songs have been transcribed. Advertisements have been silently omitted. All
       mathematical expressions have been omitted, and their place marked with a
@@ -2929,7 +2927,7 @@
 </egXML>
                         </figure>
                         <figure>
-                           <head/>
+                           <head>Example of <gi scheme="MEI">samplingDecl</gi> with simple description</head>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;samplingDecl&gt;
    &lt;p&gt;Only the first 6 measures of movement 1 are encoded.&lt;/p&gt;
 &lt;/samplingDecl&gt;
@@ -2953,7 +2951,7 @@
                      <p>Each taxonomy may have a heading and may declare any number of categories using the <gi scheme="MEI">category</gi> element. Categories may be declared by reference to existing vocabularies or simply explained by a descriptive text.</p>
                      <p>
                         <figure>
-                           <head/>
+                           <head>Example of <gi scheme="MEI">taxonomy</gi> with <gi scheme="MEI">head</gi> and a <gi scheme="MEI">category</gi> element</head>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;classDecls&gt;
    &lt;taxonomy&gt;
       &lt;head&gt;Subject categories&lt;/head&gt;
@@ -2970,7 +2968,7 @@
                      <p>The <gi scheme="MEI">category</gi> element may or may not include a bibliographic citation and/or a URI at which the classification scheme or information about it may be found.</p>
                      <p>
                         <figure>
-                           <head/>
+                           <head>More detailed information in the <gi scheme="MEI">category</gi> element</head>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;taxonomy&gt;
    &lt;category auth.uri="http://www.loc.gov"
              auth="Library of Congress"
@@ -3003,7 +3001,7 @@
                   <p>For example:</p>
                   <p>
                      <figure>
-                        <head/>
+                        <head>Example of <gi scheme="MEI">revisionDesc</gi></head>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;revisionDesc&gt;
    &lt;change n="4"&gt;
       &lt;respStmt&gt;
@@ -3027,10 +3025,10 @@
 </egXML>
                      </figure>
                   </p>
-                  <p>A slightly shorter form for recording changes is also available when a the date of the change can be described by a single date in a standard ISO form and when the name of the agent(s) responsible for the change, encoded elsewhere in the header, can be referred to by one or more URIs given in the <att>resp</att> attribute. For example:</p>
+                  <p>A slightly shorter form for recording changes is also available when the date of the change can be described by a single date in a standard ISO form and when the name of the agent(s) responsible for the change, encoded elsewhere in the header, can be referred to by one or more URIs given in the <att>resp</att> attribute. For example:</p>
                   <p>
                      <figure>
-                        <head/>
+                        <head>Shorter form for recording changes</head>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;change isodate="2011-10-21" n="3" resp="#KR #MH"&gt;
    &lt;changeDesc&gt;
       &lt;p&gt;Cleaned up MEI file automatically using ppq.xsl.&lt;/p&gt;
@@ -3324,7 +3322,7 @@
                   <p>However, as FRBR allows n:n relations between expressions and manifestations (in MEI: sources), a hierarchical model based on the structure of XML is clearly insufficient to express all possible expression / manifestation combinations. It is therefore required to declare these relations explicitly. In FRBR terms, a manifestation / source is an embodiment of an expression.</p>
                   <p>
                      <figure>
-                        <head/>
+                        <head>A manifestation is an embodiment of an expression</head>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;manifestation xmlns="http://www.music-encoding.org/ns/mei"
                xmlns:rng="http://relaxng.org/ns/structure/1.0"
                xmlns:sch="http://purl.oclc.org/dsdl/schematron"&gt;
@@ -3341,7 +3339,7 @@
                   <p>Within the <gi scheme="MEI">componentList</gi> element, the order of child elements implicitly describes a hasSuccessor/isSuccessorOf relationship between components, <abbr>i.e.</abbr>, it defines a certain sequence such as the movements of a work. In other cases, <gi scheme="MEI">relation</gi> elements may be needed to explicitly encode relationships not otherwise defined by encoding order or hierarchy. For instance, the hasReproduction/isReproductionOf relationship may be used to indicate that one source is a reprint of another.</p>
                   <p>
                      <figure>
-                        <head/>
+                        <head>A manifestation is a reproduction in form of a reprint of another source</head>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;manifestation xmlns="http://www.music-encoding.org/ns/mei"
                xmlns:rng="http://relaxng.org/ns/structure/1.0"
                xmlns:sch="http://purl.oclc.org/dsdl/schematron"&gt;
@@ -3360,7 +3358,7 @@
                   <p>Moreover, the use of <gi scheme="MEI">componentList</gi> implicitly defines a hasPart/isPartOf relationship between the componentList element’s parent and its child elements. Using the <gi scheme="MEI">relationList</gi> and relation elements to define their relationship, the four component works in the "Der Ring des Nibelungen" example above could alternatively be encoded as sibling work elements to the "Ring" work element.</p>
                   <p>
                      <figure>
-                        <head/>
+                        <head>Four component works encoded as sibling work elements</head>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;workList xmlns="http://www.music-encoding.org/ns/mei"
           xmlns:rng="http://relaxng.org/ns/structure/1.0"
           xmlns:sch="http://purl.oclc.org/dsdl/schematron"&gt;
@@ -3405,7 +3403,7 @@
                   <p>In the file "ring.xml":</p>
                   <p>
                      <figure>
-                        <head/>
+                        <head><att>target</att> in <gi scheme="MEI">relation</gi> can point to external resources</head>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;workList xmlns="http://www.music-encoding.org/ns/mei"
           xmlns:rng="http://relaxng.org/ns/structure/1.0"
           xmlns:sch="http://purl.oclc.org/dsdl/schematron"&gt;
@@ -3425,7 +3423,7 @@
                   <p>In the file "rheingold.xml":</p>
                   <p>
                      <figure>
-                        <head/>
+                        <head><att>target</att> in <gi scheme="MEI">relation</gi> can point to an external resource</head>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;workList xmlns="http://www.music-encoding.org/ns/mei"
           xmlns:rng="http://relaxng.org/ns/structure/1.0"
           xmlns:sch="http://purl.oclc.org/dsdl/schematron"&gt;
@@ -3624,7 +3622,7 @@
                   <p>Here is an example of the use of this element:</p>
                   <p>
                      <figure>
-                        <head/>
+                        <head>Example of <gi scheme="MEI">langUsage</gi></head>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve" valid="feasible">&lt;langUsage&gt;
    &lt;language xml:id="fr-CA"&gt;Québecois&lt;/language&gt;
    &lt;language xml:id="en-CA"&gt;Canadian English&lt;/language&gt;
@@ -3671,7 +3669,7 @@
                      <p>In the following example, <gi scheme="MEI">role</gi> provides the name of the dramatic character and <gi scheme="MEI">roleDesc</gi> contains a brief description of the role. The <gi scheme="MEI">perfRes</gi> element is used to describe the voice range of the role.</p>
                      <p>
                         <figure>
-                           <head/>
+                           <head>Example of <gi scheme="MEI">castList</gi></head>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;castList xmlns="http://www.music-encoding.org/ns/mei"
           xmlns:rng="http://relaxng.org/ns/structure/1.0"
           xmlns:sch="http://purl.oclc.org/dsdl/schematron"&gt;
@@ -3697,7 +3695,7 @@
                      <p>The vocal qualities and associated roles for Beethoven’s opera <hi rend="italic">Fidelio</hi> may be encoded as:</p>
                      <p>
                         <figure>
-                           <head/>
+                           <head><gi scheme="MEI">castList</gi> of Beethoven’s opera <hi rend="italic">Fidelio</hi></head>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;perfMedium&gt;
    &lt;castList&gt;
       &lt;castItem&gt;
@@ -3753,7 +3751,7 @@
                      <p>The <gi scheme="MEI">perfResList</gi> element is used to capture the solo and ensemble instrumental and vocal resources of a composition. For example, a work for a standard ensemble may be indicated thus:</p>
                      <p>
                         <figure>
-                           <head/>
+                           <head>Example of <gi scheme="MEI">perfResList</gi></head>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;perfMedium&gt;
    &lt;perfResList&gt;
       &lt;perfRes&gt;Orchestra&lt;/perfRes&gt;
@@ -3765,7 +3763,7 @@
                      <p>The detailed make-up of standard and non-standard ensembles may also be enumerated:</p>
                      <p>
                         <figure>
-                           <head/>
+                           <head>Detailed <gi scheme="MEI">perfResList</gi></head>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;perfMedium&gt;
    &lt;perfResList&gt;
       &lt;head&gt;Orchestration&lt;/head&gt;
@@ -3782,7 +3780,7 @@
                      <p>Where multiple instruments of the same kind are used, the <att>count</att> attribute on <gi scheme="MEI">perfRes</gi> may be used to encode the exact number of players called for.</p>
                      <p>
                         <figure>
-                           <head/>
+                           <head><att>count</att> attribute on <gi scheme="MEI">perfRes</gi></head>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;perfMedium&gt;
    &lt;perfResList&gt;
       &lt;!-- concert band --&gt;
@@ -3797,10 +3795,10 @@
 </egXML>
                         </figure>
                      </p>
-                     <p>Instrument or voice specifications may be grouped using the <gi scheme="MEI">perfResList</gi> element and a label assigned to the group with</p>
+                     <p>Instrument or voice specifications may be grouped using the <gi scheme="MEI">perfResList</gi> element and a label assigned to the group with <gi scheme="MEI">head</gi>. For example: </p>
                      <p>
-                        <gi scheme="MEI">head</gi>. For example: <figure>
-                           <head/>
+                        <figure>
+                           <head><gi scheme="MEI">perfResList</gi> can group instrument or voice specifications (here woodwinds and brass section)</head>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;perfMedium&gt;
    &lt;perfResList&gt;
       &lt;!-- concert band --&gt;
@@ -3826,7 +3824,7 @@
 </egXML>
                         </figure>
                         <figure>
-                           <head/>
+                           <head><gi scheme="MEI">perfResList</gi> can group instrument or voice specifications (here woodwinds and strings section)</head>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;perfMedium xmlns="http://www.music-encoding.org/ns/mei"
             xmlns:rng="http://relaxng.org/ns/structure/1.0"
             xmlns:sch="http://purl.oclc.org/dsdl/schematron"&gt;
@@ -3856,7 +3854,7 @@
                      <p>The <gi scheme="MEI">perfRes</gi> element provides the <att>codedval</att> attribute, which can be used to record a coded value that represents the string value stored as the element’s content. It is recommended that coded values be taken from a standardized list, such as the <ref target="http://www.urfm.braidense.it/risorse/searchmedium_en.php">International Association of Music Libraries' Medium of Performance Codes List</ref> or the <ref target="http://www.loc.gov/standards/valuelist/marcmusperf.html">MARC Instruments and Voices Code List</ref>.</p>
                      <p>
                         <figure>
-                           <head/>
+                           <head><gi scheme="MEI">perfRes</gi> element provides the <att>codedval</att> attribute</head>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;perfMedium&gt;
    &lt;perfResList&gt;
       &lt;!-- @codedval contains values from the MARC Instruments and Voices Code List --&gt;
@@ -3871,7 +3869,7 @@
                      <p>Solo parts may be marked with the <att>solo</att> attribute of <gi scheme="MEI">perfRes</gi>, like so:</p>
                      <p>
                         <figure>
-                           <head/>
+                           <head>Solo parts may be marked with the <att>solo</att> attribute</head>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;perfResList&gt;
    &lt;perfRes solo="true"&gt;Violin&lt;/perfRes&gt;
    &lt;perfRes&gt;Violin&lt;/perfRes&gt;
@@ -3886,7 +3884,7 @@
                      <p>An <hi rend="italic">ad libitum</hi> part, <abbr>i.e.</abbr>, not essential for the performance of the work, may be marked with the <att>adlib</att> attribute.</p>
                      <p>
                         <figure>
-                           <head/>
+                           <head>Ad libitum parts may be marked with the <att>adlib</att> attribute</head>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve" valid="false">&lt;perfResList&gt;
    &lt;perfRes&gt;Soprano&lt;/perfRes&gt;
    &lt;perfRes&gt;Alto&lt;/perfRes&gt;
@@ -3920,7 +3918,7 @@
                   <p>Often, it is helpful to identify an entity by listing its constituent parts. A simple description of the work’s content, such as may be found in a bibliographic record, can be given in single paragraph element:</p>
                   <p>
                      <figure>
-                        <head/>
+                        <head>Example of <gi scheme="MEI">contents</gi></head>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;contents&gt;
    &lt;p&gt;A suitable tone ; Left hand colouring ; Rhythm and accent ; Tempo ; Flexibility ;
       Ornaments
@@ -3932,7 +3930,7 @@
                   <p>Alternatively, a structured list of contents may be constructed using the <gi scheme="MEI">contentItem</gi> element:</p>
                   <p>
                      <figure>
-                        <head/>
+                        <head>Example of <gi scheme="MEI">contents</gi> with <gi scheme="MEI">contentItem</gi></head>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;contents&gt;
    &lt;contentItem&gt;Sonata in D major, op. V, no. 1 / Corelli&lt;/contentItem&gt;
    &lt;contentItem&gt;Sonata in G minor / Purcell (with Robert Donington, gamba)&lt;/contentItem&gt;
@@ -3944,7 +3942,7 @@
                   <p>Each <gi scheme="MEI">contentItem</gi> element may be preceded by an optional <gi scheme="MEI">label</gi>:</p>
                   <p>
                      <figure>
-                        <head/>
+                        <head>Example of <gi scheme="MEI">contents</gi> with <gi scheme="MEI">contentItem</gi> and preceding optional <gi scheme="MEI">label</gi></head>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;contents&gt;
    &lt;label&gt;1&lt;/label&gt;
    &lt;contentItem&gt;Sonata in D major, op. V, no. 1 / Corelli&lt;/contentItem&gt;
@@ -3959,7 +3957,7 @@
                   <p>To reference a contents list in an external location, use the <att>target</att> attribute:</p>
                   <p>
                      <figure>
-                        <head/>
+                        <head>Use of the <att>target</att> attribute</head>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;contents target="http://www.contentProvider.org/toc/toc01.html"/&gt;
 </egXML>
                      </figure>
@@ -3967,7 +3965,7 @@
                   <p>To facilitate the creation of music catalogs based on MEI header information, <gi scheme="MEI">contents</gi> may contain a heading:</p>
                   <p>
                      <figure>
-                        <head/>
+                        <head>Example of <gi scheme="MEI">contents</gi> with <gi scheme="MEI">head</gi></head>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;contents&gt;
    &lt;head&gt;Contents of this Work:&lt;/head&gt;
    &lt;contentItem&gt;Sonata No. 1&lt;/contentItem&gt;
@@ -4003,7 +4001,7 @@
                   <p>The <gi scheme="MEI">termList</gi> element categorizes the parent entity by supplying a set of terms which may describe its topic or subject matter, its physical or intellectual form, date, etc. Each term is indicated by a <gi scheme="MEI">term</gi> element. In some schemes, the order of items in the list is significant, for example, from major topic to minor; in others, the list has an organized substructure of its own. No recommendations are made here as to which method is to be preferred. Wherever possible, such terms should be taken from a recognized source. In its simplest form, the <gi scheme="MEI">term</gi> element just contains a descriptive keyword.</p>
                   <p>
                      <figure>
-                        <head/>
+                        <head>Example of <gi scheme="MEI">termList</gi></head>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;termList&gt;
    &lt;term&gt;motet&lt;/term&gt;
 &lt;/termList&gt;
@@ -4013,7 +4011,7 @@
                   <p>The <att>class</att> attribute may be used on each term element to make reference to a classification scheme (declared in the <gi scheme="MEI">classDecls</gi> element) from which it is drawn.</p>
                   <p>
                      <figure>
-                        <head/>
+                        <head>The <att>class</att> attribute at the <gi scheme="MEI">term</gi> element</head>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;classification&gt;
    &lt;termList&gt;
       &lt;term class="#header.LCSH"&gt;Guitar music (Rock)&lt;/term&gt;
@@ -4027,7 +4025,7 @@
                   <p>Alternatively, <att>class</att> may be used on <gi scheme="MEI">termList</gi> when all the contained terms come from the same source.</p>
                   <p>
                      <figure>
-                        <head/>
+                        <head>The <att>class</att> attribute at the <gi scheme="MEI">termList</gi> element</head>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;classification&gt;
    &lt;termList class="#header.LCSH"&gt;
       &lt;term&gt;Guitar music (Rock)&lt;/term&gt;
@@ -4203,7 +4201,7 @@
                      <p>The following example shows the encoding of the title page of <name ref="https://en.wikipedia.org/wiki/Ralph_Vaughan_Williams">Vaughan Williams'</name> <hi rend="italic">On Wenlock Edge</hi>. Note the use of the <gi scheme="MEI">lb</gi> element to mark the beginning of new lines present in the original.</p>
                      <p>
                         <figure>
-                           <head/>
+                           <head>Example of <gi scheme="MEI">titlePage</gi> describing Vaughan Williams' <hi rend="italic">On Wenlock Edge</hi></head>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;titlePage&gt;
    &lt;p&gt;ON WENLOCK EDGE&lt;/p&gt;
    &lt;p&gt;A CYCLE OF SIX SONGS&lt;lb/&gt;
@@ -4254,7 +4252,7 @@
                      <p>The element <gi scheme="MEI">extent</gi> is used to express size in units such as ‘number of pages’, ‘number of folios’, ‘records’, ‘bytes’, ‘physical components’, etc. For specifying the physical dimensions of the material—for example, height and width—the use of the <gi scheme="MEI">dimensions</gi> element is recommended.</p>
                      <p>
                         <figure>
-                           <head/>
+                           <head>Example of <gi scheme="MEI">extent</gi></head>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;physDesc&gt;
     &lt;extent&gt;4 pages&lt;/extent&gt;
     &lt;!-- or more machine readable --&gt;
@@ -4269,7 +4267,7 @@
                      <p>The <gi scheme="MEI">dimensions</gi> contain information about the physical size of a source. Usually the dimensions are represented by numerical data. The elements <gi scheme="MEI">height</gi>, <gi scheme="MEI">width</gi>, <gi scheme="MEI">depth</gi>, and <gi scheme="MEI">dim</gi> are available for circumstances that require the capture of individual dimensions. To indicate the quantity of the described materials, please refer to the <gi scheme="MEI">extent</gi> element.</p>
                      <p>
                         <figure>
-                           <head/>
+                           <head>Example of <gi scheme="MEI">dimensions</gi></head>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;physDesc&gt;
     &lt;dimensions unit="mm"&gt;
         &lt;height&gt;333&lt;/height&gt;
@@ -4285,7 +4283,7 @@
                      <p>Another way of encoding dimensional information about a source is to use the element <gi scheme="MEI">dim</gi>, which can be used to represent any dimensional specification in a generic way. The attribute <att>form</att> is required. With regard to structured metadata, the use of the <gi scheme="MEI">height</gi>, <gi scheme="MEI">width</gi>, and <gi scheme="MEI">depth</gi> elements as the content of <gi scheme="MEI">dim</gi> is advisable.</p>
                      <p>
                         <figure>
-                           <head/>
+                           <head>Example of <gi scheme="MEI">dimensions</gi> with <gi scheme="MEI">dim</gi></head>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;physDesc&gt;
     &lt;dimensions&gt;
         &lt;dim form="height" unit="mm"&gt;333&lt;/dim&gt;
@@ -4302,7 +4300,7 @@
                      <p>It is recommended to use at least the elements <gi scheme="MEI">title</gi>, <gi scheme="MEI">date</gi>, <gi scheme="MEI">annot</gi> and <gi scheme="MEI">locus</gi> in the description:</p>
                      <p>
                         <figure>
-                           <head/>
+                           <head>Example of <gi scheme="MEI">watermark</gi></head>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;watermark&gt;
     &lt;title&gt;Welhartiz&lt;/title&gt;
     &lt;date label="usage" startdate="1815" enddate="1816"&gt;1815–1816&lt;/date&gt;
@@ -4316,7 +4314,7 @@
                      </p>
                      <p>
                         <figure>
-                           <head/>
+                           <head>The <gi scheme="MEI">fig</gi> element increases the depth of the description of the different components</head>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;fig&gt;
     &lt;graphic mimetype="images/jpeg" target="../"/&gt;
     &lt;figDesc&gt;
@@ -4345,7 +4343,7 @@
                      <p>Stamps can appear in many forms in manuscripts and prints, for example as library stamps, library signatures, postmarks, ownership marks, address stamps or legal notices. The description of the stamp therefore depends on individual, project-specific requirements. However, it is helpful to first consider whether it is sufficient to merely name the occurring stamps, or wether it is also desirable to detail their form and textual elements, or even refer to a graphic that shows a facsimile of the stamp.</p>
                      <p>
                         <figure>
-                           <head/>
+                           <head>Example of <gi scheme="MEI">stamp</gi></head>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;stamp&gt;* The * Library * of * Congress *&lt;/stamp&gt;
 or
 &lt;stamp&gt;
@@ -4361,7 +4359,7 @@ or
                      <p>In any case, for a better structuring of the information as well as for better machine readability, it is recommended to identify within the description of the stamp the implicitly or explicitly mentioned persons or institutions by means of <gi scheme="MEI">persName</gi> or <gi scheme="MEI">corpName</gi> and to describe by <gi scheme="MEI">locus</gi> where the stamp is positioned on the page.</p>
                      <p>
                         <figure>
-                           <head/>
+                           <head>Example of <gi scheme="MEI">stamp</gi> with <gi scheme="MEI">corpName</gi> and <gi scheme="MEI">locus</gi></head>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;stamp&gt;
     &lt;locus&gt;Fol. 1, 2, 3 each recto in lower left corner.&lt;/locus&gt;
     &lt;corpName auth="GND" auth.uri="https://d-nb.info/gnd/" codedval="35626-8"&gt;Library of Congress&lt;/corpName&gt;
@@ -4373,7 +4371,7 @@ or
                      <p>A higher level of distinction is also recommended for address stamps:</p>
                      <p>
                         <figure>
-                           <head/>
+                           <head>Encoding of an address stamp</head>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;stamp&gt;
     &lt;address&gt;
         &lt;addrLine&gt;&lt;persName&gt;Arnold Schönberg&lt;/persName&gt;&lt;/addrLine&gt;
@@ -4391,7 +4389,7 @@ or
                      <p>For describing the <gi scheme="MEI">scoreFormat</gi> a standard value list can be used, e.g., MARC21 (see “20 - Format of music (006/03)”, <ref target="https://www.loc.gov/marc/bibliographic/bd008m.html">https://www.loc.gov/marc/bibliographic/bd008m.html</ref>) or RDA (see <ref target="https://www.rdaregistry.info/termList/formatNoteMus/">https://www.rdaregistry.info/termList/formatNoteMus/</ref>). The values can be kept using the attributes <att>authority</att> and <att>authURI</att>.</p>
                      <p>
                         <figure>
-                           <head/>
+                           <head>Example of <gi scheme="MEI">scoreFormat</gi></head>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;scoreFormat auth="RDA" auth.uri="http://www.rdaregistry.info/termList/formatNoteMus/#" codedval="1001"&gt;choir book&lt;/scoreFormat&gt;</egXML>
                         </figure>
                      </p>
@@ -4421,7 +4419,7 @@ or
                      <p>The nesting of <gi scheme="MEI">bifolium</gi> and <gi scheme="MEI">folium</gi> elements reflects the nesting of paper sheets that make up the text block of the source. For instance, if a manuscript consists of two folded sheets of paper, with a single, unfolded sheet in the middle, this would be encoded with two nested <gi scheme="MEI">bifolium</gi> elements, where the inner one has an additional <gi scheme="MEI">folium</gi> element:</p>
                      <p>
                         <figure>
-                           <head/>
+                           <head>Structure of <gi scheme="MEI">foliaDesc</gi></head>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve" valid="feasible">&lt;foliaDesc&gt;
    &lt;bifolium&gt;&lt;!-- outer sheet --&gt;
       &lt;bifolium&gt;&lt;!-- inner sheet --&gt;
@@ -4470,7 +4468,7 @@ or
                         <p>With those attributes, page numbers can be derived from <gi scheme="MEI">foliaDesc</gi>, alongside the information where the content on a given <gi scheme="MEI">surface</gi> is placed on a (bi)folium. Coming back to the example above this might look like so:</p>
                         <p>
                            <figure>
-                              <head/>
+                              <head>Example of <gi scheme="MEI">foliaDesc</gi> with detailed placement information of recto and verso</head>
                               <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve" valid="feasible">&lt;foliaDesc&gt;
    &lt;bifolium outer.recto="#surface-p1"
              inner.verso="#surface-p2"
@@ -4521,7 +4519,7 @@ or
                         <p>While the <gi scheme="MEI">patch</gi> element provides information about the attachment of a patch, the actual patch is encoded as a <gi scheme="MEI">folium</gi> or <gi scheme="MEI">bifolium</gi> child of <gi scheme="MEI">patch</gi>.</p>
                         <p>
                            <figure>
-                              <head/>
+                              <head>Example of <gi scheme="MEI">patch</gi></head>
                               <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve" valid="feasible">&lt;bifolium&gt;
    &lt;patch attached.to="inner.verso" x="1cm" y="12cm" attached.by="glue"&gt;
       &lt;folium width="8cm" height="2cm"/&gt;
@@ -4586,7 +4584,7 @@ or
                         <p>The dating of printed sources can help establish a history of the source, its provenance, and edition. In the absence of bibliographical information, <abbr>e.g.</abbr>, on the edition or the year of origin, plate numbers can be an essential aid to dating. Plate numbers are designations assigned to a resource by a music publisher, and have no specific structure so may contain letters, numbers, punctuation, or other marks. When present, they are typically printed at the bottom of each page, and sometimes appear on the title page as well. In MEI plate numbers can be encoded within the <gi scheme="MEI">plateNum</gi> element as plain text, similar to:</p>
                         <p>
                            <figure>
-                              <head/>
+                              <head>Example of <gi scheme="MEI">plateNum</gi></head>
                               <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;plateNum&gt;A &amp;amp; P. No. 6412&lt;/plateNum&gt;</egXML>
                            </figure>
                         </p>
@@ -4606,7 +4604,7 @@ or
                         <p>This entry could be encoded as follows:</p>
                         <p>
                            <figure>
-                              <head/>
+                              <head>Example of <gi scheme="MEI">addDesc</gi></head>
                               <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;addDesc&gt;
     Auf fol. 109v links mit Bleistift von Schindler „NB (Sch.) Hier fehlen 8 Takte (auch im Chor). jedoch die eine spätere […]“
 &lt;/addDesc&gt;
@@ -4616,7 +4614,7 @@ or
                         <p>A slightly more structured form would be:</p>
                         <p>
                            <figure>
-                              <head/>
+                              <head>Example of <gi scheme="MEI">addDesc</gi> with a little bit more structure</head>
                               <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;addDesc&gt;
     &lt;annot&gt;
         &lt;p&gt;Auf fol. 109v links mit Bleistift von Schindler „NB (Sch.) Hier fehlen 8 Takte (auch im Chor). jedoch die eine spätere […]“&lt;/p&gt;
@@ -4628,7 +4626,7 @@ or
                         <p>These transcriptions – as in the musical text – can also be marked by means of <gi scheme="MEI">add</gi>, <gi scheme="MEI">del</gi>, (see module MEI.edittrans) etc. (see <ptr target="#editTrans"/>) and assigned to a specific scribe by <att>hand</att> (see <gi scheme="MEI">handList</gi>):</p>
                         <p>
                            <figure>
-                              <head/>
+                              <head>Example of <gi scheme="MEI">addDesc</gi> with <gi scheme="MEI">add</gi> and <att>hand</att> attribute</head>
                               <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;addDesc&gt;
     &lt;annot&gt;
         &lt;p&gt;Auf &lt;locus&gt;fol. 109v&lt;/locus&gt; links mit Bleistift von Schindler „&lt;add hand="#Sch"&gt;NB (Sch.) Hier fehlen 8 Takte (auch im Chor). jedoch die eine spätere &lt;unclear&gt;[…]&lt;/unclear&gt;&lt;/add&gt;“&lt;/p&gt;
@@ -4640,7 +4638,7 @@ or
                         <p>For structuring purposes, it may sometimes be useful to separate entries made by a composer in the manuscript from those made by others:</p>
                         <p>
                            <figure>
-                              <head/>
+                              <head>Separate <gi scheme="MEI">annot</gi> elements for structuring purposes</head>
                               <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;addDesc&gt;
     &lt;annot type="autograph"&gt;
         &lt;p&gt;[autograph entries]&lt;/p&gt;
@@ -4737,7 +4735,7 @@ or
                   <p>The following example demonstrates how to structure detailed information about a repository (including the use of <gi scheme="MEI">identifier</gi>):</p>
                   <p>
                      <figure>
-                        <head/>
+                        <head>Example of <gi scheme="MEI">repository</gi></head>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;physLoc&gt;
      &lt;repository auth="ISIL" auth.uri="http://ld.zdb-services.de/resource/organisations/" codedval="DE-1"&gt;
          &lt;identifier auth="RISM"&gt;D-B&lt;/identifier&gt;
@@ -4801,7 +4799,7 @@ or
                   <p>The <gi scheme="MEI">extMeta</gi> element may be contained by <gi scheme="MEI">expression</gi>, <gi scheme="MEI">item</gi>, <gi scheme="MEI">manifestation</gi>, <gi scheme="MEI">work</gi> and <gi scheme="MEI">meiHead</gi> elements. It may include text and any number of well-formed XML fragments, XML comments, and CDATA sections, except for MEI markup, which is prohibited. The document element of each fragment must explicitly declare its namespace.</p>
                   <p>
                      <figure>
-                        <head/>
+                        <head>Example of <gi scheme="MEI">extMeta</gi></head>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;extMeta&gt;
    &lt;!-- MARC (Machine-Readable Cataloging) title info --&gt;
    &lt;datafield xmlns="http://www.loc.gov/MARC21/slim" ind1="1" ind2="0" tag="245"&gt;
@@ -4822,7 +4820,7 @@ or
                   <p>Supplying only the level of encoding required, the MEI header of a single text will look like the following example:</p>
                   <p>
                      <figure>
-                        <head/>
+                        <head>Minimal Header Information</head>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;meiHead&gt;
    &lt;fileDesc&gt;
       &lt;titleStmt&gt;
@@ -4846,7 +4844,7 @@ or
                   <p>We now present the same example header, expanded to include additionally recommended information, adequate for most bibliographic purposes, in particular to allow for the creation of an AACR2-conformant bibliographic record.</p>
                   <p>
                      <figure>
-                        <head/>
+                        <head>Recommended Header Information</head>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;meiHead&gt;
    &lt;fileDesc&gt;
       &lt;titleStmt&gt;
@@ -4947,7 +4945,7 @@ or
                      <p>The <gi scheme="MEI">meiCorpus</gi> element is intended for the encoding of corpora, though it may also be useful in encoding any collection of disparate materials. The individual samples in the corpus are encoded as separate <gi scheme="MEI">mei</gi> elements, and the entire corpus is enclosed in an <gi scheme="MEI">meiCorpus</gi> element. Each sample has the usual structure for a <gi scheme="MEI">mei</gi> document, comprising an <gi scheme="MEI">meiHead</gi> followed by a <gi scheme="MEI">music</gi> element. The corpus, too, has a corpus-level <gi scheme="MEI">meiHead</gi> element, in which the corpus as a whole, and encoding practices common to multiple samples may be described. The overall structure of an MEI-conformant corpus is thus:</p>
                      <p>
                         <figure>
-                           <head/>
+                           <head>Example of <gi scheme="MEI">meiCorpus</gi></head>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;meiCorpus&gt;
    &lt;meiHead type="corpus"&gt;
       &lt;!-- metadata for the corpus --&gt;
@@ -4984,7 +4982,7 @@ or
                      <p>For example, the following markup shows the structure of a corpus consisting of three texts, the first and last of which share the same encoding description. The second one has its own encoding description.</p>
                      <p>
                         <figure>
-                           <head/>
+                           <head>Combination of Corpus and Text Headers</head>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;meiCorpus&gt;
    &lt;meiHead&gt;
       &lt;fileDesc&gt;
