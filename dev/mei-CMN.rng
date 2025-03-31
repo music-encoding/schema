@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2025-03-28T14:30:47Z. . 
+Schema generated from ODD source 2025-03-31T13:24:55Z. . 
 TEI Edition: MEI 6.0-dev 
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -25715,15 +25715,9 @@ Suggested values include: 1] abstract; 2] ack; 3] appendix; 4] bibliography; 5] 
             <optional>
                <choice>
                   <group>
-                     <choice>
-                        <ref name="mei_model.respLikePart"/>
-                        <ref name="mei_respStmt"/>
-                     </choice>
+                     <ref name="mei_model.respLikePart"/>
                      <zeroOrMore>
-                        <choice>
-                           <ref name="mei_model.respLikePart"/>
-                           <ref name="mei_respStmt"/>
-                        </choice>
+                        <ref name="mei_model.respLike"/>
                      </zeroOrMore>
                      <oneOrMore>
                         <ref name="mei_model.titleLike"/>
@@ -25742,9 +25736,8 @@ Suggested values include: 1] abstract; 2] ack; 3] appendix; 4] bibliography; 5] 
                      </oneOrMore>
                      <zeroOrMore>
                         <choice>
-                           <ref name="mei_model.respLikePart"/>
+                           <ref name="mei_model.respLike"/>
                            <ref name="mei_model.identifierLike"/>
-                           <ref name="mei_respStmt"/>
                         </choice>
                      </zeroOrMore>
                   </group>
@@ -25771,7 +25764,6 @@ Suggested values include: 1] abstract; 2] ack; 3] appendix; 4] bibliography; 5] 
                <choice>
                   <ref name="mei_imprint"/>
                   <ref name="mei_extent"/>
-                  <ref name="mei_biblScope"/>
                </choice>
             </zeroOrMore>
          </group>
