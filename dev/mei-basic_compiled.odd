@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xml:base="file:/opt/docker-mei/music-encoding/customizations/mei-basic.xml"><?TEIVERSION MEI 6.0-dev?>
-    <teiHeader>
-        <fileDesc>
+    <teiHeader><fileDesc>
             <titleStmt>
                 <title>Music Encoding Initiative Guidelines: <title type="sub">MEI Basic Profile</title></title>
                 <respStmt>
@@ -29,8 +28,7 @@
             <sourceDesc>
                 <p/>
             </sourceDesc>
-        </fileDesc>
-        <revisionDesc>
+        </fileDesc><revisionDesc>
             <change n="1" when="2019-04-04" who="#JK">
                 <desc>Initial setup of the ODD.</desc>
             </change>
@@ -43,8 +41,7 @@
             <change n="4" when="2023-08-23" who="#KR">
                 <desc>Fixing color attribute and cleanup attribute class references.</desc>
             </change>
-        </revisionDesc>
-    </teiHeader>
+        </revisionDesc></teiHeader>
     <text>
         <body>
             <schemaSpec ident="mei-basic" start="mei" prefix="mei_" ns="http://www.music-encoding.org/ns/mei" source="/opt/docker-mei/music-encoding/build/mei-source_canonicalized_v6.0-dev.xml"><macroSpec rend="add" ident="data.ACCIDENTAL.WRITTEN" module="MEI" type="dt">

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xml:base="file:/opt/docker-mei/music-encoding/customizations/mei-all_anyStart.xml"><?TEIVERSION MEI 6.0-dev?>
-  <teiHeader>
-    <fileDesc>
+  <teiHeader><fileDesc>
       <titleStmt>
         <title>Music Encoding Initiative Guidelines: <title type="sub">All AnyStart
             Customization</title></title>
@@ -20,8 +19,7 @@
       <sourceDesc>
         <p/>
       </sourceDesc>
-    </fileDesc>
-    <revisionDesc>
+    </fileDesc><revisionDesc>
       <change n="3" when="2024-11-27" who="#bwb #stm">
         <desc>
           <list>
@@ -41,8 +39,7 @@
       <change n="1" when="2015-12-04" who="#PR">
         <desc>Creation of the initial ODD.</desc>
       </change>
-    </revisionDesc>
-  </teiHeader>
+    </revisionDesc></teiHeader>
   <text>
     <front>
       <divGen type="toc"/>

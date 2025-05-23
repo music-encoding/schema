@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xml:base="file:/opt/docker-mei/music-encoding/customizations/mei-Neumes.xml"><?TEIVERSION MEI 6.0-dev?>
-  <teiHeader>
-    <fileDesc>
+  <teiHeader><fileDesc>
       <titleStmt>
         <title>Music Encoding Initiative Guidelines: <title type="sub">Neumes
           Customization</title></title>
@@ -18,8 +17,7 @@
       <sourceDesc>
         <p/>
       </sourceDesc>
-    </fileDesc>
-  </teiHeader>
+    </fileDesc></teiHeader>
   <text>
     <front>
       <divGen type="toc"/>
