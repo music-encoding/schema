@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2025-04-24T13:10:18Z. . 
+Schema generated from ODD source 2025-05-23T12:50:27Z. . 
 TEI Edition: MEI 6.0-dev 
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -22601,6 +22601,20 @@ Suggested values include: 1] smufl</a:documentation>
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Da capo (SMuFL E046 or Unicode 1D10A).</a:documentation>
             <value>fine</value>
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Fine. (text)</a:documentation>
+            <value>daCapoAlFine</value>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">D.C. al Fine. (text)</a:documentation>
+            <value>dalSegnoAlFine</value>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">D.S. al Fine. (text)</a:documentation>
+            <value>daCapoAlCoda</value>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">D.C. al Coda. (text)</a:documentation>
+            <value>dalSegnoAlCoda</value>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">D.S. al Coda. (text)</a:documentation>
+            <value>repeatLeft</value>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Left repeat barline as a separate symbol disconnected from staff lines (SMuFL E04C or Unicode 1D106)</a:documentation>
+            <value>repeatRight</value>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Right repeat barline as a separate symbol disconnected from staff lines (SMuFL E04D or Unicode 1D107)</a:documentation>
+            <value>repeatRightLeft</value>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Right and left repeat barline as a separate symbol disconnected from staff lines (SMuFL E042)</a:documentation>
          </choice>
       </attribute>
    </define>

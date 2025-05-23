@@ -21,7 +21,7 @@
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../source/validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="../source/validation/mei-purify.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2025-04-24T15:09:55.25185637+02:00-->
+<!--canonicalized: 2025-05-23T14:50:03.051411042+02:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -36309,6 +36309,27 @@ or
           </valItem>
           <valItem ident="fine">
             <desc xml:lang="en">Fine. (text)</desc>
+          </valItem>
+          <valItem ident="daCapoAlFine">
+            <desc xml:lang="en">D.C. al Fine. (text)</desc>
+          </valItem>
+          <valItem ident="dalSegnoAlFine">
+            <desc xml:lang="en">D.S. al Fine. (text)</desc>
+          </valItem>
+          <valItem ident="daCapoAlCoda">
+            <desc xml:lang="en">D.C. al Coda. (text)</desc>
+          </valItem>
+          <valItem ident="dalSegnoAlCoda">
+            <desc xml:lang="en">D.S. al Coda. (text)</desc>
+          </valItem>
+          <valItem ident="repeatLeft">
+            <desc xml:lang="en">Left repeat barline as a separate symbol disconnected from staff lines (SMuFL E04C or Unicode 1D106)</desc>
+          </valItem>
+          <valItem ident="repeatRight">
+            <desc xml:lang="en">Right repeat barline as a separate symbol disconnected from staff lines (SMuFL E04D or Unicode 1D107)</desc>
+          </valItem>
+          <valItem ident="repeatRightLeft">
+            <desc xml:lang="en">Right and left repeat barline as a separate symbol disconnected from staff lines (SMuFL E042)</desc>
           </valItem>
         </valList>
       </attDef>
