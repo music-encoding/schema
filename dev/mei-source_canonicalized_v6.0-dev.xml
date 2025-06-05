@@ -21,7 +21,7 @@
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../source/validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="../source/validation/mei-purify.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2025-06-04T10:01:36.254882334+02:00-->
+<!--canonicalized: 2025-06-05T16:02:15.539478275+02:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -35423,13 +35423,13 @@ or
           <valItem ident="6.0-dev+basic">
               <desc>Version of MEI basic customization</desc>
           </valItem>
-          <valItem ident="6.0-dev+CMN">
+          <valItem ident="6.0-dev+cmn">
             <desc>Version of MEI cmn customization</desc>
           </valItem>
-          <valItem ident="6.0-dev+Mensural">
+          <valItem ident="6.0-dev+mensural">
             <desc>Version of MEI mensural customization</desc>
           </valItem>
-          <valItem ident="6.0-dev+Neumes">
+          <valItem ident="6.0-dev+neumes">
             <desc>Version of MEI neumes customization</desc>
           </valItem>
         </valList>

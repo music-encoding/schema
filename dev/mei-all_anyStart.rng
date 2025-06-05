@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2025-06-04T08:02:02Z. . 
+Schema generated from ODD source 2025-06-05T14:02:42Z. . 
 TEI Edition: MEI 6.0-dev 
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -21676,6 +21676,7 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                xmlns:xi="http://www.w3.org/2001/XInclude"
                 context="/mei:*">
          <sch:assert test="@meiversion">The document root element must have the @meiversion attribute in order to indicate the MEI version in use.</sch:assert>
       </sch:rule>
@@ -21685,6 +21686,7 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                xmlns:xi="http://www.w3.org/2001/XInclude"
                 context="/mei:*">
          <sch:report role="error"
                      test="not(local-name(.) = ('mei', 'meiHead', 'meiCorpus', 'music')) and not(@meiversion = '6.0-dev+anyStart')">If the root element is any other than mei, meiHead, meiCorpus, or music the value of @meiversion must be '6.0-dev+anyStart'.</sch:report>
@@ -28465,9 +28467,10 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
                   id="mei-all_anyStart-tempo-tempo_in_header_disallow_most_attrs-constraint-rule-182">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="/*//mei:tempo[not(ancestor::mei:score or ancestor::mei:part)]">
                <sch:assert test="not(@*[name() != 'analog' and name() != 'class' and name() != 'label' and name() != 'mm' and name() != 'mm.dots' and name() != 'translit' and name() != 'type' and name() != 'mm.unit' and name() != 'n' and name() != 'xml:base' and name() != 'xml:id' and name() != 'xml:lang'])">Only analog, class, label, mm, mm.dots, mm.unit, n, translit, type, xml:base, xml:id,
-                      and xml:lang attributes are allowed when tempo is not the document root element or a descendant of a score or part.</sch:assert>
+                    and xml:lang attributes are allowed when tempo is not the document root element or a descendant of a score or part.</sch:assert>
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
@@ -31937,11 +31940,13 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
    <sch:ns xmlns="http://www.tei-c.org/ns/1.0"
            xmlns:rng="http://relaxng.org/ns/structure/1.0"
            xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+           xmlns:xi="http://www.w3.org/2001/XInclude"
            prefix="mei"
            uri="http://www.music-encoding.org/ns/mei"/>
    <sch:ns xmlns="http://www.tei-c.org/ns/1.0"
            xmlns:rng="http://relaxng.org/ns/structure/1.0"
            xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+           xmlns:xi="http://www.w3.org/2001/XInclude"
            prefix="xlink"
            uri="http://www.w3.org/1999/xlink"/>
 </grammar>

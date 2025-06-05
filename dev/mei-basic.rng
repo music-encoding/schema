@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2025-06-04T08:02:04Z. . 
+Schema generated from ODD source 2025-06-05T14:02:44Z. . 
 TEI Edition: MEI 6.0-dev 
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -2458,6 +2458,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
                   id="mei-basic-fermata-fermata_start-type_attributes_required-constraint-rule-7">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:fermata">
                <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of
                                     the attributes: startid, tstamp, tstamp.ges or tstamp.real.</sch:assert>
@@ -3808,6 +3809,7 @@ Suggested values include: 1] smufl</a:documentation>
                   id="mei-basic-fileDesc-corresp-check_correspTarget-constraint-rule-37">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="@corresp">
                <sch:assert role="warning" test="not(normalize-space(.) eq '')">@corresp attribute should have content.</sch:assert>
             </sch:rule>
@@ -6775,11 +6777,13 @@ Suggested values include: 1] smufl</a:documentation>
                   id="mei-basic-music-check_controlEventLinking-constraint-rule-62">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:*[@tstamp]">
                <sch:assert test="not(@startid)">An element with @tstamp may not have @startid as well (and vice versa).</sch:assert>
             </sch:rule>
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:*[@tstamp2]">
                <sch:assert test="not(@endid)">An element with @tstamp2 may not have @endid as well (and vice versa).</sch:assert>
             </sch:rule>
@@ -7276,6 +7280,7 @@ Suggested values include: 1] smufl</a:documentation>
                   id="mei-basic-staffGrp-Check_staffGrp_unique_staff_n_values-constraint-rule-79">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="mei:staffGrp">
                <sch:let name="countstaves" value="count(descendant::mei:staffDef)"/>
                <sch:let name="countuniqstaves"
@@ -8261,11 +8266,13 @@ Suggested values include: 1] main; 2] subordinate; 3] abbreviated; 4] alternativ
    <sch:ns xmlns="http://www.tei-c.org/ns/1.0"
            xmlns:rng="http://relaxng.org/ns/structure/1.0"
            xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+           xmlns:xi="http://www.w3.org/2001/XInclude"
            prefix="mei"
            uri="http://www.music-encoding.org/ns/mei"/>
    <sch:ns xmlns="http://www.tei-c.org/ns/1.0"
            xmlns:rng="http://relaxng.org/ns/structure/1.0"
            xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+           xmlns:xi="http://www.w3.org/2001/XInclude"
            prefix="xlink"
            uri="http://www.w3.org/1999/xlink"/>
 </grammar>
