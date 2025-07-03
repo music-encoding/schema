@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2025-07-03T12:06:59Z. . 
+Schema generated from ODD source 2025-07-03T12:35:07Z. . 
 TEI Edition: MEI 6.0-dev 
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -6958,18 +6958,6 @@ Suggested values include: 1] smufl</a:documentation>
          <zeroOrMore>
             <empty/>
          </zeroOrMore>
-         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-basic-rest-Check_restline-constraint-rule-65">
-            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:xi="http://www.w3.org/2001/XInclude"
-                      context="mei:rest[@line]">
-               <sch:let name="thisstaff" value="ancestor::mei:staff/@n"/>
-               <sch:assert test="number(@line) &lt;= number(preceding::mei:staffDef[@n=$thisstaff and @lines][1]/@lines)">The value of @line must be less than or equal to the number of lines on the
-            staff.</sch:assert>
-            </sch:rule>
-         </pattern>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.rest.ges.attributes"/>
          <ref name="mei_att.rest.log.attributes"/>
@@ -7042,7 +7030,7 @@ Suggested values include: 1] smufl</a:documentation>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-basic-section-Check_sectionexpansion-constraint-rule-66">
+                  id="mei-basic-section-Check_sectionexpansion-constraint-rule-65">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -7084,7 +7072,7 @@ Suggested values include: 1] smufl</a:documentation>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-basic-staff-checkStaff_n-constraint-rule-67">
+                  id="mei-basic-staff-checkStaff_n-constraint-rule-66">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -7117,7 +7105,7 @@ Suggested values include: 1] smufl</a:documentation>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-basic-staffDef-Check_staffDefn-constraint-rule-68">
+                  id="mei-basic-staffDef-Check_staffDefn-constraint-rule-67">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -7133,7 +7121,7 @@ Suggested values include: 1] smufl</a:documentation>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-basic-staffDef-Check_ancestor_staff-constraint-rule-69">
+                  id="mei-basic-staffDef-Check_ancestor_staff-constraint-rule-68">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -7145,7 +7133,7 @@ Suggested values include: 1] smufl</a:documentation>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-basic-staffDef-Check_ancestor_staff_lines-constraint-rule-70">
+                  id="mei-basic-staffDef-Check_ancestor_staff_lines-constraint-rule-69">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -7158,7 +7146,7 @@ Suggested values include: 1] smufl</a:documentation>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-basic-staffDef-Check_clef_position_staffDef-constraint-rule-71">
+                  id="mei-basic-staffDef-Check_clef_position_staffDef-constraint-rule-70">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -7169,7 +7157,7 @@ Suggested values include: 1] smufl</a:documentation>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-basic-staffDef-Check_clef_position_staffDef_nolines-constraint-rule-72">
+                  id="mei-basic-staffDef-Check_clef_position_staffDef_nolines-constraint-rule-71">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -7183,7 +7171,7 @@ Suggested values include: 1] smufl</a:documentation>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-basic-staffDef-Check_tab_strings_lines-constraint-rule-73">
+                  id="mei-basic-staffDef-Check_tab_strings_lines-constraint-rule-72">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -7196,7 +7184,7 @@ Suggested values include: 1] smufl</a:documentation>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-basic-staffDef-Check_tab_strings_nolines-constraint-rule-74">
+                  id="mei-basic-staffDef-Check_tab_strings_nolines-constraint-rule-73">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -7277,7 +7265,7 @@ Suggested values include: 1] smufl</a:documentation>
          </oneOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-basic-staffGrp-Check_staffGrp_unique_staff_n_values-constraint-rule-79">
+                  id="mei-basic-staffGrp-Check_staffGrp_unique_staff_n_values-constraint-rule-78">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -7291,7 +7279,7 @@ Suggested values include: 1] smufl</a:documentation>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-basic-staffGrp-Check_staffGrp_unique_staff_n_values-constraint-rule-80">
+                  id="mei-basic-staffGrp-Check_staffGrp_unique_staff_n_values-constraint-rule-79">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -7331,7 +7319,7 @@ Suggested values include: 1] smufl</a:documentation>
          <empty/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-basic-symbol-symbolDef_symbol_attributes_required-constraint-rule-81">
+                  id="mei-basic-symbol-symbolDef_symbol_attributes_required-constraint-rule-80">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -7359,7 +7347,7 @@ Suggested values include: 1] smufl</a:documentation>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-basic-tempo-tempo_in_header_disallow_most_attrs-constraint-rule-82">
+                  id="mei-basic-tempo-tempo_in_header_disallow_most_attrs-constraint-rule-81">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -7371,7 +7359,7 @@ Suggested values include: 1] smufl</a:documentation>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-basic-tempo-tempo_start-type_attributes_required-constraint-rule-83">
+                  id="mei-basic-tempo-tempo_start-type_attributes_required-constraint-rule-82">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -7629,7 +7617,7 @@ Suggested values include: 1] main; 2] subordinate; 3] abbreviated; 4] alternativ
          </interleave>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-basic-tabGrp-check_tabGrp_in_beam-constraint-rule-84">
+                  id="mei-basic-tabGrp-check_tabGrp_in_beam-constraint-rule-83">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"

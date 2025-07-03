@@ -33924,15 +33924,7 @@ or
       <memberOf key="model.eventLike"/>
     </classes><content>
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="dot"/><ref name="model.appLike"/><ref name="model.editLike"/><ref name="model.transcriptionLike"/></choice></zeroOrMore>
-    </content><constraintSpec ident="Check_restline" scheme="schematron">
-      <constraint>
-        <sch:rule context="mei:rest[@line]">
-          <sch:let name="thisstaff" value="ancestor::mei:staff/@n"/>
-          <sch:assert test="number(@line) &lt;= number(preceding::mei:staffDef[@n=$thisstaff and @lines][1]/@lines)">The value of @line must be less than or equal to the number of lines on the
-            staff.</sch:assert>
-        </sch:rule>
-      </constraint>
-    </constraintSpec><remarks xml:lang="en">
+    </content><remarks xml:lang="en">
       <p>See (Read, p. 96-102). Do not confuse this element with the <gi scheme="MEI">space</gi>
         element, which is used as an aid for visual alignment.</p>
     </remarks></elementSpec><elementSpec rend="add" ident="role" module="MEI.shared"><desc xml:lang="en">Name of a dramatic role, as given in a cast list.</desc><classes>
