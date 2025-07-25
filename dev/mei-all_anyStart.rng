@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2025-07-25T12:37:55Z. . 
+Schema generated from ODD source 2025-07-25T13:01:10Z. . 
 TEI Edition: MEI 6.0-dev 
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -19359,7 +19359,7 @@ Suggested values include: 1] caesura; 2] finalis; 3] maior; 4] maxima; 5] minima
       <optional>
          <attribute name="type">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Designation which characterizes the element in some sense, using any convenient classification scheme or typology that employs single-token labels.
-Suggested values include: 1] apostropha; 2] bistropha; 3] climacus; 4] clivis; 5] oriscus; 6] pes; 7] pessubpunctis; 8] porrectus; 9] porrectusflexus; 10] pressusmaior; 11] pressusminor; 12] punctum; 13] quilisma; 14] scandicus; 15] strophicus; 16] torculus; 17] torculusresupinus; 18] tristropha; 19] virga; 20] virgastrata</a:documentation>
+Suggested values include: 1] apostropha; 2] bistropha; 3] cephalicus; 4] climacus; 5] clivis; 6] epiphonus; 7] oriscus; 8] pes; 9] pessubpunctis; 10] porrectus; 11] porrectusflexus; 12] pressusmaior; 13] pressusminor; 14] punctum; 15] quilisma; 16] scandicus; 17] strophicus; 18] torculus; 19] torculusresupinus; 20] tristropha; 21] virga; 22] virgastrata</a:documentation>
             <list>
                <oneOrMore>
                   <choice>
@@ -19367,9 +19367,13 @@ Suggested values include: 1] apostropha; 2] bistropha; 3] climacus; 4] clivis; 5
                      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                      <value>bistropha</value>
                      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                     <value>cephalicus</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                      <value>climacus</value>
                      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                      <value>clivis</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                     <value>epiphonus</value>
                      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                      <value>oriscus</value>
                      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>

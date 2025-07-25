@@ -21,7 +21,7 @@
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../source/validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="../source/validation/mei-purify.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2025-07-25T14:37:29.853585852+02:00-->
+<!--canonicalized: 2025-07-25T15:00:42.36159626+02:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -32805,8 +32805,10 @@ or
         <valList type="semi">
           <valItem ident="apostropha"/>
           <valItem ident="bistropha"/>
+          <valItem ident="cephalicus"/>
           <valItem ident="climacus"/>
           <valItem ident="clivis"/>
+          <valItem ident="epiphonus"/>
           <valItem ident="oriscus"/>
           <valItem ident="pes"/>
           <valItem ident="pessubpunctis"/>
