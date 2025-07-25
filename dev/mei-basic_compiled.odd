@@ -1057,8 +1057,8 @@
                      <p>
                         <figure>
                            <head>Alternating meters in Tchaikovsky's String Quartet in F major</head>
-                           <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-CMN.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
-&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-CMN.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
+                           <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-cmn.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
+&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-cmn.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
 &lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="6.0-dev"&gt;
    &lt;meiHead&gt;
       &lt;fileDesc&gt;
