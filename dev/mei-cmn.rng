@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2025-07-03T12:35:08Z. . 
+Schema generated from ODD source 2025-07-25T12:18:42Z. . 
 TEI Edition: MEI 6.0-dev 
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -8228,6 +8228,157 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ISO 24-hour time format: HH:MM:SS.ss.</a:documentation>
       </choice>
    </define>
+   <define name="mei_data.MARCRELATORS.basic">
+      <choice>
+         <value>arr</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(arranger) A person, family, or organization contributing to a musical work by rewriting the composition for a medium of performance different from that for which the work was originally intended, or modifying the work for the same medium of performance, etc., such that the musical substance of the original composition remains essentially unchanged. For extensive modification that effectively results in the creation of a new musical work, see composer. [<a xmlns="http://www.w3.org/1999/xhtml"
+               xmlns:rng="http://relaxng.org/ns/structure/1.0"
+               href="https://id.loc.gov/vocabulary/relators/arr.html">MARC</a>]</a:documentation>
+         <value>aut</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(author) A person, family, or organization responsible for creating a work that is primarily textual in content, regardless of media type (e.g., printed text, spoken word, electronic text, tactile text) or genre (e.g., poems, novels, screenplays, blogs). Use also for persons, etc., creating a new work by paraphrasing, rewriting, or adapting works by another creator such that the modification has substantially changed the nature and content of the original or changed the medium of expression. [<a xmlns="http://www.w3.org/1999/xhtml"
+               xmlns:rng="http://relaxng.org/ns/structure/1.0"
+               href="https://id.loc.gov/vocabulary/relators/aut.html">MARC</a>]</a:documentation>
+         <value>cmp</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(composer) A person, family, or organization responsible for creating or contributing to a musical resource by adding music to a work that originally lacked it or supplements it. [<a xmlns="http://www.w3.org/1999/xhtml"
+               xmlns:rng="http://relaxng.org/ns/structure/1.0"
+               href="https://id.loc.gov/vocabulary/relators/cmp.html">MARC</a>]</a:documentation>
+         <value>dte</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(dedicatee) A person, family, or organization to whom a resource is dedicated. [<a xmlns="http://www.w3.org/1999/xhtml"
+               xmlns:rng="http://relaxng.org/ns/structure/1.0"
+               href="https://id.loc.gov/vocabulary/relators/dte.html">MARC</a>]</a:documentation>
+         <value>edt</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(editor) A person, family, or organization contributing to a resource by revising or elucidating the content, e.g., adding an introduction, notes, or other critical matter. An editor may also prepare a resource for production, publication, or distribution. For major revisions, adaptations, etc., that substantially change the nature and content of the original work, resulting in a new work, see author. [<a xmlns="http://www.w3.org/1999/xhtml"
+               xmlns:rng="http://relaxng.org/ns/structure/1.0"
+               href="https://id.loc.gov/vocabulary/relators/edt.html">MARC</a>]</a:documentation>
+         <value>lbt</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(librettist) An author of a libretto of an opera or other stage work, or an oratorio. [<a xmlns="http://www.w3.org/1999/xhtml"
+               xmlns:rng="http://relaxng.org/ns/structure/1.0"
+               href="https://id.loc.gov/vocabulary/relators/lbt.html">MARC</a>]</a:documentation>
+         <value>lyr</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(lyricist) An author of the words of a non-dramatic musical work (e.g. the text of a song), except for oratorios. [<a xmlns="http://www.w3.org/1999/xhtml"
+               xmlns:rng="http://relaxng.org/ns/structure/1.0"
+               href="https://id.loc.gov/vocabulary/relators/lyr.html">MARC</a>]</a:documentation>
+      </choice>
+   </define>
+   <define name="mei_data.MARCRELATORS.extended">
+      <choice>
+         <value>act</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(actor) A performer contributing to an expression of a work by acting as a cast member or player in a musical or dramatic presentation, etc. [<a xmlns="http://www.w3.org/1999/xhtml"
+               xmlns:rng="http://relaxng.org/ns/structure/1.0"
+               href="http://id.loc.gov/vocabulary/relators/act.html">MARC</a>]</a:documentation>
+         <value>ard</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(artistic director) A person responsible for controlling the development of the artistic style of an entire production, including the choice of works to be presented and selection of senior production staff. [<a xmlns="http://www.w3.org/1999/xhtml"
+               xmlns:rng="http://relaxng.org/ns/structure/1.0"
+               href="http://id.loc.gov/vocabulary/relators/ard.html">MARC</a>]</a:documentation>
+         <value>art</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(artist) A person, family, or organization responsible for creating a work by conceiving, and implementing, an original graphic design, drawing, painting, etc. For book illustrators, prefer Illustrator. [<a xmlns="http://www.w3.org/1999/xhtml"
+               xmlns:rng="http://relaxng.org/ns/structure/1.0"
+               href="http://id.loc.gov/vocabulary/relators/art.html">MARC</a>]</a:documentation>
+         <value>aus</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(screenwriter) An author of a screenplay, script, or scene. [<a xmlns="http://www.w3.org/1999/xhtml"
+               xmlns:rng="http://relaxng.org/ns/structure/1.0"
+               href="http://id.loc.gov/vocabulary/relators/aus.html">MARC</a>]</a:documentation>
+         <value>chr</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(choreographer) A person responsible for creating or contributing to a work of movement. [<a xmlns="http://www.w3.org/1999/xhtml"
+               xmlns:rng="http://relaxng.org/ns/structure/1.0"
+               href="http://id.loc.gov/vocabulary/relators/chr.html">MARC</a>]</a:documentation>
+         <value>cnd</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(conductor) A performer contributing to a musical resource by leading a performing group (orchestra, chorus, opera, etc.) in a musical or dramatic presentation. [<a xmlns="http://www.w3.org/1999/xhtml"
+               xmlns:rng="http://relaxng.org/ns/structure/1.0"
+               href="http://id.loc.gov/vocabulary/relators/cnd.html">MARC</a>]</a:documentation>
+         <value>crp</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(correspondent) A person or organization who was either the writer or recipient of a letter or other communication. [<a xmlns="http://www.w3.org/1999/xhtml"
+               xmlns:rng="http://relaxng.org/ns/structure/1.0"
+               href="http://id.loc.gov/vocabulary/relators/crp.html">MARC</a>]</a:documentation>
+         <value>cst</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(costume designer) A person, family, or organization that designs the costumes for a moving image production or for a musical or dramatic presentation or entertainment. [<a xmlns="http://www.w3.org/1999/xhtml"
+               xmlns:rng="http://relaxng.org/ns/structure/1.0"
+               href="http://id.loc.gov/vocabulary/relators/cst.html">MARC</a>]</a:documentation>
+         <value>drt</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(director) A person responsible for the general management and supervision of a filmed performance, a radio or television program, etc. [<a xmlns="http://www.w3.org/1999/xhtml"
+               xmlns:rng="http://relaxng.org/ns/structure/1.0"
+               href="http://id.loc.gov/vocabulary/relators/drt.html">MARC</a>]</a:documentation>
+         <value>egr</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(engraver) A person or organization who cuts letters, figures, etc. on a surface, such as a wooden or metal plate used for printing. [<a xmlns="http://www.w3.org/1999/xhtml"
+               xmlns:rng="http://relaxng.org/ns/structure/1.0"
+               href="http://id.loc.gov/vocabulary/relators/egr.html">MARC</a>]</a:documentation>
+         <value>flm</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(film editor) A person who, following the script and in creative cooperation with the Director, selects, arranges, and assembles the filmed material, controls the synchronization of picture and sound, and participates in other post-production tasks such as sound mixing and visual effects processing. Today, picture editing is often performed digitally. [<a xmlns="http://www.w3.org/1999/xhtml"
+               xmlns:rng="http://relaxng.org/ns/structure/1.0"
+               href="http://id.loc.gov/vocabulary/relators/flm.html">MARC</a>]</a:documentation>
+         <value>fmd</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(film director) A director responsible for the general management and supervision of a filmed performance. [<a xmlns="http://www.w3.org/1999/xhtml"
+               xmlns:rng="http://relaxng.org/ns/structure/1.0"
+               href="http://id.loc.gov/vocabulary/relators/fmd.html">MARC</a>]</a:documentation>
+         <value>fmp</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(film producer) A producer responsible for most of the business aspects of a film. [<a xmlns="http://www.w3.org/1999/xhtml"
+               xmlns:rng="http://relaxng.org/ns/structure/1.0"
+               href="http://id.loc.gov/vocabulary/relators/fmp.html">MARC</a>]</a:documentation>
+         <value>itr</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(instrumentalist) A performer contributing to a resource by playing a musical instrument. [<a xmlns="http://www.w3.org/1999/xhtml"
+               xmlns:rng="http://relaxng.org/ns/structure/1.0"
+               href="http://id.loc.gov/vocabulary/relators/itr.html">MARC</a>]</a:documentation>
+         <value>mcp</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(music copyist) A person who transcribes or copies musical notation. [<a xmlns="http://www.w3.org/1999/xhtml"
+               xmlns:rng="http://relaxng.org/ns/structure/1.0"
+               href="http://id.loc.gov/vocabulary/relators/mcp.html">MARC</a>]</a:documentation>
+         <value>mus</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(musician) A person or organization who performs music or contributes to the musical content of a work when it is not possible or desirable to identify the function more precisely. [<a xmlns="http://www.w3.org/1999/xhtml"
+               xmlns:rng="http://relaxng.org/ns/structure/1.0"
+               href="http://id.loc.gov/vocabulary/relators/mus.html">MARC</a>]</a:documentation>
+         <value>msd</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(musical director) A person who coordinates the activities of the composer, the sound editor, and sound mixers for a moving image production or for a musical or dramatic presentation or entertainment. [<a xmlns="http://www.w3.org/1999/xhtml"
+               xmlns:rng="http://relaxng.org/ns/structure/1.0"
+               href="http://id.loc.gov/vocabulary/relators/msd.html">MARC</a>]</a:documentation>
+         <value>pdr</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(project director) A person or organization with primary responsibility for all essential aspects of a project, has overall responsibility for managing projects, or provides overall direction to a project manager. [<a xmlns="http://www.w3.org/1999/xhtml"
+               xmlns:rng="http://relaxng.org/ns/structure/1.0"
+               href="http://id.loc.gov/vocabulary/relators/pdr.html">MARC</a>]</a:documentation>
+         <value>pmn</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(production manager) A person responsible for all technical and business matters in a production. [<a xmlns="http://www.w3.org/1999/xhtml"
+               xmlns:rng="http://relaxng.org/ns/structure/1.0"
+               href="http://id.loc.gov/vocabulary/relators/pmn.html">MARC</a>]</a:documentation>
+         <value>prn</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(production company) An organization that is responsible for financial, technical, and organizational management of a production for stage, screen, audio recording, television, webcast, etc. [<a xmlns="http://www.w3.org/1999/xhtml"
+               xmlns:rng="http://relaxng.org/ns/structure/1.0"
+               href="http://id.loc.gov/vocabulary/relators/prn.html">MARC</a>]</a:documentation>
+         <value>pro</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(producer) A person, family, or organization responsible for most of the business aspects of a production for screen, audio recording, television, webcast, etc. The producer is generally responsible for fund raising, managing the production, hiring key personnel, arranging for distributors, etc. [<a xmlns="http://www.w3.org/1999/xhtml"
+               xmlns:rng="http://relaxng.org/ns/structure/1.0"
+               href="http://id.loc.gov/vocabulary/relators/pro.html">MARC</a>]</a:documentation>
+         <value>rce</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(recording engineer) A person contributing to a resource by supervising the technical aspects of a sound or video recording session. [<a xmlns="http://www.w3.org/1999/xhtml"
+               xmlns:rng="http://relaxng.org/ns/structure/1.0"
+               href="http://id.loc.gov/vocabulary/relators/rce.html">MARC</a>]</a:documentation>
+         <value>scr</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(scribe) A person who is an amanuensis and for a writer of manuscripts proper. For a person who makes pen-facsimiles, use facsimilist. [<a xmlns="http://www.w3.org/1999/xhtml"
+               xmlns:rng="http://relaxng.org/ns/structure/1.0"
+               href="http://id.loc.gov/vocabulary/relators/scr.html">MARC</a>]</a:documentation>
+         <value>sng</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(singer) A performer contributing to a resource by using his/her/their voice, with or without instrumental accompaniment, to produce music. A singer's performance may or may not include actual words. [<a xmlns="http://www.w3.org/1999/xhtml"
+               xmlns:rng="http://relaxng.org/ns/structure/1.0"
+               href="http://id.loc.gov/vocabulary/relators/sng.html">MARC</a>]</a:documentation>
+         <value>std</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(set designer) A person who translates the rough sketches of the art director into actual architectural structures for a theatrical presentatio.n, entertainment, motion picture, etc. Set designers draw the detailed guides and specifications for building the set. [<a xmlns="http://www.w3.org/1999/xhtml"
+               xmlns:rng="http://relaxng.org/ns/structure/1.0"
+               href="http://id.loc.gov/vocabulary/relators/std.html">MARC</a>]</a:documentation>
+         <value>trc</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(transcriber) A person, family, or organization contributing to a resource by changing it from one system of notation to another. For a work transcribed for a different instrument or performing group, see arranger [arr]. For makers of pen-facsimiles, use facsimilist. [<a xmlns="http://www.w3.org/1999/xhtml"
+               xmlns:rng="http://relaxng.org/ns/structure/1.0"
+               href="http://id.loc.gov/vocabulary/relators/trc.html">MARC</a>]</a:documentation>
+         <value>trl</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(translator) A person or organization who renders a text from one language into another, or from an older form of a language into the modern form. [<a xmlns="http://www.w3.org/1999/xhtml"
+               xmlns:rng="http://relaxng.org/ns/structure/1.0"
+               href="http://id.loc.gov/vocabulary/relators/trl.html">MARC</a>]</a:documentation>
+      </choice>
+   </define>
+   <define name="mei_data.RELATORS">
+      <choice>
+         <ref name="mei_data.MARCRELATORS.basic"/>
+         <ref name="mei_data.MARCRELATORS.extended"/>
+         <ref name="mei_data.NMTOKEN"/>
+      </choice>
+   </define>
    <define name="mei_data.COURSENUMBER">
       <data type="positiveInteger"/>
    </define>
@@ -12708,9 +12859,12 @@ Suggested values include: 1] smufl</a:documentation>
          <oneOrMore>
             <ref name="mei_model.titleLike"/>
          </oneOrMore>
-         <zeroOrMore>
-            <ref name="mei_model.respLikePart"/>
-         </zeroOrMore>
+         <optional>
+            <ref name="mei_respStmt"/>
+         </optional>
+         <optional>
+            <ref name="mei_dedication"/>
+         </optional>
          <zeroOrMore>
             <ref name="mei_model.workIdent"/>
          </zeroOrMore>
@@ -12792,6 +12946,9 @@ Suggested values include: 1] smufl</a:documentation>
             <ref name="mei_model.identifierLike"/>
          </zeroOrMore>
          <optional>
+            <ref name="mei_dedication"/>
+         </optional>
+         <optional>
             <ref name="mei_availability"/>
          </optional>
          <optional>
@@ -12857,6 +13014,9 @@ Suggested values include: 1] smufl</a:documentation>
          </zeroOrMore>
          <optional>
             <ref name="mei_titleStmt"/>
+         </optional>
+         <optional>
+            <ref name="mei_dedication"/>
          </optional>
          <ref name="mei_macro.bibldescPart"/>
          <optional>
@@ -16064,9 +16224,12 @@ Suggested values include: 1] glue; 2] thread; 3] needle; 4] tape; 5] staple</a:d
          <oneOrMore>
             <ref name="mei_model.titleLike"/>
          </oneOrMore>
-         <zeroOrMore>
-            <ref name="mei_model.respLikePart"/>
-         </zeroOrMore>
+         <optional>
+            <ref name="mei_respStmt"/>
+         </optional>
+         <optional>
+            <ref name="mei_dedication"/>
+         </optional>
          <zeroOrMore>
             <ref name="mei_model.workIdent"/>
          </zeroOrMore>
@@ -20473,7 +20636,11 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
       <optional>
          <attribute name="role">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Used to specify further information about the entity referenced by this name, for example, the occupation of a person or the status of a place.</a:documentation>
-            <text/>
+            <list>
+               <oneOrMore>
+                  <ref name="mei_data.RELATORS"/>
+               </oneOrMore>
+            </list>
          </attribute>
       </optional>
    </define>
@@ -23414,65 +23581,41 @@ Suggested values include: 1] smufl</a:documentation>
    </define>
    <define name="mei_model.respLikePart">
       <choice>
-         <ref name="mei_arranger"/>
-         <ref name="mei_author"/>
-         <ref name="mei_composer"/>
          <ref name="mei_contributor"/>
+         <ref name="mei_creator"/>
          <ref name="mei_editor"/>
          <ref name="mei_funder"/>
-         <ref name="mei_librettist"/>
-         <ref name="mei_lyricist"/>
          <ref name="mei_sponsor"/>
       </choice>
    </define>
    <define name="mei_model.respLikePart_alternation">
       <choice>
-         <ref name="mei_arranger"/>
-         <ref name="mei_author"/>
-         <ref name="mei_composer"/>
          <ref name="mei_contributor"/>
+         <ref name="mei_creator"/>
          <ref name="mei_editor"/>
          <ref name="mei_funder"/>
-         <ref name="mei_librettist"/>
-         <ref name="mei_lyricist"/>
          <ref name="mei_sponsor"/>
       </choice>
    </define>
    <define name="mei_model.respLikePart_sequence">
-      <ref name="mei_arranger"/>
-      <ref name="mei_author"/>
-      <ref name="mei_composer"/>
       <ref name="mei_contributor"/>
+      <ref name="mei_creator"/>
       <ref name="mei_editor"/>
       <ref name="mei_funder"/>
-      <ref name="mei_librettist"/>
-      <ref name="mei_lyricist"/>
       <ref name="mei_sponsor"/>
    </define>
    <define name="mei_model.respLikePart_sequenceOptional">
       <optional>
-         <ref name="mei_arranger"/>
-      </optional>
-      <optional>
-         <ref name="mei_author"/>
-      </optional>
-      <optional>
-         <ref name="mei_composer"/>
-      </optional>
-      <optional>
          <ref name="mei_contributor"/>
+      </optional>
+      <optional>
+         <ref name="mei_creator"/>
       </optional>
       <optional>
          <ref name="mei_editor"/>
       </optional>
       <optional>
          <ref name="mei_funder"/>
-      </optional>
-      <optional>
-         <ref name="mei_librettist"/>
-      </optional>
-      <optional>
-         <ref name="mei_lyricist"/>
       </optional>
       <optional>
          <ref name="mei_sponsor"/>
@@ -23480,28 +23623,16 @@ Suggested values include: 1] smufl</a:documentation>
    </define>
    <define name="mei_model.respLikePart_sequenceOptionalRepeatable">
       <zeroOrMore>
-         <ref name="mei_arranger"/>
-      </zeroOrMore>
-      <zeroOrMore>
-         <ref name="mei_author"/>
-      </zeroOrMore>
-      <zeroOrMore>
-         <ref name="mei_composer"/>
-      </zeroOrMore>
-      <zeroOrMore>
          <ref name="mei_contributor"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="mei_creator"/>
       </zeroOrMore>
       <zeroOrMore>
          <ref name="mei_editor"/>
       </zeroOrMore>
       <zeroOrMore>
          <ref name="mei_funder"/>
-      </zeroOrMore>
-      <zeroOrMore>
-         <ref name="mei_librettist"/>
-      </zeroOrMore>
-      <zeroOrMore>
-         <ref name="mei_lyricist"/>
       </zeroOrMore>
       <zeroOrMore>
          <ref name="mei_sponsor"/>
@@ -23509,28 +23640,16 @@ Suggested values include: 1] smufl</a:documentation>
    </define>
    <define name="mei_model.respLikePart_sequenceRepeatable">
       <oneOrMore>
-         <ref name="mei_arranger"/>
-      </oneOrMore>
-      <oneOrMore>
-         <ref name="mei_author"/>
-      </oneOrMore>
-      <oneOrMore>
-         <ref name="mei_composer"/>
-      </oneOrMore>
-      <oneOrMore>
          <ref name="mei_contributor"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="mei_creator"/>
       </oneOrMore>
       <oneOrMore>
          <ref name="mei_editor"/>
       </oneOrMore>
       <oneOrMore>
          <ref name="mei_funder"/>
-      </oneOrMore>
-      <oneOrMore>
-         <ref name="mei_librettist"/>
-      </oneOrMore>
-      <oneOrMore>
-         <ref name="mei_lyricist"/>
       </oneOrMore>
       <oneOrMore>
          <ref name="mei_sponsor"/>
@@ -23703,7 +23822,6 @@ Suggested values include: 1] smufl</a:documentation>
          <ref name="mei_model.relationLike"/>
          <ref name="mei_model.rendLike"/>
          <ref name="mei_model.titleLike"/>
-         <ref name="mei_dedicatee"/>
          <ref name="mei_dimensions"/>
          <ref name="mei_extent"/>
          <ref name="mei_symbol"/>
@@ -23732,7 +23850,6 @@ Suggested values include: 1] smufl</a:documentation>
          <ref name="mei_model.relationLike_alternation"/>
          <ref name="mei_model.rendLike_alternation"/>
          <ref name="mei_model.titleLike_alternation"/>
-         <ref name="mei_dedicatee"/>
          <ref name="mei_dimensions"/>
          <ref name="mei_extent"/>
          <ref name="mei_symbol"/>
@@ -23760,7 +23877,6 @@ Suggested values include: 1] smufl</a:documentation>
       <ref name="mei_model.relationLike_sequence"/>
       <ref name="mei_model.rendLike_sequence"/>
       <ref name="mei_model.titleLike_sequence"/>
-      <ref name="mei_dedicatee"/>
       <ref name="mei_dimensions"/>
       <ref name="mei_extent"/>
       <ref name="mei_symbol"/>
@@ -23822,9 +23938,6 @@ Suggested values include: 1] smufl</a:documentation>
       </optional>
       <optional>
          <ref name="mei_model.titleLike_sequenceOptional"/>
-      </optional>
-      <optional>
-         <ref name="mei_dedicatee"/>
       </optional>
       <optional>
          <ref name="mei_dimensions"/>
@@ -23901,9 +24014,6 @@ Suggested values include: 1] smufl</a:documentation>
          <ref name="mei_model.titleLike_sequenceOptionalRepeatable"/>
       </zeroOrMore>
       <zeroOrMore>
-         <ref name="mei_dedicatee"/>
-      </zeroOrMore>
-      <zeroOrMore>
          <ref name="mei_dimensions"/>
       </zeroOrMore>
       <zeroOrMore>
@@ -23976,9 +24086,6 @@ Suggested values include: 1] smufl</a:documentation>
       </oneOrMore>
       <oneOrMore>
          <ref name="mei_model.titleLike_sequenceRepeatable"/>
-      </oneOrMore>
-      <oneOrMore>
-         <ref name="mei_dedicatee"/>
       </oneOrMore>
       <oneOrMore>
          <ref name="mei_dimensions"/>
@@ -24221,23 +24328,6 @@ Suggested values include: 1] smufl</a:documentation>
          <empty/>
       </element>
    </define>
-   <define name="mei_arranger">
-      <element name="arranger">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A person or organization who transcribes a musical composition, usually for a different medium from that of the original; in an arrangement the musical substance remains essentially unchanged.</a:documentation>
-         <zeroOrMore>
-            <choice>
-               <text/>
-               <ref name="mei_model.textPhraseLike.limited"/>
-            </choice>
-         </zeroOrMore>
-         <ref name="mei_att.common.attributes"/>
-         <ref name="mei_att.bibl.attributes"/>
-         <ref name="mei_att.evidence.attributes"/>
-         <ref name="mei_att.facsimile.attributes"/>
-         <ref name="mei_att.lang.attributes"/>
-         <empty/>
-      </element>
-   </define>
    <define name="mei_artic">
       <element name="artic">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(articulation) An indication of how to play a note or chord.</a:documentation>
@@ -24248,23 +24338,6 @@ Suggested values include: 1] smufl</a:documentation>
          <ref name="mei_att.artic.ges.attributes"/>
          <ref name="mei_att.artic.log.attributes"/>
          <ref name="mei_att.artic.vis.attributes"/>
-         <empty/>
-      </element>
-   </define>
-   <define name="mei_author">
-      <element name="author">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The name of the creator of the intellectual content of a non-musical, literary work.</a:documentation>
-         <zeroOrMore>
-            <choice>
-               <text/>
-               <ref name="mei_model.textPhraseLike.limited"/>
-            </choice>
-         </zeroOrMore>
-         <ref name="mei_att.common.attributes"/>
-         <ref name="mei_att.bibl.attributes"/>
-         <ref name="mei_att.evidence.attributes"/>
-         <ref name="mei_att.facsimile.attributes"/>
-         <ref name="mei_att.lang.attributes"/>
          <empty/>
       </element>
    </define>
@@ -24628,23 +24701,6 @@ Suggested values include: 1] smufl</a:documentation>
          <empty/>
       </element>
    </define>
-   <define name="mei_composer">
-      <element name="composer">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The name of the creator of the intellectual content of a musical work.</a:documentation>
-         <zeroOrMore>
-            <choice>
-               <text/>
-               <ref name="mei_model.textPhraseLike.limited"/>
-            </choice>
-         </zeroOrMore>
-         <ref name="mei_att.common.attributes"/>
-         <ref name="mei_att.bibl.attributes"/>
-         <ref name="mei_att.evidence.attributes"/>
-         <ref name="mei_att.facsimile.attributes"/>
-         <ref name="mei_att.lang.attributes"/>
-         <empty/>
-      </element>
-   </define>
    <define name="mei_contributor">
       <element name="contributor">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Names of individuals, institutions, or organizations responsible for contributions to the intellectual content of a work, where the specialized elements for authors, editors, etc. do not suffice or do not apply.</a:documentation>
@@ -24654,28 +24710,21 @@ Suggested values include: 1] smufl</a:documentation>
                <ref name="mei_model.textPhraseLike.limited"/>
             </choice>
          </zeroOrMore>
-         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-cmn-contributor-check_contributor_role-constraint-rule-142">
-            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:xi="http://www.w3.org/2001/XInclude"
-                      context="mei:contributor">
-               <sch:assert test="not(matches(normalize-space(lower-case(@role)), '(arranger|author|composer|contributor|editor|funder|librettist|lyricist|sponsor)'))">The value of @role must not contain the name of another element available in this
-            context.</sch:assert>
-            </sch:rule>
-         </pattern>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.bibl.attributes"/>
          <ref name="mei_att.evidence.attributes"/>
          <ref name="mei_att.facsimile.attributes"/>
          <ref name="mei_att.lang.attributes"/>
-         <optional>
-            <attribute name="role">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Used to specify the contributor’s function.</a:documentation>
-               <text/>
-            </attribute>
-         </optional>
+         <ref name="mei_att.name.attribute.role"/>
+         <ref name="mei_att.authorized.attribute.auth"/>
+         <ref name="mei_att.authorized.attribute.auth.uri"/>
+         <ref name="mei_att.canonical.attribute.codedval"/>
+         <ref name="mei_att.datable.attribute.enddate"/>
+         <ref name="mei_att.datable.attribute.isodate"/>
+         <ref name="mei_att.datable.attribute.notafter"/>
+         <ref name="mei_att.datable.attribute.notbefore"/>
+         <ref name="mei_att.datable.attribute.startdate"/>
+         <ref name="mei_att.filing.attribute.nonfiling"/>
          <empty/>
       </element>
    </define>
@@ -24688,7 +24737,6 @@ Suggested values include: 1] smufl</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
-               <ref name="mei_dedication"/>
                <ref name="mei_model.textPhraseLike.limited"/>
             </choice>
          </zeroOrMore>
@@ -24697,6 +24745,34 @@ Suggested values include: 1] smufl</a:documentation>
          <ref name="mei_att.datable.attributes"/>
          <ref name="mei_att.facsimile.attributes"/>
          <ref name="mei_att.lang.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_creator">
+      <element name="creator">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Names of individuals, institutions, or organizations responsible for the creation of the intellectual content of a work, e.g., authors, composers, etc. (context based also lyricists and librettist).</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="mei_model.nameLike.agent"/>
+               <ref name="mei_name"/>
+            </choice>
+         </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <ref name="mei_att.evidence.attributes"/>
+         <ref name="mei_att.facsimile.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
+         <ref name="mei_att.name.attribute.role"/>
+         <ref name="mei_att.authorized.attribute.auth"/>
+         <ref name="mei_att.authorized.attribute.auth.uri"/>
+         <ref name="mei_att.canonical.attribute.codedval"/>
+         <ref name="mei_att.datable.attribute.enddate"/>
+         <ref name="mei_att.datable.attribute.isodate"/>
+         <ref name="mei_att.datable.attribute.notafter"/>
+         <ref name="mei_att.datable.attribute.notbefore"/>
+         <ref name="mei_att.datable.attribute.startdate"/>
+         <ref name="mei_att.filing.attribute.nonfiling"/>
          <empty/>
       </element>
    </define>
@@ -24730,33 +24806,6 @@ Suggested values include: 1] smufl</a:documentation>
          <ref name="mei_att.calendared.attributes"/>
          <ref name="mei_att.datable.attributes"/>
          <ref name="mei_att.edit.attributes"/>
-         <ref name="mei_att.facsimile.attributes"/>
-         <ref name="mei_att.lang.attributes"/>
-         <empty/>
-      </element>
-   </define>
-   <define name="mei_dedicatee">
-      <element name="dedicatee">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Entity to whom a creative work is formally offered.</a:documentation>
-         <zeroOrMore>
-            <choice>
-               <text/>
-               <ref name="mei_model.textPhraseLike.limited"/>
-            </choice>
-         </zeroOrMore>
-         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-cmn-dedicatee-check_dedicatee-constraint-rule-143">
-            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:xi="http://www.w3.org/2001/XInclude"
-                      context="mei:dedicatee">
-               <sch:assert test="not(ancestor::mei:dedicatee)">The dedicatee element may not be
-            recursively nested.</sch:assert>
-            </sch:rule>
-         </pattern>
-         <ref name="mei_att.common.attributes"/>
-         <ref name="mei_att.bibl.attributes"/>
          <ref name="mei_att.facsimile.attributes"/>
          <ref name="mei_att.lang.attributes"/>
          <empty/>
@@ -24847,7 +24896,7 @@ Suggested values include: 1] alt; 2] angle; 3] circum; 4] depth; 5] diameter; 6]
          <ref name="mei_macro.struc-unstrucContent"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-cmn-dimensions-check_dimensions-constraint-rule-144">
+                  id="mei-cmn-dimensions-check_dimensions-constraint-rule-142">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -24885,7 +24934,7 @@ Suggested values include: 1] alt; 2] angle; 3] circum; 4] depth; 5] diameter; 6]
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-cmn-dir-dir_start-type_attributes_required-constraint-rule-145">
+                  id="mei-cmn-dir-dir_start-type_attributes_required-constraint-rule-143">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -25013,7 +25062,7 @@ Suggested values include: 1] abstract; 2] ack; 3] appendix; 4] bibliography; 5] 
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-cmn-dynam-dynam_start-type_attributes_required-constraint-rule-146">
+                  id="mei-cmn-dynam-dynam_start-type_attributes_required-constraint-rule-144">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -25024,7 +25073,7 @@ Suggested values include: 1] abstract; 2] ack; 3] appendix; 4] bibliography; 5] 
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-cmn-dynam-dynam_end-type_attributes-constraint-rule-147">
+                  id="mei-cmn-dynam-dynam_end-type_attributes-constraint-rule-145">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -25285,7 +25334,7 @@ Suggested values include: 1] abstract; 2] ack; 3] appendix; 4] bibliography; 5] 
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-cmn-grpSym-check_grpSym_attributes_scoreDef-constraint-rule-148">
+                  id="mei-cmn-grpSym-check_grpSym_attributes_scoreDef-constraint-rule-146">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -25296,7 +25345,7 @@ Suggested values include: 1] abstract; 2] ack; 3] appendix; 4] bibliography; 5] 
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-cmn-grpSym-check_grpSym_attributes_staffDef-constraint-rule-149">
+                  id="mei-cmn-grpSym-check_grpSym_attributes_staffDef-constraint-rule-147">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -25437,7 +25486,7 @@ Suggested values include: 1] abstract; 2] ack; 3] appendix; 4] bibliography; 5] 
          <empty/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-cmn-keyAccid-Check_keyAccidPlacement-constraint-rule-150">
+                  id="mei-cmn-keyAccid-Check_keyAccidPlacement-constraint-rule-148">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -25477,7 +25526,7 @@ Suggested values include: 1] abstract; 2] ack; 3] appendix; 4] bibliography; 5] 
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-cmn-keySig-check_keyAccid_oct-constraint-rule-151">
+                  id="mei-cmn-keySig-check_keyAccid_oct-constraint-rule-149">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -25489,7 +25538,7 @@ Suggested values include: 1] abstract; 2] ack; 3] appendix; 4] bibliography; 5] 
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-cmn-keySig-check_keySig_editorial-constraint-rule-152">
+                  id="mei-cmn-keySig-check_keySig_editorial-constraint-rule-150">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -25640,40 +25689,6 @@ Suggested values include: 1] abstract; 2] ack; 3] appendix; 4] bibliography; 5] 
          <empty/>
       </element>
    </define>
-   <define name="mei_librettist">
-      <element name="librettist">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Person or organization who is a writer of the text of an opera, oratorio, etc.</a:documentation>
-         <zeroOrMore>
-            <choice>
-               <text/>
-               <ref name="mei_model.textPhraseLike.limited"/>
-            </choice>
-         </zeroOrMore>
-         <ref name="mei_att.common.attributes"/>
-         <ref name="mei_att.bibl.attributes"/>
-         <ref name="mei_att.evidence.attributes"/>
-         <ref name="mei_att.facsimile.attributes"/>
-         <ref name="mei_att.lang.attributes"/>
-         <empty/>
-      </element>
-   </define>
-   <define name="mei_lyricist">
-      <element name="lyricist">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Person or organization who is a writer of the text of a song.</a:documentation>
-         <zeroOrMore>
-            <choice>
-               <text/>
-               <ref name="mei_model.textPhraseLike.limited"/>
-            </choice>
-         </zeroOrMore>
-         <ref name="mei_att.common.attributes"/>
-         <ref name="mei_att.bibl.attributes"/>
-         <ref name="mei_att.evidence.attributes"/>
-         <ref name="mei_att.facsimile.attributes"/>
-         <ref name="mei_att.lang.attributes"/>
-         <empty/>
-      </element>
-   </define>
    <define name="mei_mdiv">
       <element name="mdiv">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(musical division) Contains a subdivision of the body of a musical text.</a:documentation>
@@ -25707,7 +25722,7 @@ Suggested values include: 1] abstract; 2] ack; 3] appendix; 4] bibliography; 5] 
          <ref name="mei_music"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-cmn-mei-Check_staff-constraint-rule-153">
+                  id="mei-cmn-mei-Check_staff-constraint-rule-151">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -25729,9 +25744,15 @@ Suggested values include: 1] abstract; 2] ack; 3] appendix; 4] bibliography; 5] 
             <optional>
                <choice>
                   <group>
-                     <ref name="mei_model.respLikePart"/>
+                     <choice>
+                        <ref name="mei_model.respLikePart"/>
+                        <ref name="mei_respStmt"/>
+                     </choice>
                      <zeroOrMore>
-                        <ref name="mei_model.respLike"/>
+                        <choice>
+                           <ref name="mei_model.respLikePart"/>
+                           <ref name="mei_respStmt"/>
+                        </choice>
                      </zeroOrMore>
                      <oneOrMore>
                         <ref name="mei_model.titleLike"/>
@@ -25750,7 +25771,7 @@ Suggested values include: 1] abstract; 2] ack; 3] appendix; 4] bibliography; 5] 
                      </oneOrMore>
                      <zeroOrMore>
                         <choice>
-                           <ref name="mei_model.respLike"/>
+                           <ref name="mei_model.respLikePart"/>
                            <ref name="mei_model.identifierLike"/>
                         </choice>
                      </zeroOrMore>
@@ -25816,7 +25837,7 @@ Suggested values include: 1] abstract; 2] ack; 3] appendix; 4] bibliography; 5] 
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-cmn-name-nameParts-constraint-rule-154">
+                  id="mei-cmn-name-nameParts-constraint-rule-152">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -25921,7 +25942,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-cmn-ornam-ornam_start-type_attributes_required-constraint-rule-155">
+                  id="mei-cmn-ornam-ornam_start-type_attributes_required-constraint-rule-153">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -26093,7 +26114,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-cmn-phrase-phrase_start-_and_end-type_attributes_required-constraint-rule-156">
+                  id="mei-cmn-phrase-phrase_start-_and_end-type_attributes_required-constraint-rule-154">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -26106,7 +26127,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-cmn-phrase-phrase_containing_curve-constraint-rule-157">
+                  id="mei-cmn-phrase-phrase_containing_curve-constraint-rule-155">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -26227,7 +26248,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          <empty/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-cmn-relation-FRBR_relation-constraint-rule-158">
+                  id="mei-cmn-relation-FRBR_relation-constraint-rule-156">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -26339,7 +26360,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
    </define>
    <define name="mei_respStmt">
       <element name="respStmt">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(responsibility statement) Transcription of text that names one or more individuals, groups, or in rare cases, mechanical processes, responsible for creation, realization, production, funding, or distribution of the intellectual or artistic content.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(responsibility statement) Names one or more individuals, groups, or in rare cases, mechanical processes, responsible for creation, realization, production, funding, or distribution of the intellectual or artistic content.</a:documentation>
          <zeroOrMore>
             <ref name="mei_model.headLike"/>
          </zeroOrMore>
@@ -26376,6 +26397,27 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          <zeroOrMore>
             <ref name="mei_annot"/>
          </zeroOrMore>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="mei-cmn-respStmt-check_respStmt-constraint-rule-157">
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
+                      context="mei:respStmt[not(ancestor::mei:change) and not(ancestor::mei:work)]">
+               <sch:assert test="(mei:resp and (mei:name or mei:corpName or mei:persName)) or             count(mei:*[@role]) = count(mei:*) and count(mei:*) &gt; 0"
+                           role="warning">At least one element pair (a resp element and a name-like element) is
+            recommended. Alternatively, each name-like element may have a @role
+            attribute.</sch:assert>
+            </sch:rule>
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
+                      context="mei:respStmt[ancestor::mei:work]">
+               <sch:report test="count(mei:*[@role]) &lt; count(mei:*) or count(mei:*) = 0"
+                           role="warning">Name-like elements with a @role are recommended here.</sch:report>
+               <sch:report test="mei:resp" role="warning">Name-like elements with a @role are recommended here (instead of resp).</sch:report>
+            </sch:rule>
+         </pattern>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.bibl.attributes"/>
          <ref name="mei_att.facsimile.attributes"/>
