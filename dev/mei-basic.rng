@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2025-08-13T14:21:21Z. . 
+Schema generated from ODD source 2025-08-21T16:16:21Z. . 
 TEI Edition: MEI 6.0-dev 
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -3933,12 +3933,60 @@ Suggested values include: 1] smufl</a:documentation>
          <empty/>
       </element>
    </define>
+   <define name="mei_appInfo">
+      <element name="appInfo">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(application information) Groups information about applications which have acted upon the MEI file.</a:documentation>
+         <zeroOrMore>
+            <ref name="mei_model.headLike"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="mei_application"/>
+         </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_application">
+      <element name="application">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Provides information about an application which has acted upon the current document.</a:documentation>
+         <oneOrMore>
+            <ref name="mei_name"/>
+         </oneOrMore>
+         <choice>
+            <zeroOrMore>
+               <ref name="mei_model.pLike"/>
+            </zeroOrMore>
+         </choice>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.datable.attributes"/>
+         <optional>
+            <attribute name="version">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Supplies a version number for an application, independent of its identifier or display name.</a:documentation>
+               <data type="NMTOKEN"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
    <define name="mei_availability">
       <element name="availability">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Groups elements that describe the availability of and access to a bibliographic item, including an MEI-encoded document.</a:documentation>
          <ref name="mei_macro.availabilityPart"/>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.dataPointing.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_encodingDesc">
+      <element name="encodingDesc">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(encoding description) Documents the relationship between an electronic file and the source or sources from which it was derived as well as applications used in the encoding/editing process.</a:documentation>
+         <zeroOrMore>
+            <ref name="mei_model.headLike"/>
+         </zeroOrMore>
+         <optional>
+            <ref name="mei_appInfo"/>
+         </optional>
+         <ref name="mei_att.common.attributes"/>
          <empty/>
       </element>
    </define>
@@ -3975,6 +4023,9 @@ Suggested values include: 1] smufl</a:documentation>
       <element name="meiHead">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(MEI header) (MEI header) – Supplies the descriptive and declarative metadata prefixed to every MEI-conformant text.</a:documentation>
          <ref name="mei_fileDesc"/>
+         <optional>
+            <ref name="mei_encodingDesc"/>
+         </optional>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="mei-basic-meiHead-check_meiHead_type-constraint-rule-38">
@@ -6291,17 +6342,20 @@ Suggested values include: 1] smufl</a:documentation>
       <choice>
          <ref name="mei_model.nameLike.agent"/>
          <ref name="mei_model.nameLike.place"/>
+         <ref name="mei_name"/>
       </choice>
    </define>
    <define name="mei_model.nameLike_alternation">
       <choice>
          <ref name="mei_model.nameLike.agent_alternation"/>
          <ref name="mei_model.nameLike.place_alternation"/>
+         <ref name="mei_name"/>
       </choice>
    </define>
    <define name="mei_model.nameLike_sequence">
       <ref name="mei_model.nameLike.agent_sequence"/>
       <ref name="mei_model.nameLike.place_sequence"/>
+      <ref name="mei_name"/>
    </define>
    <define name="mei_model.nameLike_sequenceOptional">
       <optional>
@@ -6309,6 +6363,9 @@ Suggested values include: 1] smufl</a:documentation>
       </optional>
       <optional>
          <ref name="mei_model.nameLike.place_sequenceOptional"/>
+      </optional>
+      <optional>
+         <ref name="mei_name"/>
       </optional>
    </define>
    <define name="mei_model.nameLike_sequenceOptionalRepeatable">
@@ -6318,6 +6375,9 @@ Suggested values include: 1] smufl</a:documentation>
       <zeroOrMore>
          <ref name="mei_model.nameLike.place_sequenceOptionalRepeatable"/>
       </zeroOrMore>
+      <zeroOrMore>
+         <ref name="mei_name"/>
+      </zeroOrMore>
    </define>
    <define name="mei_model.nameLike_sequenceRepeatable">
       <oneOrMore>
@@ -6325,6 +6385,9 @@ Suggested values include: 1] smufl</a:documentation>
       </oneOrMore>
       <oneOrMore>
          <ref name="mei_model.nameLike.place_sequenceRepeatable"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="mei_name"/>
       </oneOrMore>
    </define>
    <define name="mei_model.noteModifierLike">
@@ -6904,6 +6967,55 @@ Suggested values include: 1] smufl</a:documentation>
          <empty/>
       </element>
    </define>
+   <define name="mei_name">
+      <element name="name">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Proper noun or noun phrase.</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="mei_model.textPhraseLike"/>
+            </choice>
+         </zeroOrMore>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="mei-basic-name-nameParts-constraint-rule-64">
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
+                      context="mei:name">
+               <sch:assert role="warning" test="not(mei:geogName or mei:persName or mei:corpName)">Recommended practice is to use name elements to capture sub-parts of a generic
+            name.</sch:assert>
+            </sch:rule>
+         </pattern>
+         <ref name="mei_att.basic.attributes"/>
+         <ref name="mei_att.labelled.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
+         <ref name="mei_att.name.attributes"/>
+         <ref name="mei_att.nNumberLike.attributes"/>
+         <optional>
+            <attribute name="type">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Characterizes the name in some sense, using any convenient classification scheme or typology that employs single-token labels.
+Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5] style; 6] time</a:documentation>
+               <choice>
+                  <value>person</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A personal name.</a:documentation>
+                  <value>corporation</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Name of a corporate body.</a:documentation>
+                  <value>location</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Name of a location.</a:documentation>
+                  <value>process</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Name of a process or software application.</a:documentation>
+                  <value>style</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Name of a musical style; i.e., form, genre, technique, etc.</a:documentation>
+                  <value>time</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Name of a period of time.</a:documentation>
+                  <data type="NMTOKENS"/>
+               </choice>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
    <define name="mei_note">
       <element name="note">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A single pitched event. </a:documentation>
@@ -6932,7 +7044,7 @@ Suggested values include: 1] smufl</a:documentation>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-basic-ornam-ornam_start-type_attributes_required-constraint-rule-64">
+                  id="mei-basic-ornam-ornam_start-type_attributes_required-constraint-rule-65">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -7044,6 +7156,7 @@ Suggested values include: 1] smufl</a:documentation>
                <oneOrMore>
                   <choice>
                      <ref name="mei_model.nameLike.agent"/>
+                     <ref name="mei_name"/>
                   </choice>
                </oneOrMore>
             </oneOrMore>
@@ -7051,18 +7164,20 @@ Suggested values include: 1] smufl</a:documentation>
                <oneOrMore>
                   <choice>
                      <ref name="mei_model.nameLike.agent"/>
+                     <ref name="mei_name"/>
                   </choice>
                </oneOrMore>
             </oneOrMore>
             <oneOrMore>
                <choice>
                   <ref name="mei_model.nameLike.agent"/>
+                  <ref name="mei_name"/>
                </choice>
             </oneOrMore>
          </choice>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-basic-respStmt-check_respStmt-constraint-rule-65">
+                  id="mei-basic-respStmt-check_respStmt-constraint-rule-66">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -7163,7 +7278,7 @@ Suggested values include: 1] smufl</a:documentation>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-basic-section-Check_sectionexpansion-constraint-rule-67">
+                  id="mei-basic-section-Check_sectionexpansion-constraint-rule-68">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -7205,7 +7320,7 @@ Suggested values include: 1] smufl</a:documentation>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-basic-staff-checkStaff_n-constraint-rule-68">
+                  id="mei-basic-staff-checkStaff_n-constraint-rule-69">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -7238,7 +7353,7 @@ Suggested values include: 1] smufl</a:documentation>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-basic-staffDef-Check_staffDefn-constraint-rule-69">
+                  id="mei-basic-staffDef-Check_staffDefn-constraint-rule-70">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -7254,7 +7369,7 @@ Suggested values include: 1] smufl</a:documentation>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-basic-staffDef-Check_ancestor_staff-constraint-rule-70">
+                  id="mei-basic-staffDef-Check_ancestor_staff-constraint-rule-71">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -7266,7 +7381,7 @@ Suggested values include: 1] smufl</a:documentation>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-basic-staffDef-Check_ancestor_staff_lines-constraint-rule-71">
+                  id="mei-basic-staffDef-Check_ancestor_staff_lines-constraint-rule-72">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -7279,7 +7394,7 @@ Suggested values include: 1] smufl</a:documentation>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-basic-staffDef-Check_clef_position_staffDef-constraint-rule-72">
+                  id="mei-basic-staffDef-Check_clef_position_staffDef-constraint-rule-73">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -7290,7 +7405,7 @@ Suggested values include: 1] smufl</a:documentation>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-basic-staffDef-Check_clef_position_staffDef_nolines-constraint-rule-73">
+                  id="mei-basic-staffDef-Check_clef_position_staffDef_nolines-constraint-rule-74">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -7304,7 +7419,7 @@ Suggested values include: 1] smufl</a:documentation>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-basic-staffDef-Check_tab_strings_lines-constraint-rule-74">
+                  id="mei-basic-staffDef-Check_tab_strings_lines-constraint-rule-75">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -7317,7 +7432,7 @@ Suggested values include: 1] smufl</a:documentation>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-basic-staffDef-Check_tab_strings_nolines-constraint-rule-75">
+                  id="mei-basic-staffDef-Check_tab_strings_nolines-constraint-rule-76">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -7398,7 +7513,7 @@ Suggested values include: 1] smufl</a:documentation>
          </oneOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-basic-staffGrp-Check_staffGrp_unique_staff_n_values-constraint-rule-80">
+                  id="mei-basic-staffGrp-Check_staffGrp_unique_staff_n_values-constraint-rule-81">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -7412,7 +7527,7 @@ Suggested values include: 1] smufl</a:documentation>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-basic-staffGrp-Check_staffGrp_unique_staff_n_values-constraint-rule-81">
+                  id="mei-basic-staffGrp-Check_staffGrp_unique_staff_n_values-constraint-rule-82">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -7452,7 +7567,7 @@ Suggested values include: 1] smufl</a:documentation>
          <empty/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-basic-symbol-symbolDef_symbol_attributes_required-constraint-rule-82">
+                  id="mei-basic-symbol-symbolDef_symbol_attributes_required-constraint-rule-83">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -7480,7 +7595,7 @@ Suggested values include: 1] smufl</a:documentation>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-basic-tempo-tempo_in_header_disallow_most_attrs-constraint-rule-83">
+                  id="mei-basic-tempo-tempo_in_header_disallow_most_attrs-constraint-rule-84">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -7492,7 +7607,7 @@ Suggested values include: 1] smufl</a:documentation>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-basic-tempo-tempo_start-type_attributes_required-constraint-rule-84">
+                  id="mei-basic-tempo-tempo_start-type_attributes_required-constraint-rule-85">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -7750,7 +7865,7 @@ Suggested values include: 1] main; 2] subordinate; 3] abbreviated; 4] alternativ
          </interleave>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-basic-tabGrp-check_tabGrp_in_beam-constraint-rule-85">
+                  id="mei-basic-tabGrp-check_tabGrp_in_beam-constraint-rule-86">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"

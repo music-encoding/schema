@@ -8997,7 +8997,31 @@
     <content>
       <choice xmlns="http://relaxng.org/ns/structure/1.0"><group><zeroOrMore><ref name="model.headLike"/></zeroOrMore><zeroOrMore><choice><ref name="accessRestrict"/><ref name="distributor"/><ref name="price"/><ref name="sysReq"/><ref name="useRestrict"/><ref name="model.addressLike"/><ref name="model.dateLike"/><ref name="model.identifierLike"/></choice></zeroOrMore></group><rng:text xmlns="http://www.tei-c.org/ns/1.0"/></choice>
     </content>
-  </macroSpec><elementSpec rend="add" ident="availability" module="MEI.header"><desc xml:lang="en">Groups elements that describe the availability of and access to a bibliographic item,
+  </macroSpec><elementSpec rend="add" ident="appInfo" module="MEI.header"><gloss xml:lang="en">application information</gloss><desc xml:lang="en">Groups information about applications which have acted upon
+      the MEI file.</desc><classes>
+      <memberOf key="att.common"/>
+      
+    </classes><content>
+      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.headLike"/></zeroOrMore>
+      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="application"/></zeroOrMore>
+    </content><remarks xml:lang="en">
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-appInfo.html">appInfo</ref> element of the Text Encoding Initiative (TEI).</p>
+    </remarks></elementSpec><elementSpec rend="add" ident="application" module="MEI.header"><desc xml:lang="en">Provides information about an application which has acted upon the current
+      document.</desc><classes>
+      <memberOf key="att.common"/>
+      <memberOf key="att.datable"/>
+    </classes><content>
+      <oneOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="name"/></oneOrMore>
+      <choice xmlns="http://relaxng.org/ns/structure/1.0"><zeroOrMore><ref name="model.locrefLike"/></zeroOrMore><zeroOrMore><ref name="model.pLike"/></zeroOrMore></choice>
+    </content><attList><attDef ident="version" usage="opt">
+        <desc xml:lang="en">Supplies a version number for an application, independent of its identifier or display
+          name.</desc>
+        <datatype>
+          <rng:data type="NMTOKEN"/>
+        </datatype>
+      </attDef></attList><remarks xml:lang="en">
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-application.html">application</ref> element of the Text Encoding Initiative (TEI).</p>
+    </remarks></elementSpec><elementSpec rend="add" ident="availability" module="MEI.header"><desc xml:lang="en">Groups elements that describe the availability of and access to a bibliographic item,
       including an MEI-encoded document.</desc><classes>
       <memberOf key="att.common"/>
       
@@ -9009,6 +9033,23 @@
     </content><remarks xml:lang="en">
       <p>When used within the <gi scheme="MEI">fileDesc</gi> element, <gi scheme="MEI">availability</gi> indicates access to the MEI-encoded document itself.</p>
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-availability.html">availability</ref> element of the Text Encoding Initiative (TEI).</p>
+    </remarks></elementSpec><elementSpec rend="add" ident="encodingDesc" module="MEI.header"><gloss xml:lang="en">encoding description</gloss><desc xml:lang="en">Documents the relationship between an electronic file and the
+      source or sources from which it was derived as well as applications used in the
+      encoding/editing process.</desc><classes>
+      <memberOf key="att.common"/>
+      
+      
+    </classes><content>
+      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.headLike"/></zeroOrMore>
+      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="appInfo"/></optional>
+      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="editorialDecl"/></optional>
+      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="projectDesc"/></optional>
+      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="samplingDecl"/></optional>
+      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="domainsDecl"/></zeroOrMore>
+      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="tagsDecl"/></optional>
+      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="classDecls"/></optional>
+    </content><remarks xml:lang="en">
+      <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-encodingDesc.html">encodingDesc</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="fileDesc" module="MEI.header"><gloss xml:lang="en">file description</gloss><desc rend="replace">(file description) – Contains a full bibliographic description of the MEI file.</desc><classes><memberOf key="att.common"/></classes><content><ref xmlns="http://relaxng.org/ns/structure/1.0" name="titleStmt"/><ref xmlns="http://relaxng.org/ns/structure/1.0" name="pubStmt"/></content><attList org="group"><attDef ident="corresp" usage="opt">
                             <desc>Used to point to other elements that correspond to this one in a generic fashion.</desc>
                             <datatype maxOccurs="unbounded" minOccurs="1">
@@ -9026,7 +9067,7 @@
                     </remarks><remarks>
                         <p part="N">This element is modelled on elements in the Text Encoding Initiative (TEI) and Encoded Archival Description (EAD) standards.</p>
                     </remarks></elementSpec><elementSpec rend="add" ident="meiHead" module="MEI.header"><gloss xml:lang="en">MEI header</gloss><desc rend="replace">(MEI header) – Supplies the descriptive and declarative metadata prefixed to every
-                        MEI-conformant text.</desc><classes><memberOf key="att.basic"/><memberOf key="att.labelled"/><memberOf key="att.lang"/></classes><content><ref xmlns="http://relaxng.org/ns/structure/1.0" name="fileDesc"/></content><constraintSpec ident="check_meiHead_type" scheme="schematron">
+                        MEI-conformant text.</desc><classes><memberOf key="att.basic"/><memberOf key="att.labelled"/><memberOf key="att.lang"/></classes><content><ref xmlns="http://relaxng.org/ns/structure/1.0" name="fileDesc"/><optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="encodingDesc"/></optional></content><constraintSpec ident="check_meiHead_type" scheme="schematron">
       <constraint>
         <sch:rule context="mei:meiHead[@type eq 'music']">
           <sch:assert test="ancestor::mei:mei">The meiHead type attribute can have the value 'music'
@@ -11579,7 +11620,75 @@
                                 <sch:assert test="not(@endid)">An element with @tstamp2 may not have @endid as well (and vice versa).</sch:assert>
                             </sch:rule>
                         </constraint>
-                    </constraintSpec></elementSpec><elementSpec rend="add" ident="note" module="MEI.shared"><desc xml:lang="en">A single pitched event.  </desc><classes>
+                    </constraintSpec></elementSpec><elementSpec rend="add" ident="name" module="MEI.shared"><desc xml:lang="en">Proper noun or noun phrase.</desc><classes>
+      <memberOf key="att.basic"/>
+      
+      
+      
+      
+      <memberOf key="att.labelled"/>
+      <memberOf key="att.lang"/>
+      
+      <memberOf key="att.name"/>
+      <memberOf key="att.nNumberLike"/>
+      
+      
+      <memberOf key="model.nameLike"/>
+    </classes><content>
+      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike"/><ref name="model.editLike"/><ref name="model.transcriptionLike"/></choice></zeroOrMore>
+    </content><constraintSpec ident="nameParts" scheme="schematron">
+      <constraint>
+        <sch:rule context="mei:name">
+          <sch:assert role="warning" test="not(mei:geogName or mei:persName or mei:corpName)">Recommended practice is to use name elements to capture sub-parts of a generic
+            name.</sch:assert>
+        </sch:rule>
+      </constraint>
+    </constraintSpec><attList><attDef ident="type" usage="opt">
+        <desc xml:lang="en">Characterizes the name in some sense, using any convenient classification scheme or
+          typology that employs single-token labels.</desc>
+        <datatype>
+          <rng:data type="NMTOKENS"/>
+        </datatype>
+        <valList type="semi">
+          <valItem ident="person">
+            <desc xml:lang="en">A personal name.</desc>
+          </valItem>
+          <valItem ident="corporation">
+            <desc xml:lang="en">Name of a corporate body.</desc>
+          </valItem>
+          <valItem ident="location">
+            <desc xml:lang="en">Name of a location.</desc>
+          </valItem>
+          <valItem ident="process">
+            <desc xml:lang="en">Name of a process or software application.</desc>
+          </valItem>
+          <valItem ident="style">
+            <desc xml:lang="en">Name of a musical style; <abbr>i.e.</abbr>, form, genre, technique, etc.</desc>
+          </valItem>
+          <valItem ident="time">
+            <desc xml:lang="en">Name of a period of time.</desc>
+          </valItem>
+        </valList>
+      </attDef></attList><remarks xml:lang="en">
+      <p>Contains the name of an entity that is difficult to tag more specifically, for example, as
+        a <gi scheme="MEI">corpName</gi>, <gi scheme="MEI">geogName</gi>, <gi scheme="MEI">persName</gi>, or <gi scheme="MEI">title</gi>. The <gi scheme="MEI">name</gi> element may
+        be used in place of the more specific elements when it is not known what kind of name is
+        being described or when a high degree of precision is not necessary. For example, the <gi scheme="MEI">name</gi> element might be used when it is not clear whether the name "Bach"
+        refers to a person or a geographic feature. The <gi scheme="MEI">name</gi> element may be
+        used for an individual, such as 'Henry VIII, King of England'; a corporate body, such as
+        'The Beatles'; a geographical place; an expanse of time, such as 'The Romantic Era'; or a
+        mechanical (often generative) process. When name parts are needed, <gi scheme="MEI">name</gi> sub-elements are recommended. The recommended values for the <att>type</att>
+        attribute are: person, corporation, location, period, and process. Dates associated with
+        <emph>the name</emph> (not necessarily the same as those pertaining to the <emph>entity
+        described by the name</emph>) may be recorded using <att>startdate</att>,
+        <att>enddate</att>, <att>notbefore</att>, <att>notafter</att>, and <att>isodate</att>
+        attributes. The name of the list from which a controlled value is taken, such as the
+        Thesaurus of Geographic Names (TGN) or Library of Congress Name Authority File (LCNAF), and
+        its electronically-available location may be recorded using the <att>auth</att> and
+        <att>auth.uri</att> attributes.</p>
+    </remarks><remarks xml:lang="en">
+      <p>The model of this element is based on the <ref target="https://www.loc.gov/ead/EAD3taglib/EAD3-TL-eng.html#elem-name">name</ref> element of the Encoded Archival Description (EAD).</p>
+    </remarks></elementSpec><elementSpec rend="add" ident="note" module="MEI.shared"><desc xml:lang="en">A single pitched event.  </desc><classes>
       <memberOf key="att.common"/>
       
       
