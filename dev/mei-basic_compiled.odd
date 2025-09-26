@@ -10189,7 +10189,7 @@
     </constraintSpec><attList><attDef ident="meiversion" usage="req"><desc xml:lang="en">Specifies a generic MEI version label.</desc><valList type="closed" mode="change"><valItem ident="6.0-dev">
             <desc xml:lang="en">Version of MEI</desc>
           </valItem><valItem ident="6.0-dev+basic">
-              <desc>Version of MEI basic customization</desc>
+              <desc>Version of MEI Basic customization</desc>
           </valItem></valList></attDef></attList></classSpec><classSpec ident="att.meterConformance.bar" module="MEI.shared" type="atts" mode="replace">
                     <desc>Attributes that provide information about a measure's conformance to the prevailing
                         meter.</desc>

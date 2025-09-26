@@ -30118,11 +30118,11 @@ or
     </constraintSpec><attList><attDef ident="meiversion" usage="rec"><desc xml:lang="en">Specifies a generic MEI version label.</desc><valList type="closed" mode="change"><valItem ident="6.0-dev">
             <desc xml:lang="en">Version of MEI</desc>
           </valItem><valItem ident="6.0-dev+cmn">
-            <desc>Version of MEI cmn customization</desc>
+            <desc>Version of MEI CMN customization</desc>
           </valItem><valItem ident="6.0-dev+mensural">
-            <desc>Version of MEI mensural customization</desc>
+            <desc>Version of MEI Mensural customization</desc>
           </valItem><valItem ident="6.0-dev+neumes">
-            <desc>Version of MEI neumes customization</desc>
+            <desc>Version of MEI Neumes customization</desc>
           </valItem></valList></attDef></attList></classSpec><classSpec rend="add" ident="att.mensur.log" module="MEI.shared" type="atts">
     <desc xml:lang="en">Logical domain attributes.</desc>
     <classes>

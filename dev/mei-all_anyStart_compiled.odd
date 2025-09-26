@@ -30118,7 +30118,7 @@ or
     </constraintSpec><attList><attDef ident="meiversion" usage="rec"><desc xml:lang="en">Specifies a generic MEI version label.</desc><valList type="closed" mode="change"><valItem ident="6.0-dev">
             <desc xml:lang="en">Version of MEI</desc>
           </valItem><valItem ident="6.0-dev+anyStart">
-            <desc>Version of MEI all_anyStart customization</desc>
+            <desc>Version of MEI All AnyStart customization</desc>
           </valItem></valList></attDef></attList></classSpec><classSpec rend="add" ident="att.mensur.log" module="MEI.shared" type="atts">
     <desc xml:lang="en">Logical domain attributes.</desc>
     <classes>
