@@ -19739,10 +19739,24 @@ or
   </classSpec><classSpec rend="add" ident="att.keySig.anl" module="MEI.analytical" type="atts">
     <desc xml:lang="en">Analytical domain attributes.</desc>
     <classes>
-      <memberOf key="att.accidental"/>
-      <memberOf key="att.keyMode"/>
       <memberOf key="att.pitch"/>
     </classes>
+    <attList>
+      <attDef ident="accid" usage="opt">
+        <gloss xml:lang="en">accidental</gloss>
+        <desc xml:lang="en">Contains an accidental for the tonic key, if one is required, <abbr>e.g.</abbr>, if <att>pname</att>
+          equals <val>c</val> and <att>accid</att> equals <val>s</val>, then a tonic of C# is indicated.</desc>
+        <datatype>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.ACCIDENTAL.GESTURAL.basic"/>
+        </datatype>
+      </attDef>
+      <attDef ident="mode" usage="opt">
+        <desc xml:lang="en">Indicates major, minor, or other tonality.</desc>
+        <datatype>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.MODE"/>
+        </datatype>
+      </attDef>
+    </attList>
   </classSpec><classSpec rend="add" ident="att.keySigDefault.anl" module="MEI.analytical" type="atts">
     <desc xml:lang="en">Used by staffDef and scoreDef to provide default values for attributes in the analytical
       domain that are related to key signatures.</desc>
@@ -19751,7 +19765,7 @@ or
         <desc xml:lang="en">Contains an accidental for the tonic key, if one is required, <abbr>e.g.</abbr>, if <att>key.pname</att>
           equals <val>c</val> and <att>key.accid</att> equals <val>s</val>, then a tonic of C# is indicated.</desc>
         <datatype>
-          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.ACCIDENTAL.GESTURAL"/>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.ACCIDENTAL.GESTURAL.basic"/>
         </datatype>
       </attDef>
       <attDef ident="key.mode" usage="opt">
@@ -25314,10 +25328,8 @@ or
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-interpretation.html">interpretation</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="key" module="MEI.header"><desc xml:lang="en">Key captures information about tonal center and mode.</desc><classes>
       <memberOf key="att.common"/>
-      <memberOf key="att.accidental"/>
       <memberOf key="att.bibl"/>
-      <memberOf key="att.keyMode"/>
-      <memberOf key="att.pitch"/>
+      <memberOf key="att.keySig.anl"/>
       <memberOf key="model.workIdent"/>
     </classes><content>
       <rng:text/>
@@ -29591,16 +29603,6 @@ or
       <memberOf key="att.accidental"/>
       <memberOf key="att.pitched"/>
     </classes>
-  </classSpec><classSpec rend="add" ident="att.keyMode" module="MEI.shared" type="atts">
-    <desc xml:lang="en">Attributes for describing key mode.</desc>
-    <attList>
-      <attDef ident="mode" usage="opt">
-        <desc xml:lang="en">Indicates major, minor, or other tonality.</desc>
-        <datatype>
-          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.MODE"/>
-        </datatype>
-      </attDef>
-    </attList>
   </classSpec><classSpec rend="add" ident="att.keySig.log" module="MEI.shared" type="atts">
     <desc xml:lang="en">Logical domain attributes.</desc>
     <attList>
