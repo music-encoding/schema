@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2026-01-30T15:49:12Z. . 
+Schema generated from ODD source 2026-01-30T15:53:41Z. . 
 TEI Edition: MEI 6.0-dev 
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -12084,7 +12084,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
          <ref name="mei_att.metaMark.anl.attributes"/>
          <ref name="mei_att.pointing.attributes"/>
          <optional>
-            <attribute name="function">
+            <attribute name="func">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Describes the purpose of the metaMark.
 Suggested values include: 1] confirmation; 2] addition; 3] deletion; 4] substitution; 5] clarification; 6] question; 7] investigation; 8] restoration; 9] navigation</a:documentation>
                <choice>

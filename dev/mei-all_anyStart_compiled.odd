@@ -22768,7 +22768,7 @@ or
             attributes: startid, tstamp, tstamp.ges or tstamp.real</sch:assert>
         </sch:rule>
       </constraint>
-    </constraintSpec><attList><attDef ident="function" usage="opt">
+    </constraintSpec><attList><attDef ident="func" usage="opt">
         <desc xml:lang="en">Describes the purpose of the metaMark.</desc>
         <datatype>
           <rng:data type="NMTOKEN"/>

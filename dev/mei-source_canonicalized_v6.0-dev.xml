@@ -21,7 +21,7 @@
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../source/validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="../source/validation/mei-purify.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2026-01-30T16:48:42.054227699+01:00-->
+<!--canonicalized: 2026-01-30T16:53:11.435695014+01:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -24381,7 +24381,7 @@ or
       </constraint>
     </constraintSpec>
     <attList>
-      <attDef ident="function" usage="opt">
+      <attDef ident="func" usage="opt">
         <desc xml:lang="en">Describes the purpose of the metaMark.</desc>
         <datatype>
           <rng:data type="NMTOKEN"/>
