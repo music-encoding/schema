@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2026-01-30T15:53:35Z. . 
+Schema generated from ODD source 2026-01-30T16:28:23Z. . 
 TEI Edition: MEI 6.0-dev 
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -15420,7 +15420,7 @@ Suggested values include: 1] cut; 2] rip</a:documentation>
    </define>
    <define name="mei_foliaDesc">
       <element name="foliaDesc">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Describes the order of folia and bifolia making up the text block of a manuscript or print.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Describes the arrangement of folia and bifolia making up the text block of a manuscript or printed item.</a:documentation>
          <zeroOrMore>
             <choice>
                <ref name="mei_model.foliumLike"/>
@@ -18041,7 +18041,7 @@ Suggested values include: 1] glue; 2] thread; 3] needle; 4] tape; 5] staple</a:d
    </define>
    <define name="mei_foliation">
       <element name="foliation">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Describes the numbering system or systems used to count the leaves or pages in a codex.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Describes the numbering system or systems used to count the folios, leaves, or pages in a manuscript or printed item.</a:documentation>
          <ref name="mei_macro.struc-unstrucContent"/>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.bibl.attributes"/>
@@ -24709,6 +24709,7 @@ Suggested values include: 1] smufl</a:documentation>
    <define name="mei_model.nameLike">
       <choice>
          <ref name="mei_model.nameLike.agent"/>
+         <ref name="mei_model.nameLike.label"/>
          <ref name="mei_model.nameLike.place"/>
          <ref name="mei_name"/>
       </choice>
@@ -24716,18 +24717,23 @@ Suggested values include: 1] smufl</a:documentation>
    <define name="mei_model.nameLike_alternation">
       <choice>
          <ref name="mei_model.nameLike.agent_alternation"/>
+         <ref name="mei_model.nameLike.label_alternation"/>
          <ref name="mei_model.nameLike.place_alternation"/>
          <ref name="mei_name"/>
       </choice>
    </define>
    <define name="mei_model.nameLike_sequence">
       <ref name="mei_model.nameLike.agent_sequence"/>
+      <ref name="mei_model.nameLike.label_sequence"/>
       <ref name="mei_model.nameLike.place_sequence"/>
       <ref name="mei_name"/>
    </define>
    <define name="mei_model.nameLike_sequenceOptional">
       <optional>
          <ref name="mei_model.nameLike.agent_sequenceOptional"/>
+      </optional>
+      <optional>
+         <ref name="mei_model.nameLike.label_sequenceOptional"/>
       </optional>
       <optional>
          <ref name="mei_model.nameLike.place_sequenceOptional"/>
@@ -24741,6 +24747,9 @@ Suggested values include: 1] smufl</a:documentation>
          <ref name="mei_model.nameLike.agent_sequenceOptionalRepeatable"/>
       </zeroOrMore>
       <zeroOrMore>
+         <ref name="mei_model.nameLike.label_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+      <zeroOrMore>
          <ref name="mei_model.nameLike.place_sequenceOptionalRepeatable"/>
       </zeroOrMore>
       <zeroOrMore>
@@ -24750,6 +24759,9 @@ Suggested values include: 1] smufl</a:documentation>
    <define name="mei_model.nameLike_sequenceRepeatable">
       <oneOrMore>
          <ref name="mei_model.nameLike.agent_sequenceRepeatable"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="mei_model.nameLike.label_sequenceRepeatable"/>
       </oneOrMore>
       <oneOrMore>
          <ref name="mei_model.nameLike.place_sequenceRepeatable"/>
@@ -25296,103 +25308,137 @@ Suggested values include: 1] smufl</a:documentation>
          <ref name="mei_model.textPhraseLike.limited"/>
       </choice>
    </define>
-   <define name="mei_model.textPhraseLike.limited">
+   <define name="mei_model.textPhraseLike.bare">
+      <choice>
+         <ref name="mei_model.locrefLike"/>
+         <ref name="mei_model.lbLike"/>
+         <ref name="mei_model.rendLike"/>
+         <ref name="mei_symbol"/>
+         <ref name="mei_seg"/>
+      </choice>
+   </define>
+   <define name="mei_model.textPhraseLike.bare_alternation">
+      <choice>
+         <ref name="mei_model.locrefLike_alternation"/>
+         <ref name="mei_model.lbLike_alternation"/>
+         <ref name="mei_model.rendLike_alternation"/>
+         <ref name="mei_symbol"/>
+         <ref name="mei_seg"/>
+      </choice>
+   </define>
+   <define name="mei_model.textPhraseLike.bare_sequence">
+      <ref name="mei_model.locrefLike_sequence"/>
+      <ref name="mei_model.lbLike_sequence"/>
+      <ref name="mei_model.rendLike_sequence"/>
+      <ref name="mei_symbol"/>
+      <ref name="mei_seg"/>
+   </define>
+   <define name="mei_model.textPhraseLike.bare_sequenceOptional">
+      <optional>
+         <ref name="mei_model.locrefLike_sequenceOptional"/>
+      </optional>
+      <optional>
+         <ref name="mei_model.lbLike_sequenceOptional"/>
+      </optional>
+      <optional>
+         <ref name="mei_model.rendLike_sequenceOptional"/>
+      </optional>
+      <optional>
+         <ref name="mei_symbol"/>
+      </optional>
+      <optional>
+         <ref name="mei_seg"/>
+      </optional>
+   </define>
+   <define name="mei_model.textPhraseLike.bare_sequenceOptionalRepeatable">
+      <zeroOrMore>
+         <ref name="mei_model.locrefLike_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="mei_model.lbLike_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="mei_model.rendLike_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="mei_symbol"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="mei_seg"/>
+      </zeroOrMore>
+   </define>
+   <define name="mei_model.textPhraseLike.bare_sequenceRepeatable">
+      <oneOrMore>
+         <ref name="mei_model.locrefLike_sequenceRepeatable"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="mei_model.lbLike_sequenceRepeatable"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="mei_model.rendLike_sequenceRepeatable"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="mei_symbol"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="mei_seg"/>
+      </oneOrMore>
+   </define>
+   <define name="mei_model.textPhraseLike.basic">
       <choice>
          <ref name="mei_model.figureLike"/>
-         <ref name="mei_model.msInline"/>
-         <ref name="mei_model.addressPart"/>
-         <ref name="mei_model.nameLike.label"/>
-         <ref name="mei_model.locrefLike"/>
          <ref name="mei_model.addressLike"/>
          <ref name="mei_model.annotLike"/>
          <ref name="mei_model.biblLike"/>
          <ref name="mei_model.dateLike"/>
-         <ref name="mei_model.dimLike"/>
          <ref name="mei_model.editorialLike"/>
          <ref name="mei_model.identifierLike"/>
-         <ref name="mei_model.lbLike"/>
          <ref name="mei_model.measurementLike"/>
-         <ref name="mei_model.nameLike"/>
-         <ref name="mei_model.relationLike"/>
-         <ref name="mei_model.rendLike"/>
+         <ref name="mei_model.textPhraseLike.bare"/>
          <ref name="mei_model.titleLike"/>
          <ref name="mei_dimensions"/>
          <ref name="mei_extent"/>
-         <ref name="mei_symbol"/>
+         <ref name="mei_name"/>
          <ref name="mei_term"/>
-         <ref name="mei_model.qLike"/>
-         <ref name="mei_seg"/>
       </choice>
    </define>
-   <define name="mei_model.textPhraseLike.limited_alternation">
+   <define name="mei_model.textPhraseLike.basic_alternation">
       <choice>
          <ref name="mei_model.figureLike_alternation"/>
-         <ref name="mei_model.msInline_alternation"/>
-         <ref name="mei_model.addressPart_alternation"/>
-         <ref name="mei_model.nameLike.label_alternation"/>
-         <ref name="mei_model.locrefLike_alternation"/>
          <ref name="mei_model.addressLike_alternation"/>
          <ref name="mei_model.annotLike_alternation"/>
          <ref name="mei_model.biblLike_alternation"/>
          <ref name="mei_model.dateLike_alternation"/>
-         <ref name="mei_model.dimLike_alternation"/>
          <ref name="mei_model.editorialLike_alternation"/>
          <ref name="mei_model.identifierLike_alternation"/>
-         <ref name="mei_model.lbLike_alternation"/>
          <ref name="mei_model.measurementLike_alternation"/>
-         <ref name="mei_model.nameLike_alternation"/>
-         <ref name="mei_model.relationLike_alternation"/>
-         <ref name="mei_model.rendLike_alternation"/>
+         <ref name="mei_model.textPhraseLike.bare_alternation"/>
          <ref name="mei_model.titleLike_alternation"/>
          <ref name="mei_dimensions"/>
          <ref name="mei_extent"/>
-         <ref name="mei_symbol"/>
+         <ref name="mei_name"/>
          <ref name="mei_term"/>
-         <ref name="mei_model.qLike_alternation"/>
-         <ref name="mei_seg"/>
       </choice>
    </define>
-   <define name="mei_model.textPhraseLike.limited_sequence">
+   <define name="mei_model.textPhraseLike.basic_sequence">
       <ref name="mei_model.figureLike_sequence"/>
-      <ref name="mei_model.msInline_sequence"/>
-      <ref name="mei_model.addressPart_sequence"/>
-      <ref name="mei_model.nameLike.label_sequence"/>
-      <ref name="mei_model.locrefLike_sequence"/>
       <ref name="mei_model.addressLike_sequence"/>
       <ref name="mei_model.annotLike_sequence"/>
       <ref name="mei_model.biblLike_sequence"/>
       <ref name="mei_model.dateLike_sequence"/>
-      <ref name="mei_model.dimLike_sequence"/>
       <ref name="mei_model.editorialLike_sequence"/>
       <ref name="mei_model.identifierLike_sequence"/>
-      <ref name="mei_model.lbLike_sequence"/>
       <ref name="mei_model.measurementLike_sequence"/>
-      <ref name="mei_model.nameLike_sequence"/>
-      <ref name="mei_model.relationLike_sequence"/>
-      <ref name="mei_model.rendLike_sequence"/>
+      <ref name="mei_model.textPhraseLike.bare_sequence"/>
       <ref name="mei_model.titleLike_sequence"/>
       <ref name="mei_dimensions"/>
       <ref name="mei_extent"/>
-      <ref name="mei_symbol"/>
+      <ref name="mei_name"/>
       <ref name="mei_term"/>
-      <ref name="mei_model.qLike_sequence"/>
-      <ref name="mei_seg"/>
    </define>
-   <define name="mei_model.textPhraseLike.limited_sequenceOptional">
+   <define name="mei_model.textPhraseLike.basic_sequenceOptional">
       <optional>
          <ref name="mei_model.figureLike_sequenceOptional"/>
-      </optional>
-      <optional>
-         <ref name="mei_model.msInline_sequenceOptional"/>
-      </optional>
-      <optional>
-         <ref name="mei_model.addressPart_sequenceOptional"/>
-      </optional>
-      <optional>
-         <ref name="mei_model.nameLike.label_sequenceOptional"/>
-      </optional>
-      <optional>
-         <ref name="mei_model.locrefLike_sequenceOptional"/>
       </optional>
       <optional>
          <ref name="mei_model.addressLike_sequenceOptional"/>
@@ -25407,28 +25453,16 @@ Suggested values include: 1] smufl</a:documentation>
          <ref name="mei_model.dateLike_sequenceOptional"/>
       </optional>
       <optional>
-         <ref name="mei_model.dimLike_sequenceOptional"/>
-      </optional>
-      <optional>
          <ref name="mei_model.editorialLike_sequenceOptional"/>
       </optional>
       <optional>
          <ref name="mei_model.identifierLike_sequenceOptional"/>
       </optional>
       <optional>
-         <ref name="mei_model.lbLike_sequenceOptional"/>
-      </optional>
-      <optional>
          <ref name="mei_model.measurementLike_sequenceOptional"/>
       </optional>
       <optional>
-         <ref name="mei_model.nameLike_sequenceOptional"/>
-      </optional>
-      <optional>
-         <ref name="mei_model.relationLike_sequenceOptional"/>
-      </optional>
-      <optional>
-         <ref name="mei_model.rendLike_sequenceOptional"/>
+         <ref name="mei_model.textPhraseLike.bare_sequenceOptional"/>
       </optional>
       <optional>
          <ref name="mei_model.titleLike_sequenceOptional"/>
@@ -25440,33 +25474,15 @@ Suggested values include: 1] smufl</a:documentation>
          <ref name="mei_extent"/>
       </optional>
       <optional>
-         <ref name="mei_symbol"/>
+         <ref name="mei_name"/>
       </optional>
       <optional>
          <ref name="mei_term"/>
       </optional>
-      <optional>
-         <ref name="mei_model.qLike_sequenceOptional"/>
-      </optional>
-      <optional>
-         <ref name="mei_seg"/>
-      </optional>
    </define>
-   <define name="mei_model.textPhraseLike.limited_sequenceOptionalRepeatable">
+   <define name="mei_model.textPhraseLike.basic_sequenceOptionalRepeatable">
       <zeroOrMore>
          <ref name="mei_model.figureLike_sequenceOptionalRepeatable"/>
-      </zeroOrMore>
-      <zeroOrMore>
-         <ref name="mei_model.msInline_sequenceOptionalRepeatable"/>
-      </zeroOrMore>
-      <zeroOrMore>
-         <ref name="mei_model.addressPart_sequenceOptionalRepeatable"/>
-      </zeroOrMore>
-      <zeroOrMore>
-         <ref name="mei_model.nameLike.label_sequenceOptionalRepeatable"/>
-      </zeroOrMore>
-      <zeroOrMore>
-         <ref name="mei_model.locrefLike_sequenceOptionalRepeatable"/>
       </zeroOrMore>
       <zeroOrMore>
          <ref name="mei_model.addressLike_sequenceOptionalRepeatable"/>
@@ -25481,28 +25497,16 @@ Suggested values include: 1] smufl</a:documentation>
          <ref name="mei_model.dateLike_sequenceOptionalRepeatable"/>
       </zeroOrMore>
       <zeroOrMore>
-         <ref name="mei_model.dimLike_sequenceOptionalRepeatable"/>
-      </zeroOrMore>
-      <zeroOrMore>
          <ref name="mei_model.editorialLike_sequenceOptionalRepeatable"/>
       </zeroOrMore>
       <zeroOrMore>
          <ref name="mei_model.identifierLike_sequenceOptionalRepeatable"/>
       </zeroOrMore>
       <zeroOrMore>
-         <ref name="mei_model.lbLike_sequenceOptionalRepeatable"/>
-      </zeroOrMore>
-      <zeroOrMore>
          <ref name="mei_model.measurementLike_sequenceOptionalRepeatable"/>
       </zeroOrMore>
       <zeroOrMore>
-         <ref name="mei_model.nameLike_sequenceOptionalRepeatable"/>
-      </zeroOrMore>
-      <zeroOrMore>
-         <ref name="mei_model.relationLike_sequenceOptionalRepeatable"/>
-      </zeroOrMore>
-      <zeroOrMore>
-         <ref name="mei_model.rendLike_sequenceOptionalRepeatable"/>
+         <ref name="mei_model.textPhraseLike.bare_sequenceOptionalRepeatable"/>
       </zeroOrMore>
       <zeroOrMore>
          <ref name="mei_model.titleLike_sequenceOptionalRepeatable"/>
@@ -25514,33 +25518,15 @@ Suggested values include: 1] smufl</a:documentation>
          <ref name="mei_extent"/>
       </zeroOrMore>
       <zeroOrMore>
-         <ref name="mei_symbol"/>
+         <ref name="mei_name"/>
       </zeroOrMore>
       <zeroOrMore>
          <ref name="mei_term"/>
       </zeroOrMore>
-      <zeroOrMore>
-         <ref name="mei_model.qLike_sequenceOptionalRepeatable"/>
-      </zeroOrMore>
-      <zeroOrMore>
-         <ref name="mei_seg"/>
-      </zeroOrMore>
    </define>
-   <define name="mei_model.textPhraseLike.limited_sequenceRepeatable">
+   <define name="mei_model.textPhraseLike.basic_sequenceRepeatable">
       <oneOrMore>
          <ref name="mei_model.figureLike_sequenceRepeatable"/>
-      </oneOrMore>
-      <oneOrMore>
-         <ref name="mei_model.msInline_sequenceRepeatable"/>
-      </oneOrMore>
-      <oneOrMore>
-         <ref name="mei_model.addressPart_sequenceRepeatable"/>
-      </oneOrMore>
-      <oneOrMore>
-         <ref name="mei_model.nameLike.label_sequenceRepeatable"/>
-      </oneOrMore>
-      <oneOrMore>
-         <ref name="mei_model.locrefLike_sequenceRepeatable"/>
       </oneOrMore>
       <oneOrMore>
          <ref name="mei_model.addressLike_sequenceRepeatable"/>
@@ -25555,28 +25541,16 @@ Suggested values include: 1] smufl</a:documentation>
          <ref name="mei_model.dateLike_sequenceRepeatable"/>
       </oneOrMore>
       <oneOrMore>
-         <ref name="mei_model.dimLike_sequenceRepeatable"/>
-      </oneOrMore>
-      <oneOrMore>
          <ref name="mei_model.editorialLike_sequenceRepeatable"/>
       </oneOrMore>
       <oneOrMore>
          <ref name="mei_model.identifierLike_sequenceRepeatable"/>
       </oneOrMore>
       <oneOrMore>
-         <ref name="mei_model.lbLike_sequenceRepeatable"/>
-      </oneOrMore>
-      <oneOrMore>
          <ref name="mei_model.measurementLike_sequenceRepeatable"/>
       </oneOrMore>
       <oneOrMore>
-         <ref name="mei_model.nameLike_sequenceRepeatable"/>
-      </oneOrMore>
-      <oneOrMore>
-         <ref name="mei_model.relationLike_sequenceRepeatable"/>
-      </oneOrMore>
-      <oneOrMore>
-         <ref name="mei_model.rendLike_sequenceRepeatable"/>
+         <ref name="mei_model.textPhraseLike.bare_sequenceRepeatable"/>
       </oneOrMore>
       <oneOrMore>
          <ref name="mei_model.titleLike_sequenceRepeatable"/>
@@ -25588,16 +25562,146 @@ Suggested values include: 1] smufl</a:documentation>
          <ref name="mei_extent"/>
       </oneOrMore>
       <oneOrMore>
-         <ref name="mei_symbol"/>
+         <ref name="mei_name"/>
       </oneOrMore>
       <oneOrMore>
          <ref name="mei_term"/>
       </oneOrMore>
+   </define>
+   <define name="mei_model.textPhraseLike.limited">
+      <choice>
+         <ref name="mei_model.msInline"/>
+         <ref name="mei_model.addressPart"/>
+         <ref name="mei_model.nameLike.agent"/>
+         <ref name="mei_model.nameLike.label"/>
+         <ref name="mei_model.nameLike.place"/>
+         <ref name="mei_model.dimLike"/>
+         <ref name="mei_model.nameLike"/>
+         <ref name="mei_model.relationLike"/>
+         <ref name="mei_model.textPhraseLike.basic"/>
+         <ref name="mei_model.qLike"/>
+      </choice>
+   </define>
+   <define name="mei_model.textPhraseLike.limited_alternation">
+      <choice>
+         <ref name="mei_model.msInline_alternation"/>
+         <ref name="mei_model.addressPart_alternation"/>
+         <ref name="mei_model.nameLike.agent_alternation"/>
+         <ref name="mei_model.nameLike.label_alternation"/>
+         <ref name="mei_model.nameLike.place_alternation"/>
+         <ref name="mei_model.dimLike_alternation"/>
+         <ref name="mei_model.nameLike_alternation"/>
+         <ref name="mei_model.relationLike_alternation"/>
+         <ref name="mei_model.textPhraseLike.basic_alternation"/>
+         <ref name="mei_model.qLike_alternation"/>
+      </choice>
+   </define>
+   <define name="mei_model.textPhraseLike.limited_sequence">
+      <ref name="mei_model.msInline_sequence"/>
+      <ref name="mei_model.addressPart_sequence"/>
+      <ref name="mei_model.nameLike.agent_sequence"/>
+      <ref name="mei_model.nameLike.label_sequence"/>
+      <ref name="mei_model.nameLike.place_sequence"/>
+      <ref name="mei_model.dimLike_sequence"/>
+      <ref name="mei_model.nameLike_sequence"/>
+      <ref name="mei_model.relationLike_sequence"/>
+      <ref name="mei_model.textPhraseLike.basic_sequence"/>
+      <ref name="mei_model.qLike_sequence"/>
+   </define>
+   <define name="mei_model.textPhraseLike.limited_sequenceOptional">
+      <optional>
+         <ref name="mei_model.msInline_sequenceOptional"/>
+      </optional>
+      <optional>
+         <ref name="mei_model.addressPart_sequenceOptional"/>
+      </optional>
+      <optional>
+         <ref name="mei_model.nameLike.agent_sequenceOptional"/>
+      </optional>
+      <optional>
+         <ref name="mei_model.nameLike.label_sequenceOptional"/>
+      </optional>
+      <optional>
+         <ref name="mei_model.nameLike.place_sequenceOptional"/>
+      </optional>
+      <optional>
+         <ref name="mei_model.dimLike_sequenceOptional"/>
+      </optional>
+      <optional>
+         <ref name="mei_model.nameLike_sequenceOptional"/>
+      </optional>
+      <optional>
+         <ref name="mei_model.relationLike_sequenceOptional"/>
+      </optional>
+      <optional>
+         <ref name="mei_model.textPhraseLike.basic_sequenceOptional"/>
+      </optional>
+      <optional>
+         <ref name="mei_model.qLike_sequenceOptional"/>
+      </optional>
+   </define>
+   <define name="mei_model.textPhraseLike.limited_sequenceOptionalRepeatable">
+      <zeroOrMore>
+         <ref name="mei_model.msInline_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="mei_model.addressPart_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="mei_model.nameLike.agent_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="mei_model.nameLike.label_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="mei_model.nameLike.place_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="mei_model.dimLike_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="mei_model.nameLike_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="mei_model.relationLike_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="mei_model.textPhraseLike.basic_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="mei_model.qLike_sequenceOptionalRepeatable"/>
+      </zeroOrMore>
+   </define>
+   <define name="mei_model.textPhraseLike.limited_sequenceRepeatable">
       <oneOrMore>
-         <ref name="mei_model.qLike_sequenceRepeatable"/>
+         <ref name="mei_model.msInline_sequenceRepeatable"/>
       </oneOrMore>
       <oneOrMore>
-         <ref name="mei_seg"/>
+         <ref name="mei_model.addressPart_sequenceRepeatable"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="mei_model.nameLike.agent_sequenceRepeatable"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="mei_model.nameLike.label_sequenceRepeatable"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="mei_model.nameLike.place_sequenceRepeatable"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="mei_model.dimLike_sequenceRepeatable"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="mei_model.nameLike_sequenceRepeatable"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="mei_model.relationLike_sequenceRepeatable"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="mei_model.textPhraseLike.basic_sequenceRepeatable"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="mei_model.qLike_sequenceRepeatable"/>
       </oneOrMore>
    </define>
    <define name="mei_model.titleLike">

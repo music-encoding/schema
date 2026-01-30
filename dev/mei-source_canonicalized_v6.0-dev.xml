@@ -21,7 +21,7 @@
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../source/validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="../source/validation/mei-purify.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2026-01-30T16:53:11.435695014+01:00-->
+<!--canonicalized: 2026-01-30T17:27:59.677428014+01:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -24991,7 +24991,7 @@ or
     <desc xml:lang="en">Groups elements representing or containing graphic information such as an illustration or
       figure.</desc>
     <classes>
-      <memberOf key="model.textPhraseLike.limited"/>
+      <memberOf key="model.textPhraseLike.basic"/>
     </classes>
   </classSpec>
   <classSpec ident="model.graphicLike" module="MEI.figtable" type="model">
@@ -28351,8 +28351,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="foliaDesc" module="MEI.header">
-    <desc xml:lang="en">Describes the order of folia and bifolia making up the text block of a manuscript or
-      print.</desc>
+    <desc xml:lang="en">Describes the arrangement of folia and bifolia making up the text block of a manuscript or printed item.</desc>
     <classes>
       <memberOf key="att.common"/>
       <memberOf key="model.physDescPart"/>
@@ -31540,8 +31539,7 @@ or
     </remarks>
   </elementSpec>
   <elementSpec ident="foliation" module="MEI.msDesc">
-    <desc xml:lang="en">Describes the numbering system or systems used to count the leaves or pages in a
-      codex.</desc>
+    <desc xml:lang="en">Describes the numbering system or systems used to count the folios, leaves, or pages in a manuscript or printed item.</desc>
     <classes>
       <memberOf key="att.common"/>
       <memberOf key="att.bibl"/>
@@ -32154,6 +32152,7 @@ or
     <classes>
       <memberOf key="model.eventPart"/>
       <memberOf key="model.nameLike"/>
+      <memberOf key="model.textPhraseLike.limited"/>
     </classes>
   </classSpec>
   <classSpec ident="model.nameLike.geogName" module="MEI.namesdates" type="model">
@@ -32166,6 +32165,7 @@ or
   <classSpec ident="model.nameLike.label" module="MEI.namesdates" type="model">
     <desc xml:lang="en">Groups elements that serve as stylistic labels.</desc>
     <classes>
+      <memberOf key="model.nameLike"/>
       <memberOf key="model.textPhraseLike.limited"/>
     </classes>
   </classSpec>
@@ -32173,6 +32173,7 @@ or
     <desc xml:lang="en">Groups place name elements.</desc>
     <classes>
       <memberOf key="model.nameLike"/>
+      <memberOf key="model.textPhraseLike.limited"/>
     </classes>
   </classSpec>
   <classSpec ident="model.persNamePart" module="MEI.namesdates" type="model">
@@ -33535,7 +33536,7 @@ or
   <classSpec ident="model.locrefLike" module="MEI.ptrref" type="model">
     <desc xml:lang="en">Groups elements used for purposes of location and reference.</desc>
     <classes>
-      <memberOf key="model.textPhraseLike.limited"/>
+      <memberOf key="model.textPhraseLike.bare"/>
     </classes>
   </classSpec>
   <elementSpec ident="ptr" module="MEI.ptrref">
@@ -37806,7 +37807,7 @@ or
   <classSpec ident="model.addressLike" module="MEI.shared" type="model">
     <desc xml:lang="en">Groups elements used to represent a postal address.</desc>
     <classes>
-      <memberOf key="model.textPhraseLike.limited"/>
+      <memberOf key="model.textPhraseLike.basic"/>
       <memberOf key="model.pubStmtPart"/>
       <memberOf key="model.eventPart"/>
     </classes>
@@ -37814,13 +37815,13 @@ or
   <classSpec ident="model.annotLike" module="MEI.shared" type="model">
     <desc xml:lang="en">Groups annotation-like elements.</desc>
     <classes>
-      <memberOf key="model.textPhraseLike.limited"/>
+      <memberOf key="model.textPhraseLike.basic"/>
     </classes>
   </classSpec>
   <classSpec ident="model.biblLike" module="MEI.shared" type="model">
     <desc xml:lang="en">Groups elements containing a bibliographic description.</desc>
     <classes>
-      <memberOf key="model.textPhraseLike.limited"/>
+      <memberOf key="model.textPhraseLike.basic"/>
     </classes>
   </classSpec>
   <classSpec ident="model.biblPart" module="MEI.shared" type="model">
@@ -37847,7 +37848,7 @@ or
   <classSpec ident="model.dateLike" module="MEI.shared" type="model">
     <desc xml:lang="en">Groups elements containing date expressions.</desc>
     <classes>
-      <memberOf key="model.textPhraseLike.limited"/>
+      <memberOf key="model.textPhraseLike.basic"/>
       <memberOf key="model.pubStmtPart"/>
       <memberOf key="model.eventPart"/>
       <memberOf key="model.titlePagePart"/>
@@ -37873,7 +37874,7 @@ or
   <classSpec ident="model.editorialLike" module="MEI.shared" type="model">
     <desc xml:lang="en">Groups editorial intervention elements.</desc>
     <classes>
-      <memberOf key="model.textPhraseLike.limited"/>
+      <memberOf key="model.textPhraseLike.basic"/>
       <memberOf key="model.choicePart"/>
     </classes>
   </classSpec>
@@ -37897,7 +37898,7 @@ or
   <classSpec ident="model.identifierLike" module="MEI.shared" type="model">
     <desc xml:lang="en">Groups identifier-like elements.</desc>
     <classes>
-      <memberOf key="model.textPhraseLike.limited"/>
+      <memberOf key="model.textPhraseLike.basic"/>
       <memberOf key="model.pubStmtPart"/>
       <memberOf key="model.titlePagePart"/>
     </classes>
@@ -37953,7 +37954,7 @@ or
     <desc xml:lang="en">Groups elements that function like line beginnings.</desc>
     <classes>
       <memberOf key="model.milestoneLike.text"/>
-      <memberOf key="model.textPhraseLike.limited"/>
+      <memberOf key="model.textPhraseLike.bare"/>
     </classes>
   </classSpec>
   <classSpec ident="model.mdivLike" module="MEI.shared" type="model">
@@ -37962,7 +37963,7 @@ or
   <classSpec ident="model.measurementLike" module="MEI.shared" type="model">
     <desc xml:lang="en">Groups elements that represent a measurement.</desc>
     <classes>
-      <memberOf key="model.textPhraseLike.limited"/>
+      <memberOf key="model.textPhraseLike.basic"/>
     </classes>
   </classSpec>
   <classSpec ident="model.meterSigLike" module="MEI.shared" type="model">
@@ -38029,7 +38030,7 @@ or
   <classSpec ident="model.rendLike" module="MEI.shared" type="model">
     <desc xml:lang="en">Groups elements that mark typographical features.</desc>
     <classes>
-      <memberOf key="model.textPhraseLike.limited"/>
+      <memberOf key="model.textPhraseLike.bare"/>
     </classes>
   </classSpec>
   <classSpec ident="model.repositoryLike" module="MEI.shared" type="model">
@@ -38142,6 +38143,20 @@ or
       <memberOf key="model.paracontentPart"/>
     </classes>
   </classSpec>
+  <classSpec ident="model.textPhraseLike.bare" module="MEI.shared" type="model">
+    <desc xml:lang="en">Groups rudimentary textual elements that occur at the level of individual words or
+      phrases.</desc>
+    <classes>
+      <memberOf key="model.textPhraseLike.basic"/>
+    </classes>
+  </classSpec>
+  <classSpec ident="model.textPhraseLike.basic" module="MEI.shared" type="model">
+    <desc xml:lang="en">Groups basic textual elements that occur at the level of individual words or
+      phrases.</desc>
+    <classes>
+      <memberOf key="model.textPhraseLike.limited"/>
+    </classes>
+  </classSpec>
   <classSpec ident="model.textPhraseLike.limited" module="MEI.shared" type="model">
     <desc xml:lang="en">Groups textual elements that occur at the level of individual words or phrases. This class
       is equivalent to the model.textPhraseLike class without the pb element.</desc>
@@ -38154,7 +38169,7 @@ or
   <classSpec ident="model.titleLike" module="MEI.shared" type="model">
     <desc xml:lang="en">Groups elements that denote the name of a bibliographic item.</desc>
     <classes>
-      <memberOf key="model.textPhraseLike.limited"/>
+      <memberOf key="model.textPhraseLike.basic"/>
       <memberOf key="model.titlePagePart"/>
     </classes>
   </classSpec>
@@ -39144,7 +39159,7 @@ or
       <memberOf key="att.lang"/>
       <memberOf key="att.measurement"/>
       <memberOf key="model.physDescPart"/>
-      <memberOf key="model.textPhraseLike.limited"/>
+      <memberOf key="model.textPhraseLike.basic"/>
     </classes>
     <content>
       <rng:ref name="macro.struc-unstrucContent"/>
@@ -39620,7 +39635,7 @@ or
       <memberOf key="att.lang"/>
       <memberOf key="att.quantity"/>
       <memberOf key="model.physDescPart"/>
-      <memberOf key="model.textPhraseLike.limited"/>
+      <memberOf key="model.textPhraseLike.basic"/>
     </classes>
     <content>
       <rng:zeroOrMore>
@@ -40374,6 +40389,7 @@ or
       <memberOf key="att.responsibility"/>
       <memberOf key="model.eventPart"/>
       <memberOf key="model.nameLike"/>
+      <memberOf key="model.textPhraseLike.basic"/>
     </classes>
     <content>
       <rng:zeroOrMore>
@@ -41827,7 +41843,7 @@ or
       <memberOf key="att.symbol.ges"/>
       <memberOf key="att.symbol.log"/>
       <memberOf key="att.symbol.vis"/>
-      <memberOf key="model.textPhraseLike.limited"/>
+      <memberOf key="model.textPhraseLike.bare"/>
     </classes>
     <content>
       <empty/>
@@ -41904,7 +41920,7 @@ or
       <memberOf key="att.bibl"/>
       <memberOf key="att.dataPointing"/>
       <memberOf key="att.lang"/>
-      <memberOf key="model.textPhraseLike.limited"/>
+      <memberOf key="model.textPhraseLike.basic"/>
     </classes>
     <content>
       <rng:zeroOrMore>
@@ -42991,7 +43007,7 @@ or
       <memberOf key="att.common"/>
       <memberOf key="att.facsimile"/>
       <memberOf key="att.lang"/>
-      <memberOf key="model.textPhraseLike.limited"/>
+      <memberOf key="model.textPhraseLike.bare"/>
     </classes>
     <content>
       <rng:zeroOrMore>

@@ -9367,6 +9367,7 @@
     <classes>
       
       <memberOf key="model.nameLike"/>
+      <memberOf key="model.textPhraseLike.limited"/>
     </classes>
   </classSpec><classSpec rend="add" predeclare="true" ident="model.nameLike.geogName" module="MEI.namesdates" type="model">
     <desc xml:lang="en">Groups geographic name elements.</desc>
@@ -9377,12 +9378,14 @@
   </classSpec><classSpec rend="add" predeclare="true" ident="model.nameLike.label" module="MEI.namesdates" type="model">
     <desc xml:lang="en">Groups elements that serve as stylistic labels.</desc>
     <classes>
+      <memberOf key="model.nameLike"/>
       <memberOf key="model.textPhraseLike.limited"/>
     </classes>
   </classSpec><classSpec rend="add" predeclare="true" ident="model.nameLike.place" module="MEI.namesdates" type="model">
     <desc xml:lang="en">Groups place name elements.</desc>
     <classes>
       <memberOf key="model.nameLike"/>
+      <memberOf key="model.textPhraseLike.limited"/>
     </classes>
   </classSpec><classSpec rend="add" predeclare="true" ident="model.persNamePart" module="MEI.namesdates" type="model">
     <desc xml:lang="en">Groups elements which form part of a personal name.</desc>
@@ -11122,19 +11125,19 @@
   </classSpec><classSpec rend="add" predeclare="true" ident="model.addressLike" module="MEI.shared" type="model">
     <desc xml:lang="en">Groups elements used to represent a postal address.</desc>
     <classes>
-      <memberOf key="model.textPhraseLike.limited"/>
+      <memberOf key="model.textPhraseLike.basic"/>
       
       
     </classes>
   </classSpec><classSpec rend="add" predeclare="true" ident="model.annotLike" module="MEI.shared" type="model">
     <desc xml:lang="en">Groups annotation-like elements.</desc>
     <classes>
-      <memberOf key="model.textPhraseLike.limited"/>
+      <memberOf key="model.textPhraseLike.basic"/>
     </classes>
   </classSpec><classSpec rend="add" predeclare="true" ident="model.biblLike" module="MEI.shared" type="model">
     <desc xml:lang="en">Groups elements containing a bibliographic description.</desc>
     <classes>
-      <memberOf key="model.textPhraseLike.limited"/>
+      <memberOf key="model.textPhraseLike.basic"/>
     </classes>
   </classSpec><classSpec rend="add" predeclare="true" ident="model.chordPart" module="MEI.shared" type="model">
     <desc xml:lang="en">Groups elements that may appear as part of the content of a chord element.</desc>
@@ -11151,7 +11154,7 @@
   </classSpec><classSpec rend="add" predeclare="true" ident="model.dateLike" module="MEI.shared" type="model">
     <desc xml:lang="en">Groups elements containing date expressions.</desc>
     <classes>
-      <memberOf key="model.textPhraseLike.limited"/>
+      <memberOf key="model.textPhraseLike.basic"/>
       
       
       
@@ -11165,7 +11168,7 @@
   </classSpec><classSpec rend="add" predeclare="true" ident="model.editorialLike" module="MEI.shared" type="model">
     <desc xml:lang="en">Groups editorial intervention elements.</desc>
     <classes>
-      <memberOf key="model.textPhraseLike.limited"/>
+      <memberOf key="model.textPhraseLike.basic"/>
       
     </classes>
   </classSpec><classSpec rend="add" predeclare="true" ident="model.endingLike" module="MEI.shared" type="model">
@@ -11185,7 +11188,7 @@
   </classSpec><classSpec rend="add" predeclare="true" ident="model.identifierLike" module="MEI.shared" type="model">
     <desc xml:lang="en">Groups identifier-like elements.</desc>
     <classes>
-      <memberOf key="model.textPhraseLike.limited"/>
+      <memberOf key="model.textPhraseLike.basic"/>
       
       
     </classes>
@@ -11214,14 +11217,14 @@
     <desc xml:lang="en">Groups elements that function like line beginnings.</desc>
     <classes>
       
-      <memberOf key="model.textPhraseLike.limited"/>
+      <memberOf key="model.textPhraseLike.bare"/>
     </classes>
   </classSpec><classSpec rend="add" predeclare="true" ident="model.mdivLike" module="MEI.shared" type="model">
     <desc xml:lang="en">Groups elements used to represent generic structural divisions of music notation.</desc>
   </classSpec><classSpec rend="add" predeclare="true" ident="model.measurementLike" module="MEI.shared" type="model">
     <desc xml:lang="en">Groups elements that represent a measurement.</desc>
     <classes>
-      <memberOf key="model.textPhraseLike.limited"/>
+      <memberOf key="model.textPhraseLike.basic"/>
     </classes>
   </classSpec><classSpec rend="add" predeclare="true" ident="model.meterSigLike" module="MEI.shared" type="model">
     <desc xml:lang="en">Groups elements that represent a meter signature.</desc>
@@ -11266,7 +11269,7 @@
   </classSpec><classSpec rend="add" predeclare="true" ident="model.rendLike" module="MEI.shared" type="model">
     <desc xml:lang="en">Groups elements that mark typographical features.</desc>
     <classes>
-      <memberOf key="model.textPhraseLike.limited"/>
+      <memberOf key="model.textPhraseLike.bare"/>
     </classes>
   </classSpec><classSpec rend="add" predeclare="true" ident="model.repositoryLike" module="MEI.shared" type="model">
     <desc xml:lang="en">Groups elements that denote a corporate entity that holds a bibliographic item.</desc>
@@ -11340,6 +11343,18 @@
     <classes>
       
     </classes>
+  </classSpec><classSpec rend="add" predeclare="true" ident="model.textPhraseLike.bare" module="MEI.shared" type="model">
+    <desc xml:lang="en">Groups rudimentary textual elements that occur at the level of individual words or
+      phrases.</desc>
+    <classes>
+      <memberOf key="model.textPhraseLike.basic"/>
+    </classes>
+  </classSpec><classSpec rend="add" predeclare="true" ident="model.textPhraseLike.basic" module="MEI.shared" type="model">
+    <desc xml:lang="en">Groups basic textual elements that occur at the level of individual words or
+      phrases.</desc>
+    <classes>
+      <memberOf key="model.textPhraseLike.limited"/>
+    </classes>
   </classSpec><classSpec rend="add" predeclare="true" ident="model.textPhraseLike.limited" module="MEI.shared" type="model">
     <desc xml:lang="en">Groups textual elements that occur at the level of individual words or phrases. This class
       is equivalent to the model.textPhraseLike class without the pb element.</desc>
@@ -11351,7 +11366,7 @@
   </classSpec><classSpec rend="add" predeclare="true" ident="model.titleLike" module="MEI.shared" type="model">
     <desc xml:lang="en">Groups elements that denote the name of a bibliographic item.</desc>
     <classes>
-      <memberOf key="model.textPhraseLike.limited"/>
+      <memberOf key="model.textPhraseLike.basic"/>
       
     </classes>
   </classSpec><elementSpec rend="add" ident="accid" module="MEI.shared"><gloss xml:lang="en">accidental</gloss><desc xml:lang="en">Records a temporary alteration to the pitch of a note.</desc><classes>
@@ -11696,6 +11711,7 @@
       
       
       <memberOf key="model.nameLike"/>
+      <memberOf key="model.textPhraseLike.basic"/>
     </classes><content>
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike"/><ref name="model.editLike"/><ref name="model.transcriptionLike"/></choice></zeroOrMore>
     </content><constraintSpec ident="nameParts" scheme="schematron">
@@ -12180,7 +12196,7 @@
       
       
       <memberOf key="att.symbol.vis"/>
-      <memberOf key="model.textPhraseLike.limited"/>
+      <memberOf key="model.textPhraseLike.bare"/>
     </classes><content>
       <empty/>
     </content><constraintSpec ident="symbolDef_symbol_attributes_required" scheme="schematron">
