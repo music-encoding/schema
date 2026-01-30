@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2026-01-30T15:26:30Z. . 
+Schema generated from ODD source 2026-01-30T15:49:06Z. . 
 TEI Edition: MEI 6.0-dev 
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -11627,6 +11627,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
          </zeroOrMore>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.meiVersion.attributes"/>
+         <ref name="mei_att.docStatus.attributes"/>
          <empty/>
       </element>
    </define>
@@ -14963,6 +14964,7 @@ Suggested values include: 1] smufl</a:documentation>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.bibl.attributes"/>
          <ref name="mei_att.datable.attributes"/>
+         <ref name="mei_att.docStatus.attributes"/>
          <empty/>
       </element>
    </define>
@@ -15708,6 +15710,7 @@ Suggested values include: 1] plaineAndEasie; 2] humdrumKern; 3] parsons</a:docum
          <ref name="mei_att.lang.attributes"/>
          <ref name="mei_att.meiVersion.attributes"/>
          <ref name="mei_att.responsibility.attributes"/>
+         <ref name="mei_att.docStatus.attributes"/>
          <optional>
             <attribute name="type">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Specifies the kind of document to which the header is attached, for example whether it is a corpus or individual text.</a:documentation>
@@ -20777,6 +20780,34 @@ Suggested values include: 1] apostropha; 2] bistropha; 3] cephalicus; 4] climacu
          <attribute name="select">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">XPath used to select data to which an element or a property applies.</a:documentation>
             <data type="token"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.docStatus.attributes">
+      <ref name="mei_att.docStatus.attribute.status"/>
+   </define>
+   <define name="mei_att.docStatus.attribute.status">
+      <optional>
+         <attribute name="status">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Used to describe the status of a document (currently or at the time indicated by a date).
+Suggested values include: 1] draft; 2] in-process; 3] candidate; 4] approved; 5] published; 6] withdrawn; 7] embargoed</a:documentation>
+            <choice>
+               <value>draft</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Initial or preliminary version of the document.</a:documentation>
+               <value>in-process</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Document is under development.</a:documentation>
+               <value>candidate</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Content of the document is ready for review.</a:documentation>
+               <value>approved</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Content of the document is reviewed and ready to be published.</a:documentation>
+               <value>published</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Document is published.</a:documentation>
+               <value>withdrawn</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Publication of the document has been reversed.</a:documentation>
+               <value>embargoed</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Document cannot be published (in full or in part) due to an embargo.</a:documentation>
+               <data type="NMTOKEN"/>
+            </choice>
          </attribute>
       </optional>
    </define>
@@ -27199,6 +27230,7 @@ Suggested values include: 1] abstract; 2] ack; 3] appendix; 4] bibliography; 5] 
          <ref name="mei_att.id.attributes"/>
          <ref name="mei_att.meiVersion.attributes"/>
          <ref name="mei_att.responsibility.attributes"/>
+         <ref name="mei_att.docStatus.attributes"/>
          <empty/>
       </element>
    </define>
@@ -27286,6 +27318,7 @@ Suggested values include: 1] abstract; 2] ack; 3] appendix; 4] bibliography; 5] 
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.meiVersion.attributes"/>
          <ref name="mei_att.metadataPointing.attributes"/>
+         <ref name="mei_att.docStatus.attributes"/>
          <empty/>
       </element>
    </define>

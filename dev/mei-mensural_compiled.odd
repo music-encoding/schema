@@ -2992,6 +2992,34 @@
 </egXML>
                      </figure>
                   </p>
+                  <p>Within the change log the status of the document and its content can be recorded using the <att>status</att> attribute. This indicates the status a document became at a specific change. If the status of the document differs from the newest <gi scheme="MEI">change</gi> record, the status of the document can also be recorded in the root element of the file (<gi scheme="MEI">mei</gi>, <gi scheme="MEI">meiHead</gi>, <gi scheme="MEI">meiCorpus</gi>, <gi scheme="MEI">music</gi>). <att>status</att> is only available in <gi scheme="MEI">change</gi> and the root elements of regular MEI, also in <label>mei-all_anyStart</label> (see <ptr target="#meiCustomizations"/>).</p>
+                  <p>
+                     <figure>
+                        <head/>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;revisionDesc&gt;
+  &lt;change isodate="2025-11-27" resp="#DR" status="embargoed"&gt;
+    &lt;changeDesc&gt;
+      &lt;p&gt;The rightholder didn't gave publishing permission. This document has embargoed access until 2027-01-01.&lt;/p&gt;
+    &lt;/changeDesc&gt;
+  &lt;/change&gt;
+  &lt;change isodate="2025-10-16" resp="#CG" status="approved"&gt;
+    &lt;changeDesc&gt;
+      &lt;p&gt;The document has been proofread. It's ready for publishing&lt;/p&gt;
+    &lt;/changeDesc&gt;
+  &lt;/change&gt;
+  &lt;change isodate="2025-10-05" resp="#DR" status="candidate"&gt;
+    &lt;changeDesc&gt;
+      &lt;p&gt;The content of the document is elaborated and the document is now a candidate for publishing. It can be proofread.&lt;/p&gt;
+    &lt;/changeDesc&gt;
+  &lt;/change&gt;
+  &lt;change isodate="2025-10-01" resp="#DR" status="draft"&gt;
+    &lt;changeDesc&gt;
+      &lt;p&gt;Creation of the document.&lt;/p&gt;
+    &lt;/changeDesc&gt;
+  &lt;/change&gt;
+&lt;/revisionDesc&gt;</egXML>
+                     </figure>
+                  </p>
                </div>
             </div>
             <div xml:id="FRBR" type="div2">
@@ -15457,6 +15485,7 @@ or
       <memberOf key="att.common"/>
       <memberOf key="att.meiVersion"/>
       
+      <memberOf key="att.docStatus"/>
     </classes><content>
       <ref xmlns="http://relaxng.org/ns/structure/1.0" name="meiHead"/>
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="mei"/></zeroOrMore>
@@ -17989,6 +18018,7 @@ or
       <memberOf key="att.common"/>
       <memberOf key="att.bibl"/>
       <memberOf key="att.datable"/>
+      <memberOf key="att.docStatus"/>
     </classes><content>
       <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="respStmt"/></optional>
       <ref xmlns="http://relaxng.org/ns/structure/1.0" name="changeDesc"/>
@@ -18519,6 +18549,7 @@ or
       <memberOf key="att.meiVersion"/>
       <memberOf key="att.responsibility"/>
       
+      <memberOf key="att.docStatus"/>
     </classes><content>
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="altId"/></zeroOrMore>
       <ref xmlns="http://relaxng.org/ns/structure/1.0" name="fileDesc"/>
@@ -21901,6 +21932,68 @@ or
         </datatype>
       </attDef>
     </attList>
+  </classSpec><classSpec rend="add" ident="att.docStatus" module="MEI.shared" type="atts">
+    <desc versionDate="2025-11-27" xml:lang="en">Attributes for describing the status of a document.</desc>
+    <attList>
+      <attDef ident="status" usage="opt">
+        <desc versionDate="2025-11-27" xml:lang="en">Used to describe the status of a document (currently or at the time indicated by a date).</desc>
+        <datatype>
+            <rng:data type="NMTOKEN"/>
+        </datatype>
+        <valList type="semi">
+          <valItem ident="draft">
+            <desc>Initial or preliminary version of the document.</desc>
+          </valItem>
+          <valItem ident="in-process">
+            <desc>Document is under development.</desc>
+          </valItem>
+          <valItem ident="candidate">
+            <desc>Content of the document is ready for review.</desc>
+          </valItem>
+          <valItem ident="approved">
+            <desc>Content of the document is reviewed and ready to be published.</desc>
+          </valItem>
+          <valItem ident="published">
+            <desc>Document is published.</desc>
+          </valItem>
+          <valItem ident="withdrawn">
+            <desc>Publication of the document has been reversed.</desc>
+          </valItem>
+          <valItem ident="embargoed">
+            <desc>Document cannot be published (in full or in part) due to an embargo.</desc>
+          </valItem>
+        </valList>
+      </attDef>
+    </attList>
+    <exemplum>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve" valid="true">
+        <revisionDesc>
+          <change isodate="2025-11-27" resp="#DR" status="embargoed">
+            <changeDesc>
+              <p>The rightholder didn't gave publishing permission. This document has embargoed access until 2027-01-01.</p>
+            </changeDesc>
+          </change>
+          <change isodate="2025-10-16" resp="#CG" status="approved">
+            <changeDesc>
+              <p>The document has been proofread. It's ready for publishing</p>
+            </changeDesc>
+          </change>
+          <change isodate="2025-10-05" resp="#DR" status="candidate">
+            <changeDesc>
+              <p>The content of the document is elaborated and the document is now a candidate for publishing. It can be proofread.</p>
+            </changeDesc>
+          </change>
+          <change isodate="2025-10-01" resp="#DR" status="draft">
+            <changeDesc>
+              <p>Creation of the document.</p>
+            </changeDesc>
+          </change>
+        </revisionDesc>
+      </egXML>
+    </exemplum>
+    <remarks>
+      <p>The model of this attribute class is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-att.docStatus.html">att.docStatus</ref> class of the Text Encoding Initiative (TEI).</p>
+    </remarks>
   </classSpec><classSpec rend="add" ident="att.mdiv.log" module="MEI.shared" type="atts">
     <desc xml:lang="en">Logical domain attributes.</desc>
     <classes>
@@ -26125,6 +26218,7 @@ or
       <memberOf key="att.id"/>
       <memberOf key="att.meiVersion"/>
       <memberOf key="att.responsibility"/>
+      <memberOf key="att.docStatus"/>
     </classes><content>
       <ref xmlns="http://relaxng.org/ns/structure/1.0" name="meiHead"/>
       <ref xmlns="http://relaxng.org/ns/structure/1.0" name="music"/>
@@ -26155,6 +26249,7 @@ or
       <memberOf key="att.common"/>
       <memberOf key="att.meiVersion"/>
       <memberOf key="att.metadataPointing"/>
+      <memberOf key="att.docStatus"/>
     </classes><content>
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.resourceLike"/></zeroOrMore>
       <ref xmlns="http://relaxng.org/ns/structure/1.0" name="macro.musicPart"/>
