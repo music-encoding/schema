@@ -21,7 +21,7 @@
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../source/validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="../source/validation/mei-purify.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2026-01-30T18:34:13.319203322+01:00-->
+<!--canonicalized: 2026-02-26T08:33:15.091272514+01:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -21155,7 +21155,11 @@ or
         <desc xml:lang="en">"Cut-out" style.</desc>
         <valList type="closed">
           <valItem ident="cutout">
-            <desc xml:lang="en">The staff lines should not be drawn.</desc>
+            <desc xml:lang="en">Means that the staff lines "behind" the element are hidden for the
+              entire duration of the element, based on <att scheme="MEI">dur</att> and <att scheme="MEI">dots</att>. <att scheme="MEI">cutout</att> does not imply that any
+              other elements are hidden. Only barlines directly adjacent to the cut-out area may be
+              hidden or shortened. When rendering, barline handling is up to the rendering
+              application.</desc>
           </valItem>
         </valList>
       </attDef>

@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2026-01-30T17:34:42Z. . 
+Schema generated from ODD source 2026-02-26T07:33:42Z. . 
 TEI Edition: MEI 6.0-dev 
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -9132,7 +9132,10 @@ Suggested values include: 1] coloration; 2] cross-rhythm; 3] ligature; 4] unspec
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">"Cut-out" style.</a:documentation>
             <choice>
                <value>cutout</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The staff lines should not be drawn.</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Means that the staff lines "behind" the element are hidden for the entire duration of the element, based on <code xmlns="http://www.w3.org/1999/xhtml"
+                        xmlns:rng="http://relaxng.org/ns/structure/1.0">@dur</code> and <code xmlns="http://www.w3.org/1999/xhtml"
+                        xmlns:rng="http://relaxng.org/ns/structure/1.0">@dots</code>. <code xmlns="http://www.w3.org/1999/xhtml"
+                        xmlns:rng="http://relaxng.org/ns/structure/1.0">@cutout</code> does not imply that any other elements are hidden. Only barlines directly adjacent to the cut-out area may be hidden or shortened. When rendering, barline handling is up to the rendering application.</a:documentation>
             </choice>
          </attribute>
       </optional>
