@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2026-02-26T07:33:46Z. . 
+Schema generated from ODD source 2026-02-26T10:12:21Z. . 
 TEI Edition: MEI 6.0-dev 
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -16403,6 +16403,20 @@ Suggested values include: 1] apostropha; 2] bistropha; 3] cephalicus; 4] climacu
       <ref name="mei_att.startEndId.attributes"/>
       <ref name="mei_att.timestamp.log.attributes"/>
       <ref name="mei_att.timestamp2.log.attributes"/>
+      <ref name="mei_att.annot.log.attribute.func"/>
+   </define>
+   <define name="mei_att.annot.log.attribute.func">
+      <optional>
+         <attribute name="func">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates the function intended for this annotation. In particular, to distinguish annotations suitable for display (e.g. via an engraving tool), the value "display" may be used.
+Suggested values include: 1] display</a:documentation>
+            <choice>
+               <value>display</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates that the annotation is suitable for display (e.g. via an engraving tool)</a:documentation>
+               <data type="Name"/>
+            </choice>
+         </attribute>
+      </optional>
    </define>
    <define name="mei_att.artic.log.attributes">
       <ref name="mei_att.articulation.attributes"/>
@@ -21851,7 +21865,7 @@ Suggested values include: 1] smufl</a:documentation>
    </define>
    <define name="mei_annot">
       <element name="annot">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(annotation) Provides a statement explaining the text or indicating the basis for an assertion.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(annotation) Associates a statement or other information with a part of the encoding.</a:documentation>
          <choice>
             <group>
                <zeroOrMore>

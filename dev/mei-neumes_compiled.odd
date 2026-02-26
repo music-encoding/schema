@@ -8762,18 +8762,89 @@ or
                         <specDesc key="annot"/>
                      </specList>
                   </p>
-                  <p>This element may be contained by a wide range of other elements and may contain a large number of other elements. While this offers great flexibility in addressing the wide variety of textual features that might occur within an annotation, it may lead to markup that cannot be effectively processed mechanistically.</p>
-                  <p>In all cases, <gi scheme="MEI">annot</gi> provides a comment upon a feature of the encoding, but never contains textual transcription. Depending on its context, an annotation will deal with either its parent element, or, more usually, with the element(s) specified in its <att>plist</att> attribute. This attribute uses URI references to link to one or more other elements using their <att>xml:id</att> attribute values, as in the following example:</p>
+                  <p>This element can be contained by a wide range of other elements and may contain a large number of other elements. Its meaning also depends on the context in which it appears (see, for example, <ptr target="#headerNotesStatement"/> and <ptr target="#edittransOmission"/>). While this offers great flexibility in addressing the wide variety of textual features that might occur within an annotation, it may lead to markup that is hard or impossible to interpret automatically. Use of the <att>func</att> (see below) and/or <att>type</att> attributes (see <ptr target="#sharedClassificationAttributes"/>) is encouraged to reduce ambiguity and support processing within a specific context, such as engraving a score.</p>
+                  <p><gi scheme="MEI">annot</gi> may comment on a feature of the encoding, or it may provide information or comments about the material represented by the encoding.</p>
+                  <p>We can use the <att>func</att> attribute to distinguish annotations suitable for display (e.g. via an engraving tool). This may be used to process annotations about the (encoded) structure of the MEI document separately from those about its content. For example:</p>
                   <p>
                      <figure>
                         <head/>
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;note xml:id="shared.someInterestingNote"/&gt;
-&lt;!-- elsewhere in the document: --&gt;
-&lt;annot plist="#shared.someInterestingNote"&gt;
-   &lt;!-- additional information about this note --&gt;
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;annot func="display" plist="#note1"&gt;The prominent use of a G here contrasts with the previous focus on F&lt;/annot&gt;</egXML>
+                     </figure>
+                  </p>
+                  <p>The area of music to be annotated by an <gi scheme="MEI">annot</gi> element is selected using the same mechanism as as for control events (<ptr target="#eventsControlevents"/>) – they can be identified using a <att>plist</att> of element identifiers, or they can be specified as a range, delimited by time points (<att>tstamp</att>, <att>tstamp2</att>, <att>dur</att>) or elements (<att>startid</att>, <att>endid</att>).</p>
+                  <p>
+                     <figure>
+                        <head/>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;annot func="display"
+  plist="#v100jcki #vdmu55 #v3swz5r"&gt;The lyric 'Sea-breakers' 
+  introduces quotations from Sea Slumber Song (Op. 37/1).
 &lt;/annot&gt;</egXML>
                      </figure>
                   </p>
+                  <p>These delimiters for ranges are horizontal – they dictate start and end points in the score. Vertical positions may also be specified. For single-voice regions, staff (<att>staff</att>) and layer (<att>layer</att>) may be specified, and for multiple-voice examples, staff on its own can be used to specify multiple staves (<att>staff</att>). </p>
+                  <p>
+                     <figure>
+                        <head/>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;annot func="display" 
+  startid="#n18po5kn" endid="#n172z7ie" staff="3 4"&gt;
+  Quotes Sea Slumber Song from Sea Pictures (Op. 37/1).
+&lt;/annot&gt;</egXML>
+                     </figure>
+                  </p>
+
+                  <p>Where no staff is specified, the region’s application is ambiguous. Where starting and ending elements are in the same layer, it is reasonable to assume that the annotation applies to just that, but in other cases, one might infer that the annotation applies to the full score. Where possible such ambiguity should be avoided.</p>
+                  <p>
+                     <figure>
+                        <head/>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;staff xml:id="m1s3" n="3"&gt;
+   &lt;layer xml:id="m1s3l1" n="1"&gt;
+      &lt;note xml:id="anchor1" dur="4" pname="c" oct="4" tie="i"/&gt;
+      &lt;beam&gt;
+         &lt;tuplet num="3" numbase="2"&gt;
+            &lt;note dur="8" pname="c" oct="4" tie="t" /&gt;
+            &lt;note dur="8" pname="b" oct="3" /&gt;
+            &lt;note dur="8" pname="a" oct="3" /&gt;
+         &lt;/tuplet&gt;
+      &lt;/beam&gt;
+      &lt;note xml:id="anchor2" dur="2" pname="g" oct="3" /&gt;
+   &lt;/layer&gt;
+   &lt;layer xml:id="m1s3l2" n="2"&gt;
+      &lt;note dur="2" pname="a" oct="2" stem.dir="down" /&gt;
+      &lt;chord dur="2" stem.dir="down"&gt;
+         &lt;note pname="e" oct="2" /&gt;
+         &lt;note pname="e" oct="3" xml:id="anchor3"/&gt;
+      &lt;/chord&gt;
+   &lt;/layer&gt;
+&lt;/staff&gt;
+&lt;annot staff="m1s3" layer="1"&gt;
+   This annotation unambiguously refers to layer 1 of this measure
+&lt;/annot&gt;
+&lt;annot startid="#anchor1" endid="#anchor2"&gt;
+   This annotation is delimited by elements from the same layer, 
+   implying that it refers to just layer 1
+&lt;/annot&gt;
+&lt;annot startid="#anchor1" endid="#anchor3"&gt;
+   This annotation is delimited by elements from different layers. 
+   It is ambiguous but could be assumed to apply to the full score.
+&lt;/annot&gt;</egXML>
+                     </figure>
+                  </p>        
+                  <p>There are cases that this approach does not support. One occurs where the annotation applies to two or more individual layers in multiple staves (for example, the second flute and second oboe part in an orchestral score). A second case is where the region being indicated has different start and end times in different parts, for example, entries of a fugal subject in a polyphonic texture. Both of these cases can be resolved by breaking them down into annotations that can themselves be indicated, and then combining these separate annotations, for example:</p>
+                  <p>
+                     <figure>
+                        <head/>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;annot func="display" xml:id="simple-1" 
+       staff="1" layer="2"&gt;Subject entry in second flute&lt;/annot&gt;
+&lt;annot func="display" xml:id="simple-2" 
+       staff="2" layer="1"&gt;Subject entry in first oboe&lt;/annot&gt;
+&lt;annot func="display"
+       plist="#simple-1 #simple-2"&gt;Subject entry&lt;/annot&gt;
+</egXML>
+                     </figure>
+                  </p>
+                  <p>There are some contexts in which rather than using <hi rend="italics">ControlEvent</hi> attributes an annotation concerns either its parent element or some aspect of the encoding process as a whole. These cases are outlined in the relevant sections of the guidelines.</p>
+                  <p>Annotation often involves associating information or observations to a part of a document. This associated content may be included as a child of the <gi scheme="MEI">annot</gi> element. If the associated information is textual, this may simply take the form of text (as in the example above/below). Other associated information may be placed as a child of the <gi scheme="MEI">annot</gi>, here it can be represented using MEI or, if it is a web resource, it can be added by url using the <gi scheme="MEI">ptr</gi> element (<ptr target="#ptrRef"/>).</p>
+                  <p>Annotation takes many forms, and not all of these can or should be represented in MEI using <gi scheme="MEI">annot</gi>. Performance annotations, such as fingering or articulation have specialised elements already (e.g. <gi scheme="MEI">fing</gi>, <gi scheme="MEI">artic</gi>), as do some analytical annotations (e.g. <gi scheme="MEI">harm</gi> for harmonic labels). Thus, there is no all-encompassing and distinct ‘annotation’ concept in MEI, and <gi scheme="MEI">annot</gi> should be considered one of many ways of expressing annotations.</p>
                </div>
             </div>
          </div>
@@ -21183,6 +21254,19 @@ or
       <memberOf key="att.timestamp.log"/>
       <memberOf key="att.timestamp2.log"/>
     </classes>
+    <attList>
+      <attDef ident="func" usage="opt">
+        <desc xml:lang="en">Indicates the function intended for this annotation. In particular,
+          to distinguish annotations suitable for display (e.g. via an engraving tool), the value 
+          "display" may be used.</desc>
+        <valList type="semi">
+          <valItem ident="display">
+            <desc xml:lang="en">Indicates that the annotation is suitable for display 
+              (e.g. via an engraving tool)</desc>
+          </valItem>
+        </valList>
+      </attDef>
+    </attList>
   </classSpec><classSpec rend="add" ident="att.artic.log" module="MEI.shared" type="atts">
     <desc xml:lang="en">Logical domain attributes.</desc>
     <classes>
@@ -24912,8 +24996,7 @@ or
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="model.respLikePart"/><ref name="respStmt"/><ref name="title"/></choice></zeroOrMore>
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="biblScope"/></zeroOrMore>
       <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="identifier"/></optional>
-    </content></elementSpec><elementSpec rend="add" ident="annot" module="MEI.shared"><gloss xml:lang="en">annotation</gloss><desc xml:lang="en">Provides a statement explaining the text or indicating the basis for an
-      assertion.</desc><classes>
+    </content></elementSpec><elementSpec rend="add" ident="annot" module="MEI.shared"><gloss xml:lang="en">annotation</gloss><desc xml:lang="en">Associates a statement or other information with a part of the encoding.</desc><classes>
       <memberOf key="att.common"/>
       <memberOf key="att.audience"/>
       <memberOf key="att.bibl"/>
@@ -24938,17 +25021,13 @@ or
         </sch:rule>
       </constraint>
     </constraintSpec><remarks xml:lang="en">
-      <p>The <gi scheme="MEI">annot</gi> element can be used for both general comments and for
-        annotations of the musical text. It provides a way to group participating *events* and/or
-        *control events*, for example, the notes that form a descending bass line, and provide a
-        label for and comment regarding the group. Participating entities may be identified in the
-        <att>plist</att> attribute. An editorial or analytical comment or observation may be
-        included directly within the <gi scheme="MEI">annot</gi> element. The starting point of the
-        annotation may be indicated by either a <att>tstamp</att>, <att>tstamp.ges</att>,
-        <att>tstamp.real</att> or <att>startid</att> attribute, while the ending point may be
-        recorded by either a <att>dur</att>, <att>dur.ges</att> or <att>endid</att> attribute. The
-        <att>resp</att> attribute records the editor(s) responsible for identifying or creating the
-        annotation.</p>
+      <p>The <gi scheme="MEI">annot</gi> element associates elements or regions in an encoding with
+        additional information. Its meaning depends on the context in which it appears. The region
+        of the score to which it applies can be specified in the same way as for *control events*.
+        The <att>resp</att> attribute records the editor(s) responsible for identifying or creating 
+        the annotation. <att>func</att> and <att>type</att> attributes can be used to clarify the
+        nature and interpretation of the annotation.
+      </p>
     </remarks></elementSpec><elementSpec rend="add" ident="artic" module="MEI.shared"><gloss xml:lang="en">articulation</gloss><desc xml:lang="en">An indication of how to play a note or chord.</desc><classes>
       <memberOf key="att.common"/>
       <memberOf key="att.facsimile"/>
