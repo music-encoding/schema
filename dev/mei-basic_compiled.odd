@@ -10592,6 +10592,7 @@
     <classes>
       <memberOf key="att.cleffing.log"/>
       
+      <memberOf key="att.duration.ratio"/>
       <memberOf key="att.keySigDefault.log"/>
       <memberOf key="att.meterSigDefault.log"/>
       
