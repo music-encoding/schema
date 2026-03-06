@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2026-03-03T10:22:29Z. . 
+Schema generated from ODD source 2026-03-06T15:44:43Z. . 
 TEI Edition: MEI 6.0-dev 
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -26689,6 +26689,9 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
             <ref name="mei_model.symbolTableLike"/>
          </zeroOrMore>
          <optional>
+            <ref name="mei_clef"/>
+         </optional>
+         <optional>
             <ref name="mei_model.keySigLike"/>
          </optional>
          <optional>
@@ -27238,6 +27241,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
             </sch:rule>
          </pattern>
          <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.authorized.attributes"/>
          <ref name="mei_att.bibl.attributes"/>
          <ref name="mei_att.dataPointing.attributes"/>
          <ref name="mei_att.lang.attributes"/>
