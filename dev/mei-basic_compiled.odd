@@ -13216,6 +13216,14 @@
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.STAFFREL.basic"/>
         </datatype>
       </attDef>
+      <attDef ident="bracket.slope" usage="opt">
+         <desc xml:lang="en">Records the slope of a bracket; e.g., in terms of MEI virtual units. Positive 
+           values indicate upward slope, negative values indicate slope downward, and a zero value indicates 
+           the bracket is horizontal.</desc>
+        <datatype>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.MEASUREMENTSIGNED"/>
+        </datatype>
+      </attDef>
       <attDef ident="bracket.visible" usage="opt">
         <desc xml:lang="en">States whether a bracket should be rendered with a tuplet.</desc>
         <datatype>
@@ -13234,6 +13242,10 @@
         </valList>
       </attDef>
     </attList>
+    <remarks xml:lang="en">
+      <p>The value in <att>bracket.slope</att> is independent of the slope of the beam (if any) encompassing 
+        the events of the tuplet.</p>
+    </remarks>
   </classSpec><classSpec rend="add" ident="att.turn.vis" module="MEI.visual" type="atts">
     <desc xml:lang="en">Visual domain attributes.</desc>
     <classes>

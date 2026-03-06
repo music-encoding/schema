@@ -21,7 +21,7 @@
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../source/validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="../source/validation/mei-purify.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2026-03-06T16:44:12.736545479+01:00-->
+<!--canonicalized: 2026-03-06T16:57:11.782930198+01:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -21079,9 +21079,11 @@ or
         </datatype>
       </attDef>
       <attDef ident="slope" usage="opt">
-        <desc xml:lang="en">Records the slope of the beam.</desc>
+        <desc xml:lang="en">Records the slope of a beam; e.g., in MEI virtual units. Positive values indicate 
+          upward slope, negative values indicate slope downward, and a zero value indicates the beam 
+          is horizontal.</desc>
         <datatype>
-          <rng:data type="decimal"/>
+          <rng:ref name="data.MEASUREMENTSIGNED"/>
         </datatype>
       </attDef>
     </attList>
@@ -43732,9 +43734,11 @@ or
         </valList>
       </attDef>
       <attDef ident="beam.slope" usage="opt">
-        <desc xml:lang="en">Captures beam slope.</desc>
+        <desc xml:lang="en">Records the slope of a beam; e.g., in terms of MEI virtual units. Positive values 
+          indicate upward slope, negative values indicate slope downward, and a zero value indicates the beam 
+          is horizontal.</desc>
         <datatype>
-          <rng:data type="decimal"/>
+          <rng:ref name="data.MEASUREMENTSIGNED"/>
         </datatype>
       </attDef>
     </attList>
@@ -45495,6 +45499,14 @@ or
           <rng:ref name="data.STAFFREL.basic"/>
         </datatype>
       </attDef>
+      <attDef ident="bracket.slope" usage="opt">
+         <desc xml:lang="en">Records the slope of a bracket; e.g., in terms of MEI virtual units. Positive 
+           values indicate upward slope, negative values indicate slope downward, and a zero value indicates 
+           the bracket is horizontal.</desc>
+        <datatype>
+          <rng:ref name="data.MEASUREMENTSIGNED"/>
+        </datatype>
+      </attDef>
       <attDef ident="bracket.visible" usage="opt">
         <desc xml:lang="en">States whether a bracket should be rendered with a tuplet.</desc>
         <datatype>
@@ -45513,6 +45525,10 @@ or
         </valList>
       </attDef>
     </attList>
+    <remarks xml:lang="en">
+      <p>The value in <att>bracket.slope</att> is independent of the slope of the beam (if any) encompassing 
+        the events of the tuplet.</p>
+    </remarks>
   </classSpec>
   <classSpec ident="att.tupletSpan.vis" module="MEI.visual" type="atts">
     <desc xml:lang="en">Visual domain attributes.</desc>
