@@ -3441,8 +3441,8 @@
                      <specDesc key="work"/>
                   </specList>
                </p>
-               <p>All the components of <gi scheme="MEI">work</gi> are optional, but they must occur in the following order:</p>
-               <list rend="numbered">
+               <p>All the components of <gi scheme="MEI">work</gi> are optional. They may occur in any order.</p>
+               <list rend="bulleted">
                   <item>
                      <gi scheme="MEI">identifier</gi>
                   </item>
@@ -3450,8 +3450,7 @@
                      <gi scheme="MEI">title</gi>
                   </item>
                   <item>
-                     <gi scheme="MEI">respStmt</gi>
-                  </item>
+                     <gi scheme="MEI">respStmt</gi></item>
                   <item>
                      <gi scheme="MEI">incip</gi>
                   </item>
@@ -4080,7 +4079,9 @@
                   </specList>
                </p>
                <p>Many of these elements are already described in chapter <ptr target="#headerstructure"/>, especially in <ptr target="#headerWorkDescription"/>.</p>
-               <p>The <gi scheme="MEI">manifestationList</gi> is available to create lists of physical sources representing a work, for instance for use in a thematic catalog or a critical edition. The <gi scheme="MEI">manifestation</gi> child element corresponds to the <ptr target="#FRBR"/> level of the same name, that is, it describes embodiments of certain expressions of a work. The list below reflects the order in which the optional components of manifestation must occur. <specList>
+               <p>The <gi scheme="MEI">manifestationList</gi> is available to create lists of physical sources representing a work, for instance for use in a thematic catalog or a critical edition. The <gi scheme="MEI">manifestation</gi> child element corresponds to the <ptr target="#FRBR"/> level of the same name, that is, it describes embodiments of certain expressions of a work. The components of manifestation may occur in any order.
+                  </p>
+               <p><specList>
                      <specDesc key="locus"/>
                   </specList>
                   <specList>
@@ -20903,27 +20904,29 @@ or
       <memberOf key="model.expressionLike"/>
     </classes><content>
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.headLike"/></zeroOrMore>
-      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.identifierLike"/></zeroOrMore>
-      <oneOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.titleLike"/></oneOrMore>
-      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="respStmt"/></optional>
-      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="dedication"/></optional>
-      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.workIdent"/></zeroOrMore>
-      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="otherChar"/></zeroOrMore>
-      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="creation"/></optional>
-      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="history"/></optional>
-      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="langUsage"/></optional>
-      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="perfMedium"/></optional>
-      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="perfDuration"/></optional>
-      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="extent"/></zeroOrMore>
-      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="scoreFormat"/></optional>
-      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="contents"/></optional>
-      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="context"/></optional>
-      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="biblList"/></zeroOrMore>
-      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="notesStmt"/></optional>
-      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="classification"/></optional>
-      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="componentList"/></optional>
-      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="relationList"/></optional>
-      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="extMeta"/></zeroOrMore>
+      <rng:interleave>
+        <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.identifierLike"/></zeroOrMore>
+        <oneOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.titleLike"/></oneOrMore>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="respStmt"/></optional>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="dedication"/></optional>
+        <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.workIdent"/></zeroOrMore>
+        <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="otherChar"/></zeroOrMore>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="creation"/></optional>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="history"/></optional>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="langUsage"/></optional>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="perfMedium"/></optional>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="perfDuration"/></optional>
+        <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="extent"/></zeroOrMore>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="scoreFormat"/></optional>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="contents"/></optional>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="context"/></optional>
+        <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="biblList"/></zeroOrMore>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="notesStmt"/></optional>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="classification"/></optional>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="componentList"/></optional>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="relationList"/></optional>
+        <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="extMeta"/></zeroOrMore>
+      </rng:interleave>
     </content><remarks xml:lang="en">
       <p>The <gi scheme="MEI">perfDuration</gi> element captures the <emph>intended duration</emph>
         of the expression, while <gi scheme="MEI">extent</gi> records scope of the expression in
@@ -20943,17 +20946,19 @@ or
       <memberOf key="model.itemLike"/>
     </classes><content>
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.headLike"/></zeroOrMore>
-      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.identifierLike"/></zeroOrMore>
-      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="dedication"/></optional>
-      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="availability"/></optional>
-      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="physDesc"/></optional>
-      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="physLoc"/></optional>
-      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="history"/></optional>
-      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="notesStmt"/></optional>
-      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="classification"/></optional>
-      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="componentList"/></optional>
-      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="relationList"/></optional>
-      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="extMeta"/></zeroOrMore>
+      <rng:interleave>
+        <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.identifierLike"/></zeroOrMore>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="dedication"/></optional>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="availability"/></optional>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="physDesc"/></optional>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="physLoc"/></optional>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="history"/></optional>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="notesStmt"/></optional>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="classification"/></optional>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="componentList"/></optional>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="relationList"/></optional>
+        <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="extMeta"/></zeroOrMore>
+      </rng:interleave>
     </content></elementSpec><elementSpec rend="add" ident="itemList" module="MEI.frbr"><desc xml:lang="en">Gathers bibliographic item entities.</desc><classes>
       <memberOf key="att.common"/>
     </classes><content>
@@ -20971,22 +20976,24 @@ or
       <memberOf key="model.manifestationLike"/>
     </classes><content>
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.headLike"/></zeroOrMore>
-      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="locus"/><ref name="locusGrp"/></choice></zeroOrMore>
-      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.identifierLike"/></zeroOrMore>
-      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="titleStmt"/></optional>
-      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="dedication"/></optional>
-      <ref xmlns="http://relaxng.org/ns/structure/1.0" name="macro.bibldescPart"/>
-      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="creation"/></optional>
-      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="history"/></optional>
-      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="langUsage"/></optional>
-      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="contents"/></optional>
-      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="biblList"/></zeroOrMore>
-      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="notesStmt"/></optional>
-      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="classification"/></optional>
-      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="itemList"/></optional>
-      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="componentList"/></optional>
-      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="relationList"/></optional>
-      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="extMeta"/></zeroOrMore>
+      <rng:interleave>
+        <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><ref name="locus"/><ref name="locusGrp"/></choice></zeroOrMore>
+        <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.identifierLike"/></zeroOrMore>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="titleStmt"/></optional>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="dedication"/></optional>
+        <ref xmlns="http://relaxng.org/ns/structure/1.0" name="macro.bibldescPart"/>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="creation"/></optional>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="history"/></optional>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="langUsage"/></optional>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="contents"/></optional>
+        <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="biblList"/></zeroOrMore>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="notesStmt"/></optional>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="classification"/></optional>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="itemList"/></optional>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="componentList"/></optional>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="relationList"/></optional>
+        <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="extMeta"/></zeroOrMore>
+      </rng:interleave>
     </content><constraintSpec ident="check_singleton" scheme="schematron">
       <constraint>
         <sch:rule context="mei:manifestation[@singleton eq 'true']">
@@ -23574,27 +23581,29 @@ or
       <memberOf key="model.workLike"/>
     </classes><content>
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.headLike"/></zeroOrMore>
-      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.identifierLike"/></zeroOrMore>
-      <oneOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.titleLike"/></oneOrMore>
-      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="respStmt"/></optional>
-      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="dedication"/></optional>
-      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.workIdent"/></zeroOrMore>
-      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="otherChar"/></zeroOrMore>
-      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="creation"/></optional>
-      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="history"/></optional>
-      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="langUsage"/></optional>
-      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="perfMedium"/></optional>
-      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="perfDuration"/></optional>
-      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="audience"/></optional>
-      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="contents"/></optional>
-      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="context"/></optional>
-      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="biblList"/></zeroOrMore>
-      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="notesStmt"/></optional>
-      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="classification"/></optional>
-      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="expressionList"/></optional>
-      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="componentList"/></optional>
-      <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="relationList"/></optional>
-      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="extMeta"/></zeroOrMore>
+      <rng:interleave>
+        <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.identifierLike"/></zeroOrMore>
+        <oneOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.titleLike"/></oneOrMore>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="respStmt"/></optional>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="dedication"/></optional>
+        <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.workIdent"/></zeroOrMore>
+        <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="otherChar"/></zeroOrMore>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="creation"/></optional>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="history"/></optional>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="langUsage"/></optional>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="perfMedium"/></optional>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="perfDuration"/></optional>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="audience"/></optional>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="contents"/></optional>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="context"/></optional>
+        <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="biblList"/></zeroOrMore>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="notesStmt"/></optional>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="classification"/></optional>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="expressionList"/></optional>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="componentList"/></optional>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="relationList"/></optional>
+        <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="extMeta"/></zeroOrMore>
+      </rng:interleave>
     </content><remarks xml:lang="en">
       <p>The <gi scheme="MEI">perfDuration</gi> element captures the <emph>intended duration</emph>
         of the work.</p>
