@@ -11283,6 +11283,7 @@
   </classSpec><classSpec rend="add" predeclare="true" ident="model.repositoryLike" module="MEI.shared" type="model">
     <desc xml:lang="en">Groups elements that denote a corporate entity that holds a bibliographic item.</desc>
     <classes>
+      
       <memberOf key="model.nameLike.place"/>
     </classes>
   </classSpec><classSpec rend="add" predeclare="true" ident="model.resourceLike" module="MEI.shared" type="model">

@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2026-03-19T15:29:57Z. . 
+Schema generated from ODD source 2026-03-27T08:24:27Z. . 
 TEI Edition: MEI 6.0-dev 
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -5992,6 +5992,16 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">False.</a:documentation>
       </choice>
    </define>
+   <define name="mei_data.BOOLEAN.unknown">
+      <choice>
+         <value>true</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">True.</a:documentation>
+         <value>false</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">False.</a:documentation>
+         <value>unknown</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Unknown.</a:documentation>
+      </choice>
+   </define>
    <define name="mei_data.CANCELACCID">
       <choice>
          <value>none</value>
@@ -8091,6 +8101,43 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
       <optional>
          <ref name="mei_model.backLike"/>
       </optional>
+   </define>
+   <define name="mei_macro.profileDescPart">
+      <interleave>
+         <optional>
+            <ref name="mei_audience"/>
+         </optional>
+         <optional>
+            <ref name="mei_classification"/>
+         </optional>
+         <optional>
+            <ref name="mei_contents"/>
+         </optional>
+         <optional>
+            <ref name="mei_context"/>
+         </optional>
+         <optional>
+            <ref name="mei_creation"/>
+         </optional>
+         <optional>
+            <ref name="mei_dedication"/>
+         </optional>
+         <optional>
+            <ref name="mei_history"/>
+         </optional>
+         <optional>
+            <ref name="mei_langUsage"/>
+         </optional>
+         <optional>
+            <ref name="mei_otherChar"/>
+         </optional>
+         <optional>
+            <ref name="mei_perfDuration"/>
+         </optional>
+         <optional>
+            <ref name="mei_perfMedium"/>
+         </optional>
+      </interleave>
    </define>
    <define name="mei_macro.struc-unstrucContent">
       <choice>
@@ -13141,10 +13188,7 @@ Suggested values include: 1] smufl</a:documentation>
       <optional>
          <attribute name="instant">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The @instant attribute is syntactic sugar for classifying a scribal intervention as an ad-hoc modification; that is, one which does not interrupt the writing process.</a:documentation>
-            <choice>
-               <ref name="mei_data.BOOLEAN"/>
-               <value>unknown</value>
-            </choice>
+            <ref name="mei_data.BOOLEAN.unknown"/>
          </attribute>
       </optional>
    </define>
@@ -22651,22 +22695,28 @@ Suggested values include: 1] smufl</a:documentation>
    <define name="mei_model.biblLike">
       <choice>
          <ref name="mei_bibl"/>
+         <ref name="mei_biblFull"/>
          <ref name="mei_biblStruct"/>
       </choice>
    </define>
    <define name="mei_model.biblLike_alternation">
       <choice>
          <ref name="mei_bibl"/>
+         <ref name="mei_biblFull"/>
          <ref name="mei_biblStruct"/>
       </choice>
    </define>
    <define name="mei_model.biblLike_sequence">
       <ref name="mei_bibl"/>
+      <ref name="mei_biblFull"/>
       <ref name="mei_biblStruct"/>
    </define>
    <define name="mei_model.biblLike_sequenceOptional">
       <optional>
          <ref name="mei_bibl"/>
+      </optional>
+      <optional>
+         <ref name="mei_biblFull"/>
       </optional>
       <optional>
          <ref name="mei_biblStruct"/>
@@ -22677,6 +22727,9 @@ Suggested values include: 1] smufl</a:documentation>
          <ref name="mei_bibl"/>
       </zeroOrMore>
       <zeroOrMore>
+         <ref name="mei_biblFull"/>
+      </zeroOrMore>
+      <zeroOrMore>
          <ref name="mei_biblStruct"/>
       </zeroOrMore>
    </define>
@@ -22685,19 +22738,20 @@ Suggested values include: 1] smufl</a:documentation>
          <ref name="mei_bibl"/>
       </oneOrMore>
       <oneOrMore>
+         <ref name="mei_biblFull"/>
+      </oneOrMore>
+      <oneOrMore>
          <ref name="mei_biblStruct"/>
       </oneOrMore>
    </define>
    <define name="mei_model.biblPart">
       <choice>
-         <ref name="mei_perfDuration"/>
          <ref name="mei_model.editionLike"/>
+         <ref name="mei_model.repositoryLike"/>
          <ref name="mei_model.respLike"/>
          <ref name="mei_biblScope"/>
-         <ref name="mei_creation"/>
          <ref name="mei_genre"/>
          <ref name="mei_imprint"/>
-         <ref name="mei_physLoc"/>
          <ref name="mei_recipient"/>
          <ref name="mei_relatedItem"/>
          <ref name="mei_series"/>
@@ -24580,6 +24634,54 @@ Suggested values include: 1] smufl</a:documentation>
          <ref name="mei_att.bibl.attributes"/>
          <ref name="mei_att.facsimile.attributes"/>
          <ref name="mei_att.lang.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mei_biblFull">
+      <element name="biblFull">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(structured bibliographic description) Contains a structured bibliographic description in which many, but not all, components must appear in a specified order.</a:documentation>
+         <zeroOrMore>
+            <ref name="mei_model.identifierLike"/>
+         </zeroOrMore>
+         <ref name="mei_titleStmt"/>
+         <optional>
+            <ref name="mei_editionStmt"/>
+         </optional>
+         <optional>
+            <ref name="mei_physDesc"/>
+         </optional>
+         <optional>
+            <ref name="mei_physLoc"/>
+         </optional>
+         <ref name="mei_pubStmt"/>
+         <zeroOrMore>
+            <ref name="mei_seriesStmt"/>
+         </zeroOrMore>
+         <optional>
+            <ref name="mei_notesStmt"/>
+         </optional>
+         <optional>
+            <ref name="mei_sourceDesc"/>
+         </optional>
+         <interleave>
+            <optional>
+               <ref name="mei_macro.profileDescPart"/>
+            </optional>
+            <zeroOrMore>
+               <ref name="mei_relatedItem"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="mei_model.workIdent"/>
+            </zeroOrMore>
+         </interleave>
+         <zeroOrMore>
+            <ref name="mei_extMeta"/>
+         </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <ref name="mei_att.facsimile.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
+         <ref name="mei_att.pointing.attributes"/>
          <empty/>
       </element>
    </define>

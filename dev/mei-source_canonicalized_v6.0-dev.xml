@@ -21,7 +21,7 @@
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../source/validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="../source/validation/mei-purify.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2026-03-19T16:29:25.34452666+01:00-->
+<!--canonicalized: 2026-03-27T09:23:57.245193064+01:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -2147,6 +2147,7 @@
                <head>Introduction</head>
                <p>Metadata means "data about data", <abbr>i.e.</abbr>, information about various aspects of an encoding at hand. There are many different types of metadata, which MEI tries to order according to their respective scope or perspective, as described in <ptr target="#headerstructure"/>. MEI’s approach to metadata is heavily influenced by other existing standards and models, such as TEI, MARC, and FRBR. It attempts to reflect both current library practice and common scholarly methods, for example in the field of source descriptions (see chapter <ptr target="#msdesc"/>).</p>
                <p>This chapter thus addresses the description of an encoded item so that the musical text, as well as its sources, encoding, and revisions are all thoroughly documented. Such documentation is necessary for scholars using the texts, for software processing them, and for catalogers in libraries and archives. Together these descriptions and declarations provide an electronic analog to the title page attached to a printed work. They also constitute an equivalent for the content of the code books or introductory manuals customarily accompanying electronic data sets.</p>
+               <p>For large encoding projects, the Functional Requirements for Bibliographic Records (<abbr>FRBR</abbr>) capabilities of MEI provides most flexibility and descriptive capabilities. However, MEI also provides simpler, non-FRBR methods for source description for those cases where the FRBR capbilities are not needed. These are further discussed in <ptr target="#nonfrbrsourcedescription"/>.</p>
             </div>
             <div xml:id="headerstructure" type="div2">
                <head>Structure of the MEI Header</head>
@@ -2166,6 +2167,52 @@
                   <item>This concept is covered in section <ptr target="#headerusecases"/>.</item>
                   <item>A <hi rend="italic">revision history</hi>, tagged <gi scheme="MEI">revisionDesc</gi>, which allows the encoder to provide a history of changes made during the development of the electronic text. The revision history is important for version control and for resolving questions about the history of a file. The MEI elements used to encode the revision description are described in section <ptr target="#headerRevisionDescription"/>.</item>
                </list>
+               <div xml:id="nonfrbrsourcedescription" type="div3">
+                  <head>Non-FRBR Source Description</head>
+                  <p>MEI allows two methodologies to be used when doing metadata capture and source description. The <abbr>FRBR</abbr> methodology (<ptr target="#FRBR"/>) gives encoders a mechanism for building detailed descriptions of bibliographic entities. Most bibliographic-based projects should favor the FRBR method.</p>
+                  <p>However, there are cases where detailed bibliographic analysis at the level required by the FRBR module is not possible or desirable. These may include situations such as retro-conversion of non-FRBR catalogues, or capturing the output of notation encoding software where only minimal source description capabilities are available. In these cases, encoders may capture metadata in the MEI header without using FRBR encoding entities and instead choose a simplified methodology for source description.</p>
+                  <p>The <gi scheme="MEI">sourceDesc</gi> element as a child of the <gi scheme="MEI">fileDesc</gi> element may be used to capture simple bibliographic descriptions. An example is given below.</p>
+                  <p><gi scheme="MEI">source</gi> may use <gi scheme="MEI">bibl</gi>, <gi scheme="MEI">biblStruct</gi>, or <gi scheme="MEI">biblFull</gi>. The first two permit bibliographic citation for the souce, while <gi scheme="MEI">biblFull</gi> allows bibliographic description. In other words, <gi scheme="MEI">bibl</gi> and <gi scheme="MEI">biblStruct</gi> are not as fully-featured as <gi scheme="MEI">biblFull</gi>.</p>
+                  <p>
+                     <figure>
+                        <head/>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;fileDesc&gt;
+    &lt;titleStmt&gt;
+        &lt;title&gt;La clé du caveau&lt;/title&gt;
+    &lt;/titleStmt&gt;
+    &lt;pubStmt&gt;
+        &lt;publisher&gt;Capelle &amp;amp; Renand&lt;/publisher&gt;
+        &lt;pubPlace&gt;Paris&lt;/pubPlace&gt;
+    &lt;/pubStmt&gt;
+    &lt;sourceDesc&gt;
+        &lt;source&gt;
+            &lt;biblFull&gt;
+                &lt;titleStmt&gt;
+                    &lt;title&gt;La clé du caveau&lt;/title&gt;
+                &lt;/titleStmt&gt;
+                &lt;physDesc&gt;
+                    &lt;dimensions&gt;
+                        &lt;width unit="cm"&gt;9.5&lt;/width&gt;
+                        &lt;height unit="cm"&gt;14&lt;/height&gt;
+                    &lt;/dimensions&gt;
+                    &lt;extent unit="page"&gt;376p&lt;/extent&gt;
+                &lt;/physDesc&gt;
+                &lt;physLoc&gt;
+                    &lt;identifier&gt;XA Li 1811/1&lt;/identifier&gt;
+                    &lt;repository&gt;
+                        &lt;corpName&gt;Universität Bern, Institut für Musikwissenschaft&lt;/corpName&gt;
+                        &lt;geogName&gt;Bern&lt;/geogName&gt;
+                        &lt;country&gt;Switzerland&lt;/country&gt;
+                    &lt;/repository&gt;
+                &lt;/physLoc&gt;
+            &lt;/biblFull&gt;
+        &lt;/source&gt;
+    &lt;/sourceDesc&gt;
+&lt;/fileDesc&gt;
+</egXML>
+                     </figure>
+                  </p>
+               </div>
             </div>
             <div xml:id="commonconcepts" type="div2">
                <head>Common Metadata Concepts</head>
@@ -16883,6 +16930,22 @@ or
       </valList>
     </content>
   </macroSpec>
+  <macroSpec ident="data.BOOLEAN.unknown" module="MEI" type="dt">
+    <desc xml:lang="en">Boolean attribute values and "unknown".</desc>
+    <content>
+      <valList type="closed">
+        <valItem ident="true">
+          <desc xml:lang="en">True.</desc>
+        </valItem>
+        <valItem ident="false">
+          <desc xml:lang="en">False.</desc>
+        </valItem>
+        <valItem ident="unknown">
+          <desc xml:lang="en">Unknown.</desc>
+        </valItem>
+      </valList>
+    </content>
+  </macroSpec>
   <macroSpec ident="data.CANCELACCID" module="MEI" type="dt">
     <desc xml:lang="en">Indicates where cancellation accidentals are shown in a key signature.</desc>
     <content>
@@ -25906,10 +25969,7 @@ or
         <desc xml:lang="en">The @instant attribute is syntactic sugar for classifying a scribal intervention as an
           ad-hoc modification; that is, one which does not interrupt the writing process.</desc>
         <datatype>
-          <rng:choice>
-            <rng:ref name="data.BOOLEAN"/>
-            <rng:value>unknown</rng:value>
-          </rng:choice>
+          <rng:ref name="data.BOOLEAN.unknown"/>
         </datatype>
       </attDef>
       <attDef ident="state" usage="opt">
@@ -29057,7 +29117,6 @@ or
       <memberOf key="att.bibl"/>
       <memberOf key="att.facsimile"/>
       <memberOf key="att.lang"/>
-      <memberOf key="model.biblPart"/>
       <memberOf key="model.physDescPart"/>
       <memberOf key="model.titlePagePart"/>
     </classes>
@@ -29947,20 +30006,18 @@ or
       <memberOf key="model.physDescPart"/>
     </classes>
     <content>
-      <rng:choice>
-        <rng:group>
-          <rng:zeroOrMore>
-            <rng:ref name="head"/>
-          </rng:zeroOrMore>
-          <rng:zeroOrMore>
-            <rng:choice>
-              <rng:ref name="watermarkList"/>
-              <rng:ref name="watermark"/>
-              <rng:ref name="p"/>
-            </rng:choice>
-          </rng:zeroOrMore>
-        </rng:group>
-      </rng:choice>
+      <rng:group>
+        <rng:zeroOrMore>
+          <rng:ref name="head"/>
+        </rng:zeroOrMore>
+        <rng:zeroOrMore>
+          <rng:choice>
+            <rng:ref name="watermarkList"/>
+            <rng:ref name="watermark"/>
+            <rng:ref name="p"/>
+          </rng:choice>
+        </rng:zeroOrMore>
+      </rng:group>
     </content>
   </elementSpec>
   <elementSpec ident="watermarkList" module="MEI.header">
@@ -33769,6 +33826,46 @@ or
       <rng:optional>
         <rng:ref name="model.backLike"/>
       </rng:optional>
+    </content>
+  </macroSpec>
+  <macroSpec ident="macro.profileDescPart" module="MEI.shared" type="pe">
+    <desc xml:lang="en">Groups elements that capture a portion of a bibliographic description.</desc>
+    <content>
+      <rng:interleave>
+        <rng:optional>
+          <rng:ref name="audience"/>
+        </rng:optional>
+        <rng:optional>
+          <rng:ref name="classification"/>
+        </rng:optional>
+        <rng:optional>
+          <rng:ref name="contents"/>
+        </rng:optional>
+        <rng:optional>
+          <rng:ref name="context"/>
+        </rng:optional>
+        <rng:optional>
+          <rng:ref name="creation"/>
+        </rng:optional>
+        <rng:optional>
+          <rng:ref name="dedication"/>
+        </rng:optional>
+        <rng:optional>
+          <rng:ref name="history"/>
+        </rng:optional>
+        <rng:optional>
+          <rng:ref name="langUsage"/>
+        </rng:optional>
+        <rng:optional>
+          <rng:ref name="otherChar"/>
+        </rng:optional>
+        <rng:optional>
+          <rng:ref name="perfDuration"/>
+        </rng:optional>
+        <rng:optional>
+          <rng:ref name="perfMedium"/>
+        </rng:optional>
+      </rng:interleave>
     </content>
   </macroSpec>
   <macroSpec ident="macro.struc-unstrucContent" module="MEI.shared" type="pe">
@@ -38157,6 +38254,7 @@ or
   <classSpec ident="model.repositoryLike" module="MEI.shared" type="model">
     <desc xml:lang="en">Groups elements that denote a corporate entity that holds a bibliographic item.</desc>
     <classes>
+      <memberOf key="model.biblPart"/>
       <memberOf key="model.nameLike.place"/>
     </classes>
   </classSpec>
@@ -38646,6 +38744,65 @@ or
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-listBibl.html">listBibl</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks>
   </elementSpec>
+  <elementSpec ident="biblFull" module="MEI.shared">
+    <gloss versionDate="2022-05-18" xml:lang="en">structured bibliographic description</gloss>
+    <desc xml:lang="en">Contains a structured bibliographic description in which many, 
+      but not all, components must appear in a specified order.</desc>
+    <classes>
+      <memberOf key="att.common"/>
+      <memberOf key="att.bibl"/>
+      <memberOf key="att.facsimile"/>
+      <memberOf key="att.lang"/>
+      <memberOf key="att.pointing"/>
+      <memberOf key="model.biblLike"/>
+    </classes>
+    <content>
+      <rng:zeroOrMore>
+        <rng:ref name="model.identifierLike"/>
+      </rng:zeroOrMore>
+      <rng:ref name="titleStmt"/>
+      <rng:optional>
+        <rng:ref name="editionStmt"/>
+      </rng:optional>
+      <rng:optional>
+        <rng:ref name="physDesc"/>
+      </rng:optional>
+      <rng:optional>
+        <rng:ref name="physLoc"/>
+      </rng:optional>
+      <rng:ref name="pubStmt"/>
+      <rng:zeroOrMore>
+        <rng:ref name="seriesStmt"/>
+      </rng:zeroOrMore>
+      <rng:optional>
+        <rng:ref name="notesStmt"/>
+      </rng:optional>
+      <rng:optional>
+        <rng:ref name="sourceDesc"/>
+      </rng:optional>
+      <rng:interleave>
+        <rng:optional>
+          <rng:ref name="macro.profileDescPart"/>
+        </rng:optional>
+        <rng:zeroOrMore>
+          <rng:ref name="relatedItem"/>
+        </rng:zeroOrMore>
+        <rng:zeroOrMore>
+          <rng:ref name="model.workIdent"/>
+        </rng:zeroOrMore>
+      </rng:interleave>
+      <rng:zeroOrMore>
+        <rng:ref name="extMeta"/>
+      </rng:zeroOrMore>
+    </content>
+    <remarks xml:lang="en">
+      <p>This element shares its name with the Text Encoding Initiative (TEI) 
+        <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-biblFull.html">biblFull</ref> 
+        element. Its content model is different, however. The MEI element accommodates a greater
+        number of sub-elements necessary for the description of music-related bibliographic
+        objects.</p>
+    </remarks>
+  </elementSpec>
   <elementSpec ident="biblScope" module="MEI.shared">
     <gloss xml:lang="en">scope of citation</gloss>
     <desc xml:lang="en">Defines the scope of a bibliographic reference, for example as a
@@ -39059,7 +39216,6 @@ or
       <memberOf key="att.datable"/>
       <memberOf key="att.facsimile"/>
       <memberOf key="att.lang"/>
-      <memberOf key="model.biblPart"/>
     </classes>
     <content>
       <rng:zeroOrMore>
@@ -40965,7 +41121,6 @@ or
       <memberOf key="att.common"/>
       <memberOf key="att.bibl"/>
       <memberOf key="att.facsimile"/>
-      <memberOf key="model.biblPart"/>
     </classes>
     <content>
       <rng:zeroOrMore>
