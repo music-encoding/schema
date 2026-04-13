@@ -21,7 +21,7 @@
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../source/validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="../source/validation/mei-purify.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2026-04-13T23:23:02.340802606+02:00-->
+<!--canonicalized: 2026-04-14T00:00:49.812183165+02:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -27206,6 +27206,30 @@ or
       </rng:zeroOrMore>
     </content>
   </macroSpec>
+  <macroSpec ident="macro.histAccount" module="MEI.header" type="pe">
+    <desc xml:lang="en">Content model for elements that can be used to describe historical account.</desc>
+    <content>
+      <rng:choice>
+        <rng:group>
+          <rng:zeroOrMore>
+            <rng:ref name="model.headLike"/>
+          </rng:zeroOrMore>
+          <rng:zeroOrMore>
+            <rng:choice>
+              <rng:ref name="eventList"/>
+              <rng:ref name="model.pLike"/>
+            </rng:choice>
+          </rng:zeroOrMore>
+        </rng:group>
+        <rng:zeroOrMore>
+          <rng:choice>
+            <rng:text/>
+            <rng:ref name="model.textPhraseLike.limited"/>
+          </rng:choice>
+        </rng:zeroOrMore>
+      </rng:choice>
+    </content>
+  </macroSpec>
   <classSpec ident="att.bifoliumSurfaces" module="MEI.header" type="atts">
     <desc xml:lang="en">Attributes that link a bifolium element with a <gi scheme="MEI">surface</gi>
       element.</desc>
@@ -27528,25 +27552,7 @@ or
       <memberOf key="att.lang"/>
     </classes>
     <content>
-      <rng:choice>
-        <rng:group>
-          <rng:zeroOrMore>
-            <rng:ref name="model.headLike"/>
-          </rng:zeroOrMore>
-          <rng:zeroOrMore>
-            <rng:choice>
-              <rng:ref name="eventList"/>
-              <rng:ref name="model.pLike"/>
-            </rng:choice>
-          </rng:zeroOrMore>
-        </rng:group>
-        <rng:zeroOrMore>
-          <rng:choice>
-            <rng:text/>
-            <rng:ref name="model.textPhraseLike.limited"/>
-          </rng:choice>
-        </rng:zeroOrMore>
-      </rng:choice>
+      <rng:ref name="macro.histAccount"/>
     </content>
     <remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-acquisition.html">acquisition</ref> element of the Text Encoding Initiative (TEI).</p>
@@ -28404,25 +28410,7 @@ or
       <memberOf key="att.lang"/>
     </classes>
     <content>
-      <rng:choice>
-        <rng:group>
-          <rng:zeroOrMore>
-            <rng:ref name="model.headLike"/>
-          </rng:zeroOrMore>
-          <rng:zeroOrMore>
-            <rng:choice>
-              <rng:ref name="eventList"/>
-              <rng:ref name="model.pLike"/>
-            </rng:choice>
-          </rng:zeroOrMore>
-        </rng:group>
-        <rng:zeroOrMore>
-          <rng:choice>
-            <rng:text/>
-            <rng:ref name="model.textPhraseLike.limited"/>
-          </rng:choice>
-        </rng:zeroOrMore>
-      </rng:choice>
+      <rng:ref name="macro.histAccount"/>
     </content>
     <remarks xml:lang="en">
       <p>The model of this element is based on the <abbr>MARC</abbr> <ref target="https://www.loc.gov/marc/bibliographic/bd585.html">585</ref> field.</p>
@@ -29374,25 +29362,7 @@ or
       <memberOf key="att.lang"/>
     </classes>
     <content>
-      <rng:choice>
-        <rng:group>
-          <rng:zeroOrMore>
-            <rng:ref name="model.headLike"/>
-          </rng:zeroOrMore>
-          <rng:zeroOrMore>
-            <rng:choice>
-              <rng:ref name="eventList"/>
-              <rng:ref name="model.pLike"/>
-            </rng:choice>
-          </rng:zeroOrMore>
-        </rng:group>
-        <rng:zeroOrMore>
-          <rng:choice>
-            <rng:text/>
-            <rng:ref name="model.textPhraseLike.limited"/>
-          </rng:choice>
-        </rng:zeroOrMore>
-      </rng:choice>
+      <rng:ref name="macro.histAccount"/>
     </content>
     <remarks xml:lang="en">
       <p>The model of this element is based on the respective element of the Encoded Archival Description (EAD) and the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-provenance.html">provenance</ref> element of the Text
@@ -29893,25 +29863,7 @@ or
       <memberOf key="att.lang"/>
     </classes>
     <content>
-      <rng:choice>
-        <rng:group>
-          <rng:zeroOrMore>
-            <rng:ref name="model.headLike"/>
-          </rng:zeroOrMore>
-          <rng:zeroOrMore>
-            <rng:choice>
-              <rng:ref name="eventList"/>
-              <rng:ref name="model.pLike"/>
-            </rng:choice>
-          </rng:zeroOrMore>
-        </rng:group>
-        <rng:zeroOrMore>
-          <rng:choice>
-            <rng:text/>
-            <rng:ref name="model.textPhraseLike.limited"/>
-          </rng:choice>
-        </rng:zeroOrMore>
-      </rng:choice>
+      <rng:ref name="macro.histAccount"/>
     </content>
     <remarks xml:lang="en">
       <p>Treatment history may also comprise details of the treatment process (<abbr>e.g.</abbr>, chemical
@@ -29930,25 +29882,7 @@ or
       <memberOf key="att.lang"/>
     </classes>
     <content>
-      <rng:choice>
-        <rng:group>
-          <rng:zeroOrMore>
-            <rng:ref name="model.headLike"/>
-          </rng:zeroOrMore>
-          <rng:zeroOrMore>
-            <rng:choice>
-              <rng:ref name="eventList"/>
-              <rng:ref name="model.pLike"/>
-            </rng:choice>
-          </rng:zeroOrMore>
-        </rng:group>
-        <rng:zeroOrMore>
-          <rng:choice>
-            <rng:text/>
-            <rng:ref name="model.textPhraseLike.limited"/>
-          </rng:choice>
-        </rng:zeroOrMore>
-      </rng:choice>
+      <rng:ref name="macro.histAccount"/>
     </content>
     <remarks xml:lang="en">
       <p>The model of this element is based on the respective element of the Encoded Archival Description (EAD).</p>

@@ -17701,6 +17701,11 @@ or
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="physLoc"/></zeroOrMore>
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="seriesStmt"/></zeroOrMore>
     </content>
+  </macroSpec><macroSpec rend="add" ident="macro.histAccount" module="MEI.header" type="pe">
+    <desc xml:lang="en">Content model for elements that can be used to describe historical account.</desc>
+    <content>
+      <choice xmlns="http://relaxng.org/ns/structure/1.0"><group><zeroOrMore><ref name="model.headLike"/></zeroOrMore><zeroOrMore><choice><ref name="eventList"/><ref name="model.pLike"/></choice></zeroOrMore></group><zeroOrMore><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike.limited"/></choice></zeroOrMore></choice>
+    </content>
   </macroSpec><classSpec rend="add" ident="att.bifoliumSurfaces" module="MEI.header" type="atts">
     <desc xml:lang="en">Attributes that link a bifolium element with a <gi scheme="MEI">surface</gi>
       element.</desc>
@@ -17987,7 +17992,7 @@ or
       <memberOf key="att.datable"/>
       <memberOf key="att.lang"/>
     </classes><content>
-      <choice xmlns="http://relaxng.org/ns/structure/1.0"><group><zeroOrMore><ref name="model.headLike"/></zeroOrMore><zeroOrMore><choice><ref name="eventList"/><ref name="model.pLike"/></choice></zeroOrMore></group><zeroOrMore><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike.limited"/></choice></zeroOrMore></choice>
+      <ref xmlns="http://relaxng.org/ns/structure/1.0" name="macro.histAccount"/>
     </content><remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-acquisition.html">acquisition</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="altId" module="MEI.header"><gloss xml:lang="en">alternative identifier</gloss><desc xml:lang="en">May contain a bibliographic identifier that does not fit within
@@ -18473,7 +18478,7 @@ or
       <memberOf key="att.datable"/>
       <memberOf key="att.lang"/>
     </classes><content>
-      <choice xmlns="http://relaxng.org/ns/structure/1.0"><group><zeroOrMore><ref name="model.headLike"/></zeroOrMore><zeroOrMore><choice><ref name="eventList"/><ref name="model.pLike"/></choice></zeroOrMore></group><zeroOrMore><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike.limited"/></choice></zeroOrMore></choice>
+      <ref xmlns="http://relaxng.org/ns/structure/1.0" name="macro.histAccount"/>
     </content><remarks xml:lang="en">
       <p>The model of this element is based on the <abbr>MARC</abbr> <ref target="https://www.loc.gov/marc/bibliographic/bd585.html">585</ref> field.</p>
     </remarks></elementSpec><elementSpec rend="add" ident="extMeta" module="MEI.header"><gloss xml:lang="en">extended metadata</gloss><desc xml:lang="en">Provides a container element for non-MEI metadata formats.</desc><classes>
@@ -19035,7 +19040,7 @@ or
       <memberOf key="att.datable"/>
       <memberOf key="att.lang"/>
     </classes><content>
-      <choice xmlns="http://relaxng.org/ns/structure/1.0"><group><zeroOrMore><ref name="model.headLike"/></zeroOrMore><zeroOrMore><choice><ref name="eventList"/><ref name="model.pLike"/></choice></zeroOrMore></group><zeroOrMore><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike.limited"/></choice></zeroOrMore></choice>
+      <ref xmlns="http://relaxng.org/ns/structure/1.0" name="macro.histAccount"/>
     </content><remarks xml:lang="en">
       <p>The model of this element is based on the respective element of the Encoded Archival Description (EAD) and the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-provenance.html">provenance</ref> element of the Text
         Encoding Initiative (TEI).</p>
@@ -19305,7 +19310,7 @@ or
       <memberOf key="att.datable"/>
       <memberOf key="att.lang"/>
     </classes><content>
-      <choice xmlns="http://relaxng.org/ns/structure/1.0"><group><zeroOrMore><ref name="model.headLike"/></zeroOrMore><zeroOrMore><choice><ref name="eventList"/><ref name="model.pLike"/></choice></zeroOrMore></group><zeroOrMore><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike.limited"/></choice></zeroOrMore></choice>
+      <ref xmlns="http://relaxng.org/ns/structure/1.0" name="macro.histAccount"/>
     </content><remarks xml:lang="en">
       <p>Treatment history may also comprise details of the treatment process (<abbr>e.g.</abbr>, chemical
         solutions used, techniques applied, etc.), the date the treatment was applied, etc.</p>
@@ -19317,7 +19322,7 @@ or
       <memberOf key="att.datable"/>
       <memberOf key="att.lang"/>
     </classes><content>
-      <choice xmlns="http://relaxng.org/ns/structure/1.0"><group><zeroOrMore><ref name="model.headLike"/></zeroOrMore><zeroOrMore><choice><ref name="eventList"/><ref name="model.pLike"/></choice></zeroOrMore></group><zeroOrMore><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike.limited"/></choice></zeroOrMore></choice>
+      <ref xmlns="http://relaxng.org/ns/structure/1.0" name="macro.histAccount"/>
     </content><remarks xml:lang="en">
       <p>The model of this element is based on the respective element of the Encoded Archival Description (EAD).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="unpub" module="MEI.header"><gloss xml:lang="en">unpublished</gloss><desc xml:lang="en">Used to explicitly indicate that a bibliographic resource is
