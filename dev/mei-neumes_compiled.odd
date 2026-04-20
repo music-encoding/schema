@@ -2753,20 +2753,40 @@
                   </div>
                   <div xml:id="headerSourceDescription" type="div4">
                      <head>Source Description</head>
-                     <p>The <gi scheme="MEI">sourceDesc</gi> element is the seventh and final component of the <gi scheme="MEI">fileDesc</gi> element. In MEI, <gi scheme="MEI">sourceDesc</gi> is a grouping element containing one or more <gi scheme="MEI">source</gi> elements, each of which records details of a source from which the computer file is derived. This might be a printed text or manuscript, another computer file, an audio or video recording, or a combination of these. An electronic file may also have no source, if what is being cataloged is an original text created in electronic form.</p>
+                     <p>The <gi scheme="MEI">sourceDesc</gi> element is the seventh and final
+                        component of the <gi scheme="MEI">fileDesc</gi> element. It records
+                        information about sources that have been used to create the MEI encoding,
+                        such as a printed text or manuscript, another computer file, an audio or
+                        video recording, or a combination of these.</p>
                      <p>
                         <specList>
                            <specDesc key="sourceDesc"/>
                            <specDesc key="source"/>
+                           <specDesc key="p"/>
                         </specList>
                      </p>
-                     <p>The <gi scheme="MEI">source</gi> element may contain</p>
+                     <p><gi scheme="MEI">sourceDesc</gi> may contain one or more <gi scheme="MEI">source</gi> elements, each of which records details about a single
+                        source. Alternatively, it may contain a paragraph that provides a brief
+                        textual explanation regarding the sources used. This is particularly
+                        useful when the MEI file represents an original work created in electronic
+                        form.</p>
+                     <p>
+                        <figure>
+                           <head/>
+                           <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">
+                    &lt;sourceDesc&gt;
+  &lt;p&gt;Born digital&lt;/p&gt;
+&lt;/sourceDesc&gt;</egXML>
+                        </figure>
+                     </p>
+                     <p>The <gi scheme="MEI">source</gi> element may contain:</p>
                      <p>
                         <specList>
                            <specDesc key="head"/>
                            <specDesc key="locusGrp"/>
                            <specDesc key="locus"/>
                            <specDesc key="bibl"/>
+                           <specDesc key="biblFull"/>
                            <specDesc key="biblStruct"/>
                         </specList>
                      </p>
@@ -3064,7 +3084,8 @@
       &lt;p&gt;Creation of the document.&lt;/p&gt;
     &lt;/changeDesc&gt;
   &lt;/change&gt;
-&lt;/revisionDesc&gt;</egXML>
+&lt;/revisionDesc&gt;
+</egXML>
                      </figure>
                   </p>
                </div>
@@ -18994,7 +19015,7 @@ or
       <memberOf key="att.common"/>
     </classes><content>
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.headLike"/></zeroOrMore>
-      <oneOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="source"/></oneOrMore>
+      <choice xmlns="http://relaxng.org/ns/structure/1.0"><ref name="p"/><oneOrMore><ref name="source"/></oneOrMore></choice>
     </content><remarks xml:lang="en">
       <p>This element is recommended where the MEI file is a transcription of existing music, but is
         not required when the data is originally created in MEI form.</p>

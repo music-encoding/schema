@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2026-04-13T22:01:21Z. . 
+Schema generated from ODD source 2026-04-20T10:26:12Z. . 
 TEI Edition: MEI 6.0-dev 
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -13180,9 +13180,12 @@ Suggested values include: 1] glue; 2] thread; 3] needle; 4] tape; 5] staple</a:d
          <zeroOrMore>
             <ref name="mei_model.headLike"/>
          </zeroOrMore>
-         <oneOrMore>
-            <ref name="mei_source"/>
-         </oneOrMore>
+         <choice>
+            <ref name="mei_p"/>
+            <oneOrMore>
+               <ref name="mei_source"/>
+            </oneOrMore>
+         </choice>
          <ref name="mei_att.common.attributes"/>
          <empty/>
       </element>

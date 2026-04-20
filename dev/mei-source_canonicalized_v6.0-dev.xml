@@ -21,7 +21,7 @@
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../source/validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="../source/validation/mei-purify.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2026-04-14T00:00:49.812183165+02:00-->
+<!--canonicalized: 2026-04-20T12:25:40.181796737+02:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -2795,20 +2795,40 @@
                   </div>
                   <div xml:id="headerSourceDescription" type="div4">
                      <head>Source Description</head>
-                     <p>The <gi scheme="MEI">sourceDesc</gi> element is the seventh and final component of the <gi scheme="MEI">fileDesc</gi> element. In MEI, <gi scheme="MEI">sourceDesc</gi> is a grouping element containing one or more <gi scheme="MEI">source</gi> elements, each of which records details of a source from which the computer file is derived. This might be a printed text or manuscript, another computer file, an audio or video recording, or a combination of these. An electronic file may also have no source, if what is being cataloged is an original text created in electronic form.</p>
+                     <p>The <gi scheme="MEI">sourceDesc</gi> element is the seventh and final
+                        component of the <gi scheme="MEI">fileDesc</gi> element. It records
+                        information about sources that have been used to create the MEI encoding,
+                        such as a printed text or manuscript, another computer file, an audio or
+                        video recording, or a combination of these.</p>
                      <p>
                         <specList>
                            <specDesc key="sourceDesc"/>
                            <specDesc key="source"/>
+                           <specDesc key="p"/>
                         </specList>
                      </p>
-                     <p>The <gi scheme="MEI">source</gi> element may contain</p>
+                     <p><gi scheme="MEI">sourceDesc</gi> may contain one or more <gi scheme="MEI">source</gi> elements, each of which records details about a single
+                        source. Alternatively, it may contain a paragraph that provides a brief
+                        textual explanation regarding the sources used. This is particularly
+                        useful when the MEI file represents an original work created in electronic
+                        form.</p>
+                     <p>
+                        <figure>
+                           <head/>
+                           <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">
+                    &lt;sourceDesc&gt;
+  &lt;p&gt;Born digital&lt;/p&gt;
+&lt;/sourceDesc&gt;</egXML>
+                        </figure>
+                     </p>
+                     <p>The <gi scheme="MEI">source</gi> element may contain:</p>
                      <p>
                         <specList>
                            <specDesc key="head"/>
                            <specDesc key="locusGrp"/>
                            <specDesc key="locus"/>
                            <specDesc key="bibl"/>
+                           <specDesc key="biblFull"/>
                            <specDesc key="biblStruct"/>
                         </specList>
                      </p>
@@ -3106,7 +3126,8 @@
       &lt;p&gt;Creation of the document.&lt;/p&gt;
     &lt;/changeDesc&gt;
   &lt;/change&gt;
-&lt;/revisionDesc&gt;</egXML>
+&lt;/revisionDesc&gt;
+</egXML>
                      </figure>
                   </p>
                </div>
@@ -29607,9 +29628,12 @@ or
       <rng:zeroOrMore>
         <rng:ref name="model.headLike"/>
       </rng:zeroOrMore>
-      <rng:oneOrMore>
-        <rng:ref name="source"/>
-      </rng:oneOrMore>
+      <rng:choice>
+        <rng:ref name="p"/>
+        <rng:oneOrMore>
+          <rng:ref name="source"/>
+        </rng:oneOrMore>
+      </rng:choice>
     </content>
     <remarks xml:lang="en">
       <p>This element is recommended where the MEI file is a transcription of existing music, but is
