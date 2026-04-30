@@ -7517,7 +7517,7 @@ or
                   <div xml:id="cmnTempo" type="div4">
                      <head>Tempo changes and other directives</head>
                      <p>A tempo or character indication is often provided above the topmost staff of the first measure of a score, movement, or section. This indication, such as "Allegro moderato" or "Andante maestoso", may be regarded as a label. Though it is possible to label the movement, etc. using a <att>label</att> attribute attached to the enclosing structural entity (that is, on <gi scheme="MEI">mdiv</gi> or <gi scheme="MEI">section</gi>), it is often required to capture the exact position, spelling, or other features of the label as found in the underlying source material. In these cases, an element is necessary.</p>
-                     <p>Labels which address the tempo at which the music should be performed should be encoded using the <gi scheme="MEI">tempo</gi> element, which is a specialized form of <gi scheme="MEI">dir</gi>. <gi scheme="MEI">tempo</gi> is a member of the <ident type="class">model.controlEventLike</ident> class and as such occurs as a child of <gi scheme="MEI">measure</gi>, following all <gi scheme="MEI">staff</gi> children. Its <att>staff</att>, <att>layer</att> and <att>tstamp</att> attributes are used to ensure correct semantic positioning, and <att>place</att> indicates a visual position with respect to the staff.</p>
+                     <p>Labels which address the tempo at which the music should be performed should be encoded using the <gi scheme="MEI">tempo</gi> element, which is a specialized form of <gi scheme="MEI">dir</gi>. <gi scheme="MEI">tempo</gi> is a member of the <ident type="class">model.controlEventLike</ident> class and as such occurs as a child of <gi scheme="MEI">measure</gi>, following all <gi scheme="MEI">staff</gi> children. Its <att>staffgrp</att>, <att>staff</att>, <att>layer</att> and <att>tstamp</att> attributes are used to ensure correct semantic positioning, and <att>place</att> indicates a visual position with respect to the staff.</p>
                      <p>
                         <figure>
                            <head/>
@@ -7570,6 +7570,72 @@ or
                         </figure>
                      </p>
                   </div>
+                  <div type="div4" xml:id="cmnStaffGrp">
+                     <head>Referencing Staff Groups</head>
+                     <p>Directives or rehearsal marks that refer to one or more staff groups can be specified using the <att>staffgrp</att> attribute. This is particularly useful in large ensemble scores where the same direction may apply to entire sections (e.g., all woodwinds, all strings). The attribute value(s) correspond to the <att>n</att> attribute of the referenced <gi scheme="MEI">staffGrp</gi> element(s). Multiple staff groups may be indicated by providing space-separated positive integer values. The attribute is optional but becomes mandatory when the <hi rend="italic">ControlEvent</hi> needs to be scoped to specific staff groups rather than applying to all staves in the measure. <hi rend="italic">ControlEvents</hi> applying to all staves can be addressed to the mandatory parent staff group. The position of the <hi rend="italic">ControlEvent</hi> above or below the corresponding staff group is indicated through the <att>place</att> attribute. <att>staffgrp</att> complements the existing <att>staff</att> attribute, which targets individual staves. Both attributes can be used simultaneously.</p>
+                     <p>
+                        <specList>
+                           <specDesc atts="staffgrp" key="att.staffGrpIdent"/>
+                        </specList>
+                     </p>
+                     <p>The following excerpt from an edition of Mozart's <hi rend="italic">Die Zauberflöte</hi> (<ref target="https://kv.mozarteum.at/en/work/7138">Ouverture</ref>) shows a tempo indication that refers to the full score and is also placed above the first violin. This can be encoded in two ways: either by combining <att>staffgrp</att> and <att>staff</att>, or by using a single <att>staffgrp</att> with multiple values.</p>
+                     <p>
+                        <figure>
+                           <head>Assigning tempo using <att>staffgrp</att> and <att>staff</att></head>
+                           <graphic url="../images/modules/cmn/K620-ouverture_mm1-7.png"/>
+                        </figure>
+                        <figure>
+                           <head/>
+                           <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;scoreDef&gt;
+  &lt;staffGrp bar.thru="false" n="1"&gt;
+    &lt;staffGrp n="2"&gt;
+      &lt;!--Flauto, Oboe, Clarinetto, Fagotto--&gt;
+    &lt;/staffGrp&gt;
+
+    &lt;staffGrp n="3"&gt;&lt;!--Corno, Clarino, Trombone alto, Trombone tenore, Trombone basso--&gt;&lt;/staffGrp&gt;
+    &lt;staffDef n="10"&gt;
+      &lt;!--Timpani--&gt;
+    &lt;/staffDef&gt;
+    &lt;staffGrp bar.thru="true" n="5" symbol="bracket" xml:id="scoreDef_01_staffGrp_05"&gt;
+      &lt;staffDef n="11"&gt;
+        &lt;label&gt;Violino I&lt;/label&gt;
+      &lt;/staffDef&gt;
+      &lt;!-- Violino II, Viola, Violoncello e Basso--&gt;
+    &lt;/staffGrp&gt;
+  &lt;/staffGrp&gt;
+&lt;/scoreDef&gt;
+
+&lt;!-- content omitted --&gt;
+&lt;tempo place="above" staffgrp="1" staff="11"&gt;Adagio&lt;/tempo&gt;
+
+&lt;!--Alternative encoding--&gt;
+&lt;tempo place="above" staffgrp="1 5"&gt;Adagio&lt;/tempo&gt;</egXML>
+                        </figure>
+                     </p>
+                     <p>The following excerpt from an edition of Mozart's <hi rend="italic">Die Zauberflöte</hi> (<ref target="https://kv.mozarteum.at/en/work/7185">No. 11, Duetto ‘Bewahret euch vor Weibertücken’</ref>) shows a typical example of a stage direction referring to the staff group of the singers (‘both priests exit’).</p>
+                     <p>
+                        <figure>
+                           <head>Stage direction using <att>staffgrp</att></head>
+                           <graphic url="../images/modules/cmn/K620-11_mm20-23.png"/>
+                        </figure>
+                        <figure>
+                           <head/>
+                           <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;staffGrp n="6"&gt;
+    &lt;staffDef&gt;
+        &lt;label&gt;ZWEITER PRIESTER&lt;/label&gt;
+        &lt;labelAbbr&gt;2. PR&lt;/labelAbbr&gt;
+    &lt;/staffDef&gt;
+    &lt;staffDef&gt;
+        &lt;label&gt;SPRECHER&lt;/label&gt;
+        &lt;labelAbbr&gt;SPR&lt;/labelAbbr&gt;
+    &lt;/staffDef&gt;
+&lt;/staffGrp&gt;
+&lt;!-- content omitted --&gt;
+&lt;stageDir place="above" staffgrp="6"&gt;(beide PRIESTER ab)&lt;/stageDir&gt;
+</egXML>
+                        </figure>
+                     </p>
+                  </div>                  
                </div>
                <div xml:id="cmnRep" type="div3">
                   <head>Repetition in CMN</head>
@@ -21378,6 +21444,7 @@ or
       <memberOf key="att.attacca.ges"/>
       <memberOf key="att.attacca.log"/>
       <memberOf key="att.attacca.vis"/>
+      <memberOf key="att.staffGrpIdent"/>
       <memberOf key="model.controlEventLike.cmn"/>
       
     </classes><content>
@@ -21558,6 +21625,7 @@ or
       <memberOf key="att.fermata.vis"/>
       <memberOf key="att.fermata.ges"/>
       <memberOf key="att.fermata.anl"/>
+      <memberOf key="att.staffGrpIdent"/>
       <memberOf key="model.controlEventLike.cmn"/>
     </classes><content>
       <empty/>
@@ -21985,6 +22053,7 @@ or
       <memberOf key="att.reh.vis"/>
       <memberOf key="att.reh.ges"/>
       <memberOf key="att.reh.anl"/>
+      <memberOf key="att.staffGrpIdent"/>
       <memberOf key="model.controlEventLike.cmn"/>
     </classes><content>
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.lbLike"/><ref name="model.rendLike"/></choice></zeroOrMore>
@@ -22002,6 +22071,7 @@ or
       <memberOf key="att.repeatMark.vis"/>
       <memberOf key="att.repeatMark.ges"/>
       <memberOf key="att.repeatMark.anl"/>
+      <memberOf key="att.staffGrpIdent"/>
       <memberOf key="model.controlEventLike"/>
     </classes><content>
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike.limited"/><ref name="model.graphicPrimitiveLike"/><ref name="model.editLike"/><ref name="model.transcriptionLike"/></choice></zeroOrMore>
@@ -22506,6 +22576,7 @@ or
       <memberOf key="att.stageDir.anl"/>
       <memberOf key="att.stageDir.ges"/>
       <memberOf key="att.stageDir.log"/>
+      <memberOf key="att.staffGrpIdent"/>
       <memberOf key="att.stageDir.vis"/>
       <memberOf key="model.stageDirLike"/>
     </classes><content>
@@ -31610,8 +31681,29 @@ or
     </attList>
   </classSpec><classSpec rend="add" ident="att.staffGrp.log" module="MEI.shared" type="atts">
     <desc xml:lang="en">Logical domain attributes.</desc>
+  </classSpec><classSpec rend="add" ident="att.staffGrpIdent" module="MEI.shared" type="atts">
+    <desc xml:lang="en">Attributes for identifying the staff group associated with the current feature.</desc>
+    <attList>
+      <attDef ident="staffgrp" usage="opt">
+        <desc xml:lang="en">Signifies the staff group to which a control event applies. Mandatory when applicable.</desc>
+        <datatype maxOccurs="unbounded"> 
+          <rng:data type="positiveInteger"/>
+        </datatype>
+        <constraintSpec ident="check_staffgrpTarget" scheme="schematron">
+          <constraint>
+            <sch:rule context="@staffgrp">
+              <sch:assert role="warning" test="not(normalize-space(.) eq '')">@staffgrp attribute
+                should have content.</sch:assert>
+              <sch:assert role="warning" test="every $i in tokenize(., '\s+') satisfies $i=//mei:staffGrp/@n">Each
+                value in @staffgrp should correspond to the @n attribute of a staffGrp
+                element.</sch:assert>
+            </sch:rule>
+          </constraint>
+        </constraintSpec>
+      </attDef>
+    </attList>
   </classSpec><classSpec rend="add" ident="att.staffIdent" module="MEI.shared" type="atts">
-    <desc xml:lang="en">Attributes for identifying the staff associated with the current feature.</desc>
+    <desc xml:lang="en">Attributes for identifying the staff or staff group associated with the current feature.</desc>
     <attList>
       <attDef ident="staff" usage="opt">
         <desc xml:lang="en">Signifies the staff on which a notated event occurs or to which a control event
@@ -32818,6 +32910,7 @@ or
       <memberOf key="att.lang"/>
       <memberOf key="att.plist"/>
       <memberOf key="att.source"/>
+      <memberOf key="att.staffGrpIdent"/>
       <memberOf key="att.targetEval"/>
       <memberOf key="att.annot.anl"/>
       <memberOf key="att.annot.ges"/>
@@ -33344,6 +33437,7 @@ or
       <memberOf key="att.dir.ges"/>
       <memberOf key="att.dir.log"/>
       <memberOf key="att.dir.vis"/>
+      <memberOf key="att.staffGrpIdent"/>
       <memberOf key="model.controlEventLike"/>
     </classes><content>
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.textPhraseLike.limited"/><ref name="model.graphicPrimitiveLike"/><ref name="model.editLike"/><ref name="model.transcriptionLike"/></choice></zeroOrMore>
@@ -34773,7 +34867,12 @@ or
         </sch:pattern>
       </constraint>
     </constraintSpec></elementSpec><elementSpec rend="add" ident="staffGrp" module="MEI.shared"><gloss xml:lang="en">staff group</gloss><desc xml:lang="en">A group of bracketed or braced staves.</desc><classes>
-      <memberOf key="att.common"/>
+      <memberOf key="att.basic"/>
+      <memberOf key="att.labelled"/>
+      <memberOf key="att.linking"/>
+      <memberOf key="att.nInteger"/>
+      <memberOf key="att.responsibility"/>
+      <memberOf key="att.typed"/>
       <memberOf key="att.facsimile"/>
       <memberOf key="att.metadataPointing"/>
       <memberOf key="att.staffGrp.anl"/>
@@ -34848,6 +34947,7 @@ or
       <memberOf key="att.bibl"/>
       <memberOf key="att.facsimile"/>
       <memberOf key="att.lang"/>
+      <memberOf key="att.staffGrpIdent"/>
       <memberOf key="att.tempo.anl"/>
       <memberOf key="att.tempo.ges"/>
       <memberOf key="att.tempo.log"/>
