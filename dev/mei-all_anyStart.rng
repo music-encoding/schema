@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2026-04-30T14:49:41Z. . 
+Schema generated from ODD source 2026-05-04T15:49:58Z. . 
 TEI Edition: MEI 6.0-dev 
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -6032,15 +6032,17 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
    <define name="mei_data.CLEFSHAPE">
       <choice>
          <value>G</value>
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">G clef (Unicode 1D11E).</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">G clef (e.g., Unicode 1D11E).</a:documentation>
          <value>GG</value>
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Double G clef. Sounds one octave lower than G clef. (See remarks on usage below.)</a:documentation>
-         <value>F</value>
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">F clef (Unicode 1D122).</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Double G clef. Sounds one octave lower than G clef. (e.g., SMuFL E055) See remarks on usage below.</a:documentation>
          <value>C</value>
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">C clef (Unicode 1D121).</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">C clef (e.g., Unicode 1D121).</a:documentation>
+         <value>F</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">F clef (e.g., Unicode 1D122).</a:documentation>
+         <value>gamma</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Gamma clef depicting the locus of gamma-ut</a:documentation>
          <value>perc</value>
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Drum clef (Unicode 1D125 or Unicode 1D126).</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Drum clef (e.g., Unicode 1D125 or Unicode 1D126).</a:documentation>
          <value>TAB</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Tablature "clef"; i.e., usually "TAB" rendered vertically.</a:documentation>
       </choice>
