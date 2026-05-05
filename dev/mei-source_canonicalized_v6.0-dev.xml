@@ -21,7 +21,7 @@
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../source/validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="../source/validation/mei-purify.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2026-05-05T08:43:12.346875404+02:00-->
+<!--canonicalized: 2026-05-05T08:47:41.914406867+02:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -2401,7 +2401,43 @@
                <div xml:id="headerAssociatingMetadataAndData" type="div3">
                   <head>Associating Metadata and Data</head>
                   <p>In the MEI header, the <att>data</att> attribute may be used to associate metadata with related notational elements.</p>
+                  <p>
+                     <specList>
+                        <specDesc key="att.pointing" atts="data"/>
+                     </specList>
+                  </p>
                   <p>Similarly, in the body of the MEI document, the <att>decls</att> attribute may be used to associate parts of the encoded text with related metadata.</p>
+                  <p>
+                     <specList>
+                        <specDesc key="att.metadataPointing" atts="decls"/>
+                     </specList>
+                  </p>
+                  <p>
+                     <figure>
+                        <head>Example of associating metadata and data</head>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve" valid="feasible">&lt;!-- in the header --&gt;
+&lt;manifestationList&gt;
+   &lt;manifestation xml:id="manifestation-part-1" data="#music-part-1"&gt;
+      &lt;titleStmt&gt;
+         &lt;title&gt;Symphonie fantastique&lt;/title&gt;
+         &lt;title type="desc"&gt;I. Violin (orchestral part)&lt;/title&gt;
+      &lt;/titleStmt&gt;
+   &lt;/manifestation&gt;
+   &lt;manifestation xml:id="manifestation-part-2" data="#music-part-2"&gt;
+      &lt;titleStmt&gt;
+         &lt;title&gt;Symphonie fantastique&lt;/title&gt;
+         &lt;title type="desc"&gt;II. Violin (orchestral part)&lt;/title&gt;
+      &lt;/titleStmt&gt;
+   &lt;/manifestation&gt;
+&lt;/manifestationList&gt;
+
+&lt;!-- in the body --&gt;
+&lt;parts&gt;
+   &lt;part xml:id="music-part-1" n="1" decls="#manifestation-part-1"/&gt;
+   &lt;part xml:id="music-part-2" n="1" decls="#manifestation-part-2"/&gt;
+&lt;/parts&gt;</egXML>
+                     </figure>
+                  </p>
                   <p>The most useful associations of this type are between the bibliographic description of a source and the material taken from it.</p>
                </div>
             </div>
