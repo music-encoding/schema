@@ -21,7 +21,7 @@
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../source/validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="../source/validation/mei-purify.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2026-05-05T09:40:44.051527751+02:00-->
+<!--canonicalized: 2026-05-05T17:42:53.343462802+02:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -13532,6 +13532,16 @@ or
                   <p>There are some contexts in which rather than using <hi rend="italics">ControlEvent</hi> attributes an annotation concerns either its parent element or some aspect of the encoding process as a whole. These cases are outlined in the relevant sections of the guidelines.</p>
                   <p>Annotation often involves associating information or observations to a part of a document. This associated content may be included as a child of the <gi scheme="MEI">annot</gi> element. If the associated information is textual, this may simply take the form of text (as in the example above/below). Other associated information may be placed as a child of the <gi scheme="MEI">annot</gi>, here it can be represented using MEI or, if it is a web resource, it can be added by url using the <gi scheme="MEI">ptr</gi> element (<ptr target="#ptrRef"/>).</p>
                   <p>Annotation takes many forms, and not all of these can or should be represented in MEI using <gi scheme="MEI">annot</gi>. Performance annotations, such as fingering or articulation have specialised elements already (e.g. <gi scheme="MEI">fing</gi>, <gi scheme="MEI">artic</gi>), as do some analytical annotations (e.g. <gi scheme="MEI">harm</gi> for harmonic labels). Thus, there is no all-encompassing and distinct ‘annotation’ concept in MEI, and <gi scheme="MEI">annot</gi> should be considered one of many ways of expressing annotations.</p>
+               </div>
+               <div xml:id="sharedTextBlocks" type="div3">
+                  <head>Text Blocks within Music</head>
+                  <p>Text blocks that occur within the music are to be encoded with <gi scheme="MEI">div</gi>. How they integrate is encoded with the <att>flow</att>, which takes the value 'inline' for a text block division appearing like a measure, and 'block' for a text block division appearing like a system.</p>
+                  <p>
+                     <figure>
+                        <head>Example with a text element occuring like a measure and occuring like a system</head>
+                        <graphic url="../images/modules/text/text-blocks.png"/>
+                     </figure>
+                  </p>
                </div>
             </div>
          </div>
@@ -39629,8 +39639,8 @@ or
   </elementSpec>
   <elementSpec ident="div" module="MEI.shared">
     <gloss xml:lang="en">division</gloss>
-    <desc xml:lang="en">Major structural division of text, such as a preface, chapter or
-      section.</desc>
+    <desc xml:lang="en">Major structural division of text, such as a preface, chapter,
+      section, or a text division within the score.</desc>
     <classes>
       <memberOf key="att.basic"/>
       <memberOf key="att.classed"/>
@@ -39663,6 +39673,17 @@ or
       </rng:zeroOrMore>
     </content>
     <attList>
+      <attDef ident="flow" usage="opt">
+        <desc xml:lang="en">Specifies how the element is treated in terms of page flow: as inline element like a measure, or as block element like a system.</desc>
+        <valList type="closed">
+          <valItem ident="inline">
+            <desc xml:lang="en">A measure-like division.</desc>
+          </valItem>
+          <valItem ident="block">
+            <desc xml:lang="en">A system-like division.</desc>
+          </valItem>
+        </valList>
+      </attDef>
       <attDef ident="type" usage="opt">
         <desc xml:lang="en">Characterizes the textual division in some sense, using any convenient classification
           scheme or typology that employs single-token labels.</desc>
@@ -40952,8 +40973,10 @@ or
     <classes>
       <memberOf key="att.common"/>
       <memberOf key="att.facsimile"/>
+      <memberOf key="att.horizontalAlign"/>
       <memberOf key="att.lang"/>
       <memberOf key="att.metadataPointing"/>
+      <memberOf key="att.verticalAlign"/>
       <memberOf key="att.xy"/>
       <memberOf key="model.pLike"/>
     </classes>
