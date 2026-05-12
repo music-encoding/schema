@@ -23994,7 +23994,8 @@ or
     </constraintSpec>
     <attList>
       <attDef ident="midi.instrnum" usage="opt">
-        <desc xml:lang="en">Captures the General MIDI instrument number. Use an integer for a 0-based value.</desc>
+        <desc xml:lang="en">Captures the General MIDI instrument number. Use an integer for a 0-based value.
+          Use an integer followed by an "o" (oh) for a 1-based value.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.MIDIVALUE"/>
         </datatype>
@@ -24006,9 +24007,10 @@ or
         </datatype>
       </attDef>
       <attDef ident="midi.pan" usage="opt">
-        <desc xml:lang="en">Sets the instrument’s position in a stereo field. MIDI values of 0 and 1 both pan
-          left, 127 or 128 pans right, and 63 or 64 pans to the center. Positve percentage values
-          pan to the right, negative ones to the left. 0% is centered.</desc>
+        <desc xml:lang="en">Sets the instrument’s position in a stereo field. Values of 0 and 
+          1 both pan left, 127 and 128o both pan right, and 63 and 64o both pan to the center.
+          Positive percentage values pan to the right, negative ones to the left, and 0% pans
+          to the center.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.MIDIVALUE_PAN"/>
         </datatype>
@@ -25796,7 +25798,7 @@ or
           database or a unique value in the coded list identified by the <att>auth</att> or
           <att>auth.uri</att> attributes.</desc>
         <datatype maxOccurs="unbounded">
-          <rng:data type="NMTOKEN"/>
+          <rng:data type="token"/>
         </datatype>
       </attDef>
     </attList>
@@ -25954,6 +25956,8 @@ or
     <desc xml:lang="en">Attributes specifying whether a feature is contemporary or historical.</desc>
     <attList>
       <attDef ident="contemporary" usage="opt">
+        <desc xml:lang="en">Specifies whether a feature is contemporary with the majority of the contents of a
+          resource.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.BOOLEAN"/>
         </datatype>
@@ -26868,9 +26872,9 @@ or
         <constraintSpec ident="When_copyof_element_empty" scheme="schematron">
           <constraint>
             <sch:rule context="mei:*[@copyof]">
-              <sch:assert test="count(child::*[not(comment() or processing-instruction())]) = 0">An
-                element with a copyof attribute can only have comment or processing instruction
-                descendents.</sch:assert>
+              <sch:assert test="count(child::*[not(comment() or processing-instruction())]) = 0">An 
+                element with a @copyof attribute can only have comment or processing instruction
+                descendants.</sch:assert>
             </sch:rule>
           </constraint>
         </constraintSpec>
@@ -27293,9 +27297,9 @@ or
     <attList>
       <attDef ident="mm" usage="opt">
         <desc xml:lang="en">Used to describe tempo in terms of beats (often the meter signature denominator) per
-          minute, ala M.M. (Maelzel’s Metronome). Do not confuse this attribute with midi.bpm or
-          midi.mspb. In MIDI, a beat is always defined as a quarter note, *not the numerator of the
-          time signature or the metronomic indication*.</desc>
+          minute; e.g., M.M. (Maelzel’s Metronome) markings. Do not confuse this attribute with <att>midi.bpm</att> or 
+          <att>midi.mspb</att>. In MIDI, a beat is always defined as a quarter note, <emph>not the numerator of the
+          time signature or the metronomic indication</emph>.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.TEMPOVALUE"/>
         </datatype>

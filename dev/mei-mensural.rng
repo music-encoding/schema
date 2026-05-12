@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2026-05-12T08:33:40Z. . 
+Schema generated from ODD source 2026-05-12T08:43:33Z. . 
 TEI Edition: MEI 6.0-dev 
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -14222,7 +14222,7 @@ Suggested values include: 1] glue; 2] thread; 3] needle; 4] tape; 5] staple</a:d
    <define name="mei_att.midiInstrument.attribute.midi.instrnum">
       <optional>
          <attribute name="midi.instrnum">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Captures the General MIDI instrument number. Use an integer for a 0-based value.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Captures the General MIDI instrument number. Use an integer for a 0-based value. Use an integer followed by an "o" (oh) for a 1-based value.</a:documentation>
             <ref name="mei_data.MIDIVALUE"/>
          </attribute>
       </optional>
@@ -14238,7 +14238,7 @@ Suggested values include: 1] glue; 2] thread; 3] needle; 4] tape; 5] staple</a:d
    <define name="mei_att.midiInstrument.attribute.midi.pan">
       <optional>
          <attribute name="midi.pan">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sets the instrument’s position in a stereo field. MIDI values of 0 and 1 both pan left, 127 or 128 pans right, and 63 or 64 pans to the center. Positve percentage values pan to the right, negative ones to the left. 0% is centered.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sets the instrument’s position in a stereo field. Values of 0 and 1 both pan left, 127 and 128o both pan right, and 63 and 64o both pan to the center. Positive percentage values pan to the right, negative ones to the left, and 0% pans to the center.</a:documentation>
             <ref name="mei_data.MIDIVALUE_PAN"/>
          </attribute>
       </optional>
@@ -16611,7 +16611,7 @@ Suggested values include: 1] display</a:documentation>
                      xmlns:rng="http://relaxng.org/ns/structure/1.0">@auth.uri</code> attributes.</a:documentation>
             <list>
                <oneOrMore>
-                  <data type="NMTOKEN"/>
+                  <data type="token"/>
                </oneOrMore>
             </list>
          </attribute>
@@ -16783,7 +16783,7 @@ Suggested values include: 1] display</a:documentation>
    <define name="mei_att.contemporary.attribute.contemporary">
       <optional>
          <attribute name="contemporary">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Specifies whether a feature is contemporary with the majority of the contents of a resource.</a:documentation>
             <ref name="mei_data.BOOLEAN"/>
          </attribute>
       </optional>
@@ -17734,9 +17734,9 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns:xi="http://www.w3.org/2001/XInclude"
                 context="mei:*[@copyof]">
-         <sch:assert test="count(child::*[not(comment() or processing-instruction())]) = 0">An
-                element with a copyof attribute can only have comment or processing instruction
-                descendents.</sch:assert>
+         <sch:assert test="count(child::*[not(comment() or processing-instruction())]) = 0">An 
+                element with a @copyof attribute can only have comment or processing instruction
+                descendants.</sch:assert>
       </sch:rule>
    </pattern>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
@@ -18248,7 +18248,9 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
    <define name="mei_att.mmTempo.attribute.mm">
       <optional>
          <attribute name="mm">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Used to describe tempo in terms of beats (often the meter signature denominator) per minute, ala M.M. (Maelzel’s Metronome). Do not confuse this attribute with midi.bpm or midi.mspb. In MIDI, a beat is always defined as a quarter note, *not the numerator of the time signature or the metronomic indication*.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Used to describe tempo in terms of beats (often the meter signature denominator) per minute; e.g., M.M. (Maelzel’s Metronome) markings. Do not confuse this attribute with <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">@midi.bpm</code> or <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">@midi.mspb</code>. In MIDI, a beat is always defined as a quarter note, not the numerator of the time signature or the metronomic indication.</a:documentation>
             <ref name="mei_data.TEMPOVALUE"/>
          </attribute>
       </optional>

@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2026-05-12T08:33:37Z. . 
+Schema generated from ODD source 2026-05-12T08:43:31Z. . 
 TEI Edition: MEI 6.0-dev 
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -4264,7 +4264,7 @@ Suggested values include: 1] smufl</a:documentation>
    <define name="mei_att.midiInstrument.attribute.midi.instrnum">
       <optional>
          <attribute name="midi.instrnum">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Captures the General MIDI instrument number. Use an integer for a 0-based value.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Captures the General MIDI instrument number. Use an integer for a 0-based value. Use an integer followed by an "o" (oh) for a 1-based value.</a:documentation>
             <ref name="mei_data.MIDIVALUE"/>
          </attribute>
       </optional>
@@ -4280,7 +4280,7 @@ Suggested values include: 1] smufl</a:documentation>
    <define name="mei_att.midiInstrument.attribute.midi.pan">
       <optional>
          <attribute name="midi.pan">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sets the instrument’s position in a stereo field. MIDI values of 0 and 1 both pan left, 127 or 128 pans right, and 63 or 64 pans to the center. Positve percentage values pan to the right, negative ones to the left. 0% is centered.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sets the instrument’s position in a stereo field. Values of 0 and 1 both pan left, 127 and 128o both pan right, and 63 and 64o both pan to the center. Positive percentage values pan to the right, negative ones to the left, and 0% pans to the center.</a:documentation>
             <ref name="mei_data.MIDIVALUE_PAN"/>
          </attribute>
       </optional>
@@ -5275,7 +5275,9 @@ Suggested values include: 1] draft; 2] in-process; 3] candidate; 4] approved; 5]
    <define name="mei_att.mmTempo.attribute.mm">
       <optional>
          <attribute name="mm">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Used to describe tempo in terms of beats (often the meter signature denominator) per minute, ala M.M. (Maelzel’s Metronome). Do not confuse this attribute with midi.bpm or midi.mspb. In MIDI, a beat is always defined as a quarter note, *not the numerator of the time signature or the metronomic indication*.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Used to describe tempo in terms of beats (often the meter signature denominator) per minute; e.g., M.M. (Maelzel’s Metronome) markings. Do not confuse this attribute with <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">@midi.bpm</code> or <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">@midi.mspb</code>. In MIDI, a beat is always defined as a quarter note, not the numerator of the time signature or the metronomic indication.</a:documentation>
             <ref name="mei_data.TEMPOVALUE"/>
          </attribute>
       </optional>
