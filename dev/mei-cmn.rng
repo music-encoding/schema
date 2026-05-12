@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2026-05-07T11:21:32Z. . 
+Schema generated from ODD source 2026-05-12T08:33:38Z. . 
 TEI Edition: MEI 6.0-dev 
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -24307,29 +24307,41 @@ Suggested values include: 1] smufl</a:documentation>
    <define name="mei_model.titleLike">
       <choice>
          <ref name="mei_title"/>
+         <ref name="mei_titlePart"/>
       </choice>
    </define>
    <define name="mei_model.titleLike_alternation">
       <choice>
          <ref name="mei_title"/>
+         <ref name="mei_titlePart"/>
       </choice>
    </define>
    <define name="mei_model.titleLike_sequence">
       <ref name="mei_title"/>
+      <ref name="mei_titlePart"/>
    </define>
    <define name="mei_model.titleLike_sequenceOptional">
       <optional>
          <ref name="mei_title"/>
+      </optional>
+      <optional>
+         <ref name="mei_titlePart"/>
       </optional>
    </define>
    <define name="mei_model.titleLike_sequenceOptionalRepeatable">
       <zeroOrMore>
          <ref name="mei_title"/>
       </zeroOrMore>
+      <zeroOrMore>
+         <ref name="mei_titlePart"/>
+      </zeroOrMore>
    </define>
    <define name="mei_model.titleLike_sequenceRepeatable">
       <oneOrMore>
          <ref name="mei_title"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="mei_titlePart"/>
       </oneOrMore>
    </define>
    <define name="mei_model.titlePagePart">
@@ -24351,7 +24363,6 @@ Suggested values include: 1] smufl</a:documentation>
          <ref name="mei_model.titleLike"/>
          <ref name="mei_imprint"/>
          <ref name="mei_series"/>
-         <ref name="mei_titlePart"/>
          <ref name="mei_argument"/>
          <ref name="mei_epigraph"/>
          <ref name="mei_imprimatur"/>
@@ -26015,7 +26026,7 @@ Suggested values include: 1] abstract; 2] ack; 3] appendix; 4] bibliography; 5] 
                         </choice>
                      </zeroOrMore>
                      <oneOrMore>
-                        <ref name="mei_model.titleLike"/>
+                        <ref name="mei_title"/>
                      </oneOrMore>
                      <zeroOrMore>
                         <choice>
@@ -26027,7 +26038,7 @@ Suggested values include: 1] abstract; 2] ack; 3] appendix; 4] bibliography; 5] 
                   </group>
                   <group>
                      <oneOrMore>
-                        <ref name="mei_model.titleLike"/>
+                        <ref name="mei_title"/>
                      </oneOrMore>
                      <zeroOrMore>
                         <choice>
@@ -26874,11 +26885,11 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
                <ref name="mei_model.identifierLike"/>
                <ref name="mei_model.locrefLike"/>
                <ref name="mei_model.milestoneLike.text"/>
-               <ref name="mei_model.titleLike"/>
                <ref name="mei_editor"/>
                <ref name="mei_extent"/>
                <ref name="mei_respStmt"/>
                <ref name="mei_textLang"/>
+               <ref name="mei_title"/>
             </choice>
          </zeroOrMore>
          <ref name="mei_att.common.attributes"/>
@@ -27486,8 +27497,8 @@ Suggested values include: 1] main; 2] subordinate; 3] abbreviated; 4] alternativ
          <zeroOrMore>
             <choice>
                <text/>
-               <ref name="mei_macro.titlePart"/>
                <ref name="mei_model.editLike"/>
+               <ref name="mei_macro.titlePart"/>
                <ref name="mei_model.titleLike"/>
                <ref name="mei_model.transcriptionLike"/>
             </choice>
