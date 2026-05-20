@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2026-05-20T22:20:08Z. . 
+Schema generated from ODD source 2026-05-20T22:25:14Z. . 
 TEI Edition: MEI 6.0-dev 
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -11872,6 +11872,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
                <ref name="mei_model.sectionPart"/>
                <ref name="mei_model.staffGrpLike"/>
                <ref name="mei_model.transcriptionLike"/>
+               <ref name="mei_tabDurSym"/>
             </choice>
          </zeroOrMore>
          <ref name="mei_att.common.attributes"/>
@@ -11920,6 +11921,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
                <ref name="mei_model.sectionPart"/>
                <ref name="mei_model.staffGrpLike"/>
                <ref name="mei_model.transcriptionLike"/>
+               <ref name="mei_tabDurSym"/>
             </choice>
          </zeroOrMore>
          <ref name="mei_att.common.attributes"/>
@@ -11980,6 +11982,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
                <ref name="mei_model.sectionPart"/>
                <ref name="mei_model.staffGrpLike"/>
                <ref name="mei_model.transcriptionLike"/>
+               <ref name="mei_tabDurSym"/>
             </choice>
          </zeroOrMore>
          <ref name="mei_att.common.attributes"/>
@@ -12014,6 +12017,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
                <ref name="mei_model.sectionPart"/>
                <ref name="mei_model.staffGrpLike"/>
                <ref name="mei_model.transcriptionLike"/>
+               <ref name="mei_tabDurSym"/>
             </choice>
          </zeroOrMore>
          <ref name="mei_att.common.attributes"/>
@@ -12208,6 +12212,7 @@ Suggested values include: 1] confirmation; 2] addition; 3] deletion; 4] substitu
                <ref name="mei_model.sectionPart"/>
                <ref name="mei_model.staffGrpLike"/>
                <ref name="mei_model.transcriptionLike"/>
+               <ref name="mei_tabDurSym"/>
             </choice>
          </zeroOrMore>
          <ref name="mei_att.common.attributes"/>
@@ -12235,6 +12240,7 @@ Suggested values include: 1] confirmation; 2] addition; 3] deletion; 4] substitu
                <ref name="mei_model.sectionPart"/>
                <ref name="mei_model.staffGrpLike"/>
                <ref name="mei_model.transcriptionLike"/>
+               <ref name="mei_tabDurSym"/>
             </choice>
          </zeroOrMore>
          <ref name="mei_att.common.attributes"/>
@@ -12262,6 +12268,7 @@ Suggested values include: 1] confirmation; 2] addition; 3] deletion; 4] substitu
                <ref name="mei_model.sectionPart"/>
                <ref name="mei_model.staffGrpLike"/>
                <ref name="mei_model.transcriptionLike"/>
+               <ref name="mei_tabDurSym"/>
             </choice>
          </zeroOrMore>
          <ref name="mei_att.common.attributes"/>
@@ -12296,6 +12303,7 @@ Suggested values include: 1] confirmation; 2] addition; 3] deletion; 4] substitu
                <ref name="mei_model.sectionPart"/>
                <ref name="mei_model.staffGrpLike"/>
                <ref name="mei_model.transcriptionLike"/>
+               <ref name="mei_tabDurSym"/>
             </choice>
          </zeroOrMore>
          <ref name="mei_att.common.attributes"/>
@@ -12336,6 +12344,7 @@ Suggested values include: 1] confirmation; 2] addition; 3] deletion; 4] substitu
                <ref name="mei_model.sectionPart"/>
                <ref name="mei_model.staffGrpLike"/>
                <ref name="mei_model.transcriptionLike"/>
+               <ref name="mei_tabDurSym"/>
             </choice>
          </zeroOrMore>
          <ref name="mei_att.common.attributes"/>
@@ -12365,6 +12374,7 @@ Suggested values include: 1] confirmation; 2] addition; 3] deletion; 4] substitu
                <ref name="mei_model.sectionPart"/>
                <ref name="mei_model.staffGrpLike"/>
                <ref name="mei_model.transcriptionLike"/>
+               <ref name="mei_tabDurSym"/>
             </choice>
          </zeroOrMore>
          <ref name="mei_att.common.attributes"/>
@@ -23093,7 +23103,6 @@ Suggested values include: 1] smufl</a:documentation>
          <ref name="mei_pad"/>
          <ref name="mei_rest"/>
          <ref name="mei_space"/>
-         <ref name="mei_tabDurSym"/>
          <ref name="mei_tabGrp"/>
       </choice>
    </define>

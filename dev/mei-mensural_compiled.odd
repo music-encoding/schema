@@ -16003,7 +16003,7 @@ or
       <memberOf key="att.trans"/>
       <memberOf key="model.transcriptionLike"/>
     </classes><content>
-      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.divLike"/><ref name="model.editLike"/><ref name="model.editTransPart"/><ref name="model.fLike"/><ref name="model.graphicPrimitiveLike"/><ref name="model.keyAccidLike"/><ref name="model.layerPart"/><ref name="model.milestoneLike.music"/><ref name="model.sectionPart"/><ref name="model.staffGrpLike"/><ref name="model.transcriptionLike"/></choice></zeroOrMore>
+      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.divLike"/><ref name="model.editLike"/><ref name="model.editTransPart"/><ref name="model.fLike"/><ref name="model.graphicPrimitiveLike"/><ref name="model.keyAccidLike"/><ref name="model.layerPart"/><ref name="model.milestoneLike.music"/><ref name="model.sectionPart"/><ref name="model.staffGrpLike"/><ref name="model.transcriptionLike"/><ref name="tabDurSym"/></choice></zeroOrMore>
     </content><attList><attDef ident="place" usage="opt">
         <desc xml:lang="en">Location of the addition.</desc>
         <datatype maxOccurs="unbounded">
@@ -16044,7 +16044,7 @@ or
       <memberOf key="model.choicePart"/>
       <memberOf key="model.transcriptionLike"/>
     </classes><content>
-      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.divLike"/><ref name="model.editLike"/><ref name="model.editTransPart"/><ref name="model.fLike"/><ref name="model.graphicPrimitiveLike"/><ref name="model.keyAccidLike"/><ref name="model.layerPart"/><ref name="model.milestoneLike.music"/><ref name="model.neumeComponentModifierLike"/><ref name="model.neumeModifierLike"/><ref name="model.neumePart"/><ref name="model.sectionPart"/><ref name="model.staffGrpLike"/><ref name="model.transcriptionLike"/></choice></zeroOrMore>
+      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.divLike"/><ref name="model.editLike"/><ref name="model.editTransPart"/><ref name="model.fLike"/><ref name="model.graphicPrimitiveLike"/><ref name="model.keyAccidLike"/><ref name="model.layerPart"/><ref name="model.milestoneLike.music"/><ref name="model.neumeComponentModifierLike"/><ref name="model.neumeModifierLike"/><ref name="model.neumePart"/><ref name="model.sectionPart"/><ref name="model.staffGrpLike"/><ref name="model.transcriptionLike"/><ref name="tabDurSym"/></choice></zeroOrMore>
     </content><remarks xml:lang="en">
       <p>The <att>cert</att> attribute signifies the degree of certainty ascribed to correction. The
         <att>resp</att> attribute contains an ID reference to an element containing the name of the
@@ -16114,7 +16114,7 @@ or
       <memberOf key="att.lang"/>
       <memberOf key="model.transcriptionLike"/>
     </classes><content>
-      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.divLike"/><ref name="model.editLike"/><ref name="model.editTransPart"/><ref name="model.fLike"/><ref name="model.graphicPrimitiveLike"/><ref name="model.keyAccidLike"/><ref name="model.layerPart"/><ref name="model.milestoneLike.music"/><ref name="model.neumeComponentModifierLike"/><ref name="model.neumeModifierLike"/><ref name="model.neumePart"/><ref name="model.sectionPart"/><ref name="model.staffGrpLike"/><ref name="model.transcriptionLike"/></choice></zeroOrMore>
+      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.divLike"/><ref name="model.editLike"/><ref name="model.editTransPart"/><ref name="model.fLike"/><ref name="model.graphicPrimitiveLike"/><ref name="model.keyAccidLike"/><ref name="model.layerPart"/><ref name="model.milestoneLike.music"/><ref name="model.neumeComponentModifierLike"/><ref name="model.neumeModifierLike"/><ref name="model.neumePart"/><ref name="model.sectionPart"/><ref name="model.staffGrpLike"/><ref name="model.transcriptionLike"/><ref name="tabDurSym"/></choice></zeroOrMore>
     </content><attList><attDef ident="degree" usage="opt">
         <desc xml:lang="en">Records the degree of damage.</desc>
         <datatype>
@@ -16136,7 +16136,7 @@ or
       <memberOf key="att.trans"/>
       <memberOf key="model.transcriptionLike"/>
     </classes><content>
-      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.divLike"/><ref name="model.editLike"/><ref name="model.editTransPart"/><ref name="model.fLike"/><ref name="model.graphicPrimitiveLike"/><ref name="model.keyAccidLike"/><ref name="model.layerPart"/><ref name="model.milestoneLike.music"/><ref name="model.neumeComponentModifierLike"/><ref name="model.neumeModifierLike"/><ref name="model.neumePart"/><ref name="model.sectionPart"/><ref name="model.staffGrpLike"/><ref name="model.transcriptionLike"/></choice></zeroOrMore>
+      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.divLike"/><ref name="model.editLike"/><ref name="model.editTransPart"/><ref name="model.fLike"/><ref name="model.graphicPrimitiveLike"/><ref name="model.keyAccidLike"/><ref name="model.layerPart"/><ref name="model.milestoneLike.music"/><ref name="model.neumeComponentModifierLike"/><ref name="model.neumeModifierLike"/><ref name="model.neumePart"/><ref name="model.sectionPart"/><ref name="model.staffGrpLike"/><ref name="model.transcriptionLike"/><ref name="tabDurSym"/></choice></zeroOrMore>
     </content><remarks xml:lang="en">
       <p>The <att>resp</att> attribute contains an ID reference to an element containing the name of
         the editor or transcriber responsible for identifying the hand of the deletion. The
@@ -16326,7 +16326,7 @@ or
       <memberOf key="model.choicePart"/>
       <memberOf key="model.transcriptionLike"/>
     </classes><content>
-      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.divLike"/><ref name="model.editLike"/><ref name="model.editTransPart"/><ref name="model.fLike"/><ref name="model.graphicPrimitiveLike"/><ref name="model.keyAccidLike"/><ref name="model.layerPart"/><ref name="model.milestoneLike.music"/><ref name="model.neumeComponentModifierLike"/><ref name="model.neumeModifierLike"/><ref name="model.neumePart"/><ref name="model.sectionPart"/><ref name="model.staffGrpLike"/><ref name="model.transcriptionLike"/></choice></zeroOrMore>
+      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.divLike"/><ref name="model.editLike"/><ref name="model.editTransPart"/><ref name="model.fLike"/><ref name="model.graphicPrimitiveLike"/><ref name="model.keyAccidLike"/><ref name="model.layerPart"/><ref name="model.milestoneLike.music"/><ref name="model.neumeComponentModifierLike"/><ref name="model.neumeModifierLike"/><ref name="model.neumePart"/><ref name="model.sectionPart"/><ref name="model.staffGrpLike"/><ref name="model.transcriptionLike"/><ref name="tabDurSym"/></choice></zeroOrMore>
     </content><remarks xml:lang="en">
       <p>This element will often be combined with a regularized form within a choice element. The
         editor(s) responsible for asserting that the material is original may be recorded in the
@@ -16347,7 +16347,7 @@ or
       <memberOf key="model.choicePart"/>
       <memberOf key="model.transcriptionLike"/>
     </classes><content>
-      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.divLike"/><ref name="model.editLike"/><ref name="model.editTransPart"/><ref name="model.fLike"/><ref name="model.graphicPrimitiveLike"/><ref name="model.keyAccidLike"/><ref name="model.layerPart"/><ref name="model.milestoneLike.music"/><ref name="model.neumeComponentModifierLike"/><ref name="model.neumeModifierLike"/><ref name="model.neumePart"/><ref name="model.sectionPart"/><ref name="model.staffGrpLike"/><ref name="model.transcriptionLike"/></choice></zeroOrMore>
+      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.divLike"/><ref name="model.editLike"/><ref name="model.editTransPart"/><ref name="model.fLike"/><ref name="model.graphicPrimitiveLike"/><ref name="model.keyAccidLike"/><ref name="model.layerPart"/><ref name="model.milestoneLike.music"/><ref name="model.neumeComponentModifierLike"/><ref name="model.neumeModifierLike"/><ref name="model.neumePart"/><ref name="model.sectionPart"/><ref name="model.staffGrpLike"/><ref name="model.transcriptionLike"/><ref name="tabDurSym"/></choice></zeroOrMore>
     </content><remarks xml:lang="en">
       <p>It is possible to identify the individual responsible for the regularization, and, using
         the <gi scheme="MEI">choice</gi> and <gi scheme="MEI">orig</gi> elements, to provide both
@@ -16370,7 +16370,7 @@ or
       <memberOf key="att.trans"/>
       <memberOf key="model.transcriptionLike"/>
     </classes><content>
-      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.divLike"/><ref name="model.editLike"/><ref name="model.editTransPart"/><ref name="model.fLike"/><ref name="model.graphicPrimitiveLike"/><ref name="model.keyAccidLike"/><ref name="model.layerPart"/><ref name="model.milestoneLike.music"/><ref name="model.neumeComponentModifierLike"/><ref name="model.neumeModifierLike"/><ref name="model.neumePart"/><ref name="model.sectionPart"/><ref name="model.staffGrpLike"/><ref name="model.transcriptionLike"/></choice></zeroOrMore>
+      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.divLike"/><ref name="model.editLike"/><ref name="model.editTransPart"/><ref name="model.fLike"/><ref name="model.graphicPrimitiveLike"/><ref name="model.keyAccidLike"/><ref name="model.layerPart"/><ref name="model.milestoneLike.music"/><ref name="model.neumeComponentModifierLike"/><ref name="model.neumeModifierLike"/><ref name="model.neumePart"/><ref name="model.sectionPart"/><ref name="model.staffGrpLike"/><ref name="model.transcriptionLike"/><ref name="tabDurSym"/></choice></zeroOrMore>
     </content><attList><attDef ident="desc" usage="opt">
         <gloss xml:lang="en">description</gloss>
         <desc xml:lang="en">Provides a description of the means of restoration, <val>stet</val> or <val>strike-down</val>, 
@@ -16392,7 +16392,7 @@ or
       <memberOf key="model.choicePart"/>
       <memberOf key="model.transcriptionLike"/>
     </classes><content>
-      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.divLike"/><ref name="model.editLike"/><ref name="model.editTransPart"/><ref name="model.fLike"/><ref name="model.graphicPrimitiveLike"/><ref name="model.keyAccidLike"/><ref name="model.layerPart"/><ref name="model.milestoneLike.music"/><ref name="model.neumeComponentModifierLike"/><ref name="model.neumeModifierLike"/><ref name="model.neumePart"/><ref name="model.sectionPart"/><ref name="model.staffGrpLike"/><ref name="model.transcriptionLike"/></choice></zeroOrMore>
+      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.divLike"/><ref name="model.editLike"/><ref name="model.editTransPart"/><ref name="model.fLike"/><ref name="model.graphicPrimitiveLike"/><ref name="model.keyAccidLike"/><ref name="model.layerPart"/><ref name="model.milestoneLike.music"/><ref name="model.neumeComponentModifierLike"/><ref name="model.neumeModifierLike"/><ref name="model.neumePart"/><ref name="model.sectionPart"/><ref name="model.staffGrpLike"/><ref name="model.transcriptionLike"/><ref name="tabDurSym"/></choice></zeroOrMore>
     </content><remarks xml:lang="en">
       <p>A correction for the apparent error may be given in an accompanying child or sibling <gi scheme="MEI">corr</gi> element.</p>
       <p>In no case should <gi scheme="MEI">sic</gi> contain elements that would not otherwise be
@@ -16421,7 +16421,7 @@ or
       <memberOf key="att.reasonIdent"/>
       <memberOf key="model.transcriptionLike"/>
     </classes><content>
-      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.divLike"/><ref name="model.editLike"/><ref name="model.editTransPart"/><ref name="model.fLike"/><ref name="model.graphicPrimitiveLike"/><ref name="model.keyAccidLike"/><ref name="model.layerPart"/><ref name="model.milestoneLike.music"/><ref name="model.neumeComponentModifierLike"/><ref name="model.neumeModifierLike"/><ref name="model.neumePart"/><ref name="model.sectionPart"/><ref name="model.staffGrpLike"/><ref name="model.transcriptionLike"/></choice></zeroOrMore>
+      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.divLike"/><ref name="model.editLike"/><ref name="model.editTransPart"/><ref name="model.fLike"/><ref name="model.graphicPrimitiveLike"/><ref name="model.keyAccidLike"/><ref name="model.layerPart"/><ref name="model.milestoneLike.music"/><ref name="model.neumeComponentModifierLike"/><ref name="model.neumeModifierLike"/><ref name="model.neumePart"/><ref name="model.sectionPart"/><ref name="model.staffGrpLike"/><ref name="model.transcriptionLike"/><ref name="tabDurSym"/></choice></zeroOrMore>
     </content><remarks xml:lang="en">
       <p>When the presumed loss of text arises from an identifiable cause, agent signifies the
         causative agent. When the presumed loss of text arises from action (partial deletion, etc.)
@@ -16451,7 +16451,7 @@ or
       <memberOf key="model.choicePart"/>
       <memberOf key="model.transcriptionLike"/>
     </classes><content>
-      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.divLike"/><ref name="model.editLike"/><ref name="model.editTransPart"/><ref name="model.fLike"/><ref name="model.graphicPrimitiveLike"/><ref name="model.keyAccidLike"/><ref name="model.layerPart"/><ref name="model.milestoneLike.music"/><ref name="model.neumeComponentModifierLike"/><ref name="model.neumeModifierLike"/><ref name="model.neumePart"/><ref name="model.sectionPart"/><ref name="model.staffGrpLike"/><ref name="model.transcriptionLike"/></choice></zeroOrMore>
+      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><choice><rng:text xmlns="http://www.tei-c.org/ns/1.0"/><ref name="model.divLike"/><ref name="model.editLike"/><ref name="model.editTransPart"/><ref name="model.fLike"/><ref name="model.graphicPrimitiveLike"/><ref name="model.keyAccidLike"/><ref name="model.layerPart"/><ref name="model.milestoneLike.music"/><ref name="model.neumeComponentModifierLike"/><ref name="model.neumeModifierLike"/><ref name="model.neumePart"/><ref name="model.sectionPart"/><ref name="model.staffGrpLike"/><ref name="model.transcriptionLike"/><ref name="tabDurSym"/></choice></zeroOrMore>
     </content><remarks xml:lang="en">
       <p>Where the difficulty in transcription arises from an identifiable cause, the
         <att>agent</att> attribute signifies the causative agent. The <att>cert</att> attribute
@@ -27958,7 +27958,6 @@ or
       <memberOf key="att.tabDurSym.vis"/>
       <memberOf key="att.tabDurSym.ges"/>
       <memberOf key="att.tabDurSym.anl"/>
-      <memberOf key="model.eventLike"/>
     </classes><content>
       <empty/>
     </content><remarks xml:lang="en">

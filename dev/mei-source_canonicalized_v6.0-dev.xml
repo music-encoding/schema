@@ -21,7 +21,7 @@
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../source/validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="../source/validation/mei-purify.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2026-05-21T00:19:37.587003849+02:00-->
+<!--canonicalized: 2026-05-21T00:24:43.430883581+02:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -24233,6 +24233,7 @@ or
           <rng:ref name="model.sectionPart"/>
           <rng:ref name="model.staffGrpLike"/>
           <rng:ref name="model.transcriptionLike"/>
+          <rng:ref name="tabDurSym"/>
         </rng:choice>
       </rng:zeroOrMore>
     </content>
@@ -24310,6 +24311,7 @@ or
           <rng:ref name="model.sectionPart"/>
           <rng:ref name="model.staffGrpLike"/>
           <rng:ref name="model.transcriptionLike"/>
+          <rng:ref name="tabDurSym"/>
         </rng:choice>
       </rng:zeroOrMore>
     </content>
@@ -24422,6 +24424,7 @@ or
           <rng:ref name="model.sectionPart"/>
           <rng:ref name="model.staffGrpLike"/>
           <rng:ref name="model.transcriptionLike"/>
+          <rng:ref name="tabDurSym"/>
         </rng:choice>
       </rng:zeroOrMore>
     </content>
@@ -24472,6 +24475,7 @@ or
           <rng:ref name="model.sectionPart"/>
           <rng:ref name="model.staffGrpLike"/>
           <rng:ref name="model.transcriptionLike"/>
+          <rng:ref name="tabDurSym"/>
         </rng:choice>
       </rng:zeroOrMore>
     </content>
@@ -24749,6 +24753,7 @@ or
           <rng:ref name="model.sectionPart"/>
           <rng:ref name="model.staffGrpLike"/>
           <rng:ref name="model.transcriptionLike"/>
+          <rng:ref name="tabDurSym"/>
         </rng:choice>
       </rng:zeroOrMore>
     </content>
@@ -24795,6 +24800,7 @@ or
           <rng:ref name="model.sectionPart"/>
           <rng:ref name="model.staffGrpLike"/>
           <rng:ref name="model.transcriptionLike"/>
+          <rng:ref name="tabDurSym"/>
         </rng:choice>
       </rng:zeroOrMore>
     </content>
@@ -24842,6 +24848,7 @@ or
           <rng:ref name="model.sectionPart"/>
           <rng:ref name="model.staffGrpLike"/>
           <rng:ref name="model.transcriptionLike"/>
+          <rng:ref name="tabDurSym"/>
         </rng:choice>
       </rng:zeroOrMore>
     </content>
@@ -24891,6 +24898,7 @@ or
           <rng:ref name="model.sectionPart"/>
           <rng:ref name="model.staffGrpLike"/>
           <rng:ref name="model.transcriptionLike"/>
+          <rng:ref name="tabDurSym"/>
         </rng:choice>
       </rng:zeroOrMore>
     </content>
@@ -24953,6 +24961,7 @@ or
           <rng:ref name="model.sectionPart"/>
           <rng:ref name="model.staffGrpLike"/>
           <rng:ref name="model.transcriptionLike"/>
+          <rng:ref name="tabDurSym"/>
         </rng:choice>
       </rng:zeroOrMore>
     </content>
@@ -25007,6 +25016,7 @@ or
           <rng:ref name="model.sectionPart"/>
           <rng:ref name="model.staffGrpLike"/>
           <rng:ref name="model.transcriptionLike"/>
+          <rng:ref name="tabDurSym"/>
         </rng:choice>
       </rng:zeroOrMore>
     </content>
@@ -42917,7 +42927,6 @@ or
       <memberOf key="att.tabDurSym.vis"/>
       <memberOf key="att.tabDurSym.ges"/>
       <memberOf key="att.tabDurSym.anl"/>
-      <memberOf key="model.eventLike"/>
     </classes>
     <content>
       <empty/>
