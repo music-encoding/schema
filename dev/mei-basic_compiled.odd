@@ -168,7 +168,7 @@
                      for the MEI tablature module, particularly the support for German Lute Tablature (GLT). 
                      Notable fixes to the guidelines include correcting the description of the <att>optimize</att> 
                      attribute on <gi scheme="MEI">scoreDef</gi> to clarify that empty staves 
-                     are <hi rend="italic">not</hi> displayed when its value is set to 'true'. 
+                     are <emph>not</emph> displayed when its value is set to <val>true</val>. 
                      The Release Managers for MEI 5.1 were the Technical Co-Chairs, Benjamin W. Bohl and Stefan Münnich.</p>
                   <p>With MEI 5.1, five additional elements have been added to the 
                      schema: <gi scheme="MEI">tuning</gi>, <gi scheme="MEI">course</gi>, 
@@ -209,12 +209,12 @@
                      documents of various kinds, and for a wide variety of uses. For scholarly research, 
                      this flexibility is necessary and is one of the greatest strengths of MEI. At the 
                      same time, we recognize that this flexibility presents challenges for broad adoption 
-                     of MEI as a notation interchange format. For developers, providing "full" MEI support 
+                     of MEI as a notation interchange format. For developers, providing <emph>full</emph> MEI support 
                      is a difficult and time-consuming chore, writing and supporting code for features 
                      which most of their users will not use. Accordingly, MEI has not seen a great deal of adoption 
                      by current score-writing applications.</p>
                      <p>This is addressed this with the release of MEI 5. We are now offering a new customization of MEI, 
-                     <hi rend="italic">MEI Basic</hi>, that provides a simplified subset of the MEI framework that 
+                     <emph>MEI Basic</emph>, that provides a simplified subset of the MEI framework that 
                      reflects the capabilities of most popular "Common Western Music Notation" score-writing 
                      applications currently in use.</p>
                      <p>In the full MEI schema there are often multiple ways to encode something. MEI Basic 
@@ -224,7 +224,7 @@
                      editorial and analytical workflows are also removed in MEI Basic. MEI Basic has a relatively 
                      small footprint of supported features, which may be expanded over time as more software 
                      applications adopt MEI and more use cases are identified. All MEI Basic files are 
-                     valid MEI "full" files, meaning MEI Basic files may be expanded and upgraded to MEI "full",
+                     valid MEI <emph>full</emph> files, meaning MEI Basic files may be expanded and upgraded to MEI <emph>full</emph>,
                      adding more complex features and encoding mechanisms as required.</p>
                     <p>We hope that this customization facilitates more application adoption, data sharing between 
                       MEI projects, and conversion between MEI and other data formats.</p>
@@ -276,12 +276,12 @@
                      <att>lwidth</att>. <att>text.dist</att> on <gi scheme="MEI">scoreDef</gi> and 
                      <gi scheme="MEI">staffDef</gi> is removed in favor of the newly added attributes 
                      <att>dir.dist</att>, <att>reh.dist</att> or <att>tempo.dist</att>. 
-                     <att>meter.form</att>="invis" is updated to <att>meter.visible</att>="false", 
-                     and the same change applies to <att>form</att>="invis" on meterSig, now replaced 
-                     with <att>visible</att>="false". The text-rendition values of <val>letter-spacing</val> 
+                     <att>meter.form</att>=<val>invis</val> is updated to <att>meter.visible</att>=<val>false</val>, 
+                     and the same change applies to <att>form</att>=<val>invis</val> on meterSig, now replaced 
+                     with <att>visible</att>=<val>false</val>. The text-rendition values of <val>letter-spacing</val> 
                      and <val>line-height</val> on <att>rend</att> are moved to separate attributes, that is, 
-                     <att>rend</att>="letter-spacing(0.25) line-height(120%)" will be now 
-                     <att>letterspacing</att>="0.25" <att>lineheight</att>="120%". Additionally, corrections 
+                     <att>rend</att>=<val>letter-spacing(0.25) line-height(120%)</val> will be now 
+                     <att>letterspacing</att>=<val>0.25</val> <att>lineheight</att>=<val>120%</val>. Additionally, corrections 
                      are applied to specific attribute values, such as changing <val>Bagpipe</val> on
                      <att>midi.instrname</att> to <val>Bag_pipe</val> and replacing <val>dblwhole</val> 
                      on <att>head.mod</att> with <val>fences</val>. All changes can be traced in the 
@@ -435,39 +435,42 @@
                   <p>The term "music" has many different notions, ranging from audible sounds over
                      written performance instructions or transcriptions of such events to conceptual
                      rulesets that establish different theories of what music is, and what is
-                     allowed in music. In 1965, Milton Babbitt distinguished between <hi rend="italic">graphemic</hi>, <hi rend="italic">acoustic</hi> and <hi rend="italic">auditory</hi> aspects of music (Babbitt, Milton: <hi rend="italic">The Use of Computers in Musicological Research</hi>, in: <hi rend="italic">Perspectives of New Music</hi> 3/2 (1965), p. 76).</p>
-                  <p>Various music encoding formats took up this distinction, most notably SMDL, the
-                        <hi rend="italic">Standard Music Description Language</hi> (ISO/IEC DIS
+                     allowed in music. In 1965, Milton Babbitt distinguished between
+                     <emph>graphemic</emph>, <emph>acoustic</emph> and <emph>auditory</emph>
+                     aspects of music (Babbitt, Milton: <q>The Use of Computers in Musicological Research</q>,
+                     in: <hi rend="italic">Perspectives of New Music</hi> 3/2 (1965), p. 76).</p>
+                  <p>Various music encoding formats took up this distinction, most notably, the
+                        Standard Music Description Language (SMDL) (ISO/IEC DIS
                      10743). While the format itself was hardly ever used for its impractical
                      implementation details, parts of its design certainly influenced the
                      development of other formats, including MEI. In a documentation draft (<ref target="http://xml.coverpages.org/smdl10743-pdf.gz">http://xml.coverpages.org/smdl10743-pdf.gz, p.5</ref>), SMDL identifies
-                     four different <hi rend="italic">musical domains</hi>:</p>
+                     four different <emph>musical domains</emph>:</p>
                   <list type="gloss">
                      <label>logical domain</label>
                      <item>The logical domain is the basic musical content – the essence from which
                         all performances and editions of the work are derived, including virtual
-                        time values, nominal pitches, etc. The logical domain is describable as “the
+                        time values, nominal pitches, etc. The logical domain is describable as <q>the
                         composer’s intentions with respect to pitches, rhythms, harmonies, dynamics,
-                        tempi, articulations, accents, etc.,” and it is the primary focus of SMDL.
-                        It can also be described as “the abstract information common to both the
-                        gestural and visual domains.” […]</item>
+                        tempi, articulations, accents, etc.,</q> and it is the primary focus of SMDL.
+                        It can also be described as <q>the abstract information common to both the
+                        gestural and visual domains.</q> […]</item>
                      <label>gestural domain</label>
                      <item>The gestural domain is comprised of any number of performances, each of
                         which may specify how and when components of the logical domain is rendered
                         in a specific performance, including all the means whereby the performer
-                        actually “expresses” (acoustically instantiates) the music (intonation,
+                        actually <emph>expresses</emph> (acoustically instantiates) the music (intonation,
                         agogic and dynamic stress, etc.). The gestural domain is perhaps most
-                        succinctly described as “the information added by performers,” or “how the
-                        music actually sounds during particular performances.” […]</item>
+                        succinctly described as <q>the information added by performers,</q> or <q>how the
+                        music actually sounds during particular performances.</q> […]</item>
                      <label>visual domain</label>
                      <item>The visual domain is comprised of any number of scores, each of which
                         somehow specifies exactly how components of the logical domain is rendered
                         visually in some particular printable (and/or displayable) edition,
                         including such graphical details as symbology, symbol sets, fonts, page
                         layout, beaming conventions and exceptions, etc. The visual domain is
-                        perhaps most succinctly described as “the information added by human
-                        editors, engravers, and typesetters,” or “how the music actually looks in
-                        some particular edition.” […]</item>
+                        perhaps most succinctly described as <q>the information added by human
+                        editors, engravers, and typesetters,</q> or <q>how the music actually looks in
+                        some particular edition.</q> […]</item>
                      <label>analytical domain</label>
                      <item>The analytical domain is comprised of any number of theoretical analyses
                         and/or commentaries, each of which somehow specifies opinions, exegeses,
@@ -477,9 +480,9 @@
                   <p>On a generic level, MEI follows the same definition, and it definitely shares
                      the same terminology. However, not all four domains are available throughout
                      the MEI schema, and quite frequently, two domains fall together in MEI. Very
-                     often, <hi rend="italic">MEI prioritizes the visual domain over the gestural domain</hi> by (partly)
-                     <hi rend="italic">conflating the logical and the visual domains</hi>. For example, MEI utilizes the
-                     <att>pname</att> (pitch name) attribute on notes to capture the <hi rend="italic">written</hi>
+                     often, <emph>MEI prioritizes the visual domain over the gestural domain</emph> by (partly)
+                     <emph>conflating the logical and the visual domains</emph>. For example, MEI utilizes the
+                     <att>pname</att> (pitch name) attribute on notes to capture the <emph>written</emph>
                      pitch of a note, whereas the sounding pitch may be described with the
                         <att>pname.ges</att> attribute. Here, the logical and visual domains go
                      without a special indication, whereas the gestural domain is identified by a
@@ -492,15 +495,15 @@
                   <p>Even though the technical implementation of MEI prioritizes the visual domain
                      to some degree, this does not mean that any given encoding has to provide
                      visual information. MEI takes no assumption on what data is required: While an
-                     OMR project (<hi rend="italic">optical music recognition</hi>) may generate strictly visually
+                     Optical music recognition (OMR) project may generate strictly visually
                      oriented data only, another project focussed on audio transcriptions may
                      generate gestural data only. A third project could integrate both
                      approaches.</p>
                   <p>In order to avoid ambiguous encodings, MEI is very strict and specific on the
                      scope of its individual markup elements. For an encoder, the suffixes mentioned
                      above provide clear hints on which domain is addressed by specific markup: Many
-                     attributes carry a suffixed <hi rend="italic">.log</hi> (logical), <hi rend="italic">.ges</hi> (gestural), <hi rend="italic">.vis</hi>
-                     (visual), or <hi rend="italic">.anl</hi> (analytical) in their name. In addition, the internal
+                     attributes carry a suffixed <code>.log</code> (logical), <code>.ges</code> (gestural), <code>.vis</code>
+                     (visual), or <code>.anl</code> (analytical) in their name. In addition, the internal
                      structure of MEI heavily relies on those different domains. When customizing
                      MEI (see chapter <ptr target="#meiCustomization"/>), it is possible to turn off
                      either visual or gestural domain encoding completely. That way, MEI allows to
@@ -509,32 +512,38 @@
                </div>
                <div xml:id="eventsControlevents" type="div3">
                   <head>Events and Controlevents</head>
-                  <p>MEI differentiates between two essential aspects of music notation: <hi rend="italic">Events</hi> and <hi rend="italic">ControlEvents</hi>. There
+                  <p>MEI differentiates between two essential aspects of music notation:
+                     <emph>Events</emph> and <emph>ControlEvents</emph>. There
                      are other examples for such a separation of concerns with regard to music. In
                      Greg’s Copy-Text Theory (W.W. Greg: <hi rend="italic">The Rationale of
                         Copy-Text</hi>, 1950), a distinction between primary and secondary text is
                      made; similar attempts have been made for music specifically.</p>
-                  <p>In MEI, elements describing the basic musical text are referred to as <hi rend="italic">Events</hi>. They are the building blocks for the stream of
-                     music – mostly those are <gi scheme="MEI">note</gi>s, <gi scheme="MEI">rest</gi>s, and <gi scheme="MEI">chord</gi>s. In contrast, <hi rend="italic">ControlEvents</hi> make no independent contribution to that
+                  <p>In MEI, elements describing the basic musical text are referred to as <emph>Events</emph>.
+                     They are the building blocks for the stream of
+                     music – mostly those are <gi scheme="MEI">note</gi>s, <gi scheme="MEI">rest</gi>s, and <gi scheme="MEI">chord</gi>s. In contrast,
+                        <emph>ControlEvents</emph> make no independent contribution to that
                      flow of music. Instead, they provide additional information about the encoded
-                        <hi rend="italic">Events</hi>, they <hi rend="italic">control</hi> their
-                     performance. Examples for such <hi rend="italic">ControlEvents</hi> are <gi scheme="MEI">dynam</gi>ic markings, <gi scheme="MEI">tempo</gi>s
+                        <emph>Events</emph>, they <emph>control</emph> their
+                     performance. Examples for such <emph>ControlEvents</emph> are <gi scheme="MEI">dynam</gi>ic markings, <gi scheme="MEI">tempo</gi>s
                      indications, or performance <gi scheme="MEI">dir</gi>ectives. Depending on the
                      encoding strategy used, <gi scheme="MEI">slur</gi>s and <gi scheme="MEI">tie</gi>s often also fall into this category (they may be encoded as
                      attributes instead, in which case they become a property of the basic events).
-                     Simply put, <hi rend="italic">Events</hi> describe <hi rend="bold italic">what</hi> needs to be performed, and <hi rend="italic">ControlEvents</hi>
-                     indicate <hi rend="bold italic">how</hi> it needs to be performed. In (<ptr target="#cmn"/>-based) MEI, <hi rend="italic">Events</hi> are nested inside
-                     a <gi scheme="MEI">layer</gi> element, while <hi rend="italic">ControlEvents</hi> are direct children of the first <gi scheme="MEI">measure</gi> they apply to, following all <gi scheme="MEI">staff</gi>
+                     Simply put, <emph>Events</emph> describe <emph>what</emph> needs to be performed, and <emph>ControlEvents</emph>
+                     indicate <emph>how</emph> it needs to be performed. In (<ptr target="#cmn"/>-based) MEI, <emph>Events</emph> are nested inside
+                     a <gi scheme="MEI">layer</gi> element, while <emph>ControlEvents</emph> are direct children of the first
+                     <gi scheme="MEI">measure</gi> they apply to, following all <gi scheme="MEI">staff</gi>
                      elements there. These structural differences result in different markup
-                     concepts. As <hi rend="italic">Events</hi> are encoded inside <gi scheme="MEI">layer</gi>s, their <hi rend="italic">semantic position</hi> inside the
-                     encoded work can be derived from their <hi rend="italic">structural
-                        position</hi> – the measure, staff and layer they're nested in, and within
+                     concepts. As <emph>Events</emph> are encoded inside <gi scheme="MEI">layer</gi>s, their <emph>semantic position</emph> inside the
+                     encoded work can be derived from their <emph>structural
+                        position</emph> – the measure, staff and layer they’re nested in, and within
                      that layer by their position inside the sequence of all layer children. As
-                     mentioned above, it is highly <hi rend="italic">recommended</hi> to encode <hi rend="italic">ControlEvents</hi> inside the first measure they apply to, but
+                     mentioned above, it is highly <emph>recommended</emph> to encode
+                     <emph>ControlEvents</emph> inside the first measure they apply to, but
                      they still require references to the actual events they apply to. There are two
                      common concepts to provide such a connection, both of which offering specific
-                     benefits and drawbacks. A technically very stable connection between <hi rend="italic">ControlEvents</hi> and <hi rend="italic">Events</hi> can be
-                     established by using <hi rend="italic">pointers</hi>. In this case, all events
+                     benefits and drawbacks. A technically very stable connection between
+                     <emph>ControlEvents</emph> and <emph>Events</emph> can be
+                     established by using <emph>pointers</emph>. In this case, all events
                      that need to be referenced need an <att>xml:id</att> attribute, which holds a
                      globally unique identifier for this very element. The referencing controlevent
                      then uses a <att>startid</att> and, if necessary, <att>endid</att> attribute to
@@ -567,16 +576,16 @@
                         <specDesc key="att.startEndId" atts="endid"/>
                      </specList>
                   </p>
-                  <p>A <hi rend="italic">ControlEvent</hi> encoded like above will be strictly tied
-                     to the referenced <hi rend="italic">Events</hi> – if their position inside the
+                  <p>A <emph>ControlEvent</emph> encoded like above will be strictly tied
+                     to the referenced <emph>Events</emph> – if their position inside the
                      XML document changes for whatever reason, they will keep that connection. This
-                     means that the <hi rend="italic">semantic position</hi> to which they are bound
+                     means that the <emph>semantic position</emph> to which they are bound
                      may change without affecting the binding. An example could be an inserted
                      additional note in front – the dynamic marking would not start on the second
                      quarter, but perhaps on the third instead.</p>
                   <p>As this behavior may not be desired in all cases, an alternative binding
-                     between <hi rend="italic">ControlEvents</hi> and <hi rend="italic">Events</hi>
-                     is possible, relying on <hi rend="italic">timestamps</hi> instead. This
+                     between <emph>ControlEvents</emph> and <emph>Events</emph>
+                     is possible, relying on <emph>timestamps</emph> instead. This
                      mechanism is illustrated in the following example:</p>
                   <p>
                      <figure>
@@ -609,16 +618,18 @@
                      controlevents where positioned in the very first or last measure, or actually
                      even inside a separate file. The <att>tstamp</att> references however would
                      not, they depend on correct placement of the controlevents inside the XML tree.
-                     For consistency, it is therefore <hi rend="italic">recommended</hi> to always
+                     For consistency, it is therefore <emph>recommended</emph> to always
                      use this placement.</p>
-                  <p>The benefit of this concept is that controlevents are tied to a <hi rend="italic">semantic position</hi>, but not necessarily to a given XML
-                     element. The <hi rend="italic">forte</hi> may still be placed on the second
+                  <p>The benefit of this concept is that controlevents are tied to a <emph>semantic position</emph>,
+                     but not necessarily to a given XML element.
+                     The <emph>forte</emph> may still be placed on the second
                      quarter, even though the composer may have replaced that quarter G4 with a
-                     different pitch and / or duration. Actually, it is not required that an <hi rend="italic">Event</hi> can be found at the position indicated by a
+                     different pitch and / or duration. Actually, it is not required that
+                     an <emph>Event</emph> can be found at the position indicated by a
                      timestamp. This may be useful to encode a slur ending at an arbitrary position
                      between two events, or dynam markings spread across otherwise empty
                      measures.</p>
-                  <p>If the ending of a <hi rend="italic">ControlEvent</hi> shall be given by
+                  <p>If the ending of a <emph>ControlEvent</emph> shall be given by
                      timestamp, the <att>tstamp2</att> attribute is used.</p>
                   <p>
                      <specList>
@@ -632,13 +643,13 @@
                         <att>endid</att>. In general, it is easier for software to process
                         <att>startid</att> and <att>endid</att>. When no other arguments apply,
                      using <att>xml:id</att>-based pointers is therefore the most common way to
-                     connect <hi rend="italic">ControlEvents</hi> with <hi rend="italic">Events</hi>.</p>
+                     connect <emph>ControlEvents</emph> with <emph>Events</emph>.</p>
                   <p>The details on how timestamps are calculated and used in MEI are given in <ptr target="#timestamps"/>.</p>
                </div>
                <div xml:id="timestamps" type="div3">
                   <head>Timestamps in MEI</head>
                   <p>In MEI, timestamps are treated in a slightly simplified way: they have no
-                     notion of <hi rend="italic">beat</hi>. Instead, timestamps rely solely on the
+                     notion of <emph>beat</emph>. Instead, timestamps rely solely on the
                      numbers given in the meter signature. In a measure of 4/4, timestamps will
                      range from 1 to 4. The second eighth note will be 1.5 in this case. If the same
                      measure would be given in 2/2, it would be 1.25 instead.</p>
@@ -654,9 +665,9 @@
                      fractional part of the number to no more than five digits to avoid such
                      problems.</p>
                   <p>Durations may also be expressed based on timestamps. In this case, the values
-                     are a combination of the <hi rend="italic">count of measures</hi> that need to
+                     are a combination of the <emph>count of measures</emph> that need to
                      be moved forward to reach the measure in which an encoded feature ends, and the
-                        <hi rend="italic">timestamp</hi> within that measure.</p>
+                     <emph>timestamp</emph> within that measure.</p>
                   <p>
                      <specList>
                         <specDesc key="att.timestamp2.log" atts="tstamp2"/>
@@ -677,7 +688,7 @@
 </egXML>
                      </figure>
                   </p>
-                  <p>Sometimes, timestamps are used to indicate positions where no music <hi rend="italic">Events</hi> are located (see <ptr target="#eventsControlevents"/>). Therefore, the allowed range of timestamps
+                  <p>Sometimes, timestamps are used to indicate positions where no music <emph>Events</emph> are located (see <ptr target="#eventsControlevents"/>). Therefore, the allowed range of timestamps
                      stretches from 0 to the current meter count + 1. By definition, a timestamp of
                      0 indicates the position of the left bar line, while a timestamp of 5 (in case
                      of a 4/4 meter) indicates the right bar line. This makes it possible to encode
@@ -690,14 +701,14 @@
                <div xml:id="meiCustomizations" type="div3">
                   <head>MEI Customizations</head>
                   <p>MEI is an encoding framework, not a data format. This means that MEI provides
-                     recommendations for encoding music documents, but it depends on the encoder's
+                     recommendations for encoding music documents, but it depends on the encoder’s
                      needs and requirements to which features and solutions are appropriate to the
                      task and should be used. MEI offers specific models for different notation
                      types and music repertoires, but it is rarely advisable to use them all side by
                      side in one encoding.</p>
                   <p>In order to use MEI, it is advised to use a restricted version of the schema,
                      which will make it easier both for an encoder and a reader of the encoded
-                     files. MEI provides a number of pre-defined <hi rend="italic">customizations</hi>, which focus on specific
+                     files. MEI provides a number of pre-defined <emph>customizations</emph>, which focus on specific
                      uses of MEI while still maintaining a great level of flexibility. For projects
                      that need even better control over their data, it is highly recommended to
                      create a more specific customized version of MEI (see chapter <ptr target="#meiCustomization"/>). The following customizations are provided
@@ -705,29 +716,29 @@
                   <list type="gloss">
                      <label>mei-cmn</label>
                      <item>For most users, this will be the best starting point into music
-                        encoding with MEI. The <hi rend="italic">mei-cmn</hi> customization targets at documents that use
-                        <hi rend="italic">Common Western Music Notation</hi>. The specific rules for that notation are
+                        encoding with MEI. The <emph>mei-CMN</emph> customization targets at documents that use
+                        <emph>Common Western Music Notation</emph>. The specific rules for that notation are
                         specified in chapter <ptr target="#cmn"/>, even though other chapters of these
                         Guidelines apply as well.</item>
-                     <label>mei-mensural</label>
-                     <item>For documents written in <hi rend="italic">Mensural Notation</hi> (both black and
-                        white), MEI offers the <hi rend="italic">mei-mensural</hi> customization. The specific rules for
+                     <label>mei-Mensural</label>
+                     <item>For documents written in <emph>Mensural Notation</emph> (both black and
+                        white), MEI offers the <emph>mei-Mensural</emph> customization. The specific rules for
                         that notation are specified in chapter <ptr target="#mensural"/>, even though
                         other chapters of these Guidelines apply as well.</item>
-                     <label>mei-neumes</label>
-                     <item>This customization allows to encode medieval <hi rend="italic">Neume Notation</hi> with MEI.
+                     <label>mei-Neumes</label>
+                     <item>This customization allows to encode medieval <emph>Neume Notation</emph> with MEI.
                         The specific rules for that notation are specified in chapter <ptr target="#neumes"/>, even though other chapters of these Guidelines apply as
-                        well. Please note that the <hi rend="italic">mei-neumes</hi> customization has undergone significant
+                        well. Please note that the <emph>mei-Neumes</emph> customization has undergone significant
                         changes from MEI version 3 to version 4.</item>
                      <label>mei-basic</label>
                      <item>As an encoding framework, MEI offers multiple approaches to encode
                         certain features at various levels of detail. While this flexibility is at the
                         core of MEI and often required for research projects, it is an obstacle when
-                        developing software and converters for MEI. The <hi rend="italic">mei-Basic</hi> customization is a subset
+                        developing software and converters for MEI. The <emph>mei-Basic</emph> customization is a subset
                         of MEI which restricts it to one way of encoding for every feature of music
-                        notation. It covers <hi rend="italic">Common Western Music Notation</hi> only, and excludes all
+                        notation. It covers <emph>Common Western Music Notation</emph> only, and excludes all
                         editorial markup. In essence, it has the same functionality as most other music
-                        encoding formats like MusicXML or MNX. The purpose of <hi rend="italic">mei-Basic</hi> is to serve
+                        encoding formats like MusicXML or MNX. The purpose of <emph>mei-Basic</emph> is to serve
                         as common ground for data interchange, both between projects using different
                         customizations of MEI, and other encoding schemes.</item>
                      <label>mei-all</label>
@@ -736,11 +747,11 @@
                         are neither intended nor advocable. For example, in mensural notation music is
                         organized by staves. In contrast, Common Music Notation utilizes measures,
                         which in turn contain staves. These staves have a different meaning here, and
-                        are modeled differently in MEI. <hi rend="italic">mei-all</hi> mixes those models and thus invites
-                        encoding errors. In general, you should almost never use <hi rend="italic">mei-all</hi> except for
+                        are modeled differently in MEI. <emph>mei-all</emph> mixes those models and thus invites
+                        encoding errors. In general, you should almost never use <emph>mei-all</emph> except for
                         testing purposes.</item>
                      <label>mei-all_anyStart </label>
-                     <item>This customization includes all of <hi rend="italic">mei-all</hi>, but extends it even
+                     <item>This customization includes all of <emph>mei-all</emph>, but extends it even
                         further so that it allows any MEI element as root of conforming MEI instances.
                         In regular MEI, the only allowed starting elements are <gi scheme="MEI">mei</gi>, <gi scheme="MEI">meiHead</gi>, <gi scheme="MEI">music</gi> and
                         <gi scheme="MEI">meiCorpus</gi>. The sole purpose of this customization is
@@ -758,19 +769,19 @@
                      very needs of a project. Such a custom schema will guide the encoders and will
                      help to ensure consistency and data quality throughout a project’s files. A
                      customization typically provides a subset of MEI’s encoding models (typically
-                     starting from one of the official <hi rend="italic">customizations</hi> mentioned in chapter <ptr target="#meiCustomizations"/>), with only one solution for any given situation
+                     starting from one of the official <emph>customizations</emph> mentioned in chapter <ptr target="#meiCustomizations"/>), with only one solution for any given situation
                      being allowed. The customization will help to reflect the scope of a project
                      into its data: Only those aspects of music notation a project is interested in
                      will be allowed, so that the absence of a specific information can not be
                      misunderstood as an oversight of the encoders. Larger editorial projects like
-                     <hi rend="italic">Complete Works</hi> editions typically use <hi rend="italic">Editorial Guidelines</hi> (german:
-                     <hi rend="italic">Editionsrichtlinien</hi>) for the same purposes: (internal) quality control and
+                     <emph>Complete Works</emph> editions typically use <emph>Editorial Guidelines</emph> (german:
+                     <foreign xml:lang="de">Editionsrichtlinien</foreign>) for the same purposes: (internal) quality control and
                      (external) documentation. In that sense, MEI customizations may serve as
                      Editorial Guidelines in digital form.</p>
-                  <p>MEI is implemented in ODD. ODD, or <hi rend="italic">One Document Does-it-all</hi>, is another
-                     XML-based markup language developed and maintained by the TEI. TEI's
+                  <p>MEI is implemented in ODD (One Document Does-it-all). ODD, is another
+                     XML-based markup language developed and maintained by the TEI. TEI’s
                      documentation for ODD can be found in the TEI Guidelines chapter 22: <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/TD.html">Documentation Elements</ref>, chapter 23: <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/USE.html">Using
-                        the TEI</ref>, and the "<ref target="https://tei-c.org/guidelines/customization/getting-started-with-p5-odds/">Getting Started with P5 ODDs</ref>" document.</p>
+                        the TEI</ref>, and the <ref target="https://tei-c.org/guidelines/customization/getting-started-with-p5-odds/">Getting Started with P5 ODDs</ref> document.</p>
                   <p>At this point, there is no specific documentation on how to customize MEI with
                      ODD beyond the generic TEI documentation. However, the provided <ptr target="#meiCustomizations"/> are based on ODD customizations, and may serve as
                      starting point for further project-specific restrictions. They can be found
@@ -798,7 +809,7 @@
                 <!--<xi:include href="../source/docs/03-metadata.xml" xpointer="metadata"/>-->
                 <div xml:id="cmn" type="div1" xml:base="../source/docs/04-cmn.xml" xml:lang="en">
             <head>Repertoire: Common Music Notation</head>
-            <p>The module described in this chapter offers the means to describe music in so-called ‘Common Music Notation’ (CMN, sometimes referred to as ‘Common Western Music Notation’). For this purpose, it provides a number of special elements and adds several attribute classes to elements from the <ptr target="#shared"/> module.</p>
+            <p>The module described in this chapter offers the means to describe music in so-called <q>Common Music Notation</q> (CMN, sometimes referred to as <q>Common Western Music Notation</q>). For this purpose, it provides a number of special elements and adds several attribute classes to elements from the <ptr target="#shared"/> module.</p>
             <div xml:id="cmnintro" type="div2">
                <head>Introduction</head>
                <p>This chapter is supposed to frame the repertoire target by the module, <abbr>i.e.</abbr>, what is Common Music Notation?</p>
@@ -808,7 +819,7 @@
                <p>This section describes the use of basic features of MEI important for encoding CMN material. Most of the elements discussed here are defined in chapter <ptr target="#shared"/> of these Guidelines, but are used in music from the CMN repertoire in specialized ways.</p>
                <div xml:id="cmnMeasures" type="div3">
                   <head>The Role of the Measure Element</head>
-                  <p>Arguably, the most important element of the CMN module is the <gi scheme="MEI">measure</gi> element. It is used as a structural unit inside <gi scheme="MEI">section</gi> elements and acts as a container for ‘events’ from the <ident type="class">model.eventLike</ident> class, such as notes, chords and rests as well as ‘control events’ from the <ident type="class">model.controlEventLike</ident> class, such as slurs and indications of dynamics.</p>
+                  <p>Arguably, the most important element of the CMN module is the <gi scheme="MEI">measure</gi> element. It is used as a structural unit inside <gi scheme="MEI">section</gi> elements and acts as a container for <emph>events</emph> from the <ident type="class">model.eventLike</ident> class, such as notes, chords and rests as well as <emph>control events</emph> from the <ident type="class">model.controlEventLike</ident> class, such as slurs and indications of dynamics.</p>
                   <p>The following example demonstrates the use of the <gi scheme="MEI">measure</gi> element:</p>
                   <p>
                      <figure>
@@ -852,7 +863,7 @@
 </egXML>
                      </figure>
                   </p>
-                  <p>Each <gi scheme="MEI">staff</gi> may hold a number of <gi scheme="MEI">layer</gi> elements to reflect multiple ‘voices’. Just as with <gi scheme="MEI">staff</gi>, the order of the <gi scheme="MEI">layer</gi> elements in the file does not have to reflect their original order in the document, so they also possess <att>n</att> and <att>def</att> attributes for association with the appropriate layer definition.</p>
+                  <p>Each <gi scheme="MEI">staff</gi> may hold a number of <gi scheme="MEI">layer</gi> elements to reflect multiple <emph>voices</emph>. Just as with <gi scheme="MEI">staff</gi>, the order of the <gi scheme="MEI">layer</gi> elements in the file does not have to reflect their original order in the document, so they also possess <att>n</att> and <att>def</att> attributes for association with the appropriate layer definition.</p>
                   <p>
                      <figure>
                         <head/>
@@ -1020,7 +1031,7 @@
                   </p>
                   <p>With the exception of <gi scheme="MEI">label</gi>, these elements may also occur within the flow of musical events captured in a <gi scheme="MEI">layer</gi>, since they are members of <ident type="class">model.eventLike</ident>. In the layer context they function as milestones and affect all following content assigned to the layer (even in subsequent measures) until their information is again overridden either by the same element bearing different information or a <gi scheme="MEI">staffDef</gi> or <gi scheme="MEI">scoreDef</gi>. In this context, it is also possible to combine them with the elements described in chapters <ptr target="#critApp"/> and <ptr target="#editTrans"/> of these Guidelines.</p>
                   <p>Such flexibility as this may require close inspection of an encoding to retrieve the correct definitions for a given staff. As a general rule, the closest preceding and most specific element provides this information: For example, a <gi scheme="MEI">keySig</gi> in the preceding measure is more relevant than a <gi scheme="MEI">staffDef</gi> at the beginning of the section, which is more relevant than a <gi scheme="MEI">scoreDef</gi> at the beginning of the score. However, a section-specific <gi scheme="MEI">scoreDef</gi> that provides only information about the meter does not override the more specific information about key signature gathered from a <gi scheme="MEI">staffDef</gi> for a transposing instrument.</p>
-                  <p>Every <gi scheme="MEI">staffDef</gi> may contain a number of <gi scheme="MEI">layerDef</gi> elements, which may be used to establish default values for the distinct layers sharing one staff. MEI does not use the term ‘voice’ to describe these ‘musical threads’ because that term implies continuity across measure boundaries. Given the sometimes arbitrary relationships between these threads from measure to measure as well as across staves, MEI uses the more neutral term ‘layer’.</p>
+                  <p>Every <gi scheme="MEI">staffDef</gi> may contain a number of <gi scheme="MEI">layerDef</gi> elements, which may be used to establish default values for the distinct layers sharing one staff. MEI does not use the term <hi rend="italic">voice</hi> to describe these <q>musical threads</q> because that term implies continuity across measure boundaries. Given the sometimes arbitrary relationships between these threads from measure to measure as well as across staves, MEI uses the more neutral term <emph>layer</emph></p>
                </div>
                <div xml:id="cmnDefsSepecial" type="div3">
                   <head>Special cases in staff definitions</head>
@@ -1056,7 +1067,7 @@
                      <p>When multiple time signatures appear next to each other the <gi scheme="MEI">meterSigGrp</gi> element has to be used.</p>
                      <p>
                         <figure>
-                           <head>Alternating meters in Tchaikovsky's String Quartet in F major</head>
+                           <head>Alternating meters in Tchaikovsky’s String Quartet in F major</head>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-cmn.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
 &lt;?xml-model href="https://music-encoding.org/schema/dev/mei-cmn.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
 &lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="6.0-dev"&gt;
@@ -1565,7 +1576,7 @@
                         </p>
                         <p>Grace notes are not counted when determining the measure’s conformance to the current time signature. Therefore, the <att>dur</att> attribute records only the <hi rend="italic">written</hi> rhythmic value of the grace note. The time necessary for the performance of grace notes can be unspecified, calculated based on taking time from other non-grace notes, or specified precisely using the <att>dur.ges</att> attribute.</p>
                         <p>The values of <att>grace</att> indicate from which note time is ‘borrowed’ to perform the grace note: The preceding note, in which case the value <val>unacc</val> (unaccented) is used, or the following note, when the value <val>acc</val> (accented) is appropriate. Technically, this value determines if the note following the grace will keep its original onset time or will be slightly delayed to allow the grace note itself to be accented. Sometimes it is not clear how to perform a grace; in these situations the value <val>unknown</val> allows one to indicate a grace note while unambiguously stating that its performed duration remains unknown.</p>
-                        <p>The <att>grace.time</att> attribute is only to be used in combination with the <att>grace</att> attribute. It records the amount of time (as a percentage of the written duration) that the grace note should ‘steal’ from the preceding note (when <att>grace</att>="unacc") or the following note (when <att>grace</att>="acc").</p>
+                        <p>The <att>grace.time</att> attribute is only to be used in combination with the <att>grace</att> attribute. It records the amount of time (as a percentage of the written duration) that the grace note should ‘steal’ from the preceding note (when <att>grace</att>=<val>unacc</val>) or the following note (when <att>grace</att>=<val>acc</val>).</p>
                         <p>Grace notes can be placed within a <gi scheme="MEI">graceGrp</gi> element, which itself allows all values for <att>grace</att> as explained above. The optional <att>attach</att> attribute is used to record whether the grace note group is attached to the following event or to the preceding one. The <gi scheme="MEI">graceGrp</gi> element can be used with single or multiple grace notes.</p>
                         <p>More information about grace notes in the context of other CMN ornaments is available in chapter <ptr target="#cmnOrnaments"/>.</p>
                      </div>
@@ -1869,9 +1880,9 @@
                <div xml:id="cmnTstamp" type="div3">
                   <head>Timestamps and Durations</head>
                   <p>MEI offers multiple ways of defining onsets and offsets of timed musical events such as notes and slurs. The most common and most musician-friendly approach to this is through the use of a combination of the attributes <att>tstamp</att> and <att>dur</att>, which are made available by the attribute classes <ident type="class">att.timestamp.log</ident> (inherited by <ident type="class">att.controlEvent</ident>) and <ident type="class">att.timestamp2.log</ident>, both from the shared module.</p>
-                  <p>The timestamp (<att>tstamp</att>) of a musical event is calculated in relation to the meter of the current measure and resembles the so-called ‘beat’ position. In a common time measure with four quarter notes, the timestamp of each quarter equals its beat position in the measure: The first quarter has a timestamp of 1, the second has a timestamp of 2, and so on. MEI defines the value of <att>tstamp</att> as a real number; the second eighth note position in a measure would thus be represented by the value of "1.5". The range of possible values is defined as starting with zero and ending with the number of metrical units in a measure (the ‘numerator’ in a time signature) + 1. This allows the capture of all graphical positions starting from the left bar line ('0') and ending with the right bar line of the measure ('5', in the case of 4/4 time).</p>
+                  <p>The timestamp (<att>tstamp</att>) of a musical event is calculated in relation to the meter of the current measure and resembles the so-called <q>beat</q> position. In a common time measure with four quarter notes, the timestamp of each quarter equals its beat position in the measure: The first quarter has a timestamp of 1, the second has a timestamp of 2, and so on. MEI defines the value of <att>tstamp</att> as a real number; the second eighth note position in a measure would thus be represented by the value of <val>1.5</val>. The range of possible values is defined as starting with zero and ending with the number of metrical units in a measure (the ‘numerator’ in a time signature) + 1. This allows the capture of all graphical positions starting from the left bar line (<val>0</val>) and ending with the right bar line of the measure (<val>5</val>, in the case of 4/4 time).</p>
                   <p>For expressing durations, MEI offers the <att>dur</att> attribute. This attribute is described in section <ptr target="#cmnNotesBasic"/>.</p>
-                  <p>For ‘spanning’ elements like slurs, which are members of the <ident type="class">model.controlEventLike</ident> class, it is often more intuitive to record two timestamps – one for the onset of the event and one for its termination. Because the termination of the event may be in a succeeding measure, the second timestamp (<att>tstamp2</att>) has a slightly different datatype than the one marking the initiation of the event. Its datatype is constrained to values following the formula "<hi rend="italic">xm + y</hi>", where <hi rend="italic">x</hi> is the number of full measures that this particular feature lasts (or the number of bar lines crossed) and <hi rend="italic">y</hi> is the timestamp in the target measure where the feature ends. The timestamp is expressed using the same logic as described above. For example, a value of "0m+3" in 4/4 time indicates that the element bearing this attribute, a slur for example, ends on beat 3 of the same measure where it started. A value of "1m+1.5" would indicate an end on the second eighth note of the following measure. In 6/8 time, the value "2m+3" means that the feature ends two measures later on the third eighth note.</p>
+                  <p>For <q>spanning</q> elements like slurs, which are members of the <ident type="class">model.controlEventLike</ident> class, it is often more intuitive to record two timestamps – one for the onset of the event and one for its termination. Because the termination of the event may be in a succeeding measure, the second timestamp (<att>tstamp2</att>) has a slightly different datatype than the one marking the initiation of the event. Its datatype is constrained to values following the formula <q>xm + y</q>, where <q>x</q> is the number of full measures that this particular feature lasts (or the number of bar lines crossed) and <q>y</q> is the timestamp in the target measure where the feature ends. The timestamp is expressed using the same logic as described above. For example, a value of <val>0m+3</val> in 4/4 time indicates that the element bearing this attribute, a slur for example, ends on beat 3 of the same measure where it started. A value of <val>1m+1.5</val> would indicate an end on the second eighth note of the following measure. In 6/8 time, the value <val>2m+3</val> means that the feature ends two measures later on the third eighth note.</p>
                </div>
             </div>
             <div xml:id="cmnAdditionalMeasureContent" type="div2">
@@ -1973,7 +1984,7 @@
 </egXML>
                      </figure>
                   </p>
-                  <p>The duration of notes, rests, or chords under a beam which carries the <att>form</att> attribute with a value of ‘acc’, ‘rit’, or ‘mixed’ must be treated specially. The first and last contained elements must specify a duration which matches the number of beams displayed at the point of these events. In the case of a ‘mixed’ beam, each event at the point of change in the number of secondary beams must carry a <att>dur</att> attribute. Beams like this may be encoded thusly:</p>
+                  <p>The duration of notes, rests, or chords under a beam which carries the <att>form</att> attribute with a value of <val>acc</val>, <val>rit</val>, or <val>mixed</val> must be treated specially. The first and last contained elements must specify a duration which matches the number of beams displayed at the point of these events. In the case of a ‘mixed’ beam, each event at the point of change in the number of secondary beams must carry a <att>dur</att> attribute. Beams like this may be encoded thusly:</p>
                   <p>
                      <figure>
                         <head>Feathered beaming</head>
@@ -2011,7 +2022,7 @@
                         <graphic url="../images/ExampleImages/cross-staff.1.png"/>
                      </figure>
                   </p>
-                  <p>Beams that connect events on different staves may be encoded in two different ways. First, a single-layer approach may be taken that treats the events lying under the beam as logically belonging to the same layer as the initial event but visually ‘displaced’ to an adjacent staff. In the example above from <name ref="https://en.wikipedia.org/wiki/Moritz_Moszkowski">Moritz Moszkowski’s</name>
+                  <p>Beams that connect events on different staves may be encoded in two different ways. First, a single-layer approach may be taken that treats the events lying under the beam as logically belonging to the same layer as the initial event but visually <q>displaced</q> to an adjacent staff. In the example above from <name ref="https://en.wikipedia.org/wiki/Moritz_Moszkowski">Moritz Moszkowski’s</name>
                      <hi rend="italic">12 Pianoforte Studies for the left hand</hi>, Op. 92, MoszWV 117 this method makes even from a semantic perspective perfect sense. It can be achieved with an additional <att>staff</att> attribute value that contradicts the ‘normal’ staff placement indicated by the <att>n</att> attribute of their ancestor <gi scheme="MEI">staff</gi>.</p>
                   <p>
                      <figure>
@@ -2213,7 +2224,7 @@
 </egXML>
                      </figure>
                   </p>
-                  <p>The reason for this difference is that slurs, unlike ties, may overlap, so that a second slur may start while the first slur is still ongoing. The digit indicates the level of nesting of slurs on the note; ‘1’ indicates no nesting, while ‘2’ indicates the existence of 2 slurs in which this note participates, and so on. In the example below, the second and third quarter notes lie under 2 slurs. The second note is covered by the slur that begins on the preceding note and by the one that it starts. The third note is affected by the slur that begins on note one and by the one that starts on note two.</p>
+                  <p>The reason for this difference is that slurs, unlike ties, may overlap, so that a second slur may start while the first slur is still ongoing. The digit indicates the level of nesting of slurs on the note; <val>1</val> indicates no nesting, while <val>2</val> indicates the existence of 2 slurs in which this note participates, and so on. In the example below, the second and third quarter notes lie under 2 slurs. The second note is covered by the slur that begins on the preceding note and by the one that it starts. The third note is affected by the slur that begins on note one and by the one that starts on note two.</p>
                   <p>
                      <figure>
                         <head/>
@@ -2298,7 +2309,7 @@
 </egXML>
                      </figure>
                   </p>
-                  <p>Obviously, to be complete the slur in the above example needs to be ‘attached’ to the notes somehow. The ‘vertical assignment’ can be indicated for the example above using the <att>staff</att> and <att>layer</att> attributes like so:</p>
+                  <p>Obviously, to be complete the slur in the above example needs to be <q>attached</q> to the notes somehow. The <q>vertical assignment</q> can be indicated for the example above using the <att>staff</att> and <att>layer</att> attributes like so:</p>
                   <p>
                      <figure>
                         <head/>
@@ -2484,7 +2495,7 @@
                <div xml:id="cmnTuplets" type="div3">
                   <head>Tuplets</head>
                   <p>Tuplets indicate a localized change of meter; that is, a given duration in the regular meter is divided between a group of notes with irregular (according to the current meter) rhythmic values. The most common tuplet is a so-called ‘triplet’, in which three notes take the time normally occupied by two.</p>
-                  <p>The relation of the tuplet to the underlying meter is specified using the <att>num</att> and <att>numbase</att> attributes, where <att>num</att> specifies the number of replacing notes and <att>numbase</att> specifies the number of notes <hi rend="italic">of the same duration</hi> to be replaced. For example, when three eighth notes replace one quarter note in common time, <att>num</att> takes a value of "3", whereas <att>numbase</att> reads "2", because a quarter note in common time is normally divided into two eighths. When three quarters replace two in the same meter, <att>numbase</att> also reads "2". The combination of these attributes may be read as "3 in the time of 2" in either case.</p>
+                  <p>The relation of the tuplet to the underlying meter is specified using the <att>num</att> and <att>numbase</att> attributes, where <att>num</att> specifies the number of replacing notes and <att>numbase</att> specifies the number of notes <hi rend="italic">of the same duration</hi> to be replaced. For example, when three eighth notes replace one quarter note in common time, <att>num</att> takes a value of <val>3</val>, whereas <att>numbase</att> reads <val>2</val>, because a quarter note in common time is normally divided into two eighths. When three quarters replace two in the same meter, <att>numbase</att> also reads "2". The combination of these attributes may be read as "3 in the time of 2" in either case.</p>
                   <p>
                      <figure>
                         <head>Tuplet rhythms from Maurice Ravel’s Boléro</head>
@@ -2516,7 +2527,7 @@
                      </figure>
                   </p>
                   <p>Tuplets are often highlighted using brackets above or below the affected notes. The presence and position of these brackets can be encoded using the <att>bracket.place</att> (above / below) and <att>bracket.visible</att> (true / false) attributes.</p>
-                  <p>Usually, however, tuplets are rendered with a bracket (<att>bracket.visible</att>="true") and a single number (<att>num.format</att>="count" and <att>num.visible</att>="true"), as seen in the example above. However, the number-to-numbase ratio may be provided in addition to, or in some cases as a replacement for, the bracket. The <att>num.format</att> attribute indicates whether a plain number (the value of <att>num</att>) or a ratio (comprised of <att>num</att> and <att>numbase</att>, <abbr>e.g.</abbr>, "3:2") should be displayed and <att>num.visible</att> indicates the general presence of such a number.</p>
+                  <p>Usually, however, tuplets are rendered with a bracket (<att>bracket.visible</att>=<val>true</val>) and a single number (<att>num.format</att>=<val>count</val> and <att>num.visible</att>=<val>true</val>), as seen in the example above. However, the number-to-numbase ratio may be provided in addition to, or in some cases as a replacement for, the bracket. The <att>num.format</att> attribute indicates whether a plain number (the value of <att>num</att>) or a ratio (comprised of <att>num</att> and <att>numbase</att>, <abbr>e.g.</abbr>, "3:2") should be displayed and <att>num.visible</att> indicates the general presence of such a number.</p>
                   <p>Further visual control comes with the <att>num.place</att> and <att>bracket.place</att> attributes, that allow specific placement of the number and the bracket <val>above</val> or <val>below</val> the staff.</p>
                   <p>In addition to <gi scheme="MEI">note</gi> elements, <gi scheme="MEI">tuplet</gi> may contain other elements, such as <gi scheme="MEI">rest</gi> or <gi scheme="MEI">space</gi>, to match the content of a source document or an intended rendering. In particular, the <gi scheme="MEI">beam</gi> element is allowed so that custom beaming may be indicated, <abbr>e.g.</abbr>, a septuplet may be divided into a group of three plus a group of four notes.</p>
                   <p>The <gi scheme="MEI">tuplet</gi> element may also be used for repetition of the same pitch; that is, a single note or chord may be the only content of the tuplet. In some cases, optical music recognition software may treat these instances as bowed tremolandi due to the knowledge of the complete semantics of the notation at the time of recognition. However, marking these as tuplets is the recommended practice.</p>
@@ -2614,7 +2625,7 @@
                         </figure>
                      </p>
                      <p>A third, and somewhat counter-intuitive, value for <att>order</att>, <val>nonarp</val>, indicates that no arpeggio shall be performed. Normally rendered as a bracket instead of a wavy line, this form of arpeggio is used to indicate a non-arpeggiated chord intervening in a sequence of arpeggiated ones. This is common in music for the harp, where arpeggiation is the usual method of performing chords and deviation from the norm must be explicitly indicated.</p>
-                     <p>Whereas an arpeggio ‘staggers’ the onset times of the notes of a chord, a glissando denotes a situation where the pitch ‘slides’ from one note to another. It makes no difference whether this slide produces distinct intermediate pitches (as on the piano) or not (as on the trombone), though the latter is sometimes referred to as portamento. The visual appearance of a glissando, which MEI encodes as <gi scheme="MEI">gliss</gi>, is normally a line connecting two notes in the glissando.</p>
+                     <p>Whereas an arpeggio <q>staggers</q> the onset times of the notes of a chord, a glissando denotes a situation where the pitch <q>slides</q> from one note to another. It makes no difference whether this slide produces distinct intermediate pitches (as on the piano) or not (as on the trombone), though the latter is sometimes referred to as portamento. The visual appearance of a glissando, which MEI encodes as <gi scheme="MEI">gliss</gi>, is normally a line connecting two notes in the glissando.</p>
                      <p>
                         <figure>
                            <head>A simple glissando in Tárrega’s Alborada from a leading grace note</head>
@@ -2740,7 +2751,7 @@
                   </div>
                   <div xml:id="cmnFermata" type="div4">
                      <head>Fermata</head>
-                     <p>A very common feature of music notation from the CMN period is the so-called ‘fermata’ (or ‘corona’ in Italian). It is usually written as a dot above or below an arc. It may stand above or below the staff it affects with its ‘open’ side usually facing towards the staff. A fermata indicates that a related note or rest should be held longer than its written duration would normally require. Sometimes, a fermata occurs over or under a bar line to indicate a pause or even the end of a phrase or section.</p>
+                     <p>A very common feature of music notation from the CMN period is the so-called <hi rend="italic">fermata</hi> (or <hi rend="italic">corona</hi> in Italian). It is usually written as a dot above or below an arc. It may stand above or below the staff it affects with its <q>open</q> side usually facing towards the staff. A fermata indicates that a related note or rest should be held longer than its written duration would normally require. Sometimes, a fermata occurs over or under a bar line to indicate a pause or even the end of a phrase or section.</p>
                      <p>
                         <figure>
                            <head>The probably most famous fermatas in history from Beethoven’s fifth symphony</head>
@@ -3542,7 +3553,7 @@
                      </figure>
                   </p>
                   <p>The relationship between an ornament and the notes on staff must always be encoded. It is, in fact, a semantic error not to specify a starting event or time stamp for an ornament.</p>
-                  <p>In their resolution, ornaments will involve auxiliary notes, which typically follow the key signature or the scale of the current key. When the ornament involves other chromatic auxiliaries, an accidental is expressed next to or above the ornament sign. The attributes <att>accidlower</att> and <att>accidupper</att>, available on all ornaments described in this chapter, can be used to record this accidental. The attribute values ‘upper’ and ‘lower’ indicate whether the accidental is associated with an upper or lower auxiliary note, not the position of the accidental sign.</p>
+                  <p>In their resolution, ornaments will involve auxiliary notes, which typically follow the key signature or the scale of the current key. When the ornament involves other chromatic auxiliaries, an accidental is expressed next to or above the ornament sign. The attributes <att>accidlower</att> and <att>accidupper</att>, available on all ornaments described in this chapter, can be used to record this accidental. The attribute values <val>upper</val> and <val>lower</val> indicate whether the accidental is associated with an upper or lower auxiliary note, not the position of the accidental sign.</p>
                   <div xml:id="cmnOrnamentsOverride" type="div4">
                      <head>Overriding Default Resolutions</head>
                      <p>The symbols and sounded resolutions suggested for each ornament in this chapter are to be considered defaults. Nevertheless, because of the great historical and geographical variance in the notation of ornaments, the encoder is given methods to override the default resolutions.</p>
