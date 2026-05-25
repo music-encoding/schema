@@ -19589,7 +19589,7 @@ or
         <rng:param name="pattern">[i|m|t][1-6]</rng:param>
       </rng:data>
     </content>
-    <exemplum>
+    <exemplum xml:lang="en">
       <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve" valid="feasible">
 <note slur="i1 i2"/>
 <note slur="t1"/>
@@ -20157,6 +20157,53 @@ or
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.INTERVAL.MELODIC"/>
         </datatype>
+        <exemplum xml:lang="en">
+          <p>The following example shows interval relationships indicated by the Parsons Code:</p>
+          <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <measure n="1">
+              <staff n="1">
+                <layer>
+                  <note dur="4" oct="4" pname="c"/>
+                  <note dur="4" oct="4" pname="d" intm="u"/>
+                  <note dur="4" oct="4" pname="e" intm="u"/>
+                  <note dur="4" oct="4" pname="f" intm="u"/>
+                  <note dur="2" oct="4" pname="g" intm="u"/>
+                  <note dur="2" oct="4" pname="g" intm="s"/>
+                  <note dur="4" oct="4" pname="f" intm="d"/>
+                </layer>
+              </staff>
+            </measure>
+          </egXML>
+        </exemplum>
+        <exemplum xml:lang="en">
+          <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <measure>
+              <staff>
+                <layer>
+                  <note dur="4" oct="5" pname="c"/>
+                  <note dur="4" oct="5" pname="d" intm="+M2"/>
+                  <note dur="4" oct="5" pname="c" intm="-M2"/>
+                  <note dur="4" oct="4" pname="b" intm="-m2"/>
+                  <note dur="4" oct="3" pname="b" intm="-P8"/>
+                </layer>
+              </staff>
+            </measure>
+          </egXML>
+        </exemplum>
+        <exemplum xml:lang="en">
+          <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <measure>
+              <staff>
+                <layer>
+                  <note dur="4" oct="4" pname="c"/>
+                  <note dur="4" oct="4" pname="d" intm="2hs"/>
+                  <note dur="4" oct="5" pname="d" intm="12hs"/>
+                  <note dur="4" oct="5" pname="c" intm="-2.334hs"/>
+                </layer>
+              </staff>
+            </measure>
+          </egXML>
+        </exemplum>
       </attDef>
     </attList>
   </classSpec><classSpec rend="add" ident="att.keyAccid.anl" module="MEI.analytical" type="atts">
@@ -22890,15 +22937,15 @@ or
             dur, dur.ges, endid, or tstamp2</sch:assert>
         </sch:rule>
       </constraint>
-    </constraintSpec><exemplum>
+    </constraintSpec><exemplum xml:lang="en">
       <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">
           <cpMark tstamp="1" tstamp2="5m+4" staff="8" origin.tstamp="-6m+1">a. b. c. d. e. f. g.</cpMark>
         </egXML>
-    </exemplum><exemplum>
+    </exemplum><exemplum xml:lang="en">
       <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">
           <cpMark tstamp="1.5" tstamp2="1m+3.5" staff="9" origin.staff="8">unis:</cpMark>
         </egXML>
-    </exemplum><exemplum>
+    </exemplum><exemplum xml:lang="en">
       <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">
           <cpMark tstamp="2" tstamp2="2m+3.5" staff="9" origin.staff="8" dis="8" dis.place="below">in 8va</cpMark>
         </egXML>
@@ -25406,14 +25453,14 @@ or
             are used, usually each content item has one.</sch:assert>
         </sch:rule>
       </constraint>
-    </constraintSpec><exemplum>
+    </constraintSpec><exemplum xml:lang="en">
       <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">
 <contents>
   <p>A suitable tone ; Left hand coloring ; Rhythm and accent ; Tempo ; 
     Flexibility ; Ornaments</p>
 </contents>
             </egXML>
-    </exemplum><exemplum>
+    </exemplum><exemplum xml:lang="en">
       <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">
 <contents>
   <head>Contents</head>
@@ -25425,7 +25472,7 @@ or
      Couperin</contentItem>
 </contents>
             </egXML>
-    </exemplum><exemplum>
+    </exemplum><exemplum xml:lang="en">
       <egXML xmlns="http://www.tei-c.org/ns/Examples" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
 <contents target="http://www.contentProvider.org/toc/toc01.html"/>
             </egXML>
