@@ -21,7 +21,7 @@
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../source/validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="../source/validation/mei-purify.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2026-05-28T10:51:55.36381035+02:00-->
+<!--canonicalized: 2026-05-28T13:11:12.973823403+02:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -2306,8 +2306,8 @@
                         <head>Encoding of primary creative responsibility</head>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;titleStmt&gt;
    &lt;title&gt;Auf dem Hügel sitz ich spähend : an electronic transcription&lt;/title&gt;
-   &lt;composer&gt;Ludwig van Beethoven&lt;/composer&gt;
-   &lt;lyricist&gt;Aloys Jeitteles&lt;/lyricist&gt;
+   &lt;persName role="composer"&gt;Ludwig van Beethoven&lt;/persName&gt;
+   &lt;persName role="lyricist"&gt;Aloys Jeitteles&lt;/persName&gt;
 &lt;/titleStmt&gt;
 </egXML>
                      </figure>
@@ -2318,8 +2318,8 @@
                         <head>Encoding of secondary intellectual responsibility</head>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;titleStmt&gt;
    &lt;title&gt;Auf dem Hügel sitz ich spähend : an electronic transcription&lt;/title&gt;
-   &lt;composer&gt;Ludwig van Beethoven&lt;/composer&gt;
-   &lt;lyricist&gt;Aloys Jeitteles&lt;/lyricist&gt;
+   &lt;persName role="composer"&gt;Ludwig van Beethoven&lt;/persName&gt;
+   &lt;persName role="lyricist"&gt;Aloys Jeitteles&lt;/persName&gt;
    &lt;respStmt&gt;
       &lt;resp&gt;Encoded by&lt;/resp&gt;
       &lt;name&gt;Maja Hartwig&lt;/name&gt;
@@ -30093,7 +30093,13 @@ or
         <rng:ref name="model.titleLike"/>
       </rng:oneOrMore>
       <rng:zeroOrMore>
-        <rng:ref name="model.respLike"/>
+        <rng:ref name="model.nameLike.agent"/>
+      </rng:zeroOrMore>
+      <rng:zeroOrMore>
+        <rng:ref name="name"/>
+      </rng:zeroOrMore>
+      <rng:zeroOrMore>
+        <rng:ref name="respStmt"/>
       </rng:zeroOrMore>
     </content>
     <remarks xml:lang="en">

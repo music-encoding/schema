@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2026-05-28T08:52:24Z. . 
+Schema generated from ODD source 2026-05-28T11:11:42Z. . 
 TEI Edition: MEI 6.0-dev 
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -4102,7 +4102,13 @@ Suggested values include: 1] smufl</a:documentation>
             <ref name="mei_model.titleLike"/>
          </oneOrMore>
          <zeroOrMore>
-            <ref name="mei_model.respLike"/>
+            <ref name="mei_model.nameLike.agent"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="mei_name"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="mei_respStmt"/>
          </zeroOrMore>
          <ref name="mei_att.common.attributes"/>
          <empty/>
@@ -6565,15 +6571,6 @@ Suggested values include: 1] draft; 2] in-process; 3] candidate; 4] approved; 5]
       <notAllowed/>
    </define>
    <define name="mei_model.resourceLike">
-      <notAllowed/>
-   </define>
-   <define name="mei_model.respLike">
-      <choice>
-         <ref name="mei_model.respLikePart"/>
-         <ref name="mei_respStmt"/>
-      </choice>
-   </define>
-   <define name="mei_model.respLikePart">
       <notAllowed/>
    </define>
    <define name="mei_model.scoreDefLike">

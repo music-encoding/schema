@@ -2264,8 +2264,8 @@
                         <head>Encoding of primary creative responsibility</head>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;titleStmt&gt;
    &lt;title&gt;Auf dem Hügel sitz ich spähend : an electronic transcription&lt;/title&gt;
-   &lt;composer&gt;Ludwig van Beethoven&lt;/composer&gt;
-   &lt;lyricist&gt;Aloys Jeitteles&lt;/lyricist&gt;
+   &lt;persName role="composer"&gt;Ludwig van Beethoven&lt;/persName&gt;
+   &lt;persName role="lyricist"&gt;Aloys Jeitteles&lt;/persName&gt;
 &lt;/titleStmt&gt;
 </egXML>
                      </figure>
@@ -2276,8 +2276,8 @@
                         <head>Encoding of secondary intellectual responsibility</head>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;titleStmt&gt;
    &lt;title&gt;Auf dem Hügel sitz ich spähend : an electronic transcription&lt;/title&gt;
-   &lt;composer&gt;Ludwig van Beethoven&lt;/composer&gt;
-   &lt;lyricist&gt;Aloys Jeitteles&lt;/lyricist&gt;
+   &lt;persName role="composer"&gt;Ludwig van Beethoven&lt;/persName&gt;
+   &lt;persName role="lyricist"&gt;Aloys Jeitteles&lt;/persName&gt;
    &lt;respStmt&gt;
       &lt;resp&gt;Encoded by&lt;/resp&gt;
       &lt;name&gt;Maja Hartwig&lt;/name&gt;
@@ -19297,7 +19297,9 @@ or
     </classes><content>
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.headLike"/></zeroOrMore>
       <oneOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.titleLike"/></oneOrMore>
-      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.respLike"/></zeroOrMore>
+      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.nameLike.agent"/></zeroOrMore>
+      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="name"/></zeroOrMore>
+      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="respStmt"/></zeroOrMore>
     </content><remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-titleStmt.html">titleStmt</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks></elementSpec><elementSpec rend="add" ident="trackConfig" module="MEI.header"><gloss xml:lang="en">track configuration</gloss><desc xml:lang="en">Number of physical/input tracks on a sound medium (<abbr>e.g.</abbr>, eight

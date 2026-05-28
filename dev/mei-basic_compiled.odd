@@ -9193,7 +9193,9 @@
     </classes><content>
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.headLike"/></zeroOrMore>
       <oneOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.titleLike"/></oneOrMore>
-      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.respLike"/></zeroOrMore>
+      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.nameLike.agent"/></zeroOrMore>
+      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="name"/></zeroOrMore>
+      <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="respStmt"/></zeroOrMore>
     </content><remarks xml:lang="en">
       <p>The model of this element is based on the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-titleStmt.html">titleStmt</ref> element of the Text Encoding Initiative (TEI).</p>
     </remarks></elementSpec><classSpec rend="add" predeclare="true" ident="model.verseLike" module="MEI.lyrics" type="model">
@@ -11393,19 +11395,6 @@
     </classes>
   </classSpec><classSpec rend="add" predeclare="true" ident="model.resourceLike" module="MEI.shared" type="model">
     <desc xml:lang="en">Groups non-text components that represent the content of the musical text.</desc>
-  </classSpec><classSpec rend="add" predeclare="true" ident="model.respLike" module="MEI.shared" type="model">
-    <desc xml:lang="en">Groups elements that are used to indicate intellectual or other significant
-      responsibility, for example within a bibliographic citation.</desc>
-    <classes>
-      
-    </classes>
-  </classSpec><classSpec rend="add" predeclare="true" ident="model.respLikePart" module="MEI.shared" type="model">
-    <desc xml:lang="en">Groups elements that delineate particular responsibilities as opposed to the respStmt
-      element that provides for generic statements of responsibility.</desc>
-    <classes>
-      <memberOf key="model.respLike"/>
-      
-    </classes>
   </classSpec><classSpec rend="add" predeclare="true" ident="model.scoreDefLike" module="MEI.shared" type="model">
     <desc xml:lang="en">Groups elements that provide score meta-information.</desc>
     <classes>
@@ -12018,7 +12007,7 @@
       
       
       
-      <memberOf key="model.respLike"/>
+      
     </classes><content>
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="model.headLike"/></zeroOrMore>
       <choice xmlns="http://relaxng.org/ns/structure/1.0"><group><oneOrMore><oneOrMore><ref name="resp"/></oneOrMore><oneOrMore><choice><ref name="model.nameLike.agent"/><ref name="name"/></choice></oneOrMore></oneOrMore></group><group><oneOrMore><oneOrMore><choice><ref name="model.nameLike.agent"/><ref name="name"/></choice></oneOrMore><oneOrMore><ref name="resp"/></oneOrMore></oneOrMore></group><oneOrMore><choice><ref name="model.nameLike.agent"/><ref name="name"/></choice></oneOrMore></choice>
