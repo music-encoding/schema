@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2026-05-25T20:42:18Z. . 
+Schema generated from ODD source 2026-05-28T08:46:29Z. . 
 TEI Edition: MEI 6.0-dev 
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -14105,7 +14105,7 @@ Suggested values include: 1] glue; 2] thread; 3] needle; 4] tape; 5] staple</a:d
    </define>
    <define name="mei_accMat">
       <element name="accMat">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Holds a description of any additional material bound with an item, such as non-contemporaneous documents or fragments.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(accompanying material) Holds a description of any additional material bound with an item, such as non-contemporaneous documents or fragments.</a:documentation>
          <ref name="mei_macro.struc-unstrucContent"/>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.bibl.attributes"/>
