@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2026-05-28T11:11:43Z. . 
+Schema generated from ODD source 2026-06-24T09:11:02Z. . 
 TEI Edition: MEI 6.0-dev 
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -6691,6 +6691,8 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">90 degree turn right (syntactic sugar for "angledown" for vertical or angled lines).</a:documentation>
          <value>angleleft</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">90 degree turn left (syntactic sugar for "angleup" for vertical or angled lines).</a:documentation>
+         <value>angleboth</value>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">90 degree turn left and right (T-shaped anchor).</a:documentation>
          <value>arrow</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Filled, triangular arrowhead (similar to Unicode U+25C0 or SMuFL U+EB78).</a:documentation>
          <value>arrowopen</value>
