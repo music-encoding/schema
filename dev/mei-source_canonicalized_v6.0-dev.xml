@@ -21,7 +21,7 @@
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../source/validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="../source/validation/mei-purify.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2026-07-13T10:40:12.799375804+02:00-->
+<!--canonicalized: 2026-07-16T16:40:31.797831322+02:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -35651,17 +35651,6 @@ or
       <memberOf key="att.accidental"/>
       <memberOf key="att.pitched"/>
     </classes>
-  </classSpec>
-  <classSpec ident="att.keyMode" module="MEI.shared" type="atts">
-    <desc xml:lang="en">Attributes for describing key mode.</desc>
-    <attList>
-      <attDef ident="mode" usage="opt">
-        <desc xml:lang="en">Indicates major, minor, or other tonality.</desc>
-        <datatype>
-          <rng:ref name="data.MODE"/>
-        </datatype>
-      </attDef>
-    </attList>
   </classSpec>
   <classSpec ident="att.keySig.log" module="MEI.shared" type="atts">
     <desc xml:lang="en">Logical domain attributes.</desc>
