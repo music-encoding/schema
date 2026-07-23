@@ -21,7 +21,7 @@
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../source/validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="../source/validation/mei-purify.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2026-07-16T16:40:31.797831322+02:00-->
+<!--canonicalized: 2026-07-23T08:34:13.209462268+02:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -18021,24 +18021,7 @@ or
     <desc xml:lang="en">Font size expressed as numbers; <abbr>i.e.</abbr>, points or virtual units.</desc>
     <content>
       <rng:data type="token">
-        <rng:param name="pattern">\d*(\.\d+)?(pt|vu)</rng:param>
-        <rng:except>
-          <!-- disallow no-value or all-zero patterns -->
-          <rng:choice>
-            <rng:data type="token">
-              <rng:param name="pattern">(pt|vu)</rng:param>
-            </rng:data>
-            <rng:data type="token">
-              <rng:param name="pattern">0+(pt|vu)</rng:param>
-            </rng:data>
-            <rng:data type="token">
-              <rng:param name="pattern">0+(\.0+)?(pt|vu)</rng:param>
-            </rng:data>
-            <rng:data type="token">
-              <rng:param name="pattern">\.0+(pt|vu)</rng:param>
-            </rng:data>
-          </rng:choice>
-        </rng:except>
+          <rng:param name="pattern">([1-9]\d*(\.\d+)?|\d*\.[0-9]*[1-9][0-9]*)(pt|vu)</rng:param>
       </rng:data>
     </content>
   </macroSpec>

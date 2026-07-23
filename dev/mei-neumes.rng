@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2026-07-16T14:41:01Z. . 
+Schema generated from ODD source 2026-07-23T06:34:57Z. . 
 TEI Edition: MEI 6.0-dev 
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -6471,23 +6471,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
    </define>
    <define name="mei_data.FONTSIZENUMERIC">
       <data type="token">
-         <param name="pattern">\d*(\.\d+)?(pt|vu)</param>
-         <except>
-            <choice>
-               <data type="token">
-                  <param name="pattern">(pt|vu)</param>
-               </data>
-               <data type="token">
-                  <param name="pattern">0+(pt|vu)</param>
-               </data>
-               <data type="token">
-                  <param name="pattern">0+(\.0+)?(pt|vu)</param>
-               </data>
-               <data type="token">
-                  <param name="pattern">\.0+(pt|vu)</param>
-               </data>
-            </choice>
-         </except>
+         <param name="pattern">([1-9]\d*(\.\d+)?|\d*\.[0-9]*[1-9][0-9]*)(pt|vu)</param>
       </data>
    </define>
    <define name="mei_data.FONTSIZESCALE">

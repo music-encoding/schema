@@ -13245,19 +13245,7 @@ or
     <desc xml:lang="en">Font size expressed as numbers; <abbr>i.e.</abbr>, points or virtual units.</desc>
     <content>
       <rng:data type="token">
-        <rng:param name="pattern">\d*(\.\d+)?(pt|vu)</rng:param>
-        <rng:except>
-          
-          <choice xmlns="http://relaxng.org/ns/structure/1.0"><rng:data xmlns="http://www.tei-c.org/ns/1.0" type="token">
-              <rng:param name="pattern">(pt|vu)</rng:param>
-            </rng:data><rng:data xmlns="http://www.tei-c.org/ns/1.0" type="token">
-              <rng:param name="pattern">0+(pt|vu)</rng:param>
-            </rng:data><rng:data xmlns="http://www.tei-c.org/ns/1.0" type="token">
-              <rng:param name="pattern">0+(\.0+)?(pt|vu)</rng:param>
-            </rng:data><rng:data xmlns="http://www.tei-c.org/ns/1.0" type="token">
-              <rng:param name="pattern">\.0+(pt|vu)</rng:param>
-            </rng:data></choice>
-        </rng:except>
+          <rng:param name="pattern">([1-9]\d*(\.\d+)?|\d*\.[0-9]*[1-9][0-9]*)(pt|vu)</rng:param>
       </rng:data>
     </content>
   </macroSpec><macroSpec rend="add" ident="data.FONTSIZESCALE" module="MEI" type="dt">
