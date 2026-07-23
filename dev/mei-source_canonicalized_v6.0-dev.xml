@@ -21,7 +21,7 @@
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../source/validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="../source/validation/mei-purify.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2026-07-23T08:34:13.209462268+02:00-->
+<!--canonicalized: 2026-07-23T21:15:37.000684284+02:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -23315,7 +23315,7 @@ or
         </rng:choice>
       </rng:zeroOrMore>
     </content>
-    <constraintSpec ident="repeatMark_start-type_attributes_required" scheme="isoschematron">
+    <constraintSpec ident="repeatMark_start-type_attributes_required" scheme="schematron">
       <constraint>
         <sch:rule context="mei:repeatMark">
           <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the
@@ -23323,7 +23323,7 @@ or
         </sch:rule>
       </constraint>
     </constraintSpec>
-    <constraintSpec ident="repeatMark_with_glyph_has_to_be_empty" scheme="isoschematron">
+    <constraintSpec ident="repeatMark_with_glyph_has_to_be_empty" scheme="schematron">
       <constraint>
         <sch:rule context="mei:repeatMark[@glyph.num or @glyph.name]">
           <sch:assert test="not(element()) and not(text())">When @glyph.name or @glyph.num is present, repeatMark must not have content.</sch:assert>
