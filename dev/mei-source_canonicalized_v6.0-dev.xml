@@ -21,7 +21,7 @@
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../source/validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="../source/validation/mei-purify.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2026-07-24T10:54:18.848504568+02:00-->
+<!--canonicalized: 2026-08-04T21:28:21.037118837+02:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -13917,9 +13917,10 @@ or
                            <specDesc key="att.stringtab.position" atts="tab.pos"/>
                            <specDesc key="chordMember"/>
                            <specDesc key="att.intervalHarmonic" atts="inth"/>
-                           <specDesc key="att.stringtab" atts="tab.fing tab.fret"/>
+                           <specDesc key="att.stringtab" atts="tab.fret tab.course"/>
+                           <specDesc key="att.fing.finger" atts="finger"/>
                            <specDesc key="barre"/>
-                           <specDesc key="barre" atts="fret"/>
+                           <specDesc key="barre" atts="tab.fret"/>
                         </specList>
                      </p>
                      <p>The <gi scheme="MEI">chordTable</gi> element is a container for a set of chord definitions, while the <gi scheme="MEI">chordDef</gi> element defines a single chord. Chord definitions may be created <hi rend="italic">a priori</hi> or as the result of analysis of the pitch content of the music at hand, for instance, by examination of the notes occurring on the downbeat of each measure. In this way, the chord definitions serve as a record of the analysis.</p>
@@ -13970,8 +13971,8 @@ or
                   </div>
                   <div xml:id="harmonyTablatureGrids" type="div4">
                      <head>Chord Tablature Grids</head>
-                     <p>The <att>pos</att> attribute on <gi scheme="MEI">chordDef</gi>, the <att>fing</att> and <att>fret</att> attributes on <gi scheme="MEI">chordMember</gi>, and the <gi scheme="MEI">barre</gi> element child of <gi scheme="MEI">chordDef</gi> are provided in order to create displayable and performable chord tablature grids for guitar and other fretted string instruments. The fret at which a finger should be placed is recorded in the <att>fret</att> attribute, while <att>fing</att> indicates which finger, if any, should be used to play an individual string. The values x and o are used to indicate muffled and open strings, respectively.</p>
-                     <p>The <gi scheme="MEI">chordDef</gi> element may contain <gi scheme="MEI">barre</gi> sub-elements when a single finger is used to stop multiple strings. Here the <att>fret</att> attribute gives the fret position at which the barre should be created, while the <att>startid</att> and <att>endid</att> attributes are used to indicate the <gi scheme="MEI">chordMember</gi> elements on which the barre starts and finishes.</p>
+                     <p>The <att>tab.pos</att> attribute on <gi scheme="MEI">chordDef</gi>, the <att>tab.course</att>, <att>tab.fret</att> and <att>finger</att> attributes on <gi scheme="MEI">chordMember</gi>, and the <gi scheme="MEI">barre</gi> element child of <gi scheme="MEI">chordDef</gi> are provided in order to create displayable and performable chord tablature grids for guitar and other fretted string instruments. The fret at which a finger should be placed is recorded in the <att>tab.fret</att> attribute, while <att>finger</att> indicates which finger, if any, should be used to play an individual string.</p>
+                     <p>The <gi scheme="MEI">chordDef</gi> element may contain <gi scheme="MEI">barre</gi> sub-elements when a single finger is used to stop multiple strings. Here the <att>tab.fret</att> attribute gives the fret position at which the barre should be created, while the <att>startid</att> and <att>endid</att> attributes are used to indicate the <gi scheme="MEI">chordMember</gi> elements on which the barre starts and finishes.</p>
                   </div>
                   <div xml:id="harmonyMusicText" type="div4">
                      <head>Indications of Harmony in the Music Text</head>
@@ -17978,23 +17979,6 @@ or
       </valList>
     </content>
   </macroSpec>
-  <macroSpec ident="data.FINGER.FRET" module="MEI" type="dt">
-    <desc xml:lang="en">In a guitar chord diagram, a label indicating which finger, if any, should be used to play
-      an individual string. The index, middle, ring, and little fingers are represented by the
-      values 1-4, while 't' is for the thumb. The values 'x' and 'o' indicate stopped and open
-      strings, respectively.</desc>
-    <content>
-      <rng:choice>
-        <rng:data type="positiveInteger">
-          <rng:param name="minInclusive">1</rng:param>
-          <rng:param name="maxInclusive">4</rng:param>
-        </rng:data>
-        <rng:data type="token">
-          <rng:param name="pattern">x|o|t</rng:param>
-        </rng:data>
-      </rng:choice>
-    </content>
-  </macroSpec>
   <macroSpec ident="data.FONTFAMILY" module="MEI" type="dt">
     <desc xml:lang="en">Font family (for text) attribute values.</desc>
     <content>
@@ -18102,6 +18086,16 @@ or
       string.</desc>
     <content>
       <rng:data type="nonNegativeInteger"/>
+    </content>
+  </macroSpec>
+  <macroSpec ident="data.FRETNUMBER.omit" module="MEI" type="dt">
+    <desc xml:lang="en">In cases like those in chord tablature grids where a string is omitted, the value <val>omit</val> is used.</desc>
+    <content>
+      <valList type="closed">
+        <valItem ident="omit">
+          <desc xml:lang="en">The string is omitted, not sounding.</desc>
+        </valItem>
+      </valList>
     </content>
   </macroSpec>
   <!--<macroSpec ident="data.FRETNUMBER.limited" module="MEI" type="dt">
@@ -19759,6 +19753,31 @@ or
       </rng:data>
     </content>
   </macroSpec>
+  <macroSpec ident="data.PART" module="MEI" type="dt">
+    <desc xml:lang="en">Reference to parts.</desc>
+    <content>
+      <rng:choice>
+        <rng:value>all</rng:value>
+        <rng:value>none</rng:value>
+        <rng:list>
+          <rng:oneOrMore>
+            <rng:ref name="data.URI"/>
+          </rng:oneOrMore>
+        </rng:list>
+      </rng:choice>
+    </content>
+  </macroSpec>
+  <macroSpec ident="data.PARTSTAFF" module="MEI" type="dt">
+    <desc xml:lang="en">Reference to part staves.</desc>
+    <content>
+      <rng:choice>
+        <rng:value>all</rng:value>
+        <rng:data type="token">
+          <rng:param name="pattern">\d+(-\d+)?</rng:param>
+        </rng:data>
+      </rng:choice>
+    </content>
+  </macroSpec>
   <macroSpec ident="data.PEDALSTYLE" module="MEI" type="dt">
     <desc xml:lang="en">Styling of piano pedal marks.</desc>
     <content>
@@ -20186,12 +20205,6 @@ or
           <desc xml:lang="en">Stem is originates from center of note head.</desc>
         </valItem>
       </valList>
-    </content>
-  </macroSpec>
-  <macroSpec ident="data.STRINGNUMBER" module="MEI" type="dt">
-    <desc xml:lang="en">This datatype is deprecated in favor of data.COURSENUMBER and will be removed in a future version. In string tablature, the number of the string to be played.</desc>
-    <content>
-      <rng:data type="positiveInteger"/>
     </content>
   </macroSpec>
   <macroSpec ident="data.TEMPERAMENT" module="MEI" type="dt">
@@ -25636,6 +25649,21 @@ or
   <moduleSpec ident="MEI.fingering">
     <desc xml:lang="en">Fingering component declarations.</desc>
   </moduleSpec>
+  <macroSpec ident="data.HANDROLE" module="MEI.fingering" type="dt">
+    <desc xml:lang="en">Role of hand in fingering indication relevant to plucked string instruments.
+      One of 'sounding' and 'stopping'.
+    </desc>
+    <content>
+      <valList type="closed">
+        <valItem ident="sounding">
+          <desc xml:lang="en">The plucking or strumming hand.</desc>
+        </valItem>
+        <valItem ident="stopping">
+          <desc xml:lang="en">The stopping or fretting hand.</desc>
+        </valItem>
+      </valList>
+    </content>
+  </macroSpec>
   <classSpec ident="att.fing.log" module="MEI.fingering" type="atts">
     <desc xml:lang="en">Logical domain attributes.</desc>
     <classes>
@@ -25644,6 +25672,61 @@ or
       <memberOf key="att.startEndId"/>
       <memberOf key="att.timestamp2.log"/>
     </classes>
+  </classSpec>
+  <classSpec ident="att.fing.finger" module="MEI.fingering" type="atts">
+    <desc xml:lang="en">Attributes used for a description of the finger (in physical terms).</desc>
+    <constraintSpec ident="finger_none_not_allowed" scheme="schematron">
+      <constraint>
+        <sch:rule context="mei:barre[@finger]">
+          <sch:assert test="not(@finger eq 'none')">The value "none" is not permitted for
+            the @finger attribute on barre element.
+          </sch:assert>
+        </sch:rule>
+      </constraint>
+    </constraintSpec>
+    <attList>
+      <attDef ident="finger" usage="opt">
+        <valList type="closed">
+          <valItem ident="t">
+            <desc xml:lang="en">Thumb</desc>
+          </valItem>
+          <valItem ident="i">
+            <desc xml:lang="en">Index finger</desc>
+          </valItem>
+          <valItem ident="m">
+            <desc xml:lang="en">Middle finger</desc>
+          </valItem>
+          <valItem ident="r">
+            <desc xml:lang="en">Ring finger</desc>
+          </valItem>
+          <valItem ident="l">
+            <desc xml:lang="en">Little finger</desc>
+          </valItem>
+          <valItem ident="none">
+            <desc xml:lang="en">No fingers in use</desc>
+          </valItem>
+        </valList>
+      </attDef>
+    </attList>
+  </classSpec>
+  <classSpec ident="att.fing.hand" module="MEI.fingering" type="atts">
+    <desc xml:lang="en">Attributes used for a description of the hand role (in physical terms).</desc>
+    <attList>
+      <attDef ident="handRole" usage="opt">
+        <desc xml:lang="en">Records the role of the hand in a fingering indication.</desc>
+        <datatype>
+          <rng:ref name="data.HANDROLE"/>
+        </datatype>
+        <constraintSpec ident="When_sounding_hand" scheme="schematron">
+          <constraint>
+            <sch:rule context="mei:*[@handRole eq 'sounding']">
+              <sch:assert test="not(@finger eq 'none')">A sounding hand requires a finger. The value "none"
+                is not permitted for @finger when @handRole is "sounding".</sch:assert>
+            </sch:rule>
+          </constraint>
+        </constraintSpec>
+      </attDef>
+    </attList>
   </classSpec>
   <classSpec ident="att.fingGrp.log" module="MEI.fingering" type="atts">
     <desc xml:lang="en">Logical domain attributes.</desc>
@@ -25686,6 +25769,8 @@ or
       <memberOf key="att.fing.ges"/>
       <memberOf key="att.fing.log"/>
       <memberOf key="att.fing.vis"/>
+      <memberOf key="att.fing.finger"/>
+      <memberOf key="att.fing.hand"/>
       <memberOf key="model.fingeringLike"/>
     </classes>
     <content>
@@ -27046,7 +27131,6 @@ or
     <desc xml:lang="en">Gestural domain attributes for staffDef in the CMN repertoire.</desc>
     <classes>
       <memberOf key="att.instrumentIdent"/>
-      <memberOf key="att.stringtab.tuning"/>
       <memberOf key="att.timeBase"/>
       <memberOf key="att.tuning"/>
     </classes>
@@ -27195,7 +27279,6 @@ or
     <desc xml:lang="en">Logical domain attributes.</desc>
     <classes>
       <memberOf key="att.stringtab.position"/>
-      <memberOf key="att.stringtab.tuning"/>
     </classes>
   </classSpec>
   <classSpec ident="att.chordMember.log" module="MEI.harmony" type="atts">
@@ -27203,6 +27286,7 @@ or
     <classes>
       <memberOf key="att.pitched"/>
       <memberOf key="att.stringtab"/>
+      <memberOf key="att.fing.finger"/>
     </classes>
   </classSpec>
   <classSpec ident="att.f.log" module="MEI.harmony" type="atts">
@@ -27266,7 +27350,8 @@ or
   </classSpec>
   <elementSpec ident="chordDef" module="MEI.harmony">
     <gloss xml:lang="en">chord definition</gloss>
-    <desc xml:lang="en">Chord tablature definition.</desc>
+    <desc xml:lang="en">Complements <gi scheme="MEI">harm</gi> with a more detailed description of
+      the notes in a chord. Can describe chord tablature grids.</desc>
     <classes>
       <memberOf key="att.common"/>
       <memberOf key="att.chordDef.anl"/>
@@ -27302,8 +27387,16 @@ or
     <content>
       <empty/>
     </content>
+    <constraintSpec ident="chordMember_finger_requires_stopped_string" scheme="schematron">
+      <constraint>
+        <sch:rule context="mei:chordMember[@tab.fret = ('0', 'omit')]">
+          <sch:assert test="not(@finger)">When the @tab.fret attribute indicates an open or omitted string
+            (has the value "0" or "omit"), the @finger attribute must not be used.</sch:assert>
+        </sch:rule>
+      </constraint>
+    </constraintSpec>
     <remarks xml:lang="en">
-      <p>The <att>string</att>, <att>fret</att>, and <att>fing</att> attributes are provided in
+      <p>The <att>tab.course</att>, <att>tab.fret</att> and <att>finger</att> attributes are provided in
         order to create displayable chord tablature grids. The <att>inth</att> (harmonic interval)
         attribute may be used to facilitate automated performance of a chord. It gives the number of
         diatonic steps above the bass. Of course, for the bass note itself, <att>inth</att> should be set
@@ -36780,34 +36873,22 @@ or
     <desc xml:lang="en">Attributes for identifying the part in which the current feature appears.</desc>
     <attList>
       <attDef ident="part" usage="opt">
-        <desc xml:lang="en">Indicates the part in which the current feature should appear. Use '%all' when the
-          feature should occur in every part.</desc>
-        <datatype maxOccurs="unbounded">
-          <rng:data type="token">
-            <rng:param name="pattern">(%all|#[\i][\c]+)</rng:param>
-          </rng:data>
+        <desc xml:lang="en">Indicates the part in which the current feature should appear. Use 'all' when the feature
+          should occur in every part or 'none' when the feature should not appear in any part.</desc>
+        <datatype>
+          <rng:ref name="data.PART"/>
         </datatype>
-        <constraintSpec ident="check_part_attr_all" scheme="schematron">
-          <constraint>
-            <sch:rule context="@part[some $i in tokenize(., '\s+') satisfies (matches($i, '^%all$'))]">
-              <sch:assert test="count(tokenize(., '\s+')) = 1">'%all' cannot be mixed with other
-                values.</sch:assert>
-            </sch:rule>
-          </constraint>
-        </constraintSpec>
       </attDef>
       <attDef ident="partstaff" usage="opt">
-        <desc xml:lang="en">Signifies the part staff on which a notated feature occurs. Use '%all' when the
+        <desc xml:lang="en">Signifies the part staff on which a notated feature occurs. Use 'all' when the
           feature should occur on every staff.</desc>
         <datatype maxOccurs="unbounded">
-          <rng:data type="token">
-            <rng:param name="pattern">(%all|\d+(-\d+)?)</rng:param>
-          </rng:data>
+          <rng:ref name="data.PARTSTAFF"/>
         </datatype>
         <constraintSpec ident="check_partstaff_attr_all" scheme="schematron">
           <constraint>
-            <sch:rule context="@partstaff[some $i in tokenize(., '\s+') satisfies (matches($i, '^%all$'))]">
-              <sch:assert test="count(tokenize(., '\s+')) = 1">'%all' cannot be mixed with other
+            <sch:rule context="@partstaff[some $i in tokenize(., '\s+') satisfies (matches($i, '^all$'))]">
+              <sch:assert test="count(tokenize(., '\s+')) = 1">'all' cannot be mixed with other
                 values.</sch:assert>
             </sch:rule>
           </constraint>
@@ -42209,26 +42290,6 @@ or
         </sch:rule>
       </constraint>
     </constraintSpec>
-    <constraintSpec ident="Check_tab_strings_lines" scheme="schematron">
-      <constraint>
-        <sch:rule context="mei:staffDef[@tab.strings and @lines]">
-          <sch:let name="countTokens" value="count(tokenize(normalize-space(@tab.strings), '\s'))"/>
-          <sch:assert test="$countTokens = @lines">The tab.strings attribute must have the same
-            number of values as there are staff lines.</sch:assert>
-        </sch:rule>
-      </constraint>
-    </constraintSpec>
-    <constraintSpec ident="Check_tab_strings_nolines" scheme="schematron">
-      <constraint>
-        <sch:rule context="mei:staffDef[@tab.strings and not(@lines)]">
-          <sch:let name="countTokens" value="count(tokenize(normalize-space(@tab.strings), '\s'))"/>
-          <sch:let name="thisstaff" value="@n"/>
-          <sch:assert test="$countTokens = preceding::mei:staffDef[@n=$thisstaff and @lines][1]/@lines">The
-            tab.strings attribute must have the same number of values as there are staff
-            lines.</sch:assert>
-        </sch:rule>
-      </constraint>
-    </constraintSpec>
     <constraintSpec ident="Check_lines_color" scheme="schematron">
       <constraint>
         <sch:pattern>
@@ -42868,28 +42929,19 @@ or
   <classSpec ident="att.stringtab" module="MEI.stringtab" type="atts">
     <desc xml:lang="en">String tablature string and fret information.</desc>
     <attList>
-      <attDef ident="tab.fing" usage="opt">
-        <desc xml:lang="en">This attribute is deprecated and will be removed in a future version. Indicates which finger, if any, should be used to play an individual string. The index, middle, ring, and little fingers are represented by the values 1-4, while <val>t</val> is for the thumb. The values <val>x</val> and <val>o</val> indicate muffled and open strings, respectively.</desc>
-        <datatype>
-          <rng:ref name="data.FINGER.FRET"/>
-        </datatype>
-      </attDef>
       <attDef ident="tab.fret" usage="opt">
-        <desc xml:lang="en">Records the location at which a string should be stopped against a fret.</desc>
+        <desc xml:lang="en">Records the location at which a string should be stopped against a fret. The value <val>0</val> (zero) indicates the open string. The value <val>omit</val> indicates an omitted string that does not sound.</desc>
         <datatype>
-          <rng:ref name="data.FRETNUMBER"/>
+          <rng:choice>
+            <rng:ref name="data.FRETNUMBER"/>
+            <rng:ref name="data.FRETNUMBER.omit"/>
+          </rng:choice>
         </datatype>
       </attDef>
       <attDef ident="tab.line" usage="opt">
         <desc xml:lang="en">Used in German lute tablature in cases where vertical positioning deviates from the norm which can be specified by <att>tab.align</att>. Indicates the position of the tab note on one of the horizontal strands corresponding to the <att>lines</att> attribute on <gi scheme="MEI">staffDef</gi>. (Note that in this case, the lines are conceptual rather than visible).</desc>
         <datatype>
           <rng:ref name="data.CLEFLINE"/>
-        </datatype>
-      </attDef>
-      <attDef ident="tab.string" usage="opt">
-        <desc xml:lang="en">This attribute is deprecated in favor of <att>tab.course</att> and will be removed in a future version. Records which string is to be played.</desc>
-        <datatype>
-          <rng:ref name="data.STRINGNUMBER"/>
         </datatype>
       </attDef>
       <attDef ident="tab.course" usage="opt">
@@ -42907,38 +42959,6 @@ or
         <desc xml:lang="en">Records fret position.</desc>
         <datatype>
           <rng:data type="positiveInteger"/>
-        </datatype>
-      </attDef>
-    </attList>
-  </classSpec>
-  <classSpec ident="att.stringtab.tuning" module="MEI.stringtab" type="atts">
-    <desc xml:lang="en">This collection of attributes is deprecated in favor of the new <gi scheme="MEI">tuning</gi> element and will be removed in a future version. String tablature tuning information.</desc>
-    <attList>
-      <attDef ident="tab.strings" usage="opt">
-        <desc xml:lang="en">This attribute is deprecated in favor of the new <gi scheme="MEI">tuning</gi> element and will be removed in a future version. Provides a *written* pitch and octave for each open string or course of
-          strings.</desc>
-        <datatype>
-          <rng:list>
-            <rng:oneOrMore>
-              <rng:data type="token">
-                <rng:param name="pattern">
-                  [a-g][0-9](s|f|ss|x|ff|xs|sx|ts|tf|n|nf|ns|su|sd|fu|fd|nu|nd|1qf|3qf|1qs|3qs)?([a-g][0-9](s|f|ss|x|ff|xs|sx|ts|tf|n|nf|ns|su|sd|fu|fd|nu|nd|1qf|3qf|1qs|3qs)?)*</rng:param>
-              </rng:data>
-            </rng:oneOrMore>
-          </rng:list>
-        </datatype>
-      </attDef>
-      <attDef ident="tab.courses" usage="opt">
-        <desc xml:lang="en">This attribute is deprecated in favor of the new <gi scheme="MEI">tuning</gi> element and will be removed in a future version. Provides a *written* pitch and octave for each open string or course of strings.</desc>
-        <datatype>
-          <rng:list>
-            <rng:oneOrMore>
-              <rng:data type="token">
-                <rng:param name="pattern">
-                  [a-g][0-9](s|f|ss|x|ff|xs|sx|ts|tf|n|nf|ns|su|sd|fu|fd|nu|nd|1qf|3qf|1qs|3qs)?([a-g][0-9](s|f|ss|x|ff|xs|sx|ts|tf|n|nf|ns|su|sd|fu|fd|nu|nd|1qf|3qf|1qs|3qs)?)*</rng:param>
-              </rng:data>
-            </rng:oneOrMore>
-          </rng:list>
         </datatype>
       </attDef>
     </attList>
@@ -42966,24 +42986,15 @@ or
     <classes>
       <memberOf key="att.common"/>
       <memberOf key="att.startEndId"/>
+      <memberOf key="att.stringtab"/>
+      <memberOf key="att.fing.finger"/>
     </classes>
     <content>
       <empty/>
     </content>
-    <attList>
-      <attDef ident="fret" usage="opt">
-        <desc xml:lang="en">This attribute is deprecated in favor of <att>tab.fret</att>, and will be removed in a future version. Records the location at which the strings should be stopped against a fret in a fretboard diagram. This may or may not be the same as the actual location on the fretboard of the instrument in performance.</desc>
-        <datatype>
-          <rng:data type="positiveInteger">
-            <rng:param name="minInclusive">1</rng:param>
-            <rng:param name="maxInclusive">5</rng:param>
-          </rng:data>
-        </datatype>
-      </attDef>
-    </attList>
     <remarks xml:lang="en">
       <p>The <att>startid</att> and <att>endid</att> attributes are used to indicate the <gi scheme="MEI">chordMember</gi> elements on which the barre starts and finishes
-        respectively. The fret at which the barre should be created is recorded by the <att>fret</att>
+        respectively. The fret at which the barre should be created is recorded by the <att>tab.fret</att>
         attribute.</p>
     </remarks>
   </elementSpec>
