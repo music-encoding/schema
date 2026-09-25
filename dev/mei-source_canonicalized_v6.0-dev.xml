@@ -21,7 +21,7 @@
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../source/validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="../source/validation/mei-purify.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2026-09-25T15:23:36.493429075+02:00-->
+<!--canonicalized: 2026-09-25T15:36:37.513324616+02:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -22309,16 +22309,19 @@ or
       <empty/>
     </content>
     <remarks xml:lang="en">
-      <p>The modern arpeggiation symbol is a vertical wavy line preceding the chord. When the notes
-        of the chord are to be performed from highest to lowest, an arrowhead may be added to the
-        lower end of the line. Even though it is redundant, an arrowhead is sometimes added to the
-        upper end of the line for the sake of consistency or when the direction of successive
-        arpeggios alternates. In music for keyboard instruments, sometimes a distinction is made
-        between a single arpeggio in which both hands play successively and simultaneous arpeggios
-        in two hands. In the case of the former, multiple values may be required in the
-        <att>staff</att> and <att>layer</att> attributes. Arpeggios that do not cross staves, but
-        still involve more than one layer require multiple values for the <att>layer</att>
-        attribute.</p>
+      <p>The modern arpeggiation symbol is a vertical, usually wavy line preceding the chord. When
+        the notes of the chord are to be performed from highest to lowest, an arrowhead may be added
+        to the lower end of the line. Even though it is redundant, an arrowhead is sometimes added
+        to the upper end of the line for the sake of consistency or when the direction of successive
+        arpeggios alternates.</p>
+      <p>In music for keyboard instruments, sometimes a distinction is made between a single
+        arpeggio in which both hands play successively and simultaneous arpeggios in two hands. In
+        the case of the former, multiple values may be required in the <att>staff</att> and
+          <att>layer</att> attributes. Arpeggios that do not cross staves, but still involve more
+        than one layer require multiple values for the <att>layer</att> attribute.</p>
+      <p>For arpeggios written as a straight line, which are common in guitar music,
+        <att>lform</att> takes the value <val>solid</val>. Such arpeggios always have an
+        arrowhead.</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="attacca" module="MEI.cmn">
@@ -27625,6 +27628,25 @@ or
       </attDef>
     </attList>
   </classSpec>
+  <classSpec ident="att.context" type="atts">
+    <desc xml:lang="en">Attributes that provide means of specifying an XPath context.</desc>
+    <constraintSpec ident="context_attribute_requires_content" scheme="schematron">
+      <constraint>
+        <sch:rule context="@context">
+          <sch:assert role="warning" test="not(normalize-space(.) eq '')">@context attribute should
+        contain an XPath expression.</sch:assert>
+        </sch:rule>
+      </constraint>
+    </constraintSpec>
+    <attList>
+      <attDef ident="context" usage="opt">
+        <desc xml:lang="en">Circumstances in which the attribute appears, an XPath expression.</desc>
+          <datatype>
+            <dataRef name="string"/>
+          </datatype>
+         </attDef>
+    </attList>
+   </classSpec>
   <classSpec ident="att.foliumSurfaces" module="MEI.header" type="atts">
     <desc xml:lang="en">Attributes that link a folium element with a <gi scheme="MEI">surface</gi> element.</desc>
     <attList>
@@ -27999,31 +28021,18 @@ or
     <classes>
       <memberOf key="att.common"/>
       <memberOf key="att.bibl"/>
+      <memberOf key="att.context"/>
     </classes>
     <content>
       <rng:optional>
         <rng:ref name="desc"/>
       </rng:optional>
     </content>
-    <constraintSpec ident="context_attribute_requires_content" scheme="schematron">
-      <constraint>
-        <sch:rule context="@context">
-          <sch:assert role="warning" test="not(normalize-space(.) eq '')">@context attribute should
-            contain an XPath expression.</sch:assert>
-        </sch:rule>
-      </constraint>
-    </constraintSpec>
     <attList>
       <attDef ident="name" usage="req">
         <desc xml:lang="en">Name of the attribute.</desc>
         <datatype>
           <rng:ref name="data.NMTOKEN"/>
-        </datatype>
-      </attDef>
-      <attDef ident="context" usage="opt">
-        <desc xml:lang="en">Circumstances in which the attribute appears, an XPath expression.</desc>
-        <datatype>
-          <rng:data type="string"/>
         </datatype>
       </attDef>
     </attList>
@@ -30059,6 +30068,7 @@ or
     <classes>
       <memberOf key="att.common"/>
       <memberOf key="att.bibl"/>
+      <memberOf key="att.context"/>
     </classes>
     <content>
       <rng:optional>
@@ -30068,25 +30078,11 @@ or
         <rng:ref name="attUsage"/>
       </rng:zeroOrMore>
     </content>
-    <constraintSpec ident="context_attribute_requires_content" scheme="schematron">
-      <constraint>
-        <sch:rule context="@context">
-          <sch:assert role="warning" test="not(normalize-space(.) eq '')">@context attribute should
-            contain an XPath expression.</sch:assert>
-        </sch:rule>
-      </constraint>
-    </constraintSpec>
     <attList>
       <attDef ident="name" usage="req">
         <desc xml:lang="en">Name of the element.</desc>
         <datatype>
           <rng:ref name="data.NMTOKEN"/>
-        </datatype>
-      </attDef>
-      <attDef ident="context" usage="opt">
-        <desc xml:lang="en">Circumstances in which the element appears, an XPath expression.</desc>
-        <datatype>
-          <rng:data type="string"/>
         </datatype>
       </attDef>
       <attDef ident="occurs" usage="opt">

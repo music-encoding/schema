@@ -18294,24 +18294,13 @@ or
     </remarks></elementSpec><elementSpec rend="add" ident="attUsage" module="MEI.header"><desc xml:lang="en">Documents the usage of a specific attribute of the element.</desc><classes>
       <memberOf key="att.common"/>
       <memberOf key="att.bibl"/>
+      
     </classes><content>
       <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="desc"/></optional>
-    </content><constraintSpec ident="context_attribute_requires_content" scheme="schematron">
-      <constraint>
-        <sch:rule context="@context">
-          <sch:assert role="warning" test="not(normalize-space(.) eq '')">@context attribute should
-            contain an XPath expression.</sch:assert>
-        </sch:rule>
-      </constraint>
-    </constraintSpec><attList><attDef ident="name" usage="req">
+    </content><attList><attDef ident="name" usage="req">
         <desc xml:lang="en">Name of the attribute.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.NMTOKEN"/>
-        </datatype>
-      </attDef><attDef ident="context" usage="opt">
-        <desc xml:lang="en">Circumstances in which the attribute appears, an XPath expression.</desc>
-        <datatype>
-          <rng:data type="string"/>
         </datatype>
       </attDef></attList></elementSpec><elementSpec rend="add" ident="audience" module="MEI.header"><desc xml:lang="en">Defines the class of user for which the work is intended, as defined by age group (<abbr>e.g.</abbr>,
       children, young adults, adults, etc.), educational level (<abbr>e.g.</abbr>, primary, secondary, etc.), or
@@ -19477,25 +19466,14 @@ or
     </remarks></elementSpec><elementSpec rend="add" ident="tagUsage" module="MEI.header"><desc xml:lang="en">Documents the usage of a specific element within the document.</desc><classes>
       <memberOf key="att.common"/>
       <memberOf key="att.bibl"/>
+      
     </classes><content>
       <optional xmlns="http://relaxng.org/ns/structure/1.0"><ref name="desc"/></optional>
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="attUsage"/></zeroOrMore>
-    </content><constraintSpec ident="context_attribute_requires_content" scheme="schematron">
-      <constraint>
-        <sch:rule context="@context">
-          <sch:assert role="warning" test="not(normalize-space(.) eq '')">@context attribute should
-            contain an XPath expression.</sch:assert>
-        </sch:rule>
-      </constraint>
-    </constraintSpec><attList><attDef ident="name" usage="req">
+    </content><attList><attDef ident="name" usage="req">
         <desc xml:lang="en">Name of the element.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.NMTOKEN"/>
-        </datatype>
-      </attDef><attDef ident="context" usage="opt">
-        <desc xml:lang="en">Circumstances in which the element appears, an XPath expression.</desc>
-        <datatype>
-          <rng:data type="string"/>
         </datatype>
       </attDef><attDef ident="occurs" usage="opt">
         <desc xml:lang="en">Number of occurrences in the defined context.</desc>
