@@ -15151,6 +15151,13 @@ or
         </valItem>
       </valList>
     </content>
+  </macroSpec><macroSpec rend="add" ident="data.DECIMALORTIMEINTERVAL" module="MEI" type="dt">
+    <desc xml:lang="en">Time interval datatype.</desc>
+    <content>
+      <choice xmlns="http://relaxng.org/ns/structure/1.0"><rng:data xmlns="http://www.tei-c.org/ns/1.0" type="decimal">
+          <rng:param name="minInclusive">1</rng:param>
+        </rng:data><rng:data xmlns="http://www.tei-c.org/ns/1.0" type="time"/></choice>
+    </content>
   </macroSpec><macroSpec rend="add" ident="data.DEGREES" module="MEI" type="dt">
     <desc xml:lang="en">360th-unit measure of a circle’s circumference; optionally signed decimal number between
       -360 and 360.</desc>
@@ -15624,6 +15631,11 @@ or
           <desc xml:lang="en">Undulating line.</desc>
         </valItem>
       </valList>
+    </content>
+  </macroSpec><macroSpec rend="add" ident="data.LINEHEIGHT" module="MEI" type="dt">
+    <desc xml:lang="en">Datatype for line height measurements.</desc>
+    <content>
+      <choice xmlns="http://relaxng.org/ns/structure/1.0"><ref name="data.MEASUREMENTTYPOGRAPHYUNSIGNED"/><ref name="data.PERCENT"/></choice>
     </content>
   </macroSpec><macroSpec rend="add" ident="data.LINESTARTENDSYMBOL" module="MEI" type="dt">
     <desc xml:lang="en">Symbol that may begin/end a line.</desc>
@@ -25319,12 +25331,7 @@ or
           since attribute. This attribute can only be interpreted meaningfully in conjunction with
           the inttype attribute.</desc>
         <datatype>
-          <rng:choice>
-            <rng:data type="decimal">
-              <rng:param name="minInclusive">1</rng:param>
-            </rng:data>
-            <rng:data type="time"/>
-          </rng:choice>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.DECIMALORTIMEINTERVAL"/>
         </datatype>
       </attDef><attDef ident="abstype" usage="opt">
         <desc xml:lang="en">Specifies the kind of values used in the absolute attribute.</desc>
@@ -25736,7 +25743,7 @@ or
         <desc xml:lang="en">Indicates the function intended for this annotation. In particular,
           to distinguish annotations suitable for display (e.g. via an engraving tool), the value 
           "display" may be used.</desc>
-        <valList type="semi">
+        <valList type="closed">
           <valItem ident="display">
             <desc xml:lang="en">Indicates that the annotation is suitable for display 
               (e.g. via an engraving tool)</desc>
@@ -29015,7 +29022,7 @@ or
       <attDef ident="lineheight" usage="opt">
         <desc xml:lang="en">Indicates line height in analogy to the CSS line-height property.</desc>
         <datatype>
-          <choice xmlns="http://relaxng.org/ns/structure/1.0"><ref name="data.MEASUREMENTTYPOGRAPHYUNSIGNED"/><ref name="data.PERCENT"/></choice>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.LINEHEIGHT"/>
         </datatype>
       </attDef>
     </attList>

@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2026-09-25T13:48:59Z. . 
+Schema generated from ODD source 2026-09-25T14:24:51Z. . 
 TEI Edition: MEI 6.0-dev 
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -6421,6 +6421,14 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">In a south-western direction.</a:documentation>
       </choice>
    </define>
+   <define name="mei_data.DECIMALORTIMEINTERVAL">
+      <choice>
+         <data type="decimal">
+            <param name="minInclusive">1</param>
+         </data>
+         <data type="time"/>
+      </choice>
+   </define>
    <define name="mei_data.DEGREES">
       <data type="decimal">
          <param name="maxInclusive">360.0</param>
@@ -6747,6 +6755,12 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Straight, uninterrupted line.</a:documentation>
          <value>wavy</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Undulating line.</a:documentation>
+      </choice>
+   </define>
+   <define name="mei_data.LINEHEIGHT">
+      <choice>
+         <ref name="mei_data.MEASUREMENTTYPOGRAPHYUNSIGNED"/>
+         <ref name="mei_data.PERCENT"/>
       </choice>
    </define>
    <define name="mei_data.LINESTARTENDSYMBOL">
@@ -20055,12 +20069,7 @@ Suggested values include: 1] apostropha; 2] bistropha; 3] cephalicus; 4] climacu
          <optional>
             <attribute name="interval">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Specifies the time interval between this time point and the one designated by the since attribute. This attribute can only be interpreted meaningfully in conjunction with the inttype attribute.</a:documentation>
-               <choice>
-                  <data type="decimal">
-                     <param name="minInclusive">1</param>
-                  </data>
-                  <data type="time"/>
-               </choice>
+               <ref name="mei_data.DECIMALORTIMEINTERVAL"/>
             </attribute>
          </optional>
          <optional>
@@ -20220,12 +20229,10 @@ Suggested values include: 1] apostropha; 2] bistropha; 3] cephalicus; 4] climacu
    <define name="mei_att.annot.log.attribute.func">
       <optional>
          <attribute name="func">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates the function intended for this annotation. In particular, to distinguish annotations suitable for display (e.g. via an engraving tool), the value "display" may be used.
-Suggested values include: 1] display</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates the function intended for this annotation. In particular, to distinguish annotations suitable for display (e.g. via an engraving tool), the value "display" may be used.</a:documentation>
             <choice>
                <value>display</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates that the annotation is suitable for display (e.g. via an engraving tool)</a:documentation>
-               <data type="Name"/>
             </choice>
          </attribute>
       </optional>
@@ -23828,10 +23835,7 @@ Suggested values include: 1] smufl</a:documentation>
       <optional>
          <attribute name="lineheight">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates line height in analogy to the CSS line-height property.</a:documentation>
-            <choice>
-               <ref name="mei_data.MEASUREMENTTYPOGRAPHYUNSIGNED"/>
-               <ref name="mei_data.PERCENT"/>
-            </choice>
+            <ref name="mei_data.LINEHEIGHT"/>
          </attribute>
       </optional>
    </define>

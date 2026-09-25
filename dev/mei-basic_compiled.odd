@@ -5474,6 +5474,11 @@
         </valItem>
       </valList>
     </content>
+  </macroSpec><macroSpec rend="add" ident="data.LINEHEIGHT" module="MEI" type="dt">
+    <desc xml:lang="en">Datatype for line height measurements.</desc>
+    <content>
+      <choice xmlns="http://relaxng.org/ns/structure/1.0"><ref name="data.MEASUREMENTTYPOGRAPHYUNSIGNED"/><ref name="data.PERCENT"/></choice>
+    </content>
   </macroSpec><macroSpec rend="add" ident="data.LINESTARTENDSYMBOL" module="MEI" type="dt">
     <desc xml:lang="en">Symbol that may begin/end a line.</desc>
     <content>
@@ -11149,7 +11154,7 @@
       <attDef ident="lineheight" usage="opt">
         <desc xml:lang="en">Indicates line height in analogy to the CSS line-height property.</desc>
         <datatype>
-          <choice xmlns="http://relaxng.org/ns/structure/1.0"><ref name="data.MEASUREMENTTYPOGRAPHYUNSIGNED"/><ref name="data.PERCENT"/></choice>
+          <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.LINEHEIGHT"/>
         </datatype>
       </attDef>
     </attList>

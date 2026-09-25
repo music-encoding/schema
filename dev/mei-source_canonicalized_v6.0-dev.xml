@@ -21,7 +21,7 @@
 <?xml-model href="../source/validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../source/validation/mei-source.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="../source/validation/mei-purify.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!--canonicalized: 2026-09-25T15:48:34.57776215+02:00-->
+<!--canonicalized: 2026-09-25T16:24:26.896552455+02:00-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" rend="book" xml:lang="en">
    <teiHeader>
       <fileDesc>
@@ -17821,6 +17821,17 @@ or
       </valList>
     </content>
   </macroSpec>
+  <macroSpec ident="data.DECIMALORTIMEINTERVAL" module="MEI" type="dt">
+    <desc xml:lang="en">Time interval datatype.</desc>
+    <content>
+      <rng:choice>
+        <rng:data type="decimal">
+          <rng:param name="minInclusive">1</rng:param>
+        </rng:data>
+        <rng:data type="time"/>
+      </rng:choice>
+    </content>
+  </macroSpec>
   <macroSpec ident="data.DEGREES" module="MEI" type="dt">
     <desc xml:lang="en">360th-unit measure of a circle’s circumference; optionally signed decimal number between
       -360 and 360.</desc>
@@ -18426,6 +18437,15 @@ or
           <desc xml:lang="en">Undulating line.</desc>
         </valItem>
       </valList>
+    </content>
+  </macroSpec>
+  <macroSpec ident="data.LINEHEIGHT" module="MEI" type="dt">
+    <desc xml:lang="en">Datatype for line height measurements.</desc>
+    <content>
+      <rng:choice>
+        <rng:ref name="data.MEASUREMENTTYPOGRAPHYUNSIGNED"/>
+        <rng:ref name="data.PERCENT"/>
+      </rng:choice>
     </content>
   </macroSpec>
   <macroSpec ident="data.LINESTARTENDSYMBOL" module="MEI" type="dt">
@@ -33927,12 +33947,7 @@ or
           since attribute. This attribute can only be interpreted meaningfully in conjunction with
           the inttype attribute.</desc>
         <datatype>
-          <rng:choice>
-            <rng:data type="decimal">
-              <rng:param name="minInclusive">1</rng:param>
-            </rng:data>
-            <rng:data type="time"/>
-          </rng:choice>
+          <rng:ref name="data.DECIMALORTIMEINTERVAL"/>
         </datatype>
       </attDef>
       <attDef ident="abstype" usage="opt">
@@ -34559,7 +34574,7 @@ or
         <desc xml:lang="en">Indicates the function intended for this annotation. In particular,
           to distinguish annotations suitable for display (e.g. via an engraving tool), the value 
           "display" may be used.</desc>
-        <valList type="semi">
+        <valList type="closed">
           <valItem ident="display">
             <desc xml:lang="en">Indicates that the annotation is suitable for display 
               (e.g. via an engraving tool)</desc>
@@ -38057,10 +38072,7 @@ or
       <attDef ident="lineheight" usage="opt">
         <desc xml:lang="en">Indicates line height in analogy to the CSS line-height property.</desc>
         <datatype>
-          <rng:choice>
-            <rng:ref name="data.MEASUREMENTTYPOGRAPHYUNSIGNED"/>
-            <rng:ref name="data.PERCENT"/>
-          </rng:choice>
+          <rng:ref name="data.LINEHEIGHT"/>
         </datatype>
       </attDef>
     </attList>
