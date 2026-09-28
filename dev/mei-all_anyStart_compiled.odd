@@ -6240,6 +6240,39 @@ or
                            </figure>
                         </p>
                      </div>
+                     <div xml:id="cmn-clusters">
+                        <head>Note Clusters</head>
+                        <p>A <term>tone cluster</term> is a musical chord comprised of adjacent musical steps played simultaneously. In MEI, clusters can be represented to capture both their underlying harmonic meaning (semantics) and their specific engraving styles (visual layout).</p>
+                        <p>To declare a chord as a cluster, the <gi scheme="MEI">chord</gi> element is used with the <att>cluster</att> attribute. The <att>cluster</att> attribute specifies which keys or scale steps are to be filled in between the explicitly encoded notes. Its values map to the <ident type="datatype">data.CLUSTER</ident> data type, which includes:
+                           <list type="bulleted">
+                              <item><val>white</val>: Play only white keys (diatonic steps).</item>
+                              <item><val>black</val>: Play only black keys (pentatonic steps).</item>
+                              <item><val>chromatic</val>: Play all half-steps within the interval (chromatic steps).</item>
+                           </list>
+                        </p>
+                        <p>Rather than encoding every internal note, the encoder only needs to provide the highest and lowest notes of the cluster. Rendering engines fill in the missing steps automatically based on the value of the <att>cluster</att> attribute.</p>                     
+
+                        <p>
+                           <figure>
+                              <head>A cluster on white keys only</head>
+                              <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;chord xml:id="cluster01" dur="4" cluster="white"&gt;
+    &lt;note pname="d" oct="4" /&gt;
+    &lt;note pname="b" oct="4" /&gt;
+&lt;/chord&gt;</egXML>
+                           </figure>
+                        </p>
+
+                        <p>
+                           <figure>
+                              <head>A chromatic cluster</head>
+                              <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;chord xml:id="cluster02" dur="2" cluster="chromatic"&gt;
+    &lt;note pname="f" oct="4" /&gt;
+    &lt;note pname="a" accid="b" oct="4" /&gt;
+&lt;/chord&gt;</egXML>
+                           </figure>
+                        </p>
+                     
+                     </div>
                   </div>
                   <div xml:id="cmnRests" type="div4">
                      <head>Rests</head>
