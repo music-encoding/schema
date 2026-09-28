@@ -7533,7 +7533,7 @@ or
     &lt;!-- first staff, without ossia --&gt;
   &lt;/staff&gt;
   &lt;ossia&gt;
-    &lt;oStaff&gt;
+    &lt;oStaff n="2"&gt;
       &lt;!-- alternative content on reduced-size staff --&gt;
     &lt;/oStaff&gt;
     &lt;staff n="2"&gt;
