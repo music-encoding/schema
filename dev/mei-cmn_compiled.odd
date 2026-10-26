@@ -33679,7 +33679,8 @@ or
       <memberOf key="att.typography"/>
     </classes>
   </classSpec><classSpec rend="add" ident="att.note.vis" module="MEI.visual" type="atts">
-    <desc xml:lang="en">Visual domain attributes.</desc>
+    <desc xml:lang="en">Visual domain attributes. <att>glyph.name</att> and <att>glyph.num</att>
+      describe the entirety of the note, while <att>head.shape</att> encodes the head only.</desc>
     <classes>
       <memberOf key="att.altSym"/>
       <memberOf key="att.color"/>
