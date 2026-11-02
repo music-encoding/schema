@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2026-11-02T12:24:37Z. . 
+Schema generated from ODD source 2026-11-02T12:25:54Z. . 
 TEI Edition: MEI 6.0-dev 
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -4831,14 +4831,14 @@ Suggested values include: 1] smufl</a:documentation>
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-basic-att.clefShape-shape_requires_line-constraint-rule-50">
+            id="mei-basic-att.clefShape-shape_requires_line_or_loc-constraint-rule-50">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns:xi="http://www.w3.org/2001/XInclude"
                 context="mei:clef[matches(@shape, '[FCG]')]">
-         <sch:assert test="@line">When @shape is present, @line must also be
-            specified.</sch:assert>
+         <sch:assert test="@line or @loc">An 'F', 'C', or 'G' clef requires that its position be
+            specified using @line or @loc.</sch:assert>
       </sch:rule>
    </pattern>
    <define name="mei_att.color.attributes">
@@ -7015,11 +7015,22 @@ Suggested values include: 1] draft; 2] in-process; 3] candidate; 4] approved; 5]
          <empty/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-basic-clef-Clef_position_lines-constraint-rule-60">
+                  id="mei-basic-clef-clef_line_loc_exclusive-constraint-rule-60">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
-                      context="mei:clef[matches(@shape, '[FCG]')][ancestor::mei:staffDef[@lines]]">
+                      context="mei:clef">
+               <sch:assert test="not(@line and @loc)">The @line and @loc attributes must not be used
+            together on the same clef.</sch:assert>
+            </sch:rule>
+         </pattern>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="mei-basic-clef-Clef_position_lines-constraint-rule-61">
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
+                      context="mei:clef[@line][matches(@shape, '[FCG]')][ancestor::mei:staffDef[@lines]]">
                <sch:let name="thisstaff" value="ancestor::mei:staffDef/@n"/>
                <sch:assert test="number(@line) &lt;= number(ancestor::mei:staffDef[@n=$thisstaff and @lines][1]/@lines)">The clef position must be less than or equal to the number of lines of an ancestor
             staff.</sch:assert>
@@ -7027,11 +7038,11 @@ Suggested values include: 1] draft; 2] in-process; 3] candidate; 4] approved; 5]
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-basic-clef-Clef_position_nolines-constraint-rule-61">
+                  id="mei-basic-clef-Clef_position_nolines-constraint-rule-62">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
-                      context="mei:clef[ancestor::mei:staffDef[not(@lines)]]">
+                      context="mei:clef[@line][ancestor::mei:staffDef[not(@lines)]]">
                <sch:let name="thisstaff" value="ancestor::mei:staffDef/@n"/>
                <sch:assert test="number(@line) &lt;= number(preceding::mei:staffDef[@n=$thisstaff and @lines][1]/@lines)">The clef position must be less than or equal to the number of lines of a preceding
             staff.</sch:assert>
@@ -7085,7 +7096,7 @@ Suggested values include: 1] draft; 2] in-process; 3] candidate; 4] approved; 5]
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-basic-dir-dir_start-type_attributes_required-constraint-rule-62">
+                  id="mei-basic-dir-dir_start-type_attributes_required-constraint-rule-63">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -7113,7 +7124,7 @@ Suggested values include: 1] draft; 2] in-process; 3] candidate; 4] approved; 5]
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-basic-dynam-dynam_start-type_attributes_required-constraint-rule-63">
+                  id="mei-basic-dynam-dynam_start-type_attributes_required-constraint-rule-64">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -7124,7 +7135,7 @@ Suggested values include: 1] draft; 2] in-process; 3] candidate; 4] approved; 5]
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-basic-dynam-dynam_end-type_attributes-constraint-rule-64">
+                  id="mei-basic-dynam-dynam_end-type_attributes-constraint-rule-65">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -7242,7 +7253,7 @@ Suggested values include: 1] draft; 2] in-process; 3] candidate; 4] approved; 5]
          <ref name="mei_music"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-basic-mei-Check_staff-constraint-rule-65">
+                  id="mei-basic-mei-Check_staff-constraint-rule-66">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -7266,7 +7277,7 @@ Suggested values include: 1] draft; 2] in-process; 3] candidate; 4] approved; 5]
          <ref name="mei_macro.musicPart"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-basic-music-check_controlEventLinking-constraint-rule-66">
+                  id="mei-basic-music-check_controlEventLinking-constraint-rule-67">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -7295,7 +7306,7 @@ Suggested values include: 1] draft; 2] in-process; 3] candidate; 4] approved; 5]
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-basic-name-nameParts-constraint-rule-68">
+                  id="mei-basic-name-nameParts-constraint-rule-69">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -7361,7 +7372,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-basic-ornam-ornam_start-type_attributes_required-constraint-rule-69">
+                  id="mei-basic-ornam-ornam_start-type_attributes_required-constraint-rule-70">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -7494,7 +7505,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          </choice>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-basic-respStmt-check_respStmt-constraint-rule-70">
+                  id="mei-basic-respStmt-check_respStmt-constraint-rule-71">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -7595,7 +7606,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-basic-section-Check_sectionexpansion-constraint-rule-72">
+                  id="mei-basic-section-Check_sectionexpansion-constraint-rule-73">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -7637,7 +7648,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-basic-staff-checkStaff_n-constraint-rule-73">
+                  id="mei-basic-staff-checkStaff_n-constraint-rule-74">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -7670,7 +7681,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-basic-staffDef-Check_staffDefn-constraint-rule-74">
+                  id="mei-basic-staffDef-Check_staffDefn-constraint-rule-75">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -7686,7 +7697,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-basic-staffDef-Check_ancestor_staff-constraint-rule-75">
+                  id="mei-basic-staffDef-Check_ancestor_staff-constraint-rule-76">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -7698,7 +7709,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-basic-staffDef-Check_ancestor_staff_lines-constraint-rule-76">
+                  id="mei-basic-staffDef-Check_ancestor_staff_lines-constraint-rule-77">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -7711,7 +7722,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-basic-staffDef-Check_clef_position_staffDef-constraint-rule-77">
+                  id="mei-basic-staffDef-Check_clef_position_staffDef-constraint-rule-78">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -7722,7 +7733,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-basic-staffDef-Check_clef_position_staffDef_nolines-constraint-rule-78">
+                  id="mei-basic-staffDef-Check_clef_position_staffDef_nolines-constraint-rule-79">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -7802,7 +7813,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          </oneOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-basic-staffGrp-Check_staffGrp_unique_staff_n_values-constraint-rule-83">
+                  id="mei-basic-staffGrp-Check_staffGrp_unique_staff_n_values-constraint-rule-84">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -7816,7 +7827,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-basic-staffGrp-Check_staffGrp_unique_staff_n_values-constraint-rule-84">
+                  id="mei-basic-staffGrp-Check_staffGrp_unique_staff_n_values-constraint-rule-85">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -7856,7 +7867,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          <empty/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-basic-symbol-symbolDef_symbol_attributes_required-constraint-rule-85">
+                  id="mei-basic-symbol-symbolDef_symbol_attributes_required-constraint-rule-86">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -7884,7 +7895,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-basic-tempo-tempo_in_header_disallow_most_attrs-constraint-rule-86">
+                  id="mei-basic-tempo-tempo_in_header_disallow_most_attrs-constraint-rule-87">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -7896,7 +7907,7 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-basic-tempo-tempo_start-type_attributes_required-constraint-rule-87">
+                  id="mei-basic-tempo-tempo_start-type_attributes_required-constraint-rule-88">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -8097,7 +8108,7 @@ Suggested values include: 1] main; 2] subordinate; 3] abbreviated; 4] alternativ
          </interleave>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="mei-basic-tabGrp-check_tabGrp_in_beam-constraint-rule-88">
+                  id="mei-basic-tabGrp-check_tabGrp_in_beam-constraint-rule-89">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
