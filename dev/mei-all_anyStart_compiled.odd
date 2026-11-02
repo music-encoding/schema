@@ -1101,18 +1101,20 @@
                   </div>
                   <div xml:id="sharedMdivContent" type="div4">
                      <head>Content of Musical Divisions</head>
-                     <p>The contents of <gi scheme="MEI">mdiv</gi> can be organized according to the two encoding paradigms provided by the <gi scheme="MEI">score</gi> and <gi scheme="MEI">parts</gi> elements.</p>
-                     <p>
-                        <specList>
-                           <specDesc key="score"/>
-                           <specDesc key="parts"/>
-                        </specList>
-                     </p>
-                     <p>The <gi scheme="MEI">score</gi> element represents notation in which all the parts of an ensemble are arranged on vertically aligned staves, while the <gi scheme="MEI">parts</gi> element collects the individually notated parts for each performer or group of performers. The explicit encoding of these two <emph>views</emph> is necessary because it is not always possible or desirable to automatically derive one view from the other. In addition, separating scores and parts can eliminate a great deal of markup complexity.</p>
-                     <p>
-                        <figure>
-                           <head>The contents of <gi scheme="MEI">mdiv</gi> organized by <gi scheme="MEI">score</gi> and <gi scheme="MEI">parts</gi> elements</head>
-                           <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;body&gt;
+                     <div xml:id="sharedScoreAndPartsStruc" type="div5">
+                        <head>Score and Parts</head>
+                        <p>The contents of <gi scheme="MEI">mdiv</gi> can be organized according to the two encoding paradigms provided by the <gi scheme="MEI">score</gi> and <gi scheme="MEI">parts</gi> elements.</p>
+                        <p>
+                           <specList>
+                              <specDesc key="score"/>
+                              <specDesc key="parts"/>
+                           </specList>
+                        </p>
+                        <p>The <gi scheme="MEI">score</gi> element represents notation in which all the parts of an ensemble are arranged on vertically aligned staves, while the <gi scheme="MEI">parts</gi> element collects the individually notated parts for each performer or group of performers. The explicit encoding of these two <emph>views</emph> is necessary because it is not always possible or desirable to automatically derive one view from the other. In addition, separating scores and parts can eliminate a great deal of markup complexity.</p>
+                        <p>
+                           <figure>
+                              <head>The contents of <gi scheme="MEI">mdiv</gi> organized by <gi scheme="MEI">score</gi> and <gi scheme="MEI">parts</gi> elements</head>
+                              <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;body&gt;
    &lt;mdiv n="1" type="movement"&gt;
       &lt;score&gt;
          &lt;!-- markup of score goes here --&gt;
@@ -1124,19 +1126,19 @@
    &lt;!-- additional movements go here --&gt;
 &lt;/body&gt;
 </egXML>
-                        </figure>
-                     </p>
-                     <p>The <gi scheme="MEI">score</gi> and <gi scheme="MEI">parts</gi> elements may also be employed to accommodate different methods of organizing the markup – with no particular presentation implied. In this case, software may render a collection of parts as a score or a score as a collection of parts.</p>
-                     <p>Within the collective <gi scheme="MEI">parts</gi> element, notation for a single performer is represented by the <gi scheme="MEI">part</gi> element:</p>
-                     <p>
-                        <specList>
-                           <specDesc key="part"/>
-                        </specList>
-                     </p>
-                     <p>A <gi scheme="MEI">part</gi> is effectively a small-scale score, allowing all the encoding features of a full score, such as multiple staves, performance directives, and so on. A group of <gi scheme="MEI">part</gi> elements is useful for encoding performing parts when there is no score, such as in early music part books; when the parts have non-aligning bar lines; when different layout features, such as page turns, are needed for the score and parts; or for accommodating software that requires part-by-part encoding.</p>
-                     <p>Please note that <gi scheme="MEI">part</gi> elements in MEI are not an indication of voice leading or staff grouping. Voice leading can be encoded using the <att>next</att> attribute, available on all the members of the <ident type="class">model.eventLike</ident> class. The <gi scheme="MEI">staffGrp</gi> element handles grouping of staves in the score context. <figure>
-                           <head>The collective <gi scheme="MEI">parts</gi> element with a group of <gi scheme="MEI">part</gi> elements</head>
-                           <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;parts&gt;
+                           </figure>
+                        </p>
+                        <p>The <gi scheme="MEI">score</gi> and <gi scheme="MEI">parts</gi> elements may also be employed to accommodate different methods of organizing the markup – with no particular presentation implied. In this case, software may render a collection of parts as a score or a score as a collection of parts.</p>
+                        <p>Within the collective <gi scheme="MEI">parts</gi> element, notation for a single performer is represented by the <gi scheme="MEI">part</gi> element:</p>
+                        <p>
+                           <specList>
+                              <specDesc key="part"/>
+                           </specList>
+                        </p>
+                        <p>A <gi scheme="MEI">part</gi> is effectively a small-scale score, allowing all the encoding features of a full score, such as multiple staves, performance directives, and so on. A group of <gi scheme="MEI">part</gi> elements is useful for encoding performing parts when there is no score, such as in early music part books; when the parts have non-aligning bar lines; when different layout features, such as page turns, are needed for the score and parts; or for accommodating software that requires part-by-part encoding.</p>
+                        <p>Please note that <gi scheme="MEI">part</gi> elements in MEI are not an indication of voice leading or staff grouping. Voice leading can be encoded using the <att>next</att> attribute, available on all the members of the <ident type="class">model.eventLike</ident> class. The <gi scheme="MEI">staffGrp</gi> element handles grouping of staves in the score context. <figure>
+                              <head>The collective <gi scheme="MEI">parts</gi> element with a group of <gi scheme="MEI">part</gi> elements</head>
+                              <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;parts&gt;
    &lt;part label="Violin 1"&gt;
       &lt;!-- first performer’s part --&gt;
    &lt;/part&gt;
@@ -1146,28 +1148,38 @@
    &lt;!-- additional performers’ parts --&gt;
 &lt;/parts&gt;
 </egXML>
-                        </figure>
-                     </p>
-                     <p>In both score and part views, the <gi scheme="MEI">scoreDef</gi> element is used to describe logical characteristics of the encoded music, such as key signature, the sounding key (as opposed to the notated key signature), meter, etc., and visual features, such as page size, staff groupings and display labels, etc. The <gi scheme="MEI">staffGrp</gi> elements within <gi scheme="MEI">scoreDef</gi> and the order of <gi scheme="MEI">staffDef</gi> elements inside <gi scheme="MEI">staffGrp</gi> should follow the score order of the source for the encoding.</p>
-                     <p>A <gi scheme="MEI">part</gi> or <gi scheme="MEI">score</gi> may be further divided into linear segments called "sections".</p>
-                     <p>
-                        <specList>
-                           <specDesc key="section"/>
-                        </specList>
-                     </p>
-                     <p>
-                        <gi scheme="MEI">section</gi> elements are often used as a scoping mechanism for clef signs, key and meter signatures, as well as metronome, tempo, and expression markings. Using <gi scheme="MEI">section</gi> elements can help to minimize the need for backward scanning to establish context when the starting point for access is not at the beginning of the score. <gi scheme="MEI">section</gi> elements may also be used for other user-defined, <abbr>i.e.</abbr>, analytical or editorial, purposes and may therefore be arbitrarily nested to any desired level.</p>
-                     <p>The <gi scheme="MEI">ending</gi> element shares the same model as the <gi scheme="MEI">section</gi> element. Unlike <gi scheme="MEI">section</gi>, however, it may not be recursively nested.</p>
-                     <p>
-                        <specList>
-                           <specDesc key="ending"/>
-                        </specList>
-                     </p>
-                     <p>The most common (non-analytical, non-editorial) use of <gi scheme="MEI">section</gi> and <gi scheme="MEI">ending</gi> elements is illustrated below:</p>
-                     <p>
-                        <figure>
-                           <head>The content of <gi scheme="MEI">score</gi> organized with <gi scheme="MEI">section</gi> and <gi scheme="MEI">ending</gi> elements</head>
-                           <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;music&gt;
+                           </figure>
+                        </p>
+                        <p>In both score and part views, the <gi scheme="MEI">scoreDef</gi> element is used to describe logical characteristics of the encoded music, such as key signature, the sounding key (as opposed to the notated key signature), meter, etc., and visual features, such as page size, staff groupings and display labels, etc. The <gi scheme="MEI">staffGrp</gi> elements within <gi scheme="MEI">scoreDef</gi> and the order of <gi scheme="MEI">staffDef</gi> elements inside <gi scheme="MEI">staffGrp</gi> should follow the score order of the source for the encoding.</p>
+                     </div>
+                     <div xml:id="sharedSections" type="div5">
+                        <head>Sections</head>
+                        <p>A <gi scheme="MEI">part</gi> or <gi scheme="MEI">score</gi> may be further divided into linear segments called "sections".</p>
+                        <p>
+                           <specList>
+                              <specDesc key="section"/>
+                           </specList>
+                        </p>
+                        <p>
+                           <gi scheme="MEI">section</gi> elements are often used as a scoping mechanism for clef signs, key and meter signatures, as well as metronome, tempo, and expression markings. Using <gi scheme="MEI">section</gi> elements can help to minimize the need for backward scanning to establish context when the starting point for access is not at the beginning of the score. <gi scheme="MEI">section</gi> elements may also be used for other user-defined, <abbr>i.e.</abbr>, analytical or editorial, purposes and may therefore be arbitrarily nested to any desired level.</p>
+                        <p>Within <gi scheme="MEI">section</gi> elements, several methods of organization are possible, depending upon the notational style of the source material and the encoder’s needs. For example, when the MEI.cmn module is used, the default organization is measure-by-measure, with <gi scheme="MEI">staff</gi> and <gi scheme="MEI">layer</gi> sub-elements within each <gi scheme="MEI">measure</gi>. Further discussion of CMN notation is continued in chapter <ptr target="#cmn"/>.</p>
+                        <p>However, staff-by-staff organization is more appropriate for music without measures and is provided when either the MEI.mensural or MEI.neumes module is employed. Coverage of mensural notation is provided in chapter <ptr target="#mensural"/>, while <ptr target="#neumes"/> describes neumatic notation.</p>
+                        <p>It must be noted that, when both the MEI.cmn and MEI.mensural modules are available, it is possible to encode CMN notation without using <gi scheme="MEI">measure</gi> elements; that is, staff-by-staff organization may be used and the ends of measures marked using <gi scheme="MEI">barLine</gi> elements.</p>
+                        <p>In certain circumstances, this approach may be preferable for reproduction of the visual layout of the music. However, the simultaneous use of the <gi scheme="MEI">measure</gi> and <gi scheme="MEI">barLine</gi> elements may lead to confusion and should be avoided.</p>
+                     </div>
+                     <div xml:id="sharedStrucRep" type="div5">
+                        <head>Structural Repetition</head>
+                        <p>The <gi scheme="MEI">ending</gi> element shares the same model as the <gi scheme="MEI">section</gi> element. Unlike <gi scheme="MEI">section</gi>, however, it may not be recursively nested.</p>
+                        <p>
+                           <specList>
+                              <specDesc key="ending"/>
+                           </specList>
+                        </p>
+                        <p>The most common (non-analytical, non-editorial) use of <gi scheme="MEI">section</gi> and <gi scheme="MEI">ending</gi> elements is illustrated below:</p>
+                        <p>
+                           <figure>
+                              <head>The content of <gi scheme="MEI">score</gi> organized with <gi scheme="MEI">section</gi> and <gi scheme="MEI">ending</gi> elements</head>
+                              <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;music&gt;
    &lt;body&gt;
       &lt;mdiv&gt;
          &lt;score&gt;
@@ -1188,42 +1200,78 @@
    &lt;/body&gt;
 &lt;/music&gt;
 </egXML>
-                        </figure>
-                     </p>
-                     <p>Within <gi scheme="MEI">section</gi> elements, several methods of organization are possible, depending upon the notational style of the source material and the encoder’s needs. For example, when the MEI.cmn module is used, the default organization is measure-by-measure, with <gi scheme="MEI">staff</gi> and <gi scheme="MEI">layer</gi> sub-elements within each <gi scheme="MEI">measure</gi>. Further discussion of CMN notation is continued in chapter <ptr target="#cmn"/>.</p>
-                     <p>However, staff-by-staff organization is more appropriate for music without measures and is provided when either the MEI.mensural or MEI.neumes module is employed. Coverage of mensural notation is provided in chapter <ptr target="#mensural"/>, while <ptr target="#neumes"/> describes neumatic notation.</p>
-                     <p>It must be noted that, when both the MEI.cmn and MEI.mensural modules are available, it is possible to encode CMN notation without using <gi scheme="MEI">measure</gi> elements; that is, staff-by-staff organization may be used and the ends of measures marked using <gi scheme="MEI">barLine</gi> elements.</p>
-                     <p>In certain circumstances, this approach may be preferable for reproduction of the visual layout of the music. However, the simultaneous use of the <gi scheme="MEI">measure</gi> and <gi scheme="MEI">barLine</gi> elements may lead to confusion and should be avoided.</p>
-                     <p>Typically, MEI follows the order of sections as they appear in the document being encoded. When performance requires a different order, for instance in the case of D.C. and D.S. directives, the following element may be used to define the performance order.</p>
-                     <p>
-                        <specList>
-                           <specDesc key="expansion"/>
-                        </specList>
-                     </p>
-                     <p>In the following example, <gi scheme="MEI">expansion</gi> is used to indicate how the notated sections should be ordered in a <q>through-composed</q> rendition, for example for machine performance or analysis. The <att>plist</att> attribute contains an ordered list of identifiers of descendant <gi scheme="MEI">section</gi>, <gi scheme="MEI">ending</gi>, <gi scheme="MEI">lem</gi>, or <gi scheme="MEI">rdg</gi> elements. The sequence of values in the <att>plist</att> attribute indicates that the section labelled <emph>A</emph> comes first, then the section labelled <emph>B</emph>, followed by the <emph>A</emph> section again. This mechanism must be specified independently of any textual directives, such as <emph>Da capo</emph> or <emph>D.S. al Fine</emph>, that may be present in the document.</p>
-                     <p>
-                        <figure>
-                           <head>The <gi scheme="MEI">expansion</gi> element uses the content of <att>plist</att> to indicate how the notated sections should be ordered</head>
-                           <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;music&gt;
+                           </figure>
+                        </p>
+                        <p>Typically, MEI follows the order of sections as they appear in the document being encoded. When performance requires a different order, for instance in the case of D.C. and D.S. directives, the following element may be used to define the performance order.</p>
+                        <p>
+                           <specList>
+                              <specDesc key="expansion"/>
+                           </specList>
+                        </p>
+                        <p>In the following example, <gi scheme="MEI">expansion</gi> is used to indicate how the notated sections should be ordered in a <q>through-composed</q> rendition, for example for machine performance or analysis. The <att>plist</att> attribute contains an ordered list of identifiers of sibling and/or descendant <gi scheme="MEI">section</gi>, <gi scheme="MEI">ending</gi>, <gi scheme="MEI">lem</gi>, or <gi scheme="MEI">rdg</gi> elements. The sequence of values in the <att>plist</att> attribute indicates that the section labelled <emph>A</emph> comes first, then the section labelled <emph>B</emph>, followed by the <emph>A</emph> section again. This mechanism must be specified independently of any textual directives, such as <emph>Da capo</emph> or <emph>D.S. al Fine</emph>, that may be present in the document. For CMN, the encoding of those directives is discussed in section <ptr target="#cmnRepStruct"/>.</p>
+                        <p>
+                           <figure>
+                              <head>The <gi scheme="MEI">expansion</gi> element uses the content of <att>plist</att> to indicate how the notated sections should be ordered</head>
+                              <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;music&gt;
    &lt;body&gt;
       &lt;mdiv&gt;
          &lt;score&gt;
             &lt;section&gt;
-               &lt;expansion plist="#shared.A #shared.B #shared.A"/&gt;
-               &lt;section xml:id="shared.A"&gt;
+               &lt;expansion plist="#A #B #B1 #B #B2 #A"/&gt;
+               &lt;section xml:id="A"&gt;
                   &lt;!-- "A" section --&gt;
                &lt;/section&gt;
-               &lt;section xml:id="shared.B"&gt;
+               &lt;section xml:id="B"&gt;
                   &lt;!-- "B" section --&gt;
                &lt;/section&gt;
+               &lt;ending xml:id="B1"&gt;
+                  &lt;!-- "B" first ending --&gt;
+               &lt;/ending&gt;
+               &lt;ending xml:id="B2"&gt;
+                  &lt;!-- "B" second ending --&gt;
+               &lt;/ending&gt;
             &lt;/section&gt;
          &lt;/score&gt;
       &lt;/mdiv&gt;
    &lt;/body&gt;
 &lt;/music&gt;
 </egXML>
-                        </figure>
-                     </p>
+                           </figure>
+                        </p>
+                        <p>If present, all of the <gi scheme="MEI">expansion</gi> elements must be the initial children of their parent element.</p>
+                        <p>Rather than using a single monolithic <gi scheme="MEI">expansion</gi>, <gi scheme="MEI">expansion</gi> elements can be placed in sections and endings throughout the document, indicating repetition of their sibling/descendent elements:</p>
+                        <p>
+                           <figure>
+                              <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;music&gt;
+  &lt;body&gt;
+    &lt;mdiv&gt;
+      &lt;score&gt;
+        &lt;section&gt;
+          &lt;expansion plist="#A #B #A" /&gt;
+          &lt;section xml:id="A"&gt;
+            &lt;!-- "A" section --&gt;
+          &lt;/section&gt;
+          &lt;section xml:id="B"&gt;
+            &lt;expansion plist="#B0 #B1 #B0 #B2" /&gt;
+            &lt;section xml:id="B0"&gt;
+              &lt;!-- "B" section repeated content --&gt;
+            &lt;/section&gt;
+            &lt;ending xml:id="B1"&gt;
+              &lt;!-- "B" first ending --&gt;
+            &lt;/ending&gt;
+            &lt;ending xml:id="B2"&gt;
+              &lt;!-- "B" second ending --&gt;
+            &lt;/ending&gt;
+          &lt;/section&gt;
+        &lt;/section&gt;
+      &lt;/score&gt;
+    &lt;/mdiv&gt;
+  &lt;/body&gt;
+&lt;/music&gt;</egXML>
+                           </figure>
+                        </p>
+                        <p>In cases where different sources indicate different expansions of the music, multiple <gi scheme="MEI">expansion</gi> elements can be specified, each with a different <att>source</att> attribute. When multiple sources agree, <att>source</att> can contain multiple values. This indicates semantically similar information to the critical apparatus features described in <ptr target="critApp"/> and is provided for cases where the nested markup required to use those features would be clumsy.</p>
+                     </div>
                   </div>
                </div>
                <div xml:id="sharedDocumentStructure" type="div3">
@@ -1291,13 +1339,10 @@
                <head>General Music Elements</head>
                <p>This section lists the elements defined in the shared module that are available within the music element.</p>
                <div xml:id="sharedScoreAndParts" type="div3">
-                  <head>Score and Parts</head>
-                  <p>The following elements are provided for the capture of scores and parts:</p>
+                  <head>Score and Part Content</head>
+                  <p>The following elements are provided for capturing the content of scores and parts. The score and parts elements themselves are discussed in section <ptr target="#sharedScoreAndPartsStruc"/>.</p>
                   <p>
                      <specList>
-                        <specDesc key="score"/>
-                        <specDesc key="parts"/>
-                        <specDesc key="part"/>
                         <specDesc key="scoreDef"/>
                         <specDesc key="staffDef"/>
                         <specDesc key="layerDef"/>
@@ -1484,13 +1529,13 @@
                   <p>Expression marks are instructions in the form of words, abbreviations, or symbols that convey aspects of performance that cannot be expressed purely through the musical notation.</p>
                   <div xml:id="sharedTextDirectives" type="div4">
                      <head>Text Directives</head>
-                     <p>All of the following elements can be considered text directives; however, MEI uses the <gi scheme="MEI">dir</gi> element specifically for words, abbreviations, numbers, or symbols specifying or suggesting the manner of performance that are not encoded elsewhere using the more specific elements of <gi scheme="MEI">tempo</gi> and <gi scheme="MEI">dynam</gi>.</p>
+                     <p>All of the following elements can be considered text directives; however, MEI uses the <gi scheme="MEI">dir</gi> element specifically for words, abbreviations, numbers, or symbols specifying or suggesting the manner of performance that are not encoded elsewhere using the more specific elements of <gi scheme="MEI">tempo</gi>, <gi scheme="MEI">dynam</gi>, or <gi scheme="MEI">repeatMark</gi> (discussed in <ptr target="cmnRepStruct"/>).</p>
                      <p>
                         <specList>
                            <specDesc key="dir"/>
                         </specList>
                      </p>
-                     <p>Examples of directives include text strings such as <emph>affettuoso</emph>, fingering numbers, or music symbols such as segno and coda symbols or fermatas over a bar line. Directives can be control elements. That is, they can linked via their attributes to other events. The starting point of the directive may be indicated by either a tstamp, tstamp.ges, tstamp.real or startid attribute, while the ending point may be recorded by either a tstamp2, dur, dur.ges or endid attribute. It is a semantic error not to specify a starting point attribute.</p>
+                     <p>Examples of directives include text strings such as <emph>affettuoso</emph>, fingering numbers, etc. Directives can be control elements. That is, they can linked via their attributes to other events. The starting point of the directive may be indicated by either a <att>tstamp</att>, <att>tstamp.ges</att>, <att>tstamp.real</att> or <att>startid</att> attribute, while the ending point may be recorded by either a <att>tstamp2</att>, <att>dur</att>, <att>dur.ges</att> or <att>endid</att> attribute. It is a semantic error not to specify a starting point attribute.</p>
                   </div>
                   <div xml:id="sharedTempoMarks" type="div4">
                      <head>Tempo</head>
@@ -6381,6 +6426,24 @@ or
             <div xml:id="cmnAdditionalMeasureContent" type="div2">
                <head>Advanced CMN Features</head>
                <p>Over time, in addition to the basic features of note, chord, and rest, many other symbols have been added to CMN. The following section describes some of these symbols and introduces their handling in MEI.</p>
+               <div xml:id="cmnBarlines" type="div3">
+                  <head>Bar lines</head>
+                  <p>The bar lines bounding measures can take a variety of different forms to indicate various musical features. These forms can be encoded in MEI using the following attributes of the <gi scheme="MEI">measure</gi> element:</p>
+                  <p>
+                     <specList>
+                        <specDesc key="att.measure.log" atts="right left"/>
+                     </specList>
+                  </p>
+                  <p>The following example shows some common uses of <att>right</att>:</p>
+                  <p>
+                     <figure>
+                        <head>Measures with common values for <att>right</att></head>
+                        <graphic url="../images/ExampleImages/barlines.png"/>
+                     </figure>
+                  </p>
+                  <p>A more detailed discussion on encoding section-level repetition using bar lines can be found in <ptr target="#cmnRepSection"/>.</p>
+                  <p>The behavior of bar lines across staves can be controlled using various attributes of the <gi scheme="MEI">staffGrp</gi> element (the most common example being <att>bar.thru</att>), discussed in section <ptr target="#cmnDefs"/>.</p>
+               </div>
                <div xml:id="cmnBeams" type="div3">
                   <head>Beams</head>
                   <p>A very common feature of music from the CMN repertoire is the beaming of eighth or shorter notes. MEI provides two elements for the explicit encoding of features joined by beams.</p>
@@ -7709,7 +7772,7 @@ or
                </div>
                <div xml:id="cmnDir" type="div3">
                   <head>Directives and Rehearsal marks</head>
-                  <p>In CMN scores, there is often a large number of natural language instructions. Some of them concern the loudness and the speed of the performance, in which case MEI offers the elements <gi scheme="MEI">dynam</gi> (described at <ptr target="#cmnDynam"/>) and <gi scheme="MEI">tempo</gi>. In other cases, however, they provide other instructions for the performer. Instead of providing separate elements for all possible types of such directions, MEI offers the generic <gi scheme="MEI">dir</gi> element. Although this element is not CMN specific (it is defined in <ptr target="#shared"/>), it is frequently used in this repertoire.</p>
+                  <p>In CMN scores, there is often a large number of natural language instructions. Some of them concern the loudness and the speed of the performance, in which case MEI offers the elements <gi scheme="MEI">dynam</gi> (described in <ptr target="#cmnDynam"/>) and <gi scheme="MEI">tempo</gi>. Others are structural repetition instructions, for which MEI offers the <gi scheme="MEI">repeatMark</gi> element (described in <ptr target="#cmnRepStruct"/>). In other cases, however, they provide other instructions for the performer. Instead of providing separate elements for all possible types of such directions, MEI offers the generic <gi scheme="MEI">dir</gi> element. Although this element is not CMN specific (it is defined in <ptr target="#shared"/>), it is frequently used in this repertoire.</p>
                   <div xml:id="cmnTempo" type="div4">
                      <head>Tempo changes and other directives</head>
                      <p>A tempo or character indication is often provided above the topmost staff of the first measure of a score, movement, or section. This indication, such as "Allegro moderato" or "Andante maestoso", may be regarded as a label. Though it is possible to label the movement, etc. using a <att>label</att> attribute attached to the enclosing structural entity (that is, on <gi scheme="MEI">mdiv</gi> or <gi scheme="MEI">section</gi>), it is often required to capture the exact position, spelling, or other features of the label as found in the underlying source material. In these cases, an element is necessary.</p>
@@ -7835,13 +7898,157 @@ or
                </div>
                <div xml:id="cmnRep" type="div3">
                   <head>Repetition in CMN</head>
-                  <p>Repetition is a characteristic feature of music. Many musical forms rely on repetition (sometimes with modification) of distinct sections of the music. Repetition in this sense can be thought of as ‘structural’. At the same time, composers and engravers of music often use local symbols for repeating smaller portions of music instead of writing them in full more than once. In this case, the repetition is better defined as a species of abbreviation.</p>
+                  <p>Repetition is a characteristic feature of music. Many musical forms rely on repetition (sometimes with modification) of distinct sections of the music. Repetition in this sense can be thought of as <emph>structural</emph>. At the same time, composers and engravers of music often use local symbols for repeating smaller portions of music instead of writing them in full more than once. In this case, the repetition is better defined as a species of abbreviation.</p>
                   <div xml:id="cmnRepStruct" type="div4">
-                     <head>Structural Repetition</head>
-                     <p>Large-scale structural repetition, utilizing <gi scheme="MEI">section</gi> and <gi scheme="MEI">expansion</gi> elements, is discussed in section <ptr target="#sharedMdivContent"/>. This section will focus on repetition within sections.</p>
+                     <head>Large-Scale Structural Repetition</head>
+                     <p>Large-scale structural repetition; that is, repetition of multiple sections, can be encoded using one or more <gi scheme="MEI">expansion</gi> elements and/or the <gi scheme="MEI">repeatMark</gi> element.</p>
+                     <p>Use of <gi scheme="MEI">section</gi> and <gi scheme="MEI">expansion</gi> elements is discussed in section <ptr target="#sharedMdivContent"/>. This approach enables the encoding of complex musical structures (repeats, da capos, multiple endings, etc.) separate from their visual encoding or performance implications. Multiple performed versions, even conflicting ones, can be captured without changing the encoded structures themselves.</p>
+                     <p>The <gi scheme="MEI">repeatMark</gi> element, a specialized form of the <gi scheme="MEI">dir</gi> (performance directive) element, can be used to encode the text and/or symbols used in a manuscript to signal large-scale repetition:</p>
+                     <p>
+                        <specList>
+                           <specDesc key="repeatMark"/>
+                        </specList>
+                     </p>
+                     <p>Its <att>func</att> attribute indicates the function of the mark, usually implying a corresponding form; allowed values are listed in <ident type="class">att.repeatMark.log</ident>.</p>
+                     <p>The placement of the repeat mark is indicated using a <att>tstamp</att>, <att>tstamp.ges</att>, <att>tstamp.real</att>, or <att>startId</att> attribute. To place the mark above a bar line, a <att>tstamp</att> value of one more than the number of beats in the measure can be used (e.g. <val>5</val> in 4/4 time):</p>
+                     <p>
+                        <figure>
+                           <head>Encoding a segno using <gi scheme="MEI">repeatMark</gi></head>
+                           <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code verovio" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
+&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
+&lt;mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="6.0-dev"&gt;
+  &lt;meiHead&gt;
+    &lt;fileDesc&gt;
+      &lt;titleStmt&gt;
+        &lt;title&gt;Repeat mark example&lt;/title&gt;
+      &lt;/titleStmt&gt;
+      &lt;pubStmt&gt;
+        &lt;date isodate="2025"&gt;2025&lt;/date&gt;
+        &lt;respStmt&gt;
+          &lt;corpName&gt;Music Encoding Initiative (MEI) Board&lt;/corpName&gt;
+        &lt;/respStmt&gt;
+        &lt;availability&gt;
+          &lt;useRestrict label="license" auth="https://spdx.org/licenses/" codedval="ECL-2.0"&gt;
+            &lt;p&gt;Educational Community License v2.0&lt;/p&gt;
+          &lt;/useRestrict&gt;
+        &lt;/availability&gt;
+      &lt;/pubStmt&gt;
+      &lt;seriesStmt&gt;
+        &lt;title&gt;MEI guidelines examples&lt;/title&gt;
+      &lt;/seriesStmt&gt;
+    &lt;/fileDesc&gt;
+  &lt;/meiHead&gt;
+  &lt;music&gt;
+    &lt;body&gt;
+      &lt;mdiv&gt;
+        &lt;?edit-start?&gt;
+        &lt;score&gt;
+          &lt;scoreDef meter.sym="common"&gt;
+            &lt;staffGrp&gt;
+              &lt;staffDef n="1" lines="5" clef.shape="G" clef.line="2" /&gt;
+            &lt;/staffGrp&gt;
+          &lt;/scoreDef&gt;
+          &lt;section&gt;
+            &lt;measure&gt;
+              &lt;staff n="1"&gt;
+                &lt;layer n="1"&gt;
+                  &lt;note dur="4" oct="4" pname="a"/&gt;
+                  &lt;note dur="4" oct="4" pname="b"/&gt;
+                  &lt;note dur="4" oct="4" pname="c"/&gt;
+                  &lt;note dur="4" oct="4" pname="d"/&gt;
+                &lt;/layer&gt;
+              &lt;/staff&gt;
+              &lt;repeatMark func="segno" tstamp="5" /&gt;
+            &lt;/measure&gt;
+          &lt;/section&gt;
+        &lt;/score&gt;
+        &lt;?edit-end?&gt;
+      &lt;/mdiv&gt;
+    &lt;/body&gt;
+  &lt;/music&gt;
+&lt;/mei&gt;
+</egXML>
+                        </figure>
+                     </p>
+                     <p>In situations where the encoder does not wish to assign a particular meaning to a symbol, textual content or glyph information (via <ident type="class">att.extSym</ident>) can be provided instead of or in addition to <att>func</att>:</p>
+                     <figure>
+                        <head><gi scheme="MEI">repeatMark</gi> without <att>func</att> and with text or symbol information</head>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;repeatMark&gt;D.S.&lt;/repeatMark&gt;
+&lt;repeatMark glyph.auth="smufl" glyph.num="#x1D10C" /&gt;
+&lt;repeatMark&gt;D.S. al &lt;symbol glyph.auth="smufl" glyph.num="#x1D10C"/&gt;&lt;/repeatMark&gt;</egXML>
+                     </figure>
+                     <p>The textual content of a <gi scheme="MEI">repeatMark</gi> element can also be used to assign a "repetition function" to any symbol or text, for example in situations where a manuscript uses nonstandard symbols. In other words, <att>func</att> can be used to <q>normalize</q> historical or individual practice:</p>
+                     <figure>
+                        <head><gi scheme="MEI">repeatMark</gi> with <att>func</att> and with text or symbol information</head>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;repeatMark func="coda"&gt;::&lt;/repeatMark&gt;</egXML>
+                     </figure>
+                     <p>It may also be used to capture editorial suggestions not present in the music notation itself, for example:</p>
+                     <figure>
+                        <head>Encoding editorial suggestion with <gi scheme="MEI">repeatMark</gi></head>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;repeatMark&gt;D.S.&lt;/repeatMark&gt;
+&lt;repeatMark glyph.auth="smufl" glyph.num="#x1D10C" /&gt;
+&lt;repeatMark&gt;D.S. al &lt;symbol glyph.auth="smufl" glyph.num="#x1D10C"/&gt;&lt;/repeatMark&gt;</egXML>
+                     </figure>
+                  </div>
+                  <div xml:id="cmnRepSection" type="div4">
+                     <head>Section-Level Repetition</head>
+                     <p>Repetition of the contents of a section can be encoded using the <att>left</att> and <att>right</att> attributes on the first and last measures of the repeated material:</p>
+                     <figure>
+                        <head/>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;section&gt;
+  &lt;measure left="rptstart"&gt;
+    &lt;!-- content of m. 1 --&gt;
+  &lt;/measure&gt;
+  &lt;measure right="rptend"&gt;
+    &lt;!-- content of m. 2 --&gt;
+  &lt;/measure&gt;
+&lt;/section&gt;</egXML>
+                     </figure>
+                     <p>When a measure ends one repeated section and begins another, both the <att>left</att> and <att>right</att> attributes can be used:</p>
+                     <figure>
+                        <head/>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;section&gt;
+  &lt;measure left="rptstart" right="rptend"&gt;
+    &lt;!-- content of m. 1 --&gt;
+  &lt;/measure&gt;
+  &lt;measure right="rptend"&gt;
+    &lt;!-- content of m. 2 --&gt;
+  &lt;/measure&gt;
+&lt;/section&gt;</egXML>
+                     </figure>
+                     <p>It is preferred to encode repeat barlines on the measure to which they <q>belong</q>:</p>
+                     <figure>
+                        <head/>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;!-- Bad --&gt;
+&lt;section&gt;
+  &lt;measure right="rptstart"&gt;
+    &lt;!-- content of m. 1 --&gt;
+  &lt;/measure&gt;
+  &lt;measure id="repeated"&gt;
+    &lt;!-- content of m. 2 --&gt;
+  &lt;/measure&gt;
+  &lt;measure left="rptend"&gt;
+    &lt;!-- content of m. 3 --&gt;
+  &lt;/measure&gt;
+&lt;/section&gt;
+
+&lt;!-- Good --&gt;
+&lt;section&gt;
+  &lt;measure&gt;
+    &lt;!-- content of m. 1 --&gt;
+  &lt;/measure&gt;
+  &lt;measure id="repeated" left="rptstart" right="rptend"&gt;
+    &lt;!-- content of m. 2 --&gt;
+  &lt;/measure&gt;
+  &lt;measure&gt;
+    &lt;!-- content of m. 3 --&gt;
+  &lt;/measure&gt;
+&lt;/section&gt;</egXML>
+                     </figure>
+                     <p>The other allowed values for <att>left</att> and <att>right</att> are documented in <ptr target="cmnBarlines"/>.</p>
                   </div>
                   <div xml:id="cmnRepSym" type="div4">
-                     <head>Measure-Level Repetition Symbols</head>
+                     <head>Mid-Measure Repetition</head>
                      <p>In addition to repetition at the section level, CMN includes a number of different symbols for measure-level repetitions. Many of these symbols are found in manuscripts and may be regarded as personal conventions of their respective authors. Some signs, however, have been widely adopted. For example, it is common to indicate the repetition of a single beat or an entire measure with one or more diagonal lines, sometimes with dots at the upper left and lower right, much like a percent sign. The illustration below contains the most common signs:</p>
                      <p>
                         <figure>
@@ -21235,15 +21442,13 @@ or
     </classes>
     <attList>
       <attDef ident="left" usage="opt">
-        <desc xml:lang="en">Indicates the visual rendition of the left bar line. It is present here only for
-          facilitation of translation from legacy encodings which use it. Usually, it can be safely
-          ignored.</desc>
+        <desc xml:lang="en">Indicates the function of the left bar line.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.BARRENDITION"/>
         </datatype>
       </attDef>
       <attDef ident="right" usage="opt">
-        <desc xml:lang="en">Indicates the function of the right bar line and is structurally important.</desc>
+        <desc xml:lang="en">Indicates the function of the right bar line.</desc>
         <datatype>
           <ref xmlns="http://relaxng.org/ns/structure/1.0" name="data.BARRENDITION"/>
         </datatype>
@@ -33757,8 +33962,7 @@ or
         </sch:rule>
       </constraint>
     </constraintSpec><remarks xml:lang="en">
-      <p>Examples include text strings, such as 'affettuoso', and music symbols, such as segno and
-        coda symbols, fermatas over a bar line, etc. Directives can be control elements. That is,
+      <p>Examples include text strings, such as 'affettuoso', and music symbols. Directives can be control elements. That is,
         they can be linked via their attributes to other events. The starting point of the directive
         may be indicated by either a <att>startid</att>, <att>tstamp</att>, <att>tstamp.ges</att>,
         or <att>tstamp.real</att> attribute, while the ending point may be recorded by either a
