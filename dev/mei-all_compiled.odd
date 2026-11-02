@@ -2102,7 +2102,7 @@
                         <item>
                            <gi scheme="MEI">note</gi>: The horizontal origin is the left end of the notehead, the vertical one is the center of the notehead;</item>
                         <item>
-                           <gi scheme="MEI">clef</gi>: The horizontal origin is the left end of the clef, the vertical one the line specified by <gi scheme="MEI">clef</gi>/<att>line</att> (or <att>clef.line</att>);</item>
+                           <gi scheme="MEI">clef</gi>: The horizontal origin is the left end of the clef, the vertical one the staff position specified by <gi scheme="MEI">clef</gi>/<att>line</att> or <gi scheme="MEI">clef</gi>/<att>loc</att> (or <att>clef.line</att> when using default-setting attributes);</item>
                         <item>For elements containing text: The left end of the baseline;</item>
                         <item>
                            <gi scheme="MEI">symbolDef</gi>: As symbol definitions aren’t rendered directly, their coordinate system and origin are considered virtual.</item>
@@ -5480,7 +5480,17 @@ or
 </egXML>
                      </figure>
                   </p>
-                  <p>There are a number of additional elements that can be used as children of <gi scheme="MEI">staffDef</gi> in order to describe additional features of the staff, such as the color of a clef or a key signature added in a different hand. These elements include:</p>
+                   <p>A <gi scheme="MEI">clef</gi> element can specify its position using either <att>line</att> or <att>loc</att>, but not both. The <att>line</att> attribute counts staff lines from <val>1</val> at the bottom line. The <att>loc</att> attribute counts integer MEI virtual units (half the distance between adjacent staff lines) from <val>0</val> at the bottom line, with negative values below it. For line positions, loc = 2 * (line - 1). The first two examples below therefore specify the same position using alternative attributes. The third places the clef in the space between the third and fourth lines. This is a staff position, not a visual offset. Default-setting attributes such as <att>clef.line</att> retain their existing line numbering; use a <gi scheme="MEI">clef</gi> child when a space position is needed.</p>
+                   <p>
+                      <figure>
+                         <head>Alternative ways to specify clef positions</head>
+                         <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve">&lt;clef shape="G" line="2"/&gt;
+&lt;clef shape="G" loc="2"/&gt;
+&lt;clef shape="C" loc="5"/&gt;
+</egXML>
+                      </figure>
+                   </p>
+                   <p>There are a number of additional elements that can be used as children of <gi scheme="MEI">staffDef</gi> in order to describe additional features of the staff, such as the color of a clef or a key signature added in a different hand. These elements include:</p>
                   <p>
                      <specList>
                         <specDesc key="clef"/>
@@ -28990,14 +29000,7 @@ or
     </classes><content>
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="avFile"/></zeroOrMore>
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="when"/></zeroOrMore>
-    </content><constraintSpec ident="betype_required_when_begin_or_end" scheme="schematron">
-      <constraint>
-        <sch:rule context="mei:clip[@begin or @end]">
-          <sch:assert role="warning" test="@betype or ancestor::mei:*[@betype]">When @begin or @end
-            is used, @betype should appear on clip or one of its ancestors.</sch:assert>
-        </sch:rule>
-      </constraint>
-    </constraintSpec><remarks xml:lang="en">
+    </content><remarks xml:lang="en">
       <p>This element is analogous to the <gi scheme="MEI">zone</gi> element in the facsimile
         module.</p>
     </remarks></elementSpec><elementSpec rend="add" ident="performance" module="MEI.performance"><desc xml:lang="en">A presentation of one or more musical works.</desc><classes>
@@ -29020,14 +29023,7 @@ or
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="avFile"/></zeroOrMore>
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="when"/></zeroOrMore>
       <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0"><ref name="clip"/></zeroOrMore>
-    </content><constraintSpec ident="betype_required_when_begin_or_end" scheme="schematron">
-      <constraint>
-        <sch:rule context="mei:recording[@begin or @end]">
-          <sch:assert role="warning" test="@betype">When @begin or @end is used, @betype should be
-            present.</sch:assert>
-        </sch:rule>
-      </constraint>
-    </constraintSpec><remarks xml:lang="en">
+    </content><remarks xml:lang="en">
       <p>The <att>startid</att> attribute may be used to hold a reference to the first feature
         occurring in this performance. This element is analogous to the <gi scheme="MEI">surface</gi> element in the facsimile module.</p>
     </remarks></elementSpec><elementSpec rend="add" ident="when" module="MEI.performance"><desc xml:lang="en">Indicates a point in time either absolutely (using the absolute attribute), or relative to
@@ -29762,6 +29758,7 @@ or
       <memberOf key="att.lineLoc"/>
       <memberOf key="att.octave"/>
       <memberOf key="att.octaveDisplacement"/>
+      <memberOf key="att.staffLoc"/>
     </classes>
     <attList>
       <attDef ident="cautionary" usage="opt">
@@ -29819,11 +29816,11 @@ or
     <desc xml:lang="en">Logical domain attributes.</desc>
   </classSpec><classSpec rend="add" ident="att.clefShape" module="MEI.shared" type="atts">
     <desc xml:lang="en">Attributes that record the shape of a clef.</desc>
-    <constraintSpec ident="shape_requires_line" scheme="schematron">
+    <constraintSpec ident="shape_requires_line_or_loc" scheme="schematron">
       <constraint>
         <sch:rule context="mei:clef[matches(@shape, '[FCG]')]">
-          <sch:assert test="@line">When @shape is present, @line must also be
-            specified.</sch:assert>
+          <sch:assert test="@line or @loc">An 'F', 'C', or 'G' clef requires that its position be
+            specified using @line or @loc.</sch:assert>
         </sch:rule>
       </constraint>
     </constraintSpec>
@@ -31047,6 +31044,18 @@ or
     </attList>
   </classSpec><classSpec rend="add" ident="att.mediaBounds" module="MEI.shared" type="atts">
     <desc xml:lang="en">Attributes that establish the boundaries of a media object.</desc>
+    <constraintSpec ident="betype_required_when_begin_or_end" scheme="schematron">
+      <constraint>
+        <sch:rule context="mei:clip[@begin or @end]">
+          <sch:assert role="warning" test="@betype or ancestor::mei:*[@betype]">When @begin or @end
+            is used, @betype should appear on clip or one of its ancestors.</sch:assert>
+        </sch:rule>
+        <sch:rule context="mei:recording[@begin or @end]">
+          <sch:assert role="warning" test="@betype">When @begin or @end is used, @betype should be
+            present.</sch:assert>
+        </sch:rule>
+      </constraint>
+    </constraintSpec>
     <attList>
       <attDef ident="begin" usage="opt">
         <desc xml:lang="en">Specifies a point where the relevant content begins. A numerical value must be less
@@ -33728,9 +33737,16 @@ or
       <memberOf key="model.syllablePart"/>
     </classes><content>
       <empty/>
-    </content><constraintSpec ident="Clef_position_lines" scheme="schematron">
+    </content><constraintSpec ident="clef_line_loc_exclusive" scheme="schematron">
       <constraint>
-        <sch:rule context="mei:clef[matches(@shape, '[FCG]')][ancestor::mei:staffDef[@lines]]">
+        <sch:rule context="mei:clef">
+          <sch:assert test="not(@line and @loc)">The @line and @loc attributes must not be used
+            together on the same clef.</sch:assert>
+        </sch:rule>
+      </constraint>
+    </constraintSpec><constraintSpec ident="Clef_position_lines" scheme="schematron">
+      <constraint>
+        <sch:rule context="mei:clef[@line][matches(@shape, '[FCG]')][ancestor::mei:staffDef[@lines]]">
           <sch:let name="thisstaff" value="ancestor::mei:staffDef/@n"/>
           <sch:assert test="number(@line) &lt;= number(ancestor::mei:staffDef[@n=$thisstaff and @lines][1]/@lines)">The clef position must be less than or equal to the number of lines of an ancestor
             staff.</sch:assert>
@@ -33738,7 +33754,7 @@ or
       </constraint>
     </constraintSpec><constraintSpec ident="Clef_position_nolines" scheme="schematron">
       <constraint>
-        <sch:rule context="mei:clef[ancestor::mei:staffDef[not(@lines)]]">
+        <sch:rule context="mei:clef[@line][ancestor::mei:staffDef[not(@lines)]]">
           <sch:let name="thisstaff" value="ancestor::mei:staffDef/@n"/>
           <sch:assert test="number(@line) &lt;= number(preceding::mei:staffDef[@n=$thisstaff and @lines][1]/@lines)">The clef position must be less than or equal to the number of lines of a preceding
             staff.</sch:assert>
@@ -33750,6 +33766,16 @@ or
         needs to be recorded for the clef or when multiple, simultaneous clefs occur on a single
         staff. This element may also be used within the staff context to indicate changes of
         clef.</p>
+      <p>The position of a clef may be specified using either <att>line</att> or <att>loc</att>,
+        but not both. The <att>line</att> attribute numbers staff lines starting with <val>1</val>
+        for the bottom line. The <att>loc</att> attribute uses
+        <ident type="datatype">data.STAFFLOC</ident>: integer MEI virtual units (half the distance
+        between adjacent staff lines), with <val>0</val> at the bottom line, positive values above
+        it, and negative values below it. For a position on a staff line, loc = 2 * (line - 1).
+        Thus, line="1" and loc="0" are alternative ways to specify the bottom line, while
+        loc="5" specifies the space between the third and fourth lines. The <att>loc</att> attribute
+        allows clefs to be placed on spaces as well as lines.
+      </p>
     </remarks></elementSpec><elementSpec rend="add" ident="clefGrp" module="MEI.shared"><gloss xml:lang="en">clef group</gloss><desc xml:lang="en">A set of simultaneously-occurring clefs.</desc><classes>
       <memberOf key="att.common"/>
       <memberOf key="att.event"/>
