@@ -12118,8 +12118,20 @@ or
                <p>
                   <figure>
                      <head/>
-                     <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code noBase noLang" xml:space="preserve"><?xml-model href="../../validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="../../validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="../../validation/mei-customizations.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><table xmlns="http://www.tei-c.org/ns/1.0" rend="specGrpSummary"><row><cell>
-                Module </cell><cell/></row></table></egXML>
+                     <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code noBase noLang" xml:space="preserve">&lt;?xml-model href="../../validation/mei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
+&lt;?xml-model href="../../validation/mei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
+&lt;?xml-model href="../../validation/mei-customizations.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
+&lt;specGrp xmlns="http://www.tei-c.org/ns/1.0"&gt;
+  &lt;?edit-start?&gt;
+  &lt;moduleRef url="http://www.w3.org/Graphics/SVG/1.1/rng/svg11.rng"&gt;
+   &lt;content&gt;
+     &lt;rng:define xmlns:rng="http://relaxng.org/ns/structure/1.0" name="mei_model.graphicLike" combine="choice"&gt;
+       &lt;rng:ref name="svg"/&gt;
+     &lt;/rng:define&gt;
+   &lt;/content&gt;
+ &lt;/moduleRef&gt;
+  &lt;?edit-end?&gt;
+&lt;/specGrp&gt;</egXML>
                   </figure>
                </p>
                <p>With this addition, which can be added to any of the provided customizations of
@@ -12132,19 +12144,22 @@ or
                <p>
                   <figure>
                      <head/>
-                     <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code noBase noLang" xml:space="preserve"><?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><music xmlns="http://www.music-encoding.org/ns/mei" meiversion="6.0-dev" xml:base="../examples/svg/svg-example.xml" xml:lang="">
-  <facsimile>
-    <?edit-start?>
-    <surface lrx="3000" lry="2000" ulx="0" uly="0">
-      <graphic target="image1.jpg" width="3000px" height="2000px"/>
-      <svg:svg xmlns:svg="http://www.w3.org/2000/svg" version="1.1" width="3000px" height="2000px" viewBox="0 0 3000 2000">
-        <svg:path id="fancyShape" fill="#ff0000" d="…"/>
-      </svg:svg>
-      <zone xml:id="rectangle" lrx="370" lry="410" ulx="300" uly="200"/>
-    </surface>
-    <?edit-end?>
-  </facsimile>
-</music></egXML>
+                     <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code noBase noLang" xml:space="preserve">&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
+&lt;?xml-model href="https://music-encoding.org/schema/dev/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
+&lt;music xmlns="http://www.music-encoding.org/ns/mei" meiversion="6.0-dev"&gt;
+  &lt;facsimile&gt;
+    &lt;?edit-start?&gt;
+    &lt;surface lrx="3000" lry="2000" ulx="0" uly="0"&gt;
+      &lt;graphic target="image1.jpg" width="3000px" height="2000px"/&gt;
+      &lt;svg:svg xmlns:svg="http://www.w3.org/2000/svg" version="1.1" width="3000px" height="2000px" viewBox="0 0 3000 2000"&gt;
+        &lt;svg:path id="fancyShape" fill="#ff0000" d="…"/&gt;
+      &lt;/svg:svg&gt;
+      &lt;zone xml:id="rectangle" lrx="370" lry="410" ulx="300" uly="200"/&gt;
+    &lt;/surface&gt;
+    &lt;?edit-end?&gt;
+  &lt;/facsimile&gt;
+&lt;/music&gt;
+</egXML>
                   </figure>
                </p>
                <p>Of course it’s possible to allow elements in SVG namespace in other places in MEI
