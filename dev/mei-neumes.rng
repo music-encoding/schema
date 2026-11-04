@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2026-11-04T12:02:16Z. . 
+Schema generated from ODD source 2026-11-04T12:12:49Z. . 
 TEI Edition: MEI 6.0-dev 
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -6626,7 +6626,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
    </define>
    <define name="mei_data.KEYFIFTHS">
       <data type="token">
-         <param name="pattern">mixed|0|([1-9]|1[0-2])[f|s]</param>
+         <param name="pattern">mixed|0|([1-9]|1[0-2])[fs]</param>
       </data>
    </define>
    <define name="mei_data.LAYERSCHEME">
