@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2026-11-04T16:53:24Z. . 
+Schema generated from ODD source 2026-11-04T17:50:41Z. . 
 TEI Edition: MEI 6.0-dev 
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -6435,6 +6435,16 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <param name="minInclusive">-360.0</param>
       </data>
    </define>
+   <define name="mei_data.DIGITORUNKNOWN">
+      <choice>
+         <data type="nonNegativeInteger">
+            <param name="maxInclusive">9</param>
+         </data>
+         <data type="token">
+            <param name="pattern">unknown</param>
+         </data>
+      </choice>
+   </define>
    <define name="mei_data.DIVISIO">
       <choice>
          <value>ternaria</value>
@@ -6600,6 +6610,12 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
       <choice>
          <value>omit</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The string is omitted, not sounding.</a:documentation>
+      </choice>
+   </define>
+   <define name="mei_data.FRETNUMBEROROMIT">
+      <choice>
+         <ref name="mei_data.FRETNUMBER"/>
+         <ref name="mei_data.FRETNUMBER.omit"/>
       </choice>
    </define>
    <define name="mei_data.GLISSANDO">
@@ -7596,13 +7612,18 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
    </define>
    <define name="mei_data.PART">
       <choice>
-         <value>all</value>
-         <value>none</value>
+         <ref name="mei_data.PARTALLNONE"/>
          <list>
             <oneOrMore>
                <ref name="mei_data.URI"/>
             </oneOrMore>
          </list>
+      </choice>
+   </define>
+   <define name="mei_data.PARTALLNONE">
+      <choice>
+         <value>all</value>
+         <value>none</value>
       </choice>
    </define>
    <define name="mei_data.PARTSTAFF">
@@ -8311,25 +8332,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
       <empty/>
    </define>
    <define name="mei_macro.anyXML">
-      <element>
-         <anyName>
-            <except>
-               <nsName ns="http://www.music-encoding.org/ns/mei"/>
-               <nsName ns="http://www.w3.org/2000/svg"/>
-            </except>
-         </anyName>
-         <zeroOrMore>
-            <attribute>
-               <anyName/>
-            </attribute>
-         </zeroOrMore>
-         <zeroOrMore>
-            <choice>
-               <text/>
-               <ref name="mei_macro.anyXML"/>
-            </choice>
-         </zeroOrMore>
-      </element>
+      <ref name="anyElement_macro.anyXML_1"/>
    </define>
    <define name="mei_macro.metaLike.page">
       <optional>
@@ -8704,6 +8707,27 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <value>lute.baroque.d.minor</value>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Baroque tuning for lutes with 6 stable courses, and additional bass courses tuned to the key of D minor. A2 D3 F3 A3 D4 F4 for the main six courses, and bass courses descending in pitch from G2, F2, etc., depending on the size of the instrument. </a:documentation>
       </choice>
+   </define>
+   <define name="anyElement_macro.anyXML_1">
+      <element>
+         <anyName>
+            <except>
+               <nsName ns="http://www.music-encoding.org/ns/mei"/>
+               <nsName ns="http://www.w3.org/2000/svg"/>
+            </except>
+         </anyName>
+         <zeroOrMore>
+            <attribute>
+               <anyName/>
+            </attribute>
+         </zeroOrMore>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="anyElement_macro.anyXML_1"/>
+            </choice>
+         </zeroOrMore>
+      </element>
    </define>
    <define name="mei_att.notationType.attributes">
       <ref name="mei_att.notationType.attribute.notationtype"/>
@@ -12391,7 +12415,7 @@ Suggested values include: 1] sustain; 2] soft; 3] sostenuto; 4] silent</a:docume
          <optional>
             <attribute name="character">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Describes the character of the new hand.</a:documentation>
-               <text/>
+               <data type="string"/>
             </attribute>
          </optional>
          <optional>
@@ -16607,18 +16631,16 @@ Suggested values include: 1] glue; 2] thread; 3] needle; 4] tape; 5] staple</a:d
    <define name="mei_watermarkDesc">
       <element name="watermarkDesc">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(watermark description) Contains a description of the watermark(s) of an item.</a:documentation>
-         <group>
-            <zeroOrMore>
-               <ref name="mei_head"/>
-            </zeroOrMore>
-            <zeroOrMore>
-               <choice>
-                  <ref name="mei_watermarkList"/>
-                  <ref name="mei_watermark"/>
-                  <ref name="mei_p"/>
-               </choice>
-            </zeroOrMore>
-         </group>
+         <zeroOrMore>
+            <ref name="mei_head"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <choice>
+               <ref name="mei_watermarkList"/>
+               <ref name="mei_watermark"/>
+               <ref name="mei_p"/>
+            </choice>
+         </zeroOrMore>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.bibl.attributes"/>
          <ref name="mei_att.lang.attributes"/>
@@ -19335,14 +19357,7 @@ Suggested values include: 1] caesura; 2] finalis; 3] maior; 4] maxima; 5] minima
       <optional>
          <attribute name="oct">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Captures written octave information.</a:documentation>
-            <choice>
-               <data type="nonNegativeInteger">
-                  <param name="maxInclusive">9</param>
-               </data>
-               <data type="token">
-                  <param name="pattern">unknown</param>
-               </data>
-            </choice>
+            <ref name="mei_data.DIGITORUNKNOWN"/>
          </attribute>
       </optional>
    </define>
@@ -20041,7 +20056,7 @@ Suggested values include: 1] apostropha; 2] bistropha; 3] cephalicus; 4] climacu
          <optional>
             <attribute name="absolute">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Provides an absolute value for the time point.</a:documentation>
-               <text/>
+               <data type="string"/>
             </attribute>
          </optional>
          <optional>
@@ -21888,7 +21903,7 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
       <optional>
          <attribute name="begin">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Specifies a point where the relevant content begins. A numerical value must be less and a time value must be earlier than that given by the end attribute.</a:documentation>
-            <text/>
+            <data type="string"/>
          </attribute>
       </optional>
    </define>
@@ -21896,7 +21911,7 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
       <optional>
          <attribute name="end">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Specifies a point where the relevant content ends. If not specified, the end of the content is assumed to be the end point. A numerical value must be greater and a time value must be later than that given by the begin attribute.</a:documentation>
-            <text/>
+            <data type="string"/>
          </attribute>
       </optional>
    </define>
@@ -26228,24 +26243,22 @@ Suggested values include: 1] smufl</a:documentation>
    <define name="mei_biblStruct">
       <element name="biblStruct">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(structured bibliographic citation) Contains a bibliographic citation in which bibliographic sub-elements must appear in a specified order.</a:documentation>
-         <group>
+         <zeroOrMore>
+            <ref name="mei_analytic"/>
+         </zeroOrMore>
+         <oneOrMore>
+            <ref name="mei_monogr"/>
             <zeroOrMore>
-               <ref name="mei_analytic"/>
+               <ref name="mei_series"/>
             </zeroOrMore>
-            <oneOrMore>
-               <ref name="mei_monogr"/>
-               <zeroOrMore>
-                  <ref name="mei_series"/>
-               </zeroOrMore>
-            </oneOrMore>
-            <zeroOrMore>
-               <choice>
-                  <ref name="mei_model.annotLike"/>
-                  <ref name="mei_identifier"/>
-                  <ref name="mei_relatedItem"/>
-               </choice>
-            </zeroOrMore>
-         </group>
+         </oneOrMore>
+         <zeroOrMore>
+            <choice>
+               <ref name="mei_model.annotLike"/>
+               <ref name="mei_identifier"/>
+               <ref name="mei_relatedItem"/>
+            </choice>
+         </zeroOrMore>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.bibl.attributes"/>
          <ref name="mei_att.dataPointing.attributes"/>
@@ -27012,21 +27025,19 @@ Suggested values include: 1] abstract; 2] ack; 3] appendix; 4] bibliography; 5] 
             <ref name="mei_model.headLike"/>
          </zeroOrMore>
          <zeroOrMore>
-            <group>
-               <optional>
-                  <choice>
-                     <ref name="mei_name"/>
-                     <ref name="mei_model.addressLike"/>
-                     <ref name="mei_model.dateLike"/>
-                     <ref name="mei_model.nameLike.agent"/>
-                     <ref name="mei_model.nameLike.geogName"/>
-                  </choice>
-               </optional>
+            <optional>
                <choice>
-                  <ref name="mei_event"/>
-                  <ref name="mei_eventList"/>
+                  <ref name="mei_name"/>
+                  <ref name="mei_model.addressLike"/>
+                  <ref name="mei_model.dateLike"/>
+                  <ref name="mei_model.nameLike.agent"/>
+                  <ref name="mei_model.nameLike.geogName"/>
                </choice>
-            </group>
+            </optional>
+            <choice>
+               <ref name="mei_event"/>
+               <ref name="mei_eventList"/>
+            </choice>
          </zeroOrMore>
          <zeroOrMore>
             <ref name="mei_biblList"/>
@@ -27552,68 +27563,66 @@ Suggested values include: 1] abstract; 2] ack; 3] appendix; 4] bibliography; 5] 
    <define name="mei_monogr">
       <element name="monogr">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(monograph level) Contains bibliographic elements describing an item, for example, a published book or journal, score, recording, or an unpublished manuscript.</a:documentation>
-         <group>
-            <optional>
-               <choice>
-                  <group>
+         <optional>
+            <choice>
+               <group>
+                  <choice>
+                     <ref name="mei_model.respLikePart"/>
+                     <ref name="mei_respStmt"/>
+                  </choice>
+                  <zeroOrMore>
                      <choice>
                         <ref name="mei_model.respLikePart"/>
                         <ref name="mei_respStmt"/>
                      </choice>
-                     <zeroOrMore>
-                        <choice>
-                           <ref name="mei_model.respLikePart"/>
-                           <ref name="mei_respStmt"/>
-                        </choice>
-                     </zeroOrMore>
-                     <oneOrMore>
-                        <ref name="mei_title"/>
-                     </oneOrMore>
-                     <zeroOrMore>
-                        <choice>
-                           <ref name="mei_editor"/>
-                           <ref name="mei_model.identifierLike"/>
-                           <ref name="mei_respStmt"/>
-                        </choice>
-                     </zeroOrMore>
-                  </group>
-                  <group>
-                     <oneOrMore>
-                        <ref name="mei_title"/>
-                     </oneOrMore>
-                     <zeroOrMore>
-                        <choice>
-                           <ref name="mei_model.respLikePart"/>
-                           <ref name="mei_model.identifierLike"/>
-                        </choice>
-                     </zeroOrMore>
-                  </group>
-               </choice>
-            </optional>
+                  </zeroOrMore>
+                  <oneOrMore>
+                     <ref name="mei_title"/>
+                  </oneOrMore>
+                  <zeroOrMore>
+                     <choice>
+                        <ref name="mei_editor"/>
+                        <ref name="mei_model.identifierLike"/>
+                        <ref name="mei_respStmt"/>
+                     </choice>
+                  </zeroOrMore>
+               </group>
+               <group>
+                  <oneOrMore>
+                     <ref name="mei_title"/>
+                  </oneOrMore>
+                  <zeroOrMore>
+                     <choice>
+                        <ref name="mei_model.respLikePart"/>
+                        <ref name="mei_model.identifierLike"/>
+                     </choice>
+                  </zeroOrMore>
+               </group>
+            </choice>
+         </optional>
+         <zeroOrMore>
+            <choice>
+               <ref name="mei_model.annotLike"/>
+               <ref name="mei_corpName"/>
+            </choice>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="mei_model.editionLike"/>
             <zeroOrMore>
                <choice>
-                  <ref name="mei_model.annotLike"/>
-                  <ref name="mei_corpName"/>
+                  <ref name="mei_model.identifierLike"/>
+                  <ref name="mei_editor"/>
+                  <ref name="mei_respStmt"/>
                </choice>
             </zeroOrMore>
-            <zeroOrMore>
-               <ref name="mei_model.editionLike"/>
-               <zeroOrMore>
-                  <choice>
-                     <ref name="mei_model.identifierLike"/>
-                     <ref name="mei_editor"/>
-                     <ref name="mei_respStmt"/>
-                  </choice>
-               </zeroOrMore>
-            </zeroOrMore>
-            <ref name="mei_imprint"/>
-            <zeroOrMore>
-               <choice>
-                  <ref name="mei_imprint"/>
-                  <ref name="mei_extent"/>
-               </choice>
-            </zeroOrMore>
-         </group>
+         </zeroOrMore>
+         <ref name="mei_imprint"/>
+         <zeroOrMore>
+            <choice>
+               <ref name="mei_imprint"/>
+               <ref name="mei_extent"/>
+            </choice>
+         </zeroOrMore>
          <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.bibl.attributes"/>
          <ref name="mei_att.dataPointing.attributes"/>
@@ -27972,12 +27981,10 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
             <ref name="mei_model.headLike"/>
          </zeroOrMore>
          <zeroOrMore>
-            <group>
-               <ref name="mei_model.repositoryLike"/>
-               <zeroOrMore>
-                  <ref name="mei_model.identifierLike"/>
-               </zeroOrMore>
-            </group>
+            <ref name="mei_model.repositoryLike"/>
+            <zeroOrMore>
+               <ref name="mei_model.identifierLike"/>
+            </zeroOrMore>
          </zeroOrMore>
          <optional>
             <ref name="mei_history"/>
@@ -29141,10 +29148,7 @@ Suggested values include: 1] alternative; 2] arrangement; 3] carrier; 4] date; 5
       <optional>
          <attribute name="tab.fret">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records the location at which a string should be stopped against a fret. The value 0 (zero) indicates the open string. The value omit indicates an omitted string that does not sound.</a:documentation>
-            <choice>
-               <ref name="mei_data.FRETNUMBER"/>
-               <ref name="mei_data.FRETNUMBER.omit"/>
-            </choice>
+            <ref name="mei_data.FRETNUMBEROROMIT"/>
          </attribute>
       </optional>
    </define>
